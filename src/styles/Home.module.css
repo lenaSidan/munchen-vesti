@@ -1,0 +1,152 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* --- Основные статьи --- */
+.articlesSection {
+  flex: 2;
+}
+
+.mainArticle {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.mainArticle .articleContent {
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.mainImage {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* --- Вторая статья --- */
+.secondArticle {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  padding: 15px;
+  border: 2px solid #7f1d1d;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.secondArticleHeader {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.secondArticleContent {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+
+.secondImage {
+  max-width: 40%;
+  border-radius: 5px;
+}
+
+.articleTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #7f1d1d;
+}
+
+.articleDate {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* --- Другие статьи --- */
+.otherArticles {
+  margin-top: 30px;
+}
+
+.otherArticlesTitle {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #7f1d1d;
+}
+
+.otherArticlesList {
+  list-style: none;
+  padding: 0;
+}
+
+.articleLink {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* --- Блок объявлений --- */
+.announcements {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+
+/* --- Уникальные стили объявлений --- */
+.announcementItem {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.announcementImage {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.announcementText {
+  font-size: 1.1rem;
+  color: #222;
+}
+
+/* --- Разные стили объявлений --- */
+.redAlert {
+  background: #ffdddd;
+  border: 2px solid #ff0000;
+  color: #900;
+}
+
+.bordered {
+  border: 2px dashed #7f1d1d;
+  padding: 20px;
+}
+
+.highlighted {
+  background: #ffffcc;
+  border: 2px solid #ffcc00;
+}

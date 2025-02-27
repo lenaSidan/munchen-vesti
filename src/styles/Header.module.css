@@ -1,0 +1,36 @@
+.header {
+  background-color: #f5f2dc;
+  padding: 15px 20px;
+  border-bottom: 2px solid #7f1d1d;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #7f1d1d;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #222;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: #7f1d1d;
+}

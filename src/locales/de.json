@@ -1,0 +1,21 @@
+{
+  "home": {
+ "title": "Münchener Nachrichten",
+    "read_more": "Weiterlesen",
+    "announcements_title": "Anzeigen",
+    "view_all_articles": "Alle Artikel anzeigen"
+  },
+  "menu": {
+    "articles": "Artikel",
+    "announcements": "Veranstaltungen",
+    "ads": "Anzeigen"
+  },
+  "footer": {
+    "about": "Über das Projekt",
+    "contacts": "Kontakt",
+    "copyright": "© {year} Münchener Nachrichten. Alle Rechte vorbehalten."
+  },
+  "articles": {
+    "read_more": "Weiterlesen"
+  }
+}

@@ -1,0 +1,21 @@
+{
+"home": {
+"title": "Мюнхенскiя Вѣсти",
+    "read_more": "Читать далее",
+    "announcements_title": "Объявленія",
+    "view_all_articles": "Все статьи"
+  },
+  "menu": {
+    "articles": "Статьи",
+    "announcements": "Анонсы",
+    "ads": "Объявленія"
+  },
+  "footer": {
+    "about": "О проекте",
+    "contacts": "Контакты",
+    "copyright": "© {year} Мюнхенскiя Вѣсти. Все права защищены."
+  },
+  "articles": {
+    "read_more": "Читать далее"
+  }
+}

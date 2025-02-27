@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "text": "Собрание русскоязычного сообщества завтра в 18:00.",
+    "image": "/images/announcement1.jpg",
+    "styleClass": "redAlert"
+  },
+  {
+    "id": 2,
+    "text": "Ищу репетитора по немецкому языку. Свяжитесь со мной.",
+    "styleClass": "bordered"
+  },
+  {
+    "id": 3,
+    "text": "Сдается квартира в центре. Подробности по телефону: +49 123 456789.",
+    "image": "/images/announcement2.jpg",
+    "styleClass": "highlighted"
+  }
+]

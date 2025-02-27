@@ -1,0 +1,32 @@
+.articleContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.meta {
+  font-size: 1rem;
+  color: #666;
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.image {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}

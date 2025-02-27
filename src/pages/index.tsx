@@ -1,114 +1,128 @@
+import { GetStaticProps } from "next";
+import Link from "next/link";
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import { getArticlesByLocale, Article } from "@/lib/getArticles";
+import useTranslation from "@/hooks/useTranslation";
+import styles from "@/styles/Home.module.css";
+import announcements from "@/data/announcements.json";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+interface Announcement {
+  id: number;
+  text: string;
+  image?: string;
+  styleClass?: string;
+}
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+interface HomeProps {
+  mainArticle: Article | null;
+  secondArticle: Article | null;
+  otherArticles: Article[];
+  announcements: Announcement[];
+}
 
-export default function Home() {
+export default function Home({ mainArticle, secondArticle, otherArticles, announcements }: HomeProps) {
+  const t = useTranslation();
+
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/pages/index.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className={styles.container}>
+      <h1 className={styles.title}>{t("home.title")}</h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <div className={styles.layout}>
+        <div className={styles.articlesSection}>
+          {/* Главная статья */}
+          {mainArticle && (
+            <article className={styles.mainArticle}>
+              {mainArticle.image && (
+                <Image
+                  src={mainArticle.image}
+                  alt={mainArticle.title}
+                  className={styles.mainImage}
+                  width={800}
+                  height={450}
+                  layout="responsive"
+                  priority
+                />
+              )}
+              <h2 className={styles.articleTitle}>{mainArticle.title}</h2>
+              <p className={styles.articleDate}>{mainArticle.date}</p>
+              <div className={styles.articleContent}>{mainArticle.content}</div>
+            </article>
+          )}
+
+          {/* Вторая статья (уникальный стиль) */}
+          {secondArticle && (
+            <article className={styles.secondArticle}>
+              <div className={styles.secondArticleHeader}>
+                <h2 className={styles.articleTitle}>{secondArticle.title}</h2>
+                <p className={styles.articleDate}>{secondArticle.date}</p>
+              </div>
+
+              <div className={styles.secondArticleContent}>
+                {/* Если у статьи есть картинки, показываем их */}
+                {secondArticle.image && (
+                  <Image
+                    src={secondArticle.image}
+                    alt={secondArticle.title}
+                    className={styles.secondImage}
+                    width={600}
+                    height={350}
+                    layout="intrinsic"
+                  />
+                )}
+                <p>{secondArticle.content}</p>
+              </div>
+            </article>
+          )}
+
+          {/* Ссылки на другие статьи */}
+          {otherArticles.length > 0 && (
+            <section className={styles.otherArticles}>
+              <h2 className={styles.otherArticlesTitle}>{t("home.view_all_articles")}</h2>
+              <ul className={styles.otherArticlesList}>
+                {otherArticles.map((article) => (
+                  <li key={article.slug} className={styles.articleLink}>
+                    <Link href={`/articles/${article.slug}`}>
+                      {article.title} – {article.date}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Блок объявлений справа */}
+        <aside className={styles.announcements}>
+          {announcements.map((announcement) => (
+            <div key={announcement.id} className={`${styles.announcementItem} ${styles[announcement.styleClass || "default"]}`}>
+              {announcement.image && (
+                <Image
+                  src={announcement.image}
+                  alt="Announcement"
+                  className={styles.announcementImage}
+                  width={200}
+                  height={150}
+                  layout="intrinsic"
+                />
+              )}
+              <p className={styles.announcementText}>{announcement.text}</p>
+            </div>
+          ))}
+        </aside>
+      </div>
     </div>
   );
 }
+
+export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
+  const articles = getArticlesByLocale(locale || "ru");
+
+  return {
+    props: {
+      mainArticle: articles[0] || null,
+      secondArticle: articles[1] || null,
+      otherArticles: articles.length > 2 ? articles.slice(2, 5) : [],
+      announcements
+    }
+  };
+};

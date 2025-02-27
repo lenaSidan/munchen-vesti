@@ -18,7 +18,29 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Merriweather", serif; /* Основной газетный шрифт */
+  background-color: #f8f5e1; /* Цвет старой бумаги */
+  color: #3a3a3a;
+  line-height: 1.6;
+}
+
+/* Шрифт для заголовков */
+.oldStandard h1, 
+.oldStandard h2, 
+.oldStandard h3 {
+  font-family: "Old Standard TT", serif;
+  color: #7f1d1d; /* Глубокий тёмно-красный, как у газетных заголовков */
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
