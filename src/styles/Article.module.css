@@ -52,17 +52,17 @@
 .content {
   font-size: 1.1rem;
   line-height: 1.8;
-  text-align: left; /* Было: justify */
+  text-align: left;
   column-count: unset; 
-  column-gap: 30px; /* Увеличиваем расстояние между колонками */
+  column-gap: 30px;
   -webkit-hyphens: auto;
   hyphens: auto;
   transition: color 0.3s ease-in-out;
 }
 
-/* ✅ Исправляем заголовки */
+
 .content h2, .content h3 {
-  column-span: all; /* Заголовки растягиваются на всю ширину */
+  column-span: all; 
   margin-top: 20px;
   margin-bottom: 10px;
   font-size: 1.6rem;

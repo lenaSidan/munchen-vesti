@@ -4,10 +4,9 @@ import Image from "next/image";
 import { getArticlesByLocale, Article } from "@/lib/getArticles";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/Home.module.css";
-import announcementsData from "@/data/announcements.json"; // Загружаем JSON
+import announcementsData from "@/data/announcements.json";
 import Announcements from "@/components/Announcements";
 
-// Подключаем remark для обработки Markdown
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
@@ -15,7 +14,7 @@ import rehypeStringify from "rehype-stringify";
 
 interface Announcement {
   id: number;
-  textKey: string; // Используем ключ для перевода
+  textKey: string;
   image?: string;
   styleClass?: string;
 }
@@ -28,7 +27,7 @@ interface HomeProps {
 }
 
 export default function Home({ mainArticle, secondArticle, otherArticles }: HomeProps) {
-  const t = useTranslation(); // Функция для перевода
+  const t = useTranslation();
 
   return (
     <div className={styles.container}>
@@ -49,11 +48,12 @@ export default function Home({ mainArticle, secondArticle, otherArticles }: Home
                 />
               )}
               <h2 className={styles.articleTitle}>{mainArticle.title}</h2>
+              {/* <p className={styles.articleDate}>{mainArticle.date}</p> */}
               <div className={styles.decorativeLine}>
                 <span className={styles.left}>⊱</span>
                 <span className={styles.right}>⊰</span>
               </div>
-              <p className={styles.articleDate}>{mainArticle.date}</p>
+              
               <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: mainArticle.content }} />
             </article>
           )}

@@ -22,7 +22,14 @@
   "articles": {
     "read_more": "Weiterlesen"
   } ,
-
+  "news": {
+    "news": "Articles",
+    "read_more": "Weiterlesen",
+    "back": "zurück" ,
+    "date": "Veröffentlichungsdatum",
+    "author": "Autor",
+    "not_found": "Nachricht nicht gefunden"
+  },
   "legal_services_title": "RECHTSBERATUNG – ZUVERLÄSSIGE JURISTISCHE UNTERSTÜTZUNG",
   "legal_services_text": "Benötigen Sie rechtliche Hilfe? Wir bieten professionelle Anwaltsdienstleistungen in München!",
   "legal_services_point1": "Beratung zu Zivil-, Straf- und Verwaltungsrecht",
