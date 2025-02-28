@@ -1,35 +1,26 @@
 import { useRouter } from "next/router";
-import { getAllArticles } from "@/lib/getArticles";
+import { getArticlesByLocale, Article } from "@/lib/getArticles"; // ✅ Импортируем интерфейс
+
 import Link from "next/link";
 import { GetStaticProps } from "next";
-import useTranslation from "@/hooks/useTranslation";
-import styles from "@/styles/Articles.module.css"; // Подключаем стили
-
-// Определяем интерфейс для статьи
-interface Article {
-  slug: string;
-  title: string;
-  date: string;
-  author: string;
-}
 
 interface ArticlesProps {
-  articles: Article[];
+  articles: Article[]; // ✅ Теперь используем тот же Article, что и в getArticles.ts
 }
 
 export default function Articles({ articles }: ArticlesProps) {
   const { locale } = useRouter();
-  const t = useTranslation();
 
   return (
-    <div className={styles.articlesContainer}>
-      <h1 className={styles.title}>{locale === "ru" ? "Статьи" : "Artikel"}</h1>
+    <div>
+      <h1>{locale === "ru" ? "Статьи" : "Artikel"}</h1>
       {articles.map((article) => (
-        <div key={article.slug} className={styles.articleCard}>
-          <h2 className={styles.articleTitle}>{article.title}</h2>
-          <p className={styles.articleMeta}>{article.date} | {article.author}</p>
+        <div key={article.slug}>
+          <h2>{article.title}</h2>
+          <p>{article.date}</p>
+          <p>{article.author}</p>
           <Link href={`/articles/${article.slug}`}>
-            <button className={styles.readMoreButton}>{t("articles.read_more")}</button>
+            <button>Читать далее</button>
           </Link>
         </div>
       ))}
@@ -38,6 +29,6 @@ export default function Articles({ articles }: ArticlesProps) {
 }
 
 export const getStaticProps: GetStaticProps<ArticlesProps> = async ({ locale }) => {
-  const articles = getAllArticles(locale || "ru");
+  const articles = getArticlesByLocale(locale || "ru");
   return { props: { articles } };
 };

@@ -1,0 +1,95 @@
+.legalServices {
+  background: #fdf3d0; /* Светло-бежевый фон */
+  border: 2px solid #8b0000; /* Тёмно-красная рамка */
+  padding: 15px;
+  border-radius: 8px;
+  margin: 0;
+  text-align: left; /* Выравнивание влево для лучшего чтения */
+  color: #3a3a3a;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* 🌙 Тёмная тема */
+[data-theme="dark"] .legalServices {
+  background: #2e2e2e;
+  color: #fdf3d0;
+  border-color: #e0a96d;
+}
+
+/* 📌 Заголовок */
+.legalServices h3 {
+  font-family: var(--font-headings);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--heading-color);
+  margin-bottom: 8px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+}
+
+/* 📜 Фото */
+.announcementImageWrapper {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.announcementImage {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* 📌 Список услуг */
+.announcementList {
+  margin: 10px 0;
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.announcementList li {
+  font-weight: 500;
+  line-height: 1.4;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+/* 📌 Контактная информация */
+.legalServices p {
+  font-size: 1.0rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 8px 0;
+}
+
+/* 📌 Разделяем "ключ" и "значение" */
+.label {
+  font-weight: bold;
+  color: var(--heading-color);
+  margin-right: 5px;
+}
+
+.value {
+  color: var(--text-color);
+  font-weight: normal;
+}
+
+/* 📱 Адаптация для мобильных */
+@media (max-width: 768px) {
+  .legalServices {
+    padding: 12px;
+  }
+
+  .legalServices h3 {
+    font-size: 1.3rem;
+  }
+
+  .announcementList li {
+    font-size: 0.8rem;
+  }
+
+  .legalServices p {
+    font-size: 0.85rem;
+  }
+}

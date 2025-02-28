@@ -1,0 +1,53 @@
+.themeSwitcher {
+  display: flex;
+  flex-direction: column; /* 🔹 Делаем вертикальным */
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-body);
+}
+
+/* 🔹 Фон переключателя */
+.themeToggleWrapper {
+  position: relative;
+  width: 30px;
+  height: 60px;
+  background: var(--button-bg); /* ✅ Меняется при смене темы */
+  border-radius: 15px;
+  border: 2px solid var(--border-color); /* ✅ Меняется при смене темы */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+/* 🔹 Переключатель */
+.themeToggleKnob {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: var(--background); /* ✅ Меняется при смене темы */
+  border-radius: 50%;
+  top: 4px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid var(--text-color); /* ✅ Меняется при смене темы */
+}
+
+
+/* 🔹 Темная тема */
+.themeToggleWrapper.dark {
+  background: var(--border-color); /* ✅ Меняется при смене темы */
+}
+
+/* 🔹 Перемещение кнопки вниз в темной теме */
+.themeToggleWrapper.dark .themeToggleKnob {
+  top: 32px;
+}
+
+/* 🔹 Текстовый лейбл */
+.themeLabel {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--heading-color); /* ✅ Меняется в зависимости от темы */
+  transition: color 0.3s ease-in-out;
+}

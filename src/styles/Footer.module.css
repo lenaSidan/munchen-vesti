@@ -1,8 +1,9 @@
 .footer {
-  background-color: #f5f2dc;
+  background: none;
   padding: 20px;
-  border-top: 2px solid #7f1d1d;
+  border-top: 2px solid var(--heading-color); /* ✅ Меняется в зависимости от темы */
   text-align: center;
+  transition: border-color 0.3s ease-in-out;
 }
 
 .container {
@@ -13,6 +14,7 @@
   align-items: center;
 }
 
+/* 🔹 Название сайта */
 .brand {
   font-size: 1.5rem;
   font-weight: bold;
@@ -21,9 +23,11 @@
 
 .brand a {
   text-decoration: none;
-  color: #7f1d1d;
+  color: var(--heading-color); /* ✅ Меняется в зависимости от темы */
+  transition: color 0.3s ease-in-out;
 }
 
+/* 🔹 Навигация */
 .nav {
   display: flex;
   gap: 15px;
@@ -33,15 +37,17 @@
 .nav a {
   text-decoration: none;
   font-size: 1rem;
-  color: #222;
-  transition: color 0.2s;
+  color: var(--text-color); /* ✅ Меняется в зависимости от темы */
+  transition: color 0.2s ease-in-out;
 }
 
 .nav a:hover {
-  color: #7f1d1d;
+  color: var(--link-color); /* ✅ Цвет при наведении меняется в зависимости от темы */
 }
 
+/* 🔹 Авторские права */
 .copyright {
   font-size: 0.9rem;
-  color: #666;
+  color: var(--text-color); /* ✅ Меняется в зависимости от темы */
+  transition: color 0.3s ease-in-out;
 }

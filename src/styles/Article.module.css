@@ -1,32 +1,89 @@
+/* 📜 Контейнер статьи */
 .articleContainer {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  background: var(--background); /* ✅ Поддержка смены темы */
+  color: var(--text-color); /* ✅ Поддержка смены текста */
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
+/* 🔹 Заголовок статьи */
 .title {
-  font-size: 2rem;
-  font-weight: bold;
+  text-align: center;
   margin-bottom: 10px;
+  border-bottom: 2px solid var(--border-color); /* ✅ Поддержка смены цвета */
+  padding-bottom: 10px;
+  font-family: var(--font-headings);
+  color: var(--heading-color);
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
+/* 🕰 Дата статьи (рядом с заголовком) */
 .meta {
   font-size: 1rem;
-  color: #666;
+  font-family: var(--font-headings);
+  color: var(--heading-color); /* ✅ Теперь меняется с темой */
+  font-style: italic;
+  text-align: center;
+  display: block;
+  margin-bottom: 15px;
+  border: none; /* ✅ Убираем линии */
+  transition: color 0.3s ease-in-out;
 }
 
+/* 🖼 Обертка для картинки */
 .imageWrapper {
   display: flex;
   justify-content: center;
   margin: 20px 0;
 }
 
+/* 🖼 Стиль картинки */
 .image {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 2px solid var(--border-color); /* ✅ Теперь обводка меняется с темой */
+  transition: border-color 0.3s ease-in-out;
 }
 
+/* 📰 Контент статьи (газетная колонка) */
 .content {
   font-size: 1.1rem;
-  line-height: 1.6;
+  line-height: 1.8;
+  text-align: left; /* Было: justify */
+  column-count: unset; 
+  column-gap: 30px; /* Увеличиваем расстояние между колонками */
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  transition: color 0.3s ease-in-out;
+}
+
+/* ✅ Исправляем заголовки */
+.content h2, .content h3 {
+  column-span: all; /* Заголовки растягиваются на всю ширину */
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* ✅ Исправляем списки */
+.content ul, .content ol {
+  column-span: all; /* Списки тоже растягиваем на всю ширину */
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.content li {
+  margin-bottom: 5px;
+}
+
+
+/* ✅ Улучшение читаемости на мобильных */
+@media (max-width: 768px) {
+  .content {
+    column-count: 1;
+  }
 }

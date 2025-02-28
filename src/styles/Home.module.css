@@ -1,39 +1,41 @@
 .container {
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 10px auto;
   padding: 20px;
 }
 
-.title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
+/* --- Размещение главного блока --- */
 .layout {
   display: flex;
-  gap: 20px;
+  gap: 30px; /* 🔹 Уменьшаем расстояние между статьями и объявлениями */
   align-items: flex-start;
 }
 
 /* --- Основные статьи --- */
 .articlesSection {
   flex: 2;
+  width: 75%; /* 🔹 Уменьшаем ширину статей, чтобы объявления стали компактнее */
+  display: flex;
+  flex-direction: column;
 }
 
+/* Главная статья */
 .mainArticle {
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  text-align: justify;
+  padding: 0 0 20px 0;
   margin-bottom: 20px;
+  text-align: justify;
+  width: 100%;
 }
 
 .mainArticle .articleContent {
-  column-count: 3;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  text-align: justify;
+  column-count: 2;
   column-gap: 20px;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  transition: color 0.3s ease-in-out;
 }
 
 .mainImage {
@@ -42,111 +44,125 @@
   margin-bottom: 15px;
 }
 
-/* --- Вторая статья --- */
+/* --- Блок объявлений (компактные объявления) --- */
+.announcements {
+  flex: 1;
+  width: 22%; /* 🔹 Сужаем объявления до 22% */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* 🔹 Уменьшаем расстояние между объявлениями */
+}
+
+/* --- Вторая статья (на всю ширину) --- */
 .secondArticle {
   display: flex;
   flex-direction: column;
-  background-color: #f8f8f8;
-  padding: 15px;
-  border: 2px solid #7f1d1d;
+  padding: 15px 0;
+  text-align: justify;
+  width: 100%;
+}
+
+.secondArticle .articleContent {
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.secondArticle img {
+  max-width: 100%;
+  height: auto;
   border-radius: 5px;
-  text-align: left;
+  margin: 10px 0;
 }
-
-.secondArticleHeader {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.secondArticleContent {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  align-items: center;
-}
-
-.secondImage {
-  max-width: 40%;
-  border-radius: 5px;
-}
-
-.articleTitle {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #7f1d1d;
-}
-
-.articleDate {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 10px;
-}
-
-/* --- Другие статьи --- */
+/* --- Блок "Другие статьи" --- */
 .otherArticles {
-  margin-top: 30px;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px solid #3a3a3a; /* 🔹 Разделяющая линия сверху */
 }
 
 .otherArticlesTitle {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #7f1d1d;
+ 
+  color: var(--heading-color);
+  text-align: center;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 5px;
 }
 
+/* --- Список статей --- */
 .otherArticlesList {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column; /* 🔹 Статьи идут в столбик */
+  gap: 10px;
 }
 
+/* --- Стиль ссылок на статьи --- */
 .articleLink {
   font-size: 1.2rem;
-  margin-bottom: 10px;
+  font-family: "Merriweather", serif;
+  text-align: left;
+  color: var(--text-color);
+  border-bottom: 1px dashed var(--border-color);
+  padding-bottom: 5px;
+  transition: color 0.2s ease-in-out;
 }
 
-/* --- Блок объявлений --- */
-.announcements {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.articleLink:hover {
+  color: var(--link-color);
+  border-bottom: 1px solid var(--link-color);
+}
+
+/* --- Дата статьи (МЕНЬШЕ И КРАСНОГО ЦВЕТА) --- */
+.articleDate {
+  font-size: 0.9rem; /* 🔹 Чуть меньше, чем основной текст */
+  font-family: var(--font-headings); /* 🔹 Используем заголовочный шрифт */
+  color: var(--heading-color); /* 🔹 Автоматически меняется с темой */
+  font-style: italic;
+  display: inline-block; /* 🔹 Не уходит на новую строку */
+  transition: color 0.3s ease-in-out; 
 }
 
 
+/* ✅ Адаптивность: при уменьшении экрана объявления и статьи становятся в один столбик */
+@media (max-width: 1024px) {
+  .layout {
+    gap: 20px;
+  }
 
-/* --- Уникальные стили объявлений --- */
-.announcementItem {
-  background: #fff;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  text-align: center;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  .articlesSection {
+    width: 70%;
+  }
+
+  .announcements {
+    width: 28%;
+  }
 }
 
-.announcementImage {
-  max-width: 100%;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
 
-.announcementText {
-  font-size: 1.1rem;
-  color: #222;
-}
+  .articlesSection,
+  .announcements {
+    width: 100%;
+  }
 
-/* --- Разные стили объявлений --- */
-.redAlert {
-  background: #ffdddd;
-  border: 2px solid #ff0000;
-  color: #900;
-}
+  .announcementItem {
+    font-size: 1rem; /* 🔹 Увеличиваем обратно на маленьких экранах */
+    text-align: center; /* 🔹 Выравниваем текст объявлений */
+  }
+  .otherArticlesList {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-.bordered {
-  border: 2px dashed #7f1d1d;
-  padding: 20px;
-}
-
-.highlighted {
-  background: #ffffcc;
-  border: 2px solid #ffcc00;
+  .articleLink {
+    font-size: 1.1rem;
+    text-align: center;
+  }
 }
