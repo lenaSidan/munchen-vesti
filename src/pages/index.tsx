@@ -49,6 +49,10 @@ export default function Home({ mainArticle, secondArticle, otherArticles }: Home
                 />
               )}
               <h2 className={styles.articleTitle}>{mainArticle.title}</h2>
+              <div className={styles.decorativeLine}>
+                <span className={styles.left}>⊱</span>
+                <span className={styles.right}>⊰</span>
+              </div>
               <p className={styles.articleDate}>{mainArticle.date}</p>
               <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: mainArticle.content }} />
             </article>
@@ -64,6 +68,10 @@ export default function Home({ mainArticle, secondArticle, otherArticles }: Home
         <article className={styles.secondArticle}>
           <div className={styles.secondArticleHeader}>
             <h2 className={styles.articleTitle}>{secondArticle.title}</h2>
+            <div className={styles.decorativeLine}>
+                <span className={styles.left}>⊱</span>
+                <span className={styles.right}>⊰</span>
+              </div>
             <p className={styles.articleDate}>{secondArticle.date}</p>
           </div>
 
@@ -104,11 +112,7 @@ export default function Home({ mainArticle, secondArticle, otherArticles }: Home
 
 // Функция обработки Markdown в HTML
 async function processMarkdown(content: string) {
-  const processedContent = await remark()
-    .use(remarkGfm)
-    .use(remarkRehype)
-    .use(rehypeStringify)
-    .process(content);
+  const processedContent = await remark().use(remarkGfm).use(remarkRehype).use(rehypeStringify).process(content);
   return processedContent.toString();
 }
 
@@ -119,12 +123,8 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const translations = await import(`@/locales/${locale || "ru"}.json`);
 
   // Обрабатываем Markdown для главной и второй статьи
-  const mainArticle = articles[0]
-    ? { ...articles[0], content: await processMarkdown(articles[0].content) }
-    : null;
-  const secondArticle = articles[1]
-    ? { ...articles[1], content: await processMarkdown(articles[1].content) }
-    : null;
+  const mainArticle = articles[0] ? { ...articles[0], content: await processMarkdown(articles[0].content) } : null;
+  const secondArticle = articles[1] ? { ...articles[1], content: await processMarkdown(articles[1].content) } : null;
 
   // Загружаем объявления из JSON и переводим их
   const translatedAnnouncements = announcementsData.map((ann: Announcement) => ({
@@ -141,5 +141,3 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
     },
   };
 };
-
-
