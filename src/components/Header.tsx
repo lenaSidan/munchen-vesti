@@ -19,9 +19,13 @@ export default function Header() {
           <Link href="/ads">{t("menu.ads")}</Link>
         </nav>
         <div className={styles.tools}>
-        <LanguageSwitcher />
-        <ThemeSwitcher />
+          <LanguageSwitcher />
+          <ThemeSwitcher />
+        </div>
       </div>
+      <div className={styles.decorativeLine}>
+      <span className={styles.left}>❧</span>
+      <span className={styles.right}>❧</span>
       </div>
     </header>
   );
