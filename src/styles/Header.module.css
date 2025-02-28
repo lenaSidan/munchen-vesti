@@ -1,36 +1,53 @@
 .header {
-  background-color: #f5f2dc;
-  padding: 15px 20px;
-  border-bottom: 2px solid #7f1d1d;
+
+  background: none;
+  padding: 0 0 10px 0;
+  border-bottom: 2px solid var(--border-color);
+  
+  text-align: center;
 }
 
 .container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  position: relative;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-family: "Old Standard TT", serif;
+  font-size: 5rem;
+  font-weight: bolder;
+  color: var(--heading-color);
+  text-transform: uppercase;
   text-decoration: none;
-  color: #7f1d1d;
+  margin: 10px 0 0 0;
+  transition: color 0.3s;
 }
 
 .nav {
   display: flex;
   gap: 20px;
+  font-size: 1rem;
+  font-family: "Merriweather", serif;
+  text-transform: uppercase;
+  justify-content: center;
 }
 
 .nav a {
   text-decoration: none;
-  font-size: 1rem;
-  color: #222;
+  color: var(--text-color); /* ✅ Цвет текста тоже меняется */
   transition: color 0.2s;
 }
 
 .nav a:hover {
-  color: #7f1d1d;
+  color: var(--heading-color); /* ✅ При наведении цвет заголовка */
+}
+
+.tools {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
 }

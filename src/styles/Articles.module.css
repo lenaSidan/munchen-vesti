@@ -1,48 +1,50 @@
 .articlesContainer {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 20px;
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 20px;
+  text-align: center;
+  font-family: var(--font-headings);
+  text-transform: uppercase;
 }
 
 .articleCard {
-  border: 1px solid #ddd;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  transition: transform 0.2s;
-}
-
-.articleCard:hover {
-  transform: scale(1.02);
+  padding: 0;
+  margin-bottom: 30px;
+  border: none;
+  background: none;
+  transition: none;
 }
 
 .articleTitle {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 5px;
+  font-family: var(--font-headings);
 }
 
 .articleMeta {
-  font-size: 0.9rem;
-  color: #777;
+  font-size: 1rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 10px;
 }
 
 .readMoreButton {
-  background-color: #0070f3;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
+  display: inline-block;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--link-color);
+  text-decoration: underline;
   cursor: pointer;
-  font-size: 1rem;
 }
 
 .readMoreButton:hover {
-  background-color: #005bb5;
+  text-decoration: none;
+  color: var(--border-color);
 }

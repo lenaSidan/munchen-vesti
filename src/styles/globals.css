@@ -1,46 +1,135 @@
 @import "tailwindcss";
 
+/* 📜 Подключаем кастомные шрифты */
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+/* 🎨 Светлая тема (газетная бумага) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8f5e1; /* Цвет старой бумаги */
+  --text-color: #3a3a3a;
+  --border-color: #8b5a2b;
+  --heading-color: #7f1d1d; /* Глубокий тёмно-красный для заголовков */
+  --link-color: #8b5a2b;
+  --button-bg: #c1875b; 
+  --button-text: #ffffff;
+  --font-body: "Merriweather", serif;
+  --font-headings: "Old Standard TT", serif;
+  --paper-texture: url("/images/paper-texture.jpg"); /* Фон газеты */
+} 
+
+/* 🌙 Тёмная тема (приглушённая, как старая бумага ночью) */
+[data-theme="dark"] {
+  --background: #252525; /* Не чёрный, а серо-коричневый */
+  --text-color: #d4c8b0; /* Цвет старой бумаги при слабом освещении */
+  --border-color: #e0a96d; /* Меняем цвет границ */
+  --heading-color: #e0a96d; /* Светло-золотой */
+  --link-color: #e0a96d;
+  --button-bg: #e0a96d;
+  --button-text: #1c1c1c;
+  --font-body: "Merriweather", serif;
+  --font-headings: "Old Standard TT", serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* 📜 Газетный стиль шрифтов */
 body {
-  font-family: "Merriweather", serif; /* Основной газетный шрифт */
-  background-color: #f8f5e1; /* Цвет старой бумаги */
-  color: #3a3a3a;
-  line-height: 1.6;
+  font-family: var(--font-body);
+  background: var(--background);
+  /* background-image: var(--paper-texture); */
+  /* background: var(--background) url("/images/paper-texture.jpg") repeat; */
+  color: var(--text-color);
+  line-height: 1.8;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Шрифт для заголовков */
-.oldStandard h1, 
-.oldStandard h2, 
-.oldStandard h3 {
-  font-family: "Old Standard TT", serif;
-  color: #7f1d1d; /* Глубокий тёмно-красный, как у газетных заголовков */
+/* 📰 Газетные заголовки */
+h1, h2, h3 {
+  font-family: var(--font-headings);
+  color: var(--heading-color);
+  transition: color 0.3s;
+  letter-spacing: 1px; /* Немного увеличенный пробел между буквами */
+  text-transform: uppercase;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
 }
 
+/* 📢 H1 – Главный заголовок газеты */
 h1 {
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
+/* 📰 H2 – Заголовки статей */
 h2 {
   font-size: 2rem;
+  line-height: 1.4;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 12px;
+  border-bottom: 2px solid var(--border-color);
+  
+  /* 🔹 Используем градиент для сужения */
+  border-image: linear-gradient(
+    to right,
+    transparent 0%,
+    var(--border-color) 20%,
+    var(--border-color) 80%,
+    transparent 100%
+  ) 1;
+  padding-bottom: 5px;
+  transition: border-color 0.3s ease-in-out;
 }
 
+/* 🖊️ H3 – Внутренние заголовки */
 h3 {
-  font-size: 1.5rem;
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 5px;
+  line-height: 1.2;
+  transition: border-color 0.3s ease-in-out;
+}
+h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-transform: none;
+  font-style: normal;
+}
+/* 📜 Глобальные стили ссылок */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: var(--heading-color);
+}
+
+/* 🖊️ Кнопки */
+button {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: 1px solid var(--border-color);
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: var(--text-color);
+  color: var(--background);
+  border-color: var(--heading-color);
+}
+a[href^="http"] {
+  target: _blank !important;
 }

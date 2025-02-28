@@ -1,3 +1,5 @@
+export default getArticlesByLocale;
+
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -7,6 +9,7 @@ export interface Article {
   slug: string;
   title: string;
   date: string;
+  author?: string;
   content: string;
   image?: string;
 }
@@ -25,10 +28,12 @@ export function getArticlesByLocale(locale: string): Article[] {
       slug: file.replace(`.${locale}.md`, ""),
       title: data.title || "Без названия",
       date: data.date || "Неизвестная дата",
+      author: data.author || "Неизвестный автор", // 🛠 Добавляем поле author
       content,
-      image: data.image || null
+      image: data.image || null,
     };
   });
+
 
   // Сортируем статьи по дате (новые сверху)
   return articles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());

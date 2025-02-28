@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "@/styles/Header.module.css";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import useTranslation from "@/hooks/useTranslation";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 export default function Header() {
   const t = useTranslation();
@@ -17,7 +18,10 @@ export default function Header() {
           <Link href="/announcements">{t("menu.announcements")}</Link>
           <Link href="/ads">{t("menu.ads")}</Link>
         </nav>
+        <div className={styles.tools}>
         <LanguageSwitcher />
+        <ThemeSwitcher />
+      </div>
       </div>
     </header>
   );

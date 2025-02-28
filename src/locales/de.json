@@ -10,6 +10,10 @@
     "announcements": "Veranstaltungen",
     "ads": "Anzeigen"
   },
+  "about": {
+  "title": "Über das Projekt",
+  "description": "Münchener Nachrichten ist eine Online-Zeitung für russischsprachige Einwohner Münchens. Hier finden Sie Nachrichten, Veranstaltungshinweise und nützliche Informationen."
+},
   "footer": {
     "about": "Über das Projekt",
     "contacts": "Kontakt",
@@ -17,5 +21,22 @@
   },
   "articles": {
     "read_more": "Weiterlesen"
-  }
+  } ,
+
+  "legal_services_title": "RECHTSBERATUNG – ZUVERLÄSSIGE JURISTISCHE UNTERSTÜTZUNG",
+  "legal_services_text": "Benötigen Sie rechtliche Hilfe? Wir bieten professionelle Anwaltsdienstleistungen in München!",
+  "legal_services_point1": "Beratung zu Zivil-, Straf- und Verwaltungsrecht",
+  "legal_services_point2": "Dokumentenerstellung und Klageeinreichung",
+  "legal_services_point3": "Vertretung vor Gericht und in Verhandlungen",
+  "legal_services_point4": "Juristische Begleitung von Transaktionen und Verträgen",
+  "legal_services_point5": "Einwanderungs- und Familienrechtliche Fragen",
+  "legal_services_location": "Wo: München",
+  "legal_services_contact": "Kontakt: [Telefonnummer / E-Mail]",
+  "legal_services_more_info": "Mehr Informationen: [Link zur Website / Seite]",
+
+  "tutor_needed_title": "Deutsch-Nachhilfe gesucht",
+  "tutor_needed_text": "Ich suche einen Deutschlehrer. Bitte kontaktieren Sie mich.",
+
+  "apartment_rent_title": "Wohnung zu vermieten",
+  "apartment_rent_text": "Wohnung im Zentrum zu vermieten. Details per Telefon: +49 123 456789."
 }
