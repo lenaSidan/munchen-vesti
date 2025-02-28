@@ -46,9 +46,9 @@ export default function NewsArticlePage({ article }: ArticleProps) {
             <Image src={article.image} alt={article.title} width={800} height={300} className={styles.image} />
           </div>
         )}
-      </div>
+      
       <div className={styles.content} dangerouslySetInnerHTML={{ __html: article.content }} />
-
+      </div>
       <div className={styles.backButtonBox}>
         <Link href="/news" className={styles.backButton}>
           ⬅ {t("news.back")}
