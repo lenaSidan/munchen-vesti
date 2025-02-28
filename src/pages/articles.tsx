@@ -20,7 +20,7 @@ export default function Articles({ articles }: ArticlesProps) {
           <p>{article.date}</p>
           <p>{article.author}</p>
           <Link href={`/articles/${article.slug}`}>
-            <button>Читать далее</button>
+            <button type="button">Читать далее</button>
           </Link>
         </div>
       ))}
