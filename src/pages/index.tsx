@@ -50,8 +50,8 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
               <h2 className={styles.articleTitle}>{mainEvent.title}</h2>
               {/* <p className={styles.articleDate}>{mainEvent.date}</p> */}
               <div className={styles.decorativeLine}>
-                <span className={styles.left}>⊱</span>
-                <span className={styles.right}>⊰</span>
+                <span className={styles.left}>𐎐</span>
+                <span className={styles.right}>𐎐</span>
               </div>
 
               <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: mainEvent.content }} />
@@ -69,8 +69,8 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
           <div className={styles.secondArticleHeader}>
             <h2 className={styles.articleTitle}>{secondEvent.title}</h2>
             <div className={styles.decorativeLine}>
-              <span className={styles.left}>⊱</span>
-              <span className={styles.right}>⊰</span>
+              <span className={styles.left}>𐎐</span>
+              <span className={styles.right}>𐎐</span>
             </div>
             <p className={styles.articleDate}>{secondEvent.date}</p>
           </div>

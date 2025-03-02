@@ -63,6 +63,7 @@
 
 .decorativeLine .left {
   margin-right: 5px;
+  transform: scaleX(-1);
 }
 
 .decorativeLine .right {

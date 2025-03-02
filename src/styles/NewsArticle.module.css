@@ -92,6 +92,93 @@
   background: var(--heading-color);
   color: var(--background);
 }
+.readMoreContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 40px auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+  
+}
+.readMoreContainer:hover {
+  color: var(--border-color);
+}
+.decorativeLine {
+  position: relative;
+  width: 100%;
+height: 4px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.decorativeLine::before,
+.decorativeLine::after,
+.decorativeLine.bottom::before,
+.decorativeLine.bottom::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--heading-color);
+  position: absolute;
+  left: 0;
+}
+
+.decorativeLine::before {
+  top:0;
+}
+
+.decorativeLine::after {
+  bottom: 0;
+}
+
+.decorativeLine span {
+  font-size: 1.4rem;
+  color: var(--heading-color);
+  font-weight: bold;
+  display: inline-block;
+  background: var(--background);
+  position: relative;
+  line-height: 1;
+  margin: 0 3px;
+
+}
+
+
+.decorativeLine .left {
+  transform: scaleX(-1);
+  margin-right: 2px;
+}
+
+.decorativeLine .right {
+  margin-left: 2px;
+}
+
+.decorativeLine.bottom .left {
+  transform: scaleX(1);
+ 
+}
+
+.decorativeLine.bottom .right {
+  transform: scaleX(-1);
+}
+
+.decorativeLine.bottom {
+  transform: scaleY(-1);
+  margin-top: 15px;
+}
+[data-theme="dark"] .readMore {
+  color: #e0a96d;
+  
+}
+
+[data-theme="dark"] .readMore:hover {
+  
+  color: #d4c8b0;
+}
 
 .title {
   text-align: center;
@@ -130,46 +217,6 @@
   transform: scale(1.02);
 }
 
-.decorativeLine {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  margin-top: 0px;
-  margin-bottom: 5px;
-}
-
-.decorativeLine::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: var(--border-color);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
- 
-}
-
-/* Символы ⊱ и ⊰ */
-.decorativeLine span {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: var(--border-color);
-  display: inline-block;
-  position: relative;
-  background: var(--background);
-  padding: 0 10px;
-  z-index: 1;
-}
-
-.decorativeLine .left {
-  margin-right: 5px;
-}
-
-.decorativeLine .right {
-  margin-left: 5px;
-}
 
 .author {
   font-size: 1rem;
