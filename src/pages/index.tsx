@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { getArticlesByLocale, Article } from "@/lib/getArticles";
+import { getEventsByLocale, Event } from "@/lib/getEvents";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/Home.module.css";
 import announcementsData from "@/data/announcements.json";
@@ -20,13 +20,13 @@ interface Announcement {
 }
 
 interface HomeProps {
-  mainArticle: Article | null;
-  secondArticle: Article | null;
-  otherArticles: Article[];
+  mainEvent: Event | null;
+  secondEvent: Event | null;
+  otherEvents: Event[];
   announcements: Announcement[];
 }
 
-export default function Home({ mainArticle, secondArticle, otherArticles }: HomeProps) {
+export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps) {
   const t = useTranslation();
 
   return (
@@ -34,12 +34,12 @@ export default function Home({ mainArticle, secondArticle, otherArticles }: Home
       {/* Главная статья + объявления */}
       <div className={styles.layout}>
         <div className={styles.articlesSection}>
-          {mainArticle && (
+          {mainEvent && (
             <article className={styles.mainArticle}>
-              {mainArticle.image && (
+              {mainEvent.image && (
                 <Image
-                  src={mainArticle.image}
-                  alt={mainArticle.title}
+                  src={mainEvent.image}
+                  alt={mainEvent.title}
                   className={styles.mainImage}
                   width={800}
                   height={450}
@@ -47,14 +47,14 @@ export default function Home({ mainArticle, secondArticle, otherArticles }: Home
                   priority
                 />
               )}
-              <h2 className={styles.articleTitle}>{mainArticle.title}</h2>
-              {/* <p className={styles.articleDate}>{mainArticle.date}</p> */}
+              <h2 className={styles.articleTitle}>{mainEvent.title}</h2>
+              {/* <p className={styles.articleDate}>{mainEvent.date}</p> */}
               <div className={styles.decorativeLine}>
                 <span className={styles.left}>⊱</span>
                 <span className={styles.right}>⊰</span>
               </div>
-              
-              <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: mainArticle.content }} />
+
+              <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: mainEvent.content }} />
             </article>
           )}
         </div>
@@ -64,42 +64,42 @@ export default function Home({ mainArticle, secondArticle, otherArticles }: Home
       </div>
 
       {/* Вторая статья */}
-      {secondArticle && (
+      {secondEvent && (
         <article className={styles.secondArticle}>
           <div className={styles.secondArticleHeader}>
-            <h2 className={styles.articleTitle}>{secondArticle.title}</h2>
+            <h2 className={styles.articleTitle}>{secondEvent.title}</h2>
             <div className={styles.decorativeLine}>
-                <span className={styles.left}>⊱</span>
-                <span className={styles.right}>⊰</span>
-              </div>
-            <p className={styles.articleDate}>{secondArticle.date}</p>
+              <span className={styles.left}>⊱</span>
+              <span className={styles.right}>⊰</span>
+            </div>
+            <p className={styles.articleDate}>{secondEvent.date}</p>
           </div>
 
           <div className={styles.secondArticleContent}>
-            {secondArticle.image && (
+            {secondEvent.image && (
               <Image
-                src={secondArticle.image}
-                alt={secondArticle.title}
+                src={secondEvent.image}
+                alt={secondEvent.title}
                 className={styles.secondImage}
                 width={600}
                 height={350}
                 layout="intrinsic"
               />
             )}
-            <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: secondArticle.content }} />
+            <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: secondEvent.content }} />
           </div>
         </article>
       )}
 
       {/* Ссылки на другие статьи */}
-      {otherArticles.length > 0 && (
+      {otherEvents.length > 0 && (
         <section className={styles.otherArticles}>
           <h4 className={styles.otherArticlesTitle}>{t("home.view_all_articles")}</h4>
           <ul className={styles.otherArticlesList}>
-            {otherArticles.map((article) => (
-              <li key={article.slug} className={styles.articleLink}>
-                <Link href={`/articles/${article.slug}`}>
-                  {article.title} <span className={styles.articleDate}>{article.date}</span>
+            {otherEvents.map((event) => (
+              <li key={event.slug} className={styles.articleLink}>
+                <Link href={`/events/${event.slug}`}>
+                  {event.title} <span className={styles.eventDate}>{event.date}</span>
                 </Link>
               </li>
             ))}
@@ -117,14 +117,14 @@ async function processMarkdown(content: string) {
 }
 
 export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
-  const articles = getArticlesByLocale(locale || "ru");
+  const events = getEventsByLocale(locale || "ru");
 
   // Загружаем переводы
   const translations = await import(`@/locales/${locale || "ru"}.json`);
 
   // Обрабатываем Markdown для главной и второй статьи
-  const mainArticle = articles[0] ? { ...articles[0], content: await processMarkdown(articles[0].content) } : null;
-  const secondArticle = articles[1] ? { ...articles[1], content: await processMarkdown(articles[1].content) } : null;
+  const mainEvent = events[0] ? { ...events[0], content: await processMarkdown(events[0].content) } : null;
+  const secondEvent = events[1] ? { ...events[1], content: await processMarkdown(events[1].content) } : null;
 
   // Загружаем объявления из JSON и переводим их
   const translatedAnnouncements = announcementsData.map((ann: Announcement) => ({
@@ -134,9 +134,9 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
 
   return {
     props: {
-      mainArticle,
-      secondArticle,
-      otherArticles: articles.length > 2 ? articles.slice(2, 5) : [],
+      mainEvent,
+      secondEvent,
+      otherEvents: events.length > 2 ? events.slice(2, 5) : [],
       announcements: translatedAnnouncements, // ✅ Теперь объявления переведены
     },
   };
