@@ -19,12 +19,12 @@
     "contacts": "Контакты",
     "copyright": "© {year} Мюнхенскiя Вѣсти. Все права защищены."
   },
-  "articles": {
+  "events": {
     "read_more": "Читать далее"
   },
 
-  "news": {
-    "news": "Статьи",
+  "articles": {
+    "articles": "Статьи",
     "read_more": "Читать далее",
     "back": "назад" ,
     "date": "Дата публикации",
