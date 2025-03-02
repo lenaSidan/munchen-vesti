@@ -12,26 +12,30 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Link href="/" className={styles.logo}>
-          {t("home.title")}
-        </Link>
-        <nav className={styles.nav}>
-          
-          <Link href="/news" className={`${styles.navLink} ${router.pathname === "/news" ? styles.active : ""}`}>
-            {t("menu.articles")}
+        <div className={styles.containerBackground}>
+          <Link href="/" className={styles.logo}>
+            {t("home.title")}
           </Link>
-          <Link href="/announcements" className={`${styles.navLink} ${router.pathname === "/announcements" ? styles.active : ""}`}>
-            {t("menu.announcements")}
-          </Link>
-          <Link href="/ads" className={`${styles.navLink} ${router.pathname === "/ads" ? styles.active : ""}`}>
-            {t("menu.ads")}
-          </Link>
-        
-        </nav>
-
-        <div className={styles.tools}>
-          <LanguageSwitcher />
-          <ThemeSwitcher />
+          <div className={styles.tools}>
+            <LanguageSwitcher />
+            <ThemeSwitcher />
+          </div>
+        </div>
+        <div>
+          <nav className={styles.nav}>
+            <Link href="/news" className={`${styles.navLink} ${router.pathname === "/news" ? styles.active : ""}`}>
+              {t("menu.articles")}
+            </Link>
+            <Link
+              href="/announcements"
+              className={`${styles.navLink} ${router.pathname === "/announcements" ? styles.active : ""}`}
+            >
+              {t("menu.announcements")}
+            </Link>
+            <Link href="/ads" className={`${styles.navLink} ${router.pathname === "/ads" ? styles.active : ""}`}>
+              {t("menu.ads")}
+            </Link>
+          </nav>
         </div>
       </div>
       <div className={styles.decorativeLine}>
