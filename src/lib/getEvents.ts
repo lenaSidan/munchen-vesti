@@ -1,11 +1,11 @@
-export default getArticlesByLocale;
+export default getEventsByLocale;
 
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
 // Интерфейс для статьи
-export interface Article {
+export interface Event {
   slug: string;
   title: string;
   date: string;
@@ -15,12 +15,12 @@ export interface Article {
 }
 
 // Функция загрузки статей по языку
-export function getArticlesByLocale(locale: string): Article[] {
-  const articlesDir = path.join(process.cwd(), "public/articles");
-  const files = fs.readdirSync(articlesDir).filter((file) => file.endsWith(`.${locale}.md`));
+export function getEventsByLocale(locale: string): Event[] {
+  const eventsDir = path.join(process.cwd(), "public/events");
+  const files = fs.readdirSync(eventsDir).filter((file) => file.endsWith(`.${locale}.md`));
 
-  const articles = files.map((file) => {
-    const filePath = path.join(articlesDir, file);
+  const events = files.map((file) => {
+    const filePath = path.join(eventsDir, file);
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const { data, content } = matter(fileContent);
 
@@ -36,6 +36,6 @@ export function getArticlesByLocale(locale: string): Article[] {
 
 
   // Сортируем статьи по дате (новые сверху)
-  return articles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return events.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
