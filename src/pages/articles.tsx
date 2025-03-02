@@ -35,10 +35,7 @@ export default function ArticlesPage({ articles }: ArticlesProps) {
         <article key={article.slug} className={index % 2 === 0 ? styles.articleVariantA : styles.articleVariantB}>
           <div className={styles.articleHeader}>
             <h2 className={styles.articleTitle}>{article.title}</h2>
-            <div className={styles.decorativeLine}>
-              <span className={styles.left}>⊱</span>
-              <span className={styles.right}>⊰</span>
-            </div>
+           
           </div>
           <div className={styles.image_textBox}>
             {article.image && (
@@ -53,9 +50,21 @@ export default function ArticlesPage({ articles }: ArticlesProps) {
             )}
             <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: article.content }} />
           </div>
-          <Link href={`/articles/${article.slug}`} className={styles.readMore}>
-            {t("articles.read_more")}
-          </Link>
+          <div className={styles.readMoreContainer}>
+            <div className={styles.decorativeLine}>
+              <span className={styles.left}>⊱❧</span>
+              <span className={styles.right}>⊱❧</span>
+            </div>
+
+            <Link href={`/articles/${article.slug}`} className={styles.readMore}>
+              {t("articles.read_more")}
+            </Link>
+
+            <div className={`${styles.decorativeLine} ${styles.bottom}`}>
+              <span className={styles.right}>⊱❧</span>
+              <span className={styles.left}>⊱❧</span>
+            </div>
+          </div>
         </article>
       ))}
     </div>

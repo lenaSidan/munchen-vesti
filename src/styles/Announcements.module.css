@@ -6,7 +6,6 @@
   gap: 30px;
 }
 
-/* Общий стиль объявлений */
 .announcementItem {
   border: 2px solid var(--border-color);
   background-color: var(--background);
@@ -26,26 +25,7 @@
   box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.1);
 }
 
-/* 🔹 Индивидуальные стили для объявлений */
-.redAlert {
-  background: #7f1d1d;
-  color: white;
-  font-weight: 14px;
-  border: 2px solid #5a1313;
-}
 
-.bordered {
-  border: 2px dashed var(--border-color);
-}
-
-.highlighted {
-  background: #f9f0c6;
-  font-weight: bold;
-  border: 2px solid #c8a500;
-}
-
-
-/* ✅ Адаптивность */
 @media (max-width: 1024px) {
   .announcements {
     width: 28%;
