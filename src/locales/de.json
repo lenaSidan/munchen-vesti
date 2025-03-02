@@ -19,11 +19,11 @@
     "contacts": "Kontakt",
     "copyright": "© {year} Münchener Nachrichten. Alle Rechte vorbehalten."
   },
-  "articles": {
+  "events": {
     "read_more": "Weiterlesen"
   } ,
-  "news": {
-    "news": "Articles",
+  "article": {
+    "articles": "Articles",
     "read_more": "Weiterlesen",
     "back": "zurück" ,
     "date": "Veröffentlichungsdatum",

@@ -9,9 +9,9 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import useTranslation from "@/hooks/useTranslation";
-import styles from "@/styles/News.module.css";
+import styles from "@/styles/Articles.module.css";
 
-interface NewsArticle {
+interface ArticlesArticle {
   id: number;
   slug: string;
   title: string;
@@ -20,18 +20,18 @@ interface NewsArticle {
   content: string;
 }
 
-interface NewsProps {
-  news: NewsArticle[];
+interface ArticlesProps {
+  articles: ArticlesArticle[];
 }
 
-export default function NewsPage({ news }: NewsProps) {
+export default function ArticlesPage({ articles }: ArticlesProps) {
   const t = useTranslation();
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.pageTitle}>{t("news.news")}</h2>
+      <h2 className={styles.pageTitle}>{t("articles.articles")}</h2>
 
-      {news.map((article, index) => (
+      {articles.map((article, index) => (
         <article key={article.slug} className={index % 2 === 0 ? styles.articleVariantA : styles.articleVariantB}>
           <div className={styles.articleHeader}>
             <h2 className={styles.articleTitle}>{article.title}</h2>
@@ -53,8 +53,8 @@ export default function NewsPage({ news }: NewsProps) {
             )}
             <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: article.content }} />
           </div>
-          <Link href={`/news/${article.slug}`} className={styles.readMore}>
-            {t("news.read_more")}
+          <Link href={`/articles/${article.slug}`} className={styles.readMore}>
+            {t("articles.read_more")}
           </Link>
         </article>
       ))}
@@ -62,11 +62,11 @@ export default function NewsPage({ news }: NewsProps) {
   );
 }
 
-export const getStaticProps: GetStaticProps<NewsProps> = async ({ locale }) => {
-  const summariesDirectory = path.join(process.cwd(), "public/news_summaries");
+export const getStaticProps: GetStaticProps<ArticlesProps> = async ({ locale }) => {
+  const summariesDirectory = path.join(process.cwd(), "public/articles_summaries");
   const files = fs.readdirSync(summariesDirectory);
 
-  const news = await Promise.all(
+  const articles = await Promise.all(
     files
       .filter((file) => file.endsWith(`.${locale}.md`))
       .map(async (file) => {
@@ -88,11 +88,11 @@ export const getStaticProps: GetStaticProps<NewsProps> = async ({ locale }) => {
   );
 
   //Сортируем по id (от большего к меньшему, чтобы новые были первыми)
-  news.sort((a, b) => b.id - a.id);
+  articles.sort((a, b) => b.id - a.id);
 
   return {
     props: {
-      news,
+      articles,
     },
   };
 };

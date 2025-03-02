@@ -23,7 +23,7 @@ export default function Header() {
         </div>
         <div>
           <nav className={styles.nav}>
-            <Link href="/news" className={`${styles.navLink} ${router.pathname === "/news" ? styles.active : ""}`}>
+            <Link href="/articles" className={`${styles.navLink} ${router.pathname === "/articles" ? styles.active : ""}`}>
               {t("menu.articles")}
             </Link>
             <Link

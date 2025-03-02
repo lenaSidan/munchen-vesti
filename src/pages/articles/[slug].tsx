@@ -11,7 +11,7 @@ import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/NewsArticle.module.css";
 import Link from "next/link";
 
-interface NewsArticle {
+interface ArticlesArticle {
   id: number;
   slug: string;
   title: string;
@@ -21,10 +21,10 @@ interface NewsArticle {
 }
 
 interface ArticleProps {
-  article: NewsArticle;
+  article: ArticlesArticle;
 }
 
-export default function NewsArticlePage({ article }: ArticleProps) {
+export default function ArticlesArticlePage({ article }: ArticleProps) {
   const t = useTranslation();
 
   return (
@@ -37,7 +37,7 @@ export default function NewsArticlePage({ article }: ArticleProps) {
         </div>
         {article.author && (
           <p className={styles.author}>
-            {t("news.author")}: {article.author}
+            {t("articles.author")}: {article.author}
           </p>
         )}
 
@@ -50,8 +50,8 @@ export default function NewsArticlePage({ article }: ArticleProps) {
       <div className={styles.content} dangerouslySetInnerHTML={{ __html: article.content }} />
       </div>
       <div className={styles.backButtonBox}>
-        <Link href="/news" className={styles.backButton}>
-          ⬅ {t("news.back")}
+        <Link href="/articles" className={styles.backButton}>
+          ⬅ {t("articles.back")}
         </Link>
       </div>
     </div>
@@ -59,7 +59,7 @@ export default function NewsArticlePage({ article }: ArticleProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const newsDirectory = path.join(process.cwd(), "public/news");
+  const newsDirectory = path.join(process.cwd(), "public/articles");
   const files = fs.readdirSync(newsDirectory);
 
   const paths = files
@@ -78,7 +78,7 @@ export const getStaticProps: GetStaticProps<ArticleProps> = async ({ params, loc
     return { notFound: true };
   }
 
-  const filePath = path.join(process.cwd(), "public/news", `${params.slug}.${locale}.md`);
+  const filePath = path.join(process.cwd(), "public/articles", `${params.slug}.${locale}.md`);
 
   if (!fs.existsSync(filePath)) {
     return { notFound: true };
