@@ -25,7 +25,7 @@ Falls Sie denken, dass die **Vinessio Weinmesse** nur für Experten mit Sommelie
 
 **Erweitern Sie Ihren Wortschatz.** Falls jemand nach Ihrer Meinung fragt, klingt „angenehme Säure mit mineralischem Abgang“ definitiv besser als „ja, schmeckt gut“.
 
-### Veranstaltungsdetails ℹ
+### Veranstaltungsdetails
 **Wann:** 8.-9. März 2025  
 **Wo:** München, MOC Veranstaltungscenter  
 **Tickets:** Am besten im Voraus sichern – Messen dieser Klasse sind selten leer!  

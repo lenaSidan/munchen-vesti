@@ -17,6 +17,13 @@
   transparent 5px
 );
 }
+[data-theme="dark"] .containerBackground {
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(224, 169, 109, 0.3),
+    transparent 5px
+  );
+}
 .decorativeLine {
   position: relative;
   width: 100%;
@@ -94,11 +101,7 @@
   text-shadow:
     2px 2px 0px #1c1c1c,
     -2px -2px 0px #3a3a3a;
-    background: repeating-linear-gradient(
-    90deg,
-    rgba(224, 169, 109, 0.3),
-    transparent 5px
-  );
+
 }
 
 .nav{

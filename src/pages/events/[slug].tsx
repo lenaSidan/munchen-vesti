@@ -9,6 +9,8 @@ import rehypeStringify from "rehype-stringify"; // Преобразование 
 import Image from "next/image";
 import styles from "@/styles/Event.module.css";
 import { getEventsByLocale } from "@/lib/getEvents";
+import Link from "next/link";
+import useTranslation from "@/hooks/useTranslation";
 
 interface Event {
   slug: string;
@@ -24,6 +26,8 @@ interface EventProps {
 }
 
 export default function Event({ event }: EventProps) {
+  const t = useTranslation();
+  
   return (
     <div className={styles.articleContainer}>
       <h2 className={styles.title}>{event.title}</h2>
@@ -36,7 +40,23 @@ export default function Event({ event }: EventProps) {
         </div>
       )}
       <div className={styles.content} dangerouslySetInnerHTML={{ __html: event.content }} />
+      <div className={styles.readMoreContainer}>
+        <div className={styles.decorativeLine}>
+          <span className={styles.left}>⊱❧</span>
+          <span className={styles.right}>⊱❧</span>
+        </div>
+
+        <Link href="/" className={styles.readMore}>
+          {t("articles.back")}
+        </Link>
+
+        <div className={`${styles.decorativeLine} ${styles.bottom}`}>
+          <span className={styles.right}>⊱❧</span>
+          <span className={styles.left}>⊱❧</span>
+        </div>
+      </div>
     </div>
+    
   );
 }
 
