@@ -1,19 +1,18 @@
 .languageSwitcher {
   display: flex;
-  flex-direction: column; /* 🔹 Делаем вертикальным */
+  flex-direction: column;
   align-items: center;
   gap: 5px;
   font-family: var(--font-body);
 }
 
-/* 🔹 Фон переключателя */
 .toggleWrapper {
   position: relative;
   width: 30px;
   height: 60px;
-  background: var(--button-bg); /* ✅ Меняется при смене темы */
+  background: var(--button-bg);
   border-radius: 15px;
-  border: 2px solid var(--border-color); /* ✅ Меняется при смене темы */
+  border: 2px solid var(--border-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,32 +20,66 @@
   transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
-/* 🔹 Кнопка-переключатель */
 .toggleKnob {
   position: absolute;
   width: 24px;
   height: 24px;
-  background: var(--background); /* ✅ Меняется при смене темы */
+  background: var(--background);
   border-radius: 50%;
   top: 4px;
   transition: all 0.3s ease-in-out;
-  border: 1px solid var(--text-color); /* ✅ Меняется при смене темы */
+  border: 1px solid var(--text-color);
 }
 
-/* 🔹 Темная тема */
 .toggleWrapper.active {
-  background: var(--border-color); /* ✅ Меняется при смене темы */
+  background: var(--border-color);
 }
 
-/* 🔹 Перемещение кнопки вниз в темной теме */
 .toggleWrapper.active .toggleKnob {
   top: 32px;
 }
 
-/* 🔹 Текстовый лейбл */
 .languageLabel {
   font-size: 1rem;
   font-weight: bold;
-  color: var(--heading-color); /* ✅ Меняется в зависимости от темы */
+  color: var(--heading-color);
   transition: color 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  .languageSwitcher {
+    gap: 5px;
+  }
+  .languageSwitcher span {
+    font-size: 0.7rem;
+  }
+  .toggleWrapper {
+    width: 24px; /* 🔹 Уменьшаем ширину */
+    height: 50px; /* 🔹 Делаем тоньше */
+    border-radius: 12px; /* 🔹 Закругляем */
+  }
+
+  .toggleKnob {
+    width: 20px; /* 🔹 Меньше размер "ползунка" */
+    height: 20px;
+    top: 3px;
+  }
+
+  .toggleWrapper.active .toggleKnob {
+    top: 27px;
+  }
+
+  .languageLabel {
+    font-size: 0.9rem; /* 🔹 Чуть уменьшаем текст */
+  }
+  [data-theme="dark"] .toggleWrapper {
+    background: #e0a96d;
+  }
+  
+  [data-theme="dark"] .toggleKnob {
+    border-color: #e0a96d;
+  }
+  
+  [data-theme="dark"] .languageLabel {
+    color: #e0a96d;
+  }
 }

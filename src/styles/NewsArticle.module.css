@@ -48,22 +48,20 @@
   padding-bottom: 5px;
   align-items: center;
 }
-
 .content a {
   color: var(--link-color);
   text-decoration: underline;
   transition: color 0.3s ease-in-out;
 }
-
 .content a:hover {
   color: var(--heading-color);
 }
+
 .backButtonBox {
   margin-top: 30px;
   display: flex;
   align-items: flex-start;
 }
-
 .readMoreContainer {
   width: 100%;
   display: flex;
@@ -73,7 +71,6 @@
   margin: 40px auto;
   font-size: 1.2rem;
   font-weight: 600;
-  
 }
 .readMoreContainer:hover {
   color: var(--border-color);
@@ -85,7 +82,6 @@
   text-align: center;
   margin-bottom: 15px;
 }
-
 .decorativeLine::before,
 .decorativeLine::after,
 .decorativeLine.bottom::before,
@@ -98,15 +94,12 @@
   position: absolute;
   left: 0;
 }
-
 .decorativeLine::before {
   top:0;
 }
-
 .decorativeLine::after {
   bottom: 0;
 }
-
 .decorativeLine span {
   font-size: 1.4rem;
   color: var(--heading-color);
@@ -118,36 +111,27 @@
   line-height: 1;
   margin: 0 3px;
 }
-
 .decorativeLine .left {
   transform: scaleX(-1);
   margin-right: 2px;
 }
-
 .decorativeLine .right {
   margin-left: 2px;
 }
-
 .decorativeLine.bottom .left {
   transform: scaleX(1);
- 
 }
-
 .decorativeLine.bottom .right {
   transform: scaleX(-1);
 }
-
 .decorativeLine.bottom {
   transform: scaleY(-1);
   margin-top: 15px;
 }
 [data-theme="dark"] .readMore {
   color: #e0a96d;
-  
 }
-
 [data-theme="dark"] .readMore:hover {
-  
   color: #d4c8b0;
 }
 
@@ -220,22 +204,79 @@
 
 @media (max-width: 768px) {
   .articleContainer {
+    max-width: 100%;
     padding: 15px;
   }
 
   .title {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+  }
+
+  .articleBox {
+    flex-direction: column;
+    align-items: center;
   }
 
   .content {
+    column-count: 1; 
+    column-gap: 0;
     font-size: 1rem;
+    text-align: justify;
   }
 
   .content h2 {
-    font-size: 1.4rem;
+    font-size: 1rem;
+  }
+
+  .content h3 {
+    font-size: 0.8rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .content p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  .content li {
+    line-height: 1.4;
+  }
+  .imageWrapper {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .decorativeLine {
+    margin-bottom: 10px;
   }
 
   .decorativeLine span {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+  }
+
+  .readMoreContainer {
+    margin: 20px auto;
+    font-size: 1rem;
+  }
+
+  .backButtonBox {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .backButton {
+    font-size: 1rem;
+    padding: 8px 12px;
+    max-width: 180px;
   }
 }
