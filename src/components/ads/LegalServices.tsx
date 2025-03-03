@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "@/components/announcements/LegalServices.module.css";
+import styles from "@/components/ads/LegalServices.module.css";
 import useTranslation from "@/hooks/useTranslation";
 
 export default function LegalServices() {

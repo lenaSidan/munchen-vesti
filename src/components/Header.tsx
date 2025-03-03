@@ -23,16 +23,16 @@ export default function Header() {
         </div>
         <div>
           <nav className={styles.nav}>
-            <Link href="/articles" className={`${styles.navLink} ${router.pathname === "/articles" ? styles.active : ""}`}>
+            <Link href="/articles-page" className={`${styles.navLink} ${router.pathname === "/articles-page" ? styles.active : ""}`}>
               {t("menu.articles")}
             </Link>
             <Link
-              href="/announcements"
-              className={`${styles.navLink} ${router.pathname === "/announcements" ? styles.active : ""}`}
+              href="/events-page"
+              className={`${styles.navLink} ${router.pathname === "/events-page" ? styles.active : ""}`}
             >
               {t("menu.announcements")}
             </Link>
-            <Link href="/ads" className={`${styles.navLink} ${router.pathname === "/ads" ? styles.active : ""}`}>
+            <Link href="/ads-page" className={`${styles.navLink} ${router.pathname === "/ads-page" ? styles.active : ""}`}>
               {t("menu.ads")}
             </Link>
           </nav>

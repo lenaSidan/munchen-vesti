@@ -3,9 +3,9 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
-import remarkGfm from "remark-gfm"; // Поддержка Markdown-таблиц, чекбоксов и заголовков
-import remarkRehype from "remark-rehype"; // Преобразование Markdown в HTML AST
-import rehypeStringify from "rehype-stringify"; // Преобразование AST в строку HTML
+import remarkGfm from "remark-gfm";
+import remarkRehype from "remark-rehype";
+import rehypeStringify from "rehype-stringify";
 import Image from "next/image";
 import styles from "@/styles/Event.module.css";
 import { getEventsByLocale } from "@/lib/getEvents";

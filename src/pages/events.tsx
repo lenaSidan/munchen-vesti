@@ -1,12 +1,12 @@
 import { useRouter } from "next/router";
-import { getEventsByLocale, Event } from "@/lib/getEvents"; // ✅ Импортируем интерфейс
+import { getEventsByLocale, Event } from "@/lib/getEvents";
 import Link from "next/link";
 import { GetStaticProps } from "next";
 import useTranslation from "@/hooks/useTranslation";
 
 
 interface EventsProps {
-  events: Event[]; // ✅ Теперь используем тот же Event, что и в getEvents.ts
+  events: Event[];
 }
 
 export default function Events({ events }: EventsProps) {

@@ -9,7 +9,7 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import useTranslation from "@/hooks/useTranslation";
-import styles from "@/styles/Articles.module.css";
+import styles from "@/styles/ArticlesPage.module.css";
 
 interface ArticlesArticle {
   id: number;

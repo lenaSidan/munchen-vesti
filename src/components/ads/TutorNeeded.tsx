@@ -1,4 +1,4 @@
-import styles from "@/styles/Announcements.module.css";
+import styles from "@/styles/Ads.module.css";
 import useTranslation from "@/hooks/useTranslation";
 
 export default function TutorNeeded() {
