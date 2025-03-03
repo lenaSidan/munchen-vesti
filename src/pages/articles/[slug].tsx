@@ -52,7 +52,7 @@ export default function ArticlesArticlePage({ article }: ArticleProps) {
           <span className={styles.right}>⊱❧</span>
         </div>
 
-        <Link href="/articles" className={styles.readMore}>
+        <Link href="/articles-page" className={styles.readMore}>
           {t("articles.back")}
         </Link>
 

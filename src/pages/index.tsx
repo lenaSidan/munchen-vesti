@@ -5,12 +5,12 @@ import { getEventsByLocale, Event } from "@/lib/getEvents";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/Home.module.css";
 import announcementsData from "@/data/announcements.json";
-import Announcements from "@/components/Announcements";
 
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
+import Ads from "@/components/Ads";
 
 interface Announcement {
   id: number;
@@ -60,7 +60,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
         </div>
 
         {/* Блок объявлений */}
-        <Announcements />
+        <Ads />
       </div>
 
       {/* Вторая статья */}
