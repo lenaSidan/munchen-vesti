@@ -1,7 +1,7 @@
 .footer {
   background: none;
   padding: 20px;
-  border-top: 2px solid var(--heading-color); /* ✅ Меняется в зависимости от темы */
+  border-top: 2px solid var(--heading-color);
   text-align: center;
   transition: border-color 0.3s ease-in-out;
 }
@@ -14,7 +14,6 @@
   align-items: center;
 }
 
-/* 🔹 Название сайта */
 .brand {
   font-size: 1.5rem;
   font-weight: bold;
@@ -23,11 +22,10 @@
 
 .brand a {
   text-decoration: none;
-  color: var(--heading-color); /* ✅ Меняется в зависимости от темы */
+  color: var(--heading-color);
   transition: color 0.3s ease-in-out;
 }
 
-/* 🔹 Навигация */
 .nav {
   display: flex;
   gap: 15px;
@@ -37,17 +35,66 @@
 .nav a {
   text-decoration: none;
   font-size: 1rem;
-  color: var(--text-color); /* ✅ Меняется в зависимости от темы */
+  color: var(--text-color);
   transition: color 0.2s ease-in-out;
 }
 
 .nav a:hover {
-  color: var(--link-color); /* ✅ Цвет при наведении меняется в зависимости от темы */
+  color: var(--link-color);
 }
 
-/* 🔹 Авторские права */
 .copyright {
   font-size: 0.9rem;
-  color: var(--text-color); /* ✅ Меняется в зависимости от темы */
+  color: var(--text-color);
   transition: color 0.3s ease-in-out;
 }
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .brand {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .nav {
+   
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .nav a {
+    font-size: 0.9rem;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+  [data-theme="dark"] .footer {
+    border-color: #e0a96d;
+  }
+  
+  [data-theme="dark"] .brand a {
+    color: #e0a96d;
+  }
+  
+  [data-theme="dark"] .nav a {
+    color: #d4c8b0;
+  }
+  
+  [data-theme="dark"] .nav a:hover {
+    color: #e0a96d;
+  }
+  
+  [data-theme="dark"] .copyright {
+    color: #d4c8b0;
+  }
+}
+

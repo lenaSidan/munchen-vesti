@@ -74,7 +74,6 @@
   box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.1);
 }
 
-
 .articleContent {
   width: 70%;
   font-size: 1.2rem;
@@ -83,9 +82,8 @@
   -webkit-hyphens: auto;
   hyphens: auto;
   transition: color 0.3s ease-in-out;
-
-  
 }
+
 .articleContent h4 {
   text-align: left;
 }
@@ -98,13 +96,12 @@
   margin: 20px auto;
   font-size: 1.2rem;
   font-weight: 600;
- 
 }
 
 .decorativeLine {
   position: relative;
   width: 100%;
-height: 4px;
+  height: 4px;
   text-align: center;
   margin-bottom: 15px;
 }
@@ -139,9 +136,7 @@ height: 4px;
   position: relative;
   line-height: 1;
   margin: 0 2px;
-  
 }
-
 
 .decorativeLine .left {
   transform: scaleX(-1);
@@ -154,7 +149,6 @@ height: 4px;
 
 .decorativeLine.bottom .left {
   transform: scaleX(1);
- 
 }
 
 .decorativeLine.bottom .right {
@@ -173,7 +167,6 @@ height: 4px;
   background: var(--alt-background);
 }
 
-/* 🌙 Тёмная тема */
 [data-theme="dark"] .articleVariantA,
 [data-theme="dark"] .articleVariantB {
   background: #252525;
@@ -192,34 +185,73 @@ height: 4px;
 
 [data-theme="dark"] .readMore {
   color: #e0a96d;
-  
 }
 
 [data-theme="dark"] .readMore:hover {
-  
   color: #d4c8b0;
 }
 
-/* 📱 Мобильная версия */
 @media (max-width: 768px) {
   .container {
     padding: 15px;
   }
 
   .pageTitle {
-    font-size: 2rem;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  .articleVariantB .image_textBox {
+    flex-direction: column;
+  }
+  .articleTitle {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  .image_textBox p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  .articleVariantB .articleImage,
+  .articleVariantA .articleImage {
+   margin: 0 0 10px 0;
+  }
+  .image_textBox {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 25px;
   }
 
-  .articleTitle {
-    font-size: 1.5rem;
+  .articleImage {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 15px;
   }
 
   .articleContent {
+    width: 100%;
     font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  .decorativeLine {
+    margin-bottom: 10px;
+  }
+
+  .decorativeLine span {
+    font-size: 1.2rem;
   }
 
   .readMore {
     font-size: 0.9rem;
-    padding: 8px 12px;
+    padding: 5px 12px 0 12px;
+  }
+
+  .readMoreContainer {
+    margin: 20px auto;
+    font-size: 1rem;
   }
 }

@@ -48,3 +48,52 @@
   text-decoration: none;
   color: var(--border-color);
 }
+@media (max-width: 768px) {
+  .articlesContainer {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .articleCard {
+    margin-bottom: 20px;
+  }
+
+  .articleTitle {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .articleMeta {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .readMoreButton {
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+  }
+  [data-theme="dark"] .articleTitle {
+    color: #e0a96d;
+  }
+  
+  [data-theme="dark"] .articleMeta {
+    color: #d4c8b0;
+  }
+  
+  [data-theme="dark"] .readMoreButton {
+    color: #e0a96d;
+  }
+  
+  [data-theme="dark"] .readMoreButton:hover {
+    color: #d4c8b0;
+  }
+  
+}
+

@@ -158,7 +158,82 @@
 
 
 @media (max-width: 768px) {
+  .articleContainer {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+  }
+  .articleContainer p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  .meta {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  .imageWrapper {
+    margin: 15px 0;
+  }
+
+  .image {
+    width: 100%; /* 🔹 Растягиваем на всю ширину */
+    max-width: 100%;
+  }
+
   .content {
-    column-count: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+    column-count: 1; /* 🔹 Отключаем колонки на мобильных */
+  }
+
+  .content h2, .content h3 {
+    font-size: 1.4rem; /* 🔹 Чуть меньше заголовки */
+    margin-top: 15px;
+    margin-bottom: 8px;
+  }
+
+  .content ul, .content ol {
+    padding-left: 15px;
+    margin-bottom: 12px;
+  }
+
+  .readMoreContainer {
+    font-size: 1rem; /* 🔹 Уменьшаем размер кнопки */
+    margin: 25px auto;
+  }
+
+  .decorativeLine {
+    margin-bottom: 10px;
+  }
+
+  .decorativeLine span {
+    font-size: 1.2rem; /* 🔹 Чуть меньше значки */
+  }
+  [data-theme="dark"] .title {
+    color: #e0a96d;
+  }
+  
+  [data-theme="dark"] .meta {
+    color: #d4c8b0;
+  }
+  
+  [data-theme="dark"] .decorativeLine span {
+    color: #e0a96d;
+  }
+  
+  [data-theme="dark"] .readMore {
+    color: #e0a96d;
+  }
+  
+  [data-theme="dark"] .readMore:hover {
+    color: #d4c8b0;
   }
 }
+
