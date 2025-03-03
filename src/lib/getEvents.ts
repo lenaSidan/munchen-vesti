@@ -8,8 +8,10 @@ import matter from "gray-matter";
 export interface Event {
   slug: string;
   title: string;
-  date: string;
-  author?: string;
+  date?: string;
+  time?: string;
+  ort?: string;
+  link?: string;
   content: string;
   image?: string;
 }
@@ -26,9 +28,11 @@ export function getEventsByLocale(locale: string): Event[] {
 
     return {
       slug: file.replace(`.${locale}.md`, ""),
-      title: data.title || "Без названия",
-      date: data.date || "Неизвестная дата",
-      author: data.author || "Неизвестный автор", // 🛠 Добавляем поле author
+      title: data.title || "Untitled",
+      date: data.date || "Unknown date",
+      time: data.time || "",
+      ort: data.ort || "Unknown author", 
+      link: data.link || "",
       content,
       image: data.image || null,
     };

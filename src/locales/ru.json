@@ -8,7 +8,9 @@
   "menu": {
     "articles": "Статьи",
     "announcements": "Анонсы",
-    "ads": "Объявленія"
+    "ads": "Объявленія",
+    "more": "больше",
+    "less": "свернуть"
   },
   "about": {
   "title": "О проектѣ",
@@ -22,7 +24,11 @@
   "events": {
     "read_more": "Читать далѣе"
   },
-
+  "event": {
+    "time": "дата",
+    "ort": "место",
+    "link": "ссылка"
+  },
   "articles": {
     "articles": "Статьи",
     "read_more": "Читать далѣе",

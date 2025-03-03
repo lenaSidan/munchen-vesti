@@ -15,10 +15,12 @@ import useTranslation from "@/hooks/useTranslation";
 interface Event {
   slug: string;
   title: string;
-  date: string;
-  author?: string;
-  image?: string;
+  date?: string;
+  time?: string;
+  ort?: string;
+  link?: string;
   content: string;
+  image?: string;
 }
 
 interface EventProps {
@@ -32,7 +34,7 @@ export default function Event({ event }: EventProps) {
     <div className={styles.articleContainer}>
       <h2 className={styles.title}>{event.title}</h2>
       <p className={styles.meta}>
-        {event.date} {event.author && `| ${event.author}`}
+        {event.date} {event.ort && `| ${event.ort}`}
       </p>
       {event.image && (
         <div className={styles.imageWrapper}>
@@ -99,9 +101,11 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
     props: {
       event: {
         slug: params.slug as string,
-        title: data.title || "Без названия",
-        date: data.date || "Неизвестная дата",
-        author: data.author || "",
+        title: data.title || "Untitled",
+        date: data.date || "Unknown date",
+        time: data.time || "",
+        ort: data.ort || "Unknown author", 
+        link: data.link || "",
         image: data.image || null,
         content: contentHtml,
       },
