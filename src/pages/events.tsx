@@ -21,7 +21,7 @@ export default function Events({ events }: EventsProps) {
         <div key={event.slug}>
           <h2>{event.title}</h2>
           <p>{event.date}</p>
-          <p>{event.author}</p>
+          <p>{event.ort}</p>
           <Link href={`/events/${event.slug}`}>
             <button type="button">{t("menu.read_more")}</button>
           </Link>

@@ -8,7 +8,9 @@
   "menu": {
     "articles": "Artikel",
     "announcements": "Veranstaltungen",
-    "ads": "Anzeigen"
+    "ads": "Anzeigen",
+    "more": "mehr",
+    "less": "weniger"
   },
   "about": {
   "title": "Über das Projekt",
@@ -22,6 +24,11 @@
   "events": {
     "read_more": "Weiterlesen"
   } ,
+  "event": {
+    "time": "Datum",
+    "ort": "Ort",
+    "link": "Link"
+  },
   "articles": {
     "articles": "Articles",
     "read_more": "Weiterlesen",

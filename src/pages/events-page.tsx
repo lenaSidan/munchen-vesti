@@ -32,10 +32,34 @@ export default function EventsPage({ events }: EventsProps) {
         <div key={event.slug} className={styles.eventCard}>
           <h2 className={styles.eventTitle}>{event.title}</h2>
           <p className={styles.meta}>
-            {event.date} {event.author && `| ${event.author}`}
+            {event.date} {event.ort && `| ${event.ort}`}
           </p>
+          <div className={styles.eventImageOrt}>
+            <div className={styles.eventLocation}>
+              {event.time && (
+                <p className={styles.box}>
+                  <span className={styles.label}>{t("event.time")}: </span>
+                  <span className={styles.value}>{event.time}</span>
+                </p>
+              )}
 
-          {event.image && (
+              {event.ort && (
+                <p className={styles.box}>
+                  <span className={styles.label}>{t("event.ort")}: </span>
+                  <span className={styles.value}>{event.ort}</span>
+                </p>
+              )}
+        
+              {event.link && (
+                <p className={styles.box}>
+                  <span className={styles.label}>{t("event.link")}: </span>
+                  <a className={styles.valueLink} href={event.link} target="_blank" rel="noopener noreferrer">
+                    {event.link}
+                  </a>
+                </p>
+              )}
+            </div>
+            {event.image && (
               <Image
                 src={event.image}
                 alt={event.title}
@@ -45,16 +69,15 @@ export default function EventsPage({ events }: EventsProps) {
                 layout="intrinsic"
               />
             )}
+          </div>
           <div className={styles.eventContent}>
             <div
               dangerouslySetInnerHTML={{
-                __html: expandedEvents[event.slug]
-                  ? event.content
-                  : `${event.content.slice(0, 250)}...`,
+                __html: expandedEvents[event.slug] ? event.content : `${event.content.slice(0, 250)}...`,
               }}
             />
 
-            <button className={styles.toggleButton} onClick={() => toggleExpand(event.slug)}>
+            <button type="button" className={styles.toggleButton} onClick={() => toggleExpand(event.slug)}>
               {expandedEvents[event.slug] ? t("menu.less") : t("menu.more")}
             </button>
           </div>
@@ -66,11 +89,7 @@ export default function EventsPage({ events }: EventsProps) {
 
 // Функция обработки Markdown в HTML
 async function processMarkdown(content: string) {
-  const processedContent = await remark()
-    .use(remarkGfm)
-    .use(remarkRehype)
-    .use(rehypeStringify)
-    .process(content);
+  const processedContent = await remark().use(remarkGfm).use(remarkRehype).use(rehypeStringify).process(content);
 
   return processedContent.toString();
 }

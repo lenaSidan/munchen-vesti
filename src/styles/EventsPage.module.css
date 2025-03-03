@@ -11,9 +11,21 @@
   color: var(--heading-color);
   margin-bottom: 25px;
 }
+.meta {
+  display: none;
+}
+.eventCard {
+    border: 1px solid var(--heading-color);
+    border-radius: 8px;
+    padding: 20px;
+    background: var(--alt-background);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 30px;
+}
 .eventTitle {
   font-family: var(--font-headings);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-align: left;
   color: var(--heading-color);
   margin-bottom: 20px;
@@ -36,7 +48,32 @@
 .eventVariantB {
   background: rgba(0, 0, 0, 0.03);
 }
+.eventImageOrt {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.eventLocation {
+  width: 70%;
+  margin-left: 30px;
+}
+.label {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: var(--link-color);;
+}
 
+.value {
+  color: var(--text-color);
+  margin-left: 5px;
+  font-size: 1.6rem;
+}
+.valueLink {
+  color: var(--text-color);
+  font-size: 1.4rem;
+  font-style: italic;
+  text-decoration: underline;
+}
 .image_textBox {
   width: 100%;
   display: flex;
@@ -94,10 +131,16 @@
   cursor: pointer;
   border: none;
   background: none;
-  margin-top: 10px;
+  margin-top: 30px;
+  padding: 0;
   transition: color 0.3s ease-in-out;
-  margin-bottom: 30px;
+  
 }
+[data-theme="dark"] .toggleButton:hover {
+  color: #f4f1dd;
+  font-size: 1rem;
+  text-decoration: underline;
+} 
 
 .toggleButton:hover {
   color: var(--heading-color);
@@ -107,14 +150,69 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 15px;
+    padding: 10px;
   }
 
   .pageTitle {
     font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .eventCard {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .eventTitle {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .eventImage {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 15px;
+  }
+
+  .image_textBox {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .eventVariantA .eventImage,
+  .eventVariantB .eventImage {
+    margin: 0 auto;
   }
 
   .eventContent {
     font-size: 1rem;
+    line-height: 1.3;
+    text-align: justify;
+  }
+
+  .eventLocation {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .eventImageOrt {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .value,
+  .valueLink {
+    font-size: 1.2rem;
+  }
+
+  .label {
+    font-size: 1.2rem;
+  }
+
+  .toggleButton {
+    font-size: 0.9rem;
+    margin-top: 15px;
   }
 }
+
