@@ -31,7 +31,7 @@ export default function ArticlesArticlePage({ article }: ArticleProps) {
     <div className={styles.articleContainer}>
       <div className={styles.articleBox}>
         <h2 className={styles.title}>{article.title}</h2>
-  
+
         {article.author && (
           <p className={styles.author}>
             {t("articles.author")}: {article.author}
@@ -43,29 +43,24 @@ export default function ArticlesArticlePage({ article }: ArticleProps) {
             <Image src={article.image} alt={article.title} width={800} height={300} className={styles.image} />
           </div>
         )}
-      
-      <div className={styles.content} dangerouslySetInnerHTML={{ __html: article.content }} />
+
+        <div className={styles.content} dangerouslySetInnerHTML={{ __html: article.content }} />
       </div>
       <div className={styles.readMoreContainer}>
-            <div className={styles.decorativeLine}>
-              <span className={styles.left}>⊱❧</span>
-              <span className={styles.right}>⊱❧</span>
-            </div>
+        <div className={styles.decorativeLine}>
+          <span className={styles.left}>⊱❧</span>
+          <span className={styles.right}>⊱❧</span>
+        </div>
 
-            <Link href="/articles" className={styles.readMore}>
-              {t("articles.back")}
-            </Link>
-
-            <div className={`${styles.decorativeLine} ${styles.bottom}`}>
-              <span className={styles.right}>⊱❧</span>
-              <span className={styles.left}>⊱❧</span>
-            </div>
-          </div>
-      {/* <div className={styles.backButtonBox}>
-        <Link href="/articles" className={styles.backButton}>
-          ⬅ {t("articles.back")}
+        <Link href="/articles" className={styles.readMore}>
+          {t("articles.back")}
         </Link>
-      </div> */}
+
+        <div className={`${styles.decorativeLine} ${styles.bottom}`}>
+          <span className={styles.right}>⊱❧</span>
+          <span className={styles.left}>⊱❧</span>
+        </div>
+      </div>
     </div>
   );
 }

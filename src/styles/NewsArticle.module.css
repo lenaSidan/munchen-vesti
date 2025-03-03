@@ -30,7 +30,7 @@
 }
 .content p {
   font-size: 1.2rem;
-  line-height: 1.2;
+  line-height: 1.4;
   text-align: justify;
   -webkit-hyphens: auto;
   hyphens: auto;
@@ -49,16 +49,6 @@
   align-items: center;
 }
 
-.content ul {
-  margin: 15px 0;
-  padding-left: 20px;
-}
-
-.content li {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
 .content a {
   color: var(--link-color);
   text-decoration: underline;
@@ -73,25 +63,7 @@
   display: flex;
   align-items: flex-start;
 }
-.backButton {
-  display: block;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: bold;
-  color: var(--link-color);
-  text-decoration: none;
-  border: 1px solid var(--border-color);
-  padding: 10px 15px;
-  border-radius: 5px;
-  margin: 15px auto;
-  max-width: 200px;
-  transition: all 0.3s ease-in-out;
-}
 
-.backButton:hover {
-  background: var(--heading-color);
-  color: var(--background);
-}
 .readMoreContainer {
   width: 100%;
   display: flex;
@@ -109,7 +81,7 @@
 .decorativeLine {
   position: relative;
   width: 100%;
-height: 4px;
+  height: 4px;
   text-align: center;
   margin-bottom: 15px;
 }
@@ -141,12 +113,11 @@ height: 4px;
   font-weight: bold;
   display: inline-block;
   background: var(--background);
+  background: none;
   position: relative;
   line-height: 1;
   margin: 0 3px;
-
 }
-
 
 .decorativeLine .left {
   transform: scaleX(-1);
@@ -216,7 +187,6 @@ height: 4px;
 .imageWrapper:hover {
   transform: scale(1.02);
 }
-
 
 .author {
   font-size: 1rem;

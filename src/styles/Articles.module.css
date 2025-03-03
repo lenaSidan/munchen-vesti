@@ -1,6 +1,5 @@
 .container {
   max-width: 1200px;
-
   margin: 0 auto;
   padding: 20px;
   background: var(--background);
@@ -24,20 +23,19 @@
   margin-bottom: 20px;
 }
 
-
 .articleVariantA,
 .articleVariantB {
   padding: 20px;
   /* border: 2px solid var(--border-color); */
   border-radius: 8px;
-  background: var(--background);
+  background: var(--alt-background);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   transition: all 0.3s ease-in-out;
 }
 
 .articleVariantA {
-  background: var(--background);
+  background: var(--alt-background1);
 }
 
 .articleVariantB {
@@ -49,7 +47,15 @@
   flex-direction: row;
   margin-bottom: 40px;
 }
-
+.articleVariantB .image_textBox {
+  flex-direction: row-reverse;
+}
+.articleVariantB .articleImage {
+  margin-left: 20px;
+}
+.articleVariantA .articleImage {
+  margin-right: 20px;
+}
 .articleImage {
   display: block;
   width: 30%;
@@ -77,7 +83,8 @@
   -webkit-hyphens: auto;
   hyphens: auto;
   transition: color 0.3s ease-in-out;
-  padding-left: 20px;
+
+  
 }
 .articleContent h4 {
   text-align: left;
@@ -128,7 +135,7 @@ height: 4px;
   color: var(--heading-color);
   font-weight: bold;
   display: inline-block;
-  background: var(--background);
+  background: var(--alt-background1);
   position: relative;
   line-height: 1;
   margin: 0 2px;
@@ -158,6 +165,14 @@ height: 4px;
   transform: scaleY(-1);
   margin-top: 15px;
 }
+.articleVariantB {
+  background: var(--alt-background);
+}
+
+.articleVariantB .decorativeLine span {
+  background: var(--alt-background);
+}
+
 /* 🌙 Тёмная тема */
 [data-theme="dark"] .articleVariantA,
 [data-theme="dark"] .articleVariantB {
