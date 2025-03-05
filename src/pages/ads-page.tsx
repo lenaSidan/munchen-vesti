@@ -3,6 +3,7 @@ import styles from "@/styles/AdsPage.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import LegalServices from "@/components/ads/LegalServices";
 import TutorNeeded from "@/components/ads/TutorNeeded";
+import TheaterAcademy from "@/components/ads/TheaterAcademy";
 
 export default function AnnouncementsPage() {
   const t = useTranslation();
@@ -11,7 +12,7 @@ export default function AnnouncementsPage() {
     { 
       id: 1, 
       type: "single",
-      components: [<TutorNeeded key="tutor" />] 
+      components: [<TheaterAcademy key="tutor" />] 
     },
     { 
       id: 2, 
@@ -31,7 +32,7 @@ export default function AnnouncementsPage() {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>{t("menu.announcements")}</h2>
+      <h2 className={styles.title}>{t("menu.ads")}</h2>
 
       <div className={styles.announcementsWrapper}>
         {announcementGroups.map((group) => (

@@ -1,7 +1,10 @@
 ---
 title: "Традиціонная нѣмецкая кухня"
 date: "2025-02-10"
-image: "/images/german-food.jpg"
+time: "8-9 мая"
+ort: "Zenith-Kulturhalle, Мюнхен"
+link: "https://www.weinmesse-muenchen.de/"
+image: "/images/vinessio-weinmesse.webp"
 ---
 
 Немецкая кухня знаменита сытными блюдами. В каждой федеральной земле есть свои кулинарные традиции.
