@@ -5,7 +5,7 @@ import { getEventsByLocale, Event } from "@/lib/getEvents";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/Home.module.css";
 import announcementsData from "@/data/announcements.json";
-
+import rehypeExternalLinks from "rehype-external-links";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
@@ -112,19 +112,32 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
 
 // Функция обработки Markdown в HTML
 async function processMarkdown(content: string) {
-  const processedContent = await remark().use(remarkGfm).use(remarkRehype).use(rehypeStringify).process(content);
+  const processedContent = await remark()
+    .use(remarkGfm)
+    .use(remarkRehype)
+    .use(rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] }) // ✅ Добавляем атрибуты
+    .use(rehypeStringify)
+    .process(content);
+
   return processedContent.toString();
 }
 
 export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const events = getEventsByLocale(locale || "ru");
 
+  // Сортируем мероприятия по дате (сначала актуальные)
+  const sortedEvents = events.sort((a, b) => {
+    const dateA = a.date ? new Date(a.date).getTime() : 0; // Если даты нет, ставим 0 (очень старое значение)
+    const dateB = b.date ? new Date(b.date).getTime() : 0;
+    return dateA - dateB;
+  });
+
   // Загружаем переводы
   const translations = await import(`@/locales/${locale || "ru"}.json`);
 
   // Обрабатываем Markdown для главной и второй статьи
-  const mainEvent = events[0] ? { ...events[0], content: await processMarkdown(events[0].content) } : null;
-  const secondEvent = events[1] ? { ...events[1], content: await processMarkdown(events[1].content) } : null;
+  const mainEvent = sortedEvents[0] ? { ...sortedEvents[0], content: await processMarkdown(sortedEvents[0].content) } : null;
+  const secondEvent = sortedEvents[1] ? { ...sortedEvents[1], content: await processMarkdown(sortedEvents[1].content) } : null;
 
   // Загружаем объявления из JSON и переводим их
   const translatedAnnouncements = announcementsData.map((ann: Announcement) => ({
@@ -136,8 +149,9 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
     props: {
       mainEvent,
       secondEvent,
-      otherEvents: events.length > 2 ? events.slice(2, 5) : [],
+      otherEvents: sortedEvents.length > 2 ? sortedEvents.slice(2, 5) : [],
       announcements: translatedAnnouncements, // ✅ Теперь объявления переведены
     },
   };
 };
+
