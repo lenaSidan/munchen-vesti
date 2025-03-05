@@ -26,7 +26,7 @@ export default function EventsPage({ events }: EventsProps) {
 
   return (
     <div className={styles.container}>
-      {/* <h2 className={styles.pageTitle}>{t("menu.announcements")}</h2> */}
+     <h2 className={styles.pageTitle}>{t("menu.announcements")}</h2>
 
       {events.map((event) => (
         <div key={event.slug} className={styles.eventCard}>

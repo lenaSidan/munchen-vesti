@@ -1,7 +1,10 @@
 ---
 title: "Русская ярмарка въ Германіи: традиціи и современность"
 date: "2025-02-20"
-image: "/images/russian-fair.jpg"
+time: "8-9 мая"
+ort: "Zenith-Kulturhalle, Мюнхен"
+link: "https://www.weinmesse-muenchen.de/"
+image: "/images/vinessio-weinmesse.webp"
 ---
 
 В Германии русская культура становится всё более популярной, и особенное место в её продвижении занимает традиционная русская ярмарка.
