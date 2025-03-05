@@ -14,6 +14,7 @@
 .meta {
   display: none;
 }
+
 .eventCard {
     border: 1px solid var(--heading-color);
     border-radius: 8px;
@@ -74,6 +75,11 @@
   font-size: 1.4rem;
   font-style: italic;
   text-decoration: underline;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  display: inline-block;
+  max-width: 100%;
 }
 .image_textBox {
   width: 100%;
@@ -173,7 +179,7 @@
   .eventImage {
     width: 100%;
     height: auto;
-    margin: 0 auto 15px;
+    margin: 10px 0;
   }
 
   .image_textBox {
@@ -201,12 +207,15 @@
     flex-direction: column;
     align-items: center;
   }
-
-  .value,
-  .valueLink {
+  .box {
+  width: 90%;
+  }
+  .value {
     font-size: 1rem;
   }
-
+  .valueLink {
+    font-size: 0.9rem; /* Уменьшаем размер шрифта на мобильных */
+  }
   .label {
     font-size: 0.8rem;
   }
