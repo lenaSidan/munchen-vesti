@@ -109,7 +109,7 @@ a:hover {
 }
 
 /* 🖊️ Кнопки */
-button {
+/* button {
   background: var(--button-bg);
   color: var(--button-text);
   border: 1px solid var(--border-color);
@@ -124,7 +124,7 @@ button:hover {
   background: var(--text-color);
   color: var(--background);
   border-color: var(--heading-color);
-}
+} */
 a[href^="http"] {
   target: _blank !important;
 }

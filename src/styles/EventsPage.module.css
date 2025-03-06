@@ -6,7 +6,7 @@
 
 .pageTitle {
   font-family: var(--font-headings);
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-align: center;
   color: var(--heading-color);
   margin-bottom: 25px;
@@ -159,50 +159,41 @@
   .container {
     padding: 10px;
   }
-
   .pageTitle {
-    font-size: 2rem;
-    margin-bottom: 15px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
   }
-
   .eventCard {
     padding: 15px;
     margin-bottom: 20px;
   }
-
   .eventTitle {
     text-align: center;
     font-size: 1.2rem;
     margin-bottom: 10px;
   }
-
   .eventImage {
     width: 100%;
     height: auto;
     margin: 10px 0;
   }
-
   .image_textBox {
     flex-direction: column;
     align-items: center;
   }
-
   .eventVariantA .eventImage,
   .eventVariantB .eventImage {
     margin: 0 auto;
   }
-
   .eventContent {
     font-size: 1rem;
     line-height: 1.3;
     text-align: justify;
   }
-
   .eventLocation {
     width: 100%;
     text-align: left;
   }
-
   .eventImageOrt {
     flex-direction: column;
     align-items: center;
@@ -214,12 +205,11 @@
     font-size: 1rem;
   }
   .valueLink {
-    font-size: 0.9rem; /* Уменьшаем размер шрифта на мобильных */
+    font-size: 0.9rem;
   }
   .label {
     font-size: 0.8rem;
   }
-
   .toggleButton {
     font-size: 0.9rem;
     margin-top: 15px;

@@ -26,6 +26,7 @@
   transition: color 0.3s ease-in-out;
 }
 .sectionTitle {
+  color: var(--heading-color);
   margin-top: 30px;
 }
 @media (max-width: 768px) {

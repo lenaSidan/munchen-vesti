@@ -1,6 +1,6 @@
 {
   "home": {
- "title": "Münchener Nachrichten",
+    "title": "Münchener Nachrichten",
     "read_more": "Weiterlesen",
     "announcements_title": "Anzeigen",
     "view_all_articles": "Alle Events anzeigen"
@@ -13,14 +13,74 @@
     "less": "weniger"
   },
   "about": {
-  "title": "Über das Projekt",
-  "description": "Münchener Nachrichten ist eine Online-Zeitung für russischsprachige Einwohner Münchens. Hier finden Sie Nachrichten, Veranstaltungshinweise und nützliche Informationen."
-},
+    "title": "Über das Projekt",
+    "section1": {
+      "title": "Was ist „Münchensker Nachrichten“?",
+      "text": "„Münchensker Nachrichten“ ist ein soziales und völlig kostenloses Projekt für russischsprachige Einwohner Münchens. Wir schaffen einen praktischen Raum, in dem wichtige Nachrichten, bevorstehende Veranstaltungen, nützliche Tipps und aktuelle Informationen über das Leben in der Stadt gesammelt werden."
+    },
+    "section2": {
+      "title": "Warum ist das wichtig?",
+      "text": "München ist nicht nur ein Zentrum für Technologie und Kultur, sondern auch eine Stadt, in der viele russischsprachige Menschen leben. Wir verstehen, wie wichtig es ist, über aktuelle Ereignisse informiert zu sein, zu wissen, wohin man am Wochenende gehen kann, welche gesetzlichen Änderungen es gibt oder wo man die benötigten Dienstleistungen findet. Unser Projekt hilft dabei, sich in Deutschland zu integrieren, über lokale Ereignisse auf dem Laufenden zu bleiben und sich als Teil der Gemeinschaft zu fühlen."
+    },
+    "section3": {
+      "title": "Ein vollständig kostenloses Projekt",
+      "text": "„Münchensker Nachrichten“ ist eine gemeinnützige Initiative. Wir schalten keine bezahlte Werbung und verlangen kein Geld für den Zugang zu Informationen. Unsere Website ist für alle offen, die mehr über das Leben in München erfahren und kostenlose nützliche Ressourcen nutzen möchten."
+    },
+    "section4": {
+      "title": "Werden Sie Teil der Community",
+      "text": "Wir freuen uns, Sie in unserer Community zu begrüßen! Wenn Sie Ideen, Vorschläge haben oder nützliche Informationen teilen möchten, schreiben Sie uns – gemeinsam machen wir das Projekt noch besser."
+    }
+  },
+  "impressum": {
+    "title": "Impressum",
+    "responsible": {
+      "title": "Verantwortlich für den Inhalt",
+      "name": "Vorname Nachname",
+      "address": "München, Deutschland",
+      "email": "lena.sidan75@gmail.com"
+    },
+    "disclaimer": {
+      "title": "Haftungsausschluss",
+      "text": "Der Inhalt dieser Website wurde mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Die Nutzung der Website erfolgt auf eigene Gefahr."
+    },
+    "external_links": {
+      "title": "Externe Links",
+      "text": "Diese Website enthält Links zu externen Webseiten Dritter. Wir haben keinen Einfluss auf deren Inhalte und übernehmen keine Haftung für deren Richtigkeit oder Rechtmäßigkeit."
+    },
+    "copyright": {
+      "title": "Urheberrecht",
+      "text": "Alle auf dieser Website veröffentlichten Inhalte unterliegen dem Urheberrecht. Eine Nutzung ohne schriftliche Genehmigung ist nicht gestattet."
+    }
+  },
   "footer": {
+    "impressum": "Impressum",
     "about": "Über das Projekt",
     "contacts": "Kontakt",
     "copyright": "© {year} Münchener Nachrichten. Alle Rechte vorbehalten."
   },
+  "kontakt": {
+  "title": "Kontakt",
+  "section1": {
+    "title": "Unsere Adresse",
+    "text": "München, Deutschland"
+  },
+  "section2": {
+    "title": "Kontakt aufnehmen",
+    "email": "E-Mail: lena.sidan75@gmail.com",
+    "telegram": "Telegram: @example"
+  },
+  "section3": {
+    "title": "Nachricht senden",
+    "form_name": "Ihr Name",
+    "form_email": "Ihre E-Mail",
+    "form_message": "Ihre Nachricht",
+    "form_submit": "Senden",
+    "sending": "Wird gesendet...",
+    "success": "Nachricht wurde erfolgreich gesendet!",
+    "error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut."
+  }
+  },
+
   "events": {
     "read_more": "Weiterlesen"
   } ,
