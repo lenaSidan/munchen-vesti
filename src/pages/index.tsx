@@ -11,6 +11,7 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import Ads from "@/components/Ads";
+import { useRouter } from "next/router";
 
 interface Announcement {
   id: number;
@@ -28,6 +29,7 @@ interface HomeProps {
 
 export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps) {
   const t = useTranslation();
+  const router = useRouter();
 
   return (
     <div className={styles.container}>
@@ -67,7 +69,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
       {secondEvent && (
         <article className={styles.secondArticle}>
           <div className={styles.secondArticleHeader}>
-            <h2 className={styles.articleTitle}>{secondEvent.title}</h2>
+            <h2 className={styles.secondArticleTitle}>{secondEvent.title}</h2>
             <div className={styles.decorativeLine}>
               <span className={styles.left}>𐎐</span>
               <span className={styles.right}>𐎐</span>
@@ -76,7 +78,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
           </div>
 
           <div className={styles.secondArticleContent}>
-            {secondEvent.image && (
+            {/* {secondEvent.image && (
               <Image
                 src={secondEvent.image}
                 alt={secondEvent.title}
@@ -85,7 +87,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
                 height={350}
                 layout="intrinsic"
               />
-            )}
+            )} */}
             <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: secondEvent.content }} />
           </div>
         </article>
@@ -94,7 +96,15 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
       {/* Ссылки на другие статьи */}
       {otherEvents.length > 0 && (
         <section className={styles.otherArticles}>
-          <h4 className={styles.otherArticlesTitle}>{t("home.view_all_articles")}</h4>
+          <Link
+            href="/events-page"
+            className={`${styles.otherArticlesTitle} ${styles.navLink} ${
+              router.pathname === "/events-page" ? styles.active : ""
+            }`}
+          >
+            {t("home.view_all_articles")}
+          </Link>
+
           <ul className={styles.otherArticlesList}>
             {otherEvents.map((event) => (
               <li key={event.slug} className={styles.articleLink}>
@@ -136,8 +146,12 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const translations = await import(`@/locales/${locale || "ru"}.json`);
 
   // Обрабатываем Markdown для главной и второй статьи
-  const mainEvent = sortedEvents[0] ? { ...sortedEvents[0], content: await processMarkdown(sortedEvents[0].content) } : null;
-  const secondEvent = sortedEvents[1] ? { ...sortedEvents[1], content: await processMarkdown(sortedEvents[1].content) } : null;
+  const mainEvent = sortedEvents[0]
+    ? { ...sortedEvents[0], content: await processMarkdown(sortedEvents[0].content) }
+    : null;
+  const secondEvent = sortedEvents[1]
+    ? { ...sortedEvents[1], content: await processMarkdown(sortedEvents[1].content) }
+    : null;
 
   // Загружаем объявления из JSON и переводим их
   const translatedAnnouncements = announcementsData.map((ann: Announcement) => ({
@@ -154,4 +168,3 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
     },
   };
 };
-

@@ -48,11 +48,11 @@ Der Markt ist **montags bis samstags geöffnet**. Wer das beste Einkaufserlebnis
 
 ### Warum sollte man den Viktualienmarkt besuchen?  
 
-- Ein authentisches Münchener Erlebnis – der Markt verkörpert das bayerische Lebensgefühl.  
-- Kulinarische Genüsse – hier gibt es die besten regionalen Produkte und Spezialitäten.  
-- Einzigartige Atmosphäre – vom bunten Treiben bis hin zum urigen Biergarten.  
-- Tradition trifft Moderne – jahrhundertealte Marktstände neben modernen Feinkostläden.  
-- Ein kulinarischer Ausflug um die Welt – neben bayerischen Köstlichkeiten gibt es auch internationale Delikatessen.  
+- ● Ein authentisches Münchener Erlebnis – der Markt verkörpert das bayerische Lebensgefühl.  
+- ● Kulinarische Genüsse – hier gibt es die besten regionalen Produkte und Spezialitäten.  
+- ● Einzigartige Atmosphäre – vom bunten Treiben bis hin zum urigen Biergarten.  
+- ● Tradition trifft Moderne – jahrhundertealte Marktstände neben modernen Feinkostläden.  
+- ● Ein kulinarischer Ausflug um die Welt – neben bayerischen Köstlichkeiten gibt es auch internationale Delikatessen.  
 
 Der Viktualienmarkt ist **mehr als nur ein Markt – er ist ein lebendiges Stück Münchener Geschichte und Kultur**. Selbst wer nichts kaufen möchte, sollte ihn für die Atmosphäre, die Eindrücke und die kulinarischen Entdeckungen besuchen.  
 

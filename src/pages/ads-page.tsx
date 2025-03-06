@@ -4,6 +4,7 @@ import useTranslation from "@/hooks/useTranslation";
 import LegalServices from "@/components/ads/LegalServices";
 import TutorNeeded from "@/components/ads/TutorNeeded";
 import TheaterAcademy from "@/components/ads/TheaterAcademy";
+import PsychologistTatjana from "@/components/ads/PsychologistTatjana";
 
 export default function AnnouncementsPage() {
   const t = useTranslation();
@@ -17,7 +18,7 @@ export default function AnnouncementsPage() {
     { 
       id: 2, 
       type: "double", 
-      components: [<LegalServices key="legal" />, <TutorNeeded key="tutor2" />] 
+      components: [<LegalServices key="legal" />, <PsychologistTatjana key="psychologist" />] 
     },
     { 
       id: 3, 

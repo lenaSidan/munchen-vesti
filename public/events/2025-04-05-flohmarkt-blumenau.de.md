@@ -24,11 +24,11 @@ Wenn der Frühling in München Einzug hält, erwacht nicht nur die Natur, sonder
 
 ### Was gibt es zu entdecken?  
 
-🔹 **Vintage-Mode & Accessoires** – Stilvolle Kleidung für wenig Geld.  
-🔹 **Bücher & Comics** – Von deutscher Literatur bis zu seltenen Marvel-Heften.  
-🔹 **Retro-Technik** – Walkmans, alte Kameras oder Plattenspieler.  
-🔹 **Möbel & Deko** – Lampen, Bilder und besondere Wohnaccessoires.  
-🔹 **Spielzeug & Kinderkleidung** – Perfekt für Familien auf der Suche nach günstigen Alternativen.  
+- ●  **Vintage-Mode & Accessoires** – Stilvolle Kleidung für wenig Geld.  
+- ● **Bücher & Comics** – Von deutscher Literatur bis zu seltenen Marvel-Heften.  
+- ● **Retro-Technik** – Walkmans, alte Kameras oder Plattenspieler.  
+- ● **Möbel & Deko** – Lampen, Bilder und besondere Wohnaccessoires.  
+- ● **Spielzeug & Kinderkleidung** – Perfekt für Familien auf der Suche nach günstigen Alternativen.  
 
 ---
 
