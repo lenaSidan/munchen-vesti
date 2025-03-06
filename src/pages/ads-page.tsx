@@ -8,27 +8,29 @@ import PsychologistTatjana from "@/components/ads/PsychologistTatjana";
 
 export default function AnnouncementsPage() {
   const t = useTranslation();
-  
+
   const [announcementGroups] = useState([
-    { 
-      id: 1, 
+    {
+      id: 1,
       type: "single",
-      components: [<TheaterAcademy key="tutor" />] 
+      components: [<TheaterAcademy key="tutor" />],
     },
-    { 
-      id: 2, 
-      type: "double", 
-      components: [<LegalServices key="legal" />, <PsychologistTatjana key="psychologist" />] 
+    {
+      id: 4,
+      type: "triple2",
+      components: [<TutorNeeded key="tutor3" />, <LegalServices key="legal2" />, <PsychologistTatjana key="tutor4" />],
     },
-    { 
-      id: 3, 
+
+    {
+      id: 3,
       type: "triple",
-      components: [
-        <TutorNeeded key="tutor3" />, 
-        <LegalServices key="legal2" />, 
-        <TutorNeeded key="tutor4" />
-      ] 
-    }
+      components: [<TutorNeeded key="tutor3" />, <TutorNeeded key="legal2" />, <TutorNeeded key="tutor4" />],
+    },
+    {
+      id: 2,
+      type: "double",
+      components: [<LegalServices key="legal" />, <LegalServices key="psychologist" />],
+    },
   ]);
 
   return (

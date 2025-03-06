@@ -129,7 +129,6 @@
   justify-content: center;
   margin-top: 40px;
   padding-top: 20px;
-
 }
 
 .otherArticlesTitle {
@@ -224,7 +223,6 @@
     font-size: 1rem;
     text-align: justify;
   }
-
   .announcementItem {
     font-size: 1rem;
     text-align: center;
@@ -235,11 +233,15 @@
   .articleLink li {
     font-size: 0.6rem;
   }
+  .otherArticles {
+    margin-top: 0;
+    padding: 0;
+  }
+  
   .otherArticlesList {
     flex-direction: column;
     gap: 10px;
   }
-
   .articleLink {
     font-size: 1.1rem;
     text-align: center;
