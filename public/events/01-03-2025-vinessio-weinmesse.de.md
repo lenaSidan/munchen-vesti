@@ -1,6 +1,6 @@
 ---
 title: "Weinwochenende in München: Warum Sie die Vinessio Weinmesse 2025 nicht verpassen sollten"
-date: "04-03-2025"
+date: "2025-03-08"
 time: "8-9 mai"
 ort: "Zenith-Kulturhalle, München"
 link: "[Vinessio Weinmesse](https://www.weinmesse-muenchen.de/)" 

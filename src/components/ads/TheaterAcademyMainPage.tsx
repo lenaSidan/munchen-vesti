@@ -24,7 +24,7 @@ export default function TheaterAcademy() {
               className={styles.image}
               width={400}
               height={200}
-              layout="responsive"
+            
             />
           </div>
           <div className={styles.textContainer}>

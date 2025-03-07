@@ -23,7 +23,7 @@ export default function PsychologistTatjana() {
             className={styles.adsImage}
             width={400}
             height={200}
-            layout="responsive"
+           
           />
         </div>
         <div className={styles.titleBox}>

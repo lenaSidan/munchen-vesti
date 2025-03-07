@@ -5,6 +5,7 @@ import LegalServices from "@/components/ads/LegalServices";
 import TutorNeeded from "@/components/ads/TutorNeeded";
 import TheaterAcademy from "@/components/ads/TheaterAcademy";
 import PsychologistTatjana from "@/components/ads/PsychologistTatjana";
+import BeautySalon from "@/components/ads/BeautySalon";
 
 export default function AnnouncementsPage() {
   const t = useTranslation();
@@ -29,7 +30,7 @@ export default function AnnouncementsPage() {
     {
       id: 2,
       type: "double",
-      components: [<LegalServices key="legal" />, <LegalServices key="psychologist" />],
+      components: [<BeautySalon key="legal" />, <PsychologistTatjana key="psychologist" />],
     },
   ]);
 

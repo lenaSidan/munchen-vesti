@@ -45,7 +45,6 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
                   className={styles.mainImage}
                   width={800}
                   height={450}
-                  layout="responsive"
                   priority
                 />
               )}
@@ -85,7 +84,6 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
                 className={styles.secondImage}
                 width={600}
                 height={350}
-                layout="intrinsic"
               />
             )}
             <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: secondEvent.content }} />
@@ -136,37 +134,22 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const events = getEventsByLocale(locale || "ru");
 
   const today = new Date();
-  today.setHours(0, 0, 0, 0); // Убираем время для корректного сравнения
-
+  today.setHours(0, 0, 0, 0); // Убираем часы, чтобы корректно сравнивать
+  
   const sortedEvents = events
     .filter((event) => {
-      if (!event.date) return false; // Пропускаем события без даты
-
-      const dateParts = event.date.split("-");
-      if (dateParts.length !== 3) return false; // Проверяем, что дата корректна
-
-      const [day, month, year] = dateParts;
-      const formattedDate = `${year}-${month}-${day}`; // Переводим в ISO формат
-
-      const eventDate = new Date(formattedDate).getTime();
-      return eventDate >= today.getTime(); // Убираем прошедшие события
+      if (!event.date) return false; // Если даты нет, пропускаем
+      const eventDate = new Date(event.date as string); // Приводим к string, раз уже проверили
+      return !isNaN(eventDate.getTime()) && eventDate >= today; // Фильтруем прошедшие события
     })
     .sort((a, b) => {
-      if (!a.date || !b.date) return 0; // Если даты нет, оставляем порядок как есть
-
-      const datePartsA = a.date.split("-");
-      const datePartsB = b.date.split("-");
-
-      if (datePartsA.length !== 3 || datePartsB.length !== 3) return 0; // Проверяем, что даты валидные
-
-      const [dayA, monthA, yearA] = datePartsA;
-      const [dayB, monthB, yearB] = datePartsB;
-
-      const dateA = new Date(`${yearA}-${monthA}-${dayA}`).getTime();
-      const dateB = new Date(`${yearB}-${monthB}-${dayB}`).getTime();
-
-      return dateA - dateB; // Сортируем по дате (раньше → позже)
+      const dateA = new Date(a.date as string).getTime();
+      const dateB = new Date(b.date as string).getTime();
+      return dateA - dateB; // Сортируем от ближайших к самым поздним
     });
+  
+  console.log("📅 Отфильтрованные события:", sortedEvents.map(e => e.date));
+  
 
   // Загружаем переводы
   const translations = await import(`@/locales/${locale || "ru"}.json`);

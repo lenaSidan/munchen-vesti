@@ -1,8 +1,8 @@
 ---
 title: "Dubai-Geschmacksexplosion – jetzt in München!"
-date: "7-03-2025" 
-time: "13:00" 
-ort: "Kosmetikstudio Beauticum, Albert-Rosshaupterstr 52, 81369 München" 
+date: "2025-03-30"
+time: "13:00"
+ort: "Kosmetikstudio Beauticum, Albert-Rosshaupterstr 52, 81369 München"
 link: "[Orangesunstudio](https://www.instagram.com/orangesunstudio?igsh=MXZ4bnBnY29qY2cwMg==), [Kosmetikstudio](https://www.instagram.com/kosmetikstudio.beauticum?igsh=MTgzdmF6MWh5dnZocQ==)"
 image: "/images/dubai_spring_event.webp"
 ---

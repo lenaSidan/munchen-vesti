@@ -23,7 +23,7 @@ export default function LegalServices() {
             className={styles.announcementImage}
             width={400}
             height={200}
-            layout="responsive"
+           
           />
         </div>
 

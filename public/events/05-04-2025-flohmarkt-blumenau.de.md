@@ -1,6 +1,6 @@
 ---
 title: "Hofflohmärkte in Kleinhadern & Blumenau: Schätze direkt aus der Nachbarschaft"
-date: "05-04-2025"
+date: "2025-04-05"
 time: "10:00 – 16:00"
 ort: "Kleinhadern & Blumenau, München"
 link: "[Hofflohmärkte Kleinhadern & Blumenau](https://www.muenchen.de/veranstaltungen/hofflohmaerkte-kleinhadern-blumenau)"
@@ -49,7 +49,7 @@ Wenn der Frühling in München Einzug hält, erwacht nicht nur die Natur, sonder
 **Eintritt:** Kostenlos  
 **Anreise:** U-Bahn **U6 Haderner Stern** oder Bus **56, 167**  
 
-***🔗 [Offizielle Website](https://www.muenchen.de/veranstaltungen/hofflohmaerkte-kleinhadern-blumenau)***  
+***🔗 [Hofflohmärkte Kleinhadern & Blumenau](https://www.muenchen.de/veranstaltungen/hofflohmaerkte-kleinhadern-blumenau)***  
 
 ---
 

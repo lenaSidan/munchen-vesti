@@ -1,6 +1,6 @@
 ---
 title: "Дворовые барахолки в Kleinhadern & Blumenau: находки прямо у соседей"
-date: "05-04-2025"
+date: "2025-04-05"
 time: "10:00 – 16:00"
 ort: "Kleinhadern & Blumenau, München"
 link: "[Hofflohmärkte Kleinhadern & Blumenau](https://www.muenchen.de/veranstaltungen/hofflohmaerkte-kleinhadern-blumenau)"
@@ -49,7 +49,7 @@ image: "/images/flohmarkt.webp"
 **Вход:** Бесплатный  
 **Как добраться:** Метро **U6 Haderner Stern** или автобус **56, 167**  
 
-***🔗 [Официальный сайт](https://www.muenchen.de/veranstaltungen/hofflohmaerkte-kleinhadern-blumenau)***  
+***🔗 [Hofflohmärkte Kleinhadern & Blumenau](https://www.muenchen.de/veranstaltungen/hofflohmaerkte-kleinhadern-blumenau)***  
 
 ---
 
