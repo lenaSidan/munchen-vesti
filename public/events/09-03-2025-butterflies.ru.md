@@ -1,9 +1,9 @@
 ---
 title: "Тропические бабочки в Мюнхене: экзотика, которая порхает прямо перед вами"
-date: "2025-03-09"
+date: "09-03-2025"
 time: "09:00 до 16:00"
 ort: "Ботанический сад Мюнхена, Menzinger Str. 65, 80638 München"
-link: "https://www.muenchen.de/veranstaltungen/freizeit/ausstellungen/tropische-schmetterlinge"
+link: "[Tropische Schmetterlinge](https://botmuc.snsb.de/termin/tropische-schmetterlinge/)"
 image: "/images/tropical-butterflies-munich.webp"
 ---
 

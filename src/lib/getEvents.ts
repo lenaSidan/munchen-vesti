@@ -29,17 +29,17 @@ export function getEventsByLocale(locale: string): Event[] {
     return {
       slug: file.replace(`.${locale}.md`, ""),
       title: data.title || "Untitled",
-      date: data.date || "Unknown date",
+      date: data.date && !isNaN(new Date(data.date).getTime()) ? data.date : undefined, // Проверяем валидность даты
       time: data.time || "",
-      ort: data.ort || "Unknown author", 
-      link: data.link || "",
+      ort: data.ort || "Unknown location",
+      link: data.link ?? null, // Используем `null`, если ссылки нет
       content,
-      image: data.image || null,
+      image: data.image ?? null, // Используем `null`, если изображения нет
     };
   });
 
-
-  // Сортируем статьи по дате (новые сверху)
-  return events.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  // Фильтруем статьи с валидной датой и сортируем от ближайших событий до самых поздних
+  return events
+    .filter((event) => event.date && !isNaN(new Date(event.date).getTime())) // Исключаем события без валидной даты
+    .sort((a, b) => new Date(a.date!).getTime() - new Date(b.date!).getTime()); // Сортируем по возрастанию (сначала ближайшие)
 }
-

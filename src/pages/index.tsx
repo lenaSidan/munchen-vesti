@@ -50,7 +50,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
                 />
               )}
               <h2 className={styles.articleTitle}>{mainEvent.title}</h2>
-              {/* <p className={styles.articleDate}>{mainEvent.date}</p> */}
+              <p className={styles.articleDate}>{mainEvent.date}</p>
               <div className={styles.decorativeLine}>
                 <span className={styles.left}>𐎐</span>
                 <span className={styles.right}>𐎐</span>
@@ -78,7 +78,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
           </div>
 
           <div className={styles.secondArticleContent}>
-            {/* {secondEvent.image && (
+            {secondEvent.image && (
               <Image
                 src={secondEvent.image}
                 alt={secondEvent.title}
@@ -87,7 +87,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
                 height={350}
                 layout="intrinsic"
               />
-            )} */}
+            )}
             <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: secondEvent.content }} />
           </div>
         </article>
@@ -125,7 +125,7 @@ async function processMarkdown(content: string) {
   const processedContent = await remark()
     .use(remarkGfm)
     .use(remarkRehype)
-    .use(rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] }) // ✅ Добавляем атрибуты
+    .use(rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] })
     .use(rehypeStringify)
     .process(content);
 
@@ -135,23 +135,48 @@ async function processMarkdown(content: string) {
 export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const events = getEventsByLocale(locale || "ru");
 
-  // Сортируем мероприятия по дате (сначала актуальные)
-  const sortedEvents = events.sort((a, b) => {
-    const dateA = a.date ? new Date(a.date).getTime() : 0; // Если даты нет, ставим 0 (очень старое значение)
-    const dateB = b.date ? new Date(b.date).getTime() : 0;
-    return dateA - dateB;
-  });
+  const today = new Date();
+  today.setHours(0, 0, 0, 0); // Убираем время для корректного сравнения
+
+  const sortedEvents = events
+    .filter((event) => {
+      if (!event.date) return false; // Пропускаем события без даты
+
+      const dateParts = event.date.split("-");
+      if (dateParts.length !== 3) return false; // Проверяем, что дата корректна
+
+      const [day, month, year] = dateParts;
+      const formattedDate = `${year}-${month}-${day}`; // Переводим в ISO формат
+
+      const eventDate = new Date(formattedDate).getTime();
+      return eventDate >= today.getTime(); // Убираем прошедшие события
+    })
+    .sort((a, b) => {
+      if (!a.date || !b.date) return 0; // Если даты нет, оставляем порядок как есть
+
+      const datePartsA = a.date.split("-");
+      const datePartsB = b.date.split("-");
+
+      if (datePartsA.length !== 3 || datePartsB.length !== 3) return 0; // Проверяем, что даты валидные
+
+      const [dayA, monthA, yearA] = datePartsA;
+      const [dayB, monthB, yearB] = datePartsB;
+
+      const dateA = new Date(`${yearA}-${monthA}-${dayA}`).getTime();
+      const dateB = new Date(`${yearB}-${monthB}-${dayB}`).getTime();
+
+      return dateA - dateB; // Сортируем по дате (раньше → позже)
+    });
 
   // Загружаем переводы
   const translations = await import(`@/locales/${locale || "ru"}.json`);
 
   // Обрабатываем Markdown для главной и второй статьи
-  const mainEvent = sortedEvents[0]
-    ? { ...sortedEvents[0], content: await processMarkdown(sortedEvents[0].content) }
-    : null;
-  const secondEvent = sortedEvents[1]
-    ? { ...sortedEvents[1], content: await processMarkdown(sortedEvents[1].content) }
-    : null;
+  const mainEvent =
+    sortedEvents.length > 0 ? { ...sortedEvents[0], content: await processMarkdown(sortedEvents[0].content) } : null;
+
+  const secondEvent =
+    sortedEvents.length > 1 ? { ...sortedEvents[1], content: await processMarkdown(sortedEvents[1].content) } : null;
 
   // Загружаем объявления из JSON и переводим их
   const translatedAnnouncements = announcementsData.map((ann: Announcement) => ({
@@ -164,7 +189,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
       mainEvent,
       secondEvent,
       otherEvents: sortedEvents.length > 2 ? sortedEvents.slice(2, 5) : [],
-      announcements: translatedAnnouncements, // ✅ Теперь объявления переведены
+      announcements: translatedAnnouncements,
     },
   };
 };

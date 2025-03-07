@@ -1,9 +1,9 @@
 ---
 title: "Дворовые барахолки в Kleinhadern & Blumenau: находки прямо у соседей"
-date: "2025-04-05"
+date: "05-04-2025"
 time: "10:00 – 16:00"
 ort: "Kleinhadern & Blumenau, München"
-link: "https://www.muenchen.de/veranstaltungen/hofflohmaerkte-kleinhadern-blumenau"
+link: "[Hofflohmärkte Kleinhadern & Blumenau](https://www.muenchen.de/veranstaltungen/hofflohmaerkte-kleinhadern-blumenau)"
 image: "/images/flohmarkt.webp"
 ---
 
