@@ -173,6 +173,7 @@
 
 .articleDate {
   font-size: 0.9rem;
+  margin: 0;
   font-family: var(--font-headings);
   color: var(--heading-color);
   font-style: italic;

@@ -55,14 +55,25 @@
 }
 
 
-.content h2, .content h3 {
+.content h2 {
   column-span: all; 
   margin-top: 20px;
   margin-bottom: 10px;
   font-size: 1.6rem;
   font-weight: bold;
 }
-
+.content h3 {
+  column-span: all; 
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.content h4 {
+  margin-top: 15px;
+  text-transform: lowercase;
+  border-bottom: none;
+}
 
 .content ul, .content ol {
   column-span: all; 

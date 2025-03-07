@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { GetStaticProps } from "next";
-import Link from "next/link";
 import Image from "next/image";
 import { getEventsByLocale, Event } from "@/lib/getEvents";
 import styles from "@/styles/EventsPage.module.css";
@@ -16,16 +15,22 @@ interface EventsProps {
 
 export default function EventsPage({ events }: EventsProps) {
   const t = useTranslation();
-  const [expandedEvents, setExpandedEvents] = useState<{ [key: string]: boolean }>({});
 
+  // ❗ Изначально null, после загрузки страницы явно ставим null
+  const [expandedSlug, setExpandedSlug] = useState<string | null>(null);
+  const [isClient, setIsClient] = useState(false); // Флаг, что код выполняется на клиенте
+
+  useEffect(() => {
+    setIsClient(true); // После рендера отмечаем, что клиент загружен
+    setExpandedSlug(null); // Закрываем все события
+  }, []);
+
+  // Функция переключения раскрытого события
   const toggleExpand = (slug: string) => {
-    setExpandedEvents((prev) => ({
-      ...prev,
-      [slug]: !prev[slug],
-    }));
+    setExpandedSlug((prevSlug) => (prevSlug === slug ? null : slug));
   };
 
-  // Функция для рендера только первого параграфа
+  // Функция получения только первого параграфа
   const getExcerpt = (htmlContent: string) => {
     if (typeof window === "undefined") return htmlContent;
     const div = document.createElement("div");
@@ -60,14 +65,22 @@ export default function EventsPage({ events }: EventsProps) {
                 </p>
               )}
 
-              {event.link && (
+              {event.link && typeof event.link === "string" ? (
                 <p className={styles.box}>
                   <span className={styles.label}>{t("event.link")}: </span>
-                  <Link href={event.link} className={styles.valueLink} target="_blank" rel="noopener noreferrer">
-                    {event.link}
-                  </Link>
+                  {event.link.split(",").map((link, index) => {
+                    const match = link.trim().match(/\[(.*?)\]\((.*?)\)/);
+                    return match ? (
+                      <span key={index}>
+                        <a href={match[2]} className={styles.valueLink} target="_blank" rel="noopener noreferrer">
+                          {match[1]}
+                        </a>
+                        {index < event.link!.split(",").length - 1 && " | "}
+                      </span>
+                    ) : null;
+                  })}
                 </p>
-              )}
+              ) : null}
             </div>
             {event.image && (
               <Image
@@ -84,12 +97,12 @@ export default function EventsPage({ events }: EventsProps) {
           <div className={styles.eventContent}>
             <div
               dangerouslySetInnerHTML={{
-                __html: expandedEvents[event.slug] ? event.content : getExcerpt(event.content),
+                __html: isClient && expandedSlug === event.slug ? event.content : getExcerpt(event.content),
               }}
             />
 
             <button type="button" className={styles.toggleButton} onClick={() => toggleExpand(event.slug)}>
-              {expandedEvents[event.slug] ? t("menu.less") : t("menu.more")}
+              {expandedSlug === event.slug ? t("menu.less") : t("menu.more")}
             </button>
           </div>
         </div>

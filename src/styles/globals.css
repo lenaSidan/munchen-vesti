@@ -47,7 +47,12 @@ body {
   line-height: 1.8;
   transition: all 0.3s ease-in-out;
 }
-
+p {
+  margin-bottom: 0.6rem; /* Добавит отступ после абзаца */
+}
+blockquote {
+  margin-top: 0.6rem; /* Добавит отступ перед блоком с датой */
+}
 h1, h2, h3, h4 {
   font-family: var(--font-headings);
   color: var(--heading-color);
@@ -91,8 +96,8 @@ h3 {
 h4 {
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 8px;
-  border-bottom: 2px solid var(--border-color);
+  margin-top: 15px;
+  /* border-bottom: 2px solid var(--border-color); */
   padding-bottom: 5px;
   line-height: 1.6;
   transition: border-color 0.3s ease-in-out;
