@@ -35,18 +35,10 @@ export default function ArticlesPage({ articles }: ArticlesProps) {
         <article key={article.slug} className={index % 2 === 0 ? styles.articleVariantA : styles.articleVariantB}>
           <div className={styles.articleHeader}>
             <h2 className={styles.articleTitle}>{article.title}</h2>
-           
           </div>
           <div className={styles.image_textBox}>
             {article.image && (
-              <Image
-                src={article.image}
-                alt={article.title}
-                className={styles.articleImage}
-                width={400}
-                height={200}
-                layout="intrinsic"
-              />
+              <Image src={article.image} alt={article.title} className={styles.articleImage} width={400} height={200} />
             )}
             <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: article.content }} />
           </div>

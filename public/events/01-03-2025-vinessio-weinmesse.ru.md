@@ -1,6 +1,6 @@
 ---
 title: "Винный уикендъ въ Мюнхенѣ: почему Vinessio Weinmesse 2025 нельзя пропустить "
-date: "04-03-2025"
+date: "2025-03-08"
 time: "8-9 мая"
 ort: "Zenith-Kulturhalle, Мюнхен"
 link: "[Vinessio Weinmesse](https://www.weinmesse-muenchen.de/)"

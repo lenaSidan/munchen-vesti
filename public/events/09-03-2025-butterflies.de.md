@@ -1,6 +1,6 @@
 ---
 title: "Tropische Schmetterlinge in München: Ein Hauch von Exotik mitten im Winter"
-date: "09-03-2025"
+date: "2025-03-09"
 time: "09:00 bis 16:00 Uhr"
 ort: "Botanischer Garten München, Menzinger Str. 65, 80638 München"
 link: "[Tropische Schmetterlinge](https://botmuc.snsb.de/termin/tropische-schmetterlinge/)"
@@ -57,7 +57,7 @@ Die Ausstellung zeigt eine **Vielzahl beeindruckender Arten** aus verschiedenen 
 **Öffnungszeiten:**  09:00 bis 16:00 Uhr  
 **Datum:** 6.–9. März 2025
 
-***🔗 [Offizielle Website](https://www.muenchen.de/veranstaltungen/freizeit/ausstellungen/tropische-schmetterlinge)***  
+***🔗 [Tropische Schmetterlinge](https://www.muenchen.de/veranstaltungen/freizeit/ausstellungen/tropische-schmetterlinge)***  
 
 
 ### **Warum sollten Sie hingehen?**  

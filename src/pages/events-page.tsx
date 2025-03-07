@@ -83,14 +83,7 @@ export default function EventsPage({ events }: EventsProps) {
               ) : null}
             </div>
             {event.image && (
-              <Image
-                src={event.image}
-                alt={event.title}
-                className={styles.eventImage}
-                width={400}
-                height={200}
-                layout="intrinsic"
-              />
+              <Image src={event.image} alt={event.title} className={styles.eventImage} width={400} height={200} />
             )}
           </div>
 
@@ -120,12 +113,26 @@ async function processMarkdown(content: string) {
 export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) => {
   const rawEvents = getEventsByLocale(locale || "ru");
 
-  // Сортируем события по дате (актуальные в начале)
-  const sortedEvents = [...rawEvents].sort((a, b) => {
-    const dateA = a.date ? new Date(a.date).getTime() : Number.MAX_SAFE_INTEGER;
-    const dateB = b.date ? new Date(b.date).getTime() : Number.MAX_SAFE_INTEGER;
-    return dateA - dateB;
+  // Текущая дата без времени
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  // Фильтруем события (оставляем только будущие и текущие)
+  const upcomingEvents = rawEvents.filter((event) => {
+    if (!event.date) return false; // Если даты нет — пропускаем
+
+    const eventDate = new Date(event.date).getTime(); // Преобразуем в timestamp
+    return eventDate >= today.getTime(); // Оставляем только будущие события
   });
+
+  // Сортируем по возрастанию даты (от ближайших к самым поздним)
+  const sortedEvents = upcomingEvents.sort((a, b) => {
+    const dateA = new Date(a.date!).getTime();
+    const dateB = new Date(b.date!).getTime();
+    return dateA - dateB; // Сортируем от ближайшего к самому позднему
+  });
+
+  console.log("📅 Отфильтрованные и отсортированные события:", sortedEvents.map(e => e.date));
 
   // Парсим Markdown-контент для каждого события
   const events = await Promise.all(
