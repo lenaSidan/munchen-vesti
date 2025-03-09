@@ -1,0 +1,175 @@
+.mainWrapper {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.adsBox {
+  background: var(--alt-background);
+  border: 2px solid #8b0000;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.adsContent {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 10px;
+}
+
+/* 🔹 Заголовок */
+.titleBox {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--heading-color);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* 🔹 Изображение */
+.adsImageWrapper {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.adsImage {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* 🔹 Основной текст */
+.description p {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: justify;
+  margin: 10px 0;
+  line-height: 1.4;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+/* ✅ Выделение ключевых моментов */
+.description p strong {
+  color: var(--heading-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+/* .description p:first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--heading-color);
+  margin-right: 5px;
+} */
+
+/* 🔹 Преимущества сеанса */
+.benefits {
+  margin-top: 20px;
+  text-align: left;
+  background: var(--alt-background1);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #8b0000;
+  border-radius: 8px;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.benefits h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--heading-color);
+  text-align: center;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.benefits p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 5px 0;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.benefits p::before {
+  content: "✔ ";
+  color: var(--border-color);
+  font-weight: bold;
+}
+
+/* 🔹 Контактная информация */
+.linkBox {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.linkBoxHref {
+  color: var(--border-color);
+  text-decoration: underline;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.linkBoxHref:hover {
+  color: var(--heading-color);
+  font-size: 1.3rem;
+}
+.decorativeLine {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.decorativeLine::before,
+.decorativeLine::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--heading-color);
+  position: absolute;
+  left: 0;
+}
+
+.decorativeLine.bottom {
+  transform: scaleY(-1);
+  margin-top: 10px;
+}
+
+/* 📱 Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+  .adsBox {
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .description p,
+  .benefits p {
+    font-size: 1rem;
+  }
+
+  .linkBox {
+    font-size: 1rem;
+  }
+}

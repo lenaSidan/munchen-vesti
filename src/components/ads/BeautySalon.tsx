@@ -11,10 +11,18 @@ export default function BeautySalon() {
     <div className={styles.mainWrapper}>
       {/* Декоративная линия сверху */}
       <div className={styles.decorativeLine}>
-        <span className={styles.left}>⊱❧</span>
-        <span className={styles.right}>⊱❧</span>
+        {/* <span className={styles.left}>⊱❧</span>
+        <span className={styles.right}>⊱❧</span> */}
       </div>
 
+      <div className={styles.titleBox}>
+        <div className={styles.title}>
+          <Link className={styles.linkBoxHref} href={t("beauticum.link")} target="_blank" rel="noopener noreferrer">
+            {t("beauticum.title")}
+          </Link>
+        </div>
+        <div className={styles.subtitle1}>{t("beauticum.address")}</div>
+      </div>
       <div className={styles.adsBox}>
         <div className={styles.adsImageWrapper}>
           <Image
@@ -25,16 +33,6 @@ export default function BeautySalon() {
             height={200}
           />
         </div>
-
-        <div className={styles.titleBox}>
-          <div className={styles.title}>
-            <Link className={styles.linkBoxHref} href={t("beauticum.link")} target="_blank" rel="noopener noreferrer">
-              {t("beauticum.title")}
-            </Link>
-          </div>
-          <div className={styles.subtitle1}>{t("beauticum.address")}</div>
-        </div>
-
         <div className={styles.subtitleBox}>
           <p>{t("beauticum.offers")}</p>
         </div>
@@ -76,11 +74,10 @@ export default function BeautySalon() {
           </Link>
         </div>
       </div>
-
       {/* Декоративная линия снизу */}
       <div className={`${styles.decorativeLine} ${styles.bottom}`}>
-        <span className={styles.right}>⊱❧</span>
-        <span className={styles.left}>⊱❧</span>
+        {/* <span className={styles.right}>⊱❧</span>
+        <span className={styles.left}>⊱❧</span> */}
       </div>
     </div>
   );

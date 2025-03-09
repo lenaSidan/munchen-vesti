@@ -38,6 +38,7 @@
   display: flex;
   justify-content: space-between;
   gap: 15px;
+  align-items: stretch; 
 }
 
 .announcementGroup.double .announcementBox {
@@ -49,6 +50,7 @@
   display: flex;
   justify-content: space-between;
   gap: 15px;
+  align-items: stretch;
 }
 
 .announcementGroup.triple .announcementBox {
@@ -59,6 +61,7 @@
   grid-template-columns: 1fr 1fr; /* Два столбца */
   grid-template-rows: auto auto; /* Две строки */
   gap: 15px;
+  align-items: stretch;
 }
 
 .announcementGroup.triple2 .announcementBox:nth-child(1),
@@ -73,11 +76,15 @@
 
 /* 🔹 Стиль каждого объявления */
 .announcementBox {
-  padding: 0 15px;
+  padding: 15px;
   border-radius: 5px;
   background: var(--alt-background);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
+ height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* 🌙 Темная тема */
