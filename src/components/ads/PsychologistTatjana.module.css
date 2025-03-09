@@ -5,8 +5,8 @@
   margin: 20px 0;
 }
 .adsBox {
-  background: #fdf3d0; 
-  border: 2px solid #8b0000;
+  border: 2px solid var(--border-color);
+  background-color: var(--background);
   padding: 15px;
   border-radius: 8px;
   margin: 0;

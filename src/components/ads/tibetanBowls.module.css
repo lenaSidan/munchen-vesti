@@ -7,7 +7,7 @@
 
 .adsBox {
   background: var(--alt-background);
-  border: 2px solid #8b0000;
+  border: 2px solid var(--heading-color);
   border-radius: 8px;
   padding: 20px;
   width: 100%;
@@ -60,7 +60,6 @@
   hyphens: auto;
 }
 
-/* ✅ Выделение ключевых моментов */
 .description p strong {
   color: var(--heading-color);
   font-weight: bold;
@@ -76,14 +75,13 @@
   margin-right: 5px;
 } */
 
-/* 🔹 Преимущества сеанса */
 .benefits {
   margin-top: 20px;
   text-align: left;
   background: var(--alt-background1);
   padding: 15px;
   border-radius: 8px;
-  border: 1px solid #8b0000;
+  border: 1px solid var(--heading-color);
   border-radius: 8px;
   -webkit-hyphens: auto;
   hyphens: auto;
@@ -112,7 +110,6 @@
   font-weight: bold;
 }
 
-/* 🔹 Контактная информация */
 .linkBox {
   text-align: center;
   font-size: 1.2rem;
@@ -129,7 +126,7 @@
 
 .linkBoxHref:hover {
   color: var(--heading-color);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 .decorativeLine {
   position: relative;
@@ -163,13 +160,24 @@
   .title {
     font-size: 1.1rem;
   }
-
+  .benefits h3 {
+    font-size: 1rem;
+  }
+  .description p strong {
+    font-size: 0.9rem;
+  }
+  
   .description p,
   .benefits p {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
   }
 
   .linkBox {
     font-size: 1rem;
+  }
+  
+  .linkBoxHref {
+    font-size: 1.2rem;
   }
 }

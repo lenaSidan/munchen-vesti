@@ -207,5 +207,40 @@
   "reason1": "In unserem Studio verwenden wir professionelle Geräte, und alle Behandlungen werden von zertifizierten Fachkräften mit langjähriger Erfahrung durchgeführt. Wir setzen ausschließlich bewährte Methoden und hochwertige Premium-Kosmetik ein, die den höchsten europäischen Qualitätsstandards entspricht.",
   "reason2": "Jeder Kunde ist für uns einzigartig. Wir bieten einen individuellen Ansatz, passen die Pflege je nach Hauttyp und Bedürfnissen an. In unserem Studio schaffen wir eine gemütliche Atmosphäre, in der Sie sich entspannen, den Alltagsstress vergessen und die Behandlungen in einem angenehmen Ambiente genießen können.",
   "contact_text": "Für alle Fragen rufen Sie uns unter folgender Nummer an:"
-}
+},
+  "vileta": {
+    "title": "Viletta – Schmuckstücke voller natürlicher Kraft",
+    "description1": "In jedem Stein steckt die Energie der Erde – ihre Weisheit und Harmonie. Natürliche Mineralien verzaubern nicht nur mit ihrer Schönheit, sondern tragen eine tiefere Bedeutung in sich und können als Wegweiser zu innerem Gleichgewicht, Selbstvertrauen und Erfolg dienen.",
+    "description2": "Viletta kreiert Schmuck, der Ästhetik und die Kraft der Natur vereint. Wir wählen Edelsteine individuell aus, basierend auf Ihrem Geburtsdatum, Namen und persönlichen Zielen, sodass jedes Schmuckstück nicht nur ein Accessoire, sondern Ihr persönlicher Talisman und Inspirationsquelle wird.",
+    "description3": "Das ist mehr als nur Schmuck – es sind Schmuckstücke, die für Sie wirken. Entdecken Sie die Welt der natürlichen Energie mit Viletta.",
+    "contact": "Kontaktieren Sie uns, und wir finden die perfekte Kombination von Steinen für Sie.",
+    "link": "https://www.instagram.com/letta_viletta?igsh=MXhlcGcyZGM0enl0Yw=="
+  },
+  "tibetan_bowls": {
+    "title": "Tibetische Klangschalen – die Kunst tiefer Harmonie",
+    "highlight1": "Klang und Vibration sind kraftvolle Werkzeuge zur Wiederherstellung des Gleichgewichts.",
+    "description1": "Die tibetische Klangschalenmassage kombiniert Klangtherapie mit sanfter Vibration. Ihr Klang füllt den Raum mit einer besonderen Energie, die tiefe Entspannung und Regeneration fördert.",
+    "highlight2": "Diese Methode wird seit Jahrhunderten zur Stressreduktion, Verbesserung des Wohlbefindens und zur Wiederherstellung innerer Harmonie angewendet.",
+    "description2": "Wenn die Schalen erklingen, dringen ihre Vibrationen tief in den Körper ein, entspannen die Muskeln, lösen Spannungen und bringen den Energiefluss ins Gleichgewicht. Dies ist mehr als eine Massage – es ist ein vollständiges Eintauchen in einen Zustand der Harmonie.",
+    "description3": "Lassen Sie sich von den sanften Schallwellen der tibetischen Klangschalen mit Kraft, innerer Ruhe und einem Gefühl der Ausgeglichenheit erfüllen.",
+    "benefits_title": "Was bringt eine Klangschalenmassage?",
+    "benefit1": "Tiefe Entspannung und Stressabbau.",
+    "benefit2": "Harmonisierung des emotionalen Zustands und der Körperenergie.",
+    "benefit3": "Wiederherstellung des inneren Gleichgewichts und Verbesserung des Schlafs.",
+    "contact_text": "Buchen Sie eine Sitzung und erleben Sie tiefe Entspannung durch Klang und Vibration:",
+    "contact_link": "https://www.instagram.com/letta_beauty_munchen?igsh=MTRwejdid3RycDZoYw=="
+  },
+    "letta": {
+    "title": "Letta – Raum für Schönheit, Komfort und Harmonie",
+    "address": "München, Deutschland",
+    "description1": "Wahre Selbstpflege ist eine Kombination aus Ästhetik, Gesundheit und innerem Gleichgewicht. Bei Letta wird jede Behandlung zu einem Ritual der Erneuerung, Entspannung und Selbstsicherheit.",
+    "service1": "Maniküre und Pediküre – makellose Pflege, die Ihre natürliche Eleganz unterstreicht.",
+    "service2": "SmartPeditura – innovative Pediküre für die Gesundheit und Schönheit Ihrer Füße.",
+    "service3": "Zucker- und Wachsdepilation – glatte Haut und Komfort ohne Irritationen.",
+    "service4": "Tibetische Klangschalen-Massage – tiefe Entspannung durch Vibrationen und Klang, eine vollständige Erholung für Körper und Seele.",
+    "description2": "Wir schaffen eine Atmosphäre der Geborgenheit, in der jedes Detail für Ihren Komfort durchdacht ist. Vertrauen Sie den Fachleuten, die sich nicht nur um Ihre äußere Schönheit, sondern auch um Ihr inneres Gleichgewicht kümmern.",
+    "contact_text": "Buchen Sie eine Behandlung und spüren Sie den Unterschied:",
+    "contact": "@letta_beauty_munchen",
+    "link": "https://www.instagram.com/letta_beauty_munchen?igsh=MTRwejdid3RycDZoYw=="
+  }
 }
