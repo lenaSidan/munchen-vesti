@@ -52,13 +52,8 @@ export default function TibetanBowls() {
           {/* Контактная информация */}
           <div className={styles.linkBox}>
             {t("tibetan_bowls.contact_text")}{" "}
-            <Link
-              className={styles.linkBoxHref}
-              href="https://www.instagram.com/letta_viletta?igsh=MXhlcGcyZGM0enl0Yw=="
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @tibetan.sound.therapy
+            <Link className={styles.linkBoxHref} href={t("tibetan_bowls.contact_link")} target="_blank" rel="noopener noreferrer">
+              @letta_beauty_munchen
             </Link>
           </div>
         </div>

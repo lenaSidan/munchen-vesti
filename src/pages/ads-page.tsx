@@ -7,6 +7,7 @@ import PsychologistTatjana from "@/components/ads/PsychologistTatjana";
 import BeautySalon from "@/components/ads/BeautySalon";
 import VitaJewelry from "@/components/ads/VitaJewelry";
 import TibetanBowls from "@/components/ads/TibetanBowls";
+import LettaBeauty from "@/components/ads/LettaBeauty";
 
 export default function AnnouncementsPage() {
   const t = useTranslation();
@@ -31,7 +32,12 @@ export default function AnnouncementsPage() {
     {
       id: 2,
       type: "double",
-      components: [<TibetanBowls key="legal" />, <PsychologistTatjana key="psychologist" />],
+      components: [<TibetanBowls key="tibetanBowls" />, <PsychologistTatjana key="psychologist" />],
+    },
+    {
+      id: 5,
+      type: "single",
+      components: [<LettaBeauty key="lettaBeauty" />],
     },
   ]);
 
