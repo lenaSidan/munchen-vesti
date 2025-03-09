@@ -1,0 +1,159 @@
+.mainWrapper {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.adsBox {
+  background: var(--alt-background);
+  border: 1px solid #8b0000;
+  border-radius: 8px;
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+  min-height: 100%;
+}
+
+.adsContent {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.titleBox {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--heading-color);
+  text-align: center;
+}
+
+.adsImageWrapper {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.adsImage {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.description {
+  text-align: center;
+  margin: 10px 0;
+}
+.description1 {
+  font-family:  var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.description2 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.description3 {
+  font-size: 0.9rem;
+  color: var(--heading-color);
+  font-weight: 600;
+  font-family:  var(--font-body);
+}
+.linkBox {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.linkBoxHref {
+  color: var(--border-color);
+  text-decoration: underline;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.linkBoxHref:hover {
+  color: var(--heading-color);
+}
+
+.decorativeLine {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.decorativeLine span {
+  font-size: 1.4rem;
+  color: var(--heading-color);
+  font-weight: bold;
+  display: inline-block;
+  background: var(--alt-background);
+  position: relative;
+  line-height: 0.7;
+  margin: 0 3px;
+  padding: 0;
+}
+
+.decorativeLine .left {
+  transform: scaleX(-1);
+  margin-right: 2px;
+}
+
+.decorativeLine .right {
+  margin-left: 2px;
+}
+
+.decorativeLine.bottom .left {
+  transform: scaleX(1);
+}
+
+.decorativeLine.bottom .right {
+  transform: scaleX(-1);
+}
+
+.decorativeLine.bottom {
+  transform: scaleY(-1);
+  margin-top: 10px;
+}
+.linkBox {
+  text-align: center;
+}
+
+.linkBoxHref {
+  font-family: var(--font-headings);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--border-color);
+  transition: font-size 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
+}
+.linkBoxHref:hover {
+  text-decoration: underline;
+  color: var(--heading-color);
+}
+/* 📱 Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+  .adsBox {
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .description p {
+    font-size: 1rem;
+  }
+
+  .linkBox {
+    font-size: 1rem;
+  }
+}

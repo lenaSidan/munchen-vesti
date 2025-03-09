@@ -1,11 +1,12 @@
 import { useState } from "react";
 import styles from "@/styles/AdsPage.module.css";
 import useTranslation from "@/hooks/useTranslation";
-import LegalServices from "@/components/ads/LegalServices";
 import TutorNeeded from "@/components/ads/TutorNeeded";
 import TheaterAcademy from "@/components/ads/TheaterAcademy";
 import PsychologistTatjana from "@/components/ads/PsychologistTatjana";
 import BeautySalon from "@/components/ads/BeautySalon";
+import VitaJewelry from "@/components/ads/VitaJewelry";
+import TibetanBowls from "@/components/ads/TibetanBowls";
 
 export default function AnnouncementsPage() {
   const t = useTranslation();
@@ -19,7 +20,7 @@ export default function AnnouncementsPage() {
     {
       id: 4,
       type: "triple2",
-      components: [<TutorNeeded key="tutor3" />, <LegalServices key="legal2" />, <PsychologistTatjana key="tutor4" />],
+      components: [<TutorNeeded key="tutor3" />, <VitaJewelry key="vetaJewelry" />, <BeautySalon key="legal" />],
     },
 
     {
@@ -30,7 +31,7 @@ export default function AnnouncementsPage() {
     {
       id: 2,
       type: "double",
-      components: [<BeautySalon key="legal" />, <PsychologistTatjana key="psychologist" />],
+      components: [<TibetanBowls key="legal" />, <PsychologistTatjana key="psychologist" />],
     },
   ]);
 

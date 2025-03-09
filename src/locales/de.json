@@ -181,5 +181,31 @@
   "psychologist_contact_text": "Kontaktieren Sie mich über persönliche Nachrichten: ",
   "psychologist_contact_link": "https://t.me/smirtatjana",
   "psychologist_web_text": "Mehr über meinen Ansatz - ",
-  "psychologist_web_link": "https://tatjanasmirnova.com"
+  "psychologist_web_link": "https://tatjanasmirnova.com",
+  "beauticum": {
+  "title": "Kosmetikstudio Beauticum",
+  "beauticum.link": "https://www.instagram.com/kosmetikstudio.beauticum?igsh=MTgzdmF6MWh5dnZocQ==",
+  "address": "Albert-Rosshaupterstr. 52, 81369 München",
+  "offers": "Das Kosmetikstudio in München bietet Gesichts- und Körperbehandlungen an:",
+  "service1": "Permanent-Make-up",
+  "service2": "Kombinierte Gesichtsreinigung",
+  "service3": "Mikrodermabrasion (Diamant-Peeling)",
+  "service4": "Dermadrop (nicht-invasive Mesotherapie)",
+  "service5": "Myolifting-Gesichtsmassage für Gesicht, Hals und Dekolleté",
+  "service6": "Klassische Kosmetologie",
+  "service7": "Vitaplastik (nicht-invasive langfristige Gesichtsverjüngung)",
+  "service8": "Korrektur und Färbung der Augenbrauen",
+  "service9": "Wimpernfärbung",
+  "service10": "Wimpernverlängerung",
+  "service11": "Klassische Pediküre",
+  "service12": "Klassische Maniküre (nicht apparativ)",
+  "service13": "Kosmetische Zahnaufhellung",
+  "service14": "Tätowierung",
+  "service15": "LPG",
+  "service16": "Entspannende Körpermassage",
+  "why_choose_us": "Warum wählen unsere Kunden uns?",
+  "reason1": "In unserem Studio verwenden wir professionelle Geräte, und alle Behandlungen werden von zertifizierten Fachkräften mit langjähriger Erfahrung durchgeführt. Wir setzen ausschließlich bewährte Methoden und hochwertige Premium-Kosmetik ein, die den höchsten europäischen Qualitätsstandards entspricht.",
+  "reason2": "Jeder Kunde ist für uns einzigartig. Wir bieten einen individuellen Ansatz, passen die Pflege je nach Hauttyp und Bedürfnissen an. In unserem Studio schaffen wir eine gemütliche Atmosphäre, in der Sie sich entspannen, den Alltagsstress vergessen und die Behandlungen in einem angenehmen Ambiente genießen können.",
+  "contact_text": "Für alle Fragen rufen Sie uns unter folgender Nummer an:"
+}
 }
