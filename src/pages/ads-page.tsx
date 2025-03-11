@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styles from "@/styles/AdsPage.module.css";
 import useTranslation from "@/hooks/useTranslation";
-import TutorNeeded from "@/components/ads/TutorNeeded";
 import TheaterAcademy from "@/components/ads/TheaterAcademy";
 import PsychologistTatjana from "@/components/ads/PsychologistTatjana";
 import BeautySalon from "@/components/ads/BeautySalon";
@@ -18,21 +17,26 @@ export default function AnnouncementsPage() {
       type: "single",
       components: [<TheaterAcademy key="tutor" />],
     },
+    // {
+    //   id: 4,
+    //   type: "triple2",
+    //   components: [<TutorNeeded key="tutor3" />, <VitaJewelry key="vetaJewelry" />, <BeautySalon key="legal" />],
+    // },
     {
       id: 4,
-      type: "triple2",
-      components: [<TutorNeeded key="tutor3" />, <VitaJewelry key="vetaJewelry" />, <BeautySalon key="legal" />],
+      type: "double",
+      components: [<VitaJewelry key="vetaJewelry" />, <TibetanBowls key="tibetanBowls" /> ],
     },
 
-    {
-      id: 3,
-      type: "triple",
-      components: [<TutorNeeded key="tutor3" />, <TutorNeeded key="legal2" />, <TutorNeeded key="tutor4" />],
-    },
+    // {
+    //   id: 3,
+    //   type: "triple",
+    //   components: [<TutorNeeded key="tutor3" />, <TutorNeeded key="legal2" />, <TutorNeeded key="tutor4" />],
+    // },
     {
       id: 2,
       type: "double",
-      components: [<TibetanBowls key="tibetanBowls" />, <PsychologistTatjana key="psychologist" />],
+      components: [<BeautySalon key="legal" />, <PsychologistTatjana key="psychologist" />],
     },
     {
       id: 5,
