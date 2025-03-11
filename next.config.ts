@@ -1,7 +1,8 @@
+import type { NextConfig } from "next";
 
-const nextConfig = {
-  reactStrictMode: false,
-  i18n: {
+const nextConfig: NextConfig = {
+   reactStrictMode: false,
+   i18n: {
     locales: ["ru", "de"],
     defaultLocale: "ru",
   },

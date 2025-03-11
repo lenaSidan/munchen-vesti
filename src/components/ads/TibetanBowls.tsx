@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/components/ads/tibetanBowls.module.css";
+import styles from "./tibetanBowls.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import Image from "next/image";
 import Link from "next/link";
