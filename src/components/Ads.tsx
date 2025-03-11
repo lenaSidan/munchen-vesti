@@ -6,8 +6,7 @@ export default function Ads() {
   return (
     <aside className={styles.announcements}>
       <TheaterAcademyMainPage />
-      
-      {/* <LegalServices /> */}
+
     </aside>
   );
 }
