@@ -106,8 +106,10 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
           <ul className={styles.otherArticlesList}>
             {otherEvents.map((event) => (
               <li key={event.slug} className={styles.articleLink}>
-                <Link href={`/events/${event.slug}`}>
-                  {event.title} <span className={styles.eventDate}>{event.date}</span>
+                <Link href={`/events/${event.slug}`} legacyBehavior>
+                  <a>
+                    {event.title} <span className={styles.articleDate}>{event.date}</span>
+                  </a>
                 </Link>
               </li>
             ))}
@@ -135,7 +137,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
 
   const today = new Date();
   today.setHours(0, 0, 0, 0); // Убираем часы, чтобы корректно сравнивать
-  
+
   const sortedEvents = events
     .filter((event) => {
       if (!event.date) return false; // Если даты нет, пропускаем
@@ -147,9 +149,11 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
       const dateB = new Date(b.date as string).getTime();
       return dateA - dateB; // Сортируем от ближайших к самым поздним
     });
-  
-  console.log("📅 Отфильтрованные события:", sortedEvents.map(e => e.date));
-  
+
+  console.log(
+    "📅 Отфильтрованные события:",
+    sortedEvents.map((e) => e.date)
+  );
 
   // Загружаем переводы
   const translations = await import(`@/locales/${locale || "ru"}.json`);
