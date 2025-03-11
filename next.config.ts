@@ -1,12 +1,10 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+const nextConfig = {
    reactStrictMode: false,
    i18n: {
-    locales: ["ru", "de"],
-    defaultLocale: "ru",
-  },
-  output: "export",
-};
-
-export default nextConfig;
+     locales: ["ru", "de"],
+     defaultLocale: "ru",
+   },
+ };
+ 
+ export default nextConfig;
+ 
