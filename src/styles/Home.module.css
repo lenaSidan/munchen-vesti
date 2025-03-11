@@ -48,6 +48,7 @@
 /* Символы ⊱ и ⊰ */
 .decorativeLine span {
   font-size: 1.6rem;
+  line-height: 1;
   font-weight: bold;
   color: var(--border-color);
   display: inline-block;
@@ -91,7 +92,6 @@
 }
 .secondArticleTitle {
   border-top: 2px solid var(--heading-color);
-
   padding-top: 20px;
 }
 .secondArticle {
@@ -160,26 +160,30 @@
   font-size: 1.2rem;
   font-family: "Merriweather", serif;
   text-align: left;
-  color: var(--text-color);
   border-bottom: 1px dashed var(--border-color);
   padding-bottom: 5px;
   transition: color 0.2s ease-in-out;
 }
 
-.articleLink:hover {
+.articleLink a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.articleLink a:hover {
   color: var(--link-color);
   border-bottom: 1px solid var(--link-color);
 }
 
 .articleDate {
   font-size: 0.9rem;
-  margin: 0;
   font-family: var(--font-headings);
   color: var(--heading-color);
   font-style: italic;
   display: inline-block;
-  transition: color 0.3s ease-in-out; 
+  transition: color 0.3s ease-in-out;
 }
+
 
 @media (max-width: 1024px) {
   .layout {
