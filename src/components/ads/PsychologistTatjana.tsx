@@ -9,12 +9,11 @@ export default function PsychologistTatjana() {
 
   return (
     <div className={styles.mainWrapper}>
-      {/* Декоративная линия сверху */}
+     
       <div className={styles.decorativeLine}>
         <span className={styles.left}>⊱❧</span>
         <span className={styles.right}>⊱❧</span>
       </div>
-
       <div className={styles.adsBox}>
         <div className={styles.adsImageWrapper}>
           <Image
