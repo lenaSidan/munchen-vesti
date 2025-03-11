@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
     locales: ["ru", "de"],
     defaultLocale: "ru",
   },
+  output: "export",
 };
 
 export default nextConfig;
