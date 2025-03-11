@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "@/components/Ads/beautySalon.module.css";
+import styles from "@/components/ads/beautySalon.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import Link from "next/link";
 
