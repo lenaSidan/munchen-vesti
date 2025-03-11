@@ -9,7 +9,6 @@ export default function PsychologistTatjana() {
 
   return (
     <div className={styles.mainWrapper}>
-     
       <div className={styles.decorativeLine}>
         <span className={styles.left}>⊱❧</span>
         <span className={styles.right}>⊱❧</span>
@@ -22,7 +21,6 @@ export default function PsychologistTatjana() {
             className={styles.adsImage}
             width={400}
             height={200}
-           
           />
         </div>
         <div className={styles.titleBox}>
@@ -34,7 +32,6 @@ export default function PsychologistTatjana() {
           <p>{t("psychologist_subtitle")}</p>
         </div>
 
-        {/* Список услуг */}
         <ul className={styles.list}>
           <li> {t("psychologist_point1")}</li>
           <li> {t("psychologist_point2")}</li>
@@ -56,22 +53,31 @@ export default function PsychologistTatjana() {
         <div className={styles.text3}>
           <p>{t("psychologist_text3")}</p>
         </div>
-        {/* Контактная информация */}
+     
         <div className={styles.linkBox}>
           {t("psychologist_contact_text")}{" "}
-          <Link className={styles.linkBoxHref} href={t("psychologist_contact_link")} target="_blank" rel="noopener noreferrer">
+          <Link
+            className={styles.linkBoxHref}
+            href={t("psychologist_contact_link")}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             @smirtatjana
           </Link>
         </div>
         <div className={styles.linkBox}>
           {t("psychologist_web_text")}{" "}
-          <Link className={styles.linkBoxHref} href={t("psychologist_web_link")} target="_blank" rel="noopener noreferrer">
+          <Link
+            className={styles.linkBoxHref}
+            href={t("psychologist_web_link")}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             tatjanasmirnova.com
           </Link>
         </div>
       </div>
 
-      {/* Декоративная линия снизу (зеркально) */}
       <div className={`${styles.decorativeLine} ${styles.bottom}`}>
         <span className={styles.right}>⊱❧</span>
         <span className={styles.left}>⊱❧</span>
