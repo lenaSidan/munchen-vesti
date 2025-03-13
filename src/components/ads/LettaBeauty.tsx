@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "@/components/Ads/lettaBeauty.module.css";
+import styles from "@/components/ads/lettaBeauty.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import Link from "next/link";
 
