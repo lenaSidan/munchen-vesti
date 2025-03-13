@@ -206,11 +206,19 @@
   .mainArticle h2,
   .secondArticle h2 {
    font-size: 1.2rem;
+   text-align: left;
   }
   .mainArticle h3,
   .secondArticle h3 {
     font-size: 0.8rem;
     border-bottom: 1px solid var(--border-color);
+  }
+  .mainArticle h4,
+  .secondArticle h4 {
+    font-size: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    display: inline-block;
+    text-align: left;
   }
   .mainArticle p,
   .secondArticle p {
