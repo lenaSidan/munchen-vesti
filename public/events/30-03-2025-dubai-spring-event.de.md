@@ -36,15 +36,16 @@ Sichern Sie sich **20 % Rabatt** auf Gesichts- und Körperbehandlungen:
 ### Die Dubai-Party: Ein Geschmackserlebnis der Extraklasse
 
 #### **Dubai-Popcorn**
-Wir kennen es aus Kinos, Jahrmärkten und gemütlichen Abenden am Kamin... doch **jetzt wird es zum Gourmet-Highlight**!  
-**Himbeere in doppelter Schokolade + Dubai-Füllung** – süß oder salzig? Warum nicht beides? Hier beginnt die wahre Magie des Geschmacks!  
+Wir kennen es aus Kinos, Jahrmärkten und gemütlichen Abenden am Kamin... doch jetzt wird es zum Gourmet-Highlight!  
+Himbeere in doppelter Schokolade + Dubai-Füllung – süß oder salzig? Warum nicht beides? Hier beginnt die wahre Magie des Geschmacks!  
 
 #### **Himbeere in Schokolade… aber nicht nur in Schokolade!**
 Himbeeren in Schokolade gibt es überall, aber niemand kombiniert sie mit dieser besonderen Füllung.  
-Das i-Tüpfelchen? Nein! **Pistaziencreme im Inneren**! Und nicht irgendeine, sondern **die legendäre Dubai-Pistaziencreme**!  
+Das i-Tüpfelchen? Nein! Pistaziencreme im Inneren! Und nicht irgendeine, sondern die legendäre Dubai-Pistaziencreme*!  
 
 #### **Dubai Dreamcake!**
 **Exklusiv in München. Nur bei uns.**  
+
 **Zutaten:**  
 ✔ Pistaziencreme, die alles andere vergessen lässt!  
 ✔ Luftige Milchtränke – Sanftheit auf höchstem Niveau.  
@@ -53,19 +54,19 @@ Das i-Tüpfelchen? Nein! **Pistaziencreme im Inneren**! Und nicht irgendeine, so
 ✔ Perfekter Abschluss: Sahne und hochwertiges Mehl.  
 
 **Warum „Dubai“?**  
-Weil dieser Geschmack unvergesslich ist! **Das ist nicht einfach nur ein Dessert – das ist eine Emotion**, die man erleben muss.  
+Weil dieser Geschmack unvergesslich ist! Das ist nicht einfach nur ein Dessert – das ist eine Emotion, die man erleben muss.  
 
 #### **Dubai-Osterkuchen – die Premium-Version der klassischen Osterleckerei!**
-**Pistazien- und Schokoladenfüllung, Pistazienblättchen, Kataifi, samtige Schokolade** – der Trend der Saison!  
-Seien Sie die Ersten – **dieses Geschmackserlebnis gibt es sonst nirgendwo!**  
+Pistazien- und Schokoladenfüllung, Pistazienblättchen, Kataifi, samtige Schokolade – der Trend der Saison!  
+Seien Sie die Ersten – dieses Geschmackserlebnis gibt es sonst nirgendwo!  
 
 
 ### Die Magie der Steine mit Viletta
 
-Viletta ist eine Schmuckmarke, die mit der **Magie der Natur und der Kraft individueller Energien** gefüllt ist. Wir haben eine Marke geschaffen, die **Harmonie, die Kraft natürlicher Steine und einen einzigartigen Ansatz** für jeden Kunden vereint.  
+Viletta ist eine Schmuckmarke, die mit der Magie der Natur und der Kraft individueller Energien gefüllt ist. Wir haben eine Marke geschaffen, die Harmonie, die Kraft natürlicher Steine und einen einzigartigen Ansatz für jeden Kunden vereint.  
 
 #### Wie funktioniert es?  
-Jedes Schmuckstück wird **nach einer individuellen Berechnung** basierend auf der #Schachraj-Methode erstellt. Die Steine werden **nach Name, Nachname und Geburtsdatum** genau auf Sie abgestimmt. Diese Methode verstärkt Ihre Energie und schafft ein Schmuckstück, das Sie auf Ihrem Weg zu Harmonie und Erfolg begleitet.  
+Jedes Schmuckstück wird nach einer individuellen Berechnung basierend auf der #Schachraj-Methode erstellt. Die Steine werden nach Name, Nachname und Geburtsdatum genau auf Sie abgestimmt. Diese Methode verstärkt Ihre Energie und schafft ein Schmuckstück, das Sie auf Ihrem Weg zu Harmonie und Erfolg begleitet.  
 
 #### Was erhalten Sie mit Ihrer Bestellung?  
 **Ein energetisch kraftvolles Armband**, individuell für Sie gefertigt und auf Ihre Ziele abgestimmt.  
@@ -76,7 +77,7 @@ Jedes Schmuckstück von **Viletta** ist eine Kraftquelle, die Ihnen hilft, in Ei
 
 
 ### **Reservierung und Anmeldung**
-Anmeldung per Direktnachricht auf **Instagram:** 
+Anmeldung per Direktnachricht auf Instagram: 
 
 ***[@orangesunstudio](https://www.instagram.com/orangesunstudio?igsh=MXZ4bnBnY29qY2cwMg==)***, 
 

@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   text-align: center;
-  margin: 20px 0;
+  margin: 0;
 }
 
 .adsBox {
@@ -114,7 +114,7 @@
   color: var(--border-color);
   font-weight: bold;
   display: inline-block;
-  background: var(--alt-background);
+  background: none;
   position: relative;
   line-height: 0.7;
   margin: 0 3px;
@@ -160,7 +160,7 @@
   text-decoration: underline;
   color: var(--heading-color);
 }
-/* 📱 Адаптация под мобильные устройства */
+
 @media (max-width: 768px) {
   .adsBox {
     padding: 12px;

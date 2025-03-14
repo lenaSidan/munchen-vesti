@@ -115,7 +115,10 @@
   hyphens: auto;
   transition: color 0.3s ease-in-out;
 }
-
+.mainArticle li,
+.secondArticle li {
+  text-align: left;
+}
 .secondArticle img {
   max-width: 100%;
   height: auto;

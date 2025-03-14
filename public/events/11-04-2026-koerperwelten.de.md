@@ -13,10 +13,11 @@ Manche Kunstwerke hängen in Museen, andere stehen in Parks – und dann gibt es
 Vergiss gruselige Schaukästen aus Horrorfilmen – diese Ausstellung zeigt das **wahre Wunderwerk des menschlichen Körpers**. Dank der **Plastinationstechnik** von Dr. Gunther von Hagens werden echte Körper dauerhaft konserviert und in spektakulären Posen ausgestellt. Muskelstränge, Organe, Nervenbahnen – du kannst sehen, was dich normalerweise unsichtbar am Leben hält. 
 
 **Highlights der Ausstellung:**
-✔ **Organe aus nächster Nähe:** Hast du dich schon mal gefragt, wie deine Lunge nach einem Marathon aussieht? Oder nach einer Packung Zigaretten? Hier bekommst du die Antworten.
-✔ **Der Tanz der Muskeln:** Präparate in Bewegung zeigen, wie dein Körper funktioniert – egal, ob du joggst, springst oder versuchst, auf der Couch nach der Fernbedienung zu greifen.
-✔ **Das Nervensystem in all seinen Verästelungen:** Überraschend, wie viele Drähte in uns stecken, ohne dass wir eine Gebrauchsanweisung dazu bekommen haben.
-✔ **Die Entwicklung des Lebens:** Von der ersten Zellteilung bis zur Geburt – ein Blick auf den faszinierenden Beginn des Lebens.
+
+- ✔ **Organe aus nächster Nähe:** Hast du dich schon mal gefragt, wie deine Lunge nach einem Marathon aussieht? Oder nach einer Packung Zigaretten? Hier bekommst du die Antworten.
+- ✔ **Der Tanz der Muskeln:** Präparate in Bewegung zeigen, wie dein Körper funktioniert – egal, ob du joggst, springst oder versuchst, auf der Couch nach der Fernbedienung zu greifen.
+- ✔ **Das Nervensystem in all seinen Verästelungen:** Überraschend, wie viele Drähte in uns stecken, ohne dass wir eine Gebrauchsanweisung dazu bekommen haben.
+- ✔ **Die Entwicklung des Lebens:** Von der ersten Zellteilung bis zur Geburt – ein Blick auf den faszinierenden Beginn des Lebens.
 
 ### **Mehr als nur eine Ausstellung**
 KÖRPERWELTEN ist keine gewöhnliche Wissenschaftsausstellung. Sie zeigt nicht nur, **wie der Mensch funktioniert**, sondern regt auch dazu an, über den eigenen Körper nachzudenken. Was passiert mit unseren Muskeln, wenn wir regelmäßig Sport treiben? Wie verändern sich Organe durch eine ungesunde Lebensweise? Und was macht unser Gehirn so einzigartig?
