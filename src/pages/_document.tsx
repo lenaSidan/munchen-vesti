@@ -4,6 +4,10 @@ export default function Document() {
   return (
     <Html lang="ru">
       <Head>
+        {/* Определение языка страницы */}
+        <meta name="language" content="ru" />
+        <meta httpEquiv="Content-Language" content="ru" />
+
         {/* Apple Touch Icon (для iOS) */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
@@ -14,7 +18,9 @@ export default function Document() {
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="shortcut icon" href="/favicon.ico" />
 
+        {/* PWA (Прогрессивное веб-приложение) */}
         <link rel="manifest" href="/site.webmanifest" />
+      
       </Head>
       <body className="antialiased">
         <Main />
