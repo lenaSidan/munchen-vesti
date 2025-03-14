@@ -78,9 +78,9 @@ Jedes Schmuckstück von **Viletta** ist eine Kraftquelle, die Ihnen hilft, in Ei
 ### **Reservierung und Anmeldung**
 Anmeldung per Direktnachricht auf **Instagram:** 
 
-***[Orangesunstudio](https://www.instagram.com/orangesunstudio?igsh=MXZ4bnBnY29qY2cwMg==)***, 
+***[@orangesunstudio](https://www.instagram.com/orangesunstudio?igsh=MXZ4bnBnY29qY2cwMg==)***, 
 
-***[Kosmetikstudio](https://www.instagram.com/kosmetikstudio.beauticum?igsh=MTgzdmF6MWh5dnZocQ==)***  
+***[@kosmetikstudio.beauticum](https://www.instagram.com/kosmetikstudio.beauticum?igsh=MTgzdmF6MWh5dnZocQ==)***  
 
 Keine „Kann ich ohne Reservierung kommen?“-Fragen – nur die Gewissheit, dass Sie Überraschungen, Verkostungen und eine besondere Atmosphäre erwarten.  
 

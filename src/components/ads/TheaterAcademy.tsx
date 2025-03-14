@@ -5,16 +5,111 @@ import useTranslation from "@/hooks/useTranslation";
 export default function TheaterAcademy() {
   const t = useTranslation();
 
+  const categories = [
+    {
+      title: t("theater_academy_creative_center"),
+      items: [
+        {
+          text: [
+            { type: "normal", content: t("theater_academy_group_teremok_post1") },
+            { type: "bold", content: t("theater_academy_group_teremok_bold") },
+            { type: "normal", content: t("theater_academy_group_teremok_post2") },
+          ],
+        },
+        {
+          text: [
+            { type: "normal", content: t("theater_academy_group_lyuboznayki_post1") },
+            { type: "bold", content: t("theater_academy_group_lyuboznayki_bold") },
+            { type: "normal", content: t("theater_academy_group_lyuboznayki_post2") },
+          ],
+        },
+        {
+          text: [
+            { type: "normal", content: t("theater_academy_group_zolotoy_klyuchik_post1") },
+            { type: "bold", content: t("theater_academy_group_zolotoy_klyuchik_bold") },
+            { type: "normal", content: t("theater_academy_group_zolotoy_klyuchik_post") },
+          ],
+        },
+        {
+          text: [
+            { type: "normal", content: t("theater_academy_group_zaychata_post1") },
+            { type: "bold", content: t("theater_academy_group_zaychata_bold") },
+            { type: "normal", content: t("theater_academy_group_zaychata_post2") },
+          ],
+        },
+        {
+          text: [
+            { type: "normal", content: t("theater_academy_group_starty_post1") },
+            { type: "bold", content: t("theater_academy_group_starty_bold") },
+            { type: "normal", content: t("theater_academy_group_starty_post2") },
+          ],
+        },
+        {
+          text: [
+            { type: "normal", content: t("theater_academy_group_ostrov_post1") },
+            { type: "bold", content: t("theater_academy_group_ostrov_bold") },
+            { type: "normal", content: t("theater_academy_group_ostrov_post2") },
+          ],
+        },
+        {
+          text: [{ type: "normal", content: t("theater_academy_group_klass_post1") }],
+        },
+      ],
+    },
+    {
+      title: t("theater_academy_theater_studios"),
+      items: [
+        {
+          text: [
+            { type: "normal", content: t("theater_academy_theater_scarlet_sails_post1") },
+            { type: "bold", content: t("theater_academy_theater_scarlet_sails_bold") },
+            { type: "normal", content: t("theater_academy_theater_scarlet_sails_post2") },
+          ],
+        },
+        {
+          text: [
+            { type: "normal", content: t("theater_academy_theater_new_hero_post1") },
+            { type: "bold", content: t("theater_academy_theater_new_hero_bold") },
+            { type: "normal", content: t("theater_academy_theater_new_hero_post2") },
+          ],
+        },
+        {
+          text: [
+            { type: "normal", content: t("theater_academy_theater_life_post1") },
+            { type: "bold", content: t("theater_academy_theater_life_bold") },
+            { type: "normal", content: t("theater_academy_theater_life_post2") },
+          ],
+        },
+        {
+          text: [
+            { type: "normal", content: t("theater_academy_theater_art_post1") },
+            { type: "bold", content: t("theater_academy_theater_art_bold") },
+            { type: "normal", content: t("theater_academy_theater_art_post2") },
+          ],
+        },
+        {
+          text: [
+            { type: "normal", content: t("theater_academy_theater_actor_post1") },
+            { type: "bold", content: t("theater_academy_theater_actor_bold") },
+            { type: "normal", content: t("theater_academy_theater_actor_post2") },
+          ],
+        },
+      ],
+    },
+  ];
+
   return (
     <div className={styles.mainWrapper}>
       <div className={styles.decorativeLine}>
         <span className={styles.left}>⊱❧</span>
         <span className={styles.right}>⊱❧</span>
       </div>
+
       <h3>{t("theater_academy_title")}</h3>
       <div className={styles.subtitleBox}>
         <p>{t("theater_academy_description")}</p>
       </div>
+
       <div className={styles.adsBox}>
         <div className={styles.textBox}>
           <div className={styles.imageWrapper}>
@@ -24,11 +119,73 @@ export default function TheaterAcademy() {
               className={styles.image}
               width={400}
               height={200}
-            
             />
           </div>
+          <div className={styles.textContainerLeft}>
+            <h4>{t("theater_academy_subtitle")}</h4>
+            <ul className={styles.list}>
+              {[
+                {
+                  pre: t("theater_academy_point1_pre"),
+                  bold: t("theater_academy_point1_bold"),
+                  post: t("theater_academy_point1_post"),
+                },
+                {
+                  pre: t("theater_academy_point2_pre"),
+                  bold: t("theater_academy_point2_bold"),
+                  post: t("theater_academy_point2_post"),
+                },
+                {
+                  pre: t("theater_academy_point3_pre"),
+                  bold: t("theater_academy_point3_bold"),
+                },
+                {
+                  pre: t("theater_academy_point4_pre"),
+                  bold: t("theater_academy_point4_bold"),
+                  post: t("theater_academy_point4_post"),
+                },
+                {
+                  pre: t("theater_academy_point5_pre"),
+                  bold: t("theater_academy_point5_bold"),
+                  post: t("theater_academy_point5_post"),
+                },
+              ].map((item, index) => (
+                <li key={index}>
+                  {item.pre}
+                  <strong> {item.bold} </strong>
+                  {item.post}
+                </li>
+              ))}
+            </ul>
+          </div>
           <div>
-            <div className={styles.contactBox}>
+        
+          </div>
+        </div>
+
+        <div className={styles.textContainer}>
+          {categories.map((category, index) => (
+            <div key={index}>
+              <h4>{category.title}</h4>
+              <ul className={styles.list}>
+                {category.items.map((item, i) => (
+                  <li key={i}>
+                    {item.text.map((part, j) =>
+                      part.type === "bold" ? (
+                        <strong key={j}>{part.content} </strong>
+                      ) : (
+                        <span key={j}>{part.content} </span>
+                      )
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className={styles.contactBox}>
               <p>
                 <span className={styles.label}>{t("theater_academy_location").split(":")[0]}:</span>
                 <span className={styles.value}>{t("theater_academy_location").split(":")[1]}</span>
@@ -49,78 +206,6 @@ export default function TheaterAcademy() {
                 </a>
               </p>
             </div>
-          </div>
-        </div>
-        <div className={styles.textContainer}>
-          <ul className={styles.list}>
-            {[
-              { bold: t("theater_academy_point1_bold"), post: t("theater_academy_point1_post") },
-              { bold: t("theater_academy_point2_bold"), post: t("theater_academy_point2_post") },
-              { bold: t("theater_academy_point3_bold"), post: t("theater_academy_point3_post") },
-              { bold: t("theater_academy_point4_bold"), post: t("theater_academy_point4_post") },
-              { bold: t("theater_academy_point5_bold"), post: t("theater_academy_point5_post") },
-              { bold: t("theater_academy_point6_bold"), post: t("theater_academy_point6_post") },
-              {
-                pre: t("theater_academy_point7_pre"),
-                bold: t("theater_academy_point7_bold"),
-                post: t("theater_academy_point7_post"),
-              },
-              { bold: t("theater_academy_point8_bold"), post: t("theater_academy_point8_post") },
-              { pre: t("theater_academy_point9_pre"), bold: t("theater_academy_point9_bold") },
-              {
-                bold: t("theater_academy_point10_bold"),
-                post: t("theater_academy_point10_post"),
-              },
-              {
-                pre: t("theater_academy_point11_pre"),
-                bold: t("theater_academy_point11_bold"),
-                post: t("theater_academy_point11_post"),
-              },
-              {
-                bold: t("theater_academy_point12_bold"),
-                post: t("theater_academy_point12_post"),
-              },
-              {
-                pre: t("theater_academy_point13_pre"),
-                bold: t("theater_academy_point13_bold"),
-                post: t("theater_academy_point13_post"),
-              },
-              {
-                bold: t("theater_academy_point14_bold"),
-                post: t("theater_academy_point14_post"),
-              },
-              {
-                pre: t("theater_academy_point15_pre"),
-                bold: t("theater_academy_point15_bold"),
-                post: t("theater_academy_point15_post"),
-              },
-              { pre: t("theater_academy_point16_pre"), bold: t("theater_academy_point16_bold") },
-              { pre: t("theater_academy_point17_pre"), bold: t("theater_academy_point17_bold") },
-            ].map((item, index) => (
-              <li key={index}>
-                {item.pre}
-                <strong> {item.bold} </strong>
-                {item.post}
-              </li>
-            ))}
-          </ul>
-          {/* <ul className={styles.list}>
-              {[
-                "theater_academy_point1",
-                "theater_academy_point2",
-                "theater_academy_point3",
-                "theater_academy_point4",
-                "theater_academy_point5",
-                "theater_academy_point6",
-                "theater_academy_point7",
-                "theater_academy_point8",
-              ].map((key, index) => (
-                <li key={index} dangerouslySetInnerHTML={{ __html: t(key) }} />
-              ))}
-            </ul> */}
-        </div>
-      </div>
-
       <div className={`${styles.decorativeLine} ${styles.bottom}`}>
         <span className={styles.right}>⊱❧</span>
         <span className={styles.left}>⊱❧</span>
