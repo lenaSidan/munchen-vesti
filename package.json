@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "cross-env PORT=8080 next start",
+    "start": "next start -p 443",
+
     "lint": "next lint"
   },
   "dependencies": {
