@@ -10,9 +10,14 @@ export default function useTranslation() {
   const router = useRouter();
   const locale = router?.locale ?? "ru"; // Если `useRouter()` не доступен, используем "ru"
 
-  const currentTranslations = useMemo(() => translations[locale] || translations["ru"], [locale]);
+  // Мемоизируем переводы
+  const currentTranslations = useMemo(
+    () => translations[locale] || translations["ru"],
+    [locale]
+  );
 
-  return (key: string): string => {
+  // Функция поиска перевода по ключу
+  const t = (key: string): string => {
     const keys = key.split(".");
     let result: string | TranslationObject = currentTranslations;
 
@@ -20,10 +25,13 @@ export default function useTranslation() {
       if (typeof result === "object" && result !== null && k in result) {
         result = result[k];
       } else {
-        return key; // Вернём ключ, если перевод не найден
+        console.warn(`Перевод не найден для ключа: ${key}`);
+        return key; // Если ключ не найден, возвращаем сам ключ
       }
     }
 
     return typeof result === "string" ? result : key;
   };
+
+  return t;
 }
