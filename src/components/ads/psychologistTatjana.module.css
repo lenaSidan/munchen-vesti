@@ -189,19 +189,19 @@
     line-height: 1.2;
   }
   .subtitle2 {
-   font-size: 0.85rem;
+   font-size: 0.95rem;
   }
   .subtitleBox p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .text1 p{
     font-size: 1rem;
   }
   .list li {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .adsBox p {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
   }
   .text1 p{
     text-align: center;
@@ -211,7 +211,7 @@
   .text2 p{
     text-align: center;
     margin-top: 10px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.2;
     font-weight: 600;
   }
@@ -226,11 +226,11 @@
   .linkBox {
     text-align: center;
     color: var(--text-color);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 600;
   }
   .linkBoxHref {
     color: var(--border-color);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }

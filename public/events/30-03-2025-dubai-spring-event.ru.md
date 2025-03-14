@@ -74,7 +74,11 @@ Viletta — это украшения, наполненные **магией п�
 Каждое украшение **Viletta** – это сила, которая помогает вам быть в гармонии с собой и миром.  
 
 ### **Бронь и запись**
-Запись в личных сообщениях **Instagram** ***🔗[orangesunstudio](https://www.instagram.com/orangesunstudio?igsh=MXZ4bnBnY29qY2cwMg==)***  ,***🔗 [kosmetikstudio.beauticum](https://www.instagram.com/kosmetikstudio.beauticum?igsh=MTgzdmF6MWh5dnZocQ==)***.  
+Запись в личных сообщениях **Instagram** 
+
+***[@orangesunstudio](https://www.instagram.com/orangesunstudio?igsh=MXZ4bnBnY29qY2cwMg==)***,
+
+***[@kosmetikstudio.beauticum](https://www.instagram.com/kosmetikstudio.beauticum?igsh=MTgzdmF6MWh5dnZocQ==)***.  
 Никаких "можно без брони?" – только уверенность, что вас ждут сюрпризы, дегустация и особенная атмосфера.  
 
 **Красота, вкус, энергия – почувствуй магию момента!**
