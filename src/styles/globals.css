@@ -10,6 +10,7 @@
 :root {
   --alt-background1: #f4f1dd;
   --alt-background: #edead7;
+  --alt-background-light: #f6f2d9;
   --background: #f8f5e1; /* Цвет старой бумаги */
   --text-color: #3a3a3a;
   --border-color: #8b5a2b;
@@ -26,6 +27,7 @@
 [data-theme="dark"] {
   --alt-background1: #252525;
   --alt-background: #252525;
+  --alt-background-light: #3a3a3a;
   --background: #252525; /* Не чёрный, а серо-коричневый */
   --text-color: #d4c8b0; /* Цвет старой бумаги при слабом освещении */
   --border-color: #e0a96d; /* Меняем цвет границ */

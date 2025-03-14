@@ -3,7 +3,7 @@
   width: 22%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 0;
   margin-left: 20px;
 }
 

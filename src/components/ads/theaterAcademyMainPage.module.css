@@ -130,10 +130,10 @@
 
 .decorativeLine span {
   font-size: 1.4rem;
-  color: var(--border-color);
+  color: var( --alt-background-light);
   font-weight: bold;
   display: inline-block;
-  background: var(--background);
+  background: var( --alt-background-light);
   position: relative;
   line-height: 1;
   margin: 3px;

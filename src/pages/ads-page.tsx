@@ -7,6 +7,7 @@ import BeautySalon from "@/components/ads/BeautySalon";
 import VitaJewelry from "@/components/ads/VitaJewelry";
 import TibetanBowls from "@/components/ads/TibetanBowls";
 import LettaBeauty from "@/components/ads/LettaBeauty";
+import SalonRental from "@/components/ads/SalonRental";
 
 export default function AnnouncementsPage() {
   const t = useTranslation();
@@ -27,7 +28,11 @@ export default function AnnouncementsPage() {
       type: "double",
       components: [<VitaJewelry key="vetaJewelry" />, <TibetanBowls key="tibetanBowls" /> ],
     },
-
+    {
+      id: 5,
+      type: "single",
+      components: [<SalonRental key="salonRental" />],
+    },
     // {
     //   id: 3,
     //   type: "triple",
