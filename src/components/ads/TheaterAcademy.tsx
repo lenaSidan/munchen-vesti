@@ -27,7 +27,7 @@ export default function TheaterAcademy() {
           text: [
             { type: "normal", content: t("theater_academy_group_zolotoy_klyuchik_post1") },
             { type: "bold", content: t("theater_academy_group_zolotoy_klyuchik_bold") },
-            { type: "normal", content: t("theater_academy_group_zolotoy_klyuchik_post") },
+            { type: "normal", content: t("theater_academy_group_zolotoy_klyuchik_post2") },
           ],
         },
         {

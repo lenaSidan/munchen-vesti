@@ -71,11 +71,12 @@
 }
 
 .servicesList li::before {
-  content: "♦";
-  position: absolute;
-  left: 0;
+  content: "•";
+  display: inline-block;
+  margin-right: 5px;
   color: var(--heading-color);
-  font-size: 1rem;
+  font-size: 1.4rem;
+  line-height: 1;
   font-weight: bold;
 }
 .linkBox {
@@ -144,23 +145,26 @@
   }
 
   .title {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.2;
   }
   .subtitleBox p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.4;
   }
   .subtitle1 {
     font-size: 1rem;
   }
-
+  .servicesList {
+    padding: 0;
+  }
   .servicesList p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .servicesList li {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     line-height: 1.2;
+    padding: 0 10px;
   }
   
 }
