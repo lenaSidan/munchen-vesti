@@ -48,6 +48,8 @@
 @media (max-width: 768px) {
   .languageSwitcher {
     gap: 5px;
+    display: flex;
+    justify-content:flex-start;
   }
   .languageSwitcher span {
     font-size: 0.7rem;
@@ -69,7 +71,7 @@
   }
 
   .languageLabel {
-    font-size: 0.9rem; /* 🔹 Чуть уменьшаем текст */
+    font-size: 0.9rem;
   }
   [data-theme="dark"] .toggleWrapper {
     background: #e0a96d;

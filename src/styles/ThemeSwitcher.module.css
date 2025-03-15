@@ -48,6 +48,8 @@
 @media (max-width: 768px) {
   .themeSwitcher {
     gap: 5px;
+    display: flex;
+    justify-content: flex-start;
   }
   .themeSwitcher span {
     font-size: 0.7rem;
