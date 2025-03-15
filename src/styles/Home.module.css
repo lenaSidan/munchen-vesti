@@ -214,13 +214,12 @@
   }
   .mainArticle h3,
   .secondArticle h3 {
-    font-size: 0.8rem;
+    font-size: 1rem;
     border-bottom: 1px solid var(--border-color);
   }
   .mainArticle h4,
   .secondArticle h4 {
-    font-size: 1rem;
-    border-bottom: 1px solid var(--border-color);
+    font-size: 0.85rem;
     display: inline-block;
     text-align: left;
   }
