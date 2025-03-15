@@ -88,11 +88,12 @@
   padding-left: 20px;
 }
 .list li::before {
-  content: "♦";
-  position: absolute;
-  left: 0;
+  content: "•";
+  display: inline-block;
+  margin-right: 5px;
   color: var(--heading-color);
-  font-size: 1rem;
+  font-size: 1.4rem;
+  line-height: 1;
   font-weight: bold;
 }
 .text1 p{
@@ -181,37 +182,42 @@
   }
 
   .title {
-   font-size: 1rem;
+   font-size: 1.1rem;
    line-height: 1.2;
   }
   .subtitle1 {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.2;
   }
   .subtitle2 {
-   font-size: 0.95rem;
+   font-size: 1.1rem;
   }
   .subtitleBox p {
-    font-size: 0.9rem;
-  }
-  .text1 p{
     font-size: 1rem;
   }
+  .text1 p{
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  .list {
+    padding: 0;
+  }
   .list li {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    padding: 0 10px;
   }
   .adsBox p {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
   .text1 p{
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.2;
   }
   .text2 p{
     text-align: center;
     margin-top: 10px;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     line-height: 1.2;
     font-weight: 600;
   }

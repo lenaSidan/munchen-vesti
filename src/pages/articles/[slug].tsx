@@ -99,9 +99,9 @@ export const getStaticProps: GetStaticProps<ArticleProps> = async ({ params, loc
   return {
     props: {
       article: {
-        id: data.id || 0, // 🆕 Теперь у нас есть id
+        id: data.id || 0,
         slug: params.slug as string,
-        title: data.title || "Без названия",
+        title: data.title || "",
         author: data.author || "",
         image: data.image || null,
         content: processedContent.toString(),

@@ -163,17 +163,18 @@
     font-size: 1rem;
   }
   .description p strong {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   
   .description p,
   .benefits p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     line-height: 1.4;
   }
 
   .linkBox {
     font-size: 1rem;
+    line-height: 1.4;
   }
   
   .linkBoxHref {

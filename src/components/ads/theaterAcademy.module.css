@@ -109,11 +109,12 @@
   padding-left: 20px;
 }
 .list li::before {
-  content: "♦";
-  position: inline-block;
-  left: 0;
+  content: "•";
+  display: inline-block;
+  margin-right: 5px;
   color: var(--link-color);
-  font-size: 1rem;
+  font-size: 1.4rem;
+  line-height: 1;
   font-weight: bold;
 }
 
@@ -227,17 +228,19 @@
   }
 
   .list {
-    padding-left: 0;
+    padding: 0;
   }
 
   .list li {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.3;
-    padding-left: 15px;
+    padding: 0;
   }
 
   .list li::before {
     font-size: 0.9rem;
+    padding: 0;
+    margin: 0;
   }
 
   .mainWrapper h3 {
