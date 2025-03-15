@@ -101,10 +101,10 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
     props: {
       event: {
         slug: params.slug as string,
-        title: data.title || "Untitled",
-        date: data.date || "Unknown date",
+        title: data.title || "",
+        date: data.date || "",
         time: data.time || "",
-        ort: data.ort || "Unknown author", 
+        ort: data.ort || "",
         link: data.link || "",
         image: data.image || null,
         content: contentHtml,
