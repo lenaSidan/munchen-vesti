@@ -26,11 +26,9 @@ Starten Sie den Tag mit einem Glas kühlem Prosecco und exquisiten Snacks – ei
 
 ### Kosmetische Behandlungen
 Sichern Sie sich **20 % Rabatt** auf Gesichts- und Körperbehandlungen:  
-- ● Myolifting  
+- ● Myolifting-Gesichtsmassage  
+- ● Mikrodermabrasion + Ultraschall mit feuchtigkeitsspendender Ampulle 
 - ● LPG-Massage  
-- ● Mikrodermabrasion oder Ultraschall-Peeling mit feuchtigkeitsspendendem Ampullen-Serum  
-- ● Klassische Pflege mit Gesichtsmassage mit Bergkristall  
-- ● Körperformung mit DIVINIA (E-Lipolyse)  
 
 
 ### Die Dubai-Party: Ein Geschmackserlebnis der Extraklasse
