@@ -1,0 +1,133 @@
+.mainWrapper {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  
+}
+
+.adsBox {
+  border: 2px solid var(--border-color);
+  background-color: var(--background);
+  border-radius: 8px;
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+
+}
+
+.adsContent {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}
+.adsImageWrapper {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.adsImage {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  
+}
+.title {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family:  var(--font-body);
+  color: var(--heading-color);
+  text-align: center;
+
+}
+.contactBox {
+  margin-top: 20px;
+  text-align: center;
+}
+.address {
+  font-size: 1.4rem;
+  color: var(--heading-color);
+  line-height: 1.2;
+}
+.description {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-family:  var(--font-body);
+}
+.linkBox {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.linkBoxHref {
+  color: var(--border-color);
+  text-decoration: underline;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  padding-left: 10px;
+}
+
+.linkBoxHref:hover {
+  color: var(--heading-color);
+}
+
+@media (max-width: 768px) {
+  .adsBox {
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+  .adsContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .adsImageWrapper {
+    margin-bottom: 8px;
+  }
+
+  .adsImage {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size:  0.9rem;
+  }
+
+  .contactBox {
+    margin-top: 15px;
+  }
+
+  .address {
+    font-size: 1.2rem;
+  }
+
+  .linkBox {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .linkBoxHref {
+    padding-left: 5px;
+  }
+}

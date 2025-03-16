@@ -8,6 +8,8 @@ import VitaJewelry from "@/components/ads/VitaJewelry";
 import TibetanBowls from "@/components/ads/TibetanBowls";
 import LettaBeauty from "@/components/ads/LettaBeauty";
 import SalonRental from "@/components/ads/SalonRental";
+import HairSalonAd from "@/components/ads/HairSalon";
+import TomatePizzaAd from "@/components/ads/TomatePizza";
 
 export default function AnnouncementsPage() {
   const t = useTranslation();
@@ -21,12 +23,17 @@ export default function AnnouncementsPage() {
     // {
     //   id: 4,
     //   type: "triple2",
-    //   components: [<TutorNeeded key="tutor3" />, <VitaJewelry key="vetaJewelry" />, <BeautySalon key="legal" />],
+    //   components: [<HairSalonAd key="tutor3" />, <VitaJewelry key="vetaJewelry" />, <BeautySalon key="legal" />],
     // },
+    {
+      id: 2,
+      type: "double",
+      components: [<HairSalonAd key="hairSalon" />, <TomatePizzaAd key="hairSalon" />],
+    },
     {
       id: 4,
       type: "double",
-      components: [<VitaJewelry key="vetaJewelry" />, <TibetanBowls key="tibetanBowls" /> ],
+      components: [<VitaJewelry key="vetaJewelry" />, <TibetanBowls key="tibetanBowls" />],
     },
     {
       id: 5,
