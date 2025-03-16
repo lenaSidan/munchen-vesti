@@ -198,7 +198,7 @@
   "psychologist_web_link": "https://tatjanasmirnova.com",
   "beauticum": {
   "title": "Kosmetikstudio Beauticum",
-  "beauticum.link": "https://www.instagram.com/kosmetikstudio.beauticum?igsh=MTgzdmF6MWh5dnZocQ==",
+  "link": "https://www.instagram.com/kosmetikstudio.beauticum?igsh=MTgzdmF6MWh5dnZocQ==",
   "address": "Albert-Rosshaupterstr. 52, 81369 München",
   "offers": "Das Kosmetikstudio in München bietet Gesichts- und Körperbehandlungen an:",
   "service1": "Permanent-Make-up",
@@ -263,5 +263,25 @@
     "description2": "Auch verfügbar: Maniküretisch für Nageldesigner und Friseurstuhl. Miete täglich oder monatlich möglich.",
     "description3": "Der Salon befindet sich 3 Minuten von der U-Bahn-Station Harras entfernt (7 Minuten von Marienplatz), gute Verkehrsanbindung, Lidl, DM und andere Geschäfte in der Nähe.",
     "contact": "Bei Fragen bitte per Nachricht oder Telefon: 0176 2297 2939"
+  },
+"hair_salon": {
+    "title": "Hairteammuenchen – Ihr perfekter Stil im Herzen Münchens!",
+    "description1": "Professionelle Friseurdienstleistungen für Frauen, Männer und Kinder.",
+    "description2": "Färben, Haarpflege und Stylings für besondere Anlässe.",
+    "description3_highlight": "Adresse: ",
+    "description3": "Valleystraße 26, Eingang Implerstraße 59,",
+    "description4": "München, 81371",
+    "contact": "Terminvereinbarung per Telefon oder Direktnachricht. Besuchen Sie uns für schönes und gesundes Haar!",
+    "contactInst": "@hairteammuenchen",
+    "link": "https://www.instagram.com/hairteammuenchen/?igsh=cHNsYWs5bml6OWtx==",
+    "web_text": "Kontakt -",
+    "web_link": "https://www.hairteammuenchen.de/"
+  },
+  "tomate_pizza": {
+    "title": "Tomate Pizza – Geschmack, der begeistert!",
+    "address": "Rosenheimerstr. 117, 81667 München",
+    "web_text": "Menü: ",
+    "web_link": "https://menu.tomate-pizza.de/",
+    "description": "Heiß, aromatisch, unwiderstehlich lecker! Besuchen Sie Tomate Pizza und genießen Sie Ihre Lieblingspizzen mit frischen Zutaten oder bestellen Sie bequem nach Hause – wir liefern den Geschmack direkt zu Ihnen!"
   }
 }

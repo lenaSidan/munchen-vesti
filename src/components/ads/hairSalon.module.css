@@ -2,13 +2,13 @@
   position: relative;
   width: 100%;
   text-align: center;
-  margin: 0;
-  
+  margin: 20px 0;
+height: auto;
 }
 
 .adsBox {
   border: 2px solid var(--border-color);
-  background-color: var(--background);
+  background: var(--alt-background);
   border-radius: 8px;
   padding: 15px;
   width: 100%;
@@ -16,7 +16,6 @@
   flex-direction: column;
   justify-content: center;
   min-height: 100%;
-
 }
 
 .adsContent {
@@ -32,8 +31,9 @@
 }
 
 .title {
-  font-size: 1.4rem;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family:  var(--font-body);
   color: var(--heading-color);
   text-align: center;
   text-align: center;
@@ -44,12 +44,6 @@
 .adsImageWrapper {
   text-align: center;
   margin-bottom: 10px;
-}
-
-.adsImage {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
 }
 
 .description {
@@ -63,31 +57,55 @@
   text-align: center;
   -webkit-hyphens: auto;
   hyphens: auto;
+  margin: 0;
 }
 .description2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
   font-weight: 600;
   text-align: center;
   -webkit-hyphens: auto;
   hyphens: auto;
-}
-.description3 {
-  font-size: 0.9rem;
-  color: var(--heading-color);
-  font-weight: 600;
+  margin: 0;
+  padding-top: 10px;
   font-family:  var(--font-body);
-  text-align: center;
-  -webkit-hyphens: auto;
-  hyphens: auto;
 }
+
+.description3 {
+  font-size: 1.1rem;
+  font-family:  var(--font-body);
+}
+.highlight {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.address {
+  margin-top: 20px;
+  background: var(--alt-background1);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--heading-color);
+  border-radius: 8px;
+  text-align: center;
+}
+.contactBox {
+  margin: 15px 0 0 0;
+  text-align: center;
+}
+.contact {
+  color: var(--heading-color);
+  line-height: 1.2;
+  font-weight: 500;
+  
+  font-size: 1.2rem;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
 .linkBox {
   text-align: center;
   font-size: 1.1rem;
   font-weight: bold;
   margin-top: 15px;
-  text-align: center;
-  -webkit-hyphens: auto;
-  hyphens: auto;
 }
 
 .linkBoxHref {
@@ -97,6 +115,7 @@
   text-align: center;
   -webkit-hyphens: auto;
   hyphens: auto;
+  padding-left: 10px;
 }
 
 .linkBoxHref:hover {
@@ -162,23 +181,42 @@
   text-decoration: underline;
   color: var(--heading-color);
 }
-
 @media (max-width: 768px) {
   .adsBox {
     padding: 12px;
   }
-
+  .address {
+    padding: 10px;
+  }
   .title {
     font-size: 1.1rem;
   }
 
-  .description p {
-    font-size: 1rem;
-    line-height: 1.4;
+  .description1 {
+    font-size: 0.85rem;
   }
-
+  .description2 {
+    font-size: 0.9rem;
+  }
+  .description3 {
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 0 40px;
+  }
+  .contactBox {
+    margin: 0;
+  }
+  .contact {
+    margin-top: 10px;
+    font-size:0.95rem;
+    font-style: italic;
+  }
   .linkBox {
+    font-size:0.9rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .linkBoxHref {
     font-size: 1rem;
-    line-height: 1.4;
   }
 }

@@ -41,6 +41,7 @@
 
 .announcementGroup.double .announcementBox {
   width: 48%;
+ 
 }
 
 .announcementGroup.triple {
@@ -72,7 +73,7 @@
 }
 
 .announcementBox {
-  padding: 0 15px;
+  padding: 15px;
   border-radius: 5px;
   background: var(--alt-background-light);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
@@ -80,7 +81,8 @@
   height: auto;
   display: flex;
   flex-direction: column;
- justify-content: center;
+  justify-content: center;
+  
 }
 
 [data-theme="dark"] .announcementBox {
