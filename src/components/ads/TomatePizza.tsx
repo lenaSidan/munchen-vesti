@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/components/ads/TomatePizza.module.css";
+import styles from "@/components/ads/tomatePizza.module.css";
 import Image from "next/image";
 import useTranslation from "@/hooks/useTranslation";
 import Link from "next/link";
