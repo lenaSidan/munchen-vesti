@@ -45,18 +45,19 @@ export default function EventsPage({ events }: EventsProps) {
       {events.map((event) => (
         <div key={event.slug} className={styles.eventCard}>
           <h2 className={styles.eventTitle}>{event.title}</h2>
+
           <p className={styles.meta}>
-            {event.date} {event.ort && `| ${event.ort}`}
+            {event.date}
+            {event.endDate && ` – ${event.endDate}`} {/* Показываем, только если есть endDate */}
+            {event.ort ? ` | ${event.ort}` : ""} {/* Показываем ort, если есть */}
           </p>
 
           <div className={styles.eventImageOrt}>
             <div className={styles.eventLocation}>
-              {event.date && (
-                <p className={styles.box}>
-                  <span className={styles.label}>{t("event.time")}: </span>
-                  <span className={styles.value}>{event.date}</span>
-                </p>
-              )}
+              <p className={styles.box}>
+                <span className={styles.label}>{t("event.time")}: </span>
+                <span className={styles.value}>{event.endDate}</span>
+              </p>
 
               {event.ort && (
                 <p className={styles.box}>
@@ -132,7 +133,10 @@ export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) =>
     return dateA - dateB; // Сортируем от ближайшего к самому позднему
   });
 
-  console.log("📅 Отфильтрованные и отсортированные события:", sortedEvents.map(e => e.date));
+  console.log(
+    "📅 Отфильтрованные и отсортированные события:",
+    sortedEvents.map((e) => e.date)
+  );
 
   // Парсим Markdown-контент для каждого события
   const events = await Promise.all(
