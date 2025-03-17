@@ -9,6 +9,7 @@ export interface Event {
   slug: string;
   title: string;
   date?: string;
+  endDate?: string;
   time?: string;
   ort?: string;
   link?: string;
@@ -30,8 +31,9 @@ export function getEventsByLocale(locale: string): Event[] {
       slug: file.replace(`.${locale}.md`, ""),
       title: data.title || "Untitled",
       date: data.date && !isNaN(new Date(data.date).getTime()) ? data.date : undefined, // Проверяем валидность даты
+      endDate: data.endDate || "",
       time: data.time || "",
-      ort: data.ort || "Unknown location",
+      ort: data.ort || "",
       link: data.link ?? null, // Используем `null`, если ссылки нет
       content,
       image: data.image ?? null, // Используем `null`, если изображения нет

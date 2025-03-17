@@ -1,7 +1,7 @@
 ---
 title: "Блошиный рынок на Theresienwiese: крупнейшее Secondhand событие в Мюнхене"
 date: "2025-04-26"
-time: "Раннее утро (точное время будет объявлено позже)"
+time: "26 апреля 2025"
 ort: "Theresienwiese, München"
 link: "[Блошиный рынок на Theresienwiese](https://www.brk-muenchen.de/angebote/flohmaerkte/flohmarkt-theresienwiese/)"
 image: "/images/flohmarkt_theresienwiese.webp"

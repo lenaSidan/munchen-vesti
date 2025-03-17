@@ -43,9 +43,9 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
                   src={mainEvent.image}
                   alt={mainEvent.title}
                   className={styles.mainImage}
-                  width={800}
-                  height={450}
-                  priority
+                  width={700}
+                  height={350}
+                  priority={true}
                 />
               )}
               <h2 className={styles.articleTitle}>{mainEvent.title}</h2>
@@ -134,26 +134,33 @@ async function processMarkdown(content: string) {
 
 export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const events = getEventsByLocale(locale || "ru");
-
+  
   const today = new Date();
-  today.setHours(0, 0, 0, 0); // Убираем часы, чтобы корректно сравнивать
-
+  today.setHours(0, 0, 0, 0); // Убираем время для корректного сравнения
+  
   const sortedEvents = events
     .filter((event) => {
-      if (!event.date) return false; // Если даты нет, пропускаем
-      const eventDate = new Date(event.date as string); // Приводим к string, раз уже проверили
-      return !isNaN(eventDate.getTime()) && eventDate >= today; // Фильтруем прошедшие события
+      if (!event.date) return false; // Пропускаем события без даты
+      const startDate = new Date(event.date).getTime();
+      return startDate >= today.getTime(); // Оставляем только будущие события
     })
     .sort((a, b) => {
-      const dateA = new Date(a.date as string).getTime();
-      const dateB = new Date(b.date as string).getTime();
-      return dateA - dateB; // Сортируем от ближайших к самым поздним
+      const startDateA = new Date(a.date || "").getTime();
+      const startDateB = new Date(b.date || "").getTime();
+  
+      if (startDateA !== startDateB) {
+        return startDateA - startDateB; // Сортируем по дате начала (сначала ближайшие)
+      }
+  
+      // Если даты начала одинаковые, сортируем по дате окончания (если есть)
+      const endDateA = a.endDate ? new Date(a.endDate).getTime() : startDateA;
+      const endDateB = b.endDate ? new Date(b.endDate).getTime() : startDateB;
+  
+      return endDateA - endDateB; // Более короткие события идут первыми
     });
-
-  console.log(
-    "📅 Отфильтрованные события:",
-    sortedEvents.map((e) => e.date)
-  );
+  
+  console.log("📅 Отфильтрованные и отсортированные события:", sortedEvents.map((e) => e.date));
+  
 
   // Загружаем переводы
   const translations = await import(`@/locales/${locale || "ru"}.json`);

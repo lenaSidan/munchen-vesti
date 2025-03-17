@@ -45,16 +45,22 @@ export default function EventsPage({ events }: EventsProps) {
       {events.map((event) => (
         <div key={event.slug} className={styles.eventCard}>
           <h2 className={styles.eventTitle}>{event.title}</h2>
+
+          {/* Дата, время и место */}
           <p className={styles.meta}>
-            {event.date} {event.ort && `| ${event.ort}`}
+            
+            {event.time && ` | ${event.time}`}
+            {event.ort && ` | ${event.ort}`}
           </p>
 
           <div className={styles.eventImageOrt}>
             <div className={styles.eventLocation}>
-              {event.date && (
+            
+
+              {event.time && (
                 <p className={styles.box}>
                   <span className={styles.label}>{t("event.time")}: </span>
-                  <span className={styles.value}>{event.date}</span>
+                  <span className={styles.value}>{event.time}</span>
                 </p>
               )}
 
@@ -132,7 +138,10 @@ export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) =>
     return dateA - dateB; // Сортируем от ближайшего к самому позднему
   });
 
-  console.log("📅 Отфильтрованные и отсортированные события:", sortedEvents.map(e => e.date));
+  console.log(
+    "📅 Отфильтрованные и отсортированные события:",
+    sortedEvents.map((e) => e.date)
+  );
 
   // Парсим Markdown-контент для каждого события
   const events = await Promise.all(
