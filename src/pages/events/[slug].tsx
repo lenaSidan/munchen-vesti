@@ -16,6 +16,7 @@ interface Event {
   slug: string;
   title: string;
   date?: string;
+  endDate?: string;
   time?: string;
   ort?: string;
   link?: string;
@@ -29,12 +30,14 @@ interface EventProps {
 
 export default function Event({ event }: EventProps) {
   const t = useTranslation();
-  
+
   return (
     <div className={styles.articleContainer}>
       <h2 className={styles.title}>{event.title}</h2>
       <p className={styles.meta}>
-        {event.date} {event.ort && `| ${event.ort}`}
+        {event.date}
+        {event.endDate && ` – ${event.endDate}`} {/* Показываем только если есть endDate */}
+        {event.ort && ` | ${event.ort}`}
       </p>
       {event.image && (
         <div className={styles.imageWrapper}>
@@ -58,7 +61,6 @@ export default function Event({ event }: EventProps) {
         </div>
       </div>
     </div>
-    
   );
 }
 
@@ -88,11 +90,11 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
   const fileContents = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(fileContents);
 
-  // 🔹 Улучшенный рендеринг Markdown с поддержкой GitHub-форматирования
+  // 🔹 Обрабатываем Markdown в HTML
   const processedContent = await remark()
-    .use(remarkGfm) // Поддержка Markdown-таблиц, чекбоксов, заголовков
-    .use(remarkRehype) // Преобразование Markdown в HTML AST
-    .use(rehypeStringify) // Преобразование AST в строку HTML
+    .use(remarkGfm)
+    .use(remarkRehype)
+    .use(rehypeStringify)
     .process(content);
 
   const contentHtml = processedContent.toString();
@@ -102,7 +104,8 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
       event: {
         slug: params.slug as string,
         title: data.title || "",
-        date: data.date || "",
+        date: data.date ? String(data.date) : "", // Основная дата
+        endDate: data.endDate ? String(data.endDate) : "", // Дата окончания, если есть
         time: data.time || "",
         ort: data.ort || "",
         link: data.link || "",

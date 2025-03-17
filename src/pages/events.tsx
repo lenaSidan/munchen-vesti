@@ -20,8 +20,11 @@ export default function Events({ events }: EventsProps) {
       {events.map((event) => (
         <div key={event.slug}>
           <h2>{event.title}</h2>
-          <p>{event.date}</p>
-          <p>{event.ort}</p>
+          <p>
+            
+            {event.endDate && ` – ${event.endDate}`} {/* Показываем endDate, если есть */}
+            {event.ort && ` | ${event.ort}`} {/* Показываем место, если есть */}
+          </p>
           <Link href={`/events/${event.slug}`}>
             <button type="button">{t("menu.read_more")}</button>
           </Link>
