@@ -103,6 +103,7 @@
   .nav {
     gap: 8px;
     margin-bottom: 8px;
+    flex-direction: column;
   }
 
   .nav a {

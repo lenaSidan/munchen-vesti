@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import { Old_Standard_TT, Merriweather } from "next/font/google";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
+import CookieConsent from "@/components/CookieConsent";
 
 const oldStandard = Old_Standard_TT({ subsets: ["latin", "cyrillic"], weight: "400" });
 const merriweather = Merriweather({ subsets: ["latin", "cyrillic"], weight: ["300", "400"] });
@@ -22,6 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <main className={oldStandard.className}>
         <Component {...pageProps} />
       </main>
+      <CookieConsent />
       <Footer />
     </div>
   );
