@@ -46,18 +46,23 @@ export default function EventsPage({ events }: EventsProps) {
         <div key={event.slug} className={styles.eventCard}>
           <h2 className={styles.eventTitle}>{event.title}</h2>
 
+          {/* Дата, время и место */}
           <p className={styles.meta}>
-            {event.date}
-            {event.endDate && ` – ${event.endDate}`} {/* Показываем, только если есть endDate */}
-            {event.ort ? ` | ${event.ort}` : ""} {/* Показываем ort, если есть */}
+            
+            {event.time && ` | ${event.time}`}
+            {event.ort && ` | ${event.ort}`}
           </p>
 
           <div className={styles.eventImageOrt}>
             <div className={styles.eventLocation}>
-              <p className={styles.box}>
-                <span className={styles.label}>{t("event.time")}: </span>
-                <span className={styles.value}>{event.endDate}</span>
-              </p>
+            
+
+              {event.time && (
+                <p className={styles.box}>
+                  <span className={styles.label}>{t("event.time")}: </span>
+                  <span className={styles.value}>{event.time}</span>
+                </p>
+              )}
 
               {event.ort && (
                 <p className={styles.box}>

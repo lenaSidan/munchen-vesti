@@ -1,7 +1,8 @@
 ---
 title: "Весенний Лила-Нейроночник: перезагрузка для души"
 date: "2025-04-04"
-endDate: "4-6 апреля 2025"
+endDate: "2025-06-04"
+time: "4-6 апреля 2025"
 ort: "СПА-отель в Тироле"
 link: "[@elena_mukhina_leela](https://www.instagram.com/elena_mukhina_leela?igsh=MXd4N2Vyd294dnFqMA==), [@rahimoff.aesthetics](https://www.instagram.com/rahimoff.aesthetics?igsh=cnU5ZjQ5MGFtbWdn==)"
 image: "/images/lila_neuronichnik2.webp"

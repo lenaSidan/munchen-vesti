@@ -1,8 +1,7 @@
 ---
 title: "Hofflohmärkte in Kleinhadern & Blumenau: Schätze direkt aus der Nachbarschaft"
 date: "2025-04-05"
-endDate: "5. April 2025"
-time: "10:00 – 16:00"
+time: "5. April 2025 10–16 Uhr"
 ort: "Kleinhadern & Blumenau, München"
 link: "[Hofflohmärkte Kleinhadern & Blumenau](https://www.muenchen.de/veranstaltungen/hofflohmaerkte-kleinhadern-blumenau)"
 image: "/images/flohmarkt.webp"

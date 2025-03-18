@@ -1,8 +1,7 @@
 ---
 title: "Der Flohmarkt auf der Theresienwiese: Das größte Secondhand-Event Münchens"
 date: "2025-04-26" 
-endDate: "26 апреля 2025" 
-time: "Frühmorgens (genaue Uhrzeiten werden noch bekannt gegeben)" 
+time: "26. April 2025" 
 ort: "Theresienwiese, München"
 link: "[Flohmarkt Theresienwiese](https://www.brk-muenchen.de/angebote/flohmaerkte/flohmarkt-theresienwiese/)"
 image: "/images/flohmarkt_theresienwiese.webp"

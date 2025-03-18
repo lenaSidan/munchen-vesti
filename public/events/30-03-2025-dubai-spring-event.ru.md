@@ -1,8 +1,7 @@
 ---
 title: "Дубайский взрыв вкусов – теперь в Мюнхене!"
 date: "2025-03-30"
-endDate: "30 апреля 2025"
-time: "13:00" 
+time: "30 апреля 2025 в 13:00" 
 ort: "Kosmetikstudio Beauticum, Albert-Rosshaupterstr 52, 81369 München" 
 link: "[Orangesunstudio](https://www.instagram.com/orangesunstudio?igsh=MXZ4bnBnY29qY2cwMg==), [Kosmetikstudio](https://www.instagram.com/kosmetikstudio.beauticum?igsh=MTgzdmF6MWh5dnZocQ==)"
 image: "/images/dubai_spring_event.webp"
