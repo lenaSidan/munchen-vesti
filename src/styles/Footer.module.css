@@ -40,13 +40,16 @@
   text-decoration: none;
   color: var(--text-color);
   transition: color 0.2s;
+ 
 }
-
-
 
 .nav a:hover {
   color: var(--heading-color);
   text-decoration: underline;
+}
+.linkBox {
+  display: flex;
+  gap: 30px;
 }
 .active {
   font-weight: bold;
@@ -109,7 +112,11 @@
   .nav a {
     font-size: 0.9rem;
   }
-
+  .linkBox {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
   .copyright {
     font-size: 0.8rem;
   }
