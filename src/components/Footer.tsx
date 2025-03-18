@@ -32,6 +32,12 @@ export default function Footer() {
           >
             {t("footer.impressum")}
           </Link>
+          <Link
+            href="/privacy-policy"
+            className={`${styles.navLink} ${router.pathname === "/privacy-policy" ? styles.active : ""}`}
+          >
+            {t("footer.privacy-policy")}
+          </Link>
         </nav>
         <p className={styles.copyright}>{t("footer.copyright").replace("{year}", currentYear.toString())}</p>
       </div>

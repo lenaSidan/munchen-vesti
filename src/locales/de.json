@@ -52,10 +52,38 @@
       "text": "Alle auf dieser Website veröffentlichten Inhalte unterliegen dem Urheberrecht. Eine Nutzung ohne schriftliche Genehmigung ist nicht gestattet."
     }
   },
+  "cookieConsent": {
+    "message": "Diese Website verwendet Cookies, um Ihr Nutzererlebnis zu verbessern. Mehr erfahren Sie in unserer",
+    "learnMore": "Datenschutzerklärung",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen"
+  },
+  "privacy_policy": {
+    "title": "Datenschutzrichtlinie",
+    "last_updated": "Neuestes Update: {{date}}",
+    "intro": "Willkommen bei «Münchenskaja Vesti». Wir respektieren Ihre Privatsphäre und setzen uns für den Schutz Ihrer Daten ein. In diesem Dokument erklären wir, welche Daten wir erfassen und wie wir sie verwenden.",
+    
+    "data_collection": "Welche Daten sammeln wir?",
+    "data_collection_desc": "Unsere Website erfordert keine Registrierung und sammelt keine personenbezogenen Daten. Wir verwenden jedoch Cookies und Analysen zur Verbesserung der Website-Funktionalität.",
+    
+    "cookies": "Cookies",
+    "cookies_desc": "Cookies sind kleine Textdateien, die temporär in Ihrem Browser gespeichert werden. Wir verwenden sie, um:\n- Ihre Sprachauswahl zu speichern;\n- Die Seitenaufrufe anonym zu analysieren;\n- Die Benutzerfreundlichkeit zu verbessern.",
+    
+    "data_usage": "Wie verwenden wir die Daten?",
+    "data_usage_desc": "Wir geben Ihre Daten nicht an Dritte weiter. Die Informationen werden nur für folgende Zwecke genutzt:\n- Verbesserung der Benutzerfreundlichkeit;\n- Anonyme Analyse der Besucherzahlen.",
+    
+    "manage_cookies": "Verwaltung von Cookies",
+    "manage_cookies_desc": "Sie können Cookies in Ihren Browsereinstellungen deaktivieren oder löschen. So geht’s:\n- Google Chrome: Einstellungen → Datenschutz → Cookies;\n- Mozilla Firefox: Einstellungen → Datenschutz → Datenverwaltung;\n- Safari: Einstellungen → Datenschutz → Cookies blockieren.",
+    
+    "updates": "Änderungen an der Richtlinie",
+    "updates_desc": "Wir können diese Datenschutzrichtlinie aktualisieren. In diesem Fall wird das Datum der Aktualisierung am Anfang des Dokuments geändert.",
+    "close": "schließen"
+  },
   "footer": {
     "impressum": "Impressum",
     "about": "Über das Projekt",
     "contacts": "Kontakt",
+    "privacy-policy": "Datenschutzrichtlinie",
     "copyright": "© {year} Münchener Nachrichten. Alle Rechte vorbehalten."
   },
   "kontakt": {

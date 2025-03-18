@@ -1,0 +1,122 @@
+.cookieOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Более темный фон */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 100;
+}
+
+.cookieBanner {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 450px;
+  background: var(--background);
+  color: var(--text-color);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 14px;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cookieBanner p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.cookieBanner a {
+  color: var(--link-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cookieBanner a:hover {
+  color: var(--heading-color);
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.acceptButton {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.acceptButton:hover {
+  background: var(--heading-color);
+}
+
+.declineButton {
+  background: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.declineButton:hover {
+  background: var(--border-color);
+  color: white;
+}
+@media (max-width: 768px) {
+  .cookieBanner {
+    width: 95%;
+    max-width: 380px;
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .cookieBanner p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .acceptButton, .declineButton {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cookieBanner {
+    max-width: 350px;
+    padding: 10px;
+  }
+
+  .cookieBanner p {
+    font-size: 12px;
+  }
+
+  .acceptButton, .declineButton {
+    padding: 8px;
+    font-size: 13px;
+  }
+}
