@@ -15,7 +15,7 @@
   "about": {
     "title": "Über das Projekt",
     "section1": {
-      "title": "Was ist „Münchensker Nachrichten“?",
+      "title": "Was ist „Münchener Nachrichten“?",
       "text": "„Münchensker Nachrichten“ ist ein soziales und völlig kostenloses Projekt für russischsprachige Einwohner Münchens. Wir schaffen einen praktischen Raum, in dem wichtige Nachrichten, bevorstehende Veranstaltungen, nützliche Tipps und aktuelle Informationen über das Leben in der Stadt gesammelt werden."
     },
     "section2": {
@@ -61,7 +61,7 @@
   "privacy_policy": {
     "title": "Datenschutzrichtlinie",
     "last_updated": "Neuestes Update: {{date}}",
-    "intro": "Willkommen bei «Münchenskaja Vesti». Wir respektieren Ihre Privatsphäre und setzen uns für den Schutz Ihrer Daten ein. In diesem Dokument erklären wir, welche Daten wir erfassen und wie wir sie verwenden.",
+    "intro": "Willkommen bei «Münchener Nachrichten». Wir respektieren Ihre Privatsphäre und setzen uns für den Schutz Ihrer Daten ein. In diesem Dokument erklären wir, welche Daten wir erfassen und wie wir sie verwenden.",
     
     "data_collection": "Welche Daten sammeln wir?",
     "data_collection_desc": "Unsere Website erfordert keine Registrierung und sammelt keine personenbezogenen Daten. Wir verwenden jedoch Cookies und Analysen zur Verbesserung der Website-Funktionalität.",
