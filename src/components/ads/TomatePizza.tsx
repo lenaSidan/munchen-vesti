@@ -22,6 +22,7 @@ export default function TomatePizzaAd() {
           </div>
           <div className={styles.contactBox}>
             <p className={styles.address}>{t("tomate_pizza.address")}</p>
+            <p className={styles.address}>{t("tomate_pizza.telethon")}</p>
             <div className={styles.linkBox}>
               {t("tomate_pizza.web_text")}
               <Link

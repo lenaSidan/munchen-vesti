@@ -57,9 +57,9 @@
   text-align: center;
 }
 .address {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--heading-color);
-  line-height: 1.2;
+  line-height: 1.1;
 }
 .description {
   margin: 0;
