@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "@/components/ads/theaterAcademy.module.css";
 import useTranslation from "@/hooks/useTranslation";
+import Link from "next/link";
 
 export default function TheaterAcademy() {
   const t = useTranslation();
@@ -158,9 +159,7 @@ export default function TheaterAcademy() {
               ))}
             </ul>
           </div>
-          <div>
-        
-          </div>
+          <div></div>
         </div>
 
         <div className={styles.textContainer}>
@@ -186,26 +185,29 @@ export default function TheaterAcademy() {
       </div>
 
       <div className={styles.contactBox}>
-              <p>
-                <span className={styles.label}>{t("theater_academy_location").split(":")[0]}:</span>
-                <span className={styles.value}>{t("theater_academy_location").split(":")[1]}</span>
-              </p>
-              <p>
-                <span className={styles.label}>{t("theater_academy_contact").split(":")[0]}:</span>
-                <span className={styles.value}>{t("theater_academy_contact").split(":")[1]}</span>
-              </p>
-              <p>
-                <span className={styles.label}>{t("theater_academy_more_info_label")}: </span>
-                <a
-                  href={t("theater_academy_more_info")}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.valueLink}
-                >
-                  {t("theater_academy_more_info")}
-                </a>
-              </p>
-            </div>
+        <div className={styles.link}>
+          <span className={styles.label}>{t("theater_academy_location").split(":")[0]}:</span>
+          <span className={styles.value}>{t("theater_academy_location").split(":")[1]}</span>
+        </div>
+        <div className={styles.link}>
+          <span className={styles.label}>{t("theater_academy_contact")} </span>
+          <Link className={styles.value} href="tel:01727919116">
+            0172 7919116
+          </Link>
+        </div>
+
+        <div className={styles.link}>
+          <span className={styles.label}>{t("theater_academy_more_info_label")}: </span>
+          <a
+            href={t("theater_academy_more_info")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.valueLink}
+          >
+            {t("theater_academy_more_info")}
+          </a>
+        </div>
+      </div>
       <div className={`${styles.decorativeLine} ${styles.bottom}`}>
         <span className={styles.right}>⊱❧</span>
         <span className={styles.left}>⊱❧</span>

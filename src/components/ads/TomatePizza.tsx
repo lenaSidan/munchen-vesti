@@ -9,7 +9,6 @@ export default function TomatePizzaAd() {
 
   return (
     <div className={styles.mainWrapper}>
-      
       <div className={styles.adsBox}>
         <div className={styles.adsContent}>
           <div className={styles.adsImageWrapper}>
@@ -17,12 +16,15 @@ export default function TomatePizzaAd() {
           </div>
           <div className={styles.textContainer}>
             <h2 className={styles.title}>{t("tomate_pizza.title")}</h2>
-
             <p className={styles.description}>{t("tomate_pizza.description")}</p>
           </div>
+          <div className={styles.linkBox}>{t("tomate_pizza.address")}</div>
+
+          <Link className={styles.address} href="tel:08962423100">
+            089 624 23 100
+          </Link>
+
           <div className={styles.contactBox}>
-            <p className={styles.address}>{t("tomate_pizza.address")}</p>
-            <p className={styles.address}>{t("tomate_pizza.telethon")}</p>
             <div className={styles.linkBox}>
               {t("tomate_pizza.web_text")}
               <Link
@@ -37,7 +39,6 @@ export default function TomatePizzaAd() {
           </div>
         </div>
       </div>
-   
     </div>
   );
 }

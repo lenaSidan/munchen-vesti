@@ -76,9 +76,24 @@
 }
 .contact {
   color: var(--heading-color);
-  text-decoration: underline;
+  
   font-size: 1.4rem;
   transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+.address {
+  font-family: var(--font-headings);
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: var(--heading-color);
+  line-height: 1.1;
+  margin-top: 10px;
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out; 
+}
+
+.address:hover {
+  color: var(--link-color);
+  transform: scale(1.05);
+  text-decoration: underline;
 }
 
 

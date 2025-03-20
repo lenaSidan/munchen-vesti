@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "@/components/ads/salonRental.module.css";
 import useTranslation from "@/hooks/useTranslation";
+import Link from "next/link";
 
 export default function SalonRental() {
   const t = useTranslation();
@@ -23,7 +24,12 @@ export default function SalonRental() {
 
           {/* Контактная информация */}
           <div className={styles.contactBox}>
-            <p className={styles.contact}>{t("salon_rental.contact")}</p>
+            <p className={styles.contact}>
+              {t("salon_rental.contact")}{" "}
+              <Link className={styles.address} href="tel:017622972939">
+                0176 2297 2939
+              </Link>
+            </p>
           </div>
         </div>
       </div>
