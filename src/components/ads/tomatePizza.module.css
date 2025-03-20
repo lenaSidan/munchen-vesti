@@ -53,14 +53,10 @@
 
 }
 .contactBox {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
 }
-.address {
-  font-size: 1.3rem;
-  color: var(--heading-color);
-  line-height: 1.1;
-}
+
 .description {
   margin: 0;
   margin-top: 20px;
@@ -84,7 +80,21 @@
 .linkBoxHref:hover {
   color: var(--heading-color);
 }
-
+.address  {
+  font-family: var(--font-headings);
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: var(--heading-color);
+  line-height: 1.1;
+  text-decoration: underline;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  margin-top: 10px;
+}
+.address :hover {
+  color: var(--link-color);
+  transform: scale(1.05);
+}
 @media (max-width: 768px) {
   .adsBox {
     padding: 10px;

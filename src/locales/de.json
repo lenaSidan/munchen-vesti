@@ -198,7 +198,7 @@
   "theater_academy_point5_bold": "„Kopfnuss“",
   "theater_academy_point5_post": ", Gruppen 7–12 und 13–17 Jahre.",  
   "theater_academy_location": "Adresse: München, Deutschland",
-  "theater_academy_contact": "Kontakt: 0172 7919116",
+  "theater_academy_contact": "Kontakt:",
   "theater_academy_more_info_label": "Mehr Informationen",
   "theater_academy_more_info": "https://georgdaudrich.com",
 
@@ -290,7 +290,7 @@
     "description1": "Ein Raum zur Miete für die Arbeit (geeignet für Beauty-Experten, Masseure, Permanent-Make-up-Künstler usw.), sowie für Workshops.",
     "description2": "Auch verfügbar: Maniküretisch für Nageldesigner und Friseurstuhl. Miete täglich oder monatlich möglich.",
     "description3": "Der Salon befindet sich 3 Minuten von der U-Bahn-Station Harras entfernt (7 Minuten von Marienplatz), gute Verkehrsanbindung, Lidl, DM und andere Geschäfte in der Nähe.",
-    "contact": "Bei Fragen bitte per Nachricht oder Telefon: 0176 2297 2939"
+    "contact": "Bei Fragen bitte per Nachricht oder Telefon: "
   },
 "hair_salon": {
     "title": "Hairteammuenchen – Ihr perfekter Stil im Herzen Münchens!",
@@ -308,7 +308,6 @@
   "tomate_pizza": {
     "title": "Tomate Pizza – Geschmack, der begeistert!",
     "address": "Rosenheimerstr. 117, 81667 München",
-    "telethon": "089 624 23 100",
     "web_text": "Menü: ",
     "web_link": "https://menu.tomate-pizza.de/",
     "description": "Heiß, aromatisch, unwiderstehlich lecker! Besuchen Sie Tomate Pizza und genießen Sie Ihre Lieblingspizzen mit frischen Zutaten oder bestellen Sie bequem nach Hause – wir liefern den Geschmack direkt zu Ihnen!"
