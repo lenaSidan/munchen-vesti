@@ -309,12 +309,13 @@
     "web_link": "https://www.hairteammuenchen.de/"
   },
   "tomate_pizza": {
-    "title": "Tomate Pizza – Geschmack, der begeistert!",
-    "address": "Rosenheimerstr. 117, 81667 München",
+    "title": "Tomate Pizza – Вкус, который покоряет!",
+    "address": "Rosenheimerstr. 117, 81667 Мюнхен",
+    "telethon": "089 624 23 100",
     "web_text": "Меню: ",
     "web_link": "https://menu.tomate-pizza.de/",
-    "description": "Heiß, aromatisch, unwiderstehlich lecker! Besuchen Sie Tomate Pizza und genießen Sie Ihre Lieblingspizzen mit frischen Zutaten oder bestellen Sie bequem nach Hause – wir liefern den Geschmack direkt zu Ihnen!"
-  }
+    "description": "Горячая, ароматная, неотразимая! Загляните в Tomate Pizza и наслаждайтесь любимой пиццей или закажите с доставкой – мы привезем её прямо к вам!"
+}
 }
   
 
