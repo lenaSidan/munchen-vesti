@@ -1,40 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Münchener Nachrichten 📰  
+A bilingual online newspaper inspired by pre-revolutionary aesthetics.
 
-## Getting Started
+---
 
-First, run the development server:
+## 🧠 About the Project
+
+**Münchener Nachrichten** is a static website built for the Russian-speaking community in Munich.  
+It recreates the look and feel of pre-revolutionary newspapers while remaining modern, responsive, and fast.
+
+This project combines design, frontend development, and localization — fully designed and developed by hand.
+
+---
+
+## 🔧 Tech Stack
+
+- **Framework:** Next.js  
+- **Styling:** Tailwind CSS  
+- **Languages:** JavaScript, TypeScript  
+- **Content:** Markdown (articles), JSON (localization)  
+- **Deployment:** Static export, suitable for hosting on platforms like Vercel
+
+---
+
+## 🌍 Features
+
+- Bilingual content: 🇷🇺 Russian & 🇩🇪 German  
+- Clean and fast static architecture  
+- Markdown-based article system  
+- Manual content structure and routing  
+- JSON-based localization and multilingual UI  
+- Designed with strong attention to layout, typography, and UX
+
+---
+
+## 📁 Folder Structure
+
+/public/articles/ → Markdown article files
+/public/images/ → Project images
+/locales/ru.json → Russian interface texts
+/locales/de.json → German interface texts
+/components/ → Reusable UI components
+/pages/ → Static routing with Next.js
+
+---
+
+## 🚀 Getting Started
+
+Clone the repository and run the project locally:
 
 ```bash
+git clone https://github.com/lenaSidan/munchen-vesti.git
+cd munchen-vesti
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+💡 Live Project
+Check it out online: munchen-vesti.de
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+🧑‍🎨 Created by
+Elena Sidanova
+Frontend Developer & Designer
+🔗 www.linkedin.com/in/elena-sidanova
+🌐 https://resume.lena-sidan.de/
