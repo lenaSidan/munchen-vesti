@@ -35,14 +35,21 @@ This project combines design, frontend development, and localization — fully d
 
 ## 📁 Folder Structure
 
-/public/articles/ → Markdown article files
-/public/images/ → Project images
-/locales/ru.json → Russian interface texts
-/locales/de.json → German interface texts
-/components/ → Reusable UI components
-/pages/ → Static routing with Next.js
+- /public/articles/ → Markdown article files
+- /public/images/ → Project images
+- /locales/ru.json → Russian interface texts
+- /locales/de.json → German interface texts
+- /components/ → Reusable UI components
+- /pages/ → Static routing with Next.js
 
 ---
+## 💡 Live Project  
+🌐 [munchen-vesti.de](https://munchen-vesti.de)
+
+## 🧑‍🎨 Created by  
+**Elena Sidanova** – Frontend Developer & Designer  
+🔗 [LinkedIn](https://www.linkedin.com/in/elena-sidanova)  
+📄 [Resume](https://resume.lena-sidan.de/)
 
 ## 🚀 Getting Started
 
@@ -53,12 +60,3 @@ git clone https://github.com/lenaSidan/munchen-vesti.git
 cd munchen-vesti
 npm install
 npm run dev
-
-💡 Live Project
-Check it out online: munchen-vesti.de
-
-🧑‍🎨 Created by
-Elena Sidanova
-Frontend Developer & Designer
-🔗 www.linkedin.com/in/elena-sidanova
-🌐 https://resume.lena-sidan.de/
