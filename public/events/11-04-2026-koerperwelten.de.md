@@ -8,8 +8,6 @@ image: "/images/koerperwelten_muenchen.webp"
 link: "[KÖRPERWELTEN – Am Puls der Zeit!](https://koerperwelten.de/stadt/muenchen/)"
 ---
 
-### KÖRPERWELTEN in München: Eine Ausstellung, die unter die Haut geht
-
 Manche Kunstwerke hängen in Museen, andere stehen in Parks – und dann gibt es die, die aus echten Menschen bestehen. Willkommen bei **KÖRPERWELTEN**, der Ausstellung, die tiefer geht als jede Kunstausstellung zuvor. Hier dreht sich alles um den menschlichen Körper – **ungefiltert, unverhüllt und faszinierend echt**.
 
 ### **Was erwartet dich?**

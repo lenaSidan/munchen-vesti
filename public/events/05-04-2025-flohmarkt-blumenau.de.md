@@ -11,16 +11,12 @@ image: "/images/flohmarkt.webp"
 
 Wenn der Frühling in München Einzug hält, erwacht nicht nur die Natur, sondern auch die Lust, durch versteckte Hinterhöfe zu schlendern und einzigartige Fundstücke zu entdecken. Die **Hofflohmärkte Kleinhadern & Blumenau** sind weit mehr als nur ein Trödelmarkt – sie sind eine charmante Reise durch Münchens Viertel, bei der Einheimische ihre Schätze verkaufen und Besucher auf wahre Vintage-Schätze stoßen.  
 
----
-
 ### Warum sind diese Hofflohmärkte so besonders?  
 
 **Gemütliche Atmosphäre** – Hier gibt es keine anonymen Verkäufer, sondern echte Nachbarn mit Geschichten zu ihren Fundstücken.  
 **Jeder Hof ein kleines Abenteuer** – Kein klassischer Markt mit Ständen, sondern ein Spaziergang durch Hinterhöfe voller Überraschungen.  
 **Günstige Preise** – Vintage-Mode, Designertaschen oder alte Schallplatten – hier findet man wahre Schnäppchen.  
 **Mehr als nur ein Flohmarkt** – Einige Höfe bieten Livemusik, kleine Kunstausstellungen oder selbstgebackene Kuchen an.  
-
----
 
 ### Was gibt es zu entdecken?  
 
@@ -30,8 +26,6 @@ Wenn der Frühling in München Einzug hält, erwacht nicht nur die Natur, sonder
 - ● **Möbel & Deko** – Lampen, Bilder und besondere Wohnaccessoires.  
 - ● **Spielzeug & Kinderkleidung** – Perfekt für Familien auf der Suche nach günstigen Alternativen.  
 
----
-
 ### Tipps für eine erfolgreiche Schatzsuche  
 
 ✔ **Bargeld mitnehmen** – Kartenzahlung gibt es hier nicht.  
@@ -39,8 +33,6 @@ Wenn der Frühling in München Einzug hält, erwacht nicht nur die Natur, sonder
 ✔ **Jeden Hof erkunden** – Man weiß nie, wo sich das perfekte Fundstück versteckt.  
 ✔ **Handeln erlaubt!** – Die meisten Verkäufer sind offen für Preisverhandlungen.  
 ✔ **Eine große Tasche oder einen Rucksack mitbringen** – Die Funde können zahlreich sein!  
-
----
 
 ### Wann & Wo?  
 
@@ -50,8 +42,6 @@ Wenn der Frühling in München Einzug hält, erwacht nicht nur die Natur, sonder
 **Anreise:** U-Bahn **U6 Haderner Stern** oder Bus **56, 167**  
 
 ***🔗 [Hofflohmärkte Kleinhadern & Blumenau](https://www.muenchen.de/veranstaltungen/hofflohmaerkte-kleinhadern-blumenau)***  
-
----
 
 ### **Warum solltest du hingehen?**  
 

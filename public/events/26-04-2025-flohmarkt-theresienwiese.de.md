@@ -7,8 +7,6 @@ link: "[Flohmarkt Theresienwiese](https://www.brk-muenchen.de/angebote/flohmaerk
 image: "/images/flohmarkt_theresienwiese.webp"
 ---
 
-### Der Flohmarkt auf der Theresienwiese: Das größte Secondhand-Event Münchens
-
 Jedes Jahr im April verwandelt sich die Theresienwiese, die sonst als Heimat des berühmten Oktoberfests bekannt ist, in ein Paradies für Schnäppchenjäger, Sammler und Liebhaber von Raritäten. **Der BRK-Flohmarkt (Bayerisches Rotes Kreuz)** ist nicht nur der größte Flohmarkt Münchens, sondern auch einer der größten in Deutschland – ein Event, das man sich nicht entgehen lassen sollte!
 
 ### Ein Flohmarkt der Superlative
