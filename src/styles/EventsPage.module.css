@@ -167,6 +167,13 @@
     padding: 15px;
     margin-bottom: 20px;
   }
+  .eventCard h3 {
+    font-size: 1.1rem;
+  }
+  .eventCard h4 {
+    font-size: 0.9rem;
+    text-align: left;
+  }
   .eventTitle {
     text-align: center;
     font-size: 1.2rem;
