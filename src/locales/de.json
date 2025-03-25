@@ -311,5 +311,22 @@
     "web_text": "Menü: ",
     "web_link": "https://menu.tomate-pizza.de/",
     "description": "Heiß, aromatisch, unwiderstehlich lecker! Besuchen Sie Tomate Pizza und genießen Sie Ihre Lieblingspizzen mit frischen Zutaten oder bestellen Sie bequem nach Hause – wir liefern den Geschmack direkt zu Ihnen!"
-  }
+  },
+  "purebeauty": {
+  "title": "Salon Pure Beauty",
+  "address": "Hansastraße 8C, München",
+  "intro": "Hallo zusammen! Mein Name ist Swetlana. Ich lade Sie herzlich in meine Welt der Schönheit ein!",
+  "service1": "Gesichtsmassage",
+  "service2": "Karboxytherapie",
+  "service3": "Fraktionierte Mesotherapie",
+  "service4": "Mikrostromtherapie",
+  "service5": "Fraktionelles Radiofrequenz-Lifting für das Gesicht",
+  "service6": "Fraktionelles Radiofrequenz-Lifting für den Körper",
+  "service7": "Chemisches Peeling von Dermagenetik",
+  "service8": "Chemisches Peeling von Medicare",
+  "service9": "Ultraschall-Gesichtsreinigung",
+  "consultation": "Vor jeder Behandlung berate ich Sie ausführlich und empfehle die optimale Pflege für Ihre Haut.",
+  "priority": "Ihre Zufriedenheit ist meine oberste Priorität!",
+  "contact_text": "Kontaktieren Sie mich gerne über WhatsApp für einen Termin oder eine Beratung."
+}
 }

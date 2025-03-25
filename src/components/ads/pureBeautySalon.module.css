@@ -1,0 +1,217 @@
+.mainWrapper {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.adsBox {
+  background: var(--alt-background); 
+  border: 1px solid #8b0000;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 0;
+  color: #3a3a3a;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+[data-theme="dark"] .adsBox {
+  background: #2e2e2e;
+  color: #fdf3d0;
+  border-color: #e0a96d;
+}
+
+.titleBox {
+   border-bottom: 2px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: var(--font-headings);
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--border-color);
+  transition: font-size 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
+  margin: 0;
+}
+
+.subtitle1 {
+  font-size: 1.1rem;
+  color: var(--heading-color);
+  font-weight: 600;
+  text-align: center;
+
+}
+
+.subtitleBox p{
+  font-size: 1.2rem;
+  color: var(--heading-color);
+  margin-top: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: left;
+  text-transform: uppercase;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.adsImageWrapper {
+  width: 40%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.rightBox {
+  width: 60%;
+  text-align: left;
+  margin-left: 20px;
+}
+.adsImage {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.list {
+  margin: 10px 0;
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.list li {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 20px;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.list li::before {
+  content: "•";
+  display: inline-block;
+  margin-right: 5px;
+  color: var(--link-color);
+  font-size: 1.4rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
+
+.linkBoxHref2 {
+  font-family: var(--font-headings);
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--border-color);
+  text-decoration: underline;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.textBlock p{
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--border-color);
+  text-align: left;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.decorativeLine {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.decorativeLine::before,
+.decorativeLine::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--heading-color);
+  position: absolute;
+  left: 0;
+}
+.decorativeLine::before {
+  top: 0;
+}
+.decorativeLine::after {
+  bottom: 0;
+}
+.decorativeLine span {
+  font-size: 1.4rem;
+  color: var(--heading-color);
+  font-weight: bold;
+  display: inline-block;
+  background: var(--alt-background);
+  position: relative;
+  line-height: 1;
+  margin: 0 3px;
+  padding: 0;
+}
+.decorativeLine .left {
+  transform: scaleX(-1);
+  margin-right: 2px;
+}
+.decorativeLine .right {
+  margin-left: 2px;
+}
+.decorativeLine.bottom .left {
+  transform: scaleX(1);
+}
+.decorativeLine.bottom .right {
+  transform: scaleX(-1);
+}
+.decorativeLine.bottom {
+  transform: scaleY(-1);
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .adsBox {
+    padding: 12px;
+    flex-direction: column;
+  }
+  .adsImageWrapper {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .rightBox {
+    width: 100%;
+    text-align: left;
+    margin-left:0;
+  }
+  .title {
+    font-size: 1.3rem;
+  }
+  .subtitleBox p{
+    font-size: 1rem;
+    margin-top: 20px;
+    line-height: 1.4;
+    text-align: left;
+    
+  }
+  .subtitle1 {
+    font-size: 1rem;
+  }
+  .list {
+    padding: 0;
+  }
+  .list li {
+    font-size: 1rem;
+    line-height: 1;
+    padding: 0 10px;
+  }
+
+  
+  .linkBoxHref2 {
+    
+    font-size: 1rem;
+    font-weight: 500;
+
+  }
+}

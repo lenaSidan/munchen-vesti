@@ -10,6 +10,7 @@ import LettaBeauty from "@/components/ads/LettaBeauty";
 import SalonRental from "@/components/ads/SalonRental";
 import HairSalonAd from "@/components/ads/HairSalon";
 import TomatePizzaAd from "@/components/ads/TomatePizza";
+import PureBeautySalon from "@/components/ads/PureBeautySalon";
 
 export default function AnnouncementsPage() {
   const t = useTranslation();
@@ -26,7 +27,7 @@ export default function AnnouncementsPage() {
     //   components: [<HairSalonAd key="tutor3" />, <VitaJewelry key="vetaJewelry" />, <BeautySalon key="legal" />],
     // },
     {
-      id: 2,
+      id: 3,
       type: "double",
       components: [<HairSalonAd key="hairSalon" />, <TomatePizzaAd key="hairSalon" />],
     },
@@ -34,6 +35,11 @@ export default function AnnouncementsPage() {
       id: 4,
       type: "double",
       components: [<VitaJewelry key="vetaJewelry" />, <TibetanBowls key="tibetanBowls" />],
+    },
+    {
+      id: 7,
+      type: "single",
+      components: [<PureBeautySalon key="pureBeauty" />],
     },
     {
       id: 5,
@@ -51,7 +57,7 @@ export default function AnnouncementsPage() {
       components: [<BeautySalon key="legal" />, <PsychologistTatjana key="psychologist" />],
     },
     {
-      id: 5,
+      id: 6,
       type: "single",
       components: [<LettaBeauty key="lettaBeauty" />],
     },
