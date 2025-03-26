@@ -17,7 +17,7 @@ export default function OrangeSunStudio() {
           <p className={styles.intro}>{t("orange_sun.intro")}</p>
 
           <h3 className={styles.subtitle}>{t("orange_sun.dessert_title")}</h3>
-          <p>{t("orange_sun.dessert_description")}</p>
+          <p className={styles.sub}>{t("orange_sun.dessert_description")}</p>
 
           <h3 className={styles.subtitle}>{t("orange_sun.second_dessert_title")}</h3>
           <div className={styles.image_textBox}>
