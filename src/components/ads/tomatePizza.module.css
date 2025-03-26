@@ -18,7 +18,11 @@
   min-height: 100%;
 
 }
-
+.image_textBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
 .adsContent {
   display: flex;
   flex-direction: column;
@@ -26,6 +30,7 @@
   justify-content: center;
 }
 .adsImageWrapper {
+  width: 40%;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -37,37 +42,42 @@
 }
 
 .textContainer {
+  width: 60%;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   justify-content: center;
-  
+  padding-left: 20px;
 }
 .title {
-  margin-top: 20px;
+  margin-top: 0;
   font-size: 1.2rem;
   font-weight: 500;
   font-family:  var(--font-body);
   color: var(--heading-color);
   text-align: center;
-
+  margin-bottom: 20px;
+}
+.contact {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: flex-end;
 }
 .contactBox {
-  margin-top: 10px;
   text-align: center;
 }
 
 .description {
   margin: 0;
-  margin-top: 20px;
   font-size: 1rem;
   font-family:  var(--font-body);
 }
 .linkBox {
-  text-align: center;
   font-size: 1.1rem;
   font-weight: bold;
-  margin-top: 15px;
 }
 
 .linkBoxHref {
@@ -81,15 +91,9 @@
   color: var(--heading-color);
 }
 .address  {
-  font-family: var(--font-headings);
   font-weight: bold;
   font-size: 1.3rem;
   color: var(--heading-color);
-  line-height: 1.1;
-  text-decoration: underline;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-  margin-top: 10px;
 }
 .address :hover {
   color: var(--link-color);
@@ -100,16 +104,30 @@
     padding: 10px;
     border-radius: 6px;
   }
-
+  .contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+  }
   .adsContent {
     flex-direction: column;
     text-align: center;
   }
-
+  .image_textBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
   .adsImageWrapper {
+    width: 100%;
     margin-bottom: 8px;
   }
-
+  .textContainer {
+    width: 100%;
+    padding: 0;
+  }
+  
   .adsImage {
     width: 100%;
     height: auto;
@@ -117,6 +135,7 @@
   }
 
   .title {
+    padding-top: 20px;
     font-size: 1rem;
   }
 
@@ -134,7 +153,7 @@
 
   .linkBox {
     font-size: 1rem;
-    margin-top: 10px;
+    margin-top:0;
   }
 
   .linkBoxHref {

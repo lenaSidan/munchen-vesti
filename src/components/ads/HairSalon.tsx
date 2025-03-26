@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import styles from "@/components/ads/hairSalon.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import Link from "next/link";
@@ -24,7 +25,15 @@ export default function HairSalonAd() {
             <p className={styles.description1}>{t("hair_salon.description1")}</p>
             <p className={styles.description2}>{t("hair_salon.description2")}</p>
           </div>
-
+          <div className={styles.adsImageWrapper}>
+            <Image
+              src="/images/hairSalon.webp"
+              alt={t("hair_salon.title")}
+              className={styles.adsImage}
+              width={400}
+              height={200}
+            />
+          </div>
           {/* Контактная информация */}
           <div className={styles.contactBox}>
             <div className={styles.address}>
@@ -33,11 +42,10 @@ export default function HairSalonAd() {
                 {t("hair_salon.description3")}
               </p>
               <p className={styles.description3}>{t("hair_salon.description4")}</p>
-              
             </div>
-           <div className={styles.contactBox}>
-            <p className={styles.contact}>{t("hair_salon.contact")}</p>
-           </div>
+            <div className={styles.contactBox}>
+              <p className={styles.contact}>{t("hair_salon.contact")}</p>
+            </div>
             <div className={styles.linkBox}>
               {t("hair_salon.web_text")}{" "}
               <Link
