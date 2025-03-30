@@ -5,7 +5,11 @@
   gap: 5px;
   font-family: var(--font-body);
 }
-
+.themeIcon {
+  vertical-align: middle;
+  width: 28px;
+  height: 40px;
+}
 .themeToggleWrapper {
   position: relative;
   width: 30px;
@@ -59,7 +63,11 @@
     height: 50px;
     border-radius: 12px;
   }
-
+  .themeIcon {
+    vertical-align: middle;
+    width: 20px;
+    height: 30px;
+  }
   .themeToggleKnob {
     width: 20px;
     height: 20px;

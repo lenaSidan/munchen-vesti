@@ -101,7 +101,25 @@
 .socialIcon:hover {
   transform: scale(1.1);
 }
-
+.facebook {
+  content: url("/icons/facebook_icon.png");
+}
+.instagram {
+  content: url("/icons/instagram_icon.png");
+}
+.telegram {
+  content: url("/icons/telegram_icon.png");
+}
+/* Тёмная тема */
+[data-theme="dark"] .facebook {
+  content: url("/icons/facebook_icon_dark.png");
+}
+[data-theme="dark"] .instagram {
+  content: url("/icons/instagram_icon_dark.png");
+}
+[data-theme="dark"] .telegram {
+  content: url("/icons/telegram_icon_dark.png");
+}
 @media (max-width: 768px) {
   .footer {
     padding: 0 0 15px 0;

@@ -47,25 +47,41 @@ export default function Footer() {
         <div className={styles.socials}>
           <a href="https://t.me/твоя_ссылка" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
             <Image
-              src="/icons/telegramm_icon.png"
+              src="/icons/telegram_icon.png"
               alt="Telegram"
-              width={24}
-              height={24}
-              className={styles.socialIcon}
+              width={50}
+              height={50}
+              className={`${styles.socialIcon} ${styles.telegram}`}
             />
           </a>
 
-          <a href="https://www.instagram.com/munchen_vesti?igsh=N294YnI5aTZ6angz" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <a
+            href="https://www.instagram.com/munchen_vesti?igsh=N294YnI5aTZ6angz"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
             <Image
               src="/icons/instagram_icon.png"
               alt="Instagram"
-              width={24}
-              height={24}
-              className={styles.socialIcon}
+              width={50}
+              height={50}
+              className={`${styles.socialIcon} ${styles.instagram}`}
             />
           </a>
-          <a href="https://www.facebook.com/munchen.vesti/" target="_blank" rel="noopener noreferrer" aria-label="facebook">
-            <Image src="/icons/facebook_icon.png" alt="Facebook" width={24} height={24} className={styles.socialIcon} />
+          <a
+            href="https://www.facebook.com/munchen.vesti/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="facebook"
+          >
+            <Image
+              src="/icons/facebook_icon.png"
+              alt="Facebook"
+              width={50}
+              height={50}
+              className={`${styles.socialIcon} ${styles.facebook}`}
+            />
           </a>
         </div>
         <p className={styles.copyright}>{t("footer.copyright").replace("{year}", currentYear.toString())}</p>

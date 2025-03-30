@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import styles from "@/styles/ThemeSwitcher.module.css";
 
 export default function ThemeSwitcher() {
@@ -19,11 +20,14 @@ export default function ThemeSwitcher() {
 
   return (
     <div className={styles.themeSwitcher}>
-      <span className={styles.themeLabel}>{theme === "light" ? "☀️" : "🌙"}</span>
-      <div
-        className={`${styles.themeToggleWrapper} ${theme === "dark" ? styles.dark : ""}`}
-        onClick={toggleTheme}
-      >
+      <Image
+        src={`/icons/flashlight-${theme}.png`}
+        alt="Change of theme"
+        width={24}
+        height={24}
+        className={styles.themeIcon}
+      />
+      <div className={`${styles.themeToggleWrapper} ${theme === "dark" ? styles.dark : ""}`} onClick={toggleTheme}>
         <div className={styles.themeToggleKnob}></div>
       </div>
     </div>

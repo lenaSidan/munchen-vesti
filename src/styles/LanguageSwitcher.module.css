@@ -45,6 +45,13 @@
   color: var(--heading-color);
   transition: color 0.3s ease-in-out;
 }
+
+.lanternIcon {
+  vertical-align: middle;
+  width: 20px;
+  height: 40px;
+}
+
 @media (max-width: 768px) {
   .languageSwitcher {
     gap: 5px;
@@ -55,13 +62,17 @@
     font-size: 0.7rem;
   }
   .toggleWrapper {
-    width: 24px; /* 🔹 Уменьшаем ширину */
-    height: 50px; /* 🔹 Делаем тоньше */
-    border-radius: 12px; /* 🔹 Закругляем */
+    width: 24px;
+    height: 50px;
+    border-radius: 12px;
   }
-
+  .lanternIcon {
+    vertical-align: middle;
+    width: 15px;
+    height: 30px;
+  }
   .toggleKnob {
-    width: 20px; /* 🔹 Меньше размер "ползунка" */
+    width: 20px;
     height: 20px;
     top: 3px;
   }
