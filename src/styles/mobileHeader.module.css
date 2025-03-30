@@ -1,0 +1,231 @@
+.mobileHeader {
+  background: none;
+  padding: 0 0 15px 0;
+  margin-bottom: 15px;
+  text-align: center;
+  border-bottom: 6px solid var(--heading-color);
+}
+.fullBackground {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.1),
+    transparent 5px
+  );
+}
+
+[data-theme="dark"] .fullBackground {
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(224, 169, 109, 0.3),
+    transparent 5px
+  );
+}
+.containerBackground {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin-bottom: 10px;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+}
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  
+}
+.logoText {
+  display: flex;
+  align-items: center;
+  font-family: "Old Standard TT", serif;
+  font-size: 2rem;
+ line-height: 2.4rem;
+ margin-top: 20px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: var(--heading-color);
+  letter-spacing: 2px;
+  text-shadow:
+    1px 1px 0px rgba(0, 0, 0, 0.4),
+    2px 2px 0px rgba(0, 0, 0, 0.3),
+    -1px -1px 0px rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] .logoText {
+  color: #e0a96d;
+  text-shadow:
+    2px 2px 0px #1c1c1c,
+    -2px -2px 0px #3a3a3a;
+}
+.logoSince {
+  font-size: 0.7rem;
+  text-align: center;
+}
+.logoLink {
+  text-decoration: none;
+  flex-grow: 1;
+}
+
+.logoBox {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.logoTopLine {
+  font-size: 2.5rem;
+  font-family: "Old Standard TT", serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+.logoBottomLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logoSecondRight {
+  font-size: 1.8rem;
+  font-family: "Old Standard TT", serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.logoIcon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.tools {
+  margin-top: 15px;
+  top: 0;
+  right: 0;
+  display: flex;
+  gap: 8px;
+  margin-right: 20px;
+}
+.menuMain {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  
+}
+.nav a:hover {
+  color: var(--heading-color);
+  text-decoration: underline;
+}
+.active {
+
+  color: var(--heading-color);
+  text-decoration: underline;
+}
+
+.navLink {
+  font-size: 0.8rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: "Merriweather", serif;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px 0;
+}
+
+.navLink:hover {
+  color: var(--heading-color);
+  text-decoration: underline;
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  border-top: 1px solid var(--border-color);
+  width: 100%;
+  padding: 5px 0;
+}
+
+.submenuLink {
+  padding: 3px 0;
+  color: var(--text-color);
+  font-family: "Merriweather", serif;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.submenuLink:hover {
+  text-decoration: underline;
+  color: var(--heading-color);
+}
+.decorativeLine {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.decorativeLine::before,
+.decorativeLine::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--heading-color);
+  position: absolute;
+  left: 0;
+}
+
+.decorativeLine::before {
+  top: 0;
+}
+
+.decorativeLine::after {
+  bottom: 0;
+}
+
+.decorativeLine span {
+  font-size: 2rem;
+  color: var(--heading-color);
+  font-weight: bold;
+  display: inline-block;
+  background: var(--background);
+  position: relative;
+  line-height: 1;
+  margin: 0 -3px;
+  padding-right: 5px;
+  margin-top: 10px;
+}
+
+.decorativeLine .left {
+  transform: scaleX(-1);
+  margin-right: 2px;
+}
+
+.decorativeLine .right {
+  margin-left: 2px;
+}

@@ -3,7 +3,9 @@
     "title": "Münchener Nachrichten",
     "read_more": "Weiterlesen",
     "announcements_title": "Anzeigen",
-    "view_all_articles": "Alle Events anzeigen"
+    "view_all_articles": "Alle Events anzeigen",
+    "edition_date": "Ausgabe vom {{month}} {{year}}",
+    "published_fixed": "Eine Informationszeitung, die das Leben der russischsprachigen Gemeinschaft in München widerspiegelt."
   },
   "menu": {
     "articles": "Artikel",
