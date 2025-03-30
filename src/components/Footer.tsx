@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "@/styles/Footer.module.css";
 import useTranslation from "@/hooks/useTranslation";
+import Image from "next/image";
 
 export default function Footer() {
   const t = useTranslation();
@@ -15,7 +16,6 @@ export default function Footer() {
         <p className={styles.brand}>
           <Link href="/">{t("home.title")}</Link>
         </p>
-
         <nav className={styles.nav}>
           <div className={styles.linkBox}>
             <Link href="/about" className={`${styles.navLink} ${router.pathname === "/about" ? styles.active : ""}`}>
@@ -43,6 +43,31 @@ export default function Footer() {
             </Link>
           </div>
         </nav>
+
+        <div className={styles.socials}>
+          <a href="https://t.me/твоя_ссылка" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+            <Image
+              src="/icons/telegramm_icon.png"
+              alt="Telegram"
+              width={24}
+              height={24}
+              className={styles.socialIcon}
+            />
+          </a>
+
+          <a href="https://www.instagram.com/munchen_vesti?igsh=N294YnI5aTZ6angz" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <Image
+              src="/icons/instagram_icon.png"
+              alt="Instagram"
+              width={24}
+              height={24}
+              className={styles.socialIcon}
+            />
+          </a>
+          <a href="https://www.facebook.com/munchen.vesti/" target="_blank" rel="noopener noreferrer" aria-label="facebook">
+            <Image src="/icons/facebook_icon.png" alt="Facebook" width={24} height={24} className={styles.socialIcon} />
+          </a>
+        </div>
         <p className={styles.copyright}>{t("footer.copyright").replace("{year}", currentYear.toString())}</p>
       </div>
     </footer>

@@ -20,7 +20,7 @@
   --button-text: #ffffff;
   --font-body: "Merriweather", serif;
   --font-headings: "Old Standard TT", serif;
-  --paper-texture: url("/images/paper-texture.jpg"); /* Фон газеты */
+  --paper-texture: url("/images/paper-texture.jpg");
 } 
 
 /* 🌙 Тёмная тема (приглушённая, как старая бумага ночью) */
@@ -28,10 +28,10 @@
   --alt-background1: #252525;
   --alt-background: #252525;
   --alt-background-light: #3a3a3a;
-  --background: #252525; /* Не чёрный, а серо-коричневый */
-  --text-color: #d4c8b0; /* Цвет старой бумаги при слабом освещении */
-  --border-color: #e0a96d; /* Меняем цвет границ */
-  --heading-color: #e0a96d; /* Светло-золотой */
+  --background: #252525; 
+  --text-color: #d4c8b0;
+  --border-color: #e0a96d;
+  --heading-color: #e0a96d;
   --link-color: #e0a96d;
   --button-bg: #e0a96d;
   --button-text: #1c1c1c;
@@ -71,7 +71,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* H2 – Заголовки статей */
 h2 {
   font-size: 1.8rem;
   line-height: 1.3;
@@ -83,7 +82,6 @@ h2 {
   transition: border-color 0.3s ease-in-out;
 }
 
-/* H3 – Внутренние заголовки */
 h3 {
   text-align: left;
   font-size: 1.3rem;
@@ -104,7 +102,7 @@ h4 {
   line-height: 1.6;
   transition: border-color 0.3s ease-in-out;
 }
-/* 📜 Глобальные стили ссылок */
+
 a {
   color: var(--link-color);
   text-decoration: none;

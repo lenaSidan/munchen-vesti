@@ -87,6 +87,21 @@
 .decorativeLine::after {
   bottom: 0;
 }
+.socials {
+  display: flex;
+  gap: 25px;
+  margin: 10px 0;
+  justify-content: center;
+}
+
+.socialIcon {
+  transition: transform 0.3s ease;
+}
+
+.socialIcon:hover {
+  transform: scale(1.1);
+}
+
 @media (max-width: 768px) {
   .footer {
     padding: 0 0 15px 0;
