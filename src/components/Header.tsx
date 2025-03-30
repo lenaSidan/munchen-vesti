@@ -56,10 +56,10 @@ export default function Header() {
               <div className={styles.logoDataBox}>
                 <Image
                   src="/icons/logo.png"
-                  alt="Логотип Münchensкiя Вѣсти"
+                  alt="logo Munich News"
                   width={80}
                   height={80}
-                  className={styles.logoIcon}
+                  className={`${styles.logoIcon} ${styles.logoTheme}`}
                 />
                 <p className={styles.logoDate}>
                   {t("home.edition_date").replace("{{month}}", monthName).replace("{{year}}", year.toString())}

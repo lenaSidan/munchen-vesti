@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import styles from "@/styles/LanguageSwitcher.module.css";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const LanguageSwitcher = () => {
   const router = useRouter();
@@ -16,14 +17,32 @@ const LanguageSwitcher = () => {
     router.push({ pathname, query }, undefined, { locale: newLang });
     setIsRu(!isRu);
   };
+  const [theme, setTheme] = useState("light");
 
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme") || "light";
+    setTheme(savedTheme);
+  }, []);
+
+  const lanternIcon = `/icons/lantern_${isRu ? "ru" : "de"}_${theme}.png`;
+  useEffect(() => {
+    const updateTheme = () => {
+      const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
+      setTheme(currentTheme);
+    };
+  
+    updateTheme(); // инициализация
+  
+    const observer = new MutationObserver(() => updateTheme());
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  
+    return () => observer.disconnect();
+  }, []);
   return (
     <div className={styles.languageSwitcher}>
-      <span className={styles.languageLabel}>{isRu ? "Рус" : "De"}</span>
-      <div
-        className={`${styles.toggleWrapper} ${isRu ? "" : styles.active}`}
-        onClick={toggleLanguage}
-      >
+      <Image src={lanternIcon} alt="Lantern icon" width={24} height={50} className={styles.lanternIcon} />
+
+      <div className={`${styles.toggleWrapper} ${isRu ? "" : styles.active}`} onClick={toggleLanguage}>
         <div className={styles.toggleKnob}></div>
       </div>
     </div>
