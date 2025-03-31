@@ -105,7 +105,9 @@
   .title {
     font-size: 1.1rem;
   }
-
+  .description {
+    margin: 0;
+  }
   .description1 {
     font-size: 0.9rem;
   }
@@ -114,11 +116,14 @@
   }
   .description3 {
     font-size: 0.9rem;
+    margin: 0;
   }
   .contact {
     font-size: 1rem;
     font-style: italic;
   }
-  
+  .address {
+    font-size: 1.1rem;
+  }
 
 }
