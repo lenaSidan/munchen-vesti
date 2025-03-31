@@ -19,10 +19,11 @@
 }
 
 .mainArticle {
-  padding: 0;
+  padding: 10px 20px;
   margin-bottom: 10px;
   text-align: justify;
   width: 100%;
+  background: var(--alt-background-light);
 }
 
 .decorativeLine {
@@ -30,7 +31,7 @@
   width: 100%;
   text-align: center;
   margin-top: 0px;
-  margin-bottom: 5px;
+  margin-bottom: 35px;
 }
 
 .decorativeLine::before {
@@ -61,20 +62,26 @@
 .decorativeLine .left {
   margin-right: 5px;
   transform: scaleX(-1);
+  background: var(--alt-background-light);
 }
 
 .decorativeLine .right {
   margin-left: 5px;
+  background: var(--alt-background-light);
 }
 .mainArticle .articleContent {
   font-size: 1.1rem;
   line-height: 1.4;
   text-align: justify;
   column-count: 2;
-  column-gap: 20px;
+  column-gap: 30px;
   -webkit-hyphens: auto;
   hyphens: auto;
   transition: color 0.3s ease-in-out;
+}
+.mainArticle h2 {
+  margin-top: 0;
+ 
 }
 
 .mainImage {
@@ -102,6 +109,8 @@
   width: 100%;
   margin-top: 30px;
   margin-bottom: 20px;
+  padding: 10px 20px;
+  background: var(--alt-background-light);
   border-bottom: 4px solid var(--heading-color);
 }
 
@@ -182,10 +191,11 @@
 .articleDate {
   font-size: 0.9rem;
   font-family: var(--font-headings);
-  color: var(--heading-color);
+  color: var(--text-color);
   font-style: italic;
   display: inline-block;
   transition: color 0.3s ease-in-out;
+  margin: 0;
 }
 
 
@@ -201,11 +211,22 @@
   .announcements {
     width: 28%;
   }
+  .mainArticle {
+    border-bottom: 4px solid var(--heading-color);
+  }
 }
 
 @media (max-width: 768px) {
   .layout {
     flex-direction: column;
+  }
+  .mainArticle {
+    border-bottom: 4px solid var(--heading-color);
+  }
+  .mainArticle,
+  .secondArticle {
+    padding: 0;
+    background: none;
   }
   .mainArticle h2,
   .secondArticle h2 {
