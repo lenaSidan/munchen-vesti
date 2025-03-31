@@ -300,7 +300,7 @@
     "description1": "Сдаётся в аренду комната для работы (подойдёт бьюти-мастерам, массажистам, перманентщикам и т. п.), а также для проведения мастер-классов.",
     "description2": "Также доступны: маникюрный стол для мастера маникюра и парикмахерское кресло. Возможна аренда подневно и помесячно.",
     "description3": "Салон расположен в 3 минутах от метро Harras (7 минут от Marienplatz), удобная транспортная развязка, рядом Lidl, DM и другие магазины.",
-    "contact": "По всем вопросам в ЛС или по телефону: "
+    "contact": "По всем вопросам по телефону: "
   },
   "hair_salon": {
     "title": "Hairteammuenchen – Ваш идеальный стиль в центре Мюнхена!",
@@ -312,8 +312,9 @@
     "contact": "Запись по телефону или в личные сообщения. Приходите за красивыми и здоровыми волосами!",
     "contactInst": "@hairteammuenchen",
     "link": "https://www.instagram.com/hairteammuenchen/?igsh=cHNsYWs5bml6OWtx==",
-    "web_text": "Контакт -",
-    "web_link": "https://www.hairteammuenchen.de/"
+    "web_text": "Контакт - ",
+    "web_link": "https://www.hairteammuenchen.de/",
+    "contact_text": "Телефон - "
   },
   "tomate_pizza": {
     "title": "Tomate Pizza – Вкус, который покоряет!",

@@ -296,9 +296,9 @@
     "description1": "Ein Raum zur Miete für die Arbeit (geeignet für Beauty-Experten, Masseure, Permanent-Make-up-Künstler usw.), sowie für Workshops.",
     "description2": "Auch verfügbar: Maniküretisch für Nageldesigner und Friseurstuhl. Miete täglich oder monatlich möglich.",
     "description3": "Der Salon befindet sich 3 Minuten von der U-Bahn-Station Harras entfernt (7 Minuten von Marienplatz), gute Verkehrsanbindung, Lidl, DM und andere Geschäfte in der Nähe.",
-    "contact": "Bei Fragen bitte per Nachricht oder Telefon: "
+    "contact": "Bei Fragen bitte per Telefon: "
   },
-"hair_salon": {
+  "hair_salon": {
     "title": "Hairteammuenchen – Ihr perfekter Stil im Herzen Münchens!",
     "description1": "Professionelle Friseurdienstleistungen für Frauen, Männer und Kinder.",
     "description2": "Färben, Haarpflege und Stylings für besondere Anlässe.",
@@ -309,7 +309,8 @@
     "contactInst": "@hairteammuenchen",
     "link": "https://www.instagram.com/hairteammuenchen/?igsh=cHNsYWs5bml6OWtx==",
     "web_text": "Kontakt -",
-    "web_link": "https://www.hairteammuenchen.de/"
+    "web_link": "https://www.hairteammuenchen.de/",
+    "contact_text": "Telefon - "
   },
   "tomate_pizza": {
     "title": "Tomate Pizza – Geschmack, der begeistert!",

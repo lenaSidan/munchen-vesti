@@ -98,7 +98,6 @@
 }
 .text1 p{
   font-size: 1.3rem;
-  text-decoration: underline;
   color: var(--heading-color);
   font-family: --font-body;
 }
