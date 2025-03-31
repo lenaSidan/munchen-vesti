@@ -33,6 +33,8 @@ image: "/images/italien_abend_event.webp"
 
 **Запись:** Напишите нам в директ, место считается забронированным после предоплаты 
 
-***[@letta_beauty_munchen](https://www.instagram.com/letta_viletta?igsh=MXhlcGcyZGM0enl0Yw==)*** и ***[@orangesunstudio](https://www.instagram.com/orangesunstudio)***
+***[@letta_beauty_munchen](https://www.instagram.com/letta_viletta?igsh=MXhlcGcyZGM0enl0Yw==)***
+ 
+***[@orangesunstudio](https://www.instagram.com/orangesunstudio)***
 
 **Вкусный вечер с итальянским характером и весенним вдохновением ждёт вас!**

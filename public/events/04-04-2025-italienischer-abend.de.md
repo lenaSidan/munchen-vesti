@@ -33,6 +33,8 @@ Nur **20 Plätze** – in gemütlicher Atmosphäre mit einem Glas Wein und Gespr
 
 **Anmeldung:** Direktnachricht – dein Platz ist nach der Anzahlung gesichert.
 
-***[@letta_beauty_munchen](https://www.instagram.com/letta_viletta?igsh=MXhlcGcyZGM0enl0Yw==)*** und ***[@orangesunstudio](https://www.instagram.com/orangesunstudio)***
+***[@letta_beauty_munchen](https://www.instagram.com/letta_viletta?igsh=MXhlcGcyZGM0enl0Yw==)*** 
+
+***[@orangesunstudio](https://www.instagram.com/orangesunstudio)***
 
 **Ein Abend mit italienischem Flair und frühlingshafter Inspiration erwartet dich!**
