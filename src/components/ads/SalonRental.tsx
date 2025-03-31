@@ -24,12 +24,12 @@ export default function SalonRental() {
 
           {/* Контактная информация */}
           <div className={styles.contactBox}>
-            <p className={styles.contact}>
-              {t("salon_rental.contact")}{" "}
+            <div className={styles.contact}>
+              <p>{t("salon_rental.contact")}{" "}</p>
               <Link className={styles.address} href="tel:017622972939">
                 0176 2297 2939
               </Link>
-            </p>
+            </div>
           </div>
         </div>
       </div>
