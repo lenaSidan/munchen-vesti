@@ -11,8 +11,8 @@ export default function ViletaJewelry() {
     <div className={styles.mainWrapper}>
       {/* Декоративная линия сверху */}
       <div className={styles.decorativeLine}>
-        <span className={styles.left}>𐎐</span>
-        <span className={styles.right}>𐎐</span>
+        {/* <span className={styles.left}>𐎐</span>
+        <span className={styles.right}>𐎐</span> */}
       </div>
 
       <div className={styles.adsBox}>
@@ -49,8 +49,8 @@ export default function ViletaJewelry() {
 
       {/* Декоративная линия снизу */}
       <div className={`${styles.decorativeLine} ${styles.bottom}`}>
-        <span className={styles.right}>𐎐</span>
-        <span className={styles.left}>𐎐</span>
+        {/* <span className={styles.right}>𐎐</span>
+        <span className={styles.left}>𐎐</span> */}
       </div>
     </div>
   );

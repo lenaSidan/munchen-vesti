@@ -51,8 +51,8 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
               <h2 className={styles.articleTitle}>{mainEvent.title}</h2>
               <p className={styles.articleDate}>{mainEvent.date}</p>
               <div className={styles.decorativeLine}>
-                <span className={styles.left}>𐎐</span>
-                <span className={styles.right}>𐎐</span>
+                {/* <span className={styles.left}>𐎐</span>
+                <span className={styles.right}>𐎐</span> */}
               </div>
 
               <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: mainEvent.content }} />
@@ -69,11 +69,11 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
         <article className={styles.secondArticle}>
           <div className={styles.secondArticleHeader}>
             <h2 className={styles.secondArticleTitle}>{secondEvent.title}</h2>
-            <div className={styles.decorativeLine}>
-              <span className={styles.left}>𐎐</span>
-              <span className={styles.right}>𐎐</span>
-            </div>
             <p className={styles.articleDate}>{secondEvent.date}</p>
+            <div className={styles.decorativeLine}>
+              {/* <span className={styles.left}>𐎐</span>
+              <span className={styles.right}>𐎐</span> */}
+            </div>
           </div>
 
           <div className={styles.secondArticleContent}>
@@ -134,10 +134,10 @@ async function processMarkdown(content: string) {
 
 export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const events = getEventsByLocale(locale || "ru");
-  
+
   const today = new Date();
   today.setHours(0, 0, 0, 0); // Убираем время для корректного сравнения
-  
+
   const sortedEvents = events
     .filter((event) => {
       if (!event.date) return false; // Пропускаем события без даты
@@ -147,20 +147,22 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
     .sort((a, b) => {
       const startDateA = new Date(a.date || "").getTime();
       const startDateB = new Date(b.date || "").getTime();
-  
+
       if (startDateA !== startDateB) {
         return startDateA - startDateB; // Сортируем по дате начала (сначала ближайшие)
       }
-  
+
       // Если даты начала одинаковые, сортируем по дате окончания (если есть)
       const endDateA = a.endDate ? new Date(a.endDate).getTime() : startDateA;
       const endDateB = b.endDate ? new Date(b.endDate).getTime() : startDateB;
-  
+
       return endDateA - endDateB; // Более короткие события идут первыми
     });
-  
-  console.log("📅 Отфильтрованные и отсортированные события:", sortedEvents.map((e) => e.date));
-  
+
+  console.log(
+    "📅 Отфильтрованные и отсортированные события:",
+    sortedEvents.map((e) => e.date)
+  );
 
   // Загружаем переводы
   const translations = await import(`@/locales/${locale || "ru"}.json`);
