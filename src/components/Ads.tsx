@@ -1,10 +1,10 @@
 import styles from "@/styles/Ads.module.css";
-import TibetanBowls from "./ads/TibetanBowls";
+import ViletaJewelry from "./ads/VitaJewelry";
 
 export default function Ads() {
   return (
     <aside className={styles.announcements}>
-      <TibetanBowls />
+      <ViletaJewelry />
     </aside>
   );
 }
