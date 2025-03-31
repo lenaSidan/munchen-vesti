@@ -23,7 +23,7 @@
   margin-bottom: 10px;
   text-align: justify;
   width: 100%;
-  background: var(--alt-background-light);
+  background: var(--alt-background2);
 }
 
 .decorativeLine {
@@ -110,7 +110,7 @@
   margin-top: 30px;
   margin-bottom: 20px;
   padding: 10px 20px;
-  background: var(--alt-background-light);
+  background: var(--alt-background2);
   border-bottom: 4px solid var(--heading-color);
 }
 

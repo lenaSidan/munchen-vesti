@@ -8,6 +8,7 @@
 
 /* 🎨 Светлая тема (газетная бумага) */
 :root {
+  --alt-background2: #f6f2d9;
   --alt-background1: #f4f1dd;
   --alt-background: #edead7;
   --alt-background-light: #f6f2d9;
@@ -25,6 +26,7 @@
 
 /* 🌙 Тёмная тема (приглушённая, как старая бумага ночью) */
 [data-theme="dark"] {
+  --alt-background2: #252525;
   --alt-background1: #252525;
   --alt-background: #252525;
   --alt-background-light: #3a3a3a;
