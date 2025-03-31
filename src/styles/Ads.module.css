@@ -76,7 +76,8 @@
 }
 @media (max-width: 1024px) {
   .announcements {
-    width: 28%;
+    width: 100%;
+    box-sizing: border-box;
     margin: 0;
   }
 }

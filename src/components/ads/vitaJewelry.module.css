@@ -162,6 +162,16 @@
   text-decoration: underline;
   color: var(--heading-color);
 }
+@media (max-width: 1024px) {
+  .title {
+    font-size: 1rem;
+  }
+  .description p {
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+
+}
 
 @media (max-width: 768px) {
   .adsBox {

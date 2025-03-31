@@ -222,7 +222,24 @@
   .layout {
     gap: 20px;
   }
+  .mainArticle h2,
+  .secondArticle h2 {
+   font-size: 1.1rem;
+   text-align: left;
+  }
 
+  .mainArticle h3,
+  .secondArticle h3 {
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+
+  .mainArticle h4,
+  .secondArticle h4 {
+    font-size: 0.8rem;
+    display: inline-block;
+    text-align: left;
+  }
   .articlesSection {
     width: 70%;
   }
