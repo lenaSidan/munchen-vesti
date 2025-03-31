@@ -15,7 +15,8 @@
   --background: #f8f5e1; /* Цвет старой бумаги */
   --text-color: #3a3a3a;
   --border-color: #8b5a2b;
-  --heading-color: #7f1d1d; /* Глубокий тёмно-красный для заголовков */
+  --heading-color: #7f1d1d;
+  --heading-color2:#491010;
   --link-color: #8b5a2b;
   --button-bg: #c1875b; 
   --button-text: #ffffff;
@@ -34,6 +35,7 @@
   --text-color: #d4c8b0;
   --border-color: #e0a96d;
   --heading-color: #e0a96d;
+  --heading-color2:#916c45;
   --link-color: #e0a96d;
   --button-bg: #e0a96d;
   --button-text: #1c1c1c;
@@ -67,7 +69,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
