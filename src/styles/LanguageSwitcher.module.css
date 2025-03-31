@@ -62,23 +62,23 @@
     font-size: 0.7rem;
   }
   .toggleWrapper {
-    width: 24px;
-    height: 50px;
+    width: 20px;
+    height: 40px;
     border-radius: 12px;
   }
   .lanternIcon {
     vertical-align: middle;
     width: 15px;
-    height: 30px;
+    height: 27px;
   }
   .toggleKnob {
-    width: 20px;
-    height: 20px;
-    top: 3px;
+    width: 17px;
+    height: 17px;
+    top: 1px;
   }
 
   .toggleWrapper.active .toggleKnob {
-    top: 27px;
+    top: 19px;
   }
 
   .languageLabel {
