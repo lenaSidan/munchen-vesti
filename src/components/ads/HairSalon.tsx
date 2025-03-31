@@ -64,6 +64,12 @@ export default function HairSalonAd() {
               >
                 {t("hair_salon.contactInst")}
               </Link>
+              <div className={styles.linkBox}>
+              {t("hair_salon.contact_text")}{" "}
+                <Link className={styles.linkBoxHref2} href="tel:089774719">
+                  089/77 47 19
+                </Link>
+              </div>
             </div>
           </div>
         </div>
