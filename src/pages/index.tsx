@@ -63,7 +63,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
         {/* Блок объявлений */}
         <Ads />
       </div>
-
+     
       {/* Вторая статья */}
       {secondEvent && (
         <article className={styles.secondArticle}>

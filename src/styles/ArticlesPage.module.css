@@ -9,7 +9,7 @@
 
 .pageTitle {
   font-family: var(--font-headings);
-  font-size: 2.2rem;
+  
   text-align: center;
   color: var(--link-color);
   margin-bottom: 25px;
@@ -17,7 +17,6 @@
 
 .articleTitle {
   font-family: var(--font-headings);
-  font-size: 1.8rem;
   text-align: center;
   color: var(--heading-color);
   margin-bottom: 20px;

@@ -9,7 +9,7 @@
   background: var(--alt-background);
   border: 2px solid var(--heading-color);
   border-radius: 8px;
-  padding: 20px;
+  padding: 15px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -76,13 +76,12 @@
 } */
 
 .benefits {
-  margin-top: 20px;
+  margin: 0;
   text-align: left;
   background: var(--alt-background1);
   padding: 15px;
   border-radius: 8px;
   border: 1px solid var(--heading-color);
-  border-radius: 8px;
   -webkit-hyphens: auto;
   hyphens: auto;
 }
@@ -94,6 +93,7 @@
   text-align: center;
   -webkit-hyphens: auto;
   hyphens: auto;
+  margin: 0;
 }
 
 .benefits p {
@@ -114,7 +114,7 @@
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 0;
 }
 
 .linkBoxHref {

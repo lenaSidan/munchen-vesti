@@ -6,7 +6,6 @@
 
 .pageTitle {
   font-family: var(--font-headings);
-  font-size: 2.2rem;
   text-align: center;
   color: var(--link-color);
   margin-bottom: 25px;
@@ -26,7 +25,6 @@
 }
 .eventTitle {
   font-family: var(--font-headings);
-  font-size: 1.6rem;
   text-align: left;
   color: var(--heading-color);
   margin-bottom: 20px;
