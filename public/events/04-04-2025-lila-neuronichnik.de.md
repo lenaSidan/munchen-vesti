@@ -10,7 +10,7 @@ seoTitle: "Frühlings-Leela-Neuro-Nacht: Ein Neustart für Körper und Seele in 
 seoDescription: "Erleben Sie die Frühlings-Leela-Neuro-Nacht vom 4. bis 6. April 2025 im SPA-Hotel in Tirol. Ein einzigartiges Retreat für den Neustart der Seele mit Leela Neuro-Techniken und entspannender Atmosphäre."
 ---
 
-### **Frühlings-Leela-Neuro-Nacht**
+##### **Frühlings-Leela-Neuro-Nacht**
 
 Der Winter neigt sich dem Ende zu, die Feiertage sind fast vorbei, und wir, Lena und ich, freuen uns, euch zu unserem **ersten Leela-Neuro-Nacht-Retreat dieses Jahres** einzuladen, das **vom 4. bis 6. April** im wunderschönen Tirol stattfinden wird.
 

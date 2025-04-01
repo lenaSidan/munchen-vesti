@@ -30,7 +30,7 @@ export default function AnnouncementsPage() {
       />
 
       <div className={styles.container}>
-        <h2 className={styles.title}>{t("menu.ads_food")}</h2>
+        <h3 className={styles.title}>{t("menu.ads_food")}</h3>
 
         <div className={styles.announcementsWrapper}>
           {announcementGroups.map((group) => (

@@ -45,7 +45,7 @@ export default function ArticlesPage({ articles }: ArticlesProps) {
         <meta property="og:url" content={`https://munchen-vesti.de${router.asPath}`} />
       </Head>
       <div className={styles.container}>
-        <h2 className={styles.pageTitle}>{t("articles.articles")}</h2>
+        <h3 className={styles.pageTitle}>{t("articles.articles")}</h3>
 
         {articles.map((article, index) => (
           <article key={article.slug} className={index % 2 === 0 ? styles.articleVariantA : styles.articleVariantB}>

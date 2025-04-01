@@ -10,7 +10,6 @@ seoTitle: "Munich Cocktail Week – Hochprozentiger Genuss in Münchens besten B
 seoDescription: "Erleben Sie die Munich Cocktail Week vom 29. April bis 10. Mai 2025. Genießen Sie kreative Cocktails und spannende Events in verschiedenen Bars und Locations in München."
 ---
 
-
 Vom **29. April bis 10. Mai 2025** wird München zur Hauptstadt der Barkultur. Die **Munich Cocktail Week** lädt Cocktailfans, Genießer und Bar-Enthusiasten ein, die Vielfalt der lokalen Barszene zu entdecken und in ein Fest des guten Geschmacks einzutauchen.
 
 ### Was erwartet die Besucher?

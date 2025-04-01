@@ -9,7 +9,7 @@ export default function PrivacyPolicyPage() {
     <>
       <Seo title={t("meta.privacy_title")} description={t("meta.privacy_description")} />
       <div className={styles.container}>
-        <h1 className={styles.title}>{t("privacy_policy.title")}</h1>
+        <h3 className={styles.title}>{t("privacy_policy.title")}</h3>
         <p className={styles.updated}>
           {t("privacy_policy.last_updated").replace("{{date}}", new Date().toLocaleDateString("de-DE"))}
         </p>

@@ -9,7 +9,7 @@ export default function Ads() {
   return (
     <aside className={styles.announcements}>
       <div className={styles.announcementHeader}>
-        <h2 className={styles.announcementTitle}>{t("info")}</h2>
+        <h3 className={styles.announcementTitle}>{t("info")}</h3>
         <Image
           src="/icons/info.png"
           alt="Info"
