@@ -8,6 +8,7 @@ import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
+import Seo from "@/components/Seo";
 
 interface EventsProps {
   events: Event[];
@@ -39,74 +40,74 @@ export default function EventsPage({ events }: EventsProps) {
   };
 
   return (
-    <div className={styles.container}>
-      <h2 className={styles.pageTitle}>{t("menu.announcements")}</h2>
+    <>
+      <Seo title={t("meta.events_title")} description={t("meta.events_description")} />
+      <div className={styles.container}>
+        <h2 className={styles.pageTitle}>{t("menu.announcements")}</h2>
 
-      {events.map((event) => (
-        <div key={event.slug} className={styles.eventCard}>
-          <h3 className={styles.eventTitle}>{event.title}</h3>
+        {events.map((event) => (
+          <div key={event.slug} className={styles.eventCard}>
+            <h3 className={styles.eventTitle}>{event.title}</h3>
 
-          {/* Дата, время и место */}
-          <p className={styles.meta}>
-            
-            {event.time && ` | ${event.time}`}
-            {event.ort && ` | ${event.ort}`}
-          </p>
+            {/* Дата, время и место */}
+            <p className={styles.meta}>
+              {event.time && ` | ${event.time}`}
+              {event.ort && ` | ${event.ort}`}
+            </p>
 
-          <div className={styles.eventImageOrt}>
-            <div className={styles.eventLocation}>
-            
+            <div className={styles.eventImageOrt}>
+              <div className={styles.eventLocation}>
+                {event.time && (
+                  <p className={styles.box}>
+                    <span className={styles.label}>{t("event.time")}: </span>
+                    <span className={styles.value}>{event.time}</span>
+                  </p>
+                )}
 
-              {event.time && (
-                <p className={styles.box}>
-                  <span className={styles.label}>{t("event.time")}: </span>
-                  <span className={styles.value}>{event.time}</span>
-                </p>
+                {event.ort && (
+                  <p className={styles.box}>
+                    <span className={styles.label}>{t("event.ort")}: </span>
+                    <span className={styles.value}>{event.ort}</span>
+                  </p>
+                )}
+
+                {event.link && typeof event.link === "string" ? (
+                  <p className={styles.box}>
+                    <span className={styles.label}>{t("event.link")}: </span>
+                    {event.link.split(",").map((link, index) => {
+                      const match = link.trim().match(/\[(.*?)\]\((.*?)\)/);
+                      return match ? (
+                        <span key={index}>
+                          <a href={match[2]} className={styles.valueLink} target="_blank" rel="noopener noreferrer">
+                            {match[1]}
+                          </a>
+                          {index < event.link!.split(",").length - 1 && " | "}
+                        </span>
+                      ) : null;
+                    })}
+                  </p>
+                ) : null}
+              </div>
+              {event.image && (
+                <Image src={event.image} alt={event.title} className={styles.eventImage} width={400} height={200} />
               )}
-
-              {event.ort && (
-                <p className={styles.box}>
-                  <span className={styles.label}>{t("event.ort")}: </span>
-                  <span className={styles.value}>{event.ort}</span>
-                </p>
-              )}
-
-              {event.link && typeof event.link === "string" ? (
-                <p className={styles.box}>
-                  <span className={styles.label}>{t("event.link")}: </span>
-                  {event.link.split(",").map((link, index) => {
-                    const match = link.trim().match(/\[(.*?)\]\((.*?)\)/);
-                    return match ? (
-                      <span key={index}>
-                        <a href={match[2]} className={styles.valueLink} target="_blank" rel="noopener noreferrer">
-                          {match[1]}
-                        </a>
-                        {index < event.link!.split(",").length - 1 && " | "}
-                      </span>
-                    ) : null;
-                  })}
-                </p>
-              ) : null}
             </div>
-            {event.image && (
-              <Image src={event.image} alt={event.title} className={styles.eventImage} width={400} height={200} />
-            )}
-          </div>
 
-          <div className={styles.eventContent}>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: isClient && expandedSlug === event.slug ? event.content : getExcerpt(event.content),
-              }}
-            />
+            <div className={styles.eventContent}>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: isClient && expandedSlug === event.slug ? event.content : getExcerpt(event.content),
+                }}
+              />
 
-            <button type="button" className={styles.toggleButton} onClick={() => toggleExpand(event.slug)}>
-              {expandedSlug === event.slug ? t("menu.less") : t("menu.more")}
-            </button>
+              <button type="button" className={styles.toggleButton} onClick={() => toggleExpand(event.slug)}>
+                {expandedSlug === event.slug ? t("menu.less") : t("menu.more")}
+              </button>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   );
 }
 

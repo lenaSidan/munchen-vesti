@@ -8,7 +8,7 @@ import TibetanBowls from "@/components/ads/TibetanBowls";
 import LettaBeauty from "@/components/ads/LettaBeauty";
 import HairSalonAd from "@/components/ads/HairSalon";
 import PureBeautySalon from "@/components/ads/PureBeautySalon";
-
+import Seo from "@/components/Seo";
 
 export default function AnnouncementsPage() {
   const t = useTranslation();
@@ -35,24 +35,27 @@ export default function AnnouncementsPage() {
       type: "double",
       components: [<HairSalonAd key="hairSalon" />, <LettaBeauty key="lettaBeauty" />],
     },
-
   ]);
 
   return (
-    <div className={styles.container}>
-      <h2 className={styles.title}>{t("menu.ads_services")}</h2>
+    <>
+      <Seo title={t("meta.ads_services_title")} description={t("meta.ads_services_description")} />
 
-      <div className={styles.announcementsWrapper}>
-        {announcementGroups.map((group) => (
-          <div key={group.id} className={`${styles.announcementGroup} ${styles[group.type]}`}>
-            {group.components.map((component, index) => (
-              <div key={index} className={styles.announcementBox}>
-                {component}
-              </div>
-            ))}
-          </div>
-        ))}
+      <div className={styles.container}>
+        <h2 className={styles.title}>{t("menu.ads_services")}</h2>
+
+        <div className={styles.announcementsWrapper}>
+          {announcementGroups.map((group) => (
+            <div key={group.id} className={`${styles.announcementGroup} ${styles[group.type]}`}>
+              {group.components.map((component, index) => (
+                <div key={index} className={styles.announcementBox}>
+                  {component}
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

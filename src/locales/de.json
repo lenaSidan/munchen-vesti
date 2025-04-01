@@ -8,6 +8,33 @@
     "published_fixed": "Eine Informationszeitung, die das Leben der russischsprachigen Gemeinschaft in München widerspiegelt."
   },
   "info": "Wir empfehlen",
+  "meta": {
+    "default_title": "Münchener Nachrichten",
+    "default_description": "Nachrichten und Veranstaltungen aus München – Münchener Nachrichten.",
+    "articles_title": "Alle Artikel",
+    "articles_description": "Lesen Sie interessante Beiträge und hilfreiche Tipps von der Zeitung Münchener Vesti.",
+    "about_title": "Über das Projekt",
+    "about_description": "Erfahren Sie mehr über die Mission, Ziele und Redaktion der Zeitung Münchener Vesti.",
+    "ads_food_title": "Anzeigen: Ernährung",
+    "ads_food_description": "Hausgemachtes Essen, Desserts und kulinarische Angebote in München – finden Sie hier leckere Inserate!",
+    "ads_other_title": "Anzeigen: Sonstiges",
+    "ads_other_description": "Verschiedene Anzeigen, Vermietung, Angebote und mehr – Münchener Vesti.",
+    "ads_services_title": "Anzeigen: Dienstleistungen",
+    "ads_services_description": "Psychologen, Kosmetiker, Friseure und Spezialisten – Dienstleistungen in München auf Russisch.",
+    "ads_studios_title": "Anzeigen: Studios und Kurse",
+    "ads_studios_description": "Lernstudios, Theaterkurse und Aktivitäten für Kinder und Erwachsene in München – Anzeigen und Kontakte.",
+    "contacts_title": "Redaktionskontakte",
+    "contacts_description": "Kontaktieren Sie die Redaktion der Münchener Vesti: Adresse, E-Mail und Kontaktformular.",
+    "impressum_title": "Impressum",
+    "impressum_description": "Rechtliche Informationen zur Redaktion der Münchener Vesti: Adresse, Kontakte, Urheberrechte und Haftungsausschluss.",
+    "privacy_title": "Datenschutzrichtlinie",
+    "privacy_description": "Erfahren Sie, wie Münchener Vesti Ihre Daten sammelt, verwendet und schützt – einschließlich Informationen über Cookies.",
+    "events_title": "Veranstaltungen und Termine",
+    "events_description": "Kommende Events und Ankündigungen in München: Konzerte, Workshops, Feste, Vorträge und mehr.",
+    "all_events_title": "Alle Veranstaltungen",
+    "all_events_description": "Eine vollständige Liste aller Veranstaltungen in München – vergangene und zukünftige Termine."
+  },
+  
   "menu": {
     "articles": "Artikel",
     "announcements": "Veranstaltungen",

@@ -3,6 +3,7 @@ import styles from "@/styles/AdsPage.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import TomatePizzaAd from "@/components/ads/TomatePizza";
 import OrangeSunStudio from "@/components/ads/foodAds/OrangeSunStudio";
+import Seo from "@/components/Seo";
 
 
 export default function AnnouncementsPage() {
@@ -22,20 +23,30 @@ export default function AnnouncementsPage() {
   ]);
 
   return (
-    <div className={styles.container}>
-      <h2 className={styles.title}>{t("menu.ads_food")}</h2>
+    <>
+      <Seo
+        title={t("meta.ads_food_title")}
+        description={t("meta.ads_food_description")}
+      />
 
-      <div className={styles.announcementsWrapper}>
-        {announcementGroups.map((group) => (
-          <div key={group.id} className={`${styles.announcementGroup} ${styles[group.type]}`}>
-            {group.components.map((component, index) => (
-              <div key={index} className={styles.announcementBox}>
-                {component}
-              </div>
-            ))}
-          </div>
-        ))}
+      <div className={styles.container}>
+        <h2 className={styles.title}>{t("menu.ads_food")}</h2>
+
+        <div className={styles.announcementsWrapper}>
+          {announcementGroups.map((group) => (
+            <div
+              key={group.id}
+              className={`${styles.announcementGroup} ${styles[group.type]}`}
+            >
+              {group.components.map((component, index) => (
+                <div key={index} className={styles.announcementBox}>
+                  {component}
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

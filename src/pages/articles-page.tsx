@@ -1,4 +1,6 @@
 import { GetStaticProps } from "next";
+import Head from "next/head";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import fs from "fs";
@@ -26,40 +28,61 @@ interface ArticlesProps {
 
 export default function ArticlesPage({ articles }: ArticlesProps) {
   const t = useTranslation();
+  const router = useRouter();
 
   return (
-    <div className={styles.container}>
-      <h2 className={styles.pageTitle}>{t("articles.articles")}</h2>
+    <>
+      <Head>
+        <title>
+          {t("meta.articles_title")} – {t("meta.default_title")}
+        </title>
+        <meta name="description" content={t("meta.articles_description")} />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={t("meta.articles_title")} />
+        <meta property="og:description" content={t("meta.articles_description")} />
+        <meta property="og:image" content="/default-og-image.jpg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://munchen-vesti.de${router.asPath}`} />
+      </Head>
+      <div className={styles.container}>
+        <h2 className={styles.pageTitle}>{t("articles.articles")}</h2>
 
-      {articles.map((article, index) => (
-        <article key={article.slug} className={index % 2 === 0 ? styles.articleVariantA : styles.articleVariantB}>
-          <div className={styles.articleHeader}>
-            <h2 className={styles.articleTitle}>{article.title}</h2>
-          </div>
-          <div className={styles.image_textBox}>
-            {article.image && (
-              <Image src={article.image} alt={article.title} className={styles.articleImage} width={400} height={200} />
-            )}
-            <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: article.content }} />
-          </div>
-          <div className={styles.readMoreContainer}>
-            <div className={styles.decorativeLine}>
-              <span className={styles.left}>⊱❧</span>
-              <span className={styles.right}>⊱❧</span>
+        {articles.map((article, index) => (
+          <article key={article.slug} className={index % 2 === 0 ? styles.articleVariantA : styles.articleVariantB}>
+            <div className={styles.articleHeader}>
+              <h2 className={styles.articleTitle}>{article.title}</h2>
             </div>
-
-            <Link href={`/articles/${article.slug}`} className={styles.readMore}>
-              {t("articles.read_more")}
-            </Link>
-
-            <div className={`${styles.decorativeLine} ${styles.bottom}`}>
-              <span className={styles.right}>⊱❧</span>
-              <span className={styles.left}>⊱❧</span>
+            <div className={styles.image_textBox}>
+              {article.image && (
+                <Image
+                  src={article.image}
+                  alt={article.title}
+                  className={styles.articleImage}
+                  width={400}
+                  height={200}
+                />
+              )}
+              <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: article.content }} />
             </div>
-          </div>
-        </article>
-      ))}
-    </div>
+            <div className={styles.readMoreContainer}>
+              <div className={styles.decorativeLine}>
+                <span className={styles.left}>⊱❧</span>
+                <span className={styles.right}>⊱❧</span>
+              </div>
+
+              <Link href={`/articles/${article.slug}`} className={styles.readMore}>
+                {t("articles.read_more")}
+              </Link>
+
+              <div className={`${styles.decorativeLine} ${styles.bottom}`}>
+                <span className={styles.right}>⊱❧</span>
+                <span className={styles.left}>⊱❧</span>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </>
   );
 }
 

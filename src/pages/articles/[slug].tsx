@@ -10,11 +10,15 @@ import Image from "next/image";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/NewsArticle.module.css";
 import Link from "next/link";
+import Head from "next/head";
+import { useRouter } from "next/router";
 
 interface ArticlesArticle {
   id: number;
   slug: string;
   title: string;
+  seoTitle?: string;
+  seoDescription?: string;
   author?: string;
   image?: string;
   content: string;
@@ -26,42 +30,57 @@ interface ArticleProps {
 
 export default function ArticlesArticlePage({ article }: ArticleProps) {
   const t = useTranslation();
+  const router = useRouter();
 
   return (
-    <div className={styles.articleContainer}>
-      <div className={styles.articleBox}>
-        <h2 className={styles.title}>{article.title}</h2>
+    <>
+      <Head>
+        <title>{(article.seoTitle || article.title) + " – " + t("meta.default_title")}</title>
+        <meta name="description" content={article.seoDescription || t("meta.default_description")} />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={article.seoTitle || article.title} />
+        <meta property="og:description" content={article.seoDescription || ""} />
+        <meta property="og:image" content={article.image || "/default-og-image.jpg"} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://munchen-vesti.de${router.asPath}`} />
+      </Head>
 
-        {article.author && (
-          <p className={styles.author}>
-            {t("articles.author")}: {article.author}
-          </p>
-        )}
+      <div className={styles.articleContainer}>
+        <div className={styles.articleBox}>
+          <h2 className={styles.title}>{article.title}</h2>
 
-        {article.image && (
-          <div className={styles.imageWrapper}>
-            <Image src={article.image} alt={article.title} width={800} height={300} className={styles.image} />
+          {article.author && (
+            <p className={styles.author}>
+              {t("articles.author")}: {article.author}
+            </p>
+          )}
+
+          {article.image && (
+            <div className={styles.imageWrapper}>
+              <Image src={article.image} alt={article.title} width={800} height={300} className={styles.image} />
+            </div>
+          )}
+
+          <div className={styles.content} dangerouslySetInnerHTML={{ __html: article.content }} />
+        </div>
+
+        <div className={styles.readMoreContainer}>
+          <div className={styles.decorativeLine}>
+            <span className={styles.left}>⊱❧</span>
+            <span className={styles.right}>⊱❧</span>
           </div>
-        )}
 
-        <div className={styles.content} dangerouslySetInnerHTML={{ __html: article.content }} />
-      </div>
-      <div className={styles.readMoreContainer}>
-        <div className={styles.decorativeLine}>
-          <span className={styles.left}>⊱❧</span>
-          <span className={styles.right}>⊱❧</span>
-        </div>
+          <Link href="/articles-page" className={styles.readMore}>
+            {t("articles.back")}
+          </Link>
 
-        <Link href="/articles-page" className={styles.readMore}>
-          {t("articles.back")}
-        </Link>
-
-        <div className={`${styles.decorativeLine} ${styles.bottom}`}>
-          <span className={styles.right}>⊱❧</span>
-          <span className={styles.left}>⊱❧</span>
+          <div className={`${styles.decorativeLine} ${styles.bottom}`}>
+            <span className={styles.right}>⊱❧</span>
+            <span className={styles.left}>⊱❧</span>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -102,6 +121,8 @@ export const getStaticProps: GetStaticProps<ArticleProps> = async ({ params, loc
         id: data.id || 0,
         slug: params.slug as string,
         title: data.title || "",
+        seoTitle: data.seoTitle || "",
+        seoDescription: data.seoDescription || "",
         author: data.author || "",
         image: data.image || null,
         content: processedContent.toString(),

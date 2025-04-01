@@ -1,6 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from "next";
 import fs from "fs";
 import path from "path";
+import Seo from "@/components/Seo";
 import matter from "gray-matter";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
@@ -22,6 +23,8 @@ interface Event {
   link?: string;
   content: string;
   image?: string;
+  seoTitle?: string;
+  seoDescription?: string;
 }
 
 interface EventProps {
@@ -32,35 +35,39 @@ export default function Event({ event }: EventProps) {
   const t = useTranslation();
 
   return (
-    <div className={styles.articleContainer}>
-      <h2 className={styles.title}>{event.title}</h2>
-      <p className={styles.meta}>
-        {event.date}
-        {event.endDate && ` – ${event.endDate}`} {/* Показываем только если есть endDate */}
-        {event.ort && ` | ${event.ort}`}
-      </p>
-      {event.image && (
-        <div className={styles.imageWrapper}>
-          <Image src={event.image} alt={event.title} width={600} height={400} className={styles.image} />
-        </div>
-      )}
-      <div className={styles.content} dangerouslySetInnerHTML={{ __html: event.content }} />
-      <div className={styles.readMoreContainer}>
-        <div className={styles.decorativeLine}>
-          <span className={styles.left}>⊱❧</span>
-          <span className={styles.right}>⊱❧</span>
-        </div>
+    <>
+      <Seo title={event.seoTitle || event.title} description={event.seoDescription} image={event.image} />
 
-        <Link href="/" className={styles.readMore}>
-          {t("articles.back")}
-        </Link>
+      <div className={styles.articleContainer}>
+        <h2 className={styles.title}>{event.title}</h2>
+        <p className={styles.meta}>
+          {event.date}
+          {event.endDate && ` – ${event.endDate}`} {/* Показываем только если есть endDate */}
+          {event.ort && ` | ${event.ort}`}
+        </p>
+        {event.image && (
+          <div className={styles.imageWrapper}>
+            <Image src={event.image} alt={event.title} width={600} height={400} className={styles.image} />
+          </div>
+        )}
+        <div className={styles.content} dangerouslySetInnerHTML={{ __html: event.content }} />
+        <div className={styles.readMoreContainer}>
+          <div className={styles.decorativeLine}>
+            <span className={styles.left}>⊱❧</span>
+            <span className={styles.right}>⊱❧</span>
+          </div>
 
-        <div className={`${styles.decorativeLine} ${styles.bottom}`}>
-          <span className={styles.right}>⊱❧</span>
-          <span className={styles.left}>⊱❧</span>
+          <Link href="/" className={styles.readMore}>
+            {t("articles.back")}
+          </Link>
+
+          <div className={`${styles.decorativeLine} ${styles.bottom}`}>
+            <span className={styles.right}>⊱❧</span>
+            <span className={styles.left}>⊱❧</span>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -91,11 +98,7 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
   const { data, content } = matter(fileContents);
 
   // 🔹 Обрабатываем Markdown в HTML
-  const processedContent = await remark()
-    .use(remarkGfm)
-    .use(remarkRehype)
-    .use(rehypeStringify)
-    .process(content);
+  const processedContent = await remark().use(remarkGfm).use(remarkRehype).use(rehypeStringify).process(content);
 
   const contentHtml = processedContent.toString();
 
@@ -104,6 +107,8 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
       event: {
         slug: params.slug as string,
         title: data.title || "",
+        seoTitle: data.seoTitle || "",
+        seoDescription: data.seoDescription || "",
         date: data.date ? String(data.date) : "", // Основная дата
         endDate: data.endDate ? String(data.endDate) : "", // Дата окончания, если есть
         time: data.time || "",
