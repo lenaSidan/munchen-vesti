@@ -4,6 +4,7 @@ date: "2025-04-06"
 time: "06 апреля 2025, 10:00 - 17:00"
 ort: "Рынок в спортивном зале TSV в Герштхофене"
 link: "[@handgedreht.andreas.koehler](https://www.instagram.com/handgedreht.andreas.koehler/p/DGD0MB0oDNi/==)"
+image: "/images/hobby_kuenstler_markt.webp"
 seoTitle: "Герштхофенская ярмарка мастеров – Уникальные изделия, созданные с любовью"
 seoDescription: "Посетите Герштхофенскую ярмарку мастеров 6 апреля 2025 года. Откройте для себя удивительные вещи, сделанные вручную мастерами, и получите вдохновение от уникальных творений."
 ---
