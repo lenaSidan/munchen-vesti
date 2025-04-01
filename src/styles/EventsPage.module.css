@@ -5,9 +5,9 @@
 }
 
 .pageTitle {
-  font-family: var(--font-headings);
+  font-family: var(--font-body);
   text-align: center;
-  color: var(--link-color);
+  color: var(--heading-color2);
   margin-bottom: 25px;
 }
 .meta {
@@ -15,19 +15,21 @@
 }
 
 .eventCard {
-    border: 1px solid var(--heading-color);
-    border-radius: 8px;
-    padding: 20px;
-    background: var(--alt-background);
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
-    margin-bottom: 30px;
+  border: 1px solid var(--heading-color);
+  border-radius: 8px;
+  padding: 20px;
+  background: var(--alt-background);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 30px;
 }
 .eventTitle {
   font-family: var(--font-headings);
   text-align: left;
   color: var(--heading-color);
   margin-bottom: 20px;
+  margin-top: 0;
+  border-bottom: 0px;
 }
 
 .eventVariantA,
@@ -59,7 +61,7 @@
 .label {
   font-weight: bold;
   font-size: 1.2rem;
-  color: var(--heading-color);;
+  color: var(--heading-color2);
 }
 
 .value {
@@ -131,7 +133,7 @@
   display: inline-block;
   font-size: 1rem;
   font-weight: bold;
-  color: var(--link-color);
+  color: var(--heading-color2);
   text-decoration: underline;
   cursor: pointer;
   border: none;

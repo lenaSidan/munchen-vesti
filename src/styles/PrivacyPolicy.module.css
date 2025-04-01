@@ -12,10 +12,10 @@
 }
 
 .title {
-  font-family: var(--font-headings);
+  font-family: var(--font-body);
   font-size: 2rem;
   font-weight: bold;
-  color: var(--heading-color);
+  color: var(--heading-color2);
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 15px;
