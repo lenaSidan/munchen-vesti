@@ -8,10 +8,9 @@
 }
 
 .pageTitle {
-  font-family: var(--font-headings);
-  
+  font-family: var(--font-body);
   text-align: center;
-  color: var(--link-color);
+  color: var(--heading-color2);
   margin-bottom: 25px;
 }
 

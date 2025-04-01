@@ -18,7 +18,7 @@ export default function AnnouncementsPage() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>{t("menu.ads_studios")}</h1>
+      <h2 className={styles.title}>{t("menu.ads_studios")}</h2>
 
       <div className={styles.announcementsWrapper}>
         {announcementGroups.map((group) => (

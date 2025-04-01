@@ -29,7 +29,7 @@ export default function ArticlesPage({ articles }: ArticlesProps) {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.pageTitle}>{t("articles.articles")}</h1>
+      <h2 className={styles.pageTitle}>{t("articles.articles")}</h2>
 
       {articles.map((article, index) => (
         <article key={article.slug} className={index % 2 === 0 ? styles.articleVariantA : styles.articleVariantB}>
