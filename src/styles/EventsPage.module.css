@@ -23,6 +23,18 @@
   transition: all 0.3s ease-in-out;
   margin-bottom: 30px;
 }
+.eventCard h5 {
+  margin-top: 0;
+  color: var(--heading-color);
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 5px;
+  line-height: 1.4;
+  transition: border-color 0.3s ease-in-out;
+}
 .eventTitle {
   font-family: var(--font-headings);
   text-align: left;
@@ -160,7 +172,7 @@
     padding: 10px;
   }
   .pageTitle {
-    font-size: 1.4rem;
+    font-size: 1rem;
     margin-bottom: 10px;
   }
   .eventCard {
@@ -170,9 +182,8 @@
   .eventCard h3 {
     font-size: 1.1rem;
   }
-  .eventCard h4 {
-    font-size: 0.9rem;
-    text-align: left;
+  .eventCard h5 {
+    font-size: 1.1rem;
   }
   .eventTitle {
     text-align: center;

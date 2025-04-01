@@ -10,7 +10,7 @@ export default function Impressum() {
       <Seo title={t("meta.impressum_title")} description={t("meta.impressum_description")} />
 
       <div className={styles.container}>
-        <h2 className={styles.title}>{t("impressum.title")}</h2>
+        <h3 className={styles.title}>{t("impressum.title")}</h3>
 
         <section>
           <h4 className={styles.sectionTitle}>{t("impressum.responsible.title")}</h4>

@@ -19,7 +19,7 @@ export default function AnnouncementsPage() {
     <>
       <Seo title={t("meta.ads_studios_title")} description={t("meta.ads_studios_description")} />
       <div className={styles.container}>
-        <h2 className={styles.title}>{t("menu.ads_studios")}</h2>
+        <h3 className={styles.title}>{t("menu.ads_studios")}</h3>
 
         <div className={styles.announcementsWrapper}>
           {announcementGroups.map((group) => (

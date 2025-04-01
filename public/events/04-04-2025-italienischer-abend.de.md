@@ -9,7 +9,7 @@ seoTitle: "Italienischer Abend in München – Ein Abend voller Geschmack und ö
 seoDescription: "Genießen Sie einen italienischen Abend im Restaurant Casalingo in München mit köstlicher italienischer Küche, österlicher Atmosphäre und jeder Menge Energie. Ein einzigartiges Event am 4. April 2025!"
 ---
 
-### Ein Abend voller italienischem Flair und österlicher Inspiration
+##### Ein Abend voller italienischem Flair und österlicher Inspiration
 
 Dieser Abend ist mehr als nur ein Abendessen. Es ist ein Zusammenspiel aus Geschmack, Gemütlichkeit und Energie – Frühling liegt in der Luft!
 

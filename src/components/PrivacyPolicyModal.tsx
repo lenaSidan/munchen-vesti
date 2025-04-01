@@ -19,7 +19,7 @@ export default function PrivacyPolicyModal({ onClose }: { onClose: () => void })
   return (
     <div className={styles.overlay} onClick={onClose}>
       <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-        <h2 className={styles.title}>{t("privacy_policy.title")}</h2>
+        <h3 className={styles.title}>{t("privacy_policy.title")}</h3>
         <p className={styles.updated}>
           {t("privacy_policy.last_updated").replace("{{date}}", new Date().toLocaleDateString("de-DE"))}
         </p>

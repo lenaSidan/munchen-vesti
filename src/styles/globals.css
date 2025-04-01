@@ -59,7 +59,7 @@ p {
 blockquote {
   margin-top: 0.6rem; /* Добавит отступ перед блоком с датой */
 }
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   font-family: var(--font-headings);
   color: var(--heading-color);
   transition: color 0.3s;
@@ -104,6 +104,17 @@ h4 {
   /* border-bottom: 2px solid var(--border-color); */
   padding-bottom: 5px;
   line-height: 1.6;
+  transition: border-color 0.3s ease-in-out;
+}
+h5 {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 5px;
+  line-height: 1.4;
   transition: border-color 0.3s ease-in-out;
 }
 

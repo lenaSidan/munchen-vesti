@@ -42,7 +42,7 @@ export default function Contacts() {
     <>
       <Seo title={t("meta.contacts_title")} description={t("meta.contacts_description")} />
       <div className={styles.container}>
-        <h2 className={styles.title}>{t("kontakt.title")}</h2>
+        <h3 className={styles.title}>{t("kontakt.title")}</h3>
 
         {/* 📍 Адрес */}
         <div className={styles.section}>

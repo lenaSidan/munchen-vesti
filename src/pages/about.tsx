@@ -23,7 +23,7 @@ export default function About() {
       </Head>
 
       <div className={styles.container}>
-        <h2 className={styles.title}>{t("about.title")}</h2>
+        <h3 className={styles.title}>{t("about.title")}</h3>
 
         <section className={styles.section}>
           <h4 className={styles.sectionTitle}>{t("about.section1.title")}</h4>
