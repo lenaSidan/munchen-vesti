@@ -88,13 +88,21 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
     return { notFound: true };
   }
 
-  const filePath = path.join(process.cwd(), "public/events", `${params.slug}.${locale}.md`);
-
-  if (!fs.existsSync(filePath)) {
+  const eventsDir = path.join(process.cwd(), "public/events");
+  const files = fs.readdirSync(eventsDir);
+  
+  // Находим файл с нужным slug и языком, даже если есть дата в начале имени
+  const matchingFile = files.find((file) =>
+    file.endsWith(`-${params.slug}.${locale}.md`)
+  );
+  
+  if (!matchingFile) {
     return { notFound: true };
   }
-
+  
+  const filePath = path.join(eventsDir, matchingFile);
   const fileContents = fs.readFileSync(filePath, "utf-8");
+
   const { data, content } = matter(fileContents);
 
   // 🔹 Обрабатываем Markdown в HTML
