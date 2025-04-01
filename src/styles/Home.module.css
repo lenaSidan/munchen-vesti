@@ -337,11 +337,16 @@
     font-size: 1rem;
     text-align: center;
   }
-  .otherArticles a {
-    font-size: 0.8rem;
+
+
+  .otherArticlesTitle {
+    font-size: 1.1rem;
   }
   .articleLink li {
     font-size: 0.6rem;
+  }
+  .articleLink a {
+    font-size: 0.9rem;
   }
   .otherArticles {
     margin-top: 0;
