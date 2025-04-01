@@ -194,6 +194,7 @@
     padding: 10px;
   }
   .pageTitle {
+    margin-top: 0;
     font-size: 1rem;
     margin-bottom: 10px;
   }
