@@ -175,7 +175,7 @@
   }
 
   .title {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 8px;
     padding-bottom: 8px;
   }
@@ -187,7 +187,7 @@
     margin-bottom: 15px;
   }
   .meta {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     margin-bottom: 10px;
   }
 
@@ -213,11 +213,11 @@
   }
   .content h3 {
     margin-top: 10px;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .content h5 {
     margin-top: 10px;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .content ul, .content ol {
     padding-left: 15px;
