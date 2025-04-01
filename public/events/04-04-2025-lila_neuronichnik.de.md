@@ -6,6 +6,8 @@ time: "4.-6. April 2025"
 ort: "SPA-Hotel in Tirol"
 link: "[@elena_mukhina_leela](https://www.instagram.com/elena_mukhina_leela?igsh=MXd4N2Vyd294dnFqMA==), [@rahimoff.aesthetics](https://www.instagram.com/rahimoff.aesthetics?igsh=cnU5ZjQ5MGFtbWdn==)"
 image: "/images/lila_neuronichnik2.webp"
+seoTitle: "Frühlings-Leela-Neuro-Nacht: Ein Neustart für Körper und Seele in Tirol"
+seoDescription: "Erleben Sie die Frühlings-Leela-Neuro-Nacht vom 4. bis 6. April 2025 im SPA-Hotel in Tirol. Ein einzigartiges Retreat für den Neustart der Seele mit Leela Neuro-Techniken und entspannender Atmosphäre."
 ---
 
 ### **Frühlings-Leela-Neuro-Nacht**

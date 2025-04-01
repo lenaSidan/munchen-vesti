@@ -5,6 +5,8 @@ time: "06. April 2025 10 - 17 Uhr"
 ort: "Markt in der TSV Turnhalle in Gersthofen"
 link: "[@handgedreht.andreas.koehler](https://www.instagram.com/handgedreht.andreas.koehler/p/DGD0MB0oDNi/==)"
 image: "/images/hobby_kuenstler_markt.webp"
+seoTitle: "Hobby-Künstler-Markt in Gersthofen – Kreativität und Kunst entdecken"
+seoDescription: "Erleben Sie den Hobby-Künstler-Markt in Gersthofen am 6. April 2025. Entdecken Sie kreative Werke von Künstlern, handgefertigte Kunstgegenstände und lassen Sie sich von der Vielfalt der Kunstszene inspirieren."
 ---
 
 Am **6. April 2025** verwandelt sich Gersthofen in ein Paradies für Kunstliebhaber, Handwerksbegeisterte und alle, die nach einzigartigen Kreationen suchen. Der **Hobby-Künstler-Markt** bietet eine Plattform für lokale und regionale Künstler, die hier ihre Werke präsentieren und verkaufen.

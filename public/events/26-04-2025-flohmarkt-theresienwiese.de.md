@@ -5,6 +5,8 @@ time: "26. April 2025"
 ort: "Theresienwiese, München"
 link: "[Flohmarkt Theresienwiese](https://www.brk-muenchen.de/angebote/flohmaerkte/flohmarkt-theresienwiese/)"
 image: "/images/flohmarkt_theresienwiese.webp"
+seoTitle: "Flohmarkt auf der Theresienwiese – Das größte Secondhand-Event in München"
+seoDescription: "Besuchen Sie den Flohmarkt auf der Theresienwiese in München am 26. April 2025. Entdecken Sie einzigartige Secondhand-Schätze und genießen Sie das größte Flohmarkt-Event der Stadt."
 ---
 
 Jedes Jahr im April verwandelt sich die Theresienwiese, die sonst als Heimat des berühmten Oktoberfests bekannt ist, in ein Paradies für Schnäppchenjäger, Sammler und Liebhaber von Raritäten. **Der BRK-Flohmarkt (Bayerisches Rotes Kreuz)** ist nicht nur der größte Flohmarkt Münchens, sondern auch einer der größten in Deutschland – ein Event, das man sich nicht entgehen lassen sollte!

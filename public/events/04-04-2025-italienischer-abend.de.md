@@ -5,6 +5,8 @@ time: "4. April 2025, 16:30 – 20:00"
 ort: "Restaurant Casalingo, Viktualienmarkt, München"
 link: "[@letta_beauty_munchen](https://www.instagram.com/letta_beauty_munchen), [@orangesunstudio](https://www.instagram.com/orangesunstudio)"
 image: "/images/italien_abend_event.webp"
+seoTitle: "Italienischer Abend in München – Ein Abend voller Geschmack und österlicher Stimmung"
+seoDescription: "Genießen Sie einen italienischen Abend im Restaurant Casalingo in München mit köstlicher italienischer Küche, österlicher Atmosphäre und jeder Menge Energie. Ein einzigartiges Event am 4. April 2025!"
 ---
 
 ### Ein Abend voller italienischem Flair und österlicher Inspiration
