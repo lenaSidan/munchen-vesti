@@ -1,4 +1,6 @@
 import { GetStaticProps } from "next";
+import Seo from "@/components/Seo";
+
 import Link from "next/link";
 import Image from "next/image";
 import { getEventsByLocale, Event } from "@/lib/getEvents";
@@ -32,92 +34,100 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
   const router = useRouter();
 
   return (
-    <div className={styles.container}>
-      {/* Главная статья + объявления */}
-      <div className={styles.layout}>
-        <div className={styles.articlesSection}>
-          {mainEvent && (
-            <article className={styles.mainArticle}>
-              {mainEvent.image && (
-                <Image
-                  src={mainEvent.image}
-                  alt={mainEvent.title}
-                  className={styles.mainImage}
-                  width={700}
-                  height={350}
-                  priority={true}
-                />
-              )}
-              <h2 className={styles.articleTitle}>{mainEvent.title}</h2>
-              <p className={styles.articleDate}>{mainEvent.date}</p>
+    <>
+      <Seo
+        title={mainEvent?.seoTitle || mainEvent?.title}
+        description={mainEvent?.seoDescription}
+        image={mainEvent?.image}
+      />
+
+      <div className={styles.container}>
+        {/* Главная статья + объявления */}
+        <div className={styles.layout}>
+          <div className={styles.articlesSection}>
+            {mainEvent && (
+              <article className={styles.mainArticle}>
+                {mainEvent.image && (
+                  <Image
+                    src={mainEvent.image}
+                    alt={mainEvent.title}
+                    className={styles.mainImage}
+                    width={700}
+                    height={350}
+                    priority={true}
+                  />
+                )}
+                <h2 className={styles.articleTitle}>{mainEvent.title}</h2>
+                <p className={styles.articleDate}>{mainEvent.date}</p>
+                <div className={styles.decorativeLine}>
+                  {/* <span className={styles.left}>𐎐</span>
+                <span className={styles.right}>𐎐</span> */}
+                </div>
+
+                <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: mainEvent.content }} />
+              </article>
+            )}
+          </div>
+
+          <div className={styles.adsBlock}>
+            <Ads />
+          </div>
+        </div>
+
+        {/* Вторая статья */}
+        {secondEvent && (
+          <article className={styles.secondArticle}>
+            <div className={styles.secondArticleHeader}>
+              <h2 className={styles.secondArticleTitle}>{secondEvent.title}</h2>
+              <p className={styles.articleDate}>{secondEvent.date}</p>
               <div className={styles.decorativeLine}>
                 {/* <span className={styles.left}>𐎐</span>
-                <span className={styles.right}>𐎐</span> */}
-              </div>
-
-              <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: mainEvent.content }} />
-            </article>
-          )}
-        </div>
-
-        <div className={styles.adsBlock}>
-          <Ads />
-        </div>
-      </div>
-
-      {/* Вторая статья */}
-      {secondEvent && (
-        <article className={styles.secondArticle}>
-          <div className={styles.secondArticleHeader}>
-            <h2 className={styles.secondArticleTitle}>{secondEvent.title}</h2>
-            <p className={styles.articleDate}>{secondEvent.date}</p>
-            <div className={styles.decorativeLine}>
-              {/* <span className={styles.left}>𐎐</span>
               <span className={styles.right}>𐎐</span> */}
+              </div>
             </div>
-          </div>
 
-          <div className={styles.secondArticleContent}>
-            {secondEvent.image && (
-              <Image
-                src={secondEvent.image}
-                alt={secondEvent.title}
-                className={styles.secondImage}
-                width={600}
-                height={350}
-              />
-            )}
-            <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: secondEvent.content }} />
-          </div>
-        </article>
-      )}
+            <div className={styles.secondArticleContent}>
+              {secondEvent.image && (
+                <Image
+                  src={secondEvent.image}
+                  alt={secondEvent.title}
+                  className={styles.secondImage}
+                  width={600}
+                  height={350}
+                />
+              )}
+              <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: secondEvent.content }} />
+            </div>
+          </article>
+        )}
 
-      {/* Ссылки на другие статьи */}
-      {otherEvents.length > 0 && (
-        <section className={styles.otherArticles}>
-          <Link
-            href="/events-page"
-            className={`${styles.otherArticlesTitle} ${styles.navLink} ${
-              router.pathname === "/events-page" ? styles.active : ""
-            }`}
-          >
-            {t("home.view_all_articles")}
-          </Link>
+        {/* Ссылки на другие статьи */}
+        {otherEvents.length > 0 && (
+          <section className={styles.otherArticles}>
+            <Link
+              href="/events-page"
+              className={`${styles.otherArticlesTitle} ${styles.navLink} ${
+                router.pathname === "/events-page" ? styles.active : ""
+              }`}
+            >
+              {t("home.view_all_articles")}
+            </Link>
 
-          <ul className={styles.otherArticlesList}>
-            {otherEvents.map((event) => (
-              <li key={event.slug} className={styles.articleLink}>
-                <Link href={`/events/${event.slug}`} legacyBehavior>
-                  <a>
-                    {event.title} <span className={styles.articleDate}>{event.date}</span>
-                  </a>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
-    </div>
+            <ul className={styles.otherArticlesList}>
+              {otherEvents.map((event) => (
+                <li key={event.slug} className={styles.articleLink}>
+                  <Link href={`/events/${event.slug}`} legacyBehavior>
+                    <a>
+                      {event.title} <span className={styles.articleDate}>{event.date}</span>
+                    </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+      </div>
+    </>
   );
 }
 

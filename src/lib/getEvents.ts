@@ -8,6 +8,8 @@ import matter from "gray-matter";
 export interface Event {
   slug: string;
   title: string;
+  seoTitle?: string;
+  seoDescription?: string;
   date?: string;
   endDate?: string;
   time?: string;
@@ -30,13 +32,15 @@ export function getEventsByLocale(locale: string): Event[] {
     return {
       slug: file.replace(`.${locale}.md`, ""),
       title: data.title || "Untitled",
-      date: data.date && !isNaN(new Date(data.date).getTime()) ? data.date : undefined, // Проверяем валидность даты
+      seoTitle: data.seoTitle || "",
+      seoDescription: data.seoDescription || "",
+      date: data.date && !isNaN(new Date(data.date).getTime()) ? data.date : undefined,
       endDate: data.endDate || "",
       time: data.time || "",
       ort: data.ort || "",
-      link: data.link ?? null, // Используем `null`, если ссылки нет
+      link: data.link ?? null,
       content,
-      image: data.image ?? null, // Используем `null`, если изображения нет
+      image: data.image ?? null,
     };
   });
 

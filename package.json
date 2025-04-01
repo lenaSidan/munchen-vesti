@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run generate-sitemap && next build",
+    "generate-sitemap": "node scripts/generate-sitemap.js",
     "start": "next start -H 0.0.0.0 -p 8080",
     "lint": "next lint"
   },
@@ -36,6 +37,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.2.0",
     "tailwindcss": "^4",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }
