@@ -30,7 +30,7 @@ export function getEventsByLocale(locale: string): Event[] {
     const { data, content } = matter(fileContent);
 
     return {
-      slug: file.replace(`.${locale}.md`, ""),
+      slug: file.replace(`.${locale}.md`, "").replace(/^\d{2}-\d{2}-\d{4}-/, ""),
       title: data.title || "Untitled",
       seoTitle: data.seoTitle || "",
       seoDescription: data.seoDescription || "",
