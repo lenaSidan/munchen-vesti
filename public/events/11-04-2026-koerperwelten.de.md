@@ -6,6 +6,8 @@ time: "ab 11. April 2025 10–18 Uhr"
 ort: "Kleine Olympiahalle Spiridon-Louis-Ring 21"
 image: "/images/koerperwelten_muenchen.webp"
 link: "[KÖRPERWELTEN – Am Puls der Zeit!](https://koerperwelten.de/stadt/muenchen/)"
+seoTitle: "KÖRPERWELTEN in München – Eine faszinierende Ausstellung über den menschlichen Körper"
+seoDescription: "Erleben Sie die einzigartige Ausstellung KÖRPERWELTEN in München ab dem 11. April 2025. Tauchen Sie in die faszinierende Welt des menschlichen Körpers ein, die Wissenschaft und Kunst miteinander verbindet."
 ---
 
 Manche Kunstwerke hängen in Museen, andere stehen in Parks – und dann gibt es die, die aus echten Menschen bestehen. Willkommen bei **KÖRPERWELTEN**, der Ausstellung, die tiefer geht als jede Kunstausstellung zuvor. Hier dreht sich alles um den menschlichen Körper – **ungefiltert, unverhüllt und faszinierend echt**.

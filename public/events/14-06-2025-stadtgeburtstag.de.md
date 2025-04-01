@@ -5,6 +5,8 @@ time: "14. und 15. Juni 2025"
 ort: "Münchner Altstadt"
 link: "[Mehr Informationen zum Stadtgeburtstag](https://www.muenchen.travel/artikel/maerkte-feste/stadtgeburtstag)"
 image: "/images/stadtgeburtstag_muenchen.jpg"
+seoTitle: "Münchens 867. Stadtgeburtstag – Feiern Sie die Geschichte der Stadt"
+seoDescription: "Feiern Sie den 867. Stadtgeburtstag Münchens am 14. und 15. Juni 2025. Erleben Sie Glanz, Gloria und Genuss in der Münchner Altstadt mit besonderen Veranstaltungen und Festlichkeiten."
 ---
 
 Am **14. und 15. Juni 2025** feiert München seinen **867. Geburtstag** unter dem Motto **„Glanz, Gloria und Genuss“**. Die Altstadt verwandelt sich an diesem Wochenende in eine lebendige Feiermeile, die Bewohner und Besucher gleichermaßen einlädt, die Geschichte und Kultur der bayerischen Landeshauptstadt zu zelebrieren.

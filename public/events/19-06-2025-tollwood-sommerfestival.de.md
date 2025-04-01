@@ -5,6 +5,8 @@ time: "19. Juni – 20. Juli 2025"
 ort: "Olympiapark München"
 link: "[Offizielle Webseite des Festivals](https://www.tollwood.de/en/)"
 image: "/images/tollwood_sommerfestival.jpg"
+seoTitle: "Tollwood Sommerfestival 2025 – Kultur, Musik und Nachhaltigkeit im Olympiapark"
+seoDescription: "Erleben Sie das Tollwood Sommerfestival 2025 im Olympiapark München vom 19. Juni bis 20. Juli. Genießen Sie ein einzigartiges Festival mit Kunst, Musik und einem starken Fokus auf Nachhaltigkeit."
 ---
 
 Vom **19. Juni bis zum 20. Juli 2025** verwandelt sich der Olympiapark München in eine bunte Welt voller Kunst, Musik und Nachhaltigkeit – denn das **Tollwood Sommerfestival** ist zurück!

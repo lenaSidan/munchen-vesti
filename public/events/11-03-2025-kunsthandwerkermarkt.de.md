@@ -5,6 +5,8 @@ time: "01. Mai 2025, 10:00 - 17:00"
 ort: "Kongress am Park, Gögginger Str. 10, 86159 Augsburg"
 link: "[www.schröder-märkte.de](https://www.xn--schrder-mrkte-jfb8x.de/termine/?utm_source=chatgpt.com) "
 image: "/images/kunsthandwerkermarkt_augsburg.webp"
+seoTitle: "Kunsthandwerkermarkt in Augsburg – Kunst, Handwerk und Design entdecken"
+seoDescription: "Besuchen Sie den Kunsthandwerkermarkt in Augsburg am 1. Mai 2025. Entdecken Sie einzigartige Kunstwerke, handgefertigtes Design und kreative Handwerks
 ---
 
 Wenn Vielfalt auf Kunst, Handwerk und Design trifft, entsteht ein einzigartiges Erlebnis! Am **1. Mai 2025** verwandelt sich das **Kongress am Park in Augsburg** in eine farbenfrohe Welt voller kreativer Inspirationen. Über **120 Kunsthandwerker, Künstler und Designer** aus unterschiedlichsten Sparten laden zu einem inspirierenden Einkaufsbummel ein.
