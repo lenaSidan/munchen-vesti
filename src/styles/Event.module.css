@@ -179,6 +179,7 @@
     margin-bottom: 8px;
     padding-bottom: 8px;
   }
+ 
   .articleContainer p {
     font-size: 1rem;
     line-height: 1.4;
@@ -202,22 +203,29 @@
   .content {
     font-size: 1rem;
     line-height: 1.6;
-    column-count: 1; /* 🔹 Отключаем колонки на мобильных */
+    column-count: 1;
   }
 
-  .content h2, .content h3 {
-    font-size: 1.2rem; /* 🔹 Чуть меньше заголовки */
+  .content h2  {
+    font-size: 1.1rem; 
     margin-top: 15px;
     margin-bottom: 8px;
   }
-
+  .content h3 {
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+  .content h5 {
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
   .content ul, .content ol {
     padding-left: 15px;
     margin-bottom: 12px;
   }
 
   .readMoreContainer {
-    font-size: 1rem; /* 🔹 Уменьшаем размер кнопки */
+    font-size: 1rem;
     margin: 25px auto;
   }
 

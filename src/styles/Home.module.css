@@ -257,11 +257,6 @@
     font-size: 0.9rem;
   }
 
-  .mainArticle h5,
-  .secondArticle h5 {
-    margin-top: 10px;
-    font-size: 0.9rem;
-  }
   .articlesSection {
     width: 70%;
   }
@@ -280,7 +275,9 @@
     gap: 30px;
     background: none;
   }
-  
+  .secondArticle h2 {
+    padding-top: 0;
+  }
   .articlesSection {
     background: none;
 }
@@ -312,6 +309,12 @@
   .mainArticle h4,
   .secondArticle h4 {
     margin-top: 10px;
+    font-size: 1rem;
+  }
+  
+  .mainArticle h5,
+  .secondArticle h5 {
+    margin-top: 0px;
     font-size: 1rem;
   }
   .mainArticle p,
