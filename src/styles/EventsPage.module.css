@@ -172,6 +172,7 @@
     padding: 10px;
   }
   .pageTitle {
+    margin-top: 0;
     font-size: 1rem;
     margin-bottom: 10px;
   }
@@ -180,20 +181,26 @@
     margin-bottom: 20px;
   }
   .eventCard h3 {
-    font-size: 1.1rem;
+    margin-top: 10px;
+    font-size: 1rem;
   }
   .eventCard h5 {
-    font-size: 1.1rem;
+    margin-top: 0px;
+    font-size: 1rem;
+  }
+  .eventCard h4 {
+    margin-top: 10px;
+    font-size: 1rem;
   }
   .eventTitle {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 10px;
   }
   .eventImage {
     width: 100%;
     height: auto;
-    margin: 10px 0;
+    margin: 10px 0 15px 0;
   }
   .image_textBox {
     flex-direction: column;
