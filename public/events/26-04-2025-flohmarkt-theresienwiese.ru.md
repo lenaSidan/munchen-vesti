@@ -5,6 +5,7 @@ time: "26 апреля 2025"
 ort: "Theresienwiese, München"
 link: "[Блошиный рынок на Theresienwiese](https://www.brk-muenchen.de/angebote/flohmaerkte/flohmarkt-theresienwiese/)"
 image: "/images/flohmarkt_theresienwiese.webp"
+imageAlt: "Иллюстрация блошиного рынка BRK на Терезиенвизе в Мюнхене с посетителями, палатками и товарами"
 seoTitle: "Блошиный рынок на Theresienwiese – Крупнейшее Secondhand событие в Мюнхене"
 seoDescription: "Посетите блошиный рынок на Theresienwiese 26 апреля 2025 года в Мюнхене. Откройте для себя уникальные вещи и старинные находки на крупнейшем Secondhand событии города."
 ---

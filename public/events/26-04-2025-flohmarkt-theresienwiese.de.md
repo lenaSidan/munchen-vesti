@@ -5,6 +5,7 @@ time: "26. April 2025"
 ort: "Theresienwiese, München"
 link: "[Flohmarkt Theresienwiese](https://www.brk-muenchen.de/angebote/flohmaerkte/flohmarkt-theresienwiese/)"
 image: "/images/flohmarkt_theresienwiese.webp"
+imageAlt: "Illustration des BRK-Flohmarkts auf der Theresienwiese in München mit Besuchern, Ständen und Waren unter Zelten"
 seoTitle: "Flohmarkt auf der Theresienwiese – Das größte Secondhand-Event in München"
 seoDescription: "Besuchen Sie den Flohmarkt auf der Theresienwiese in München am 26. April 2025. Entdecken Sie einzigartige Secondhand-Schätze und genießen Sie das größte Flohmarkt-Event der Stadt."
 ---

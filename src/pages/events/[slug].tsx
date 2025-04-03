@@ -23,6 +23,7 @@ interface Event {
   link?: string;
   content: string;
   image?: string;
+  imageAlt?: string,
   seoTitle?: string;
   seoDescription?: string;
 }
@@ -47,7 +48,13 @@ export default function Event({ event }: EventProps) {
         </p>
         {event.image && (
           <div className={styles.imageWrapper}>
-            <Image src={event.image} alt={event.title} width={600} height={400} className={styles.image} />
+            <Image
+              src={event.image}
+              alt={event.imageAlt || event.title}
+              width={600}
+              height={400}
+              className={styles.image}
+            />
           </div>
         )}
         <div className={styles.content} dangerouslySetInnerHTML={{ __html: event.content }} />
@@ -90,16 +97,14 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
 
   const eventsDir = path.join(process.cwd(), "public/events");
   const files = fs.readdirSync(eventsDir);
-  
+
   // Находим файл с нужным slug и языком, даже если есть дата в начале имени
-  const matchingFile = files.find((file) =>
-    file.endsWith(`-${params.slug}.${locale}.md`)
-  );
-  
+  const matchingFile = files.find((file) => file.endsWith(`-${params.slug}.${locale}.md`));
+
   if (!matchingFile) {
     return { notFound: true };
   }
-  
+
   const filePath = path.join(eventsDir, matchingFile);
   const fileContents = fs.readFileSync(filePath, "utf-8");
 
@@ -123,6 +128,7 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
         ort: data.ort || "",
         link: data.link || "",
         image: data.image || null,
+        imageAlt: data.imageAlt || "",
         content: contentHtml,
       },
     },

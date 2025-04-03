@@ -6,6 +6,7 @@ time: "4-6 апреля 2025"
 ort: "СПА-отель в Тироле"
 link: "[@elena_mukhina_leela](https://www.instagram.com/elena_mukhina_leela?igsh=MXd4N2Vyd294dnFqMA==), [@rahimoff.aesthetics](https://www.instagram.com/rahimoff.aesthetics?igsh=cnU5ZjQ5MGFtbWdn==)"
 image: "/images/lila_neuronichnik2.webp"
+imageAlt: ""
 seoTitle: "Весенний нейро-ретрит для женщин в Тироле"
 seoDescription: "Лила-нейроночник с проживанием в СПА-отеле в Тироле: расслабление, женский круг, игра Лила, перезагрузка сознания. Уникальный ретрит с 4 по 6 апреля 2025 года."
 ---

@@ -7,6 +7,7 @@ link:
   "[@letta_beauty_munchen](https://www.instagram.com/letta_beauty_munchen),
   [@orangesunstudio](https://www.instagram.com/orangesunstudio)"
 image: "/images/italien_abend_event.webp"
+imageAlt: "Итальянский ужин с пасхальным настроением в Мюнхене"
 seoTitle: "Итальянский ужин с пасхальным настроением в Мюнхене"
 seoDescription:
   "Праздничный итальянский вечер с ужином, украшениями и женской атмосферой в Мюнхене 4 апреля. Регистрируйтесь через
