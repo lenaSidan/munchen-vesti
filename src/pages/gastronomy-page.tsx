@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "@/styles/AdsPage.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import TomatePizzaAd from "@/components/ads/TomatePizza";
-import OrangeSunStudio from "@/components/ads/foodAds/OrangeSunStudio";
+import OrangeSunStudio from "@/components/ads/gastronomy/OrangeSunStudio";
 import Seo from "@/components/Seo";
 
 
