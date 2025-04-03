@@ -106,16 +106,16 @@ export default function Header() {
 
             {isSubmenuOpen && (
               <div className={styles.submenu}>
-                <Link href="/adsServices-page" className={styles.submenuLink} onClick={closeSubmenu}>
+                <Link href="/services-page" className={styles.submenuLink} onClick={closeSubmenu}>
                   {t("menu.ads_services")}
                 </Link>
-                <Link href="/adsFood-page" className={styles.submenuLink} onClick={closeSubmenu}>
+                <Link href="/gastronomy-page" className={styles.submenuLink} onClick={closeSubmenu}>
                   {t("menu.ads_food")}
                 </Link>
-                <Link href="/adsStudios-page" className={styles.submenuLink} onClick={closeSubmenu}>
+                <Link href="/education-page" className={styles.submenuLink} onClick={closeSubmenu}>
                   {t("menu.ads_studios")}
                 </Link>
-                <Link href="/adsOther-page" className={styles.submenuLink} onClick={closeSubmenu}>
+                <Link href="/other-page" className={styles.submenuLink} onClick={closeSubmenu}>
                   {t("menu.ads_other")}
                 </Link>
               </div>
