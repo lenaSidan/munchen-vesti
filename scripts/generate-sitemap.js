@@ -14,10 +14,10 @@ const staticPaths = [
   "/impressum",
   "/articles-page",
   "/events-page",
-  "/ads-food-page",
-  "/ads-other-page",
-  "/ads-services-page",
-  "/ads-studios-page",
+  "/gastronomy-page",
+  "/other-page", 
+  "/services-page", 
+  "/education-page"
 ];
 
 // 🧠 Хелперы для динамических путей
