@@ -40,7 +40,7 @@ Wenn der Frühling in München Einzug hält, erwacht nicht nur die Natur, sonder
 ### Wann & Wo?  
 
 **Ort:** Viertel **Kleinhadern & Blumenau, München**  
-**Öffnungszeiten:** 27. April, 10:00 – 16:00 Uhr  
+**Öffnungszeiten:** 5. April, 10:00 – 16:00 Uhr  
 **Eintritt:** Kostenlos  
 **Anreise:** U-Bahn **U6 Haderner Stern** oder Bus **56, 167**  
 

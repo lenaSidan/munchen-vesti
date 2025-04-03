@@ -1,6 +1,6 @@
 ---
 title: "Italienischer Abend voller Geschmack und Energie mit österlicher Stimmung"
-date: "2025-04-04"
+date: "2025-04-02"
 time: "4. April 2025, 16:30 – 20:00"
 ort: "Restaurant Casalingo, Viktualienmarkt, München"
 link: "[@letta_beauty_munchen](https://www.instagram.com/letta_beauty_munchen), [@orangesunstudio](https://www.instagram.com/orangesunstudio)"
