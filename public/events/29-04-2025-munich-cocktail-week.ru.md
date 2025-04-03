@@ -6,6 +6,7 @@ time: "29 апреля – 10 мая 2025"
 ort: "Различные бары и локации в Мюнхене"
 link: "[cocktail-x.onepage.me](https://cocktail-x.onepage.me/munich-cocktail-week)"
 image: "/images/munich_cocktail_week.webp"
+imageAlt: "Иллюстрация бара с различными коктейльными бокалами, цитрусовыми и бутылками – стилизованная сцена для Munich Cocktail Week"
 seoTitle: "Munich Cocktail Week – Праздник коктейльной культуры в Мюнхене"
 seoDescription: "Присоединяйтесь к Munich Cocktail Week с 29 апреля по 10 мая 2025 года в Мюнхене. Наслаждайтесь уникальными коктейлями и мероприятиями в лучших барах и локациях города."
 ---

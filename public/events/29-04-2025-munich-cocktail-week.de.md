@@ -6,6 +6,7 @@ time: "29. April – 10. Mai 2025"
 ort: "Verschiedene Bars und Locations in München"
 link: "[cocktail-x.onepage.me](https://cocktail-x.onepage.me/munich-cocktail-week)"
 image: "/images/munich_cocktail_week.webp"
+imageAlt: "Illustration einer Bar mit verschiedenen Cocktailgläsern, Zitrusfrüchten und Flaschen – stilisierte Szene zur Munich Cocktail Week"
 seoTitle: "Munich Cocktail Week – Hochprozentiger Genuss in Münchens besten Bars"
 seoDescription: "Erleben Sie die Munich Cocktail Week vom 29. April bis 10. Mai 2025. Genießen Sie kreative Cocktails und spannende Events in verschiedenen Bars und Locations in München."
 ---
