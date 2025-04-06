@@ -1,6 +1,6 @@
 ---
 title: "Герштхофенская ярмарка мастеров: Удивительные вещи, сделанные с душой"
-date: "2025-04-06"
+date: "2025-04-05"
 time: "06 апреля 2025, 10:00 - 17:00"
 ort: "Рынок в спортивном зале TSV в Герштхофене"
 link: "[@handgedreht.andreas.koehler](https://www.instagram.com/handgedreht.andreas.koehler/p/DGD0MB0oDNi/==)"

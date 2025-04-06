@@ -1,6 +1,6 @@
 ---
 title: "Hobby-Künstler-Markt in Gersthofen: Kreativität hautnah erleben"
-date: "2025-04-06"
+date: "2025-04-05"
 time: "06. April 2025 10 - 17 Uhr"
 ort: "Markt in der TSV Turnhalle in Gersthofen"
 link: "[@handgedreht.andreas.koehler](https://www.instagram.com/handgedreht.andreas.koehler/p/DGD0MB0oDNi/==)"
