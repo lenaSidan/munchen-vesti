@@ -1,6 +1,4 @@
 import { GetStaticProps } from "next";
-import Head from "next/head";
-import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import fs from "fs";
@@ -12,6 +10,7 @@ import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/ArticlesPage.module.css";
+import Seo from "@/components/Seo";
 
 interface ArticlesArticle {
   id: number;
@@ -28,22 +27,10 @@ interface ArticlesProps {
 
 export default function ArticlesPage({ articles }: ArticlesProps) {
   const t = useTranslation();
-  const router = useRouter();
 
   return (
     <>
-      <Head>
-        <title>
-          {t("meta.articles_title")} – {t("meta.default_title")}
-        </title>
-        <meta name="description" content={t("meta.articles_description")} />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content={t("meta.articles_title")} />
-        <meta property="og:description" content={t("meta.articles_description")} />
-        <meta property="og:image" content="/default-og-image.jpg" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://munchen-vesti.de${router.asPath}`} />
-      </Head>
+      <Seo title={t("meta.articles_title")} description={t("meta.articles_description")} />
       <div className={styles.container}>
         <h3 className={styles.pageTitle}>{t("articles.articles")}</h3>
 
