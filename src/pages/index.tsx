@@ -37,11 +37,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
 
   return (
     <>
-      <Seo
-        title={mainEvent?.seoTitle || mainEvent?.title}
-        description={mainEvent?.seoDescription}
-        image={mainEvent?.image}
-      />
+      <Seo title={t("seo.index_title")} description={t("seo.index_description")} image={mainEvent?.image} />
 
       <div className={styles.container}>
         {/* Главная статья + объявления */}
@@ -101,7 +97,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
             </div>
           </article>
         )}
-        
+
         {/* Ссылки на другие статьи */}
         {otherEvents.length > 0 && (
           <section className={styles.otherArticles}>
