@@ -17,6 +17,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "scripts/sitemap.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "scripts/sitemap.js", "scripts/cleanup.js", "scripts/cleanup-unused-images.js", "scripts/cleanup-images.js"],
   "exclude": ["node_modules"]
 }
