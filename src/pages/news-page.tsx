@@ -69,7 +69,7 @@ export const getStaticProps: GetStaticProps<NewsListProps> = async ({ locale }) 
     return {
       slug,
       title: data.title || "Untitled",
-      date: data.date || "",
+      date: data.date ? new Date(data.date).toISOString() : "",
       image: data.image || "",
       excerpt: firstParagraph.slice(0, 120) + "...",
     };

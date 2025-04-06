@@ -13,6 +13,8 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import { useRouter } from "next/router";
+
+// import ShortNewsBlock from "@/components/ShortNewsBlock";
 import Ads from "@/components/Ads";
 
 interface Announcement {
@@ -68,10 +70,12 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
               </article>
             )}
           </div>
-
           <div className={styles.adsBlock}>
             <Ads/>
           </div>
+          {/* <div className={styles.adsBlock}>
+            <ShortNewsBlock/>
+          </div> */}
         </div>
 
         {/* Вторая статья */}

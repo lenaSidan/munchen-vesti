@@ -7,6 +7,9 @@
     "edition_date": "Ausgabe vom {{month}} {{year}}",
     "published_fixed": "Eine Informationszeitung, die das Leben der russischsprachigen Gemeinschaft in München widerspiegelt."
   },
+  "title": {
+    "read_more": "Weiterlesen"
+   },
   "newsTitle": "Aktuelle Nachrichten",
   "info": "Wir empfehlen",
   "read_more": "Weiterlesen",
@@ -40,6 +43,7 @@
   "menu": {
     "articles": "Artikel",
     "announcements": "Veranstaltungen",
+    "news": "Nachrichten",
     "ads": "Anzeigen",
     "ads_services": "Dienstleistungen",
     "ads_food": "Gastronomie",
