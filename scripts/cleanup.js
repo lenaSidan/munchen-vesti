@@ -9,15 +9,16 @@ const codeDirs = ["src", "public"];
 const validExtensions = [".md", ".ts", ".tsx"];
 const imagePattern = /\/images\/([a-zA-Z0-9._-]+\.(webp|png|jpg|jpeg))/g;
 
-// Логгер: пишет в консоль и файл
+// Логгер
 function log(message) {
   console.log(message);
   fs.appendFileSync(logPath, `[${new Date().toISOString()}] ${message}\n`);
 }
 
-// Очистка прошедших событий
+// 1. Очистка image: у прошедших событий (оставляя .md-файл)
 function cleanOldMarkdownImages() {
-  
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
 
   markdownDirs.forEach((folder) => {
     const dirPath = path.join(baseDir, folder);
@@ -32,17 +33,19 @@ function cleanOldMarkdownImages() {
       const dateMatch = content.match(/date:\s*(.+)/);
       const date = dateMatch ? new Date(dateMatch[1]) : null;
 
-      if (date && date < new Date(new Date().setHours(0, 0, 0, 0)) && folder.includes("events")) {
-        const cleaned = content.replace(/^image:.*$/gm, "").replace(/^imageAlt:.*$/gm, "");
+      if (date && date < now && folder.includes("events")) {
+        const cleaned = content
+          .replace(/^image:.*$/gm, "")
+          .replace(/^imageAlt:.*$/gm, "");
 
         fs.writeFileSync(fullPath, cleaned.trim() + "\n");
-        log(`📝 Очистка прошедшего события: ${file}`);
+        log(`📝 Очистка изображения в прошедшем событии: ${file}`);
       }
     }
   });
 }
 
-// Поиск всех используемых изображений
+// 2. Поиск и удаление неиспользуемых изображений
 function findAllUsedImages() {
   const used = new Set();
 
@@ -69,7 +72,6 @@ function findAllUsedImages() {
   return used;
 }
 
-// Удаление неиспользуемых изображений
 function deleteUnusedImages() {
   if (!fs.existsSync(imagesDir)) return;
 
