@@ -35,4 +35,8 @@
 <url><loc>https://munchen-vesti.de/de/events/auer-dult</loc><changefreq>weekly</changefreq></url>
 <url><loc>https://munchen-vesti.de/de/events/flohmarkt-theresienwiese</loc><changefreq>weekly</changefreq></url>
 <url><loc>https://munchen-vesti.de/de/events/munich2025</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://munchen-vesti.de/news/new1</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://munchen-vesti.de/news/new2</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://munchen-vesti.de/de/news/new1</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://munchen-vesti.de/de/news/new2</loc><changefreq>weekly</changefreq></url>
 </urlset>

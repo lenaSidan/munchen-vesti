@@ -2,20 +2,50 @@
 title: München als fußgängerfreundlichste Stadt ausgezeichnet
 seoTitle: München weltweit führend in Fußgängerfreundlichkeit
 seoDescription: München belegt Platz 1 im globalen Fußgänger-Ranking
-date: 2025-04-04
-image: /images/news/walkable-munich.jpg
-imageAlt: Fußgängerzone in München
 ---
 
-Die bayerische Landeshauptstadt **München** wurde im neuesten internationalen Ranking zur **fußgängerfreundlichsten Stadt der Welt** gewählt.  
-Das Ergebnis basiert auf einer umfangreichen Studie, bei der Kriterien wie Infrastruktur, Sicherheit, Umweltfreundlichkeit und Zugang zu öffentlichen Plätzen berücksichtigt wurden.
+Die Stadt **München** wurde kürzlich von der australischen Vergleichsplattform *Compare the Market Australia* zur **fußgängerfreundlichsten Stadt der Welt** gekürt.  
 
-Besonders gelobt wurden die gut ausgebauten **Fußwege**, die zahlreichen **Grünanlagen** sowie die **verkehrsberuhigten Zonen** im Stadtzentrum.  
-Auch die **gute Anbindung an öffentliche Verkehrsmittel** trägt laut Studie maßgeblich zur Attraktivität für Fußgänger bei.
+### Bewertungskriterien
 
-Der Münchner Oberbürgermeister äußerte sich erfreut über das Ranking und kündigte an, das Engagement für nachhaltige Mobilität weiter zu verstärken.  
-Bereits im nächsten Jahr sollen weitere Straßen im Zentrum zur autofreien Zone erklärt werden.
+Das globale Ranking bewertete Städte anhand mehrerer Kriterien, darunter:
 
-Viele Bürgerinnen und Bürger bestätigen, dass das **Zufußgehen in München nicht nur praktisch, sondern auch angenehm** sei – sowohl im Alltag als auch für Touristen.
+- Anzahl und Qualität der Gehwege  
+- Durchschnittliche Niederschlagsmenge  
+- Verkehrssicherheit  
+- Verfügbarkeit und Erschwinglichkeit öffentlicher Verkehrsmittel  
+- Radinfrastruktur  
 
-Das Ranking wurde von der Organisation "Urban Mobility Index" veröffentlicht und umfasst über 100 Großstädte weltweit.
+### Warum München auf Platz 1 steht
+
+München überzeugte insbesondere durch:
+
+- **Hohe Sicherheit im Straßenverkehr**
+- **Zahlreiche autofreie Zonen**: Rund **86 % der Bevölkerung** leben weniger als 1 km von einer autofreien Zone wie einem Park entfernt.  
+- **Zentrale Infrastruktur**: Viele Bildungs- und Gesundheitseinrichtungen sind zu Fuß erreichbar.  
+**Quelle:** [muenchen.t-online.de](https://muenchen.t-online.de/region/muenchen/id_100388430/muenchen-ist-fussgaengerfreundlichste-stadt-der-welt-aus-diesen-gruenden.html?utm_source=chatgpt.com)
+
+Ein zusätzlicher Pluspunkt ist das **Radwegenetz**: München verfügt über insgesamt **1,4 Millionen Kilometer Radwege**, was die Stadt auch für Radfahrer attraktiv macht.  
+
+### Europas Dominanz im Ranking
+
+Neun der zehn führenden Städte im Ranking befinden sich in Europa:
+
+- ✦ München (1. Platz)  
+- ✦ Mailand  
+- ✦ Warschau  
+- ✦ Helsinki  
+- ✦ Paris  
+- ✦ Madrid  
+- ✦ Oslo  
+- ✦ Kopenhagen  
+- ✦ Amsterdam  
+
+Nur **Tokio** als einzige nicht-europäische Stadt schaffte es unter die Top Ten.  
+**Quelle:** [euronews.com](https://www.euronews.com/travel/2024/04/12/nine-out-of-10-of-the-worlds-most-walkable-cities-are-in-europe-does-yours-make-the-cut?utm_source=chatgpt.com)
+
+### Diskussion und Einordnung
+
+Auch wenn München international gut abschneidet, zeigte eine **deutsche Studie aus März 2023** des Instituts für Landes- und Stadtentwicklungsforschung andere Ergebnisse für den innerdeutschen Vergleich.  
+
+Die aktuelle Auszeichnung zeigt jedoch, wie erfolgreich Münchens Stadtentwicklung in Bezug auf **Nachhaltigkeit**, **Zugang zu öffentlichen Räumen** und **Verkehrssicherheit** ist.

@@ -1,15 +1,25 @@
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
 .card {
-  border: 2px solid var(--border-color);
-  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 48%; /* или 100%/3 если 3 колонки */
+  border: 1px solid var(--heading-color2);
   color: var(--text-color);
   padding: 15px;
   border-radius: 8px;
   font-size: 1rem;
   font-family: var(--font-body);
   text-align: justify;
-  margin-bottom: 20px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
+  height: 100%;
 }
 
 .image {
@@ -23,9 +33,15 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  flex-grow: 1;
+  justify-content: space-between;
 }
-
+.content h3 {
+  font-size: 0.9rem;
+}
+.content p {
+  font-size: 0.75rem;
+}
 .date {
   font-size: 0.8rem;
   color: var(--border-color);
@@ -34,18 +50,44 @@
 }
 
 .readMore {
-  margin-top: 10px;
+  align-self: flex-start;
+  margin-top: auto;
   background: none;
-  border: 1px solid var(--border-color);
+  text-decoration: underline;
   color: var(--heading-color);
   padding: 5px 10px;
   font-family: var(--font-headings);
   font-size: 0.9rem;
   cursor: pointer;
-  transition: background 0.3s, color 0.3s;
+  
 }
 
 .readMore:hover {
-  background-color: var(--heading-color);
-  color: var(--background);
+  color: var(--heading-color2);
 }
+@media (max-width: 768px) {
+  .block {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .card {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  .content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .readMore {
+    margin-top: auto;
+    align-self: flex-start;
+  }
+}
+

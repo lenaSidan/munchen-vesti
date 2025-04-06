@@ -1,22 +1,31 @@
 ---
-title: Streiks an deutschen Flughäfen
-seoTitle: Massive Verspätungen durch Flughafenstreiks in Deutschland
-seoDescription: Streiks an 13 Flughäfen führen zu Flugausfällen und Verzögerungen
-date: 2025-04-04
-image: /images/news/airport_strike.jpg
-imageAlt: Streik am Flughafen
+title: Blitzermarathon am 9. April in Bayern – 24 Stunden Tempokontrollen
+seoTitle: Blitzermarathon am 9. April in Bayern – 24 Stunden Tempokontrollen
+seoDescription: Polizei führt am 9. April 2025 flächendeckende Tempokontrollen in Bayern durch
+
+imageAlt: Geschwindigkeitskontrolle auf bayerischer Straße
 ---
 
-In Deutschland finden derzeit **Streiks an 13 Flughäfen** statt, was zu erheblichen Verspätungen und Flugausfällen führt.  
-Fluggäste werden gebeten, den Status ihrer Flüge im Voraus zu überprüfen und mögliche Änderungen im Flugplan zu berücksichtigen.
+Am **9. April 2025** startet in Bayern der jährliche **„Blitzermarathon“** – eine 24-stündige Aktion zur verstärkten Geschwindigkeitskontrolle. 
 
-Die Proteste werden von mehreren Gewerkschaften organisiert, die **bessere Arbeitsbedingungen und höhere Löhne** für das Bodenpersonal fordern.  
-Zu den betroffenen Flughäfen gehören unter anderem Frankfurt, München, Berlin und Düsseldorf.
+### Ziel und Umfang der Aktion
 
-Insbesondere am **Flughafen München** kam es bereits in den frühen Morgenstunden zu **langen Warteschlangen** und chaotischen Szenen.  
-Viele Passagiere berichten von Unsicherheit und mangelnder Kommunikation seitens der Fluggesellschaften.
+Von **Mittwoch, 6:00 Uhr bis Donnerstag, 6:00 Uhr** werden an etwa **1.470 Kontrollstellen** Messungen durchgeführt, insbesondere in **Unfall-Hotspots** sowie in der Nähe von **Schulen, Kindergärten und Altenheimen**.  
+**Quelle:** [BR.de](https://www.br.de/nachrichten/deutschland-welt/blitzermarathon-in-bayern-wo-am-9-april-die-radarfallen-stehen,UhMtuz0) 
 
-Die **Lufthansa** kündigte an, über 800 Flüge streichen zu müssen. Auch der internationale Flugverkehr ist stark beeinträchtigt.  
-Die Streiks sollen zunächst bis zum Wochenende andauern, könnten aber bei ausbleibender Einigung verlängert werden.
+Der „Blitzermarathon“ ist Teil einer europaweiten Initiative des **ROADPOL-Netzwerks** der Verkehrspolizei. Ziel ist es, das **Bewusstsein für die Einhaltung der Tempolimits** zu schärfen.  
+Im Jahr 2024 wurden in Bayern **495 tödliche Verkehrsunfälle** registriert, davon **137 aufgrund überhöhter Geschwindigkeit** – das sind **12 mehr als 2023**.  
 
-Das Bundesverkehrsministerium bittet die Bevölkerung um Geduld und kündigt Gespräche mit den Gewerkschaften an.
+
+### Verteilung der Kontrollpunkte
+
+Die meisten Radarfallen werden in den Landkreisen **Regensburg** und **Neu-Ulm** sowie in der Stadt **München** aufgestellt. In **Coburg**, **Straubing** und **Landshut** hingegen sind keine Kontrollen geplant.  
+Die vollständige Liste ist auf der Webseite des **bayerischen Innenministeriums** einsehbar.  
+**Weitere Infos:** [www.stmi.bayern.de](https://www.stmi.bayern.de)
+
+### Transparenz und Öffentlichkeitsarbeit
+
+Ein besonderes Merkmal des „Blitzermarathon“ ist die **vorherige Bekanntgabe der Kontrollstellen**. Damit soll das Ziel unterstrichen werden, **Verstöße zu verhindern**, statt nur zu bestrafen.  
+Der bayerische Innenminister **Joachim Herrmann** betonte, dass es um die **Sensibilisierung der Verkehrsteilnehmer** gehe, nicht um die Erhöhung von Bußgeldeinnahmen.  
+
+Der Blitzermarathon in Bayern ist ein wichtiger Hinweis für Autofahrer, sich an die Tempolimits zu halten. **Transparenz** und **Information** tragen zur **Erhöhung der Verkehrssicherheit** bei und helfen, Unfälle zu vermeiden.

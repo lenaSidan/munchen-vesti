@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import styles from "@/styles/Ads.module.css";
+import styles from "@/styles/ShortNews.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import Image from "next/image";
 import NewsBlock from "./NewsBlock";
