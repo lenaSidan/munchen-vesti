@@ -202,5 +202,6 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
       otherEvents: sortedEvents.length > 2 ? sortedEvents.slice(2, 5) : [],
       announcements: translatedAnnouncements,
     },
+    revalidate: 86400,
   };
 };
