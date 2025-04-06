@@ -27,7 +27,7 @@ export default function Events({ events }: EventsProps) {
               {event.ort && ` | ${event.ort}`}
             </p>
             <Link href={`/events/${event.slug}`}>
-              <button type="button">{t("menu.read_more")}</button>
+              <button type="button">{t("title.read_more")}</button>
             </Link>
           </div>
         ))}

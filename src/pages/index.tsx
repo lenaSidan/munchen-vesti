@@ -12,8 +12,8 @@ import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
-import Ads from "@/components/Ads";
 import { useRouter } from "next/router";
+import Ads from "@/components/Ads";
 
 interface Announcement {
   id: number;
@@ -70,7 +70,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
           </div>
 
           <div className={styles.adsBlock}>
-            <Ads />
+            <Ads/>
           </div>
         </div>
 
