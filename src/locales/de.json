@@ -7,7 +7,9 @@
     "edition_date": "Ausgabe vom {{month}} {{year}}",
     "published_fixed": "Eine Informationszeitung, die das Leben der russischsprachigen Gemeinschaft in München widerspiegelt."
   },
+  "newsTitle": "Aktuelle Nachrichten",
   "info": "Wir empfehlen",
+  "read_more": "Weiterlesen",
   "meta": {
     "default_title": "Münchener Nachrichten",
     "default_description": "Nachrichten und Veranstaltungen aus München – Münchener Nachrichten.",

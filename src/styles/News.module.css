@@ -1,0 +1,66 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Merriweather", serif;
+  color: var(--text-color);
+}
+
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--background);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border-color);
+  margin-bottom: 15px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+
+.date {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+.readMore {
+  align-self: flex-start;
+  padding: 6px 12px;
+  background: none;
+  border: 1px solid var(--heading-color);
+  color: var(--heading-color);
+  font-family: "Merriweather", serif;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.readMore:hover {
+  background-color: var(--heading-color);
+  color: var(--background);
+}

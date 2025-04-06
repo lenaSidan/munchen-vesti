@@ -94,7 +94,13 @@ export default function Header() {
           >
             {t("menu.announcements")}
           </Link>
-
+          {/* <Link
+            href="/news-page"
+            className={`${styles.navLink} ${router.pathname === "/news-page" ? styles.active : ""}`}
+            onClick={closeSubmenu}
+          >
+            {t("menu.announcements")}
+          </Link> */}
           <div className={styles.dropdownWrapper}>
             <button
               type="button"

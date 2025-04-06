@@ -103,7 +103,7 @@ export const getStaticProps: GetStaticProps<ArticlesProps> = async ({ locale }) 
         return {
           id: data.id || 0, // 🆕 Берем id из фронтматтера
           slug: file.replace(`.${locale}.md`, ""),
-          title: data.title || "Без названия",
+          title: data.title || "Untitled",
           author: data.author || "",
           image: data.image || null,
           content: processedContent.toString(),
