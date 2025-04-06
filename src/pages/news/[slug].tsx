@@ -38,7 +38,15 @@ export default function NewsPage({ news }: NewsProps) {
 
       <div className={styles.container}>
         <h2 className={styles.title}>{news.title}</h2>
-        {news.date && <p className={styles.date}>{new Date(news.date).toLocaleDateString(locale)}</p>}
+        {news.date && (
+          <p className={styles.date}>
+            {new Date(news.date).toLocaleDateString(locale, {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            })}
+          </p>
+        )}
         {news.image && (
           <div className={styles.imageWrapper}>
             <Image
@@ -80,18 +88,14 @@ export const getStaticProps: GetStaticProps<NewsProps> = async ({ params, locale
   const fileContent = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(fileContent);
 
-  const processedContent = await remark()
-    .use(remarkGfm)
-    .use(remarkRehype)
-    .use(rehypeStringify)
-    .process(content);
+  const processedContent = await remark().use(remarkGfm).use(remarkRehype).use(rehypeStringify).process(content);
 
   return {
     props: {
       news: {
         slug: params.slug as string,
         title: data.title || "",
-        date: data.date ? String(data.date) : "", // 💥 Исправлено: дата как строка
+        date: data.date ? new Date(data.date).toISOString() : "",
         image: data.image || "",
         imageAlt: data.imageAlt || "",
         seoTitle: data.seoTitle || "",
