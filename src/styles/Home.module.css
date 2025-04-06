@@ -130,6 +130,15 @@
 .secondArticle h2 {
   color: var(--heading-color2);
 }
+.newsBlock {
+  width: 100%;
+  margin: 20px 0;
+  background: var(--alt-background);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
 .secondArticle {
   display: flex;
   flex-direction: column;

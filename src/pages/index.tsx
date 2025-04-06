@@ -14,7 +14,7 @@ import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import { useRouter } from "next/router";
 
-// import ShortNewsBlock from "@/components/ShortNewsBlock";
+import ShortNewsBlock from "@/components/ShortNewsBlock";
 import Ads from "@/components/Ads";
 
 interface Announcement {
@@ -71,11 +71,8 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
             )}
           </div>
           <div className={styles.adsBlock}>
-            <Ads/>
+            <Ads />
           </div>
-          {/* <div className={styles.adsBlock}>
-            <ShortNewsBlock/>
-          </div> */}
         </div>
 
         {/* Вторая статья */}
@@ -104,7 +101,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
             </div>
           </article>
         )}
-
+        
         {/* Ссылки на другие статьи */}
         {otherEvents.length > 0 && (
           <section className={styles.otherArticles}>
@@ -130,6 +127,9 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
             </ul>
           </section>
         )}
+        <div className={styles.newsBlock}>
+          <ShortNewsBlock />
+        </div>
       </div>
     </>
   );

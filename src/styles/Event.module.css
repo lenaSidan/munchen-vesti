@@ -196,7 +196,7 @@
   }
 
   .image {
-    width: 100%; /* 🔹 Растягиваем на всю ширину */
+    width: 100%;
     max-width: 100%;
   }
 
@@ -212,7 +212,7 @@
     margin-bottom: 8px;
   }
   .content h3 {
-    margin-top: 10px;
+    margin-top: 15px;
     font-size: 1rem;
   }
   .content h5 {
