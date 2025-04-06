@@ -154,6 +154,6 @@ export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) =>
 
   return {
     props: { events },
-    revalidate: 86400,
+    revalidate: 60,
   };
 };
