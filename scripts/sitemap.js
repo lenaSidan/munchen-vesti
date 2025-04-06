@@ -27,18 +27,20 @@ function getMarkdownUrls(folder, prefix, filterFutureEvents = false) {
   const files = fs.readdirSync(dirPath).filter((file) => file.endsWith(".md"));
 
   return files
-    .map((file) => {
-      const [filename, locale] = file.replace(".md", "").split(".");
-      const fullPath = path.join(dirPath, file);
-      const content = fs.readFileSync(fullPath, "utf-8");
-      const match = content.match(/date:\s*(.+)/); // Найти дату
-      const date = match ? new Date(match[1]) : null;
+  .map((file) => {
+    const [filename, locale] = file.replace(".md", "").split(".");
+    const slug = filename.replace(/^\d{2}-\d{2}-\d{4}-/, ""); // убираем дату в начале
+    const fullPath = path.join(dirPath, file);
+    const content = fs.readFileSync(fullPath, "utf-8");
+    const match = content.match(/date:\s*(.+)/); // Найти дату
+    const date = match ? new Date(match[1]) : null;
 
-      if (filterFutureEvents && date && date < new Date()) return null; // Убираем прошедшие
+    if (filterFutureEvents && date && date < new Date()) return null; // Убираем прошедшие
 
-      return `<url><loc>${baseUrl}${locale === "de" ? "/de" : ""}/${prefix}/${filename}</loc><changefreq>weekly</changefreq></url>`;
-    })
-    .filter(Boolean); // убрать null
+    return `<url><loc>${baseUrl}${locale === "de" ? "/de" : ""}/${prefix}/${slug}</loc><changefreq>weekly</changefreq></url>`;
+  })
+  .filter(Boolean);
+
 }
 
 function generateSitemap() {
