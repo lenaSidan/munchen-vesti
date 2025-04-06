@@ -1,7 +1,8 @@
 import styles from "@/styles/Ads.module.css";
-import ViletaJewelry from "./ads/VitaJewelry";
 import Image from "next/image";
 import useTranslation from "@/hooks/useTranslation";
+
+import PsychologistTatjana from "./ads/PsychologistTatjana";
 
 export default function Ads() {
   const t = useTranslation();
@@ -19,7 +20,7 @@ export default function Ads() {
         />
       </div>
       <div className={styles.decorativeLine}></div>
-      <ViletaJewelry />
+      <PsychologistTatjana />
     </aside>
   );
 }
