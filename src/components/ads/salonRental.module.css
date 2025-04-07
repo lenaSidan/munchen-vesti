@@ -67,7 +67,7 @@
 .description3 {
   font-size: 0.9rem;
   font-family:  var(--font-body);
- 
+ margin: 0;
 }
 
 .contactBox {
@@ -76,8 +76,8 @@
 }
 .contact {
   color: var(--heading-color);
-  
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 .address {
