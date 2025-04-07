@@ -83,10 +83,10 @@
   padding-left: 20px;
 }
 .list li::before {
-  content: "♦"; /* Или "•", "★" для другого эффекта */
+  content: "•";
   position: absolute;
   left: 0;
-  color: var(--heading-color); /* Цвет маркера */
+  color: var(--heading-color);
   font-size: 1rem;
   font-weight: bold;
 }
@@ -130,14 +130,14 @@
   }
 
   .mainWrapper h3 {
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-bottom: 6px;
   }
 
   .mainWrapper p,
   .subtitleBox,
   .list li {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.3;
   }
 
