@@ -2,7 +2,7 @@ import styles from "@/styles/Ads.module.css";
 import Image from "next/image";
 import useTranslation from "@/hooks/useTranslation";
 
-import PsychologistTatjana from "./ads/PsychologistTatjana";
+import TheaterAcademyMainPage from "./ads/TheaterAcademyMainPage";
 
 export default function Ads() {
   const t = useTranslation();
@@ -20,7 +20,7 @@ export default function Ads() {
         />
       </div>
       <div className={styles.decorativeLine}></div>
-      <PsychologistTatjana />
+      <TheaterAcademyMainPage />
     </aside>
   );
 }

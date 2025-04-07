@@ -19,7 +19,7 @@
   background: var(--alt-background);
 }
 .adsBlock {
-  width: 33%;
+  width: 30%;
   min-height: 100%;
   display: flex;
   flex-direction: column;
