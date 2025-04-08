@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "@/styles/AdsPage.module.css";
 import useTranslation from "@/hooks/useTranslation";
-import TheaterAcademy from "@/components/ads/TheaterAcademy";
+import TheaterAcademy from "@/components/ads/education/TheaterAcademy";
 import Seo from "@/components/Seo";
 
 export default function AnnouncementsPage() {
@@ -19,7 +19,7 @@ export default function AnnouncementsPage() {
     <>
       <Seo title={t("meta.ads_studios_title")} description={t("meta.ads_studios_description")} />
       <div className={styles.container}>
-        <h3 className={styles.title}>{t("menu.ads_studios")}</h3>
+        <h2 className={styles.title}>{t("menu.ads_studios")}</h2>
 
         <div className={styles.announcementsWrapper}>
           {announcementGroups.map((group) => (

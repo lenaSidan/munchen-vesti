@@ -16,11 +16,12 @@ export default function Events({ events }: EventsProps) {
   return (
     <>
       <Seo title={t("meta.all_events_title")} description={t("meta.all_events_description")} />
+      <h1>{t("meta.all_events_title")}</h1>
       <div>
-        <h1>{locale === "ru" ? "Статьи" : "Event"}</h1>
+        <h2>{locale === "ru" ? "Статьи" : "Event"}</h2>
         {events.map((event) => (
           <div key={event.slug}>
-            <h2>{event.title}</h2>
+            <h3>{event.title}</h3>
             <p>
               {event.time && ` – ${event.time}`}
 

@@ -8,6 +8,8 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       <Seo title={t("meta.privacy_title")} description={t("meta.privacy_description")} />
+      <h1 className={styles.visuallyHidden}>{t("meta.privacy_title")}</h1>
+
       <div className={styles.container}>
         <h3 className={styles.title}>{t("privacy_policy.title")}</h3>
         <p className={styles.updated}>

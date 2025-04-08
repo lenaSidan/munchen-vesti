@@ -1,13 +1,13 @@
 import { useState } from "react";
 import styles from "@/styles/AdsPage.module.css";
 import useTranslation from "@/hooks/useTranslation";
-import PsychologistTatjana from "@/components/ads/PsychologistTatjana";
-import BeautySalon from "@/components/ads/BeautySalon";
-import VitaJewelry from "@/components/ads/VitaJewelry";
-import TibetanBowls from "@/components/ads/TibetanBowls";
-import LettaBeauty from "@/components/ads/LettaBeauty";
-import HairSalonAd from "@/components/ads/HairSalon";
-import PureBeautySalon from "@/components/ads/PureBeautySalon";
+import PsychologistTatjana from "@/components/ads/services/PsychologistTatjana";
+import BeautySalon from "@/components/ads/services/BeautySalon";
+import VitaJewelry from "@/components/ads/services/VitaJewelry";
+import TibetanBowls from "@/components/ads/services/TibetanBowls";
+import LettaBeauty from "@/components/ads/services/LettaBeauty";
+import HairSalonAd from "@/components/ads/services/HairSalon";
+import PureBeautySalon from "@/components/ads/services/PureBeautySalon";
 import Seo from "@/components/Seo";
 
 export default function AnnouncementsPage() {
@@ -42,7 +42,7 @@ export default function AnnouncementsPage() {
       <Seo title={t("meta.ads_services_title")} description={t("meta.ads_services_description")} />
 
       <div className={styles.container}>
-        <h3 className={styles.title}>{t("menu.ads_services")}</h3>
+        <h2 className={styles.title}>{t("menu.ads_services")}</h2>
 
         <div className={styles.announcementsWrapper}>
           {announcementGroups.map((group) => (

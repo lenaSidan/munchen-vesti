@@ -6,9 +6,10 @@ interface SeoProps {
   title?: string;
   description?: string;
   image?: string;
+  type?: "website" | "article"; // можно расширить при необходимости
 }
 
-export default function Seo({ title, description, image }: SeoProps) {
+export default function Seo({ title, description, image, type = "website" }: SeoProps) {
   const router = useRouter();
   const t = useTranslation();
 
@@ -24,6 +25,9 @@ export default function Seo({ title, description, image }: SeoProps) {
   const altLocale = locale === "ru" ? "de" : "ru";
   const altHref = `${baseUrl}/${altLocale}${path}`;
 
+  const ogLocale = locale === "ru" ? "ru_RU" : "de_DE";
+  const ogLocaleAlt = altLocale === "ru" ? "ru_RU" : "de_DE";
+
   return (
     <Head>
       <title>{fullTitle}</title>
@@ -34,20 +38,27 @@ export default function Seo({ title, description, image }: SeoProps) {
       <link rel="canonical" href={url} />
       <link rel="alternate" hrefLang={locale} href={url} />
       <link rel="alternate" hrefLang={altLocale} href={altHref} />
-      <link rel="alternate" hrefLang="x-default" href={url} />
+      <link rel="alternate" hrefLang="x-default" href={`${baseUrl}/de`} />
 
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
       <meta property="og:image" content={imageUrl} />
-      <meta property="og:type" content="website" />
+      <meta property="og:image:alt" content={fullTitle} />
+      <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
+      <meta property="og:locale" content={ogLocale} />
+      <meta property="og:locale:alternate" content={ogLocaleAlt} />
 
       {/* Twitter */}
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={fullDescription} />
       <meta name="twitter:image" content={imageUrl} />
+      <meta name="twitter:image:alt" content={fullTitle} />
       <meta name="twitter:card" content="summary_large_image" />
+
+      {/* Optional favicon (если ещё не добавлен глобально) */}
+      <link rel="icon" href="/favicon.ico" />
     </Head>
   );
 }

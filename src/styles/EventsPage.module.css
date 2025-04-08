@@ -3,7 +3,17 @@
   margin: 0 auto;
   padding: 20px;
 }
-
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
 .pageTitle {
   font-family: var(--font-body);
   text-align: center;
@@ -35,13 +45,19 @@
   line-height: 1.4;
   transition: border-color 0.3s ease-in-out;
 }
+.titleBox {
+  background-color: var(--alt-background-light);
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+
+}
 .eventTitle {
   font-family: var(--font-headings);
   text-align: left;
+  font-size: 1.4rem;
   color: var(--heading-color);
-  margin-bottom: 20px;
-  margin-top: 0;
-  border-bottom: 0px;
+
 }
 
 .eventVariantA,

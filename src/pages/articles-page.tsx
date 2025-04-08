@@ -31,8 +31,9 @@ export default function ArticlesPage({ articles }: ArticlesProps) {
   return (
     <>
       <Seo title={t("meta.articles_title")} description={t("meta.articles_description")} />
+      <h1 className={styles.visuallyHidden}>{t("meta.articles_title")}</h1>
       <div className={styles.container}>
-        <h3 className={styles.pageTitle}>{t("articles.articles")}</h3>
+        <h2 className={styles.pageTitle}>{t("articles.articles")}</h2>
 
         {articles.map((article, index) => (
           <article key={article.slug} className={index % 2 === 0 ? styles.articleVariantA : styles.articleVariantB}>

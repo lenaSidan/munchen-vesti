@@ -41,8 +41,9 @@ export default function Contacts() {
   return (
     <>
       <Seo title={t("meta.contacts_title")} description={t("meta.contacts_description")} />
+      <h1 className={styles.visuallyHidden}>{t("meta.contacts_title")}</h1>
       <div className={styles.container}>
-        <h3 className={styles.title}>{t("kontakt.title")}</h3>
+        <h2 className={styles.title}>{t("kontakt.title")}</h2>
 
         {/* 📍 Адрес */}
         <div className={styles.section}>
@@ -50,7 +51,7 @@ export default function Contacts() {
           <p className={styles.text}>{t("kontakt.section1.text")}</p>
         </div>
 
-        {/* 📞 Контактная информация */}
+        {/* 📞 Контактная информация
         <div className={styles.section}>
           <h3 className={styles.sectionTitle}>{t("kontakt.section2.title")}</h3>
 
@@ -60,13 +61,13 @@ export default function Contacts() {
               {t("kontakt.section2.email").split(": ")[1]}
             </a>
           </p>
-          {/* <p className={styles.text}>
+         <p className={styles.text}>
           <strong>Telegram: </strong>
           <a href="https://t.me/example" target="_blank" rel="noopener noreferrer" className={styles.link}>
             {t("kontakt.section2.telegram").split(": ")[1]}
           </a>
-        </p> */}
-        </div>
+        </p> 
+        </div> */}
 
         {/* 📩 Форма обратной связи */}
         <div className={styles.section}>

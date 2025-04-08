@@ -21,27 +21,28 @@ export default function About() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://munchen-vesti.de${router.asPath}`} />
       </Head>
+      <h1 className={styles.visuallyHidden}>{t("meta.about_title")}</h1>
 
       <div className={styles.container}>
-        <h3 className={styles.title}>{t("about.title")}</h3>
+        <h2 className={styles.title}>{t("about.title")}</h2>
 
         <section className={styles.section}>
-          <h4 className={styles.sectionTitle}>{t("about.section1.title")}</h4>
+          <h3 className={styles.sectionTitle}>{t("about.section1.title")}</h3>
           <p className={styles.paragraph}>{t("about.section1.text")}</p>
         </section>
 
         <section className={styles.section}>
-          <h4 className={styles.sectionTitle}>{t("about.section2.title")}</h4>
+          <h3 className={styles.sectionTitle}>{t("about.section2.title")}</h3>
           <p className={styles.paragraph}>{t("about.section2.text")}</p>
         </section>
 
         <section className={styles.section}>
-          <h4 className={styles.sectionTitle}>{t("about.section3.title")}</h4>
+          <h3 className={styles.sectionTitle}>{t("about.section3.title")}</h3>
           <p className={styles.paragraph}>{t("about.section3.text")}</p>
         </section>
 
         <section className={styles.section}>
-          <h4 className={styles.sectionTitle}>{t("about.section4.title")}</h4>
+          <h3 className={styles.sectionTitle}>{t("about.section4.title")}</h3>
           <p className={styles.paragraph}>{t("about.section4.text")}</p>
         </section>
       </div>

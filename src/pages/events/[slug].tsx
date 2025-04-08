@@ -1,4 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from "next";
+import Head from "next/head";
+import { getEventJsonLd } from "@/lib/jsonld/eventJsonLd";
 import fs from "fs";
 import path from "path";
 import Seo from "@/components/Seo";
@@ -23,7 +25,7 @@ interface Event {
   link?: string;
   content: string;
   image?: string;
-  imageAlt?: string,
+  imageAlt?: string;
   seoTitle?: string;
   seoDescription?: string;
 }
@@ -35,8 +37,23 @@ interface EventProps {
 export default function Event({ event }: EventProps) {
   const t = useTranslation();
 
+  const jsonLd = getEventJsonLd({
+    title: event.title,
+    description: event.seoDescription || "",
+    date: event.date || "",
+    endDate: event.endDate,
+    image: event.image || "/default-og-image.jpg",
+    ort: event.ort || "München",
+  });
+
   return (
     <>
+     <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </Head>
       <Seo title={event.seoTitle || event.title} description={event.seoDescription} image={event.image} />
 
       <div className={styles.articleContainer}>
@@ -114,7 +131,7 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
   const processedContent = await remark().use(remarkGfm).use(remarkRehype).use(rehypeStringify).process(content);
 
   const contentHtml = processedContent.toString();
-
+ 
   return {
     props: {
       event: {
