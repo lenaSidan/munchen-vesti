@@ -120,31 +120,29 @@ async function processMarkdown(content: string) {
 export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) => {
   const rawEvents = getEventsByLocale(locale || "ru");
 
-  // Текущая дата без времени
   const today = new Date();
-  today.setHours(0, 0, 0, 0);
+  today.setHours(0, 0, 0, 0); // Убираем время
 
-  // Фильтруем события (оставляем только будущие и текущие)
-  const upcomingEvents = rawEvents.filter((event) => {
-    if (!event.date) return false; // Если даты нет — пропускаем
+  const activeEvents = rawEvents.filter((event) => {
+    if (!event.date) return false;
 
-    const eventDate = new Date(event.date).getTime(); // Преобразуем в timestamp
-    return eventDate >= today.getTime(); // Оставляем только будущие события
+    const startDate = new Date(event.date);
+    const endDate = event.endDate ? new Date(event.endDate) : startDate;
+
+    return endDate >= today; // Событие ещё не закончилось
   });
 
-  // Сортируем по возрастанию даты (от ближайших к самым поздним)
-  const sortedEvents = upcomingEvents.sort((a, b) => {
-    const dateA = new Date(a.date!).getTime();
-    const dateB = new Date(b.date!).getTime();
-    return dateA - dateB; // Сортируем от ближайшего к самому позднему
+  const sortedEvents = activeEvents.sort((a, b) => {
+    const startA = new Date(a.date!).getTime();
+    const startB = new Date(b.date!).getTime();
+    return startA - startB;
   });
 
   console.log(
-    "📅 Отфильтрованные и отсортированные события:",
-    sortedEvents.map((e) => e.date)
+    "📅 Актуальные события для /events-page:",
+    sortedEvents.map((e) => `${e.title} (${e.date}${e.endDate ? "–" + e.endDate : ""})`)
   );
 
-  // Парсим Markdown-контент для каждого события
   const events = await Promise.all(
     sortedEvents.map(async (event) => ({
       ...event,
@@ -154,6 +152,6 @@ export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) =>
 
   return {
     props: { events },
-    revalidate: 60,
+    revalidate: 43200,
   };
 };
