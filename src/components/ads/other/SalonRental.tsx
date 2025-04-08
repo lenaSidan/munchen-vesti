@@ -2,32 +2,31 @@ import React from "react";
 import styles from "@/components/ads/other/salonRental.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import Link from "next/link";
-import AdWrapper from "../AdWrapper";
 
 export default function SalonRental() {
   const t = useTranslation();
 
   return (
-    <AdWrapper
-      title={t("salon_rental.titleSEO")}
-      description={t("salon_rental.seo_description")}
-      image="/images/salon_rental.webp"
-      url="/ads/other/salon-rental"
-      type="Service"
-      additionalJsonLd={{
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "München",
-        },
-        contactPoint: {
-          "@type": "ContactPoint",
-          contactType: "Customer Service",
-          telephone: "+4917622972939",
-        },
-      }}
-    >
-      {/* SEO-заголовок h1 */}
-      <h1 className={styles.visuallyHidden}>{t("salon_rental.title")}</h1>
+    // <AdWrapper
+    //   title={t("salon_rental.titleSEO")}
+    //   description={t("salon_rental.seo_description")}
+    //   image="/images/salon_rental.webp"
+    //   url="/ads/other/salon-rental"
+    //   type="Service"
+    //   additionalJsonLd={{
+    //     address: {
+    //       "@type": "PostalAddress",
+    //       addressLocality: "München",
+    //     },
+    //     contactPoint: {
+    //       "@type": "ContactPoint",
+    //       contactType: "Customer Service",
+    //       telephone: "+4917622972939",
+    //     },
+    //   }}
+    // >
+    <>
+      <h1 className={styles.visuallyHidden}>{t("salon_rentalSEO.title")}</h1>
 
       <div className={styles.mainWrapper}>
         <div className={styles.adsBox}>
@@ -56,6 +55,7 @@ export default function SalonRental() {
           </div>
         </div>
       </div>
-    </AdWrapper>
+    </>
+    // </AdWrapper>
   );
 }

@@ -1,6 +1,5 @@
 import { GetStaticProps } from "next";
 import Seo from "@/components/Seo";
-
 import Link from "next/link";
 import Image from "next/image";
 import { getEventsByLocale, Event } from "@/lib/getEvents";

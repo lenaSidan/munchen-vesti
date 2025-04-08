@@ -3,31 +3,31 @@ import styles from "@/components/ads/services/tibetanBowls.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import Image from "next/image";
 import Link from "next/link";
-import AdWrapper from "../AdWrapper";
 
 export default function TibetanBowls() {
   const t = useTranslation();
 
   return (
-    <AdWrapper
-      title={t("tibetan_bowls.titleSEO")}
-      description={t("tibetan_bowls.descriptionSEO")}
-      image="/images/tibetan_bowls.webp"
-      url="/ads/services/tibetan-bowls"
-      type="Service"
-      additionalJsonLd={{
-        name: t("tibetan_bowls.title"),
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "München",
-        },
-        contactPoint: {
-          "@type": "ContactPoint",
-          contactType: "Customer Service",
-          url: t("tibetan_bowls.contact_link"),
-        },
-      }}
-    >
+    // <AdWrapper
+    //   title={t("tibetan_bowls.titleSEO")}
+    //   description={t("tibetan_bowls.descriptionSEO")}
+    //   image="/images/tibetan_bowls.webp"
+    //   url="/ads/services/tibetan-bowls"
+    //   type="Service"
+    //   additionalJsonLd={{
+    //     name: t("tibetan_bowls.title"),
+    //     address: {
+    //       "@type": "PostalAddress",
+    //       addressLocality: "München",
+    //     },
+    //     contactPoint: {
+    //       "@type": "ContactPoint",
+    //       contactType: "Customer Service",
+    //       url: t("tibetan_bowls.contact_link"),
+    //     },
+    //   }}
+    // >
+    <>
       <h1 className={styles.visuallyHidden}>{t("tibetan_bowls.titleSEO")}</h1>
 
       <div className={styles.mainWrapper}>
@@ -85,6 +85,7 @@ export default function TibetanBowls() {
 
         <div className={`${styles.decorativeLine} ${styles.bottom}`}></div>
       </div>
-    </AdWrapper>
+    </>
+    // </AdWrapper>
   );
 }
