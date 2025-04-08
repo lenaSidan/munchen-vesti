@@ -38,7 +38,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
   return (
     <>
       <Seo title={t("seo.index_title")} description={t("seo.index_description")} image={mainEvent?.image} />
-
+      <h1 className={styles.visuallyHidden}>{t("home.page_title")}</h1>
       <div className={styles.container}>
         {/* Главная статья + объявления */}
         <div className={styles.layout}>
@@ -150,7 +150,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   now.setHours(0, 0, 0, 0);
 
   const tenDaysLater = new Date(now);
-  tenDaysLater.setDate(tenDaysLater.getDate() + 10);
+  tenDaysLater.setDate(tenDaysLater.getDate() + 20);
 
   const filteredEvents = events.filter((event) => {
     if (!event.date) return false;
@@ -180,15 +180,24 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const translations = await import(`@/locales/${locale || "ru"}.json`);
 
   const mainEvent =
-    sortedEvents.length > 0
-      ? { ...sortedEvents[0], content: await processMarkdown(sortedEvents[0].content) }
-      : null;
+    sortedEvents.length > 0 ? { ...sortedEvents[0], content: await processMarkdown(sortedEvents[0].content) } : null;
 
   const secondEvent =
-    sortedEvents.length > 1
-      ? { ...sortedEvents[1], content: await processMarkdown(sortedEvents[1].content) }
-      : null;
+    sortedEvents.length > 1 ? { ...sortedEvents[1], content: await processMarkdown(sortedEvents[1].content) } : null;
 
+    const otherEvents = await Promise.all(
+      sortedEvents
+        .slice(2, 5)
+        .map(async (e) => ({
+          ...e,
+          content: await processMarkdown(e.content),
+        }))
+    );
+
+  console.log(
+    "👉 otherEvents:",
+    otherEvents.map((e) => e.title)
+  );
   const translatedAnnouncements = announcementsData.map((ann: Announcement) => ({
     ...ann,
     text: translations[ann.textKey] || ann.textKey,
@@ -198,7 +207,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
     props: {
       mainEvent,
       secondEvent,
-      otherEvents: sortedEvents.length > 2 ? sortedEvents.slice(2, 5) : [],
+      otherEvents,
       announcements: translatedAnnouncements,
     },
     revalidate: 43200,

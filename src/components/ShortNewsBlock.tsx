@@ -21,6 +21,7 @@ export default function ShortNewsBlock() {
   }, [locale]);
 
   return (
+    
     <aside className={styles.announcements}>
       <div className={styles.announcementHeader}>
         <h3 className={styles.announcementTitle}>{t("newsTitle")}</h3>

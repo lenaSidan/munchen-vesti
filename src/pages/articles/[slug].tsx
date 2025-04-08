@@ -12,6 +12,7 @@ import styles from "@/styles/NewsArticle.module.css";
 import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { getArticleJsonLd } from "@/lib/jsonld/articleJsonLd"; // ✅ импорт
 
 interface ArticlesArticle {
   id: number;
@@ -32,6 +33,18 @@ export default function ArticlesArticlePage({ article }: ArticleProps) {
   const t = useTranslation();
   const router = useRouter();
 
+  // ✅ Полный URL страницы статьи
+  const fullUrl = `https://munchen-vesti.de/${router.locale}/articles/${article.slug}`;
+
+  // ✅ Структурированные данные
+  const jsonLd = getArticleJsonLd({
+    title: article.title,
+    description: article.seoDescription,
+    url: fullUrl,
+    image: article.image || "https://munchen-vesti.de/default-og-image.jpg",
+    author: article.author,
+  });
+
   return (
     <>
       <Head>
@@ -42,7 +55,13 @@ export default function ArticlesArticlePage({ article }: ArticleProps) {
         <meta property="og:description" content={article.seoDescription || ""} />
         <meta property="og:image" content={article.image || "/default-og-image.jpg"} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://munchen-vesti.de${router.asPath}`} />
+        <meta property="og:url" content={fullUrl} />
+
+        {/* ✅ JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </Head>
 
       <div className={styles.articleContainer}>

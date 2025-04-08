@@ -5,11 +5,12 @@
     "announcements_title": "Anzeigen",
     "view_all_articles": "Alle Events anzeigen",
     "edition_date": "Ausgabe vom {{month}} {{year}}",
-    "published_fixed": "Eine Informationszeitung, die das Leben der russischsprachigen Gemeinschaft in München widerspiegelt."
+    "published_fixed": "Eine Informationszeitung, die das Leben der russischsprachigen Gemeinschaft in München widerspiegelt.",
+    "page_title": "Veranstaltungskalender für München auf Russisch – aktuelle Events, Ausstellungen, Märkte, Konzerte, Festivals und Kleinanzeigen für russischsprachige Menschen in Deutschland"
   },
   "seo": {
-    "index_title": "Münchener Nachrichten – Russische Zeitung in München",
-    "index_description": "Willkommen bei den Münchener Nachrichten – die russischsprachige Zeitung über das Leben in München. Aktuelle Veranstaltungen, Anzeigen und nützliche Infos."
+    "index_title": "Veranstaltungen und Kleinanzeigen in München – Märkte, Konzerte, Events, Neuigkeiten",
+    "index_description": "Verpassen Sie keine Events in München: kulturelle Veranstaltungen, Ausstellungen, Märkte und Kleinanzeigen auf Russisch – alles auf einen Blick bei München-Vesti."
   },
   "title": {
     "read_more": "Weiterlesen"
@@ -17,31 +18,32 @@
   "newsTitle": "Aktuelle Nachrichten",
   "info": "Wir empfehlen",
   "read_more": "Weiterlesen",
+
   "meta": {
-    "default_title": "Münchener Nachrichten",
-    "default_description": "Tipps, Ratgeber und Artikel über das Leben in München: Kultur, Alltag, Familienleben und Integration.",
+    "default_title": "Münchener Anzeigen – Veranstaltungen, Kultur und Kleinanzeigen in München",
+    "default_description": "Münchener Anzeigen – Veranstaltungskalender, nützliche Artikel, Kleinanzeigen und aktuelle Nachrichten für die russischsprachige Community in München.",
     "articles_title": "Artikel über das Leben in München",
-    "articles_description": "Nützliche Inhalte, Tipps und Berichte über das Leben, die Kultur und Veranstaltungen in München.",
+    "articles_description": "Nützliche Informationen, Tipps und Einblicke in das Leben, die Kultur und die Ereignisse in München.",
     "about_title": "Über das Projekt",
-    "about_description": "Erfahren Sie mehr über die Mission, Ziele und Redaktion der Zeitung Münchener Vesti.",
-    "ads_food_title": "Anzeigen: Ernährung",
-    "ads_food_description": "Hausgemachtes Essen, Desserts und kulinarische Angebote in München – finden Sie hier leckere Inserate!",
-    "ads_other_title": "Anzeigen: Sonstiges",
-    "ads_other_description": "Verschiedene Anzeigen, Vermietung, Angebote und mehr – Münchener Vesti.",
-    "ads_services_title": "Anzeigen: Dienstleistungen",
-    "ads_services_description": "Psychologen, Kosmetiker, Friseure und Spezialisten – Dienstleistungen in München auf Russisch.",
-    "ads_studios_title": "Anzeigen: Studios und Kurse",
-    "ads_studios_description": "Lernstudios, Theaterkurse und Aktivitäten für Kinder und Erwachsene in München – Anzeigen und Kontakte.",
-    "contacts_title": "Redaktionskontakte",
-    "contacts_description": "Kontaktieren Sie die Redaktion der Münchener Vesti: Adresse, E-Mail und Kontaktformular.",
+    "about_description": "Erfahren Sie mehr über die Mission, Ziele und Redaktion der Zeitung Münchener Anzeigen.",
+    "ads_food_title": "Kleinanzeigen: Essen & Genuss",
+    "ads_food_description": "Hausgemachtes Essen, Desserts und kulinarische Angebote in München – entdecken Sie leckere Anzeigen direkt hier!",
+    "ads_other_title": "Kleinanzeigen: Sonstiges",
+    "ads_other_description": "Verschiedene Angebote, Vermietung, Verkäufe und mehr – Münchener Anzeigen.",
+    "ads_services_title": "Kleinanzeigen: Dienstleistungen",
+    "ads_services_description": "Psychologen, Kosmetiker, Friseure und weitere russischsprachige Fachkräfte – Dienstleistungen in München.",
+    "ads_studios_title": "Kleinanzeigen: Studios und Kurse",
+    "ads_studios_description": "Lernstudios, Theatergruppen, Kurse für Kinder und Erwachsene in München – aktuelle Anzeigen mit Kontakten.",
+    "contacts_title": "Kontakt zur Redaktion",
+    "contacts_description": "Nehmen Sie Kontakt mit der Redaktion der Münchener Anzeigen auf: Adresse, E-Mail und Kontaktformular.",
     "impressum_title": "Impressum",
-    "impressum_description": "Rechtliche Informationen zur Redaktion der Münchener Vesti: Adresse, Kontakte, Urheberrechte und Haftungsausschluss.",
-    "privacy_title": "Datenschutzrichtlinie",
-    "privacy_description": "Erfahren Sie, wie Münchener Vesti Ihre Daten sammelt, verwendet und schützt – einschließlich Informationen über Cookies.",
-    "events_title": "Veranstaltungen und Termine",
-    "events_description": "Kommende Events und Ankündigungen in München: Konzerte, Workshops, Feste, Vorträge und mehr.",
+    "impressum_description": "Rechtliche Informationen zur Redaktion der Münchener Anzeigen: Adresse, Kontakte, Urheberrechte und Haftungsausschluss.",
+    "privacy_title": "Datenschutzerklärung",
+    "privacy_description": "Erfahren Sie, wie die Münchener Anzeigen Ihre Daten erfassen, nutzen und schützen – inklusive Cookie-Hinweise.",
+    "events_title": "Veranstaltungen und Events",
+    "events_description": "Bevorstehende Veranstaltungen in München: Konzerte, Workshops, Festivals, Vorträge und mehr.",
     "all_events_title": "Alle Veranstaltungen",
-    "all_events_description": "Eine vollständige Liste aller Veranstaltungen in München – vergangene und zukünftige Termine."
+    "all_events_description": "Komplette Übersicht aller vergangenen und bevorstehenden Veranstaltungen in München."
   },
   
   "menu": {
@@ -169,23 +171,9 @@
     "author": "Autor",
     "not_found": "Nachricht nicht gefunden"
   },
-  "legal_services_title": "RECHTSBERATUNG – ZUVERLÄSSIGE JURISTISCHE UNTERSTÜTZUNG",
-  "legal_services_text": "Benötigen Sie rechtliche Hilfe? Wir bieten professionelle Anwaltsdienstleistungen in München!",
-  "legal_services_point1": "Beratung zu Zivil-, Straf- und Verwaltungsrecht",
-  "legal_services_point2": "Dokumentenerstellung und Klageeinreichung",
-  "legal_services_point3": "Vertretung vor Gericht und in Verhandlungen",
-  "legal_services_point4": "Juristische Begleitung von Transaktionen und Verträgen",
-  "legal_services_point5": "Einwanderungs- und Familienrechtliche Fragen",
-  "legal_services_location": "Wo: München",
-  "legal_services_contact": "Kontakt: [Telefonnummer / E-Mail]",
-  "legal_services_more_info": "Mehr Informationen: [Link zur Website / Seite]",
-
-  "tutor_needed_title": "Deutsch-Nachhilfe gesucht",
-  "tutor_needed_text": "Ich suche einen Deutschlehrer. Bitte kontaktieren Sie mich.",
-
-  "apartment_rent_title": "Wohnung zu vermieten",
-  "apartment_rent_text": "Wohnung im Zentrum zu vermieten. Details per Telefon: +49 123 456789.",
-
+ 
+  "theater_academy_titleSEO": "Theaterakademie in München – Studios, Kurse und Aufführungen",
+  "theater_academy_descriptionSEO": "Theaterausbildung, Schauspiel und kreative Entwicklung für Kinder und Erwachsene in München. Alter: 1,5 bis 55 Jahre.",
   "theater_academy_creative_center": "Münchner Zentrum für kreative Kinderentwicklung „Harmonie“.",
   "theater_academy_group_teremok_post1": "Kreative Entwicklungsgruppe ",
   "theater_academy_group_teremok_bold": "„Teremok“",
@@ -246,6 +234,8 @@
   "theater_academy_more_info_label": "Mehr Informationen",
   "theater_academy_more_info": "https://georgdaudrich.com",
 
+  "psychologist_titleSEO": "Psychologin Tatjana Smirnova – Beratung in München",
+  "psychologist_descriptionSEO": "Erfahrene Psychologin in München: Einzel- und Familienberatung, Unterstützung in schwierigen Lebenssituationen.",
   "psychologist_title": "Wenn es scheint, als würde alles nicht so laufen, wie man es sich wünscht…",
   "psychologist_description_point1": "Manchmal stehen wir an einem Punkt, an dem das Leben einfach nicht so funktioniert, wie wir es uns vorstellen. Wiederkehrende Muster, Ängste, Unsicherheiten – all das kann uns daran hindern, voranzukommen. In solchen Momenten ist es wichtig, innezuhalten, zu verstehen, was uns hierher geführt hat, und sanft einen neuen Weg zu finden.",
   "psychologist_description_point2": "Ich bin Tatjana, praktizierende Psychologin. Gemeinsam finden wir heraus, was Sie wirklich wollen und wie Sie dorthin gelangen.",
@@ -268,7 +258,10 @@
   "psychologist_contact_link": "https://t.me/smirtatjana",
   "psychologist_web_text": "Mehr über meinen Ansatz - ",
   "psychologist_web_link": "https://tatjanasmirnova.com",
+  
   "beauticum": {
+  "titleSEO": "Beauticum – Kosmetik und Hautpflege in München",
+  "descriptionSEO": "Professionelle Behandlungen, Reinigung, Massage und Ästhetik. Jetzt Termin vereinbaren!",
   "title": "Kosmetikstudio Beauticum",
   "link": "https://www.instagram.com/kosmetikstudio.beauticum?igsh=MTgzdmF6MWh5dnZocQ==",
   "address": "Albert-Rosshaupterstr. 52, 81369 München",
@@ -295,7 +288,8 @@
   "contact_text": "Für alle Fragen rufen Sie uns unter folgender Nummer an:"
 },
   "vileta": {
-    "title": "Viletta – Schmuckstücke voller natürlicher Kraft",
+    "titleSEO": "Viletta – handgefertigter Schmuck mit Edelsteinen und Naturkraft",
+    "descriptionSEO": "Individuell ausgewählte Edelsteine nach Geburtsdatum und Ziel – Ihr persönlicher Talisman von Viletta." ,    "title": "Viletta – Schmuckstücke voller natürlicher Kraft",
     "description1": "In jedem Stein steckt die Energie der Erde – ihre Weisheit und Harmonie. Natürliche Mineralien verzaubern nicht nur mit ihrer Schönheit, sondern tragen eine tiefere Bedeutung in sich und können als Wegweiser zu innerem Gleichgewicht, Selbstvertrauen und Erfolg dienen.",
     "description2": "Viletta kreiert Schmuck, der Ästhetik und die Kraft der Natur vereint. Wir wählen Edelsteine individuell aus, basierend auf Ihrem Geburtsdatum, Namen und persönlichen Zielen, sodass jedes Schmuckstück nicht nur ein Accessoire, sondern Ihr persönlicher Talisman und Inspirationsquelle wird.",
     "description3": "Das ist mehr als nur Schmuck – es sind Schmuckstücke, die für Sie wirken. Entdecken Sie die Welt der natürlichen Energie mit Viletta.",
@@ -303,6 +297,8 @@
     "link": "https://www.instagram.com/letta_viletta?igsh=MXhlcGcyZGM0enl0Yw=="
   },
   "tibetan_bowls": {
+    "titleSEO": "Tibetische Klangschalen – Klangtherapie in München",
+    "descriptionSEO": "Entspannung und Energieausgleich mit tibetischen Klangschalen in München – erleben Sie Ruhe und Harmonie.",
     "title": "Tibetische Klangschalen – die Kunst tiefer Harmonie",
     "highlight1": "Klang und Vibration sind kraftvolle Werkzeuge zur Wiederherstellung des Gleichgewichts.",
     "description1": "Die tibetische Klangschalenmassage kombiniert Klangtherapie mit sanfter Vibration. Ihr Klang füllt den Raum mit einer besonderen Energie, die tiefe Entspannung und Regeneration fördert.",
@@ -316,7 +312,9 @@
     "contact_text": "Buchen Sie eine Sitzung und erleben Sie tiefe Entspannung durch Klang und Vibration:",
     "contact_link": "https://www.instagram.com/letta_beauty_munchen?igsh=MTRwejdid3RycDZoYw=="
   },
-    "letta": {
+  "letta": {
+    "titleSEO": "Letta Beauty – Kosmetiksalon in München",
+    "descriptionSEO": "Letta Beauty bietet Kosmetik, Permanent Make-up, Massagen und mehr in München.",
     "title": "Letta – Raum für Schönheit, Komfort und Harmonie",
     "address": "München, Deutschland",
     "description1": "Wahre Selbstpflege ist eine Kombination aus Ästhetik, Gesundheit und innerem Gleichgewicht. Bei Letta wird jede Behandlung zu einem Ritual der Erneuerung, Entspannung und Selbstsicherheit.",
@@ -331,12 +329,15 @@
   },
   "salon_rental": {
     "title": "Vermietung eines Arbeitsplatzes im Kosmetiksalon, München",
+    "seo_description": "Ein Raum zur Miete für die Arbeit",
     "description1": "Ein Raum zur Miete für die Arbeit (geeignet für Beauty-Experten, Masseure, Permanent-Make-up-Künstler usw.), sowie für Workshops.",
     "description2": "Auch verfügbar: Maniküretisch für Nageldesigner und Friseurstuhl. Miete täglich oder monatlich möglich.",
     "description3": "Der Salon befindet sich 3 Minuten von der U-Bahn-Station Harras entfernt (7 Minuten von Marienplatz), gute Verkehrsanbindung, Lidl, DM und andere Geschäfte in der Nähe.",
     "contact": "Bei Fragen bitte per Telefon: "
   },
   "hair_salon": {
+    "titleSEO": "Friseursalon in München – Hairteammuenchen",
+    "descriptionSEO": "Damen-, Herren- und Kinderhaarschnitte, Färben, Stylings und Pflege – mitten im Herzen Münchens.",
     "title": "Hairteammuenchen – Ihr perfekter Stil im Herzen Münchens!",
     "description1": "Professionelle Friseurdienstleistungen für Frauen, Männer und Kinder.",
     "description2": "Färben, Haarpflege und Stylings für besondere Anlässe.",
@@ -351,6 +352,8 @@
     "contact_text": "Telefon - "
   },
   "tomate_pizza": {
+    "titleSEO": "Tomate Pizza in München – Italienische Pizza und Pasta",
+    "descriptionSEO": "Genießen Sie echte italienische Pizza und Pasta bei Tomate Pizza in München. Online oder telefonisch bestellen.",
     "title": "Tomate Pizza – Geschmack, der begeistert!",
     "address": "Rosenheimerstr. 117, 81667 München",
     "web_text": "Menü: ",
@@ -358,7 +361,9 @@
     "description": "Heiß, aromatisch, unwiderstehlich lecker! Besuchen Sie Tomate Pizza und genießen Sie Ihre Lieblingspizzen mit frischen Zutaten oder bestellen Sie bequem nach Hause – wir liefern den Geschmack direkt zu Ihnen!"
   },
   "purebeauty": {
-    "title": "Salon Pure Beauty",
+    "titleSEO": "Pure Beauty – Kosmetiksalon in München",
+    "descriptionSEO": "Gesichtsbehandlungen, Massagen, Reinigung und ästhetische Pflege bei Pure Beauty in München. Individuelle Betreuung und gemütliche Atmosphäre.",
+    "title": "Pure Beauty – Kosmetiksalon in München",
     "address": "Hansastraße 8C, München",
     "intro": "Hallo zusammen! Mein Name ist Swetlana. Ich lade Sie herzlich in meine Welt der Schönheit ein!",
     "service1": "Gesichtsmassage",
@@ -375,6 +380,8 @@
     "contact_text": "Kontaktieren Sie mich gerne über WhatsApp für einen Termin oder eine Beratung."
   },
   "orange_sun": {
+    "orange_sun_seo_title": "Osterdesserts und Musik – Orange Sun Studio",
+    "orange_sun_seo_description": "Der Kuchen „Ostersonntag“, der Cheesecake „Hase mit schwarzer Johannisbeere“ und eine Frühlings-Playlist – erleben Sie Ostern mit Orange Sun Studio.",
     "title": "Ostern mit Musikgeschmack",
     "intro": "Dieses Ostern ist nicht nur ein Fest, sondern eine echte Symphonie aus Geschmack und Emotionen. Ich wollte, dass jedes Dessert aus meiner Osterkollektion klingt… Ja, klingt! Denn jede meiner Süßspeisen hat ihre eigene Atmosphäre, ihren Rhythmus und ihre Stimmung.",
     "dessert_title": "Käsekuchen „Häschen mit schwarzer Johannisbeere“",

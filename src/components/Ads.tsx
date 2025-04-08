@@ -1,8 +1,8 @@
 import styles from "@/styles/Ads.module.css";
 import Image from "next/image";
 import useTranslation from "@/hooks/useTranslation";
-import TibetanBowls from "./ads/TibetanBowls";
-import SalonRental from "./ads/SalonRental";
+import TibetanBowls from "./ads/services/TibetanBowls";
+import SalonRental from "./ads/other/SalonRental";
 
 export default function Ads() {
   const t = useTranslation();

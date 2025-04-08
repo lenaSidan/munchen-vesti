@@ -28,8 +28,10 @@ export default function News({ newsList }: NewsListProps) {
   return (
     <>
       <Seo title={t("meta.news_title")} description={t("meta.news_description")} />
+      <h1 className={styles.visuallyHidden}>{t("meta.news_title")}</h1>
+
       <div className={styles.container}>
-        <h3>{locale === "ru" ? "fffАктуальные новости" : "Aktuelle Nachrichten"}</h3>
+        <h2>{locale === "ru" ? "Актуальные новости" : "Aktuelle Nachrichten"}</h2>
 
         {newsList.map((news) => (
           <div key={news.slug} className={styles.card}>
@@ -37,7 +39,7 @@ export default function News({ newsList }: NewsListProps) {
               <Image src={news.image} alt={news.title} className={styles.image} width={400} height={200} />
             )}
             <div className={styles.content}>
-              <h2>{news.title}</h2>
+              <h3>{news.title}</h3>
               {news.date && <p className={styles.date}>{new Date(news.date).toLocaleDateString(locale || "ru")}</p>}
               <p dangerouslySetInnerHTML={{ __html: news.excerpt }} />
               <Link href={`/news/${news.slug}`}>

@@ -42,13 +42,15 @@ export default function EventsPage({ events }: EventsProps) {
   return (
     <>
       <Seo title={t("meta.events_title")} description={t("meta.events_description")} />
+      <h1 className={styles.visuallyHidden}>{t("meta.events_title")}</h1>
       <div className={styles.container}>
-        <h3 className={styles.pageTitle}>{t("menu.announcements")}</h3>
+        <h2 className={styles.pageTitle}>{t("menu.announcements")}</h2>
 
         {events.map((event) => (
           <div key={event.slug} className={styles.eventCard}>
-            <h2 className={styles.eventTitle}>{event.title}</h2>
-
+            <div className={styles.titleBox}>
+              <h3 className={styles.eventTitle}>{event.title}</h3>
+            </div>
             {/* Дата, время и место */}
             <p className={styles.meta}>
               {event.time && ` | ${event.time}`}
