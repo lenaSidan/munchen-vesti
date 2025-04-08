@@ -146,49 +146,52 @@ async function processMarkdown(content: string) {
 export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const events = getEventsByLocale(locale || "ru");
 
-  const today = new Date();
-  today.setHours(0, 0, 0, 0); // Убираем время для корректного сравнения
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
 
-  const sortedEvents = events
-    .filter((event) => {
-      if (!event.date) return false; // Пропускаем события без даты
-      const startDate = new Date(event.date).getTime();
-      return startDate >= today.getTime(); // Оставляем только будущие события
-    })
-    .sort((a, b) => {
-      const startDateA = new Date(a.date || "").getTime();
-      const startDateB = new Date(b.date || "").getTime();
+  const tenDaysLater = new Date(now);
+  tenDaysLater.setDate(tenDaysLater.getDate() + 10);
 
-      if (startDateA !== startDateB) {
-        return startDateA - startDateB; // Сортируем по дате начала (сначала ближайшие)
-      }
+  const filteredEvents = events.filter((event) => {
+    if (!event.date) return false;
 
-      // Если даты начала одинаковые, сортируем по дате окончания (если есть)
-      const endDateA = a.endDate ? new Date(a.endDate).getTime() : startDateA;
-      const endDateB = b.endDate ? new Date(b.endDate).getTime() : startDateB;
+    const startDate = new Date(event.date);
+    const endDate = event.endDate ? new Date(event.endDate) : startDate;
 
-      return endDateA - endDateB; // Более короткие события идут первыми
-    });
+    return (
+      // Либо начинается в течение 10 дней
+      (startDate >= now && startDate <= tenDaysLater) ||
+      // Либо уже идёт (началось и не закончилось)
+      (startDate <= now && endDate >= now)
+    );
+  });
+
+  const sortedEvents = filteredEvents.sort((a, b) => {
+    const startDateA = new Date(a.date || "").getTime();
+    const startDateB = new Date(b.date || "").getTime();
+    return startDateA - startDateB;
+  });
 
   console.log(
-    "📅 Отфильтрованные и отсортированные события:",
-    sortedEvents.map((e) => e.date)
+    "✅ Актуальные события для главной страницы:",
+    sortedEvents.map((e) => `${e.title} (${e.date}${e.endDate ? "–" + e.endDate : ""})`)
   );
 
-  // Загружаем переводы
   const translations = await import(`@/locales/${locale || "ru"}.json`);
 
-  // Обрабатываем Markdown для главной и второй статьи
   const mainEvent =
-    sortedEvents.length > 0 ? { ...sortedEvents[0], content: await processMarkdown(sortedEvents[0].content) } : null;
+    sortedEvents.length > 0
+      ? { ...sortedEvents[0], content: await processMarkdown(sortedEvents[0].content) }
+      : null;
 
   const secondEvent =
-    sortedEvents.length > 1 ? { ...sortedEvents[1], content: await processMarkdown(sortedEvents[1].content) } : null;
+    sortedEvents.length > 1
+      ? { ...sortedEvents[1], content: await processMarkdown(sortedEvents[1].content) }
+      : null;
 
-  // Загружаем объявления из JSON и переводим их
   const translatedAnnouncements = announcementsData.map((ann: Announcement) => ({
     ...ann,
-    text: translations[ann.textKey] || ann.textKey, // Переводим объявления
+    text: translations[ann.textKey] || ann.textKey,
   }));
 
   return {
@@ -198,6 +201,6 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
       otherEvents: sortedEvents.length > 2 ? sortedEvents.slice(2, 5) : [],
       announcements: translatedAnnouncements,
     },
-    revalidate: 60,
+    revalidate: 43200,
   };
 };
