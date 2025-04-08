@@ -9,7 +9,7 @@ export default function SalonRental() {
 
   return (
     <AdWrapper
-      title={t("salon_rental.title")}
+      title={t("salon_rental.titleSEO")}
       description={t("salon_rental.seo_description")}
       image="/images/salon_rental.webp"
       url="/ads/other/salon-rental"
