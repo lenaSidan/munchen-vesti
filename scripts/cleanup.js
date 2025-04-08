@@ -3,49 +3,11 @@ import path from "path";
 
 const baseDir = process.cwd();
 const imagesDir = path.join(baseDir, "public", "images");
-const logPath = path.join(baseDir, "cleanup-log.txt");
-const markdownDirs = ["public/events", "public/news", "public/articles"];
+const outputLog = path.join(baseDir, "log", "unused-images.txt");
 const codeDirs = ["src", "public"];
 const validExtensions = [".md", ".ts", ".tsx"];
 const imagePattern = /\/images\/([a-zA-Z0-9._-]+\.(webp|png|jpg|jpeg))/g;
 
-// Логгер
-function log(message) {
-  console.log(message);
-  fs.appendFileSync(logPath, `[${new Date().toISOString()}] ${message}\n`);
-}
-
-// 1. Очистка image: у прошедших событий (оставляя .md-файл)
-function cleanOldMarkdownImages() {
-  const now = new Date();
-  now.setHours(0, 0, 0, 0);
-
-  markdownDirs.forEach((folder) => {
-    const dirPath = path.join(baseDir, folder);
-    if (!fs.existsSync(dirPath)) return;
-
-    const files = fs.readdirSync(dirPath).filter((f) => f.endsWith(".md"));
-
-    for (const file of files) {
-      const fullPath = path.join(dirPath, file);
-      const content = fs.readFileSync(fullPath, "utf-8");
-
-      const dateMatch = content.match(/date:\s*(.+)/);
-      const date = dateMatch ? new Date(dateMatch[1]) : null;
-
-      if (date && date < now && folder.includes("events")) {
-        const cleaned = content
-          .replace(/^image:.*$/gm, "")
-          .replace(/^imageAlt:.*$/gm, "");
-
-        fs.writeFileSync(fullPath, cleaned.trim() + "\n");
-        log(`📝 Очистка изображения в прошедшем событии: ${file}`);
-      }
-    }
-  });
-}
-
-// 2. Поиск и удаление неиспользуемых изображений
 function findAllUsedImages() {
   const used = new Set();
 
@@ -54,12 +16,12 @@ function findAllUsedImages() {
     const entries = fs.readdirSync(dir, { withFileTypes: true });
 
     for (const entry of entries) {
-      const entryPath = path.join(dir, entry.name);
+      const fullPath = path.join(dir, entry.name);
 
       if (entry.isDirectory()) {
-        scanDir(entryPath);
-      } else if (validExtensions.some((ext) => entry.name.endsWith(ext))) {
-        const content = fs.readFileSync(entryPath, "utf-8");
+        scanDir(fullPath);
+      } else if (validExtensions.some(ext => entry.name.endsWith(ext))) {
+        const content = fs.readFileSync(fullPath, "utf-8");
         const matches = content.match(imagePattern);
         if (matches) {
           matches.forEach((m) => used.add(m.replace("/images/", "").trim()));
@@ -68,38 +30,31 @@ function findAllUsedImages() {
     }
   };
 
-  codeDirs.forEach((d) => scanDir(path.join(baseDir, d)));
+  codeDirs.forEach((dir) => scanDir(path.join(baseDir, dir)));
   return used;
 }
 
-function deleteUnusedImages() {
-  if (!fs.existsSync(imagesDir)) return;
+function findUnusedImages() {
+  if (!fs.existsSync(imagesDir)) return [];
 
-  const used = findAllUsedImages();
-  const images = fs.readdirSync(imagesDir);
-
-  let count = 0;
-  images.forEach((img) => {
-    if (!used.has(img)) {
-      fs.unlinkSync(path.join(imagesDir, img));
-      log(`🗑️ Удалено неиспользуемое изображение: ${img}`);
-      count++;
-    }
-  });
-
-  if (count === 0) {
-    log("✅ Все изображения используются.");
-  } else {
-    log(`🎉 Удалено ${count} изображений.`);
-  }
+  const usedImages = findAllUsedImages();
+  const allImages = fs.readdirSync(imagesDir);
+  return allImages.filter((img) => !usedImages.has(img));
 }
 
-// Запуск
 function runCleanup() {
-  log("🚀 Запуск очистки...");
-  cleanOldMarkdownImages();
-  deleteUnusedImages();
-  log("✅ Очистка завершена.\n");
+  console.log("🔎 Поиск неиспользуемых изображений...");
+
+  const unused = findUnusedImages();
+  if (unused.length === 0) {
+    console.log("✅ Все изображения используются.");
+    return;
+  }
+
+  const output = unused.map((img) => `/public/images/${img}`).join("\n");
+  fs.mkdirSync(path.dirname(outputLog), { recursive: true });
+  fs.writeFileSync(outputLog, output);
+  console.log(`📁 Найдено ${unused.length} неиспользуемых изображений. Сохранено в ${outputLog}`);
 }
 
 runCleanup();
