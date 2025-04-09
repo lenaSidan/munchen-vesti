@@ -3,33 +3,12 @@ import Image from "next/image";
 import styles from "@/components/ads/services/pureBeautySalon.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import Link from "next/link";
-import AdWrapper from "../AdWrapper";
 
 export default function PureBeautySalon() {
   const t = useTranslation();
 
   return (
-    <AdWrapper
-      title={t("purebeauty.titleSEO")}
-      description={t("purebeauty.descriptionSEO")}
-      image="/images/pure_beauty_salon.jpg"
-      url="/ads/services/pure-beauty-salon"
-      type="Service"
-      additionalJsonLd={{
-        name: t("purebeauty.title"),
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: t("purebeauty.address"),
-          addressLocality: "München",
-        },
-        contactPoint: {
-          "@type": "ContactPoint",
-          contactType: "Customer Service",
-          telephone: "+4930933552259",
-          url: "https://wa.me/380933552259",
-        },
-      }}
-    >
+    <>
       <h1 className={styles.visuallyHidden}>{t("purebeauty.titleSEO")}</h1>
 
       <div className={styles.mainWrapper}>
@@ -84,6 +63,6 @@ export default function PureBeautySalon() {
 
         <div className={`${styles.decorativeLine} ${styles.bottom}`}></div>
       </div>
-    </AdWrapper>
+    </>
   );
 }

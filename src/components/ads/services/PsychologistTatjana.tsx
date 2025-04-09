@@ -3,26 +3,12 @@ import Image from "next/image";
 import styles from "@/components/ads/services/psychologistTatjana.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import Link from "next/link";
-import AdWrapper from "../AdWrapper";
 
 export default function PsychologistTatjana() {
   const t = useTranslation();
 
   return (
-    <AdWrapper
-      title={t("psychologist_titleSEO")}
-      description={t("psychologist_descriptionSEO")}
-      image="/images/psychologist.webp"
-      url="/ads/services/psychologist-tatjana"
-      additionalJsonLd={{
-        name: t("psychologist_title"),
-        url: t("psychologist_web_link"),
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "München",
-        },
-      }}
-    >
+    <>
       <h1 className={styles.visuallyHidden}>{t("psychologist_title")}</h1>
 
       <div className={styles.mainWrapper}>
@@ -105,6 +91,6 @@ export default function PsychologistTatjana() {
           <span className={styles.left}>⊱❧</span>
         </div>
       </div>
-    </AdWrapper>
+    </>
   );
 }

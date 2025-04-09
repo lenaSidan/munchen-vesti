@@ -3,34 +3,12 @@ import Image from "next/image";
 import styles from "@/components/ads/services/beautySalon.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import Link from "next/link";
-import AdWrapper from "../AdWrapper";
 
 export default function BeautySalon() {
   const t = useTranslation();
 
-  const title = t("beauticum.titleSEO");
-  const description = t("beauticum.descriptionSEO"); // добавь ключ в переводах
-  const address = t("beauticum.address");
-
-  return (
-    <AdWrapper
-      title={title}
-      description={description}
-      image="/images/kosmetikstudio.webp"
-      url="/ads/beauticum"
-      additionalJsonLd={{
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: address,
-          addressLocality: "München",
-        },
-        contactPoint: {
-          "@type": "ContactPoint",
-          telephone: "+49 176 22972939",
-          contactType: "Customer Service",
-        },
-      }}
-    >
+ return (
+    <>
       <h1 className={styles.visuallyHidden}>{t("beauticum.titleSEO")}</h1>
 
       <div className={styles.mainWrapper}>
@@ -105,6 +83,6 @@ export default function BeautySalon() {
         <span className={styles.left}>⊱❧</span> */}
         </div>
       </div>
-    </AdWrapper>
+    </>
   );
 }

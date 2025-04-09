@@ -3,31 +3,12 @@ import Image from "next/image";
 import styles from "@/components/ads/services/lettaBeauty.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import Link from "next/link";
-import AdWrapper from "../AdWrapper";
 
 export default function LettaBeauty() {
   const t = useTranslation();
 
   return (
-    <AdWrapper
-      title={t("letta.titleSEO")}
-      description={t("letta.descriptionSEO")}
-      image="/images/letta_beauty.webp"
-      url="/ads/services/letta-beauty"
-      type="Service"
-      additionalJsonLd={{
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: t("letta.address"),
-          addressLocality: "München",
-        },
-        contactPoint: {
-          "@type": "ContactPoint",
-          contactType: "Customer Service",
-          url: t("letta.link"),
-        },
-      }}
-    >
+    <>
       <h1 className={styles.visuallyHidden}>{t("letta.titleSEO")}</h1>
 
       <div className={styles.mainWrapper}>
@@ -35,12 +16,7 @@ export default function LettaBeauty() {
 
         <div className={styles.titleBox}>
           <div className={styles.title}>
-            <Link
-              className={styles.linkBoxHref}
-              href={t("letta.link")}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link className={styles.linkBoxHref} href={t("letta.link")} target="_blank" rel="noopener noreferrer">
               {t("letta.title")}
             </Link>
           </div>
@@ -75,12 +51,7 @@ export default function LettaBeauty() {
 
           <div className={styles.linkBox}>
             {t("letta.contact_text")}{" "}
-            <Link
-              className={styles.linkBoxHref2}
-              href={t("letta.link")}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link className={styles.linkBoxHref2} href={t("letta.link")} target="_blank" rel="noopener noreferrer">
               {t("letta.contact")}
             </Link>
           </div>
@@ -88,6 +59,6 @@ export default function LettaBeauty() {
 
         <div className={`${styles.decorativeLine} ${styles.bottom}`}></div>
       </div>
-    </AdWrapper>
+    </>
   );
 }
