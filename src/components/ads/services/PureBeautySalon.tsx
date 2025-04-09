@@ -9,8 +9,6 @@ export default function PureBeautySalon() {
 
   return (
     <>
-      <h1 className={styles.visuallyHidden}>{t("purebeauty.titleSEO")}</h1>
-
       <div className={styles.mainWrapper}>
         <div className={styles.decorativeLine}></div>
 

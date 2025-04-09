@@ -9,8 +9,6 @@ export default function HairSalonAd() {
 
   return (
     <>
-      <h1 className={styles.visuallyHidden}>{t("hair_salon.title")}</h1>
-
       <div className={styles.mainWrapper}>
         <div className={styles.decorativeLine}>
           <span className={styles.left}>𐎐</span>
@@ -18,12 +16,10 @@ export default function HairSalonAd() {
         </div>
         <div className={styles.adsBox}>
           <div className={styles.adsContent}>
-            {/* Заголовок */}
             <div className={styles.titleBox}>
               <h2 className={styles.title}>{t("hair_salon.title")}</h2>
             </div>
 
-            {/* Основной текст */}
             <div className={styles.description}>
               <p className={styles.description1}>{t("hair_salon.description1")}</p>
               <p className={styles.description2}>{t("hair_salon.description2")}</p>
@@ -37,7 +33,7 @@ export default function HairSalonAd() {
                 height={200}
               />
             </div>
-            {/* Контактная информация */}
+
             <div className={styles.contactBox}>
               <div className={styles.address}>
                 <p className={styles.description3}>

@@ -9,8 +9,6 @@ export default function LettaBeauty() {
 
   return (
     <>
-      <h1 className={styles.visuallyHidden}>{t("letta.titleSEO")}</h1>
-
       <div className={styles.mainWrapper}>
         <div className={styles.decorativeLine}></div>
 

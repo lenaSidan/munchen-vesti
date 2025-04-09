@@ -9,8 +9,6 @@ export default function TibetanBowls() {
 
   return (
     <>
-      <h1 className={styles.visuallyHidden}>{t("tibetan_bowls.titleSEO")}</h1>
-
       <div className={styles.mainWrapper}>
         <div className={styles.decorativeLine}></div>
 
@@ -30,7 +28,6 @@ export default function TibetanBowls() {
               />
             </div>
 
-            {/* Основной текст */}
             <div className={styles.description}>
               <p>
                 <strong>{t("tibetan_bowls.highlight1")}</strong> {t("tibetan_bowls.description1")}
@@ -41,7 +38,6 @@ export default function TibetanBowls() {
               <p>{t("tibetan_bowls.description3")}</p>
             </div>
 
-            {/* Преимущества сеанса */}
             <div className={styles.benefits}>
               <h3>{t("tibetan_bowls.benefits_title")}</h3>
               <p>{t("tibetan_bowls.benefit1")}</p>
@@ -49,7 +45,6 @@ export default function TibetanBowls() {
               <p>{t("tibetan_bowls.benefit3")}</p>
             </div>
 
-            {/* Контактная информация */}
             <div className={styles.linkBox}>
               {t("tibetan_bowls.contact_text")}{" "}
               <Link

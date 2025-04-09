@@ -9,7 +9,6 @@ export default function ViletaJewelry() {
 
   return (
     <>
-      <h1 className={styles.visuallyHidden}>{t("vileta.title")}</h1>
       <div className={styles.mainWrapper}>
         <div className={styles.decorativeLine}></div>
 

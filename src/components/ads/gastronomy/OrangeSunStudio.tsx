@@ -14,7 +14,7 @@ export default function OrangeSunStudio() {
 
         <div className={styles.adsBox}>
           <div className={styles.adsContent}>
-            <h1 className={styles.title}>{t("orange_sun.title")}</h1>
+            <h2 className={styles.title}>{t("orange_sun.title")}</h2>
             <p className={styles.intro}>{t("orange_sun.intro")}</p>
 
             <h3 className={styles.subtitle}>{t("orange_sun.dessert_title")}</h3>
