@@ -8,8 +8,6 @@ export default function SalonRental() {
 
   return (
     <>
-      <h1 className={styles.visuallyHidden}>{t("salon_rentalSEO.title")}</h1>
-
       <div className={styles.mainWrapper}>
         <div className={styles.adsBox}>
           <div className={styles.adsContent}>

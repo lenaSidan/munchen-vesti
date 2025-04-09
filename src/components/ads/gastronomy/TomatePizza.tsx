@@ -9,7 +9,6 @@ export default function TomatePizzaAd() {
 
   return (
     <>
-      <h1 className={styles.visuallyHidden}>{t("tomate_pizza.titleSEO")}</h1>
       <div className={styles.mainWrapper}>
         <div className={styles.adsBox}>
           <div className={styles.adsContent}>

@@ -7,16 +7,10 @@ import Link from "next/link";
 export default function BeautySalon() {
   const t = useTranslation();
 
- return (
+  return (
     <>
-      <h1 className={styles.visuallyHidden}>{t("beauticum.titleSEO")}</h1>
-
       <div className={styles.mainWrapper}>
-        {/* Декоративная линия сверху */}
-        <div className={styles.decorativeLine}>
-          {/* <span className={styles.left}>⊱❧</span>
-        <span className={styles.right}>⊱❧</span> */}
-        </div>
+        <div className={styles.decorativeLine}></div>
 
         <div className={styles.titleBox}>
           <div className={styles.title}>
@@ -40,7 +34,6 @@ export default function BeautySalon() {
             <p>{t("beauticum.offers")}</p>
           </div>
 
-          {/* Список услуг */}
           <ul className={styles.list}>
             <li>{t("beauticum.service1")}</li>
             <li>{t("beauticum.service2")}</li>
@@ -69,7 +62,6 @@ export default function BeautySalon() {
             <p>{t("beauticum.reason2")}</p>
           </div>
 
-          {/* Контактная информация */}
           <div className={styles.linkBox}>
             {t("beauticum.contact_text")}{" "}
             <Link className={styles.linkBoxHref2} href="tel:017622972939">
@@ -77,11 +69,8 @@ export default function BeautySalon() {
             </Link>
           </div>
         </div>
-        {/* Декоративная линия снизу */}
-        <div className={`${styles.decorativeLine} ${styles.bottom}`}>
-          {/* <span className={styles.right}>⊱❧</span>
-        <span className={styles.left}>⊱❧</span> */}
-        </div>
+
+        <div className={`${styles.decorativeLine} ${styles.bottom}`}></div>
       </div>
     </>
   );
