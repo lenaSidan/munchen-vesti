@@ -3,25 +3,12 @@ import styles from "@/components/ads/gastronomy/tomatePizza.module.css";
 import Image from "next/image";
 import useTranslation from "@/hooks/useTranslation";
 import Link from "next/link";
-import AdWrapper from "../AdWrapper";
 
 export default function TomatePizzaAd() {
   const t = useTranslation();
 
   return (
-    <AdWrapper
-      title={t("tomate_pizza.titleSEO")}
-      description={t("tomate_pizza.descriptionSEO)")}
-      image="/images/tomate_pizza.webp"
-      url="/ads/gastronomy/tomate-pizza"
-      additionalJsonLd={{
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: t("tomate_pizza.address"),
-          addressLocality: "München",
-        },
-      }}
-    >
+    <>
       <h1 className={styles.visuallyHidden}>{t("tomate_pizza.titleSEO")}</h1>
       <div className={styles.mainWrapper}>
         <div className={styles.adsBox}>
@@ -65,6 +52,6 @@ export default function TomatePizzaAd() {
           </div>
         </div>
       </div>
-    </AdWrapper>
+    </>
   );
 }

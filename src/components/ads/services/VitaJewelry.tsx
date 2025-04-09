@@ -3,33 +3,13 @@ import styles from "@/components/ads/services/vitaJewelry.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import Image from "next/image";
 import Link from "next/link";
-import AdWrapper from "@/components/ads/AdWrapper";
 
 export default function ViletaJewelry() {
   const t = useTranslation();
 
-  const title = t("vileta.titleSEO");
-  const description = t("vileta.descriptionSEO");
-
   return (
-    <AdWrapper
-      title={title}
-      description={description}
-      image="/images/vileta_jewelry.webp"
-      url="/ads/vileta"
-      additionalJsonLd={{
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "München",
-        },
-        contactPoint: {
-          "@type": "ContactPoint",
-          contactType: "Customer Service",
-          url: t("vileta.link"),
-        },
-      }}
-    >
-       <h1 className={styles.visuallyHidden}>{title}</h1>
+    <>
+      <h1 className={styles.visuallyHidden}>{t("vileta.title")}</h1>
       <div className={styles.mainWrapper}>
         <div className={styles.decorativeLine}></div>
 
@@ -56,12 +36,7 @@ export default function ViletaJewelry() {
             </div>
 
             <div className={styles.linkBox}>
-              <Link
-                className={styles.linkBoxHref}
-                href={t("vileta.link")}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link className={styles.linkBoxHref} href={t("vileta.link")} target="_blank" rel="noopener noreferrer">
                 {t("vileta.contact")}
               </Link>
             </div>
@@ -70,6 +45,6 @@ export default function ViletaJewelry() {
 
         <div className={`${styles.decorativeLine} ${styles.bottom}`}></div>
       </div>
-    </AdWrapper>
+    </>
   );
 }

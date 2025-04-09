@@ -3,29 +3,12 @@ import styles from "@/components/ads/gastronomy/orangeSunStudio.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import Image from "next/image";
 import Link from "next/link";
-import AdWrapper from "../AdWrapper";
 
 export default function OrangeSunStudio() {
   const t = useTranslation();
 
   return (
-    <AdWrapper
-      title={t("orange_sun.titleSEO")}
-      description={t("orange_sun.descriptionSEO")}
-      image="/images/orangesun_pastry.webp"
-      url="/ads/gastronomy/orangesunstudio"
-      type="Product"
-      additionalJsonLd={{
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "München",
-        },
-        contactPoint: {
-          "@type": "ContactPoint",
-          contactType: "Customer Service",
-        },
-      }}
-    >
+    <>
       <div className={styles.mainWrapper}>
         <div className={styles.decorativeLine}></div>
 
@@ -97,6 +80,6 @@ export default function OrangeSunStudio() {
 
         <div className={`${styles.decorativeLine} ${styles.bottom}`}></div>
       </div>
-    </AdWrapper>
+    </>
   );
 }

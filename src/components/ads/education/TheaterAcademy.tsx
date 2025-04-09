@@ -2,7 +2,6 @@ import Image from "next/image";
 import styles from "@/components/ads/education/theaterAcademy.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import Link from "next/link";
-import AdWrapper from "../AdWrapper";
 
 export default function TheaterAcademy() {
   const t = useTranslation();
@@ -101,25 +100,7 @@ export default function TheaterAcademy() {
   ];
 
   return (
-    <AdWrapper
-      title={t("theater_academy_titleSEO")}
-      description={t("theater_academy_descriptionSEO")}
-      image="/images/theaterAcademy.webp"
-      url="/ads/education/theater-academy"
-      additionalJsonLd={{
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "München",
-          addressLocality: "München",
-          postalCode: "80331",
-        },
-        contactPoint: {
-          "@type": "ContactPoint",
-          telephone: "+49 172 7919116",
-          contactType: "Customer Service",
-        },
-      }}
-    >
+    <>
       <div className={styles.mainWrapper}>
         <div className={styles.decorativeLine}>
           <span className={styles.left}>⊱❧</span>
@@ -233,6 +214,6 @@ export default function TheaterAcademy() {
           <span className={styles.left}>⊱❧</span>
         </div>
       </div>
-    </AdWrapper>
+    </>
   );
 }
