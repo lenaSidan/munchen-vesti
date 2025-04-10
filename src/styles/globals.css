@@ -14,7 +14,7 @@
   --alt-background-light: #f6f2d9;
   --background: #f8f5e1; /* Цвет старой бумаги */
   --text-color: #3a3a3a;
-  --border-color: #8b5a2b;
+  --border-color: #c1875b;
   --heading-color: #7f1d1d;
   --heading-color2:#491010;
   --link-color: #8b5a2b;
@@ -119,8 +119,8 @@ h5 {
 }
 
 a {
-  color: var(--link-color);
-  text-decoration: none;
+  color: var(--heading-color2);
+  text-decoration: underline;
   transition: color 0.3s ease-in-out;
 }
 

@@ -1,26 +1,13 @@
 import useTranslation from "@/hooks/useTranslation";
-import Head from "next/head";
-import { useRouter } from "next/router";
+import Seo from "@/components/Seo";
 import styles from "@/styles/About.module.css";
 
 export default function About() {
   const t = useTranslation();
-  const router = useRouter();
 
   return (
     <>
-      <Head>
-        <title>
-          {t("meta.about_title")} – {t("meta.default_title")}
-        </title>
-        <meta name="description" content={t("meta.about_description")} />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content={t("meta.about_title")} />
-        <meta property="og:description" content={t("meta.about_description")} />
-        <meta property="og:image" content="/default-og-image.jpg" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://munchen-vesti.de${router.asPath}`} />
-      </Head>
+      <Seo title={t("meta.about_title")} description={t("meta.about_description")} image="/default-og-image.png" />
       <h1 className={styles.visuallyHidden}>{t("meta.about_title")}</h1>
 
       <div className={styles.container}>

@@ -20,7 +20,7 @@ export default function Seo({ title, description, image, type = "website" }: Seo
   const baseUrl = "https://munchen-vesti.de";
   const path = router.asPath;
   const url = `${baseUrl}${path}`;
-  const imageUrl = image?.startsWith("http") ? image : `${baseUrl}${image || "/default-og-image.jpg"}`;
+  const imageUrl = image?.startsWith("http") ? image : `${baseUrl}${image || "/default-og-image.png"}`;
 
   const altLocale = locale === "ru" ? "de" : "ru";
   const altHref = `${baseUrl}/${altLocale}${path}`;

@@ -8,6 +8,11 @@ export default function Document() {
         <meta name="language" content="ru" />
         <meta httpEquiv="Content-Language" content="ru" />
 
+        {/* hreflang для языковых версий */}
+        <link rel="alternate" href="https://munchen-vesti.de/" hrefLang="ru" />
+        <link rel="alternate" href="https://munchen-vesti.de/de" hrefLang="de" />
+        <link rel="alternate" href="https://munchen-vesti.de/" hrefLang="x-default" />
+
         {/* Favicon для разных устройств */}
         <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
