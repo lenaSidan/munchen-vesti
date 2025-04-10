@@ -44,7 +44,7 @@ export default function EventsPage({ events }: EventsProps) {
       <Seo title={t("meta.events_title")} description={t("meta.events_description")} />
       <h1 className={styles.visuallyHidden}>{t("meta.events_title")}</h1>
       <div className={styles.container}>
-        <h2 className={styles.pageTitle}>{t("menu.announcements")}</h2>
+        {/* <h2 className={styles.pageTitle}>{t("menu.announcements")}</h2> */}
 
         {events.map((event) => (
           <div key={event.slug} className={styles.eventCard}>
@@ -73,25 +73,37 @@ export default function EventsPage({ events }: EventsProps) {
                   </p>
                 )}
 
-                {event.link && typeof event.link === "string" ? (
-                  <p className={styles.box}>
-                    <span className={styles.label}>{t("event.link")}: </span>
-                    {event.link.split(",").map((link, index) => {
-                      const match = link.trim().match(/\[(.*?)\]\((.*?)\)/);
-                      return match ? (
-                        <span key={index}>
-                          <a href={match[2]} className={styles.valueLink} target="_blank" rel="noopener noreferrer">
-                            {match[1]}
-                          </a>
-                          {index < event.link!.split(",").length - 1 && " | "}
-                        </span>
-                      ) : null;
-                    })}
-                  </p>
-                ) : null}
+                {typeof event.link === "string" &&
+                  (() => {
+                    const links = event.link.split(",");
+                    return (
+                      <p className={styles.box}>
+                        <span className={styles.label}>{t("event.link")}: </span>
+                        {links.map((link, index) => {
+                          const match = link.trim().match(/\[(.*?)\]\((.*?)\)/);
+                          if (!match) return null;
+                          const [, text, href] = match;
+                          return (
+                            <span key={index}>
+                              <a href={href} className={styles.valueLink} target="_blank" rel="noopener noreferrer">
+                                {text}
+                              </a>
+                              {index < links.length - 1 && " | "}
+                            </span>
+                          );
+                        })}
+                      </p>
+                    );
+                  })()}
               </div>
               {event.image && (
-                <Image src={event.image} alt={event.title} className={styles.eventImage} width={400} height={200} />
+                <Image
+                  src={event.image}
+                  alt={event.imageAlt || event.title}
+                  className={styles.eventImage}
+                  width={400}
+                  height={200}
+                />
               )}
             </div>
 
@@ -102,7 +114,12 @@ export default function EventsPage({ events }: EventsProps) {
                 }}
               />
 
-              <button type="button" className={styles.toggleButton} onClick={() => toggleExpand(event.slug)}>
+              <button
+                type="button"
+                className={styles.toggleButton}
+                data-testid={`toggle-${event.slug}`}
+                onClick={() => toggleExpand(event.slug)}
+              >
                 {expandedSlug === event.slug ? t("menu.less") : t("menu.more")}
               </button>
             </div>

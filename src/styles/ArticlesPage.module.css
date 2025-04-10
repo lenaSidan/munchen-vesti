@@ -27,18 +27,18 @@
 .articleTitle {
   font-family: var(--font-headings);
   text-align: center;
-  color: var(--heading-color);
+  color: var(--heading-color2);
   margin-bottom: 20px;
 }
 
 .articleVariantA,
 .articleVariantB {
-  padding: 20px;
+  padding: 20px 20px 0 20px;
   /* border: 2px solid var(--border-color); */
   border-radius: 8px;
   background: var(--alt-background);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -113,6 +113,12 @@
   text-align: center;
   margin-bottom: 15px;
 }
+.readMore {
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: var(--font-body);
+}
 
 .decorativeLine::before,
 .decorativeLine::after,
@@ -140,7 +146,7 @@
   color: var(--heading-color);
   font-weight: bold;
   display: inline-block;
-  background: var(--alt-background1);
+  background: none;
   position: relative;
   line-height: 1;
   margin: 0 2px;
@@ -168,10 +174,6 @@
   margin-top: 15px;
 }
 .articleVariantB {
-  background: var(--alt-background);
-}
-
-.articleVariantB .decorativeLine span {
   background: var(--alt-background);
 }
 
@@ -216,7 +218,7 @@
     margin-bottom: 10px;
   }
   .image_textBox p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.4;
     margin-top: 5px;
     margin-bottom: 15px;

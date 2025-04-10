@@ -8,16 +8,14 @@ const translations: Record<string, TranslationObject> = { ru, de };
 
 export default function useTranslation() {
   const router = useRouter();
-  const locale = router?.locale ?? "ru"; // Если `useRouter()` не доступен, используем "ru"
+  const locale = router?.locale ?? "ru";
 
-  // Мемоизируем переводы
   const currentTranslations = useMemo(
     () => translations[locale] || translations["ru"],
     [locale]
   );
 
-  // Функция поиска перевода по ключу
-  const t = (key: string): string => {
+  const t = (key: string, variables?: Record<string, string>): string => {
     const keys = key.split(".");
     let result: string | TranslationObject = currentTranslations;
 
@@ -26,11 +24,21 @@ export default function useTranslation() {
         result = result[k];
       } else {
         console.warn(`Перевод не найден для ключа: ${key}`);
-        return key; // Если ключ не найден, возвращаем сам ключ
+        return key;
       }
     }
 
-    return typeof result === "string" ? result : key;
+    if (typeof result === "string") {
+      // Интерполяция {{var}}
+      if (variables) {
+        return result.replace(/\{\{(.*?)\}\}/g, (_, varName) =>
+          variables[varName.trim()] ?? ""
+        );
+      }
+      return result;
+    }
+
+    return key;
   };
 
   return t;

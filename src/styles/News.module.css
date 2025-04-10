@@ -63,9 +63,10 @@
   font-family: "Merriweather", serif;
   text-transform: uppercase;
   font-size: 0.9rem;
-  margin-top: 10px;
+  margin-top: 20px;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
+ 
 }
 
 .readMore:hover {

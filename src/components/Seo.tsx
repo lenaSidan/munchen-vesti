@@ -23,7 +23,8 @@ export default function Seo({ title, description, image, type = "website" }: Seo
   const imageUrl = image?.startsWith("http") ? image : `${baseUrl}${image || "/default-og-image.png"}`;
 
   const altLocale = locale === "ru" ? "de" : "ru";
-  const altHref = `${baseUrl}/${altLocale}${path}`;
+  const cleanPath = path.startsWith(`/${locale}`) ? path.replace(`/${locale}`, "") : path;
+  const altHref = `${baseUrl}/${altLocale}${cleanPath}`;
 
   const ogLocale = locale === "ru" ? "ru_RU" : "de_DE";
   const ogLocaleAlt = altLocale === "ru" ? "ru_RU" : "de_DE";
@@ -38,7 +39,7 @@ export default function Seo({ title, description, image, type = "website" }: Seo
       <link rel="canonical" href={url} />
       <link rel="alternate" hrefLang={locale} href={url} />
       <link rel="alternate" hrefLang={altLocale} href={altHref} />
-      <link rel="alternate" hrefLang="x-default" href={`${baseUrl}/de`} />
+      <link rel="alternate" hrefLang="x-default" href={baseUrl} />
 
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
