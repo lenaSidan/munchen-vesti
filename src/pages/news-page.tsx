@@ -29,7 +29,6 @@ export default function News({ newsList }: NewsListProps) {
     <>
       <Seo title={t("meta.news_title")} description={t("meta.news_description")} />
       <h1 className={styles.visuallyHidden}>{t("meta.news_title")}</h1>
-
       <div className={styles.container}>
         <h2>{locale === "ru" ? "Актуальные новости" : "Aktuelle Nachrichten"}</h2>
 
@@ -42,7 +41,7 @@ export default function News({ newsList }: NewsListProps) {
               <h3>{news.title}</h3>
               {news.date && <p className={styles.date}>{new Date(news.date).toLocaleDateString(locale || "ru")}</p>}
               <p dangerouslySetInnerHTML={{ __html: news.excerpt }} />
-              <Link href={`/news/${news.slug}`}>
+              <Link href={`/news/${news.slug}`} >
                 <button type="button" className={styles.readMore}>
                   {t("read_more")}
                 </button>

@@ -14,7 +14,12 @@ export default function BeautySalon() {
 
         <div className={styles.titleBox}>
           <div className={styles.title}>
-            <Link className={styles.linkBoxHref} href={t("beauticum.link")} target="_blank" rel="noopener noreferrer">
+            <Link
+              className={styles.linkBoxHref}
+              href={t("beauticum.link")}
+              target="_blank"
+              rel="noopener noreferrer"
+              legacyBehavior>
               {t("beauticum.title")}
             </Link>
           </div>

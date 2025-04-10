@@ -112,10 +112,8 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
             <ul className={styles.otherArticlesList}>
               {otherEvents.map((event) => (
                 <li key={event.slug} className={styles.articleLink}>
-                  <Link href={`/events/${event.slug}`} legacyBehavior>
-                    <a>
-                      {event.title} <span className={styles.articleDate}>{event.date}</span>
-                    </a>
+                  <Link href={`/events/${event.slug}`}>
+                    {event.title} <span className={styles.articleDate}>{event.date}</span>
                   </Link>
                 </li>
               ))}
@@ -159,9 +157,8 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
 
     return (
       // Либо начинается в течение 10 дней
-      (startDate >= now && startDate <= tenDaysLater) ||
       // Либо уже идёт (началось и не закончилось)
-      (startDate <= now && endDate >= now)
+      (startDate >= now && startDate <= tenDaysLater) || (startDate <= now && endDate >= now)
     );
   });
 
@@ -184,14 +181,12 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const secondEvent =
     sortedEvents.length > 1 ? { ...sortedEvents[1], content: await processMarkdown(sortedEvents[1].content) } : null;
 
-    const otherEvents = await Promise.all(
-      sortedEvents
-        .slice(2, 5)
-        .map(async (e) => ({
-          ...e,
-          content: await processMarkdown(e.content),
-        }))
-    );
+  const otherEvents = await Promise.all(
+    sortedEvents.slice(2, 5).map(async (e) => ({
+      ...e,
+      content: await processMarkdown(e.content),
+    }))
+  );
 
   console.log(
     "👉 otherEvents:",

@@ -48,14 +48,10 @@ export default function Event({ event }: EventProps) {
 
   return (
     <>
-     <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+      <Head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </Head>
       <Seo title={event.seoTitle || event.title} description={event.seoDescription} image={event.image} />
-
       <div className={styles.articleContainer}>
         <h2 className={styles.title}>{event.title}</h2>
         <p className={styles.meta}>
@@ -131,7 +127,7 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
   const processedContent = await remark().use(remarkGfm).use(remarkRehype).use(rehypeStringify).process(content);
 
   const contentHtml = processedContent.toString();
- 
+
   return {
     props: {
       event: {

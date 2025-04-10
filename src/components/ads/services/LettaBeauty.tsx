@@ -14,7 +14,12 @@ export default function LettaBeauty() {
 
         <div className={styles.titleBox}>
           <div className={styles.title}>
-            <Link className={styles.linkBoxHref} href={t("letta.link")} target="_blank" rel="noopener noreferrer">
+            <Link
+              className={styles.linkBoxHref}
+              href={t("letta.link")}
+              target="_blank"
+              rel="noopener noreferrer"
+              legacyBehavior>
               {t("letta.title")}
             </Link>
           </div>
@@ -49,7 +54,12 @@ export default function LettaBeauty() {
 
           <div className={styles.linkBox}>
             {t("letta.contact_text")}{" "}
-            <Link className={styles.linkBoxHref2} href={t("letta.link")} target="_blank" rel="noopener noreferrer">
+            <Link
+              className={styles.linkBoxHref2}
+              href={t("letta.link")}
+              target="_blank"
+              rel="noopener noreferrer"
+              legacyBehavior>
               {t("letta.contact")}
             </Link>
           </div>

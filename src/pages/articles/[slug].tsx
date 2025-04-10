@@ -60,7 +60,6 @@ export default function ArticlesArticlePage({ article }: ArticleProps) {
         {/* ✅ JSON-LD */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </Head>
-
       <div className={styles.articleContainer}>
         <div className={styles.articleBox}>
           <h2 className={styles.title}>{article.title}</h2>

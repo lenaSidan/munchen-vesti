@@ -35,7 +35,12 @@ export default function ViletaJewelry() {
             </div>
 
             <div className={styles.linkBox}>
-              <Link className={styles.linkBoxHref} href={t("vileta.link")} target="_blank" rel="noopener noreferrer">
+              <Link
+                className={styles.linkBoxHref}
+                href={t("vileta.link")}
+                target="_blank"
+                rel="noopener noreferrer"
+                legacyBehavior>
                 {t("vileta.contact")}
               </Link>
             </div>

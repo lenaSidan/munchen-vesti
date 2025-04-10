@@ -71,7 +71,7 @@ export default function OrangeSunStudio() {
                 href={t("orange_sun.link")}
                 target="_blank"
                 rel="noopener noreferrer"
-              >
+                legacyBehavior>
                 {t("orange_sun.contactInst")}
               </Link>
             </div>

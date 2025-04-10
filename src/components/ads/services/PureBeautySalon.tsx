@@ -16,7 +16,11 @@ export default function PureBeautySalon() {
           <div className={styles.title}>{t("purebeauty.title")}</div>
           <div className={styles.subtitle1}>{t("purebeauty.address")}</div>
           <div>
-            <Link className={styles.linkBoxHref2} href="https://wa.me/380933552259" target="_blank">
+            <Link
+              className={styles.linkBoxHref2}
+              href="https://wa.me/380933552259"
+              target="_blank"
+              legacyBehavior>
               {t("purebeauty.contact_text")}
             </Link>
           </div>

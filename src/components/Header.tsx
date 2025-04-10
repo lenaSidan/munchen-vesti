@@ -129,7 +129,6 @@ export default function Header() {
           </div>
         </nav>
       </div>
-
       <div className={styles.decorativeLine}>
         <span className={styles.left}>❧</span>
         <span className={styles.right}>❧</span>

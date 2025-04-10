@@ -30,7 +30,7 @@ export default function NewsBlock({ newsList }: Props) {
           
             {news.date && <p className={styles.date}>{new Date(news.date).toLocaleDateString()}</p>}
             <p dangerouslySetInnerHTML={{ __html: news.excerpt || "" }} />
-            <Link href={`/news/${news.slug}`}>
+            <Link href={`/news/${news.slug}`} >
               <button type="button" className={styles.readMore}>
                 {t("read_more")}
               </button>

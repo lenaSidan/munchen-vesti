@@ -35,7 +35,6 @@ export default function NewsPage({ news }: NewsProps) {
   return (
     <>
       <Seo title={news.seoTitle || news.title} description={news.seoDescription} image={news.image} />
-
       <div className={styles.container}>
         <h2 className={styles.title}>{news.title}</h2>
         {news.date && (
