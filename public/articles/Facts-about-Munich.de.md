@@ -4,6 +4,7 @@ title: "Spannende Fakten über München, die Sie überraschen werden"
 seoTitle: "Überraschende und faszinierende Fakten über München"
 seoDescription: "Erfahren Sie spannende und wenig bekannte Fakten über München. Entdecken Sie die Geschichte, Kultur und besondere Highlights dieser beeindruckenden Stadt."
 image: "/images/munchen.webp"
+imageAlt: "München ist eine Stadt, die Geschichte, Luxus und Komfort vereint"
 ---
 
 ### Bier ist hier nicht nur ein Getränk, sondern eine Kultur  

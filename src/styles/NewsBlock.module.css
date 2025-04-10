@@ -93,6 +93,11 @@
     width: 100% !important;
     margin-bottom: 20px;
   }
+  .card p{
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
 
   .content {
     flex-grow: 1;
@@ -103,7 +108,7 @@
   }
 
   .readMore {
-    margin-top: auto;
+    margin-top: 10px;
     align-self: flex-start;
   }
 }

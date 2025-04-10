@@ -24,7 +24,7 @@ Die Ursprünge Münchens reichen zurück bis zum **14. Juni 1158**, als die Stad
 #### Warum Sie den Stadtgeburtstag besuchen sollten
 Der Münchner Stadtgeburtstag bietet eine einzigartige Gelegenheit, die Stadt aus einer neuen Perspektive zu erleben. Die Kombination aus Geschichte, Kultur, Musik und Kulinarik macht dieses Fest zu einem besonderen Ereignis im Münchner Veranstaltungskalender.
 
-### Praktische Informationen
+### Praktische Informationen zur Veranstaltung
 **Datum:** 14. und 15. Juni 2025  
 **Ort:** Münchner Altstadt  
 **Eintritt:** Kostenlos  

@@ -14,9 +14,10 @@ export interface Event {
   endDate?: string;
   time?: string;
   ort?: string;
-  link?: string;
+  link: string;
   content: string;
   image?: string;
+  imageAlt?: string;
 }
 
 // Функция загрузки статей по языку
@@ -41,6 +42,7 @@ export function getEventsByLocale(locale: string): Event[] {
       link: data.link ?? null,
       content,
       image: data.image ?? null,
+      imageAlt: data.imageAlt ?? "",
     };
   });
 

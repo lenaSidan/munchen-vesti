@@ -12,16 +12,18 @@ import styles from "@/styles/NewsArticle.module.css";
 import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { getArticleJsonLd } from "@/lib/jsonld/articleJsonLd"; // ✅ импорт
+import { getArticleJsonLd } from "@/lib/jsonld/articleJsonLd";
 
 interface ArticlesArticle {
   id: number;
   slug: string;
   title: string;
+  shortTitle?: string;
   seoTitle?: string;
   seoDescription?: string;
   author?: string;
-  image?: string;
+  image: string;
+  imageAlt?: string;
   content: string;
 }
 
@@ -33,15 +35,13 @@ export default function ArticlesArticlePage({ article }: ArticleProps) {
   const t = useTranslation();
   const router = useRouter();
 
-  // ✅ Полный URL страницы статьи
   const fullUrl = `https://munchen-vesti.de/${router.locale}/articles/${article.slug}`;
 
-  // ✅ Структурированные данные
   const jsonLd = getArticleJsonLd({
     title: article.title,
     description: article.seoDescription,
     url: fullUrl,
-    image: article.image || "https://munchen-vesti.de/default-og-image.jpg",
+    image: article.image,
     author: article.author,
   });
 
@@ -53,15 +53,12 @@ export default function ArticlesArticlePage({ article }: ArticleProps) {
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content={article.seoTitle || article.title} />
         <meta property="og:description" content={article.seoDescription || ""} />
-        <meta property="og:image" content={article.image || "/default-og-image.jpg"} />
+
         <meta property="og:type" content="article" />
         <meta property="og:url" content={fullUrl} />
 
         {/* ✅ JSON-LD */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </Head>
 
       <div className={styles.articleContainer}>
@@ -76,7 +73,13 @@ export default function ArticlesArticlePage({ article }: ArticleProps) {
 
           {article.image && (
             <div className={styles.imageWrapper}>
-              <Image src={article.image} alt={article.title} width={800} height={300} className={styles.image} />
+              <Image
+                src={article.image}
+                alt={article.imageAlt || article.title}
+                width={800}
+                height={300}
+                className={styles.image}
+              />
             </div>
           )}
 
@@ -140,10 +143,12 @@ export const getStaticProps: GetStaticProps<ArticleProps> = async ({ params, loc
         id: data.id || 0,
         slug: params.slug as string,
         title: data.title || "",
+        shortTitle: data.shortTitle || null,
         seoTitle: data.seoTitle || "",
         seoDescription: data.seoDescription || "",
         author: data.author || "",
         image: data.image || null,
+        imageAlt: data.imageAlt || "",
         content: processedContent.toString(),
       },
     },

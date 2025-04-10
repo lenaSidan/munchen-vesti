@@ -20,7 +20,7 @@
   "read_more": "Weiterlesen",
 
   "meta": {
-    "default_title": "Münchener Anzeigen – Veranstaltungen, Kultur und Kleinanzeigen in München",
+    "default_title": "Münchener Anzeigen",
     "default_description": "Münchener Anzeigen – Veranstaltungskalender, nützliche Artikel, Kleinanzeigen und aktuelle Nachrichten für die russischsprachige Community in München.",
     "articles_title": "Artikel über das Leben in München",
     "articles_description": "Nützliche Informationen, Tipps und Einblicke in das Leben, die Kultur und die Ereignisse in München.",
@@ -165,7 +165,7 @@
   },
   "articles": {
     "articles": "Articles",
-    "read_more": "Weiterlesen",
+    "read_more": "Weiterlesen: {{title}}",
     "back": "zurück" ,
     "date": "Veröffentlichungsdatum",
     "author": "Autor",

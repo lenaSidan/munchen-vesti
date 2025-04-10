@@ -24,7 +24,7 @@ Das Tollwood Festival ist weit mehr als nur Musik. Es ist eine kulturelle Plattf
 ### Eintritt und Tickets
 Der **Eintritt zum Festivalgelände ist frei**, nur für bestimmte Konzerte in der Musik-Arena sind Tickets erforderlich. Der Vorverkauf läuft über die [offizielle Festivalseite](https://www.tollwood.de/en/).
 
-### Praktische Infos
+### Praktische Infos über Tollwood 
 **Daten:** 19. Juni – 20. Juli 2025  
 **Ort:** Olympiapark München  
 **Eintritt:** Frei (ausgenommen Musik-Arena)  

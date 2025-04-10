@@ -16,8 +16,10 @@ interface ArticlesArticle {
   id: number;
   slug: string;
   title: string;
+  shortTitle?: string;
   author?: string;
   image?: string;
+  imageAlt?: string;
   content: string;
 }
 
@@ -33,7 +35,7 @@ export default function ArticlesPage({ articles }: ArticlesProps) {
       <Seo title={t("meta.articles_title")} description={t("meta.articles_description")} />
       <h1 className={styles.visuallyHidden}>{t("meta.articles_title")}</h1>
       <div className={styles.container}>
-        <h2 className={styles.pageTitle}>{t("articles.articles")}</h2>
+        {/* <h2 className={styles.pageTitle}>{t("articles.articles")}</h2> */}
 
         {articles.map((article, index) => (
           <article key={article.slug} className={index % 2 === 0 ? styles.articleVariantA : styles.articleVariantB}>
@@ -59,7 +61,7 @@ export default function ArticlesPage({ articles }: ArticlesProps) {
               </div>
 
               <Link href={`/articles/${article.slug}`} className={styles.readMore}>
-                {t("articles.read_more")}
+                {article.shortTitle ? t(`articles.read_more`) + " " + article.shortTitle : t(`articles.read_more`)}
               </Link>
 
               <div className={`${styles.decorativeLine} ${styles.bottom}`}>
@@ -92,8 +94,10 @@ export const getStaticProps: GetStaticProps<ArticlesProps> = async ({ locale }) 
           id: data.id || 0, // 🆕 Берем id из фронтматтера
           slug: file.replace(`.${locale}.md`, ""),
           title: data.title || "Untitled",
+          shortTitle: data.shortTitle || null,
           author: data.author || "",
           image: data.image || null,
+          imageAlt: data.imageAlt || "",
           content: processedContent.toString(),
         };
       })

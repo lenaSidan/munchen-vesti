@@ -208,6 +208,9 @@
     margin-top: 10px;
     font-size: 1rem;
   }
+  .eventCard p {
+    font-size: 1.1rem;
+  }
   .eventTitle {
     text-align: center;
     font-size: 1.1rem;
@@ -241,6 +244,7 @@
   }
   .box {
   width: 90%;
+  margin: 0;
   }
   .value {
     font-size: 1rem;
