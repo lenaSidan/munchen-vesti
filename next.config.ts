@@ -1,4 +1,9 @@
 import type { NextConfig } from "next";
+import bundleAnalyzer from '@next/bundle-analyzer';
+
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+});
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -15,6 +20,23 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  headers() {
+    return Promise.resolve([
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=63072000; includeSubDomains; preload",
+          },
+        ],
+      },
+    ]);
+  },
 };
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);
