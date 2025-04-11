@@ -52,6 +52,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
                     width={700}
                     height={350}
                     priority={true}
+                    sizes="(max-width: 768px) 100vw, 700px"
                   />
                 )}
                 <h2 className={styles.articleTitle}>{mainEvent.title}</h2>
@@ -60,7 +61,6 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
                   {/* <span className={styles.left}>𐎐</span>
                 <span className={styles.right}>𐎐</span> */}
                 </div>
-
                 <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: mainEvent.content }} />
               </article>
             )}
@@ -69,7 +69,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
             <Ads />
           </div>
         </div>
-
+        
         {/* Вторая статья */}
         {secondEvent && (
           <article className={styles.secondArticle}>
@@ -90,6 +90,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
                   className={styles.secondImage}
                   width={600}
                   height={350}
+                  sizes="(max-width: 768px) 100vw, 600px"
                 />
               )}
               <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: secondEvent.content }} />

@@ -57,7 +57,7 @@ export default function ArticlesArticlePage({ article }: ArticleProps) {
         <meta property="og:type" content="article" />
         <meta property="og:url" content={fullUrl} />
 
-        {/* ✅ JSON-LD */}
+        ✅ JSON-LD
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </Head>
       <div className={styles.articleContainer}>
@@ -78,6 +78,7 @@ export default function ArticlesArticlePage({ article }: ArticleProps) {
                 width={800}
                 height={300}
                 className={styles.image}
+                sizes="(max-width: 768px) 100vw, 800px"
               />
             </div>
           )}

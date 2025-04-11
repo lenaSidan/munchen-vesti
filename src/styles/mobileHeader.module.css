@@ -134,9 +134,9 @@
   gap: 8px;
   
 }
-.nav a:hover {
+.nav :hover {
   color: var(--heading-color);
-  text-decoration: underline;
+  
 }
 .active {
 
@@ -153,13 +153,19 @@
   border: none;
   cursor: pointer;
   padding: 6px 0 0 0;
+  font-weight: 600;
 }
 
 .navLink:hover {
   color: var(--heading-color);
   text-decoration: underline;
+  transition: color 0.2s;
+ }
+ .active {
+  font-weight: bold;
+  color: var(--heading-color);
+  text-decoration: underline;
 }
-
 .submenu {
   display: flex;
   flex-direction: column;
@@ -175,6 +181,7 @@
   font-family: "Merriweather", serif;
   font-size: 0.9rem;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .submenuLink:hover {

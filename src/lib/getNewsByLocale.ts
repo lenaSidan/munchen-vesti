@@ -51,7 +51,7 @@ export async function getNewsByLocale(locale: string): Promise<NewsItem[]> {
       image: data.image || "",
       imageAlt: data.imageAlt || "",
       content,
-      excerpt, // 👉 уже отрендерено как HTML
+      excerpt,
     });
   }
 

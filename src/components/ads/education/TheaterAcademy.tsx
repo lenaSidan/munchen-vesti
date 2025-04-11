@@ -121,6 +121,7 @@ export default function TheaterAcademy() {
                 className={styles.image}
                 width={400}
                 height={200}
+                sizes="(max-width: 768px) 100vw, 400px"
               />
             </div>
             <div className={styles.textContainerLeft}>

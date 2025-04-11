@@ -50,6 +50,7 @@ export default function ArticlesPage({ articles }: ArticlesProps) {
                   className={styles.articleImage}
                   width={400}
                   height={200}
+                  sizes="(max-width: 768px) 100vw, 400px"
                 />
               )}
               <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: article.content }} />

@@ -31,6 +31,7 @@ export default function HairSalonAd() {
                 className={styles.adsImage}
                 width={400}
                 height={200}
+                sizes="(max-width: 768px) 100vw, 400px"
               />
             </div>
 
@@ -60,7 +61,7 @@ export default function HairSalonAd() {
                   href={t("hair_salon.link")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  legacyBehavior>
+                >
                   {t("hair_salon.contactInst")}
                 </Link>
                 <div className={styles.linkBox}>

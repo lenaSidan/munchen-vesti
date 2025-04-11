@@ -103,6 +103,7 @@ export default function EventsPage({ events }: EventsProps) {
                   className={styles.eventImage}
                   width={400}
                   height={200}
+                  sizes="(max-width: 768px) 100vw, 400px"
                 />
               )}
             </div>

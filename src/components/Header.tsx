@@ -35,8 +35,9 @@ export default function Header() {
     closeSubmenu();
   }, [router.pathname]);
 
-  const isAdsActive = router.pathname.startsWith("/ads");
-
+  const adsRoutes = ["/services-page", "/gastronomy-page", "/education-page", "/other-page"];
+  const isAdsActive = adsRoutes.includes(router.pathname);
+  
   const monthName = new Date()
     .toLocaleString(router.locale || "ru", { month: "long" })
     .replace(/^./, (str) => str.toUpperCase());
@@ -59,6 +60,7 @@ export default function Header() {
                   alt="logo Munich News"
                   width={80}
                   height={80}
+                  priority
                   className={`${styles.logoIcon} ${styles.logoTheme}`}
                 />
                 <p className={styles.logoDate}>
@@ -94,13 +96,7 @@ export default function Header() {
           >
             {t("menu.announcements")}
           </Link>
-          {/* <Link
-            href="/news-page"
-            className={`${styles.navLink} ${router.pathname === "/news-page" ? styles.active : ""}`}
-            onClick={closeSubmenu}
-          >
-            {t("menu.news")}
-          </Link> */}
+ 
           <div className={styles.dropdownWrapper}>
             <button
               type="button"
