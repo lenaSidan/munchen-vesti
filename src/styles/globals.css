@@ -12,13 +12,14 @@
   --alt-background1: #f4f1dd;
   --alt-background: #edead7;
   --alt-background-light: #f6f2d9;
-  --background: #f8f5e1; /* Цвет старой бумаги */
+  --background: #f8f5e1;
   --text-color: #3a3a3a;
   --border-color: #c1875b;
   --heading-color: #7f1d1d;
   --heading-color2:#491010;
   --link-color: #8b5a2b;
   --button-bg: #c1875b; 
+  --button-bg2: #f3dfc159; 
   --button-text: #ffffff;
   --font-body: "Merriweather", serif;
   --font-headings: "Old Standard TT", serif;
@@ -38,6 +39,7 @@
   --heading-color2:#916c45;
   --link-color: #e0a96d;
   --button-bg: #e0a96d;
+  --button-bg2: #3a3a3a;
   --button-text: #1c1c1c;
   --font-body: "Merriweather", serif;
   --font-headings: "Old Standard TT", serif;
@@ -122,6 +124,7 @@ a {
   color: var(--heading-color2);
   text-decoration: underline;
   transition: color 0.3s ease-in-out;
+  font-weight: 600;
 }
 
 a:hover {

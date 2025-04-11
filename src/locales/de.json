@@ -45,7 +45,6 @@
     "all_events_title": "Alle Veranstaltungen",
     "all_events_description": "Komplette Übersicht aller vergangenen und bevorstehenden Veranstaltungen in München."
   },
-  
   "menu": {
     "articles": "Artikel",
     "announcements": "Veranstaltungen",
@@ -57,6 +56,29 @@
     "ads_other": "Verschiedenes",
     "more": "mehr",
     "less": "weniger"
+  },
+  "months": {
+    "events_title": "Kulturelle Veranstaltungen und Unterhaltung in München",
+    "introPart1": "München ist eine Stadt, in der jeder Monat voller Veranstaltungen steckt – von lebhaften Festivals und Kunstausstellungen bis hin zu gemütlichen Flohmärkten und Open-Air-Konzerten. Hier finden sowohl große internationale Events als auch lokale Feste statt, die einen Einblick in die bayerische Tradition geben.",
+    "introPart2": "Ganz gleich zu welcher Jahreszeit – in München gibt es immer etwas zu erleben. Im Frühling blüht die Stadt mit Blumenmärkten und Ostermessen auf, im Sommer locken Open-Air-Bühnen, Picknicks im Englischen Garten und legendäre Filmnächte. Der Herbst bringt das Oktoberfest, Weinfeste und gemütliche Theaterabende. Und im Winter verwandelt sich München in ein echtes Weihnachtsmärchen mit vielen Christkindlmärkten und Eislaufbahnen.",
+    "introWithLink_part1": "Wir aktualisieren unseren Veranstaltungskalender regelmäßig, damit Sie immer bestens informiert sind. Wenn Sie mehr über das Leben in München erfahren möchten, empfehlen wir Ihnen auch einen Blick in unseren Bereich mit ",
+    "link_text": "Artikeln",
+    "introWithLink_part2": ", in dem wir nützliche Informationen, Geschichten und Tipps für das Leben und Freizeit in dieser Stadt teilen.",
+    "introPart4": "Planen Sie Ihre Freizeit ganz einfach – wählen Sie einen Monat aus und wir zeigen Ihnen die spannendsten Events!",
+    "filter_by_month": "Nach Monat filtern",
+    "all_months": "Alle Monate",
+    "january": "Januar",
+    "february": "Februar",
+    "march": "März",
+    "april": "April",
+    "may": "Mai",
+    "june": "Juni",
+    "july": "Juli",
+    "august": "August",
+    "september": "September",
+    "october": "Oktober",
+    "november": "November",
+    "december": "Dezember"
   },
   "about": {
     "title": "Über das Projekt",
@@ -134,27 +156,26 @@
   },
   "kontakt": {
   "title": "Kontakt",
-  "section1": {
-    "title": "Unsere Adresse",
-    "text": "München, Deutschland"
+    "section1": {
+      "title": "Unsere Adresse",
+      "text": "München, Deutschland"
+    },
+    "section2": {
+        "title": "Kontakt aufnehmen",
+        "email": "E-Mail: lena.sidan75@gmail.com",
+        "telegram": "Telegram: @example"
+    },
+    "section3": {
+      "title": "Nachricht senden",
+      "form_name": "Ihr Name",
+      "form_email": "Ihre E-Mail",
+      "form_message": "Ihre Nachricht",
+      "form_submit": "Senden",
+      "sending": "Wird gesendet...",
+      "success": "Nachricht wurde erfolgreich gesendet!",
+      "error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut."
+    }
   },
-  "section2": {
-    "title": "Kontakt aufnehmen",
-    "email": "E-Mail: lena.sidan75@gmail.com",
-    "telegram": "Telegram: @example"
-  },
-  "section3": {
-    "title": "Nachricht senden",
-    "form_name": "Ihr Name",
-    "form_email": "Ihre E-Mail",
-    "form_message": "Ihre Nachricht",
-    "form_submit": "Senden",
-    "sending": "Wird gesendet...",
-    "success": "Nachricht wurde erfolgreich gesendet!",
-    "error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut."
-  }
-  },
-
   "events": {
     "read_more": "Weiterlesen"
   } ,
@@ -165,7 +186,12 @@
   },
   "articles": {
     "articles": "Articles",
-    "read_more": "Weiterlesen: {{title}}",
+    "read_more": "Weiterlesen: ",
+     "shortTitles": {
+        "facts-about-munich": "Fakten über München",
+        "olympiapark-munich": "Olympiapark",
+        "viktualienmarkt-munich": "Viktualienmarkt"
+      }, 
     "back": "zurück" ,
     "date": "Veröffentlichungsdatum",
     "author": "Autor",
@@ -194,7 +220,6 @@
   "theater_academy_group_ostrov_bold": "„Schatzinsel“",
   "theater_academy_group_ostrov_post2": ", Gruppen 5–6 und 7–10 Jahre.",
   "theater_academy_group_klass_post1": "Klasse für russische Sprache und Literatur, 6–10 Jahre." ,
-  
   "theater_academy_title": "Münchner Theaterakademie",
   "theater_academy_description": "Die Anmeldung für das Studienjahr 2025–2026 ist geöffnet! Wir laden Kinder und Erwachsene in unsere kreativen Studios und Gruppen ein! Probestunden laufen bereits – machen Sie jetzt mit! Altersgruppen: von 1,5 bis 55 Jahren.",
   "theater_academy_theater_studios": "Theaterstudios.",
@@ -213,7 +238,6 @@
   "theater_academy_theater_actor_post1": "Theaterstudio ",
   "theater_academy_theater_actor_bold": "„Schauspieler“",
   "theater_academy_theater_actor_post2": ", 18–55 Jahre.",
-  
   "theater_academy_subtitle": "Theater, Spiele und Dienstleistungen.",
   "theater_academy_point1_pre": "Münchner Dramatisches Theater ",
   "theater_academy_point1_bold": "„Goldenes Zeitalter“ ",
@@ -260,36 +284,37 @@
   "psychologist_web_link": "https://tatjanasmirnova.com",
   
   "beauticum": {
-  "titleSEO": "Beauticum – Kosmetik und Hautpflege in München",
-  "descriptionSEO": "Professionelle Behandlungen, Reinigung, Massage und Ästhetik. Jetzt Termin vereinbaren!",
-  "title": "Kosmetikstudio Beauticum",
-  "link": "https://www.instagram.com/kosmetikstudio.beauticum?igsh=MTgzdmF6MWh5dnZocQ==",
-  "address": "Albert-Rosshaupterstr. 52, 81369 München",
-  "offers": "Das Kosmetikstudio in München bietet Gesichts- und Körperbehandlungen an:",
-  "service1": "Permanent-Make-up",
-  "service2": "Kombinierte Gesichtsreinigung",
-  "service3": "Mikrodermabrasion (Diamant-Peeling)",
-  "service4": "Dermadrop (nicht-invasive Mesotherapie)",
-  "service5": "Myolifting-Gesichtsmassage für Gesicht, Hals und Dekolleté",
-  "service6": "Klassische Kosmetologie",
-  "service7": "Vitaplastik (nicht-invasive langfristige Gesichtsverjüngung)",
-  "service8": "Korrektur und Färbung der Augenbrauen",
-  "service9": "Wimpernfärbung",
-  "service10": "Wimpernverlängerung",
-  "service11": "Klassische Pediküre",
-  "service12": "Klassische Maniküre (nicht apparativ)",
-  "service13": "Kosmetische Zahnaufhellung",
-  "service14": "Tätowierung",
-  "service15": "LPG",
-  "service16": "Entspannende Körpermassage",
-  "why_choose_us": "Warum wählen unsere Kunden uns?",
-  "reason1": "In unserem Studio verwenden wir professionelle Geräte, und alle Behandlungen werden von zertifizierten Fachkräften mit langjähriger Erfahrung durchgeführt. Wir setzen ausschließlich bewährte Methoden und hochwertige Premium-Kosmetik ein, die den höchsten europäischen Qualitätsstandards entspricht.",
-  "reason2": "Jeder Kunde ist für uns einzigartig. Wir bieten einen individuellen Ansatz, passen die Pflege je nach Hauttyp und Bedürfnissen an. In unserem Studio schaffen wir eine gemütliche Atmosphäre, in der Sie sich entspannen, den Alltagsstress vergessen und die Behandlungen in einem angenehmen Ambiente genießen können.",
-  "contact_text": "Für alle Fragen rufen Sie uns unter folgender Nummer an:"
-},
+    "titleSEO": "Beauticum – Kosmetik und Hautpflege in München",
+    "descriptionSEO": "Professionelle Behandlungen, Reinigung, Massage und Ästhetik. Jetzt Termin vereinbaren!",
+    "title": "Kosmetikstudio Beauticum",
+    "link": "https://www.instagram.com/kosmetikstudio.beauticum?igsh=MTgzdmF6MWh5dnZocQ==",
+    "address": "Albert-Rosshaupterstr. 52, 81369 München",
+    "offers": "Das Kosmetikstudio in München bietet Gesichts- und Körperbehandlungen an:",
+    "service1": "Permanent-Make-up",
+    "service2": "Kombinierte Gesichtsreinigung",
+    "service3": "Mikrodermabrasion (Diamant-Peeling)",
+    "service4": "Dermadrop (nicht-invasive Mesotherapie)",
+    "service5": "Myolifting-Gesichtsmassage für Gesicht, Hals und Dekolleté",
+    "service6": "Klassische Kosmetologie",
+    "service7": "Vitaplastik (nicht-invasive langfristige Gesichtsverjüngung)",
+    "service8": "Korrektur und Färbung der Augenbrauen",
+    "service9": "Wimpernfärbung",
+    "service10": "Wimpernverlängerung",
+    "service11": "Klassische Pediküre",
+    "service12": "Klassische Maniküre (nicht apparativ)",
+    "service13": "Kosmetische Zahnaufhellung",
+    "service14": "Tätowierung",
+    "service15": "LPG",
+    "service16": "Entspannende Körpermassage",
+    "why_choose_us": "Warum wählen unsere Kunden uns?",
+    "reason1": "In unserem Studio verwenden wir professionelle Geräte, und alle Behandlungen werden von zertifizierten Fachkräften mit langjähriger Erfahrung durchgeführt. Wir setzen ausschließlich bewährte Methoden und hochwertige Premium-Kosmetik ein, die den höchsten europäischen Qualitätsstandards entspricht.",
+    "reason2": "Jeder Kunde ist für uns einzigartig. Wir bieten einen individuellen Ansatz, passen die Pflege je nach Hauttyp und Bedürfnissen an. In unserem Studio schaffen wir eine gemütliche Atmosphäre, in der Sie sich entspannen, den Alltagsstress vergessen und die Behandlungen in einem angenehmen Ambiente genießen können.",
+    "contact_text": "Für alle Fragen rufen Sie uns unter folgender Nummer an:"
+  },
   "vileta": {
     "titleSEO": "Viletta – handgefertigter Schmuck mit Edelsteinen und Naturkraft",
-    "descriptionSEO": "Individuell ausgewählte Edelsteine nach Geburtsdatum und Ziel – Ihr persönlicher Talisman von Viletta." ,    "title": "Viletta – Schmuckstücke voller natürlicher Kraft",
+    "descriptionSEO": "Individuell ausgewählte Edelsteine nach Geburtsdatum und Ziel – Ihr persönlicher Talisman von Viletta." ,    
+    "title": "Viletta – Schmuckstücke voller natürlicher Kraft",
     "description1": "In jedem Stein steckt die Energie der Erde – ihre Weisheit und Harmonie. Natürliche Mineralien verzaubern nicht nur mit ihrer Schönheit, sondern tragen eine tiefere Bedeutung in sich und können als Wegweiser zu innerem Gleichgewicht, Selbstvertrauen und Erfolg dienen.",
     "description2": "Viletta kreiert Schmuck, der Ästhetik und die Kraft der Natur vereint. Wir wählen Edelsteine individuell aus, basierend auf Ihrem Geburtsdatum, Namen und persönlichen Zielen, sodass jedes Schmuckstück nicht nur ein Accessoire, sondern Ihr persönlicher Talisman und Inspirationsquelle wird.",
     "description3": "Das ist mehr als nur Schmuck – es sind Schmuckstücke, die für Sie wirken. Entdecken Sie die Welt der natürlichen Energie mit Viletta.",
