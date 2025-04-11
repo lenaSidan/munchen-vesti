@@ -20,7 +20,7 @@ export default function WeatherInlineBlock({ forecast }: { forecast: DailyWeathe
                 month: "long",
               })}
             </strong>
-            {forecast.temperature_2m_min[i]}–{forecast.temperature_2m_max[i]}°C{" "}
+            {Math.round(forecast.temperature_2m_min[i])}–{Math.round(forecast.temperature_2m_max[i])}°C
             <Image
               src={getWeatherIcon(forecast.weathercode[i])}
               alt="weather icon"
