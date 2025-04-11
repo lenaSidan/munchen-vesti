@@ -8,7 +8,7 @@ interface AdWrapperProps {
   image: string;
   url: string;
   type?: "LocalBusiness" | "Product" | "Service";
-  additionalJsonLd?: Record<string, unknown>; // можно добавить контакт или адрес
+  additionalJsonLd?: Record<string, unknown>;
 }
 
 export default function AdWrapper({

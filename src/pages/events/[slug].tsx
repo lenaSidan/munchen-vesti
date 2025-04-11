@@ -67,6 +67,7 @@ export default function Event({ event }: EventProps) {
               width={600}
               height={400}
               className={styles.image}
+              sizes="(max-width: 768px) 100vw, 600px"
             />
           </div>
         )}

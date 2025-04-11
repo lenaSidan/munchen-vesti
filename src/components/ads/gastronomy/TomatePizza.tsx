@@ -20,6 +20,7 @@ export default function TomatePizzaAd() {
                   width={500}
                   height={200}
                   className={styles.adImage}
+                  sizes="(max-width: 768px) 100vw, 500px"
                 />
               </div>
               <div className={styles.textContainer}>

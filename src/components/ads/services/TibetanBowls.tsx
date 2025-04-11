@@ -25,6 +25,7 @@ export default function TibetanBowls() {
                 className={styles.adsImage}
                 width={400}
                 height={200}
+                sizes="(max-width: 768px) 100vw, 400px"
               />
             </div>
 

@@ -31,16 +31,12 @@ export default function ViletaJewelry() {
                 className={styles.adsImage}
                 width={400}
                 height={200}
+                sizes="(max-width: 768px) 100vw, 400px"
               />
             </div>
 
             <div className={styles.linkBox}>
-              <Link
-                className={styles.linkBoxHref}
-                href={t("vileta.link")}
-                target="_blank"
-                rel="noopener noreferrer"
-                legacyBehavior>
+              <Link className={styles.linkBoxHref} href={t("vileta.link")} target="_blank" rel="noopener noreferrer">
                 {t("vileta.contact")}
               </Link>
             </div>

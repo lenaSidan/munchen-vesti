@@ -29,6 +29,7 @@ export default function OrangeSunStudio() {
                   className={styles.adsImage}
                   width={300}
                   height={300}
+                  sizes="(max-width: 768px) 100vw, 300px"
                 />
               </div>
               <div className={styles.torteBox}>

@@ -125,6 +125,11 @@
   filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.4))
   drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.3))
   drop-shadow(-1px -1px 0px rgba(255, 255, 255, 0.3));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.logoIcon:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4));
 }
 .logoTheme {
   content: url("/icons/logo.png");
@@ -167,11 +172,12 @@
   text-decoration: none;
   color: var(--text-color);
   transition: color 0.2s;
+  font-weight: 600;
 }
 
-.nav a:hover {
+.nav :hover {
   color: var(--heading-color);
-  text-decoration: underline;
+ 
 }
 .active {
   font-weight: bold;
@@ -203,20 +209,18 @@
   flex-direction: column;
   min-width: 180px;
   padding: 10px 0;
-  font-family: var(--font-headings);
   text-align:  center;
-  
+  margin-top: 10px;
 }
 
 .submenuLink {
   text-transform: none;
   font-size: 1.2rem;
-  font-family: var(--font-geist-sans);
-  padding: 2px 20px;
+  font-weight: 500;
+  font-family: "Merriweather", serif;
+  padding: 0 20px;
   text-decoration: none;
   color: var(--text-color);
-  white-space: nowrap;
-  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .submenuLink:hover {

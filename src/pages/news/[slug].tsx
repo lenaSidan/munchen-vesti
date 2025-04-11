@@ -54,6 +54,7 @@ export default function NewsPage({ news }: NewsProps) {
               width={700}
               height={400}
               className={styles.image}
+              sizes="(max-width: 768px) 100vw, 700px"
             />
           </div>
         )}
