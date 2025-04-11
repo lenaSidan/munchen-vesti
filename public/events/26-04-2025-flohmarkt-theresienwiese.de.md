@@ -23,7 +23,7 @@ Mit Hunderten von Ständen, die sich über das riesige Gelände erstrecken, biet
 Der frühe Vogel fängt bekanntlich den Wurm – und auf dem Flohmarkt der Theresienwiese gilt das erst recht! Wer wirklich die besten Schnäppchen ergattern will, sollte **bereits in den frühen Morgenstunden** da sein. Während es gegen Mittag oft so voll wird, dass kaum ein Durchkommen möglich ist, kann man in den ersten Stunden des Tages noch in Ruhe stöbern, handeln und die besten Fundstücke sichern.
 
 ### Ein Flohmarkt mit sozialem Zweck
-Was diesen Flohmarkt besonders macht, ist sein **karitativer Hintergrund**. Veranstaltet wird er vom ***[Bayerischen Roten Kreuz (BRK)](https://www.brk-muenchen.de/angebote/flohmaerkte/flohmarkt-theresienwiese/)***, und ein Teil der Einnahmen fließt in soziale Projekte. Wer hier einkauft, tut also nicht nur sich selbst etwas Gutes, sondern unterstützt auch wohltätige Zwecke.
+Was diesen Flohmarkt besonders macht, ist sein **karitativer Hintergrund**. Veranstaltet wird er vom ***Bayerischen Roten Kreuz (BRK)***, und ein Teil der Einnahmen fließt in soziale Projekte. Wer hier einkauft, tut also nicht nur sich selbst etwas Gutes, sondern unterstützt auch wohltätige Zwecke.
 
 ### Tipps für den perfekten Flohmarktbesuch
 - ✔ **Früh kommen**: Die besten Stücke sind oft schon in den ersten Stunden verkauft.
@@ -37,6 +37,6 @@ Was diesen Flohmarkt besonders macht, ist sein **karitativer Hintergrund**. Vera
 **Ort**: Theresienwiese, München  
 **Startzeit**: Frühmorgens (genaue Uhrzeiten werden noch bekannt gegeben)  
 
-***🔗 [Flohmarkt Theresienwiese](https://www.brk-muenchen.de/angebote/flohmaerkte/flohmarkt-theresienwiese/)***  
+***[Flohmarkt Theresienwiese](https://www.brk-muenchen.de/angebote/flohmaerkte/flohmarkt-theresienwiese/)***  
 
 Wer ein Herz für Vintage, Sammlerstücke und günstige Funde hat, sollte sich den **BRK-Flohmarkt auf der Theresienwiese** nicht entgehen lassen – ein Tag voller Überraschungen, Begegnungen und großartigen Entdeckungen erwartet euch!

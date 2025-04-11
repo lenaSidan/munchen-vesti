@@ -77,7 +77,7 @@ export default function Event({ event }: EventProps) {
             <span className={styles.right}>⊱❧</span>
           </div>
 
-          <Link href="/" className={styles.readMore}>
+          <Link href="/events" className={styles.readMore}>
             {t("articles.back")}
           </Link>
 
