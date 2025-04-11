@@ -1,25 +1,35 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import styles from "@/styles/mobileHeader.module.css";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import useTranslation from "@/hooks/useTranslation";
-import router from "next/router";
+import { useRouter } from "next/router";
 
 export default function MobileHeader() {
   const t = useTranslation();
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+  const submenuRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   const toggleSubmenu = () => setIsSubmenuOpen((prev) => !prev);
   const closeSubmenu = () => {
     setIsSubmenuOpen(false);
   };
+  const adsRoutes = ["/services-page", "/gastronomy-page", "/education-page", "/other-page"];
+  const isAdsActive = adsRoutes.some((route) => router.asPath.startsWith(route));
 
   useEffect(() => {
-    closeSubmenu();
+    const handleClickOutside = (e: MouseEvent) => {
+      if (submenuRef.current && !submenuRef.current.contains(e.target as Node)) {
+        closeSubmenu();
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
-
-  const isAdsActive = router.pathname.startsWith("/ads");
 
   return (
     <header className={styles.mobileHeader}>
@@ -69,7 +79,7 @@ export default function MobileHeader() {
             </button>
           </div>
           {isSubmenuOpen && (
-            <div className={styles.submenu}>
+            <div className={styles.submenu} ref={submenuRef}>
               <Link href="/services-page" className={styles.submenuLink} onClick={closeSubmenu}>
                 {t("menu.ads_services")}
               </Link>

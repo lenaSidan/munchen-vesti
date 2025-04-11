@@ -20,7 +20,7 @@ export default function PureBeautySalon() {
               className={styles.linkBoxHref2}
               href="https://wa.me/380933552259"
               target="_blank"
-              legacyBehavior>
+              >
               {t("purebeauty.contact_text")}
             </Link>
           </div>
@@ -34,6 +34,7 @@ export default function PureBeautySalon() {
               className={styles.adsImage}
               width={400}
               height={200}
+              sizes="(max-width: 768px) 100vw, 400px"
             />
           </div>
           <div className={styles.rightBox}>

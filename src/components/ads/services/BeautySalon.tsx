@@ -14,12 +14,7 @@ export default function BeautySalon() {
 
         <div className={styles.titleBox}>
           <div className={styles.title}>
-            <Link
-              className={styles.linkBoxHref}
-              href={t("beauticum.link")}
-              target="_blank"
-              rel="noopener noreferrer"
-              legacyBehavior>
+            <Link className={styles.linkBoxHref} href={t("beauticum.link")} target="_blank" rel="noopener noreferrer">
               {t("beauticum.title")}
             </Link>
           </div>
@@ -33,6 +28,7 @@ export default function BeautySalon() {
               className={styles.adsImage}
               width={400}
               height={200}
+              sizes="(max-width: 768px) 100vw, 400px"
             />
           </div>
           <div className={styles.subtitleBox}>

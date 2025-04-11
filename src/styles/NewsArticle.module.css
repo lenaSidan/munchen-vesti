@@ -7,16 +7,16 @@
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 .articleBox {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items:center;
 }
 .content {
   flex-direction: column;
-  align-items: center;
+
   margin-top: 30px;
   column-count: 3;
   column-gap: 25px;
@@ -40,11 +40,8 @@
 }
 .content h2,
 .content h3 {
-  font-family: var(--font-headings);
-  color: var(--heading-color);
   margin-top: 15px;
   margin-bottom: 10px;
-  border-bottom: 2px solid var(--border-color);
   padding-bottom: 5px;
   align-items: center;
 }
@@ -139,16 +136,12 @@
   text-align: center;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  font-family: var(--font-headings);
-  color: var(--heading-color);
+  color: var(--heading-color2);
   transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .imageWrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
   margin: 15px auto;
   overflow: hidden;
   border-radius: 5px;
@@ -161,10 +154,10 @@
 }
 
 .image {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   border-radius: 5px;
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--heading-color2);
   transition: border-color 0.3s ease-in-out;
 }
 

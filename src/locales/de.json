@@ -12,6 +12,11 @@
     "index_title": "München: Veranstaltungen, Ausstellungen, Konzerte und Anzeigen auf Russisch",
     "index_description": "Aktuelle Events und Anzeigen in München: Ausstellungen, Märkte, Konzerte, kulturelle Veranstaltungen und hilfreiche Infos auf Russisch – heute und am Wochenende."
   },
+  "weather": {
+    "title": "Wettervorhersage für München",
+    "precip": "Niederschlag",
+    "error_loading": "Wetter konnte nicht geladen werden"
+  },
   "title": {
     "read_more": "Weiterlesen"
   },
