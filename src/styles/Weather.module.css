@@ -1,0 +1,89 @@
+.weatherBlock {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 40px 20px;
+  background: var(--alt-background);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-family: "Merriweather", serif;
+  color: var(--text-color);
+  
+}
+
+.weatherTitle {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--heading-color2);
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 2px dashed var(--border-color);
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.weatherList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  column-count: 2;
+  column-gap: 40px;
+}
+
+.weatherItem {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.weatherDate {
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 5px;
+  color: var(--heading-color);
+}
+
+.weatherDetails {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .weatherBlock {
+    max-width: 90%;
+    box-sizing: border-box;
+    padding: 20px 15px;
+    margin: 20px auto; /* авто по бокам */
+  }
+
+  .weatherTitle {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+  }
+
+  .weatherList {
+    column-count: 1;
+    column-gap: 0;
+  }
+
+  .weatherItem {
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+  }
+
+  .weatherDate {
+    font-size: 1rem;
+  }
+
+  .weatherDetails {
+    font-size: 0.95rem;
+  }
+
+  .weatherIcon {
+    width: 24px;
+    height: 24px;
+    margin-left: 6px;
+  }
+}

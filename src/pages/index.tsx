@@ -12,7 +12,7 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import { useRouter } from "next/router";
-
+import { getWeatherForecast, DailyWeather } from "@/lib/getWeather";
 import ShortNewsBlock from "@/components/ShortNewsBlock";
 import Ads from "@/components/Ads";
 
@@ -28,12 +28,13 @@ interface HomeProps {
   secondEvent: Event | null;
   otherEvents: Event[];
   announcements: Announcement[];
+  weather: DailyWeather | null;
 }
 
-export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps) {
+export default function Home({ mainEvent, secondEvent, otherEvents, weather }: HomeProps) {
   const t = useTranslation();
   const router = useRouter();
-
+  
   return (
     <>
       <Seo title={t("seo.index_title")} description={t("seo.index_description")} image={mainEvent?.image} />
@@ -66,7 +67,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents }: HomeProps)
             )}
           </div>
           <div className={styles.adsBlock}>
-            <Ads />
+          <Ads weather={weather} />
           </div>
         </div>
         
@@ -197,13 +198,14 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
     ...ann,
     text: translations[ann.textKey] || ann.textKey,
   }));
-
+  const weather = await getWeatherForecast();
   return {
     props: {
       mainEvent,
       secondEvent,
       otherEvents,
       announcements: translatedAnnouncements,
+      weather,
     },
     revalidate: 43200,
   };
