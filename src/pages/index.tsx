@@ -15,6 +15,7 @@ import { useRouter } from "next/router";
 import { getWeatherForecast, DailyWeather } from "@/lib/getWeather";
 import ShortNewsBlock from "@/components/ShortNewsBlock";
 import Ads from "@/components/Ads";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 interface Announcement {
   id: number;
@@ -125,6 +126,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
         <div className={styles.newsBlock}>
           <ShortNewsBlock />
         </div>
+        <ScrollToTopButton />
       </div>
     </>
   );
