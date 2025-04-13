@@ -1,0 +1,52 @@
+.button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 40px;
+  height: 60px;
+  background-color: transparent;
+  background-image: url("/images/scroll-up-light.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 9999;
+  cursor: pointer;
+  border: none;
+}
+
+[data-theme="dark"] .button {
+  background-image: url("/images/scroll-up-dark.png");
+}
+
+@media (max-width: 768px) {
+  .button,
+  [data-theme="dark"] .button {
+    background-image: none;
+    bottom: 2rem;
+    right: 0.7rem;
+    width: 42px;
+    height: 42px;
+    background-color: var(--alt-background1);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+
+  .button::before {
+    content: "↑";
+    color: var(--link-color);
+    font-family: "Georgia", serif;
+    font-size: 1.4rem;
+    line-height: 1;
+    transform: translateY(-1px);
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+  }
+}

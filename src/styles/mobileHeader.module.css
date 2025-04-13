@@ -1,9 +1,12 @@
 .mobileHeader {
-  background: none;
-  padding: 0 0 10px 0;
-  margin-bottom: 15px;
-  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--alt-background1); /* обязательно, иначе будет "просвечивать" */
   border-bottom: 3px solid var(--heading-color);
+  padding: 0 0 10px 0;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .fullBackground {
   width: 100vw;
@@ -29,7 +32,6 @@
   flex-direction: row;
   text-align: center;
   margin-bottom: 10px;
-
 }
 
 .container {
@@ -37,7 +39,6 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-
 }
 .topRow {
   display: flex;
@@ -50,8 +51,8 @@
   align-items: center;
   font-family: "Old Standard TT", serif;
   font-size: 2rem;
- line-height: 2.4rem;
- margin-top: 20px;
+  line-height: 2.4rem;
+  margin-top: 20px;
   font-weight: bolder;
   text-transform: uppercase;
   color: var(--heading-color);
@@ -169,6 +170,7 @@
 .submenu {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 8px;
   border-top: 1px solid var(--border-color);
   width: 100%;

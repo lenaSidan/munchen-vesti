@@ -49,8 +49,6 @@
 body {
   font-family: var(--font-body);
   background: var(--background);
-  /* background-image: var(--paper-texture); */
-  /* background: var(--background) url("/images/paper-texture.jpg") repeat; */
   color: var(--text-color);
   line-height: 1.8;
   transition: all 0.3s ease-in-out;
@@ -59,7 +57,7 @@ p {
   margin-bottom: 0.6rem;
 }
 blockquote {
-  margin-top: 0.6rem; /* Добавит отступ перед блоком с датой */
+  margin-top: 0.6rem;
 }
 h1, h2, h3, h4, h5 {
   font-family: var(--font-headings);
@@ -150,4 +148,7 @@ button:hover {
 } */
 a[href^="http"] {
   target: _blank !important;
+}
+html {
+  scroll-behavior: smooth;
 }
