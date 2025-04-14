@@ -9,6 +9,7 @@ import LettaBeauty from "@/components/ads/services/LettaBeauty";
 import HairSalonAd from "@/components/ads/services/HairSalon";
 import PureBeautySalon from "@/components/ads/services/PureBeautySalon";
 import Seo from "@/components/Seo";
+import EasterEggById from "@/components/EasterEggById";
 
 export default function AnnouncementsPage() {
   const t = useTranslation();
@@ -56,6 +57,7 @@ export default function AnnouncementsPage() {
           ))}
         </div>
       </div>
+       <EasterEggById id="easteregg-home" chance={0.5} />
     </>
   );
 }

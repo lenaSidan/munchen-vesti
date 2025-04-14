@@ -128,7 +128,7 @@ export default function EventsPage({ events }: EventsProps) {
           </div>
         ))}
       </div>
-      <EasterEggById id="easteregg-events" chance={0.2} />
+      <EasterEggById id="easteregg-events" chance={0.5} />
     </>
   );
 }

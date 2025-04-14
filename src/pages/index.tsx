@@ -128,7 +128,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
           <ShortNewsBlock />
         </div>
         <ScrollToTopButton />
-        <EasterEggById id="easteregg-home" chance={0.2} />
+        <EasterEggById id="easteregg-home" chance={0.5} />
       </div>
     </>
   );

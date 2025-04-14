@@ -5,6 +5,7 @@ import { GetStaticProps } from "next";
 import useTranslation from "@/hooks/useTranslation";
 import Seo from "@/components/Seo";
 import styles from "@/styles/Events.module.css";
+import EasterEggById from "@/components/EasterEggById";
 
 interface EventsProps {
   events: Event[];
@@ -88,6 +89,7 @@ export default function Events({ events }: EventsProps) {
           ))}
         </div>
       </div>
+      <EasterEggById id="easteregg-events" chance={0.5} />
     </>
   );
 }

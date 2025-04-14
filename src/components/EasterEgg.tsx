@@ -10,7 +10,7 @@ interface EasterEggProps {
   rareImage?: string;
   storageKey?: string;
   sound?: string;
-  chance?: number; // от 0 до 1, например 0.3 = 30%
+  chance?: number;
 }
 
 export default function EasterEgg({
@@ -18,11 +18,12 @@ export default function EasterEgg({
   rareImage = "/images/easter-egg-gold.png",
   storageKey = "easteregg-found",
   sound = "/audio/dzyn.mp3",
-  chance = 0.9,
+  chance = 0.9, // 👈 вот это добавь
+
 }: EasterEggProps) {
   const t = useTranslation();
   const [visible, setVisible] = useState(false);
-  const [position, setPosition] = useState({ top: "50%", left: "50%" });
+  const [position, setPosition] = useState({ top: "50px", left: "50px" });
   const [showModal, setShowModal] = useState(false);
   const [eggCount, setEggCount] = useState(0);
   const [isRare, setIsRare] = useState(false);
@@ -30,41 +31,31 @@ export default function EasterEgg({
   useEffect(() => {
     const alreadyFound = localStorage.getItem(storageKey);
     const storedCount = localStorage.getItem("easteregg-count");
-    const rareChance = 0.2;
-
-    // 0.05 — примерно 1 из 20 (5%)
-    // 0.1  — 10%
-    // 0.2  — 20% (как сейчас)
-    // 0.5  — 50% (половина всех случаев)
-    // 1.0  — всегда редкая (только для теста)
-
     if (storedCount) setEggCount(parseInt(storedCount));
-
+  
     if (alreadyFound === "true") return;
-
-    // 👉 Способ 1: Показывать пасхалку СЛУЧАЙНО (с шансом, например 30%)
-    if (Math.random() < chance) {
-      // Способ 2: Показывать пасхалку ВСЕГДА (в разработке или тесте)
-      //if (true) {
+  
+    const showEgg = () => {
+      const padding = 80;
+      const top = Math.floor(Math.random() * (window.innerHeight - padding * 2)) + padding;
+      const left = Math.floor(Math.random() * (window.innerWidth - padding * 2)) + padding;
+  
+      setPosition({ top: `${top}px`, left: `${left}px` });
+      setIsRare(Math.random() < 0.5);
       setVisible(true);
-      // const top = Math.floor(Math.random() * 70 + 10);
-      // const left = Math.floor(Math.random() * 70 + 10);
-      const top = Math.floor(Math.random() * 95 + 5);
-      const left = Math.floor(Math.random() * 95 + 5);
-      setPosition({ top: `${top}%`, left: `${left}%` });
-
-      if (Math.random() < rareChance) {
-        setIsRare(true);
+    };
+  
+    if (typeof window !== "undefined") {
+      // 👉 Показывать с шансом
+      if (Math.random() < (chance ?? 1)) {
+        setTimeout(showEgg, 300);
       }
     }
-  }, [chance, storageKey]);
+  }, [storageKey, chance]);
 
   const handleClick = () => {
     const audio = new Audio(sound);
-    audio.play().catch((err) => {
-      console.warn("Audio playback error:", err);
-    });
-
+    audio.play().catch(() => {});
     const newCount = eggCount + 1;
     setEggCount(newCount);
     localStorage.setItem("easteregg-count", newCount.toString());
@@ -75,10 +66,7 @@ export default function EasterEgg({
     window.dispatchEvent(new Event("easteregg-found"));
   };
 
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
-
+  const handleCloseModal = () => setShowModal(false);
   const resetEggs = () => {
     localStorage.removeItem("easteregg-count");
     localStorage.removeItem(storageKey);
@@ -94,13 +82,17 @@ export default function EasterEgg({
           src={isRare ? rareImage : image}
           alt={t("easteregg.alt")}
           className={`${styles.easterEgg} ${isRare ? styles.rareGlow : ""}`}
-          style={{ top: position.top, left: position.left }}
+          style={{
+            position: "fixed",
+            top: position.top,
+            left: position.left,
+            zIndex: 9999,
+          }}
           onClick={handleClick}
           width={60}
           height={60}
         />
       )}
-
       {showModal && <EasterEggModal onClose={handleCloseModal} onReset={resetEggs} count={eggCount} />}
     </>
   );

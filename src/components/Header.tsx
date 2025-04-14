@@ -13,15 +13,41 @@ export default function Header() {
   const router = useRouter();
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [hasEggs, setHasEggs] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-    handleResize(); // запустить при монтировании
-    window.addEventListener("resize", handleResize); // отслеживание ресайза
+    handleResize();
+    window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const [isJustFound, setIsJustFound] = useState(false); // для первой анимации
+
+  useEffect(() => {
+    const check = () => {
+      if (typeof window === "undefined") return;
+
+      const keys = Object.keys(localStorage).filter((key) => key.startsWith("easteregg-"));
+      const found = keys.some((key) => localStorage.getItem(key) === "true");
+
+      if (found && !hasEggs) {
+        // Только что нашли первое яйцо — запускаем анимацию
+        setIsJustFound(true);
+
+        // Через 6 секунд отключим подсветку
+        setTimeout(() => setIsJustFound(false), 6000);
+      }
+
+      setHasEggs(found);
+    };
+
+    check();
+    window.addEventListener("easteregg-found", check);
+    return () => window.removeEventListener("easteregg-found", check);
+  }, [hasEggs]);
 
   const toggleSubmenu = () => {
     setIsSubmenuOpen((prev) => !prev);
@@ -37,7 +63,7 @@ export default function Header() {
 
   const adsRoutes = ["/services-page", "/gastronomy-page", "/education-page", "/other-page"];
   const isAdsActive = adsRoutes.includes(router.pathname);
-  
+
   const monthName = new Date()
     .toLocaleString(router.locale || "ru", { month: "long" })
     .replace(/^./, (str) => str.toUpperCase());
@@ -96,7 +122,7 @@ export default function Header() {
           >
             {t("menu.announcements")}
           </Link>
- 
+
           <div className={styles.dropdownWrapper}>
             <button
               type="button"
@@ -123,6 +149,17 @@ export default function Header() {
               </div>
             )}
           </div>
+          {hasEggs && (
+            <Link
+              href="/collection"
+              className={`${styles.navLink} ${isJustFound ? styles.highlighted : ""} ${
+                router.pathname === "/collection" ? styles.active : ""
+              }`}
+              onClick={closeSubmenu}
+            >
+              {t("footer.collection")}
+            </Link>
+          )}
         </nav>
       </div>
       <div className={styles.decorativeLine}>

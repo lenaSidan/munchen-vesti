@@ -2,6 +2,7 @@ import { useState } from "react";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/Contacts.module.css";
 import Seo from "@/components/Seo";
+import EasterEggById from "@/components/EasterEggById";
 
 export default function Contacts() {
   const t = useTranslation();
@@ -128,6 +129,7 @@ export default function Contacts() {
           </form>
         </div>
       </div>
+      <EasterEggById id="easteregg-events" chance={0.5} />
     </>
   );
 }
