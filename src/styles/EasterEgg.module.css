@@ -1,11 +1,11 @@
 .easterEgg {
-  position: absolute;
+  position: fixed;
   width: 60px;
   height: auto;
   cursor: pointer;
   z-index: 9999;
   animation: fadeIn 1s ease-in-out;
- 
+  transition: transform 0.2s ease;
 }
 
 .easterEgg:hover {

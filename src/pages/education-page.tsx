@@ -3,6 +3,7 @@ import styles from "@/styles/AdsPage.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import TheaterAcademy from "@/components/ads/education/TheaterAcademy";
 import Seo from "@/components/Seo";
+import EasterEggById from "@/components/EasterEggById";
 
 export default function AnnouncementsPage() {
   const t = useTranslation();
@@ -33,6 +34,7 @@ export default function AnnouncementsPage() {
           ))}
         </div>
       </div>
+      <EasterEggById id="easteregg-articles" chance={0.5} />
     </>
   );
 }

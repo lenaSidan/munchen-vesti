@@ -73,7 +73,7 @@ export default function ArticlesPage({ articles }: ArticlesProps) {
             </div>
           </article>
         ))}
-        <EasterEggById id="easteregg-articles" chance={0.2} />
+        <EasterEggById id="easteregg-articles" chance={0.5} />
       </div>
     </>
   );
