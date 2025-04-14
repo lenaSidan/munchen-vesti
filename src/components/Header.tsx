@@ -24,30 +24,23 @@ export default function Header() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const [isJustFound, setIsJustFound] = useState(false); // для первой анимации
+  const [allFound, setAllFound] = useState(false);
 
   useEffect(() => {
-    const check = () => {
+    const checkEggs = () => {
       if (typeof window === "undefined") return;
-
+  
       const keys = Object.keys(localStorage).filter((key) => key.startsWith("easteregg-"));
-      const found = keys.some((key) => localStorage.getItem(key) === "true");
-
-      if (found && !hasEggs) {
-        // Только что нашли первое яйцо — запускаем анимацию
-        setIsJustFound(true);
-
-        // Через 6 секунд отключим подсветку
-        setTimeout(() => setIsJustFound(false), 6000);
-      }
-
-      setHasEggs(found);
+      const foundCount = keys.filter((key) => localStorage.getItem(key) === "true").length;
+      
+      setHasEggs(foundCount > 0);
+      setAllFound(foundCount >= 3); // можно поменять на нужное количество
     };
-
-    check();
-    window.addEventListener("easteregg-found", check);
-    return () => window.removeEventListener("easteregg-found", check);
-  }, [hasEggs]);
+  
+    checkEggs();
+    window.addEventListener("easteregg-found", checkEggs);
+    return () => window.removeEventListener("easteregg-found", checkEggs);
+  }, []);
 
   const toggleSubmenu = () => {
     setIsSubmenuOpen((prev) => !prev);
@@ -151,14 +144,13 @@ export default function Header() {
           </div>
           {hasEggs && (
             <Link
-              href="/collection"
-              className={`${styles.navLink} ${isJustFound ? styles.highlighted : ""} ${
-                router.pathname === "/collection" ? styles.active : ""
-              }`}
-              onClick={closeSubmenu}
-            >
-              {t("footer.collection")}
-            </Link>
+            href="/collection"
+            className={`${styles.navLink} ${
+              router.pathname === "/collection" ? styles.active : ""
+            } ${!allFound ? styles.highlighted : ""}`} // 👈 пульсация, пока не собраны все
+          >
+            {t("footer.collection")}
+          </Link>
           )}
         </nav>
       </div>

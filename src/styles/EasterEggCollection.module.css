@@ -76,10 +76,11 @@
   position: absolute;
   bottom: 130px;
   font-size: 0.7rem;
-  background-color: gold;
+  background-color: var(--alt-background-light);
+  border: 1px solid var(--border-color);
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
-  color: #333;
+  color: var(--text-color);
   font-weight: bold;
   font-family: "Old Standard TT", serif;
   box-shadow: 0 0 4px rgba(255, 215, 0, 0.5);
@@ -108,9 +109,9 @@
   margin-bottom: 1.5rem;
   text-align: center;
 }
-.card.found {
-  cursor: pointer;
-}
+/* .card.found {
+  
+} */
 .clickable {
   cursor: pointer;
   transition: transform 0.2s;
@@ -120,11 +121,19 @@
   transform: scale(1.05);
 }
 .specialGlow {
-  animation: glowSpecial 3s ease-in-out infinite;
+  animation: glowSpecial 3s ease-in-out infinite, wiggle 1.8s ease-in-out infinite;
   border: 2px solid var(--glow-color);
   box-shadow: 0 0 12px var(--glow-color);
+  cursor: pointer;
 }
-
+@keyframes wiggle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
 @keyframes glowSpecial {
   0% {
     box-shadow: 0 0 6px var(--glow-color);
@@ -136,6 +145,64 @@
     box-shadow: 0 0 6px var(--glow-color);
   }
 }
+.bonus {
+  text-align: center;
+  font-size: 1rem;
+  font-style: italic;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  color: var(--heading-color2);
+}
+.giftMark {
+  position: absolute;
+  top: -1rem;
+  background: var(--alt-background);
+  color: var(--border-color);
+  padding: 0.2rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 0 0 6px #c1875b;
+  animation: pulseGift 1.5s infinite ease-in-out;
+}
+
+@keyframes pulseGift {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+.backButtonWrapper {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.backButton {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  margin-top: 20px;
+}
+
+.backButton:hover {
+  color: var(--button-text);
+  background-color: var(--link-color);
+}
+
 @media (max-width: 768px) {
   .collectionWrapper {
     padding: 1.2rem;

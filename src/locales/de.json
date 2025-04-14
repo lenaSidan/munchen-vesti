@@ -22,6 +22,7 @@
     "title": "Sie haben eine verborgene Botschaft entdeckt!",
     "close": "Schließen",
     "counter": "Verborgene Botschaften insgesamt gefunden: {{count}}",
+    "message2": "Finden Sie alle 3, um eine Überraschung zu erleben!",
     "resetHint": "Möchten Sie die Suche von vorne beginnen, neugieriger Leser?",
     "allFound": "Sie haben alle versteckten Nachrichten gefunden! Du bist ein wahrer Wächter.",
     "viewCollection": "Sammlung von Nachrichten",
@@ -38,13 +39,18 @@
   "found": "Du hast {{count}} von {{total}} versteckten Botschaften gefunden.",
   "unknown": "???",
   "rare": "Selten",
+  "gift": "Geschenk",
   "allFound": "Glückwunsch! Du hast alle Geheimnisse entdeckt und bist nun der Hüter der Botschaften.",
+  "foundMain": "Sie haben {{count}} von 3 versteckten Nachrichten gefunden.",
+  "bonusMessage": "Die geheime Nachricht wurde Ihrer Sammlung als Zeichen der Anerkennung hinzugefügt.",
   "scrollMessage": "Weisheit liegt im Schweigen... Du bist zum wahren Hüter der Botschaften geworden!",
   "scrollMessage1": "Als Zeichen der Anerkennung – ein Rabatt von",
   "summa": "50 Euro",
+  "clickHint": "(Klicken Sie hier, um mehr zu erfahren)",
   "scrollMessage2": "für ein einzigartiges Retreat in Spanien!",
   "rewardButton": "Geschenk",
-  "secretName": "Rolle des Hüters"
+  "secretName": "Rolle des Hüters",
+  "backToHome": "Startseite"
   },    
  
   "title": {

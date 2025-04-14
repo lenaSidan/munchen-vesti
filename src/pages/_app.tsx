@@ -11,6 +11,8 @@ const oldStandard = Old_Standard_TT({ subsets: ["latin", "cyrillic"], weight: "4
 const merriweather = Merriweather({ subsets: ["latin", "cyrillic"], weight: ["300", "400"] });
 
 import Head from "next/head";
+import EasterEggSidebarHint from "@/components/EasterEggSidebarHint";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -40,8 +42,10 @@ export default function App({ Component, pageProps }: AppProps) {
       <Header />
       <main className={oldStandard.className}>
         <Component {...pageProps} />
+        <EasterEggSidebarHint />
       </main>
       <CookieConsent />
+      <ScrollToTopButton />
       <Footer />
     </div>
   );

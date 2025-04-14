@@ -120,6 +120,27 @@
 [data-theme="dark"] .telegram {
   content: url("/icons/telegram_icon_dark.png");
 }
+.highlighted {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+  color: var(--heading-color2);
+  font-weight: bold;
+  position: relative;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    text-shadow: none;
+  }
+  50% {
+    transform: scale(1.04); /* мягкое увеличение */
+    text-shadow: 0 0 8px #c1875b; /* нежное свечение */
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: none;
+  }
+}
 @media (max-width: 768px) {
   .footer {
     padding: 0 0 15px 0;

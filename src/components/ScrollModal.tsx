@@ -35,7 +35,7 @@ export default function ScrollModal({ onClose }: Props) {
         <Link href="/events/reiki-retreat" className={styles.rewardButton}>
         <span className={styles.summa}>{t("eastereggCollection.summa")}</span>
         </Link>
-        
+        <p className={styles.linkHint}>{t("eastereggCollection.clickHint")}</p>
         <p className={styles.message2}>{t("eastereggCollection.scrollMessage2")}</p>
         <button type="button" onClick={handleClose} className={styles.closeButton}>
           ✨ {t("easteregg.close")}

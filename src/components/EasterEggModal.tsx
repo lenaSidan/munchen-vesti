@@ -23,6 +23,8 @@ export default function EasterEggModal({ onClose, count, onReset }: Props) {
         <h2>{t("easteregg.title")}</h2>
         <p className={styles.text1}>{t("easteregg.message")}</p>
         <p className={styles.text2}>{t("easteregg.counter", { count: count.toString() })}</p>
+        <p className={styles.text1}>{t("easteregg.message2")}</p>
+
 
         {/* 🎉 Поздравление за все пасхалки */}
         {count >= 3 && (
