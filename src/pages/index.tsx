@@ -16,6 +16,7 @@ import { getWeatherForecast, DailyWeather } from "@/lib/getWeather";
 import ShortNewsBlock from "@/components/ShortNewsBlock";
 import Ads from "@/components/Ads";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import EasterEggById from "@/components/EasterEggById";
 
 interface Announcement {
   id: number;
@@ -35,7 +36,7 @@ interface HomeProps {
 export default function Home({ mainEvent, secondEvent, otherEvents, weather }: HomeProps) {
   const t = useTranslation();
   const router = useRouter();
-  
+
   return (
     <>
       <Seo title={t("seo.index_title")} description={t("seo.index_description")} image={mainEvent?.image} />
@@ -68,10 +69,10 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
             )}
           </div>
           <div className={styles.adsBlock}>
-          <Ads weather={weather} />
+            <Ads weather={weather} />
           </div>
         </div>
-        
+
         {/* Вторая статья */}
         {secondEvent && (
           <article className={styles.secondArticle}>
@@ -127,6 +128,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
           <ShortNewsBlock />
         </div>
         <ScrollToTopButton />
+        <EasterEggById id="easteregg-home" chance={0.2} />
       </div>
     </>
   );

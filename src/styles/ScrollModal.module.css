@@ -1,0 +1,136 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  max-width: 800px;
+  width: 100%;
+  background: var(--alt-background-light);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.title {
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px var(--background);
+}
+
+.message {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.message2 {
+  font-size: 1.3rem;
+  color: var(--heading-color2);
+  line-height: 1.6;
+  font-weight: 600;
+}
+.closeButton {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  margin-top: 20px;
+}
+
+.closeButton:hover {
+  background-color: var(--link-color);
+}
+.rewardButton {
+  display: inline-block;
+  font-size: 1.8rem;
+  color: var(--heading-color);
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+  animation: pulse 2s infinite;
+  cursor: pointer;
+}
+
+.rewardButton:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 8px var(--heading-color2);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media (max-width: 768px) {
+  .modal {
+    padding: 1.2rem;
+    border-radius: 10px;
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .message {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .message2 {
+    font-size: 1.1rem;
+  }
+
+  .closeButton {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .rewardButton {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    display: block;
+  }
+}

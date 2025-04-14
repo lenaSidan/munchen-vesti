@@ -3,11 +3,28 @@ import { useRouter } from "next/router";
 import styles from "@/styles/Footer.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Footer() {
   const t = useTranslation();
   const router = useRouter();
   const currentYear = new Date().getFullYear();
+  const [hasEggs, setHasEggs] = useState(false);
+
+  useEffect(() => {
+    const check = () => {
+      if (typeof window === "undefined") return;
+  
+      const keys = Object.keys(localStorage).filter((key) => key.startsWith("easteregg-"));
+      const found = keys.some((key) => localStorage.getItem(key) === "true");
+      setHasEggs(found);
+    };
+  
+    check(); // при монтировании
+  
+    window.addEventListener("easteregg-found", check);
+    return () => window.removeEventListener("easteregg-found", check);
+  }, []);
 
   return (
     <footer className={styles.footer}>
@@ -42,6 +59,14 @@ export default function Footer() {
               {t("footer.privacy-policy")}
             </Link>
           </div>
+          {hasEggs && (
+            <Link
+              href="/collection"
+              className={`${styles.navLink} ${router.pathname === "/collection" ? styles.active : ""}`}
+            >
+              {t("footer.collection")}
+            </Link>
+          )}
         </nav>
 
         <div className={styles.socials}>
