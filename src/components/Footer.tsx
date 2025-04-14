@@ -10,20 +10,22 @@ export default function Footer() {
   const router = useRouter();
   const currentYear = new Date().getFullYear();
   const [hasEggs, setHasEggs] = useState(false);
+  const [allFound, setAllFound] = useState(false);
 
   useEffect(() => {
-    const check = () => {
+    const checkEggs = () => {
       if (typeof window === "undefined") return;
-  
+
       const keys = Object.keys(localStorage).filter((key) => key.startsWith("easteregg-"));
-      const found = keys.some((key) => localStorage.getItem(key) === "true");
-      setHasEggs(found);
+      const foundCount = keys.filter((key) => localStorage.getItem(key) === "true").length;
+
+      setHasEggs(foundCount > 0);
+      setAllFound(foundCount >= 3); // 👈 меняй на нужное количество
     };
-  
-    check(); // при монтировании
-  
-    window.addEventListener("easteregg-found", check);
-    return () => window.removeEventListener("easteregg-found", check);
+
+    checkEggs();
+    window.addEventListener("easteregg-found", checkEggs);
+    return () => window.removeEventListener("easteregg-found", checkEggs);
   }, []);
 
   return (
@@ -62,7 +64,9 @@ export default function Footer() {
           {hasEggs && (
             <Link
               href="/collection"
-              className={`${styles.navLink} ${router.pathname === "/collection" ? styles.active : ""}`}
+              className={`${styles.navLink} ${router.pathname === "/collection" ? styles.active : ""} ${
+                !allFound ? styles.highlighted : ""
+              }`} // 👈 пульсация, пока не собраны все
             >
               {t("footer.collection")}
             </Link>

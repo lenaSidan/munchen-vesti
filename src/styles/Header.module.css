@@ -228,23 +228,24 @@
   color: var(--heading-color);
 }
 .highlighted {
-  animation: pulseHighlight 2s ease-in-out 3;
+  animation: pulseGlow 2.5s ease-in-out infinite;
   color: var(--heading-color2);
   font-weight: bold;
+  position: relative;
 }
 
-@keyframes pulseHighlight {
+@keyframes pulseGlow {
   0% {
     transform: scale(1);
-    text-shadow: 0 0 0px transparent;
+    text-shadow: none;
   }
   50% {
-    transform: scale(1.1);
-    text-shadow: 0 0 10px var(--heading-color2);
+    transform: scale(1.04); /* мягкое увеличение */
+    text-shadow: 0 0 8px #c1875b; /* нежное свечение */
   }
   100% {
     transform: scale(1);
-    text-shadow: 0 0 0px transparent;
+    text-shadow: none;
   }
 }
 

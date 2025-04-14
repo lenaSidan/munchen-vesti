@@ -1,4 +1,3 @@
-"use client";
 import { useEffect, useState } from "react";
 import styles from "../styles/EasterEgg.module.css";
 import Image from "next/image";
@@ -18,7 +17,7 @@ export default function EasterEgg({
   rareImage = "/images/easter-egg-gold.png",
   storageKey = "easteregg-found",
   sound = "/audio/dzyn.mp3",
-  chance = 0.9, // 👈 вот это добавь
+  chance = 0.9,
 
 }: EasterEggProps) {
   const t = useTranslation();
@@ -60,7 +59,9 @@ export default function EasterEgg({
     setEggCount(newCount);
     localStorage.setItem("easteregg-count", newCount.toString());
     localStorage.setItem(storageKey, "true");
-
+    if (isRare) {
+      localStorage.setItem(`${storageKey}-rare`, "true");
+    }
     setShowModal(true);
     setVisible(false);
     window.dispatchEvent(new Event("easteregg-found"));
