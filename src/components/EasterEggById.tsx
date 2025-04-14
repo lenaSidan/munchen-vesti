@@ -16,7 +16,6 @@ export default function EasterEggById({ id, chance = 0.3 }: Props) {
       image={egg.image}
       rareImage={egg.rareImage}
       storageKey={egg.id}
-      sound={egg.sound}
       chance={chance}
     />
   );
