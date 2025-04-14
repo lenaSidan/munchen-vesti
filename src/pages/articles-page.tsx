@@ -11,6 +11,7 @@ import rehypeStringify from "rehype-stringify";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/ArticlesPage.module.css";
 import Seo from "@/components/Seo";
+import EasterEggById from "@/components/EasterEggById";
 
 interface ArticlesArticle {
   id: number;
@@ -29,7 +30,7 @@ interface ArticlesProps {
 
 export default function ArticlesPage({ articles }: ArticlesProps) {
   const t = useTranslation();
-
+  
   return (
     <>
       <Seo title={t("meta.articles_title")} description={t("meta.articles_description")} />
@@ -72,6 +73,7 @@ export default function ArticlesPage({ articles }: ArticlesProps) {
             </div>
           </article>
         ))}
+        <EasterEggById id="easteregg-articles" chance={0.2} />
       </div>
     </>
   );

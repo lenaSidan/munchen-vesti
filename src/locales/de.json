@@ -17,6 +17,36 @@
     "precip": "Niederschlag",
     "error_loading": "Wetter konnte nicht geladen werden"
   },
+  "easteregg": {
+    "message": "Sie haben eine verborgene Botschaft entdeckt! Vielen Dank für Ihre Aufmerksamkeit.",
+    "title": "Sie haben eine verborgene Botschaft entdeckt!",
+    "close": "Schließen",
+    "counter": "Verborgene Botschaften insgesamt gefunden: {{count}}",
+    "resetHint": "Möchten Sie die Suche von vorne beginnen, neugieriger Leser?",
+    "allFound": "Sie haben alle versteckten Nachrichten gefunden! Du bist ein wahrer Wächter.",
+    "viewCollection": "Sammlung von Nachrichten",
+    "resetButton": "Von vorne beginnen",
+    "alt": "Verborgene Botschaft",
+    "egg1": "Verborgene Botschaft I",
+    "egg2": "Verborgene Botschaft II",
+    "egg3": "Verborgene Botschaft III",
+    "secret": "Scroll of the Keeper"
+  },
+ "eastereggCollection": {
+  "title": "Hüter der Botschaften",
+  "description": "Deine Sammlung gefundener Geheimnisse auf den Seiten dieser Zeitung. Finde sie alle!",
+  "found": "Du hast {{count}} von {{total}} versteckten Botschaften gefunden.",
+  "unknown": "???",
+  "rare": "Selten",
+  "allFound": "Glückwunsch! Du hast alle Geheimnisse entdeckt und bist nun der Hüter der Botschaften.",
+  "scrollMessage": "Weisheit liegt im Schweigen... Du bist zum wahren Hüter der Botschaften geworden!",
+  "scrollMessage1": "Als Zeichen der Anerkennung – ein Rabatt von",
+  "summa": "50 Euro",
+  "scrollMessage2": "für ein einzigartiges Retreat in Spanien!",
+  "rewardButton": "Geschenk",
+  "secretName": "Rolle des Hüters"
+  },    
+ 
   "title": {
     "read_more": "Weiterlesen"
   },
@@ -157,6 +187,7 @@
     "about": "Über das Projekt",
     "contacts": "Kontakt",
     "privacy-policy": "Datenschutzrichtlinie",
+    "collection": "Hüter der Botschaften",
     "copyright": "© {year} Münchener Nachrichten. Alle Rechte vorbehalten."
   },
   "kontakt": {
