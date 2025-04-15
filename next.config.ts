@@ -12,6 +12,17 @@ const nextConfig: NextConfig = {
     defaultLocale: "ru",
     localeDetection: false,
   },
+  images: {
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 86400,
+    deviceSizes: [360, 768, 1024, 1200],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384, 700],
+    domains: [],
+  },
+  compress: true,
+  experimental: {
+    scrollRestoration: true,
+  },
   async rewrites() {
     return [
       {
