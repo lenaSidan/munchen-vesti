@@ -80,16 +80,17 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
               <article className={styles.mainArticle}>
                 {mainEvent.image && (
                   <Image
-                    src={mainEvent.image}
+                  src={mainEvent.image}
                     alt={mainEvent.title}
                     className={styles.mainImage}
                     width={700}
                     height={400}
                     priority
                     loading="eager"
+                    decoding="async"
                     fetchPriority="high"
                     sizes="(max-width: 768px) 100vw, 700px"
-                    style={{ width: '100%', height: 'auto' }}
+                    style={{ width: "100%", height: "auto" }}
                   />
                 )}
                 <h2 className={styles.articleTitle}>{mainEvent.title}</h2>
