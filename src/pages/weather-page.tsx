@@ -4,6 +4,7 @@ import styles from "@/styles/Weather.module.css";
 import { getWeatherIcon } from "@/lib/weatherUtils";
 import useTranslation from "@/hooks/useTranslation";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 interface Props {
   weather: DailyWeather | null;
@@ -11,6 +12,7 @@ interface Props {
 
 export default function WeatherPage({ weather }: Props) {
   const t = useTranslation();
+  const { locale } = useRouter();
 
   if (!weather) return <p>{t("weather.error_loading")}</p>;
 
@@ -21,7 +23,7 @@ export default function WeatherPage({ weather }: Props) {
         {weather.time.map((date, i) => (
           <li key={date} className={styles.weatherItem}>
             <span className={styles.weatherDate}>
-              {new Date(date).toLocaleDateString(t("locale"), {
+              {new Date(date).toLocaleDateString(locale, {
                 weekday: "short",
                 day: "numeric",
                 month: "long",

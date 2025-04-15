@@ -23,8 +23,8 @@ export default function ThemeSwitcher() {
       <Image
         src={`/icons/flashlight-${theme}.png`}
         alt="Change of theme"
-        width={24}
-        height={24}
+        width={85}
+        height={131}
         className={styles.themeIcon}
       />
       <div className={`${styles.themeToggleWrapper} ${theme === "dark" ? styles.dark : ""}`} onClick={toggleTheme}>

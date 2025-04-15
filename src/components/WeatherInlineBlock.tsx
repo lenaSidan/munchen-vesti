@@ -3,10 +3,11 @@ import { getWeatherIcon } from "@/lib/weatherUtils";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/WeatherInline.module.css";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function WeatherInlineBlock({ forecast }: { forecast: DailyWeather }) {
   const t = useTranslation();
-
+  const { locale } = useRouter();
   return (
     <div className={styles.weatherBox}>
       <h4>{t("weather.title")}</h4>
@@ -14,7 +15,7 @@ export default function WeatherInlineBlock({ forecast }: { forecast: DailyWeathe
         {forecast.time.slice(0, 4).map((date, i) => (
           <li key={date}>
             <strong>
-              {new Date(date).toLocaleDateString(t("locale"), {
+              {new Date(date).toLocaleDateString(locale, {
                 weekday: "short",
                 day: "numeric",
                 month: "long",
