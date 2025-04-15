@@ -29,14 +29,16 @@ export default function Header() {
   useEffect(() => {
     const checkEggs = () => {
       if (typeof window === "undefined") return;
-  
+
       const keys = Object.keys(localStorage).filter((key) => key.startsWith("easteregg-"));
       const foundCount = keys.filter((key) => localStorage.getItem(key) === "true").length;
-      
-      setHasEggs(foundCount > 0);
-      setAllFound(foundCount >= 3); // можно поменять на нужное количество
+
+      const rewardClaimed = localStorage.getItem("easteregg-reward-claimed") === "true";
+
+      setHasEggs(foundCount > 0 && !rewardClaimed); // 👈 показывать кнопку, пока не забрали подарок
+      setAllFound(rewardClaimed);
     };
-  
+
     checkEggs();
     window.addEventListener("easteregg-found", checkEggs);
     return () => window.removeEventListener("easteregg-found", checkEggs);
@@ -144,13 +146,13 @@ export default function Header() {
           </div>
           {hasEggs && (
             <Link
-            href="/collection"
-            className={`${styles.navLink} ${
-              router.pathname === "/collection" ? styles.active : ""
-            } ${!allFound ? styles.highlighted : ""}`} // 👈 пульсация, пока не собраны все
-          >
-            {t("footer.collection")}
-          </Link>
+              href="/collection"
+              className={`${styles.navLink} ${router.pathname === "/collection" ? styles.active : ""} ${
+                !allFound ? styles.highlighted : ""
+              }`} // 👈 пульсация, пока не собраны все
+            >
+              {t("footer.collection")}
+            </Link>
           )}
         </nav>
       </div>

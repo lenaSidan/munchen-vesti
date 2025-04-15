@@ -11,11 +11,15 @@ export default function EasterEggSidebarHint() {
   useEffect(() => {
     const checkEggs = () => {
       if (typeof window === "undefined") return;
-      const keys = Object.keys(localStorage).filter((key) => key.startsWith("easteregg-"));
-      const found = keys.some((key) => localStorage.getItem(key) === "true");
-      setHasEggs(found);
+    
+      const rewardClaimed = localStorage.getItem("easteregg-reward-claimed") === "true";
+      const foundAny = Object.keys(localStorage).some(
+        (key) => key.startsWith("easteregg-") && localStorage.getItem(key) === "true"
+      );
+    
+      setHasEggs(foundAny && !rewardClaimed); // 👈 показываем, если что-то найдено и награда не получена
     };
-
+  
     checkEggs();
     window.addEventListener("easteregg-found", checkEggs);
     return () => window.removeEventListener("easteregg-found", checkEggs);
