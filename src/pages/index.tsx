@@ -13,9 +13,9 @@ import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import { useRouter } from "next/router";
 import { getWeatherForecast, DailyWeather } from "@/lib/getWeather";
-import ShortNewsBlock from "@/components/ShortNewsBlock";
 import Ads from "@/components/Ads";
-import EasterEggById from "@/components/EasterEggById";
+import dynamic from "next/dynamic";
+import { useEffect, useRef, useState } from "react";
 
 interface Announcement {
   id: number;
@@ -35,11 +35,40 @@ interface HomeProps {
   announcements: Announcement[];
   weather: DailyWeather | null;
 }
+const LazyShortNewsBlock = dynamic(() => import("@/components/ShortNewsBlock"), {
+  ssr: false,
+  loading: () => <p>Загрузка...</p>, // можно сюда засунуть заглушку или скелетон
+});
+const LazyEasterEgg = dynamic(() => import("@/components/EasterEggById"), {
+  ssr: false,
+});
 
 export default function Home({ mainEvent, secondEvent, otherEvents, weather }: HomeProps) {
   const t = useTranslation();
   const router = useRouter();
 
+  const [showNewsBlock, setShowNewsBlock] = useState(false);
+  const newsRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!newsRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShowNewsBlock(true);
+          observer.disconnect(); // отписка, чтобы не наблюдать больше
+        }
+      },
+      {
+        rootMargin: "100px", // загружать чуть раньше
+      }
+    );
+
+    observer.observe(newsRef.current);
+
+    return () => observer.disconnect();
+  }, []);
   return (
     <>
       <Seo title={t("seo.index_title")} description={t("seo.index_description")} image={mainEvent?.image} />
@@ -56,9 +85,11 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
                     className={styles.mainImage}
                     width={700}
                     height={350}
-                    priority={true}
+                    priority
                     loading="eager"
+                    fetchPriority="high"
                     sizes="(max-width: 768px) 100vw, 700px"
+                    unoptimized // если сам оптимизируешь webp и размеры
                   />
                 )}
                 <h2 className={styles.articleTitle}>{mainEvent.title}</h2>
@@ -118,11 +149,11 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
             </ul>
           </section>
         )}
-        <div className={styles.newsBlock}>
-          <ShortNewsBlock />
+        <div className={styles.newsBlock} ref={newsRef}>
+          {showNewsBlock && <LazyShortNewsBlock />}
         </div>
 
-        <EasterEggById id="easteregg-home" chance={0.5} />
+        {showNewsBlock && <LazyEasterEgg id="easteregg-home" chance={0.5} />}
       </div>
     </>
   );
