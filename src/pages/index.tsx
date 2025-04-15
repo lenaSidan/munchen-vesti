@@ -24,9 +24,13 @@ interface Announcement {
   styleClass?: string;
 }
 
+interface ExtendedEvent extends Event {
+  content: string;
+}
+
 interface HomeProps {
   mainEvent: Event | null;
-  secondEvent: Event | null;
+  secondEvent: ExtendedEvent | null;
   otherEvents: Event[];
   announcements: Announcement[];
   weather: DailyWeather | null;
@@ -41,7 +45,6 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
       <Seo title={t("seo.index_title")} description={t("seo.index_description")} image={mainEvent?.image} />
       <h1 className={styles.visuallyHidden}>{t("home.page_title")}</h1>
       <div className={styles.container}>
-        {/* Главная статья + объявления */}
         <div className={styles.layout}>
           <div className={styles.articlesSection}>
             {mainEvent && (
@@ -54,15 +57,13 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
                     width={700}
                     height={350}
                     priority={true}
+                    loading="eager"
                     sizes="(max-width: 768px) 100vw, 700px"
                   />
                 )}
                 <h2 className={styles.articleTitle}>{mainEvent.title}</h2>
                 <p className={styles.articleDate}>{mainEvent.date}</p>
-                <div className={styles.decorativeLine}>
-                  {/* <span className={styles.left}>𐎐</span>
-                <span className={styles.right}>𐎐</span> */}
-                </div>
+                <div className={styles.decorativeLine}></div>
                 <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: mainEvent.content }} />
               </article>
             )}
@@ -72,35 +73,30 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
           </div>
         </div>
 
-        {/* Вторая статья */}
         {secondEvent && (
           <article className={styles.secondArticle}>
             <div className={styles.secondArticleHeader}>
               <h2 className={styles.secondArticleTitle}>{secondEvent.title}</h2>
               <p className={styles.articleDate}>{secondEvent.date}</p>
-              <div className={styles.decorativeLine}>
-                {/* <span className={styles.left}>𐎐</span>
-              <span className={styles.right}>𐎐</span> */}
-              </div>
+              <div className={styles.decorativeLine}></div>
             </div>
-
-            <div className={styles.secondArticleContent}>
+            <div className={styles.secondArticleGrid}>
               {secondEvent.image && (
                 <Image
                   src={secondEvent.image}
-                  alt={secondEvent.title}
+                  alt={secondEvent.title || "Event image"}
                   className={styles.secondImage}
-                  width={600}
-                  height={350}
-                  sizes="(max-width: 768px) 100vw, 600px"
+                  width={400}
+                  height={300}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 400px"
                 />
               )}
-              <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: secondEvent.content }} />
+              <div dangerouslySetInnerHTML={{ __html: secondEvent.content }} />
             </div>
           </article>
         )}
 
-        {/* Ссылки на другие статьи */}
         {otherEvents.length > 0 && (
           <section className={styles.otherArticles}>
             <Link
@@ -111,7 +107,6 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
             >
               {t("home.view_all_articles")}
             </Link>
-
             <ul className={styles.otherArticlesList}>
               {otherEvents.map((event) => (
                 <li key={event.slug} className={styles.articleLink}>
@@ -126,14 +121,13 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
         <div className={styles.newsBlock}>
           <ShortNewsBlock />
         </div>
-        
+
         <EasterEggById id="easteregg-home" chance={0.5} />
       </div>
     </>
   );
 }
 
-// Функция обработки Markdown в HTML
 async function processMarkdown(content: string) {
   const processedContent = await remark()
     .use(remarkGfm)
@@ -141,7 +135,6 @@ async function processMarkdown(content: string) {
     .use(rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] })
     .use(rehypeStringify)
     .process(content);
-
   return processedContent.toString();
 }
 
@@ -156,15 +149,9 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
 
   const filteredEvents = events.filter((event) => {
     if (!event.date) return false;
-
     const startDate = new Date(event.date);
     const endDate = event.endDate ? new Date(event.endDate) : startDate;
-
-    return (
-      // Либо начинается в течение 10 дней
-      // Либо уже идёт (началось и не закончилось)
-      (startDate >= now && startDate <= tenDaysLater) || (startDate <= now && endDate >= now)
-    );
+    return (startDate >= now && startDate <= tenDaysLater) || (startDate <= now && endDate >= now);
   });
 
   const sortedEvents = filteredEvents.sort((a, b) => {
@@ -173,18 +160,18 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
     return startDateA - startDateB;
   });
 
-  console.log(
-    "✅ Актуальные события для главной страницы:",
-    sortedEvents.map((e) => `${e.title} (${e.date}${e.endDate ? "–" + e.endDate : ""})`)
-  );
-
   const translations = await import(`@/locales/${locale || "ru"}.json`);
 
   const mainEvent =
     sortedEvents.length > 0 ? { ...sortedEvents[0], content: await processMarkdown(sortedEvents[0].content) } : null;
 
-  const secondEvent =
-    sortedEvents.length > 1 ? { ...sortedEvents[1], content: await processMarkdown(sortedEvents[1].content) } : null;
+  let secondEvent: ExtendedEvent | null = null;
+  if (sortedEvents.length > 1) {
+    secondEvent = {
+      ...sortedEvents[1],
+      content: await processMarkdown(sortedEvents[1].content),
+    };
+  }
 
   const otherEvents = await Promise.all(
     sortedEvents.slice(2, 5).map(async (e) => ({
@@ -193,15 +180,13 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
     }))
   );
 
-  console.log(
-    "👉 otherEvents:",
-    otherEvents.map((e) => e.title)
-  );
   const translatedAnnouncements = announcementsData.map((ann: Announcement) => ({
     ...ann,
     text: translations[ann.textKey] || ann.textKey,
   }));
+
   const weather = await getWeatherForecast();
+
   return {
     props: {
       mainEvent,
