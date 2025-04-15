@@ -133,7 +133,7 @@
   font-weight: 600;
 }
 .linkBoxHref {
-  color: var(--border-color);
+  color: var(--link-color);
   font-size: 1.1rem;
 }
 .decorativeLine {
