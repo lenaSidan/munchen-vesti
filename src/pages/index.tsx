@@ -84,12 +84,11 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
                     alt={mainEvent.title}
                     className={styles.mainImage}
                     width={700}
-                    height={350}
+                    height={400}
                     priority
                     loading="eager"
                     fetchPriority="high"
                     sizes="(max-width: 768px) 100vw, 700px"
-                    unoptimized // если сам оптимизируешь webp и размеры
                   />
                 )}
                 <h2 className={styles.articleTitle}>{mainEvent.title}</h2>
@@ -150,7 +149,11 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
           </section>
         )}
         <div className={styles.newsBlock} ref={newsRef}>
-          {showNewsBlock && <LazyShortNewsBlock />}
+          {showNewsBlock && (
+            <div className={styles.newsFadeIn}>
+              <LazyShortNewsBlock />
+            </div>
+          )}
         </div>
 
         {showNewsBlock && <LazyEasterEgg id="easteregg-home" chance={0.5} />}
