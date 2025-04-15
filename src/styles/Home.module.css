@@ -202,7 +202,20 @@
   padding: 20px;
   display: flex;
   justify-content: center;
+  min-height: 200px;
+  transition: min-height 0.3s ease-in-out;
 }
+.newsFadeIn {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 .otherArticles {
   display: flex;
   flex-direction: column;
