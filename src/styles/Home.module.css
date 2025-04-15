@@ -142,8 +142,6 @@
   column-count: 2;
   column-gap: 30px;
   text-align: justify;
-  font-size: 1.1rem;
-  line-height: 1.5;
   -webkit-hyphens: auto;
   hyphens: auto;
 }
@@ -155,6 +153,8 @@
   margin-bottom: -15px;
 }
 .secondArticle {
+  font-size: 1.1rem;
+  line-height: 1.4;
   display: flex;
   flex-direction: column;
   padding: 10px 20px;
