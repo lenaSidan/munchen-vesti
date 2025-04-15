@@ -48,8 +48,9 @@
 
 .lanternIcon {
   vertical-align: middle;
-  width: 20px;
   height: 40px;
+  aspect-ratio: 48 / 131; 
+  width: auto;
 }
 
 @media (max-width: 768px) {
@@ -67,9 +68,10 @@
     border-radius: 12px;
   }
   .lanternIcon {
-    vertical-align: middle;
-    width: 15px;
     height: 27px;
+    aspect-ratio: 48 / 131;
+    width: auto;
+    vertical-align: middle;
   }
   .toggleKnob {
     width: 17px;

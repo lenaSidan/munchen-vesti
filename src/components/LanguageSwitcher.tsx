@@ -40,7 +40,7 @@ const LanguageSwitcher = () => {
   }, []);
   return (
     <div className={styles.languageSwitcher}>
-      <Image src={lanternIcon} alt="Lantern icon" width={24} height={50} className={styles.lanternIcon} />
+      <Image src={lanternIcon} alt="Lantern icon" width={48} height={131} className={styles.lanternIcon} />
 
       <div className={`${styles.toggleWrapper} ${isRu ? "" : styles.active}`} onClick={toggleLanguage}>
         <div className={styles.toggleKnob}></div>
