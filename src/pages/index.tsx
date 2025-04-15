@@ -89,6 +89,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
                     loading="eager"
                     fetchPriority="high"
                     sizes="(max-width: 768px) 100vw, 700px"
+                    style={{ width: '100%', height: 'auto' }}
                   />
                 )}
                 <h2 className={styles.articleTitle}>{mainEvent.title}</h2>

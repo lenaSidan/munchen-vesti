@@ -106,6 +106,7 @@
   transition: border-color 0.3s ease-in-out;
 }
 .mainImage {
+  aspect-ratio: 7 / 4;
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -300,6 +301,17 @@
     flex-direction: column;
     gap: 30px;
     background: none;
+  }
+  .mainImage {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 7 / 4;
+    object-fit: contain;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid var(--heading-color2);
+    display: block;
   }
   .secondArticle h2 {
     padding-top: 0;
