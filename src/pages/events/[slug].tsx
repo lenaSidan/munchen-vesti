@@ -14,6 +14,7 @@ import styles from "@/styles/Event.module.css";
 import { getEventsByLocale } from "@/lib/getEvents";
 import Link from "next/link";
 import useTranslation from "@/hooks/useTranslation";
+import rehypeExternalLinks from "rehype-external-links";
 
 interface Event {
   slug: string;
@@ -125,8 +126,16 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
   const { data, content } = matter(fileContents);
 
   // 🔹 Обрабатываем Markdown в HTML
-  const processedContent = await remark().use(remarkGfm).use(remarkRehype).use(rehypeStringify).process(content);
 
+  const processedContent = await remark()
+  .use(remarkGfm)
+  .use(remarkRehype)
+  .use(rehypeExternalLinks, {
+    target: '_blank',
+    rel: ['noopener', 'noreferrer'], // безопасная практика
+  })
+  .use(rehypeStringify)
+  .process(content);
   const contentHtml = processedContent.toString();
 
   return {

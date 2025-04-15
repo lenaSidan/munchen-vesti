@@ -10,6 +10,7 @@ import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import Seo from "@/components/Seo";
 import EasterEggById from "@/components/EasterEggById";
+import rehypeExternalLinks from "rehype-external-links";
 
 interface EventsProps {
   events: Event[];
@@ -135,7 +136,15 @@ export default function EventsPage({ events }: EventsProps) {
 
 // Функция обработки Markdown в HTML
 async function processMarkdown(content: string) {
-  const processedContent = await remark().use(remarkGfm).use(remarkRehype).use(rehypeStringify).process(content);
+  const processedContent = await remark()
+    .use(remarkGfm)
+    .use(remarkRehype)
+    .use(rehypeExternalLinks, {
+      target: "_blank",
+      rel: ["noopener", "noreferrer"],
+    })
+    .use(rehypeStringify)
+    .process(content);
   return processedContent.toString();
 }
 
