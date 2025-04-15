@@ -4,15 +4,13 @@
   padding: 12px 15px;
   margin-bottom: 40px;
   font-family: "Merriweather", serif;
-  font-size: 1rem;
-  line-height: 1.4;
   color: var(--text-color);
   justify-content: center;
 }
 
 .weatherBox h4 {
   margin: 0 0 10px 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   text-align: left;
   color: var(--heading-color2);
@@ -31,7 +29,7 @@
   display: flex;
   gap: 15px;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
 }
 
 .weatherBox strong {
