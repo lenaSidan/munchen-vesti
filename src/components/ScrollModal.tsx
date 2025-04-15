@@ -16,16 +16,12 @@ export default function ScrollModal({ onClose }: Props) {
   const t = useTranslation();
 
   const handleClose = () => {
-    // Запоминаем, что пользователь нашёл секретную пасхалку
     localStorage.setItem("easteregg-secret", "true");
-
-    // Закрываем модалку
+    localStorage.setItem("easteregg-reward-claimed", "true"); // 🎁 отметим, что подарок получен
     onClose();
-
-    // Обновляем все слушатели (например, в Footer)
     window.dispatchEvent(new Event("easteregg-found"));
   };
-
+  
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
