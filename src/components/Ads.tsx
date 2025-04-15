@@ -3,14 +3,14 @@ import Image from "next/image";
 import useTranslation from "@/hooks/useTranslation";
 import WeatherInlineBlock from "./WeatherInlineBlock";
 import { DailyWeather } from "@/lib/getWeather";
-import ViletaJewelry from "./ads/services/VitaJewelry";
+import PsychologistTatjana from "./ads/services/PsychologistTatjana";
 
 export default function Ads({ weather }: { weather: DailyWeather | null }) {
   const t = useTranslation();
 
   return (
     <aside className={styles.announcements}>
-       {weather && <WeatherInlineBlock forecast={weather} />}
+      {weather && <WeatherInlineBlock forecast={weather} />}
       <div className={styles.announcementHeader}>
         <h3 className={styles.announcementTitle}>{t("info")}</h3>
         <Image
@@ -24,10 +24,7 @@ export default function Ads({ weather }: { weather: DailyWeather | null }) {
 
       <div className={styles.decorativeLine}></div>
 
-     
-
-      <ViletaJewelry/>
-  
+      <PsychologistTatjana />
     </aside>
   );
 }
