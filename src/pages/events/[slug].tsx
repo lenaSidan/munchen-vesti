@@ -52,7 +52,7 @@ export default function Event({ event }: EventProps) {
       <Head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </Head>
-      <Seo title={event.seoTitle || event.title} description={event.seoDescription} image={event.image} />
+      <Seo title={event.seoTitle || event.title} description={event.seoDescription} />
       <div className={styles.articleContainer}>
         <h2 className={styles.title}>{event.title}</h2>
         <p className={styles.meta}>
