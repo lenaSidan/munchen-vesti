@@ -143,7 +143,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
               {otherEvents.map((event) => (
                 <li key={event.slug} className={styles.articleLink}>
                   <Link href={`/events/${event.slug}`}>
-                    {event.title} <span className={styles.articleDate}>{event.date}</span>
+                    {event.title} <span className={styles.articleDate}>  | {event.date}</span>
                   </Link>
                 </li>
               ))}
