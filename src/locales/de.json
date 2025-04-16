@@ -15,7 +15,12 @@
   "weather": {
     "title": "Wettervorhersage für München",
     "precip": "Niederschlag",
-    "error_loading": "Wetter konnte nicht geladen werden"
+    "error_loading": "Wetter konnte nicht geladen werden",
+    "more": "Weitere Details",
+    "average_temperature": "Wochendurchschnitt:",
+    "warmest_day": "Wärmster Tag:",
+    "most_precipitation": "Meiste Niederschläge:",
+    "back_to_home": "Zur Startseite"
   },
   "easteregg": {
     "message": "Sie haben eine verborgene Botschaft entdeckt! Vielen Dank für Ihre Aufmerksamkeit.",
