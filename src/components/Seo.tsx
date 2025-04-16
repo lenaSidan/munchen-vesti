@@ -5,11 +5,10 @@ import useTranslation from "@/hooks/useTranslation";
 interface SeoProps {
   title?: string;
   description?: string;
-  image?: string;
-  type?: "website" | "article"; // можно расширить при необходимости
+  type?: "website" | "article";
 }
 
-export default function Seo({ title, description, image, type = "website" }: SeoProps) {
+export default function Seo({ title, description, type = "website" }: SeoProps) {
   const router = useRouter();
   const t = useTranslation();
 
@@ -20,7 +19,7 @@ export default function Seo({ title, description, image, type = "website" }: Seo
   const baseUrl = "https://munchen-vesti.de";
   const path = router.asPath;
   const url = `${baseUrl}${path}`;
-  const imageUrl = image?.startsWith("http") ? image : `${baseUrl}${image || "/default-og-image.png"}`;
+  const imageUrl = `${baseUrl}/images/og-card.png`; // Всегда визитка
 
   const altLocale = locale === "ru" ? "de" : "ru";
   const cleanPath = path.startsWith(`/${locale}`) ? path.replace(`/${locale}`, "") : path;
@@ -58,7 +57,6 @@ export default function Seo({ title, description, image, type = "website" }: Seo
       <meta name="twitter:image:alt" content={fullTitle} />
       <meta name="twitter:card" content="summary_large_image" />
 
-      {/* Optional favicon (если ещё не добавлен глобально) */}
       <link rel="icon" href="/favicon.ico" />
     </Head>
   );
