@@ -71,7 +71,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
   }, []);
   return (
     <>
-      <Seo title={t("seo.index_title")} description={t("seo.index_description")} image={mainEvent?.image} />
+      <Seo title={t("seo.index_title")} description={t("seo.index_description")} />
       <h1 className={styles.visuallyHidden}>{t("home.page_title")}</h1>
       <div className={styles.container}>
         <div className={styles.layout}>
@@ -143,7 +143,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
               {otherEvents.map((event) => (
                 <li key={event.slug} className={styles.articleLink}>
                   <Link href={`/events/${event.slug}`}>
-                    {event.title} <span className={styles.articleDate}>  | {event.date}</span>
+                    {event.title} <span className={styles.articleDate}> | {event.date}</span>
                   </Link>
                 </li>
               ))}
