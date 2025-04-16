@@ -9,34 +9,38 @@ import Link from "next/link";
 export default function EasterEggCollection() {
   const t = useTranslation();
   const [found, setFound] = useState<string[]>([]);
-  const [showScroll, setShowScroll] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  // Загружаем найденные пасхалки
   const [rareMap, setRareMap] = useState<Record<string, boolean>>({});
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [showScroll, setShowScroll] = useState(false);
 
+  // Загружаем найденные пасхалки + проверяем, все ли найдены
   useEffect(() => {
-    const foundEggs = EASTER_EGGS.filter((egg) => localStorage.getItem(egg.id) === "true").map((egg) => egg.id);
-    const tempRareMap: Record<string, boolean> = {};
-    foundEggs.forEach((id) => {
-      const isRare = localStorage.getItem(`${id}-rare`) === "true";
-      tempRareMap[id] = isRare;
-    });
+    const updateCollection = () => {
+      const foundEggs = EASTER_EGGS.filter((egg) => localStorage.getItem(egg.id) === "true").map((egg) => egg.id);
+      const tempRareMap: Record<string, boolean> = {};
+      foundEggs.forEach((id) => {
+        const isRare = localStorage.getItem(`${id}-rare`) === "true";
+        tempRareMap[id] = isRare;
+      });
 
-    setFound(foundEggs);
-    setRareMap(tempRareMap);
-    setIsLoaded(true);
+      setFound(foundEggs);
+      setRareMap(tempRareMap);
+      setIsLoaded(true);
 
-    if (EASTER_EGGS.filter((egg) => !egg.secret).every((egg) => localStorage.getItem(egg.id) === "true")) {
-      localStorage.setItem("easteregg-secret", "true");
-    }
+      const allFound = EASTER_EGGS.filter((egg) => !egg.secret).every((egg) => foundEggs.includes(egg.id));
+      if (allFound) {
+        localStorage.setItem("easteregg-secret", "true");
+        window.dispatchEvent(new Event("easteregg-found"));
+      }
+    };
+
+    updateCollection();
   }, []);
 
   const isAllFound = EASTER_EGGS.filter((egg) => !egg.secret).every((egg) => found.includes(egg.id));
 
-  // Показываем все, кроме секретной. Секретная появляется только если собраны все обычные.
+  // Показываем все, кроме секретной — она появляется только если собраны все обычные
   const visibleEggs = EASTER_EGGS.filter((egg) => !egg.secret || isAllFound);
-
   const foundCount = found.filter((id) => visibleEggs.some((egg) => egg.id === id)).length;
 
   if (!isLoaded) return null;
@@ -51,7 +55,6 @@ export default function EasterEggCollection() {
       </p>
 
       {isAllFound && <p className={styles.bonus}>{t("eastereggCollection.bonusMessage")}</p>}
-
       {isAllFound && <p className={styles.achievement}>{t("eastereggCollection.allFound")}</p>}
       {showScroll && <ScrollModal onClose={() => setShowScroll(false)} />}
 
@@ -60,11 +63,11 @@ export default function EasterEggCollection() {
           <div
             key={egg.id}
             className={`
-            ${styles.card} 
-            ${found.includes(egg.id) ? styles.found : styles.locked} 
-            ${egg.secret && found.includes(egg.id) ? styles.clickable : ""} 
-            ${egg.secret && found.includes(egg.id) ? styles.specialGlow : ""}
-          `}
+              ${styles.card} 
+              ${found.includes(egg.id) ? styles.found : styles.locked} 
+              ${egg.secret && found.includes(egg.id) ? styles.clickable : ""} 
+              ${egg.secret && found.includes(egg.id) ? styles.specialGlow : ""}
+            `}
             onClick={() => {
               if (egg.secret && found.includes(egg.id)) {
                 setShowScroll(true);
@@ -93,6 +96,7 @@ export default function EasterEggCollection() {
           </div>
         ))}
       </div>
+
       <div className={styles.backButtonWrapper}>
         <Link href="/" className={styles.backButton}>
           ⬅ {t("eastereggCollection.backToHome")}
