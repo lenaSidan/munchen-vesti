@@ -78,8 +78,8 @@ export default function Footer() {
             <Image
               src="/icons/telegram_icon.png"
               alt="Telegram"
-              width={50}
-              height={50}
+              width={40}
+              height={34}
               className={`${styles.socialIcon} ${styles.telegram}`}
             />
           </a>
@@ -93,8 +93,8 @@ export default function Footer() {
             <Image
               src="/icons/instagram_icon.png"
               alt="Instagram"
-              width={50}
-              height={50}
+              width={40}
+              height={34}
               className={`${styles.socialIcon} ${styles.instagram}`}
             />
           </a>
@@ -107,8 +107,8 @@ export default function Footer() {
             <Image
               src="/icons/facebook_icon.png"
               alt="Facebook"
-              width={50}
-              height={50}
+              width={40}
+              height={34}
               className={`${styles.socialIcon} ${styles.facebook}`}
             />
           </a>

@@ -88,6 +88,7 @@
   bottom: 0;
 }
 .socials {
+  transition: transform 0.3s ease;
   display: flex;
   gap: 25px;
   margin: 10px 0;
@@ -95,6 +96,8 @@
 }
 
 .socialIcon {
+  width: 50px;
+  height: auto;
   transition: transform 0.3s ease;
 }
 
@@ -147,7 +150,8 @@
   }
   .socialIcon {
     width: 30px;
-    height: 30px;
+    height: auto;
+    
   }
 
   .container {
