@@ -150,7 +150,7 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
         time: data.time || "",
         ort: data.ort || "",
         link: data.link || "",
-        image: data.image || null,
+        image: data.image || "",
         imageAlt: data.imageAlt || "",
         content: contentHtml,
       },

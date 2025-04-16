@@ -80,7 +80,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
               <article className={styles.mainArticle}>
                 {mainEvent.image && (
                   <Image
-                  src={mainEvent.image}
+                    src={mainEvent.image}
                     alt={mainEvent.title}
                     className={styles.mainImage}
                     width={700}
@@ -89,7 +89,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
                     loading="eager"
                     decoding="async"
                     fetchPriority="high"
-                    sizes="(max-width: 768px) 100vw, 700px"
+                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, 700px"
                     style={{ width: "100%", height: "auto" }}
                   />
                 )}
@@ -119,7 +119,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
                   alt={secondEvent.title || "Event image"}
                   className={styles.secondImage}
                   width={400}
-                  height={300}
+                  height={228}
                   loading="lazy"
                   sizes="(max-width: 768px) 100vw, 400px"
                 />
