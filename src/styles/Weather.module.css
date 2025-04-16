@@ -7,7 +7,6 @@
   border-radius: 4px;
   font-family: "Merriweather", serif;
   color: var(--text-color);
-  
 }
 
 .weatherTitle {
@@ -37,30 +36,62 @@
   border-bottom: 1px dashed var(--border-color);
 }
 
+.weatherHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .weatherDate {
   font-weight: 700;
   font-size: 1.1rem;
-  display: block;
-  margin-bottom: 5px;
   color: var(--heading-color);
 }
 
 .weatherDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 5px;
   font-size: 1rem;
-  line-height: 1.5;
 }
+
+.temp {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.min {
+  color: #4976d1; /* прохладный синий */
+  font-weight: 500;
+}
+
+.max {
+  color: #a52a2a; /* тёплый красно-коричневый */
+  font-weight: 500;
+}
+
+.precip {
+  font-style: italic;
+  color: var(--heading-color);
+  font-size: 0.95rem;
+  padding-left: 10px;
+}
+
+.weatherIcon {
+  margin-left: 10px;
+}
+
 @media (max-width: 768px) {
   .weatherBlock {
     max-width: 90%;
-    box-sizing: border-box;
     padding: 20px 15px;
-    margin: 20px auto; /* авто по бокам */
   }
 
   .weatherTitle {
     font-size: 1.4rem;
     margin-bottom: 20px;
-    padding-bottom: 8px;
   }
 
   .weatherList {
@@ -78,12 +109,12 @@
   }
 
   .weatherDetails {
-    font-size: 0.95rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
   }
 
-  .weatherIcon {
-    width: 24px;
-    height: 24px;
-    margin-left: 6px;
+  .precip {
+    padding-left: 0;
   }
 }
