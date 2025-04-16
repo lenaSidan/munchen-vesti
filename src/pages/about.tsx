@@ -7,7 +7,7 @@ export default function About() {
 
   return (
     <>
-      <Seo title={t("meta.about_title")} description={t("meta.about_description")} image="/default-og-image.png" />
+      <Seo title={t("meta.about_title")} description={t("meta.about_description")} />
       <h1 className={styles.visuallyHidden}>{t("meta.about_title")}</h1>
 
       <div className={styles.container}>
