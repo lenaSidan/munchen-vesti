@@ -19,7 +19,7 @@ export default function Seo({ title, description, type = "website" }: SeoProps) 
   const baseUrl = "https://munchen-vesti.de";
   const path = router.asPath;
   const url = `${baseUrl}${path}`;
-  const imageUrl = `${baseUrl}/images/og-card.png`; // Всегда визитка
+  const imageUrl = `${baseUrl}/images/default-og-image.png`; // Всегда визитка
 
   const altLocale = locale === "ru" ? "de" : "ru";
   const cleanPath = path.startsWith(`/${locale}`) ? path.replace(`/${locale}`, "") : path;
