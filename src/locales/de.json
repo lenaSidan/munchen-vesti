@@ -61,6 +61,10 @@
   "title": {
     "read_more": "Weiterlesen"
   },
+  "news": {
+    "go_to_newsPage": "Nachrichten",
+    "title": "Nachrichten"
+  },
   "newsTitle": "Aktuelle Nachrichten",
   "info": "Wir empfehlen",
   "read_more": "Weiterlesen",
@@ -89,7 +93,10 @@
     "events_title": "Veranstaltungen und Events",
     "events_description": "Bevorstehende Veranstaltungen in München: Konzerte, Workshops, Festivals, Vorträge und mehr.",
     "all_events_title": "Alle Veranstaltungen",
-    "all_events_description": "Komplette Übersicht aller vergangenen und bevorstehenden Veranstaltungen in München."
+    "all_events_description": "Komplette Übersicht aller vergangenen und bevorstehenden Veranstaltungen in München.",
+    "newsAll_title": "Alle Nachrichten aus München – aktuelle Ereignisse, Stadtleben und wichtige Ankündigungen",
+    "news_title": "Aktuelle Nachrichten aus München",
+    "news_description": "Lesen Sie die neuesten Nachrichten aus München auf Deutsch. Erfahren Sie mehr über Veranstaltungen, wichtige Änderungen und das Leben in der Stadt."
   },
   "menu": {
     "articles": "Artikel",

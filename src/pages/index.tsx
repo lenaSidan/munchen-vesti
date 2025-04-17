@@ -154,6 +154,9 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
           {showNewsBlock && (
             <div className={styles.newsFadeIn}>
               <LazyShortNewsBlock />
+              <Link href="/news-page" className={styles.viewAllLink}>
+                {t("news.go_to_newsPage")} →
+              </Link>
             </div>
           )}
         </div>

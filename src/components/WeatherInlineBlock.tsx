@@ -34,7 +34,7 @@ export default function WeatherInlineBlock({ forecast }: { forecast: DailyWeathe
           </li>
         ))}
       </ul>
-      <div className={styles.weatherLinkHint}>{t("weather.more")} →</div>
+      <div className={styles.weatherLinkHint}>{t("weather.more")} ➡</div>
     </Link>
   );
 }

@@ -70,6 +70,13 @@ export default function MobileHeader() {
             >
               {t("menu.announcements").toUpperCase()}
             </Link>
+            <Link
+              href="/news-page"
+              className={`${styles.navLink} ${router.pathname === "/news-page" ? styles.active : ""}`}
+              onClick={closeSubmenu}
+            >
+              {t("menu.news").toUpperCase()}
+            </Link>
             <button
               type="button"
               onClick={toggleSubmenu}

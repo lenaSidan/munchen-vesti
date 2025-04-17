@@ -12,6 +12,7 @@ import styles from "@/styles/NewsPage.module.css";
 import Seo from "@/components/Seo";
 import useTranslation from "@/hooks/useTranslation";
 import { useRouter } from "next/router";
+import rehypeExternalLinks from "rehype-external-links";
 
 interface NewsItem {
   slug: string;
@@ -32,36 +33,51 @@ interface NewsProps {
 export default function NewsPage({ news }: NewsProps) {
   const t = useTranslation();
   const { locale } = useRouter();
+
   return (
     <>
       <Seo title={news.seoTitle || news.title} description={news.seoDescription} />
       <div className={styles.container}>
-        <h2 className={styles.title}>{news.title}</h2>
-        {news.date && (
-          <p className={styles.date}>
-            {new Date(news.date).toLocaleDateString(locale, {
-              day: "numeric",
-              month: "long",
-              year: "numeric",
-            })}
-          </p>
-        )}
-        {news.image && (
-          <div className={styles.imageWrapper}>
+        <div className={styles.headerBox}>
+          <h2 className={styles.title}>{news.title}</h2>
+          {news.date && (
+            <p className={styles.date}>
+              {new Date(news.date).toLocaleDateString(locale, {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              })}
+            </p>
+          )}
+        </div>
+
+        <div className={styles.columnsWithImage}>
+          {news.image && (
             <Image
               src={news.image}
-              alt={news.imageAlt || news.title}
-              width={700}
-              height={400}
+              alt={news.title || "Event image"}
               className={styles.image}
-              sizes="(max-width: 768px) 100vw, 700px"
+              width={600}
+              height={400}
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 600px"
             />
+          )}
+          <div className={styles.content} dangerouslySetInnerHTML={{ __html: news.content }} />
+        </div>
+        <div className={styles.readMoreContainer}>
+          <div className={styles.decorativeLine}>
+            <span className={styles.left}>⊱❧</span>
+            <span className={styles.right}>⊱❧</span>
           </div>
-        )}
-        <div className={styles.content} dangerouslySetInnerHTML={{ __html: news.content }} />
-        <Link href="/" className={styles.backLink}>
-          {t("articles.back")}
-        </Link>
+          <Link href="/news-page" className={styles.readMore}>
+            {t("articles.back")}
+          </Link>
+          <div className={`${styles.decorativeLine} ${styles.bottom}`}>
+            <span className={styles.right}>⊱❧</span>
+            <span className={styles.left}>⊱❧</span>
+          </div>
+        </div>
       </div>
     </>
   );
@@ -88,8 +104,16 @@ export const getStaticProps: GetStaticProps<NewsProps> = async ({ params, locale
   const fileContent = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(fileContent);
 
-  const processedContent = await remark().use(remarkGfm).use(remarkRehype).use(rehypeStringify).process(content);
-
+  const processedContent = await remark()
+    .use(remarkGfm)
+    .use(remarkRehype)
+    .use(rehypeExternalLinks, {
+      target: "_blank",
+      rel: ["noopener", "noreferrer"],
+    })
+    .use(rehypeStringify)
+    .process(content);
+    
   return {
     props: {
       news: {

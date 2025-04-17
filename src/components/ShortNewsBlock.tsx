@@ -34,7 +34,7 @@ export default function ShortNewsBlock() {
         />
       </div>
       <div className={styles.decorativeLine}></div>
-      <NewsBlock newsList={newsList} />
+      <NewsBlock newsList={newsList.slice(0, 2)} />
     </aside>
   );
 }

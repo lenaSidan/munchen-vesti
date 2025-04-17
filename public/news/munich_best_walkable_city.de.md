@@ -1,5 +1,7 @@
 ---
 title: München als fußgängerfreundlichste Stadt ausgezeichnet
+image: "/images/munich_2025.webp"
+imageAlt: München als fußgängerfreundlichste Stadt ausgezeichnet
 seoTitle: München weltweit führend in Fußgängerfreundlichkeit
 seoDescription: München belegt Platz 1 im globalen Fußgänger-Ranking
 ---
@@ -10,11 +12,11 @@ Die Stadt **München** wurde kürzlich von der australischen Vergleichsplattform
 
 Das globale Ranking bewertete Städte anhand mehrerer Kriterien, darunter:
 
-- Anzahl und Qualität der Gehwege  
-- Durchschnittliche Niederschlagsmenge  
-- Verkehrssicherheit  
-- Verfügbarkeit und Erschwinglichkeit öffentlicher Verkehrsmittel  
-- Radinfrastruktur  
+- ✔ Anzahl und Qualität der Gehwege  
+- ✔ Durchschnittliche Niederschlagsmenge  
+- ✔ Verkehrssicherheit  
+- ✔ Verfügbarkeit und Erschwinglichkeit öffentlicher Verkehrsmittel  
+- ✔ Radinfrastruktur  
 
 ### Warum München auf Platz 1 steht
 
