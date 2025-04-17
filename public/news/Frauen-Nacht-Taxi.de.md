@@ -1,5 +1,7 @@
 ---
 title: Münchens Frauen-Nacht-Taxi-Programm aufgrund hoher Nachfrage vorübergehend eingestellt
+image: "/images/frauen-nacht-taxi.webp"
+imageAlt: Münchens Frauen-Nacht-Taxi-Programm aufgrund hoher Nachfrage vorübergehend eingestellt
 seoTitle: Frauen-Nacht-Taxi in München pausiert wegen Budgetüberschreitung
 seoDescription: München setzt die Ausgabe von Gutscheinen für das nächtliche Frauentaxi aus – 570% Anstieg der Anträge führt zu politischen Debatten und Bürgerinitiativen
 ---

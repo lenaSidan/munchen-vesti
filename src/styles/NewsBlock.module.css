@@ -61,26 +61,28 @@
 
 .readMore {
   position: absolute;
-  bottom: 5px;
-  right: 10px;
-  background: none;
-  text-decoration: underline;
-  color: var(--heading-color);
+  bottom: 8px;
+  right: 15px;
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 500;
   font-family: var(--font-headings);
-  font-size: 0.9rem;
+  color: var(--heading-color2);
+  background: none;
+  border: none;
+  text-decoration: none;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
+  transition: color 0.3s ease;
 }
 
 .readMore::after {
-  content: "→";
-  font-size: 0.95rem;
+  content: "...";
 }
+
 .readMore:hover {
-  color: var(--heading-color2);
+  color: var(--heading-color);
 }
+
 @media (max-width: 768px) {
   .block {
     display: flex;
