@@ -412,4 +412,10 @@
   .newsBlock {
     padding: 30px 10px 20px 10px;
   }
+  .otherArticles {
+    margin-top: 20px;
+  }
+  .otherArticlesTitle {
+    font-size: 1.1rem;
+  }
 }

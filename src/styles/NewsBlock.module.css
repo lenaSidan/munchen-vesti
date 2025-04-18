@@ -38,7 +38,7 @@
   flex-grow: 1;
   height: 100%;
   position: relative;
-  padding-bottom: 5px;
+  padding-bottom: 15px;
 }
 
 .content h3 {
@@ -93,7 +93,7 @@
 
   .card {
     width: 100% !important;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   .card p{
     font-size: 0.9rem;
