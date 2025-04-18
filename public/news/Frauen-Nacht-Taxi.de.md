@@ -17,15 +17,15 @@ Dieser sprunghafte Anstieg führte dazu, dass das vorgesehene Budget von **230.0
 
 Diese Entscheidung löste **intensive Diskussionen** im Münchner Stadtrat aus:
 
-- Die **SPD/Volt-Fraktion** schlug vor, **zusätzliche 250.000 Euro** bereitzustellen, indem Mittel aus anderen sozialen Projekten umgeschichtet werden. Dies führte zu **Kontroversen** über die Prioritäten im Haushalt.
-- Die **Fraktion Die Linke/Die PARTEI** plädierte für eine umfassendere Maßnahme – eine Erhöhung des Budgets um **690.000 Euro**, um die gestiegene Nachfrage vollständig zu decken. Vertreter dieser Fraktion betonten die entscheidende Bedeutung des Programms für die **nächtliche Sicherheit von Frauen**.
+- • Die **SPD/Volt-Fraktion** schlug vor, **zusätzliche 250.000 Euro** bereitzustellen, indem Mittel aus anderen sozialen Projekten umgeschichtet werden. Dies führte zu **Kontroversen** über die Prioritäten im Haushalt.
+- • Die **Fraktion Die Linke/Die PARTEI** plädierte für eine umfassendere Maßnahme – eine Erhöhung des Budgets um **690.000 Euro**, um die gestiegene Nachfrage vollständig zu decken. Vertreter dieser Fraktion betonten die entscheidende Bedeutung des Programms für die **nächtliche Sicherheit von Frauen**.
 
 ### Öffentliche Reaktion und Initiativen
 
 Die Aussetzung des Frauen-Nacht-Taxi-Programms führte zu **breiter öffentlicher Resonanz**:
 
-- Der Radiosender **Gong 96.3** initiierte gemeinsam mit **Taxi München** ein eigenes Programm zur Bereitstellung von Gutscheinen für Frauen während der Aussetzungsphase.
-- Zudem wurde eine **Petition** ins Leben gerufen, die die Stadtverwaltung auffordert, die Finanzierung wieder aufzunehmen und die kontinuierliche Verfügbarkeit des Programms sicherzustellen.
+- • Der Radiosender **Gong 96.3** initiierte gemeinsam mit **Taxi München** ein eigenes Programm zur Bereitstellung von Gutscheinen für Frauen während der Aussetzungsphase.
+- • Zudem wurde eine **Petition** ins Leben gerufen, die die Stadtverwaltung auffordert, die Finanzierung wieder aufzunehmen und die kontinuierliche Verfügbarkeit des Programms sicherzustellen.
 
 Die Situation rund um das Frauen-Nacht-Taxi-Programm unterstreicht die Bedeutung von Initiativen zur **Gewährleistung der Sicherheit von Frauen** im urbanen Raum.  
 Einerseits zeigt der **starke Anstieg der Beliebtheit** den tatsächlichen Bedarf an solcher Unterstützung. Andererseits macht er die Notwendigkeit einer **langfristigen finanziellen Planung** und eines flexiblen Reaktionssystems deutlich, um sicherzustellen, dass wichtige Initiativen nicht gefährdet werden.

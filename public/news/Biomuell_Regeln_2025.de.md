@@ -28,9 +28,9 @@ Trotz des bestehenden Systems ist der Anteil falsch sortierter Abfälle in Deuts
 Die neuen Vorschriften zielen darauf ab, die Qualität der Mülltrennung zu verbessern und die EU-Ziele für Recycling zu erreichen. Deutschland strebt bis 2025 an, mindestens **55 % der kommunalen Abfälle** zu recyceln.
 
 ### Praktische Empfehlungen
-- ● Informieren Sie sich über die örtlichen Vorschriften – je nach Region können Unterschiede bestehen.
-- ● Nutzen Sie offizielle Informationsquellen wie [Mülltrennung wirkt](https://www.muelltrennung-wirkt.de).
-- ● Achten Sie auf Hinweise Ihrer Stadt oder Gemeinde zur Müllabfuhr und Änderungen bei der Entsorgung.
-- ● Beachten Sie die Kennzeichnung auf Verpackungen – viele enthalten Hinweise zur richtigen Entsorgung.
+- • Informieren Sie sich über die örtlichen Vorschriften – je nach Region können Unterschiede bestehen.
+- • Nutzen Sie offizielle Informationsquellen wie [Mülltrennung wirkt](https://www.muelltrennung-wirkt.de).
+- • Achten Sie auf Hinweise Ihrer Stadt oder Gemeinde zur Müllabfuhr und Änderungen bei der Entsorgung.
+- • Beachten Sie die Kennzeichnung auf Verpackungen – viele enthalten Hinweise zur richtigen Entsorgung.
 
 Die Einhaltung der neuen Mülltrennungsregeln hilft nicht nur dabei, Strafen zu vermeiden, sondern leistet auch einen wichtigen Beitrag zum Umweltschutz und zur nachhaltigen Entwicklung.
