@@ -62,10 +62,10 @@
     "read_more": "Weiterlesen"
   },
   "news": {
-    "go_to_newsPage": "Nachrichten",
-    "title": "Nachrichten"
+    "go_to_newsPage": "Alle aktuellen Meldungen",
+    "title": "Aktuelles"
   },
-  "newsTitle": "Aktuelle Nachrichten",
+  "newsTitle": "Aktuelles",
   "info": "Wir empfehlen",
   "read_more": "Weiterlesen",
 
@@ -100,8 +100,8 @@
   },
   "menu": {
     "articles": "Artikel",
-    "announcements": "Veranstaltungen",
-    "news": "News",
+    "announcements": "Events",
+    "news": "Aktuelles",
     "ads": "Anzeigen",
     "ads_services": "Dienstleistungen",
     "ads_food": "Gastronomie",
