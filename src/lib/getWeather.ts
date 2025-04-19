@@ -15,6 +15,9 @@ export async function getWeatherForecast(): Promise<DailyWeather | null> {
     if (!res.ok) throw new Error("Weather API request failed");
 
     const data = await res.json();
+
+    console.log("weathercode:", data.daily.weathercode);
+
     return data.daily;
   } catch (error) {
     console.error("Ошибка при получении погоды:", error);
