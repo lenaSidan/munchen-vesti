@@ -30,7 +30,7 @@ interface ArticlesProps {
 
 export default function ArticlesPage({ articles }: ArticlesProps) {
   const t = useTranslation();
-  
+
   return (
     <>
       <Seo title={t("meta.articles_title")} description={t("meta.articles_description")} />
@@ -63,9 +63,8 @@ export default function ArticlesPage({ articles }: ArticlesProps) {
               </div>
 
               <Link href={`/articles/${article.slug}`} className={styles.readMore}>
-                {article.shortTitle ? t(`articles.read_more`) + " " + article.shortTitle : t(`articles.read_more`)}
+                {t("articles.read_more")}
               </Link>
-
               <div className={`${styles.decorativeLine} ${styles.bottom}`}>
                 <span className={styles.right}>⊱❧</span>
                 <span className={styles.left}>⊱❧</span>
