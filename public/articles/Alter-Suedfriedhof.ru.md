@@ -1,6 +1,6 @@
 ---
 title: "Alter Südfriedhof: кладбище, где тишина шепчет историю Мюнхена"
-image: "/images/alter_suedfriedhof.webp"
+image: "/images/alter_suedfriedhof_muenchen.webp"
 imageAlt: "Осенний пейзаж Alter Südfriedhof в Мюнхене"
 seoTitle: "Alter Südfriedhof: старейшее кладбище Мюнхена как исторический памятник"
 seoDescription: "Alter Südfriedhof в Мюнхене — это не просто кладбище, а настоящая историческая летопись. Узнайте, кого здесь похоронили, какие архитектурные стили можно увидеть и почему это место стоит посетить."
