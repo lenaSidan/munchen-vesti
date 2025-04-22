@@ -192,17 +192,13 @@
   }
   .pageTitle {
     margin-top: 0;
-    font-size: 1rem;
     margin-bottom: 10px;
   }
   .eventCard {
     padding: 15px;
     margin-bottom: 20px;
   }
-  .eventCard h3 {
-    margin-top: 10px;
-    font-size: 1rem;
-  }
+
   .eventCard h5 {
     margin-top: 0px;
     font-size: 1rem;
@@ -217,7 +213,7 @@
   }
   .eventTitle {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 10px;
   }
   .eventImage {
