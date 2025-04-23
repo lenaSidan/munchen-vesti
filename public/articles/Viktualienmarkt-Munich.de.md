@@ -7,8 +7,6 @@ image: "/images/viktualienmarkt.webp"
 imageAlt: "Viktualienmarkt – die kulinarische Seele Münchens"
 ---
 
-### Viktualienmarkt – das Herz der Münchner Feinschmeckerkultur  
-
 Im Herzen Münchens, nur wenige Schritte vom berühmten **Marienplatz** entfernt, befindet sich einer der farbenfrohsten und traditionsreichsten Orte der Stadt – der **Viktualienmarkt**.  
 Dieser Markt ist weit mehr als nur ein Ort zum Einkaufen – er ist ein **kulinarisches Zentrum**, ein Treffpunkt für Einheimische und Touristen, ein Ort, an dem Tradition auf moderne Genüsse trifft. Hier vereinen sich **Geschmack, Aroma und Kultur**, und jeder Besuch wird zu einem kleinen Abenteuer.  
 

@@ -7,8 +7,6 @@ image: "/images/olympiapark.webp"
 imageAlt: "Olympiapark München mit Blick auf den Olympiaturm"
 ---
 
-### Olympiapark München – Ein Erbe der Olympischen Spiele 1972
-
 Der **Olympiapark München** ist nicht nur ein Symbol für sportliche Höchstleistungen, sondern auch ein architektonisches Meisterwerk und ein beliebtes Erholungsgebiet. Der Park wurde für die **Olympischen Spiele 1972** errichtet und gilt heute als **eine der bekanntesten Sehenswürdigkeiten Münchens**.
 
 ### Geschichte und Architektur
