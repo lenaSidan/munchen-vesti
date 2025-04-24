@@ -51,7 +51,7 @@ export default function EventsPage({ events }: EventsProps) {
         {events.map((event) => (
           <div key={event.slug} className={styles.eventCard}>
             <div className={styles.titleBox}>
-              <h3 className={styles.eventTitle}>{event.title}</h3>
+              <h2 className={styles.eventTitle}>{event.title}</h2>
             </div>
             {/* Дата, время и место */}
             <p className={styles.meta}>

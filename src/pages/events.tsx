@@ -95,6 +95,31 @@ export default function Events({ events }: EventsProps) {
 }
 
 export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) => {
-  const events = getEventsByLocale(locale || "ru");
-  return { props: { events } };
+  const allEvents = getEventsByLocale(locale || "ru");
+
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
+
+  const tenDaysLater = new Date(now);
+  tenDaysLater.setDate(tenDaysLater.getDate() + 20);
+
+  const filteredEvents = allEvents.filter((event) => {
+    if (!event.date) return false;
+    const startDate = new Date(event.date);
+    const endDate = event.endDate ? new Date(event.endDate) : startDate;
+    return (startDate >= now && startDate <= tenDaysLater) || (startDate <= now && endDate >= now);
+  });
+
+  const sortedEvents = filteredEvents.sort((a, b) => {
+    const startDateA = new Date(a.date || "").getTime();
+    const startDateB = new Date(b.date || "").getTime();
+    return startDateA - startDateB;
+  });
+
+  return {
+    props: {
+      events: sortedEvents,
+    },
+  };
 };
+
