@@ -49,3 +49,6 @@ Sie können sich **von überall auf der Welt** einwählen – alles, was Sie bra
 **Die Teilnahme ist kostenlos**, Anmeldung über die offizielle Website.
 
 Wer dauerhaft Zugriff auf die Inhalte möchte, kann **ein kostenpflichtiges Paket mit Geschenken und Boni** erwerben.
+
+
+**[Zur Anmeldung](https://integrationsprojekte.com/germany_2025?utm_source=tiktok)**
