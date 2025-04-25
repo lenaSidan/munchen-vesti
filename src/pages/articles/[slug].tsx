@@ -10,9 +10,8 @@ import Image from "next/image";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/NewsArticle.module.css";
 import Link from "next/link";
-import Head from "next/head";
-import { useRouter } from "next/router";
 import { getArticleJsonLd } from "@/lib/jsonld/articleJsonLd";
+import PageHead from "../../components/PageHead";
 
 interface ArticlesArticle {
   id: number;
@@ -29,13 +28,14 @@ interface ArticlesArticle {
 
 interface ArticleProps {
   article: ArticlesArticle;
+  locale: string;
 }
 
-export default function ArticlesArticlePage({ article }: ArticleProps) {
+export default function ArticlesArticlePage({ article, locale }: ArticleProps) {
   const t = useTranslation();
-  const router = useRouter();
 
-  const fullUrl = `https://munchen-vesti.de/${router.locale}/articles/${article.slug}`;
+  const fullUrl = `https://munchen-vesti.de/${locale}/articles/${article.slug}`;
+  const canonicalUrl = `https://munchen-vesti.de/${locale === "de" ? "de/" : "ru/"}article/${article.slug}`;
 
   const jsonLd = getArticleJsonLd({
     title: article.title,
@@ -47,19 +47,13 @@ export default function ArticlesArticlePage({ article }: ArticleProps) {
 
   return (
     <>
-      <Head>
-        <title>{(article.seoTitle || article.title) + " – " + t("meta.default_title")}</title>
-        <meta name="description" content={article.seoDescription || t("meta.default_description")} />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content={article.seoTitle || article.title} />
-        <meta property="og:description" content={article.seoDescription || ""} />
+      <PageHead
+        title={(article.seoTitle || article.title) + " – " + t("meta.default_title")}
+        description={article.seoDescription || t("meta.default_description")}
+        url={canonicalUrl}
+        jsonLd={jsonLd}
+      />
 
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={fullUrl} />
-
-        ✅ JSON-LD
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      </Head>
       <div className={styles.articleContainer}>
         <div className={styles.articleBox}>
           <h2 className={styles.title}>{article.title}</h2>
@@ -107,8 +101,8 @@ export default function ArticlesArticlePage({ article }: ArticleProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const newsDirectory = path.join(process.cwd(), "public/articles");
-  const files = fs.readdirSync(newsDirectory);
+  const articlesDirectory = path.join(process.cwd(), "public/articles");
+  const files = fs.readdirSync(articlesDirectory);
 
   const paths = files
     .map((file) => file.replace(/\.(ru|de)\.md$/, ""))
@@ -122,7 +116,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps<ArticleProps> = async ({ params, locale }) => {
-  if (!params?.slug) {
+  if (!params?.slug || !locale) {
     return { notFound: true };
   }
 
@@ -147,10 +141,11 @@ export const getStaticProps: GetStaticProps<ArticleProps> = async ({ params, loc
         seoTitle: data.seoTitle || "",
         seoDescription: data.seoDescription || "",
         author: data.author || "",
-        image: data.image || null,
+        image: data.image || "",
         imageAlt: data.imageAlt || "",
         content: processedContent.toString(),
       },
+      locale,
     },
     revalidate: 600,
   };

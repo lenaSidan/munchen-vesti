@@ -9,10 +9,11 @@ import rehypeStringify from "rehype-stringify";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "@/styles/NewsPage.module.css";
-import Seo from "@/components/Seo";
 import useTranslation from "@/hooks/useTranslation";
 import { useRouter } from "next/router";
 import rehypeExternalLinks from "rehype-external-links";
+import { getNewsJsonLd } from "@/lib/jsonld/getNewsJsonLd";
+import PageHead from "@/components/PageHead";
 
 interface NewsItem {
   slug: string;
@@ -28,15 +29,32 @@ interface NewsItem {
 
 interface NewsProps {
   news: NewsItem;
+  locale: string;
 }
 
 export default function NewsPage({ news }: NewsProps) {
   const t = useTranslation();
   const { locale } = useRouter();
+  const fullUrl = `https://munchen-vesti.de/${locale}/news/${news.slug}`;
+  const canonicalUrl = `https://munchen-vesti.de/${locale === "de" ? "de/" : "ru/"}news/${news.slug}`;
+
+  const jsonLd = getNewsJsonLd({
+    title: news.title,
+    description: news.seoDescription,
+    url: fullUrl,
+    image: news.image,
+    datePublished: news.date,
+  });
 
   return (
     <>
-      <Seo title={news.seoTitle || news.title} description={news.seoDescription} />
+      <PageHead
+        title={(news.seoTitle || news.title) + " – " + t("meta.default_title")}
+        description={news.seoDescription || t("meta.default_description")}
+        url={canonicalUrl}
+        jsonLd={jsonLd}
+      />
+
       <div className={styles.container}>
         <div className={styles.headerBox}>
           <h2 className={styles.title}>{news.title}</h2>
@@ -55,7 +73,7 @@ export default function NewsPage({ news }: NewsProps) {
           {news.image && (
             <Image
               src={news.image}
-              alt={news.title || "Event image"}
+              alt={news.imageAlt || news.title}
               className={styles.image}
               width={600}
               height={400}
@@ -96,7 +114,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps<NewsProps> = async ({ params, locale }) => {
-  if (!params?.slug) return { notFound: true };
+  if (!params?.slug || !locale) return { notFound: true };
 
   const filePath = path.join(process.cwd(), "public/news", `${params.slug}.${locale}.md`);
   if (!fs.existsSync(filePath)) return { notFound: true };
@@ -113,19 +131,20 @@ export const getStaticProps: GetStaticProps<NewsProps> = async ({ params, locale
     })
     .use(rehypeStringify)
     .process(content);
-    
+
   return {
     props: {
       news: {
         slug: params.slug as string,
         title: data.title || "",
-        date: data.date ? new Date(data.date).toISOString() : "",
+        date: data.date ? String(data.date) : "",
         image: data.image || "",
         imageAlt: data.imageAlt || "",
         seoTitle: data.seoTitle || "",
         seoDescription: data.seoDescription || "",
         content: processedContent.toString(),
       },
+      locale,
     },
   };
 };

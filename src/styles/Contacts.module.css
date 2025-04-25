@@ -4,7 +4,9 @@
   padding: 20px;
   background: var(--background);
   color: var(--text-color);
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition:
+    background 0.3s ease-in-out,
+    color 0.3s ease-in-out;
 }
 .visuallyHidden {
   position: absolute;
@@ -37,7 +39,7 @@
   color: var(--heading-color);
   margin-bottom: 20px;
   text-align: left;
- 
+
   /* border-bottom: 1px solid var(--border-color); */
 }
 
@@ -112,7 +114,7 @@
 }
 
 .decorativeLine::before {
-  top:0;
+  top: 0;
 }
 
 .decorativeLine::after {

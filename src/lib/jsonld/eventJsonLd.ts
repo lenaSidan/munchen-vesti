@@ -1,5 +1,3 @@
-// lib/jsonld/eventJsonLd.ts
-
 interface EventJsonLdParams {
   title: string;
   description?: string;
@@ -35,7 +33,7 @@ export function getEventJsonLd({
         streetAddress: ort,
       },
     },
-    image: [`https://munchen-vesti.de${image}`],
+    image: [image.startsWith('http') ? image : `https://munchen-vesti.de${image}`],
     organizer: {
       "@type": "Organization",
       name: "Мюнхенские Вести",
