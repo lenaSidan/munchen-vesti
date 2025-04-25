@@ -24,7 +24,7 @@ export function getArticleJsonLd({
       name: "Мюнхенские Вести",
       logo: {
         "@type": "ImageObject",
-        url: "https://munchen-vesti.de/favicon.ico",
+        url: "https://munchen-vesti.de/icons/logo.png", // ← лучше заменить сюда настоящее лого
       },
     },
     mainEntityOfPage: {

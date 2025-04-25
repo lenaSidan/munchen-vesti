@@ -1,8 +1,8 @@
-import { useState } from "react";
-import styles from "@/styles/AdsPage.module.css";
-import useTranslation from "@/hooks/useTranslation";
 import SalonRental from "@/components/ads/other/SalonRental";
 import Seo from "@/components/Seo";
+import useTranslation from "@/hooks/useTranslation";
+import styles from "@/styles/AdsPage.module.css";
+import { useState } from "react";
 
 export default function AnnouncementsPage() {
   const t = useTranslation();

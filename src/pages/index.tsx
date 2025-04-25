@@ -16,6 +16,7 @@ import { getWeatherForecast, DailyWeather } from "@/lib/getWeather";
 import Ads from "@/components/Ads";
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
+import { formatHumanDate } from "@/lib/formatHumanDate";
 
 interface Announcement {
   id: number;
@@ -94,7 +95,9 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
                   />
                 )}
                 <h2 className={styles.articleTitle}>{mainEvent.title}</h2>
-                <p className={styles.articleDate}>{mainEvent.date}</p>
+                {mainEvent.date && (
+                  <p className={styles.articleDate}>{formatHumanDate(mainEvent.date, router.locale || "ru")}</p>
+                )}
                 <div className={styles.decorativeLine}></div>
                 <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: mainEvent.content }} />
               </article>
@@ -109,7 +112,9 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
           <article className={styles.secondArticle}>
             <div className={styles.secondArticleHeader}>
               <h2 className={styles.secondArticleTitle}>{secondEvent.title}</h2>
-              <p className={styles.articleDate}>{secondEvent.date}</p>
+              {secondEvent.date && (
+                <p className={styles.articleDate}>{formatHumanDate(secondEvent.date, router.locale || "ru")}</p>
+              )}{" "}
               <div className={styles.decorativeLine}></div>
             </div>
             <div className={styles.secondArticleGrid}>
