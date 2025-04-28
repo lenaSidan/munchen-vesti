@@ -3,13 +3,12 @@
   margin: 0 auto;
   padding: 20px;
   color: var(--text-color);
-  
   margin-bottom: 30px;
 }
 .title {
   color: var(--heading-color2);
   margin-bottom: 30px;
- text-align: center;
+  text-align: center;
 }
 .visuallyHidden {
   position: absolute;
@@ -83,7 +82,9 @@
   text-transform: uppercase;
   font-size: 0.9rem;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
 
 .readMore:hover {
@@ -91,11 +92,9 @@
   color: var(--background);
 }
 @media (max-width: 1024px) {
-
   .title {
     font-size: 1.2rem;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -112,6 +111,5 @@
   }
   .readMore {
     font-size: 0.7rem;
-    
   }
 }

@@ -1,7 +1,6 @@
 .announcements {
   display: flex;
   flex-wrap: wrap;
-
   max-width: 1200px;
   width: 100%;
   justify-content: space-between;
@@ -36,7 +35,6 @@
   font-family: var(--font-headings);
   color: var(--heading-color2);
   margin: 0;
- 
 }
 
 .decorativeLine {
@@ -82,7 +80,7 @@
     border-radius: 0px;
     padding: 0px;
   }
-  
+
   .announcementItem {
     text-align: center;
     padding: 15px;

@@ -18,6 +18,7 @@ import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import { formatHumanDate } from "@/lib/formatHumanDate";
 
+
 interface Announcement {
   id: number;
   textKey: string;
@@ -38,11 +39,12 @@ interface HomeProps {
 }
 const LazyShortNewsBlock = dynamic(() => import("@/components/ShortNewsBlock"), {
   ssr: false,
-  loading: () => <p>Загрузка...</p>, // можно сюда засунуть заглушку или скелетон
+  loading: () => <p>Загрузка...</p>,
 });
 const LazyEasterEgg = dynamic(() => import("@/components/EasterEggById"), {
   ssr: false,
 });
+const MiniPostcards = dynamic(() => import("@/components/MiniPostcards"), { ssr: false });
 
 export default function Home({ mainEvent, secondEvent, otherEvents, weather }: HomeProps) {
   const t = useTranslation();
@@ -107,6 +109,8 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
             <Ads weather={weather} />
           </div>
         </div>
+
+        <MiniPostcards />
 
         {secondEvent && (
           <article className={styles.secondArticle}>

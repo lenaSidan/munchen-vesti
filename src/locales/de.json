@@ -38,32 +38,36 @@
     "egg3": "Verborgene Botschaft III",
     "secret": "Scroll of the Keeper"
   },
- "eastereggCollection": {
-  "title": "Hüter der Botschaften",
-  "description": "Deine Sammlung gefundener Geheimnisse auf den Seiten dieser Zeitung. Finde sie alle!",
-  "found": "Du hast {{count}} von {{total}} versteckten Botschaften gefunden.",
-  "unknown": "???",
-  "rare": "Selten",
-  "gift": "Geschenk",
-  "allFound": "Glückwunsch! Du hast alle Geheimnisse entdeckt und bist nun der Hüter der Botschaften.",
-  "foundMain": "Sie haben {{count}} von 3 versteckten Nachrichten gefunden.",
-  "bonusMessage": "Die geheime Nachricht wurde Ihrer Sammlung als Zeichen der Anerkennung hinzugefügt.",
-  "scrollMessage": "Weisheit liegt im Schweigen... Du bist zum wahren Hüter der Botschaften geworden!",
-  "scrollMessage1": "Als Zeichen der Anerkennung – ein Rabatt von",
-  "summa": "50 Euro",
-  "clickHint": "(Klicken Sie hier, um mehr zu erfahren)",
-  "scrollMessage2": "für ein einzigartiges Retreat in Spanien!",
-  "rewardButton": "Geschenk",
-  "secretName": "Rolle des Hüters",
-  "backToHome": "Startseite"
-  },    
- 
+  "eastereggCollection": {
+    "title": "Hüter der Botschaften",
+    "description": "Deine Sammlung gefundener Geheimnisse auf den Seiten dieser Zeitung. Finde sie alle!",
+    "found": "Du hast {{count}} von {{total}} versteckten Botschaften gefunden.",
+    "unknown": "???",
+    "rare": "Selten",
+    "gift": "Geschenk",
+    "allFound": "Glückwunsch! Du hast alle Geheimnisse entdeckt und bist nun der Hüter der Botschaften.",
+    "foundMain": "Sie haben {{count}} von 3 versteckten Nachrichten gefunden.",
+    "bonusMessage": "Die geheime Nachricht wurde Ihrer Sammlung als Zeichen der Anerkennung hinzugefügt.",
+    "scrollMessage": "Weisheit liegt im Schweigen... Du bist zum wahren Hüter der Botschaften geworden!",
+    "scrollMessage1": "Als Zeichen der Anerkennung – ein Rabatt von",
+    "summa": "50 Euro",
+    "clickHint": "(Klicken Sie hier, um mehr zu erfahren)",
+    "scrollMessage2": "für ein einzigartiges Retreat in Spanien!",
+    "rewardButton": "Geschenk",
+    "secretName": "Rolle des Hüters",
+    "backToHome": "Startseite"
+  },
+
   "title": {
     "read_more": "Weiterlesen"
   },
   "news": {
     "go_to_newsPage": "Alle aktuellen Meldungen",
     "title": "Aktuelles"
+  },
+  "postcards": {
+    "title": "Postkarten aus der Vergangenheit",
+    "indexTitle": "Chronik Münchener"
   },
   "newsTitle": "Aktuelles",
   "info": "Wir empfehlen",
@@ -96,7 +100,10 @@
     "all_events_description": "Komplette Übersicht aller vergangenen und bevorstehenden Veranstaltungen in München.",
     "newsAll_title": "Alle Nachrichten aus München – aktuelle Ereignisse, Stadtleben und wichtige Ankündigungen",
     "news_title": "Aktuelle Nachrichten aus München",
-    "news_description": "Lesen Sie die neuesten Nachrichten aus München auf Deutsch. Erfahren Sie mehr über Veranstaltungen, wichtige Änderungen und das Leben in der Stadt."
+    "news_description": "Lesen Sie die neuesten Nachrichten aus München auf Deutsch. Erfahren Sie mehr über Veranstaltungen, wichtige Änderungen und das Leben in der Stadt.",
+    "postcards_title": "Historische Postkarten aus Deutschland",
+    "postcards_description": "Tauchen Sie ein in die Geschichte Deutschlands durch kurze Botschaften auf historischen Postkarten.",
+    "postcardsAll_title": "Alle historischen Postkarten"
   },
   "menu": {
     "articles": "Artikel",
@@ -183,19 +190,19 @@
     "title": "Datenschutzrichtlinie",
     "last_updated": "Neuestes Update: {{date}}",
     "intro": "Willkommen bei «Münchener Nachrichten». Wir respektieren Ihre Privatsphäre und setzen uns für den Schutz Ihrer Daten ein. In diesem Dokument erklären wir, welche Daten wir erfassen und wie wir sie verwenden.",
-    
+
     "data_collection": "Welche Daten sammeln wir?",
     "data_collection_desc": "Unsere Website erfordert keine Registrierung und sammelt keine personenbezogenen Daten. Wir verwenden jedoch Cookies und Analysen zur Verbesserung der Website-Funktionalität.",
-    
+
     "cookies": "Cookies",
     "cookies_desc": "Cookies sind kleine Textdateien, die temporär in Ihrem Browser gespeichert werden. Wir verwenden sie, um:\n- Ihre Sprachauswahl zu speichern;\n- Die Seitenaufrufe anonym zu analysieren;\n- Die Benutzerfreundlichkeit zu verbessern.",
-    
+
     "data_usage": "Wie verwenden wir die Daten?",
     "data_usage_desc": "Wir geben Ihre Daten nicht an Dritte weiter. Die Informationen werden nur für folgende Zwecke genutzt:\n- Verbesserung der Benutzerfreundlichkeit;\n- Anonyme Analyse der Besucherzahlen.",
-    
+
     "manage_cookies": "Verwaltung von Cookies",
     "manage_cookies_desc": "Sie können Cookies in Ihren Browsereinstellungen deaktivieren oder löschen. So geht’s:\n- Google Chrome: Einstellungen → Datenschutz → Cookies;\n- Mozilla Firefox: Einstellungen → Datenschutz → Datenverwaltung;\n- Safari: Einstellungen → Datenschutz → Cookies blockieren.",
-    
+
     "updates": "Änderungen an der Richtlinie",
     "updates_desc": "Wir können diese Datenschutzrichtlinie aktualisieren. In diesem Fall wird das Datum der Aktualisierung am Anfang des Dokuments geändert.",
     "close": "schließen"
@@ -209,15 +216,15 @@
     "copyright": "© {year} Münchener Nachrichten. Alle Rechte vorbehalten."
   },
   "kontakt": {
-  "title": "Kontakt",
+    "title": "Kontakt",
     "section1": {
       "title": "Unsere Adresse",
       "text": "München, Deutschland"
     },
     "section2": {
-        "title": "Kontakt aufnehmen",
-        "email": "E-Mail: lena.sidan75@gmail.com",
-        "telegram": "Telegram: @example"
+      "title": "Kontakt aufnehmen",
+      "email": "E-Mail: lena.sidan75@gmail.com",
+      "telegram": "Telegram: @example"
     },
     "section3": {
       "title": "Nachricht senden",
@@ -232,7 +239,7 @@
   },
   "events": {
     "read_more": "Weiterlesen"
-  } ,
+  },
   "event": {
     "time": "Datum",
     "ort": "Ort",
@@ -241,17 +248,17 @@
   "articles": {
     "articles": "Articles",
     "read_more": "Weiterlesen",
-     "shortTitles": {
-        "facts-about-munich": "Fakten über München",
-        "olympiapark-munich": "Olympiapark",
-        "viktualienmarkt-munich": "Viktualienmarkt"
-      }, 
-    "back": "zurück" ,
+    "shortTitles": {
+      "facts-about-munich": "Fakten über München",
+      "olympiapark-munich": "Olympiapark",
+      "viktualienmarkt-munich": "Viktualienmarkt"
+    },
+    "back": "zurück",
     "date": "Veröffentlichungsdatum",
     "author": "Autor",
     "not_found": "Nachricht nicht gefunden"
   },
- 
+
   "theater_academy_titleSEO": "Theaterakademie in München – Studios, Kurse und Aufführungen",
   "theater_academy_descriptionSEO": "Theaterausbildung, Schauspiel und kreative Entwicklung für Kinder und Erwachsene in München. Alter: 1,5 bis 55 Jahre.",
   "theater_academy_creative_center": "Münchner Zentrum für kreative Kinderentwicklung „Harmonie“.",
@@ -273,7 +280,7 @@
   "theater_academy_group_ostrov_post1": "Studio für bildende Kunst ",
   "theater_academy_group_ostrov_bold": "„Schatzinsel“",
   "theater_academy_group_ostrov_post2": ", Gruppen 5–6 und 7–10 Jahre.",
-  "theater_academy_group_klass_post1": "Klasse für russische Sprache und Literatur, 6–10 Jahre." ,
+  "theater_academy_group_klass_post1": "Klasse für russische Sprache und Literatur, 6–10 Jahre.",
   "theater_academy_title": "Münchner Theaterakademie",
   "theater_academy_description": "Die Anmeldung für das Studienjahr 2025–2026 ist geöffnet! Wir laden Kinder und Erwachsene in unsere kreativen Studios und Gruppen ein! Probestunden laufen bereits – machen Sie jetzt mit! Altersgruppen: von 1,5 bis 55 Jahren.",
   "theater_academy_theater_studios": "Theaterstudios.",
@@ -306,7 +313,7 @@
   "theater_academy_point4_post": " - Vorstellungen für Kinder und Erwachsene.",
   "theater_academy_point5_pre": "Intellektuelles und lehrreiches Spiel für Kinder und Jugendliche ",
   "theater_academy_point5_bold": "„Kopfnuss“",
-  "theater_academy_point5_post": ", Gruppen 7–12 und 13–17 Jahre.",  
+  "theater_academy_point5_post": ", Gruppen 7–12 und 13–17 Jahre.",
   "theater_academy_location": "Adresse: München, Deutschland",
   "theater_academy_contact": "Kontakt:",
   "theater_academy_more_info_label": "Mehr Informationen",
@@ -336,7 +343,7 @@
   "psychologist_contact_link": "https://t.me/smirtatjana",
   "psychologist_web_text": "Mehr über meinen Ansatz - ",
   "psychologist_web_link": "https://tatjanasmirnova.com",
-  
+
   "beauticum": {
     "titleSEO": "Beauticum – Kosmetik und Hautpflege in München",
     "descriptionSEO": "Professionelle Behandlungen, Reinigung, Massage und Ästhetik. Jetzt Termin vereinbaren!",
@@ -367,7 +374,7 @@
   },
   "vileta": {
     "titleSEO": "Viletta – handgefertigter Schmuck mit Edelsteinen und Naturkraft",
-    "descriptionSEO": "Individuell ausgewählte Edelsteine nach Geburtsdatum und Ziel – Ihr persönlicher Talisman von Viletta." ,    
+    "descriptionSEO": "Individuell ausgewählte Edelsteine nach Geburtsdatum und Ziel – Ihr persönlicher Talisman von Viletta.",
     "title": "Viletta – Schmuckstücke voller natürlicher Kraft",
     "description1": "In jedem Stein steckt die Energie der Erde – ihre Weisheit und Harmonie. Natürliche Mineralien verzaubern nicht nur mit ihrer Schönheit, sondern tragen eine tiefere Bedeutung in sich und können als Wegweiser zu innerem Gleichgewicht, Selbstvertrauen und Erfolg dienen.",
     "description2": "Viletta kreiert Schmuck, der Ästhetik und die Kraft der Natur vereint. Wir wählen Edelsteine individuell aus, basierend auf Ihrem Geburtsdatum, Namen und persönlichen Zielen, sodass jedes Schmuckstück nicht nur ein Accessoire, sondern Ihr persönlicher Talisman und Inspirationsquelle wird.",
