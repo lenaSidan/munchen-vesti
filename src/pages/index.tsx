@@ -1,23 +1,22 @@
-import { GetStaticProps } from "next";
+import Ads from "@/components/Ads";
 import Seo from "@/components/Seo";
-import Link from "next/link";
-import Image from "next/image";
-import { getEventsByLocale, Event } from "@/lib/getEvents";
-import useTranslation from "@/hooks/useTranslation";
-import styles from "@/styles/Home.module.css";
 import announcementsData from "@/data/announcements.json";
+import useTranslation from "@/hooks/useTranslation";
+import { formatHumanDate } from "@/lib/formatHumanDate";
+import { Event, getEventsByLocale } from "@/lib/getEvents";
+import { DailyWeather, getWeatherForecast } from "@/lib/getWeather";
+import styles from "@/styles/Home.module.css";
+import { GetStaticProps } from "next";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect, useRef, useState } from "react";
 import rehypeExternalLinks from "rehype-external-links";
+import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
-import rehypeStringify from "rehype-stringify";
-import { useRouter } from "next/router";
-import { getWeatherForecast, DailyWeather } from "@/lib/getWeather";
-import Ads from "@/components/Ads";
-import dynamic from "next/dynamic";
-import { useEffect, useRef, useState } from "react";
-import { formatHumanDate } from "@/lib/formatHumanDate";
-
 
 interface Announcement {
   id: number;
@@ -98,10 +97,15 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
                 )}
                 <h2 className={styles.articleTitle}>{mainEvent.title}</h2>
                 {mainEvent.date && (
-                  <p className={styles.articleDate}>{formatHumanDate(mainEvent.date, router.locale || "ru")}</p>
+                  <p className={styles.articleDate}>
+                    {formatHumanDate(mainEvent.date, router.locale || "ru")}
+                  </p>
                 )}
                 <div className={styles.decorativeLine}></div>
-                <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: mainEvent.content }} />
+                <div
+                  className={styles.articleContent}
+                  dangerouslySetInnerHTML={{ __html: mainEvent.content }}
+                />
               </article>
             )}
           </div>
@@ -117,7 +121,9 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
             <div className={styles.secondArticleHeader}>
               <h2 className={styles.secondArticleTitle}>{secondEvent.title}</h2>
               {secondEvent.date && (
-                <p className={styles.articleDate}>{formatHumanDate(secondEvent.date, router.locale || "ru")}</p>
+                <p className={styles.articleDate}>
+                  {formatHumanDate(secondEvent.date, router.locale || "ru")}
+                </p>
               )}{" "}
               <div className={styles.decorativeLine}></div>
             </div>
@@ -152,7 +158,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
               {otherEvents.map((event) => (
                 <li key={event.slug} className={styles.articleLink}>
                   <Link href={`/events/${event.slug}`}>
-                    {event.title} <span className={styles.articleDate}> | {event.date}</span>
+                    {event.title} <span className={styles.articleDate}> | {event.time}</span>
                   </Link>
                 </li>
               ))}
@@ -211,7 +217,9 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const translations = await import(`@/locales/${locale || "ru"}.json`);
 
   const mainEvent =
-    sortedEvents.length > 0 ? { ...sortedEvents[0], content: await processMarkdown(sortedEvents[0].content) } : null;
+    sortedEvents.length > 0
+      ? { ...sortedEvents[0], content: await processMarkdown(sortedEvents[0].content) }
+      : null;
 
   let secondEvent: ExtendedEvent | null = null;
   if (sortedEvents.length > 1) {
