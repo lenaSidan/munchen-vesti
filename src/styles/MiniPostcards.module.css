@@ -1,0 +1,102 @@
+.announcements {
+  background: var(--alt-background1);
+  padding: 20px;
+  margin: 30px 0;
+}
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: 1200px;
+  width: 100%;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.card {
+  width: 320px;
+  height: 200px;
+  overflow: hidden;
+  background-color: var(--background);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.announcementHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap: 10px;
+}
+.announcementTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: var(--font-headings);
+  color: var(--heading-color2);
+  margin: 0;
+}
+
+.decorativeLine {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.decorativeLine::before,
+.decorativeLine::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--heading-color2);
+  position: absolute;
+  left: 0;
+}
+
+.decorativeLine::before {
+  top: 0;
+}
+
+.decorativeLine::after {
+  bottom: 0;
+}
+@media (max-width: 768px) {
+  .announcements {
+    background: pvar(--alt-background1);
+    padding: 0;
+    margin: 30px 0;
+  }
+  .announcementHeader {
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+    height: 200px;
+  }
+  .wrapper {
+    justify-content: center;
+    gap: 20px;
+  }
+  .announcementTitle {
+    text-align: center;
+  }
+}
