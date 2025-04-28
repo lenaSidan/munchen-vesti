@@ -4,23 +4,24 @@ const fs = require("fs");
 const path = require("path");
 
 const baseUrl = "https://munchen-vesti.de";
+const pagesDir = path.join(process.cwd(), "src/pages"); // Путь к страницам
 
-const staticPages = [
-  "",
-  "/about",
-  "/contacts",
-  "/privacy-policy",
-  "/impressum",
-  "/articles-page",
-  "/events-page",
-  "/ads-food-page",
-  "/ads-other-page",
-  "/ads-services-page",
-  "/ads-studios-page",
-  "/education-page",
-];
+// Служебные файлы, которые НЕ нужно добавлять в sitemap
+const excludePages = ["_app.tsx", "_document.tsx", "_error.tsx", "404.tsx", "500.tsx", "index.tsx"];
 
-// 🔍 Читаем Markdown и определяем актуальность события
+function getStaticPages() {
+  const files = fs.readdirSync(pagesDir);
+
+  return files
+    .filter((file) => file.endsWith(".tsx") && !excludePages.includes(file))
+    .map((file) => {
+      const filename = file.replace(".tsx", "");
+      const urlPath = filename.replace("-page", ""); // убираем "-page" из URL
+      return `<url><loc>${baseUrl}/${urlPath}</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>`;
+    });
+}
+
+// Читаем Markdown и оставляем только актуальные события
 function getMarkdownUrls(folder, prefix, checkEventDates = false, priority = "0.6") {
   const dirPath = path.join(process.cwd(), "public", folder);
   if (!fs.existsSync(dirPath)) return [];
@@ -51,21 +52,18 @@ function getMarkdownUrls(folder, prefix, checkEventDates = false, priority = "0.
 }
 
 function generateSitemap() {
-  const urls = staticPages.map((page) => {
-    const fullUrl = `${baseUrl}${page}`;
-    const changefreq = page === "" ? "daily" : "weekly";
-    const priority = page === "" ? "1.0" : "0.5";
+  const staticUrls = [
+    `<url><loc>${baseUrl}</loc><changefreq>daily</changefreq><priority>1.0</priority></url>`
+  ];
 
-    return `<url><loc>${fullUrl}</loc><changefreq>${changefreq}</changefreq><priority>${priority}</priority></url>`;
-  });
-
+  const dynamicPages = getStaticPages();
   const newsUrls = getMarkdownUrls("news", "news", false, "0.6");
   const articlesUrls = getMarkdownUrls("articles", "articles", false, "0.7");
   const eventsUrls = getMarkdownUrls("events", "events", true, "0.9");
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${[...urls, ...newsUrls, ...eventsUrls, ...articlesUrls].join("\n")}
+${[...staticUrls, ...dynamicPages, ...newsUrls, ...eventsUrls, ...articlesUrls].join("\n")}
 </urlset>`;
 
   fs.writeFileSync(path.join(process.cwd(), "public", "sitemap.xml"), sitemap);
