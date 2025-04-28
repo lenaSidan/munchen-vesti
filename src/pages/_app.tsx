@@ -29,13 +29,13 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="robots" content="index, follow" />
       </Head>
 
-      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-BRM8FPV3SS" />
+      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-9M31W7TST5" />
       <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-BRM8FPV3SS');
+          gtag('config', 'G-9M31W7TST5');
         `}
       </Script>
 
