@@ -1,32 +1,36 @@
+export const EASTER_EGGS = [
+  {
+    id: "easteregg-home",
+    version: "v3",
+    image: "/images/postcard_v3_1.png",
+    rareImage: "/images/postcard_gold_v3_1.png",
+    nameKey: "easteregg.egg1",
+    secret: false,
+  },
 
-  export const EASTER_EGGS = [
-    {
-      id: "easteregg-home",
-      nameKey: "easteregg.egg1",
-      image: "/images/egg1.png",
-      rareImage: "/images/egg1_gold.png",
-      rare: false,
-    },
-    {
-      id: "easteregg-articles",
-      nameKey: "easteregg.egg2",
-      image: "/images/egg2.png",
-      rareImage: "/images/egg2_gold.png",
-      rare: false,
-    },
-    {
-      id: "easteregg-events",
-      nameKey: "easteregg.egg3",
-      image: "/images/egg3.png",
-      rareImage: "/images/egg3_gold.png",
-      // sound: "/audio/dzyn.wav",
-      rare: true,
-    },
-    {
-      id: "easteregg-secret",
-      nameKey: "easteregg.secret",
-      image: "/images/easter-secret-scroll.png",
-      rare: true,
-      secret: true,
-    }
-  ];
+  {
+    id: "easteregg-events",
+    version: "v3",
+    image: "/images/postcard_v3_2.png",
+    rareImage: "/images/postcard_gold_v3_2.png",
+    nameKey: "easteregg.egg2",
+    secret: false,
+  },
+  {
+    id: "easteregg-articles",
+    version: "v3",
+    image: "/images/postcard_v3_3.png",
+    rareImage: "/images/postcard_gold_v3_3.png",
+    nameKey: "easteregg.egg3",
+    secret: false,
+  },
+  
+  {
+    id: "easteregg-secret",
+    version: "v3",
+    image: "/images/easter-secret-scroll.png",
+    rareImage: "",
+    nameKey: "easteregg.scroll",
+    secret: true,
+  },
+];

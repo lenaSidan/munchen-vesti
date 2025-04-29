@@ -13,7 +13,11 @@ export default function Header() {
   const router = useRouter();
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [hasEggs, setHasEggs] = useState(false);
+
+  const [foundCount, setFoundCount] = useState(0);
+  const [allFound, setAllFound] = useState(false);
+  const CURRENT_EGG_VERSION = "v3";
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -24,18 +28,17 @@ export default function Header() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const [allFound, setAllFound] = useState(false);
-
   useEffect(() => {
     const checkEggs = () => {
       if (typeof window === "undefined") return;
 
-      const keys = Object.keys(localStorage).filter((key) => key.startsWith("easteregg-"));
-      const foundCount = keys.filter((key) => localStorage.getItem(key) === "true").length;
+      const keys = Object.keys(localStorage).filter(
+        (key) => key.startsWith("easteregg-") && !key.includes("reward") && !key.includes("-rare")
+      );
+      const count = keys.filter((key) => localStorage.getItem(key) === "true").length;
+      const rewardClaimed = localStorage.getItem(`easteregg-reward-claimed-${CURRENT_EGG_VERSION}`) === "true";
 
-      const rewardClaimed = localStorage.getItem("easteregg-reward-claimed") === "true";
-
-      setHasEggs(foundCount > 0 && !rewardClaimed); // 👈 показывать кнопку, пока не забрали подарок
+      setFoundCount(count);
       setAllFound(rewardClaimed);
     };
 
@@ -44,13 +47,8 @@ export default function Header() {
     return () => window.removeEventListener("easteregg-found", checkEggs);
   }, []);
 
-  const toggleSubmenu = () => {
-    setIsSubmenuOpen((prev) => !prev);
-  };
-
-  const closeSubmenu = () => {
-    setIsSubmenuOpen(false);
-  };
+  const toggleSubmenu = () => setIsSubmenuOpen((prev) => !prev);
+  const closeSubmenu = () => setIsSubmenuOpen(false);
 
   useEffect(() => {
     closeSubmenu();
@@ -65,9 +63,7 @@ export default function Header() {
 
   const year = new Date().getFullYear();
 
-  if (isMobile) {
-    return <MobileHeader />;
-  }
+  if (isMobile) return <MobileHeader />;
 
   return (
     <header className={styles.header}>
@@ -85,7 +81,9 @@ export default function Header() {
                   className={`${styles.logoIcon} ${styles.logoTheme}`}
                 />
                 <p className={styles.logoDate}>
-                  {t("home.edition_date").replace("{{month}}", monthName).replace("{{year}}", year.toString())}
+                  {t("home.edition_date")
+                    .replace("{{month}}", monthName)
+                    .replace("{{year}}", year.toString())}
                 </p>
               </div>
               <div className={styles.titleBox}>
@@ -117,6 +115,7 @@ export default function Header() {
           >
             {t("menu.announcements")}
           </Link>
+
           <Link
             href="/news-page"
             className={`${styles.navLink} ${router.pathname === "/news-page" ? styles.active : ""}`}
@@ -151,18 +150,18 @@ export default function Header() {
               </div>
             )}
           </div>
-          {hasEggs && (
+
+          {foundCount > 0 && !allFound && (
             <Link
               href="/collection"
-              className={`${styles.navLink} ${router.pathname === "/collection" ? styles.active : ""} ${
-                !allFound ? styles.highlighted : ""
-              }`} // 👈 пульсация, пока не собраны все
+              className={`${styles.navLink} ${router.pathname === "/collection" ? styles.active : ""} ${styles.highlighted}`}
             >
               {t("footer.collection")}
             </Link>
           )}
         </nav>
       </div>
+
       <div className={styles.decorativeLine}>
         <span className={styles.left}>❧</span>
         <span className={styles.right}>❧</span>

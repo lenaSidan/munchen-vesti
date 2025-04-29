@@ -6,6 +6,8 @@ import { EASTER_EGGS } from "@/data/easterEggs";
 import ScrollModal from "./ScrollModal";
 import Link from "next/link";
 
+const CURRENT_VERSION = "v3";
+
 export default function EasterEggCollection() {
   const t = useTranslation();
   const [found, setFound] = useState<string[]>([]);
@@ -13,13 +15,17 @@ export default function EasterEggCollection() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [showScroll, setShowScroll] = useState(false);
 
-  // Загружаем найденные пасхалки + проверяем, все ли найдены
   useEffect(() => {
     const updateCollection = () => {
-      const foundEggs = EASTER_EGGS.filter((egg) => localStorage.getItem(egg.id) === "true").map((egg) => egg.id);
+      const foundEggs = EASTER_EGGS.filter(
+        (egg) =>
+          egg.version === CURRENT_VERSION &&
+          localStorage.getItem(`${egg.id}-${CURRENT_VERSION}`) === "true"
+      ).map((egg) => egg.id);
+
       const tempRareMap: Record<string, boolean> = {};
       foundEggs.forEach((id) => {
-        const isRare = localStorage.getItem(`${id}-rare`) === "true";
+        const isRare = localStorage.getItem(`${id}-${CURRENT_VERSION}-rare`) === "true";
         tempRareMap[id] = isRare;
       });
 
@@ -27,26 +33,36 @@ export default function EasterEggCollection() {
       setRareMap(tempRareMap);
       setIsLoaded(true);
 
-      const allFound = EASTER_EGGS.filter((egg) => !egg.secret).every((egg) => foundEggs.includes(egg.id));
-      if (allFound) {
-        localStorage.setItem("easteregg-secret", "true");
-        window.dispatchEvent(new Event("easteregg-found"));
+      const allNormalFound = EASTER_EGGS.filter(
+        (egg) => egg.version === CURRENT_VERSION && !egg.secret
+      ).every((egg) => foundEggs.includes(egg.id));
+
+      if (allNormalFound && !localStorage.getItem(`easteregg-secret-${CURRENT_VERSION}`)) {
+        localStorage.setItem(`easteregg-secret-${CURRENT_VERSION}`, "true");
+        setFound((prev) => [...prev, "easteregg-secret"]);
       }
     };
 
     updateCollection();
+    window.addEventListener("easteregg-found", updateCollection);
+    return () => window.removeEventListener("easteregg-found", updateCollection);
   }, []);
 
-  const isAllFound = EASTER_EGGS.filter((egg) => !egg.secret).every((egg) => found.includes(egg.id));
+  const allNormalFound = EASTER_EGGS.filter(
+    (egg) => egg.version === CURRENT_VERSION && !egg.secret
+  ).every((egg) => found.includes(egg.id));
 
-  // Показываем все, кроме секретной — она появляется только если собраны все обычные
-  const visibleEggs = EASTER_EGGS.filter((egg) => !egg.secret || isAllFound);
+  const visibleEggs = [
+    ...EASTER_EGGS.filter((egg) => egg.version === CURRENT_VERSION && !egg.secret),
+    ...EASTER_EGGS.filter((egg) => egg.version === CURRENT_VERSION && egg.secret && allNormalFound),
+  ];
+
   const foundCount = found.filter((id) => visibleEggs.some((egg) => egg.id === id)).length;
 
   if (!isLoaded) return null;
 
   return (
-    <div className={`${styles.collectionWrapper} ${isAllFound ? styles.allFound : ""}`}>
+    <div className={`${styles.collectionWrapper} ${allNormalFound ? styles.allFound : ""}`}>
       <h1 className={styles.title}>{t("eastereggCollection.title")}</h1>
       <p className={styles.subtitle}>
         {t("eastereggCollection.foundMain", {
@@ -54,8 +70,13 @@ export default function EasterEggCollection() {
         })}
       </p>
 
-      {isAllFound && <p className={styles.bonus}>{t("eastereggCollection.bonusMessage")}</p>}
-      {isAllFound && <p className={styles.achievement}>{t("eastereggCollection.allFound")}</p>}
+      {allNormalFound && (
+        <>
+          <p className={styles.bonus}>{t("eastereggCollection.bonusMessage")}</p>
+          <p className={styles.achievement}>{t("eastereggCollection.allFound")}</p>
+        </>
+      )}
+
       {showScroll && <ScrollModal onClose={() => setShowScroll(false)} />}
 
       <div className={styles.grid}>
@@ -63,13 +84,16 @@ export default function EasterEggCollection() {
           <div
             key={egg.id}
             className={`
-              ${styles.card} 
-              ${found.includes(egg.id) ? styles.found : styles.locked} 
-              ${egg.secret && found.includes(egg.id) ? styles.clickable : ""} 
+              ${styles.card}
+              ${found.includes(egg.id) ? styles.found : styles.locked}
+              ${egg.secret && found.includes(egg.id) ? styles.clickable : ""}
               ${egg.secret && found.includes(egg.id) ? styles.specialGlow : ""}
             `}
             onClick={() => {
               if (egg.secret && found.includes(egg.id)) {
+                // Сразу сохраняем, что подарок получен
+                localStorage.setItem(`easteregg-reward-claimed-${CURRENT_VERSION}`, "true");
+                window.dispatchEvent(new Event("easteregg-found"));
                 setShowScroll(true);
               }
             }}
@@ -77,7 +101,7 @@ export default function EasterEggCollection() {
             {found.includes(egg.id) ? (
               <>
                 <Image
-                  src={rareMap[egg.id] && egg.rareImage ? egg.rareImage : egg.image}
+                  src={(rareMap[egg.id] ? egg.rareImage : egg.image) ?? egg.image}
                   alt={t(egg.nameKey)}
                   width={80}
                   height={80}
