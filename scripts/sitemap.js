@@ -4,24 +4,47 @@ const fs = require("fs");
 const path = require("path");
 
 const baseUrl = "https://munchen-vesti.de";
-const pagesDir = path.join(process.cwd(), "src/pages"); // Путь к страницам
+const pagesDir = path.join(process.cwd(), "src/pages");
 
-// Служебные файлы, которые НЕ нужно добавлять в sitemap
-const excludePages = ["_app.tsx", "_document.tsx", "_error.tsx", "404.tsx", "500.tsx", "index.tsx"];
+const excludeFiles = ["_app.tsx", "_document.tsx", "_error.tsx", "404.tsx", "500.tsx"];
+const excludeDirs = ["api", "components"];
 
-function getStaticPages() {
-  const files = fs.readdirSync(pagesDir);
+// Рекурсивно обходит все страницы и возвращает относительные пути
+function walkDir(dir, fileList = []) {
+  const files = fs.readdirSync(dir);
+  files.forEach((file) => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
 
-  return files
-    .filter((file) => file.endsWith(".tsx") && !excludePages.includes(file))
-    .map((file) => {
-      const filename = file.replace(".tsx", "");
-      const urlPath = filename.replace("-page", ""); // убираем "-page" из URL
-      return `<url><loc>${baseUrl}/${urlPath}</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>`;
-    });
+    if (stat.isDirectory()) {
+      if (!excludeDirs.includes(file)) {
+        walkDir(filePath, fileList);
+      }
+    } else if (
+      file.endsWith(".tsx") &&
+      !excludeFiles.includes(file) &&
+      !file.startsWith("[")
+    ) {
+      const relativePath = path.relative(pagesDir, filePath).replace(/\\/g, "/");
+      fileList.push(relativePath);
+    }
+  });
+  return fileList;
 }
 
-// Читаем Markdown и оставляем только актуальные события
+function getStaticPages() {
+  const pageFiles = walkDir(pagesDir);
+
+  return pageFiles.map((relativePath) => {
+    let urlPath = relativePath
+      .replace(/\.tsx$/, "") // удалить расширение
+      .replace(/\/index$/, "") // удалить trailing index
+      .replace("-page", ""); // при необходимости можно убрать суффикс
+
+    return `<url><loc>${baseUrl}/${urlPath}</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>`;
+  });
+}
+
 function getMarkdownUrls(folder, prefix, checkEventDates = false, priority = "0.6") {
   const dirPath = path.join(process.cwd(), "public", folder);
   if (!fs.existsSync(dirPath)) return [];
@@ -41,7 +64,6 @@ function getMarkdownUrls(folder, prefix, checkEventDates = false, priority = "0.
         const endDate = endDateMatch ? new Date(endDateMatch[1]) : startDate;
         const today = new Date();
         today.setHours(0, 0, 0, 0);
-
         if (!startDate || endDate < today) return null;
       }
 
