@@ -126,21 +126,11 @@
   font-size: 1.1rem;
   font-weight: bold;
   margin-top: 15px;
-}
-
-.linkBoxHref {
-  color: var(--border-color);
-  text-decoration: underline;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-  padding-left: 10px;
 }
 
-.linkBoxHref:hover {
-  color: var(--heading-color);
-}
 
 .decorativeLine {
   position: relative;
@@ -193,9 +183,10 @@
   font-weight: bold;
   color: var(--border-color);
   transition: font-size 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
-  text-align: center;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+  margin: 0;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
 }
 .linkBoxHref:hover {
   text-decoration: underline;

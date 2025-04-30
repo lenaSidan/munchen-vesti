@@ -1,7 +1,6 @@
 ---
 title: "Музыкальный вечер памяти Владимира Высоцкого"
 date: "2025-10-24"
-endDate: ""
 time: "24 октября 2025"
 ort: "Мюнхен"
 link: "[Перейти к покупке билетов](https://www.kontramarka.de/de/tour/koncert-pamyati-vladimira-vysockogo/?fbclid=IwY2xjawJ_AcNleHRuA2FlbQIxMAABHsk1iW9UeoGfUu2oX_o4jDtlL4OEs4RLytGo_o6_8N5gtC7LZqwxMXq8rA3k_aem_lqBaoFvmIuGU0ygblr4KOA)"
