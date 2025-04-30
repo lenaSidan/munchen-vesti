@@ -1,4 +1,4 @@
-import styles from "@/components/Ads/education/englishLessons.module.css";
+import styles from "@/components/ads/education/englishLessons.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import Link from "next/link";
 
