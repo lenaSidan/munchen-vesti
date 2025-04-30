@@ -9,10 +9,10 @@ const pagesDir = path.join(process.cwd(), "src/pages");
 const excludeFiles = ["_app.tsx", "_document.tsx", "_error.tsx", "404.tsx", "500.tsx"];
 const excludeDirs = ["api", "components"];
 
-// Рекурсивно обходит все страницы и возвращает относительные пути
+// Рекурсивный обход всех файлов в папке pages
 function walkDir(dir, fileList = []) {
   const files = fs.readdirSync(dir);
-  files.forEach((file) => {
+  for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
 
@@ -23,28 +23,27 @@ function walkDir(dir, fileList = []) {
     } else if (
       file.endsWith(".tsx") &&
       !excludeFiles.includes(file) &&
-      !file.startsWith("[")
+      !file.startsWith("[") // не добавляем динамические маршруты
     ) {
       const relativePath = path.relative(pagesDir, filePath).replace(/\\/g, "/");
       fileList.push(relativePath);
     }
-  });
+  }
   return fileList;
 }
 
+// Генерация URL из всех .tsx-файлов
 function getStaticPages() {
-  const pageFiles = walkDir(pagesDir);
+  const allFiles = walkDir(pagesDir);
 
-  return pageFiles.map((relativePath) => {
-    let urlPath = relativePath
-      .replace(/\.tsx$/, "") // удалить расширение
-      .replace(/\/index$/, "") // удалить trailing index
-      .replace("-page", ""); // при необходимости можно убрать суффикс
-
+  return allFiles.map((relativePath) => {
+    const pagePath = relativePath.replace(".tsx", "").replace(/\/index$/, "");
+    const urlPath = pagePath === "index" ? "" : pagePath;
     return `<url><loc>${baseUrl}/${urlPath}</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>`;
   });
 }
 
+// Обработка markdown-файлов
 function getMarkdownUrls(folder, prefix, checkEventDates = false, priority = "0.6") {
   const dirPath = path.join(process.cwd(), "public", folder);
   if (!fs.existsSync(dirPath)) return [];
@@ -73,6 +72,7 @@ function getMarkdownUrls(folder, prefix, checkEventDates = false, priority = "0.
     .filter(Boolean);
 }
 
+// Генерация sitemap.xml
 function generateSitemap() {
   const staticUrls = [
     `<url><loc>${baseUrl}</loc><changefreq>daily</changefreq><priority>1.0</priority></url>`
