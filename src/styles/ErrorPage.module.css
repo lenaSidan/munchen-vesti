@@ -1,0 +1,22 @@
+.wrapper {
+  padding: 2rem;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.code {
+  font-size: 4rem;
+  margin: 0;
+  color: var(--heading-color2);
+}
+
+.message {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.link {
+  color: var(--link-color);
+  text-decoration: underline;
+  font-weight: bold;
+}

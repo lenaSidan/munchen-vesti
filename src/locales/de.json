@@ -511,5 +511,10 @@
     "detail3": "Vorbereitung auf TOEFL, IELTS, SAT, BEC, Duolingo und weitere Prüfungen",
     "detail4": "Englisch für Juristen, Mediziner, Immobilienmakler und andere Fachkräfte",
     "detail5": "Schulfächer auf Englisch (oder Russisch) für alle Klassenstufen"
+  },
+  "error": {
+    "404_message": "Seite nicht gefunden.",
+    "500_message": "Ein interner Serverfehler ist aufgetreten.",
+    "back_home": "Zurück zur Startseite"
   }
 }
