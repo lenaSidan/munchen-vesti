@@ -4,6 +4,7 @@ import useTranslation from "@/hooks/useTranslation";
 import TheaterAcademy from "@/components/ads/education/TheaterAcademy";
 import Seo from "@/components/Seo";
 import EasterEggById from "@/components/EasterEggById";
+import EnglishLessons from "@/components/ads/education/EnglishLessons";
 
 export default function AnnouncementsPage() {
   const t = useTranslation();
@@ -13,6 +14,11 @@ export default function AnnouncementsPage() {
       id: 1,
       type: "single",
       components: [<TheaterAcademy key="tutor" />],
+    },
+    {
+      id: 2,
+      type: "single",
+      components: [<EnglishLessons key="tutor" />],
     },
   ]);
 
