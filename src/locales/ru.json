@@ -497,5 +497,18 @@
     "link": "https://www.instagram.com/orangesunstudio?igsh=MXZ4bnBnY29qY2cwMg==",
     "contactInst": "@orangesunstudio",
     "web_link": "https://www.facebook.com/natali.orangesun"
+  },
+  "english_lessons": {
+    "title": "Онлайн уроки английского языка для детей и взрослых",
+    "description1": "Уроки проходят по Google Meets, Skype, Zoom, WhatsApp, Telegram, Viber — на ваш выбор.",
+    "description3": "На бесплатном пробном уроке определяются уровень, цели и индивидуальная программа обучения. Занятия индивидуальные, адаптируются под ваш график и особенности восприятия. Один урок — 60 минут. Обычно 2 раза в неделю (8 уроков в месяц за 150$).",
+    "contact_label": "Контакт:",
+    "contact_name": "Ибрагимов Рамиль (студент ВШЭ)",
+    "contact_phone": "+994 77 300 65 10 (WhatsApp)",
+    "detail1": "Разговорный английский (общий/ general) и грамматика с нуля и до уровня advanced",
+    "detail2": "Бизнес-английский (любые сферы)",
+    "detail3": "Подготовка к TOEFL, IELTS, SAT, BEC, Duolingo и др.",
+    "detail4": "Английский для юристов, медиков, риэлторов и других специалистов",
+    "detail5": "Школьные предметы на английском (или русском) для всех классов"
   }
 }
