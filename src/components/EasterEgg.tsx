@@ -94,7 +94,7 @@ export default function EasterEgg({
           }}
           onClick={handleClick}
           width={60}
-          height={60}
+          height={75}
         />
       )}
       {showModal && (

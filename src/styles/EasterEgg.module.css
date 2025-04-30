@@ -14,17 +14,17 @@
 .rareGlow {
   animation: pulseGlow 1.5s ease-in-out infinite;
   box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.4);
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 
 @keyframes pulseGlow {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 0 10px 4px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 0 5px 4px rgba(255, 215, 0, 0.4);
   }
   50% {
     transform: scale(1.1);
-    box-shadow: 0 0 20px 8px rgba(255, 215, 0, 0.6);
+    box-shadow: 0 0 10px 8px rgba(255, 215, 0, 0.6);
   }
 }
 @keyframes fadeIn {
@@ -40,6 +40,6 @@
 @media (max-width: 768px) {
   .easterEgg {
     width: 48px;
-    height: 48px;
+    height: 60px;
   }
 }
