@@ -27,6 +27,7 @@ export default function EnglishLessons() {
               </ul>
             </div>
             <p className={styles.description3}>{t("english_lessons.description3")}</p>
+            <p className={styles.description4}>{t("english_lessons.description4")}</p>
           </div>
 
           {/* Contact */}
