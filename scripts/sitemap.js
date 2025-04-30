@@ -9,6 +9,7 @@ const pagesDir = path.join(process.cwd(), "src/pages");
 const excludeFiles = ["_app.tsx", "_document.tsx", "_error.tsx", "404.tsx", "500.tsx"];
 const excludeDirs = ["api", "components"];
 
+
 // Рекурсивный обход всех файлов в папке pages
 function walkDir(dir, fileList = []) {
   const files = fs.readdirSync(dir);
@@ -48,7 +49,9 @@ function getMarkdownUrls(folder, prefix, checkEventDates = false, priority = "0.
   const dirPath = path.join(process.cwd(), "public", folder);
   if (!fs.existsSync(dirPath)) return [];
 
-  const files = fs.readdirSync(dirPath).filter((file) => file.endsWith(".md"));
+  const files = fs.readdirSync(dirPath, { withFileTypes: true })
+  .filter((entry) => entry.isFile() && entry.name.endsWith(".md"))
+  .map((entry) => entry.name);
 
   return files
     .map((file) => {
