@@ -2,7 +2,6 @@ import Ads from "@/components/Ads";
 import Seo from "@/components/Seo";
 import announcementsData from "@/data/announcements.json";
 import useTranslation from "@/hooks/useTranslation";
-import { formatHumanDate } from "@/lib/formatHumanDate";
 import { Event, getEventsByLocale } from "@/lib/getEvents";
 import { DailyWeather, getWeatherForecast } from "@/lib/getWeather";
 import styles from "@/styles/Home.module.css";
@@ -96,11 +95,8 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
                   />
                 )}
                 <h2 className={styles.articleTitle}>{mainEvent.title}</h2>
-                {mainEvent.date && (
-                  <p className={styles.articleDate}>
-                    {formatHumanDate(mainEvent.date, router.locale || "ru")}
-                  </p>
-                )}
+                {mainEvent.time && <p className={styles.articleDate}>{mainEvent.time}</p>}
+
                 <div className={styles.decorativeLine}></div>
                 <div
                   className={styles.articleContent}
@@ -120,11 +116,7 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
           <article className={styles.secondArticle}>
             <div className={styles.secondArticleHeader}>
               <h2 className={styles.secondArticleTitle}>{secondEvent.title}</h2>
-              {secondEvent.date && (
-                <p className={styles.articleDate}>
-                  {formatHumanDate(secondEvent.date, router.locale || "ru")}
-                </p>
-              )}{" "}
+              {secondEvent.time && <p className={styles.articleDate}>{secondEvent.time}</p>}
               <div className={styles.decorativeLine}></div>
             </div>
             <div className={styles.secondArticleGrid}>
@@ -229,12 +221,8 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
     };
   }
 
-  const otherEvents = await Promise.all(
-    sortedEvents.slice(2, 5).map(async (e) => ({
-      ...e,
-      content: await processMarkdown(e.content),
-    }))
-  );
+  const otherEvents = sortedEvents.slice(2, 5);
+
 
   const translatedAnnouncements = announcementsData.map((ann: Announcement) => ({
     ...ann,

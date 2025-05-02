@@ -1,7 +1,6 @@
 ---
 title: "Munich Cocktail Week: Hochprozentiger Genuss in der ganzen Stadt"
-date: "2025-04-29"
-endDate: "2025-05-10"
+date: "2025-05-9"
 time: "29. April – 10. Mai 2025"
 ort: "Verschiedene Bars und Locations in München"
 link: "[Mehr zur Munich Cocktail Week](https://cocktail-x.com/)"

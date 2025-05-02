@@ -1,7 +1,6 @@
 ---
 title: "Рэйки-ретрит и магия путешествий на Коста-Бланка"
 date: "2025-04-30"
-endDate: "2025-05-04"
 time: "30 апреля – 4 мая 2025"
 ort: "Побережье Коста-Бланка, Испания"
 link: "[Программа ретрита](https://reiki-retreat-costa-blan-fstrv3y.gamma.site/?fbclid=PAZXh0bgNhZW0CMTEAAaYxthSB7zNtXsGOq_nyJCrPwrHyRA2QjgGGK2QR8T3wKzcq2XTFPeEqg0A_aem_Sao9ssCnj8rtJcqRBxFUmQ)"
