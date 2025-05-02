@@ -1,7 +1,6 @@
 ---
 title: "Reiki-Retreat und die Magie des Reisens an der Costa Blanca"
 date: "2025-04-30"
-endDate: "2025-05-04"
 time: "30. April – 4. Mai 2025"
 ort: "Küste der Costa Blanca, Spanien"
 link: "[Retreat-Programm](https://reiki-retreat-costa-blan-fstrv3y.gamma.site/?fbclid=PAZXh0bgNhZW0CMTEAAaYxthSB7zNtXsGOq_nyJCrPwrHyRA2QjgGGK2QR8T3wKzcq2XTFPeEqg0A_aem_Sao9ssCnj8rtJcqRBxFUmQ)"
