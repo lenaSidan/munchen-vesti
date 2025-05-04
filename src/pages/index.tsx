@@ -1,21 +1,26 @@
-import Ads from "@/components/Ads";
+import OldWordOfTheWeek from "@/components/OldWordOfTheWeek";
 import Seo from "@/components/Seo";
+import WeatherInlineBlock from "@/components/WeatherInlineBlock";
 import announcementsData from "@/data/announcements.json";
 import useTranslation from "@/hooks/useTranslation";
 import { Event, getEventsByLocale } from "@/lib/getEvents";
 import { DailyWeather, getWeatherForecast } from "@/lib/getWeather";
 import styles from "@/styles/Home.module.css";
+import fs from "fs/promises";
+import matter from "gray-matter";
 import { GetStaticProps } from "next";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import path from "path";
 import { useEffect, useRef, useState } from "react";
 import rehypeExternalLinks from "rehype-external-links";
 import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
+import type { WordData } from "types/WordData";
 
 interface Announcement {
   id: number;
@@ -34,17 +39,24 @@ interface HomeProps {
   otherEvents: Event[];
   announcements: Announcement[];
   weather: DailyWeather | null;
+  oldWords: WordData[];
 }
 const LazyShortNewsBlock = dynamic(() => import("@/components/ShortNewsBlock"), {
   ssr: false,
-  loading: () => <p>Загрузка...</p>,
+  loading: () => <p>Loading...</p>,
 });
 const LazyEasterEgg = dynamic(() => import("@/components/EasterEggById"), {
   ssr: false,
 });
 const MiniPostcards = dynamic(() => import("@/components/MiniPostcards"), { ssr: false });
 
-export default function Home({ mainEvent, secondEvent, otherEvents, weather }: HomeProps) {
+export default function Home({
+  mainEvent,
+  secondEvent,
+  otherEvents,
+  weather,
+  oldWords,
+}: HomeProps) {
   const t = useTranslation();
   const router = useRouter();
 
@@ -106,8 +118,12 @@ export default function Home({ mainEvent, secondEvent, otherEvents, weather }: H
             )}
           </div>
           <div className={styles.adsBlock}>
-            <Ads weather={weather} />
+            {weather && <WeatherInlineBlock forecast={weather} />}
+            <OldWordOfTheWeek words={oldWords} />
           </div>
+          {/* <div className={styles.adsBlock}>
+            <Ads weather={weather} />
+          </div> */}
         </div>
 
         <MiniPostcards />
@@ -223,13 +239,30 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
 
   const otherEvents = sortedEvents.slice(2, 5);
 
-
   const translatedAnnouncements = announcementsData.map((ann: Announcement) => ({
     ...ann,
     text: translations[ann.textKey] || ann.textKey,
   }));
 
   const weather = await getWeatherForecast();
+  const oldwordDir = path.join(process.cwd(), "public", "oldwords", locale === "de" ? "de" : "ru");
+  let oldWords: WordData[] = [];
+
+  try {
+    const files = await fs.readdir(oldwordDir);
+    const shuffled = files.sort(() => 0.5 - Math.random());
+    const selectedFiles = shuffled.slice(0, 3);
+
+    oldWords = await Promise.all(
+      selectedFiles.map(async (file) => {
+        const content = await fs.readFile(path.join(oldwordDir, file), "utf-8");
+        const { data } = matter(content);
+        return data as WordData;
+      })
+    );
+  } catch (e) {
+    console.error("Error loading oldWords:", e);
+  }
 
   return {
     props: {
@@ -238,6 +271,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
       otherEvents,
       announcements: translatedAnnouncements,
       weather,
+      oldWords,
     },
     revalidate: 43200,
   };

@@ -1,0 +1,94 @@
+.wrapper {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--alt-background-light);
+}
+
+.heading {
+  font-family: var(--font-headings);
+  font-size: 1.4rem;
+  color: var(--heading-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+.card {
+  background-color: var(--background);
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  font-family: var(--font-body);
+  line-height: 1.6;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.word {
+  background-color: var(--alt-background);
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: var(--font-headings);
+  color: var(--heading-color2);
+  padding:  10px 0;
+  text-transform: none;
+  text-decoration: underline;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.translation {
+  font-style: italic;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.details {
+  font-size: 0.9rem;
+  color: var(--heading-color2);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.explanation {
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.origin {
+  font-style: italic;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--text-color);
+}
+
+.quote {
+  margin-top: 0.75rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--border-color);
+  color: var(--link-color);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+     padding: 1rem 1rem;
+  }
+ 
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .heading {
+    font-size: 1.2rem;
+  }
+}

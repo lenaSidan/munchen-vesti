@@ -1,0 +1,130 @@
+.wrapper {
+  margin-top: 1.5rem;
+  padding: 10px;
+  background: var(--alt-background);
+  border: 1px solid var(--border-color);
+  font-family: var(--font-body);
+}
+
+.announcementHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.heading {
+  font-size: 1rem;
+}
+
+.info {
+  content: url("/icons/info.png");
+}
+[data-theme="dark"] .info {
+  content: url("/icons/info_dark.png");
+}
+.announcementIcon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease;
+}
+.announcementIcon:hover {
+  transform: scale(1.2);
+}
+.decorativeLine {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.decorativeLine::before,
+.decorativeLine::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--heading-color2);
+  position: absolute;
+  left: 0;
+}
+
+.decorativeLine::before {
+  top: 0;
+}
+
+.decorativeLine::after {
+  bottom: 0;
+}
+.card {
+  background-color: var(--background);
+  border: 1px solid var(--border-color);
+  padding: 0.85rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.word {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: underline;
+  font-family: var(--font-headings);
+  color: var(--heading-color2);
+  margin-bottom: 0.15rem;
+}
+
+.translation {
+  font-style: italic;
+  color: var(--text-color);
+  margin-bottom: 0.15rem;
+  font-size: 0.95rem;
+}
+
+.details {
+  font-size: 0.8rem;
+  color: var(--heading-color2);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.origin {
+  font-style: italic;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--text-color);
+}
+
+.quote {
+  margin-top: 0.75rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--border-color);
+  color: var(--link-color);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.footerLink {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.allWordsLink {
+  font-family: var(--font-headings);
+  font-size: 0.95rem;
+  color: var(--link-color);
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.allWordsLink:hover {
+  color: var(--heading-color);
+}
