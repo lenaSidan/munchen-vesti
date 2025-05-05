@@ -11,7 +11,7 @@ import rehypeStringify from "rehype-stringify";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/ArticlesPage.module.css";
 import Seo from "@/components/Seo";
-import EasterEggById from "@/components/EasterEggById";
+// import EasterEggById from "@/components/EasterEggById";
 
 interface ArticlesArticle {
   id: number;
@@ -72,7 +72,7 @@ export default function ArticlesPage({ articles }: ArticlesProps) {
             </div>
           </article>
         ))}
-        <EasterEggById id="easteregg-articles" chance={0.5} />
+        {/* <EasterEggById id="easteregg-articles" chance={0.5} /> */}
       </div>
     </>
   );

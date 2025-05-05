@@ -1,4 +1,3 @@
-import ImportantNewsBlock from "@/components/ImportantNewsBlock";
 import OldWordOfTheWeek from "@/components/OldWordOfTheWeek";
 import Seo from "@/components/Seo";
 import WeatherInlineBlock from "@/components/WeatherInlineBlock";
@@ -46,9 +45,9 @@ const LazyShortNewsBlock = dynamic(() => import("@/components/ShortNewsBlock"), 
   ssr: false,
   loading: () => <p>Loading...</p>,
 });
-const LazyEasterEgg = dynamic(() => import("@/components/EasterEggById"), {
-  ssr: false,
-});
+// const LazyEasterEgg = dynamic(() => import("@/components/EasterEggById"), {
+//   ssr: false,
+// });
 const MiniPostcards = dynamic(() => import("@/components/MiniPostcards"), { ssr: false });
 
 export default function Home({
@@ -88,7 +87,7 @@ export default function Home({
       <Seo title={t("seo.index_title")} description={t("seo.index_description")} />
       <h1 className={styles.visuallyHidden}>{t("home.page_title")}</h1>
       <div className={styles.container}>
-        <ImportantNewsBlock />
+        {/* <ImportantNewsBlock /> */}
         <div className={styles.layout}>
           <div className={styles.articlesSection}>
             {mainEvent && (
@@ -123,9 +122,6 @@ export default function Home({
             {weather && <WeatherInlineBlock forecast={weather} />}
             <OldWordOfTheWeek words={oldWords} />
           </div>
-          {/* <div className={styles.adsBlock}>
-            <Ads weather={weather} />
-          </div> */}
         </div>
 
         <MiniPostcards />
@@ -186,7 +182,7 @@ export default function Home({
           )}
         </div>
 
-        {showNewsBlock && <LazyEasterEgg id="easteregg-home" chance={0.5} />}
+        {/* {showNewsBlock && <LazyEasterEgg id="easteregg-home" chance={0.5} />} */}
       </div>
     </>
   );
