@@ -71,20 +71,34 @@
   line-height: 1.6;
 }
 
+.wordRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.25rem;
+}
+
 .word {
   font-size: 1.4rem;
   font-weight: bold;
-  text-decoration: underline;
   font-family: var(--font-headings);
   color: var(--heading-color2);
-  margin-bottom: 0.15rem;
+  text-decoration: underline;
+}
+
+.gender {
+  font-size: 0.9rem;
+  font-style: italic;
+  font-family: var(--font-body);
+  color: var(--heading-color2);
 }
 
 .translation {
   font-style: italic;
   color: var(--text-color);
-  margin-bottom: 0.15rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  margin-bottom:20px;
 }
 
 .details {
@@ -92,8 +106,13 @@
   color: var(--heading-color2);
   font-weight: 600;
   margin-bottom: 0.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+.explanation {
+  color: var(--text-color);
+  font-size: 0.95rem;
+  font-family: monospace;
+}
 .origin {
   font-style: italic;
   margin-top: 1rem;

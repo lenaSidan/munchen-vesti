@@ -182,7 +182,7 @@
   line-height: 1.4;
   transition: border-color 0.3s ease-in-out;
 }
-.secondArticle .articleContent {
+.secondArticle {
   font-size: 1.1rem;
   line-height: 1.4;
   text-align: justify;

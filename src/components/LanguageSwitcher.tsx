@@ -1,7 +1,7 @@
-import { useRouter } from "next/router";
 import styles from "@/styles/LanguageSwitcher.module.css";
-import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 const LanguageSwitcher = () => {
   const router = useRouter();
@@ -30,19 +30,31 @@ const LanguageSwitcher = () => {
       const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
       setTheme(currentTheme);
     };
-  
+
     updateTheme(); // инициализация
-  
+
     const observer = new MutationObserver(() => updateTheme());
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
-  
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+
     return () => observer.disconnect();
   }, []);
   return (
     <div className={styles.languageSwitcher}>
-      <Image src={lanternIcon} alt="Lantern icon" width={48} height={131} className={styles.lanternIcon} />
+      <Image
+        src={lanternIcon}
+        alt="Lantern icon"
+        width={85}
+        height={131}
+        className={styles.lanternIcon}
+      />
 
-      <div className={`${styles.toggleWrapper} ${isRu ? "" : styles.active}`} onClick={toggleLanguage}>
+      <div
+        className={`${styles.toggleWrapper} ${isRu ? "" : styles.active}`}
+        onClick={toggleLanguage}
+      >
         <div className={styles.toggleKnob}></div>
       </div>
     </div>

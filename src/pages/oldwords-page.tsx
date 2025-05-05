@@ -31,19 +31,20 @@ export default function OldWordsPage({ words }: Props) {
       <div className={styles.grid}>
         {words.map((word, idx) => (
           <div key={idx} className={styles.card}>
-            <h2 className={styles.word}>{word.word}</h2>
+            <div className={styles.wordRow}>
+              <span className={styles.word}>{word.word}</span>
+              <span className={styles.gender}>
+                ({word.type}, {word.gender})
+              </span>
+            </div>
             <p className={styles.translation}>{word.translation}</p>
-            <p className={styles.details}>
-              <strong>{word.type}</strong>, {word.gender}
-            </p>
+
             <p className={styles.explanation}>
               {locale === "de" ? word.explanation_de : word.explanation_ru}
             </p>
-            <p className={styles.origin}>
-            {locale === "de" ? word.origin_de : word.origin_ru}
-          </p>
-          <blockquote className={styles.quote}>{word.quote}</blockquote>
-        </div>
+            <p className={styles.origin}>{locale === "de" ? word.origin_de : word.origin_ru}</p>
+            <blockquote className={styles.quote}>{word.quote}</blockquote>
+          </div>
         ))}
       </div>
     </div>

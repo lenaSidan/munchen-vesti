@@ -2,7 +2,8 @@
   padding: 2rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: var(--alt-background-light);
+  background-color: var(--alt-background);
+  margin-bottom: 30px;
 }
 
 .heading {
@@ -29,15 +30,30 @@
   transform: translateY(-2px);
 }
 
+.wordRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.25rem;
+  background-color: var(--alt-background-light);
+}
+
 .word {
-  background-color: var(--alt-background);
   font-size: 1.4rem;
   font-weight: bold;
+
   font-family: var(--font-headings);
   color: var(--heading-color2);
-  padding:  10px 0;
-  text-transform: none;
   text-decoration: underline;
+  margin-right: 10px;
+}
+
+.gender {
+  font-size: 0.9rem;
+  font-style: italic;
+  font-family: var(--font-body);
+  color: var(--heading-color2);
 }
 
 .grid {
@@ -48,19 +64,14 @@
 .translation {
   font-style: italic;
   color: var(--text-color);
-  margin-bottom: 0.25rem;
+  margin-bottom: 20px;
 }
 
-.details {
-  font-size: 0.9rem;
-  color: var(--heading-color2);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
 
 .explanation {
   color: var(--text-color);
   font-size: 0.95rem;
+  font-family: monospace;
 }
 
 .origin {
@@ -82,9 +93,9 @@
 
 @media (max-width: 768px) {
   .wrapper {
-     padding: 1rem 1rem;
+    padding: 1rem 1rem;
   }
- 
+
   .grid {
     grid-template-columns: 1fr;
   }

@@ -38,12 +38,15 @@ export default function OldWordOfTheWeek({ words }: { words: WordData[] }) {
       <div className={styles.decorativeLine}></div>
       {words.map((wordData, index) => (
         <div key={index} className={styles.card}>
-          <p className={styles.word}>{wordData.word}</p>
+          <div className={styles.wordRow}>
+            <span className={styles.word}>{wordData.word}</span>
+            <span className={styles.gender}>({wordData.type}, {wordData.gender})</span>
+          </div>
           <p className={styles.translation}>{wordData.translation}</p>
-          <p className={styles.details}>
-            <strong>{wordData.type}</strong>, {wordData.gender}
+
+          <p className={styles.explanation}>
+            {locale === "de" ? wordData.explanation_de : wordData.explanation_ru}
           </p>
-          <p>{locale === "de" ? wordData.explanation_de : wordData.explanation_ru}</p>
           <p className={styles.origin}>
             {locale === "de" ? wordData.origin_de : wordData.origin_ru}
           </p>
