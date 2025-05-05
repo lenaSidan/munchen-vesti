@@ -9,7 +9,7 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import Seo from "@/components/Seo";
-import EasterEggById from "@/components/EasterEggById";
+// import EasterEggById from "@/components/EasterEggById";
 import rehypeExternalLinks from "rehype-external-links";
 
 interface EventsProps {
@@ -129,7 +129,7 @@ export default function EventsPage({ events }: EventsProps) {
           </div>
         ))}
       </div>
-      <EasterEggById id="easteregg-events" chance={0.5} />
+      {/* <EasterEggById id="easteregg-events" chance={0.5} /> */}
     </>
   );
 }

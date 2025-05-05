@@ -4,7 +4,7 @@ import useTranslation from "@/hooks/useTranslation";
 import TomatePizzaAd from "@/components/ads/gastronomy/TomatePizza";
 import OrangeSunStudio from "@/components/ads/gastronomy/OrangeSunStudio";
 import Seo from "@/components/Seo";
-import EasterEggById from "@/components/EasterEggById";
+// import EasterEggById from "@/components/EasterEggById";
 
 export default function AnnouncementsPage() {
   const t = useTranslation();
@@ -41,7 +41,7 @@ export default function AnnouncementsPage() {
           ))}
         </div>
       </div>
-      <EasterEggById id="easteregg-home" chance={0.5} />
+      {/* <EasterEggById id="easteregg-home" chance={0.5} /> */}
     </>
   );
 }

@@ -3,7 +3,7 @@ import styles from "@/styles/AdsPage.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import TheaterAcademy from "@/components/ads/education/TheaterAcademy";
 import Seo from "@/components/Seo";
-import EasterEggById from "@/components/EasterEggById";
+// import EasterEggById from "@/components/EasterEggById";
 import EnglishLessons from "@/components/ads/education/EnglishLessons";
 
 export default function AnnouncementsPage() {
@@ -40,7 +40,7 @@ export default function AnnouncementsPage() {
           ))}
         </div>
       </div>
-      <EasterEggById id="easteregg-articles" chance={0.5} />
+      {/* <EasterEggById id="easteregg-articles" chance={0.5} /> */}
     </>
   );
 }
