@@ -516,5 +516,18 @@
     "404_message": "Seite nicht gefunden.",
     "500_message": "Ein interner Serverfehler ist aufgetreten.",
     "back_home": "Zurück zur Startseite"
+  },
+  "important_news": {
+    "title": "Wichtige Neuigkeiten",
+    "subTitle": "Live-Stream „Der Weg nach Hause“ – Antworten auf Fragen zur Rückkehr nach Russland",
+    "subTitle2": "Heute findet auf TikTok ein Live-Stream des Projekts „Der Weg nach Hause“ statt!",
+    "text1": "Wenn Sie über eine Rückkehr oder einen Umzug nach Russland nachdenken und Fragen zu Dokumenten, Wohnraum, Arbeit oder Integration haben – Anatolij und sein Team helfen Ihnen live weiter.",
+    "ul": "Im Live-Stream erfahren Sie:",
+    "li1": "Wie man aus dem Ausland nach Russland zurückkehrt",
+    "li2": "Welche rechtlichen und praktischen Möglichkeiten es gibt",
+    "li3": "Was man in ungewöhnlichen Situationen tun kann",
+    "li4": "Und wie man den Weg einfacher gestaltet",
+    "data": "5. Mai, 19:00 MSK",
+    "visit_tiktok": "Live-Stream auf TikTok ansehen"
   }
 }
