@@ -33,9 +33,10 @@ interface Event {
 interface EventProps {
   event: Event;
   locale: string;
+  archived: boolean;
 }
 
-export default function Event({ event, locale }: EventProps) {
+export default function Event({ event, locale, archived }: EventProps) {
   const t = useTranslation();
 
   const canonicalUrl = `https://munchen-vesti.de/${locale === "de" ? "de/" : "ru/"}events/${event.slug}`;
@@ -57,6 +58,7 @@ export default function Event({ event, locale }: EventProps) {
         url={canonicalUrl}
         jsonLd={jsonLd}
       />
+      {archived && <meta name="robots" content="noindex, nofollow" />}
 
       <div className={styles.articleContainer}>
         <h2 className={styles.title}>{event.title}</h2>
@@ -65,6 +67,11 @@ export default function Event({ event, locale }: EventProps) {
           {event.endDate && ` – ${event.endDate}`}
           {event.ort && ` | ${event.ort}`}
         </p>
+        {archived && (
+          <div className={styles.archivedNotice}>
+          ⚠️ {t("events.archived_notice")}
+        </div>
+        )}
         {event.image && (
           <div className={styles.imageWrapper}>
             <Image
@@ -114,16 +121,25 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
   }
 
   const eventsDir = path.join(process.cwd(), "public/events");
+  const archiveDir = path.join(eventsDir, "arhiv");
+
   const files = fs.readdirSync(eventsDir);
-  const matchingFile = files.find((file) => file.endsWith(`-${params.slug}.${locale}.md`));
+  const archivedFiles = fs.existsSync(archiveDir) ? fs.readdirSync(archiveDir) : [];
+  const allFiles = [...files, ...archivedFiles];
+
+  const matchingFile = allFiles.find((file) => file.endsWith(`-${params.slug}.${locale}.md`));
 
   if (!matchingFile) {
     return { notFound: true };
   }
 
-  const filePath = path.join(eventsDir, matchingFile);
-  const fileContents = fs.readFileSync(filePath, "utf-8");
+  const filePath = files.includes(matchingFile)
+    ? path.join(eventsDir, matchingFile)
+    : path.join(archiveDir, matchingFile);
 
+  const isArchived = !files.includes(matchingFile);
+
+  const fileContents = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(fileContents);
 
   const processedContent = await remark()
@@ -154,6 +170,7 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
         content: contentHtml,
       },
       locale,
+      archived: isArchived,
     },
     revalidate: 600,
   };
