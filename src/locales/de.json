@@ -238,7 +238,8 @@
     }
   },
   "events": {
-    "read_more": "Weiterlesen"
+    "read_more": "Weiterlesen",
+    "archived_notice": "Diese Veranstaltung ist bereits vorbei."
   },
   "event": {
     "time": "Datum",
