@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
   // Отправка page_view при переходах
   useEffect(() => {
     const handleRouteChange = (url: string) => {
-      window.gtag?.("config", "G-9M31W7TST5", {
+      window.gtag?.("config", "G-BRM8FPV3SS", {
         page_path: url,
       });
     };
@@ -49,7 +49,7 @@ export default function App({ Component, pageProps }: AppProps) {
       {/* ✅ Google Analytics через next/script */}
       <Script
         strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-9M31W7TST5"
+        src="https://www.googletagmanager.com/gtag/js?id=G-BRM8FPV3SS"
       />
       <Script
         id="ga4-init"
@@ -59,7 +59,7 @@ export default function App({ Component, pageProps }: AppProps) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-9M31W7TST5', {
+            gtag('config', 'G-BRM8FPV3SS', {
               page_path: window.location.pathname,
             });
           `,
