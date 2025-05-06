@@ -3,30 +3,30 @@ import { useRouter } from "next/router";
 import styles from "@/styles/Footer.module.css";
 import useTranslation from "@/hooks/useTranslation";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+// import { useEffect } from "react";
 
 export default function Footer() {
   const t = useTranslation();
   const router = useRouter();
   const currentYear = new Date().getFullYear();
-  const [hasEggs, setHasEggs] = useState(false);
-  const [allFound, setAllFound] = useState(false);
+  // const [hasEggs, setHasEggs] = useState(false);
+  // const [allFound, setAllFound] = useState(false);
 
-  useEffect(() => {
-    const checkEggs = () => {
-      if (typeof window === "undefined") return;
+  // useEffect(() => {
+  //   const checkEggs = () => {
+  //     if (typeof window === "undefined") return;
 
-      const keys = Object.keys(localStorage).filter((key) => key.startsWith("easteregg-"));
-      const foundCount = keys.filter((key) => localStorage.getItem(key) === "true").length;
+  //     const keys = Object.keys(localStorage).filter((key) => key.startsWith("easteregg-"));
+  //     const foundCount = keys.filter((key) => localStorage.getItem(key) === "true").length;
 
-      setHasEggs(foundCount > 0);
-      setAllFound(foundCount >= 3); // 👈 меняй на нужное количество
-    };
+  //     setHasEggs(foundCount > 0);
+  //     setAllFound(foundCount >= 3); // 👈 меняй на нужное количество
+  //   };
 
-    checkEggs();
-    window.addEventListener("easteregg-found", checkEggs);
-    return () => window.removeEventListener("easteregg-found", checkEggs);
-  }, []);
+  //   checkEggs();
+  //   window.addEventListener("easteregg-found", checkEggs);
+  //   return () => window.removeEventListener("easteregg-found", checkEggs);
+  // }, []);
 
   return (
     <footer className={styles.footer}>
@@ -61,7 +61,7 @@ export default function Footer() {
               {t("footer.privacy-policy")}
             </Link>
           </div>
-          {hasEggs && (
+          {/* {hasEggs && (
             <Link
               href="/collection"
               className={`${styles.navLink} ${router.pathname === "/collection" ? styles.active : ""} ${
@@ -70,7 +70,7 @@ export default function Footer() {
             >
               {t("footer.collection")}
             </Link>
-          )}
+          )} */}
         </nav>
 
         <div className={styles.socials}>

@@ -6,22 +6,27 @@ import Image from "next/image";
 import NewsBlock from "./NewsBlock";
 import { NewsItem } from "@/lib/getNewsByLocale";
 
+function getRandomItems<T>(items: T[], count: number): T[] {
+  const shuffled = [...items].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
+}
+
 export default function ShortNewsBlock() {
   const t = useTranslation();
   const { locale } = useRouter();
-  const [newsList, setNewsList] = useState<NewsItem[]>([]);
+  const [randomNews, setRandomNews] = useState<NewsItem[]>([]);
 
   useEffect(() => {
     const fetchNews = async () => {
       const res = await fetch(`/api/news-short?locale=${locale}`);
-      const data = await res.json();
-      setNewsList(data);
+      const data: NewsItem[] = await res.json();
+      const selected = getRandomItems(data, 2); // выбираем 2 случайные новости
+      setRandomNews(selected);
     };
     fetchNews();
   }, [locale]);
 
   return (
-    
     <aside className={styles.announcements}>
       <div className={styles.announcementHeader}>
         <h3 className={styles.announcementTitle}>{t("newsTitle")}</h3>
@@ -34,7 +39,7 @@ export default function ShortNewsBlock() {
         />
       </div>
       <div className={styles.decorativeLine}></div>
-      <NewsBlock newsList={newsList.slice(0, 2)} />
+      <NewsBlock newsList={randomNews} />
     </aside>
   );
 }

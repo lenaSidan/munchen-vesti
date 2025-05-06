@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--alt-background1); /* обязательно, иначе будет "просвечивать" */
+  background-color: var(--alt-background1);
   border-bottom: 3px solid var(--heading-color);
   padding: 0 0 10px 0;
   margin-bottom: 10px;
@@ -12,19 +12,11 @@
   width: 100vw;
   display: flex;
   justify-content: center;
-  background: repeating-linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.1),
-    transparent 5px
-  );
+  background: repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.1), transparent 5px);
 }
 
 [data-theme="dark"] .fullBackground {
-  background: repeating-linear-gradient(
-    90deg,
-    rgba(224, 169, 109, 0.3),
-    transparent 5px
-  );
+  background: repeating-linear-gradient(90deg, rgba(224, 169, 109, 0.3), transparent 5px);
 }
 .containerBackground {
   width: 100%;
@@ -44,7 +36,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  
 }
 .logoText {
   display: flex;
@@ -121,26 +112,20 @@
   gap: 8px;
   margin-right: 20px;
 }
-.menuMain {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-}
 
 .nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.nav::-webkit-scrollbar {
+  display: none;
 }
 .nav :hover {
   color: var(--heading-color);
-  
 }
 .active {
-
   color: var(--heading-color);
   text-decoration: underline;
 }
@@ -161,8 +146,8 @@
   color: var(--heading-color);
   text-decoration: underline;
   transition: color 0.2s;
- }
- .active {
+}
+.active {
   font-weight: bold;
   color: var(--heading-color);
   text-decoration: underline;
@@ -175,8 +160,17 @@
   border-top: 1px solid var(--border-color);
   width: 100%;
   padding: 5px 0;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+  opacity: 1;
+  transform: translateY(0);
 }
-
+.submenuHidden {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
 .submenuLink {
   padding: 3px 0;
   color: var(--text-color);
@@ -237,4 +231,64 @@
 
 .decorativeLine .right {
   margin-left: 2px;
+}
+.menuWrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.fadeLeft,
+.fadeRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  z-index: 5;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.fadeLeft {
+  left: 0;
+  background: linear-gradient(to right, var(--background), transparent);
+}
+
+.fadeRight {
+  right: 0;
+  background: linear-gradient(to left, var(--background), transparent);
+}
+
+.menuWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.menuMain {
+  display: inline-flex;
+  gap: 10px;
+  min-width: max-content;
+  padding: 8px 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.menuWrapper::before,
+.menuWrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.menuWrapper::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.05), transparent);
+}
+
+.menuWrapper::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.05), transparent);
 }
