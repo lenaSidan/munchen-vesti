@@ -1,6 +1,6 @@
 ---
 title: "Munich Cocktail Week: Праздник коктейльной культуры в Мюнхене"
-date: "2025-05-08"
+date: "2025-05-10"
 time: "29 апреля – 10 мая 2025"
 ort: "Различные бары и локации в Мюнхене"
 link: "[Подробнее о Munich Cocktail Week](https://cocktail-x.com/)"
