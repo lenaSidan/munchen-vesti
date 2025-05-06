@@ -163,7 +163,7 @@ export default function Home({
             <ul className={styles.otherArticlesList}>
               {otherEvents.map((event) => (
                 <li key={event.slug} className={styles.articleLink}>
-                  <Link href={`/events/${event.slug}`}>
+                  <Link  href={`/events/${event.slug}`}>
                     {event.title} <span className={styles.articleDate}> | {event.time}</span>
                   </Link>
                 </li>

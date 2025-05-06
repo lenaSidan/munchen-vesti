@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { useRouter } from "next/router";
-import styles from "@/styles/Header.module.css";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import MobileHeader from "@/components/MobileHeader";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import useTranslation from "@/hooks/useTranslation";
-import MobileHeader from "@/components/MobileHeader";
+import styles from "@/styles/Header.module.css";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 export default function Header() {
   const t = useTranslation();
@@ -17,7 +17,6 @@ export default function Header() {
   const [foundCount, setFoundCount] = useState(0);
   const [allFound, setAllFound] = useState(false);
   const CURRENT_EGG_VERSION = "v3";
-
 
   useEffect(() => {
     const handleResize = () => {
@@ -36,7 +35,8 @@ export default function Header() {
         (key) => key.startsWith("easteregg-") && !key.includes("reward") && !key.includes("-rare")
       );
       const count = keys.filter((key) => localStorage.getItem(key) === "true").length;
-      const rewardClaimed = localStorage.getItem(`easteregg-reward-claimed-${CURRENT_EGG_VERSION}`) === "true";
+      const rewardClaimed =
+        localStorage.getItem(`easteregg-reward-claimed-${CURRENT_EGG_VERSION}`) === "true";
 
       setFoundCount(count);
       setAllFound(rewardClaimed);
@@ -150,6 +150,22 @@ export default function Header() {
               </div>
             )}
           </div>
+          <Link
+            href="/oldwords-page"
+            title={t("menu.words_full")}
+            className={`${styles.navLink} ${router.pathname === "/oldwords-page" ? styles.active : ""}`}
+            onClick={closeSubmenu}
+          >
+            {t("menu.words").toUpperCase()}
+          </Link>
+          <Link
+            href="/postcards-page"
+            title={t("menu.chronicles_full")}
+            className={`${styles.navLink} ${router.pathname === "/postcards-page" ? styles.active : ""}`}
+            onClick={closeSubmenu}
+          >
+            {t("menu.chronicles").toUpperCase()}
+          </Link>
 
           {foundCount > 0 && !allFound && (
             <Link

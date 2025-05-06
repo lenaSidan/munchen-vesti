@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import styles from "@/styles/mobileHeader.module.css";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import useTranslation from "@/hooks/useTranslation";
+import styles from "@/styles/mobileHeader.module.css";
+import Link from "next/link";
 import { useRouter } from "next/router";
+import { useEffect, useRef, useState } from "react";
 
 export default function MobileHeader() {
   const t = useTranslation();
@@ -12,7 +12,14 @@ export default function MobileHeader() {
   const submenuRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
-  const toggleSubmenu = () => setIsSubmenuOpen((prev) => !prev);
+  const handleSubmenuClick = () => {
+    if (isSubmenuOpen) {
+      closeSubmenu();
+    } else {
+      setIsSubmenuOpen(true);
+    }
+  };
+
   const closeSubmenu = () => {
     setIsSubmenuOpen(false);
   };
@@ -21,7 +28,12 @@ export default function MobileHeader() {
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (submenuRef.current && !submenuRef.current.contains(e.target as Node)) {
+      const target = e.target as Node;
+      if (
+        submenuRef.current &&
+        !submenuRef.current.contains(target) &&
+        !document.getElementById("adsMenuButton")?.contains(target)
+      ) {
         closeSubmenu();
       }
     };
@@ -54,36 +66,58 @@ export default function MobileHeader() {
         </div>
 
         <nav className={styles.nav}>
-          <div className={styles.menuMain}>
-            <Link
-              href="/articles-page"
-              className={`${styles.navLink} ${router.pathname === "/articles-page" ? styles.active : ""}`}
-              onClick={closeSubmenu}
-            >
-              {t("menu.articles").toUpperCase()}
-            </Link>
+          <div className={styles.fadeLeft} />
+          <div className={styles.fadeRight} />
+          <div className={styles.menuWrapper}>
+            <div className={styles.menuMain}>
+              
+              <Link
+                href="/articles-page"
+                className={`${styles.navLink} ${router.pathname === "/articles-page" ? styles.active : ""}`}
+                onClick={closeSubmenu}
+              >
+                {t("menu.articles").toUpperCase()}
+              </Link>
 
-            <Link
-              href="/events-page"
-              className={`${styles.navLink} ${router.pathname === "/events-page" ? styles.active : ""}`}
-              onClick={closeSubmenu}
-            >
-              {t("menu.announcements").toUpperCase()}
-            </Link>
-            <Link
-              href="/news-page"
-              className={`${styles.navLink} ${router.pathname === "/news-page" ? styles.active : ""}`}
-              onClick={closeSubmenu}
-            >
-              {t("menu.news").toUpperCase()}
-            </Link>
-            <button
-              type="button"
-              onClick={toggleSubmenu}
-              className={`${styles.navLink} ${isAdsActive ? styles.active : ""}`}
-            >
-              {t("menu.ads").toUpperCase()}
-            </button>
+              <Link
+                href="/events-page"
+                className={`${styles.navLink} ${router.pathname === "/events-page" ? styles.active : ""}`}
+                onClick={closeSubmenu}
+              >
+                {t("menu.announcements").toUpperCase()}
+              </Link>
+              <Link
+                href="/news-page"
+                className={`${styles.navLink} ${router.pathname === "/news-page" ? styles.active : ""}`}
+                onClick={closeSubmenu}
+              >
+                {t("menu.news").toUpperCase()}
+              </Link>
+              <button
+                id="adsMenuButton"
+                type="button"
+                onClick={handleSubmenuClick}
+                className={`${styles.navLink} ${isAdsActive || isSubmenuOpen ? styles.active : ""}`}
+              >
+                {t("menu.ads").toUpperCase()}
+              </button>
+              <Link
+                href="/oldwords-page"
+                title={t("menu.words_full")}
+                className={`${styles.navLink} ${router.pathname === "/oldwords-page" ? styles.active : ""}`}
+                onClick={closeSubmenu}
+              >
+                {t("menu.words").toUpperCase()}
+              </Link>
+              <Link
+                href="/postcards-page"
+                title={t("menu.chronicles_full")}
+                className={`${styles.navLink} ${router.pathname === "/postcards-page" ? styles.active : ""}`}
+                onClick={closeSubmenu}
+              >
+                {t("menu.chronicles").toUpperCase()}
+              </Link>
+            </div>
           </div>
           {isSubmenuOpen && (
             <div className={styles.submenu} ref={submenuRef}>
