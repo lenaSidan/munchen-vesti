@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "powershell -Command \"Get-Date -Format yyyy-MM-dd-HH-mm-ss | Out-File -Encoding ASCII -NoNewline public/version.txt\"",
+    "prebuild": "date +%Y-%m-%d-%H-%M-%S > public/version.txt",
     "build": "npm run archive && npm run cleanup && npm run generate-sitemap && next build",
     "generate-sitemap": "node scripts/sitemap.js",
     "cleanup": "ts-node scripts/cleanup.js",
