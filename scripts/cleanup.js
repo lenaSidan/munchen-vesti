@@ -1,5 +1,7 @@
-import fs from "fs";
-import path from "path";
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const fs = require("fs");
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const path = require("path");
 
 const baseDir = process.cwd();
 const imagesDir = path.join(baseDir, "public", "images");
@@ -20,7 +22,7 @@ function findAllUsedImages() {
 
       if (entry.isDirectory()) {
         scanDir(fullPath);
-      } else if (validExtensions.some(ext => entry.name.endsWith(ext))) {
+      } else if (validExtensions.some((ext) => entry.name.endsWith(ext))) {
         const content = fs.readFileSync(fullPath, "utf-8");
         const matches = content.match(imagePattern);
         if (matches) {
