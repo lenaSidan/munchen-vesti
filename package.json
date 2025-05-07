@@ -11,7 +11,7 @@
     "cleanup": "node scripts/cleanup.js",
     "start": "next start -H 0.0.0.0 -p 8080",
     "lint": "next lint",
-    "archive": "node scripts/archive-old-events.js"
+    "archive": "node scripts/archive-old-events.сjs"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^15.3.0",
