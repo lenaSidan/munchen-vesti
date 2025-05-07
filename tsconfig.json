@@ -5,13 +5,14 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "allowJs": true,
+    "checkJs": false,
     "skipLibCheck": true,
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+    "noEmit": false,
     "incremental": true,
     "jsx": "preserve",
     "baseUrl": ".",
@@ -19,6 +20,11 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "scripts/**/*.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "scripts/**/*.js"
+  ],
   "exclude": ["node_modules"]
 }
