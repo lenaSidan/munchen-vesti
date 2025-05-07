@@ -19,14 +19,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "scripts/sitemap.js",
-    "scripts/cleanup.js",
-    "scripts/cleanup-unused-images.js",
-    "scripts/cleanup-images.js"
-, "checkEventFields.js"  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "scripts/**/*.js"],
   "exclude": ["node_modules"]
 }
