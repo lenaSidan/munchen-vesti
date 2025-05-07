@@ -27,6 +27,6 @@
     "scripts/cleanup.js",
     "scripts/cleanup-unused-images.js",
     "scripts/cleanup-images.js"
-  ],
+, "checkEventFields.js"  ],
   "exclude": ["node_modules"]
 }
