@@ -5,7 +5,7 @@ const eventsDir = path.join(process.cwd(), "public", "events");
 const archiveDir = path.join(eventsDir, "arhiv");
 const imagesDir = path.join(process.cwd(), "public", "images");
 
-if (!fs.existsSync(archiveDir)) fs.mkdirSync(archiveDir);
+if (!fs.existsSync(archiveDir)) fs.mkdirSync(archiveDir, { recursive: true });
 
 const today = new Date();
 today.setHours(0, 0, 0, 0);
@@ -25,7 +25,7 @@ fs.readdirSync(eventsDir).forEach((file) => {
 
   if (!startDate || !endDate || endDate >= today) return;
 
-  // Удаление изображения, если оно указано
+  // Удаление изображения, если указано
   if (imageMatch) {
     const imagePath = path.join(imagesDir, imageMatch[1].trim().replace(/^\/images\//, ""));
     if (fs.existsSync(imagePath)) {
@@ -34,7 +34,7 @@ fs.readdirSync(eventsDir).forEach((file) => {
     }
   }
 
-  // Перемещаем .md-файл в архив
+  // Перемещаем файл в архив
   fs.renameSync(filePath, path.join(archiveDir, file));
   console.log(`🗃️ Перемещено: ${file}`);
 });
