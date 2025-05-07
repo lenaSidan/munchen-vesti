@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "next dev",
     "prebuild": "date +%Y-%m-%d-%H-%M-%S > public/version.txt",
-    "build": "npm run archive && npm run cleanup && npm run generate-sitemap && next build",
+"build": "npm run generate-sitemap && next build",
     "generate-sitemap": "node scripts/sitemap.js",
     "cleanup": "ts-node scripts/cleanup.js",
     "start": "next start -H 0.0.0.0 -p 8080",
