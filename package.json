@@ -2,7 +2,7 @@
   "name": "munchen-vesti",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
+  
   "scripts": {
     "dev": "next dev",
     "prebuild": "date +%Y-%m-%d-%H-%M-%S > public/version.txt",
