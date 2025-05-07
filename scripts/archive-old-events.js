@@ -1,7 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const fs = require("fs");
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const path = require("path");
+import fs from "fs";
+import path from "path";
 
 const eventsDir = path.join(process.cwd(), "public", "events");
 const archiveDir = path.join(eventsDir, "arhiv");
