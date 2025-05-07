@@ -1,3 +1,2 @@
 Eingegebenes Datum kann nicht bernommen werden.
-Geben Sie das neue Datum ein: (TT-MM-JJ) Eingegebenes Datum kann nicht bernommen werden.
 Geben Sie das neue Datum ein: (TT-MM-JJ) 
