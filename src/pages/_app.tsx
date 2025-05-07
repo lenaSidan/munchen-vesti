@@ -18,6 +18,31 @@ const merriweather = Merriweather({ subsets: ["latin", "cyrillic"], weight: ["30
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
+  // 🔁 Автообновление сайта при новой версии
+  useEffect(() => {
+    const checkForUpdate = async () => {
+      try {
+        const res = await fetch('/version.txt', { cache: 'no-store' });
+        const latest = await res.text();
+        const current = localStorage.getItem('siteVersion');
+        if (current && latest !== current) {
+          console.log(
+            '%c 💡 Обнаружена новая версия сайта. Выполняется автообновление...',
+            'color: green; font-weight: bold;'
+          );
+          window.location.reload();
+        }
+        localStorage.setItem('siteVersion', latest);
+      } catch (e) {
+        console.error('Ошибка проверки версии сайта', e);
+      }
+    };
+
+    checkForUpdate();
+    const interval = setInterval(checkForUpdate, 60000); // каждые 60 сек
+    return () => clearInterval(interval);
+  }, []);
+
   // Открытие внешних ссылок в новой вкладке
   useEffect(() => {
     document.querySelectorAll('a[href^="http"]').forEach((link) => {
@@ -26,7 +51,7 @@ export default function App({ Component, pageProps }: AppProps) {
     });
   }, []);
 
-  // Отправка page_view при переходах
+  // Google Analytics page_view
   useEffect(() => {
     const handleRouteChange = (url: string) => {
       window.gtag?.("config", "G-BRM8FPV3SS", {
@@ -46,7 +71,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="robots" content="index, follow" />
       </Head>
 
-      {/* ✅ Google Analytics через next/script */}
       <Script
         strategy="afterInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=G-BRM8FPV3SS"
