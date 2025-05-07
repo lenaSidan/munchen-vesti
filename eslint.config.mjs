@@ -7,5 +7,11 @@ const compat = new FlatCompat({
 
 module.exports = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    rules: {
+      // Отключаем правило, если оно ругается на require
+      "import/no-commonjs": "off",
+      "@typescript-eslint/no-var-requires": "off",
+    },
+  },
 ];
-

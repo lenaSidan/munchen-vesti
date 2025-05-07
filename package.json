@@ -6,8 +6,8 @@
     "dev": "next dev",
     "prebuild": "date +%Y-%m-%d-%H-%M-%S > public/version.txt",
     "build": "npm run generate-sitemap && next build",
-    "generate-sitemap": "node scripts/sitemap.js",
-    "cleanup": "node scripts/cleanup.js",
+    "generate-sitemap": "node scripts/sitemap.cjs",
+    "cleanup": "node scripts/cleanup.cjs",
     "start": "next start -H 0.0.0.0 -p 8080",
     "lint": "next lint",
     "archive": "node scripts/archive-old-events.cjs"
