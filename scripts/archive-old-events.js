@@ -1,6 +1,4 @@
-
 const fs = require("fs");
-
 const path = require("path");
 
 const eventsDir = path.join(process.cwd(), "public", "events");
@@ -25,7 +23,6 @@ fs.readdirSync(eventsDir).forEach((file) => {
 
   if (!startDate || !endDate || endDate >= today) return;
 
-  // Перемещаем в архив
   fs.renameSync(filePath, path.join(archiveDir, file));
   console.log(`🗃️ Перемещено: ${file}`);
 });
