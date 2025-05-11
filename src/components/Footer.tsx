@@ -74,7 +74,7 @@ export default function Footer() {
         </nav>
 
         <div className={styles.socials}>
-          <a href="https://t.me/твоя_ссылка" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+          <a href="https://t.me/munchen_vesti" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
             <Image
               src="/icons/telegram_icon.png"
               alt="Telegram"
