@@ -40,6 +40,6 @@ Seit 2025 ist München Mitglied im Netzwerk **„Kommunen für biologische Vielf
 - • **Langwieder Heide** – Erhalt von *Kalkmagerrasen*, Lebensraum für die *Zauneidechse* und wilde *Hummeln*.
 - • **Forstenrieder Park** – Erhalt alter Eichenwälder und seltener Tagfalter wie das *Wiesenvögelchen*.
 
-München zeigt einen **ganzheitlichen Ansatz** im urbanen Naturschutz – von juristisch geschützten Flächen bis hin zur aktiven Beteiligung an internationalen Umweltallianzen. 
+_München zeigt einen **ganzheitlichen Ansatz** im urbanen Naturschutz – von juristisch geschützten Flächen bis hin zur aktiven Beteiligung an internationalen Umweltallianzen._
 
 Diese Maßnahmen verbessern das Stadtklima, reduzieren Lärm und steigern die **Lebensqualität** sowohl für Menschen als auch für wildlebende Arten.
