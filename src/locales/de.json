@@ -103,7 +103,10 @@
     "news_description": "Lesen Sie die neuesten Nachrichten aus München auf Deutsch. Erfahren Sie mehr über Veranstaltungen, wichtige Änderungen und das Leben in der Stadt.",
     "postcards_title": "Historische Postkarten aus Deutschland",
     "postcards_description": "Tauchen Sie ein in die Geschichte Deutschlands durch kurze Botschaften auf historischen Postkarten.",
-    "postcardsAll_title": "Alle historischen Postkarten"
+    "postcardsAll_title": "Alle historischen Postkarten",
+    "oldWords_title": "Vergessene deutsche Wörter – schöne und seltene Ausdrücke",
+    "oldWords_description": "Entdecken Sie alte und seltene deutsche Wörter mit Übersetzungen und Beispielen. Erweitern Sie Ihren Wortschatz und lernen Sie die Sprache tiefer kennen.",
+    "oldWordsAll_title": "Alte vergessene deutsche Wörter"
   },
   "menu": {
     "articles": "Artikel",
