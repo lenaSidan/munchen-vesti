@@ -1,2 +1,1 @@
-Eingegebenes Datum kann nicht bernommen werden.
-Geben Sie das neue Datum ein: (TT-MM-JJ) 
+2025-05-11T10-46-08-570Z
