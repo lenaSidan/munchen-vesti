@@ -10,13 +10,14 @@ import { Merriweather, Old_Standard_TT } from "next/font/google";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Script from "next/script";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const oldStandard = Old_Standard_TT({ subsets: ["latin", "cyrillic"], weight: "400" });
 const merriweather = Merriweather({ subsets: ["latin", "cyrillic"], weight: ["300", "400"] });
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
+  const [hasVersionCheckRun, setHasVersionCheckRun] = useState(false);
 
   // 🔁 Автообновление сайта при новой версии
   useEffect(() => {
@@ -33,13 +34,14 @@ export default function App({ Component, pageProps }: AppProps) {
           window.location.reload();
         }
         localStorage.setItem('siteVersion', latest);
+        setHasVersionCheckRun(true);
       } catch (e) {
         console.error('Ошибка проверки версии сайта', e);
       }
     };
 
     checkForUpdate();
-    const interval = setInterval(checkForUpdate, 60000); // каждые 60 сек
+    const interval = setInterval(checkForUpdate, 60000); // каждые 60 секунд
     return () => clearInterval(interval);
   }, []);
 
