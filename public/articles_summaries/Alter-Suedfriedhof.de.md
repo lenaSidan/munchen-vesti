@@ -1,6 +1,6 @@
 ---
 title: "Alter Südfriedhof: Ein Friedhof, der Münchens Geschichte flüstert"
-image: "/images/alter_suedfriedhof_muenchen_s.webp"
+image: "/images/alter_suedfriedhof_muenchen.webp"
 imageAlt: "Alter Südfriedhof in München im Herbst"
 seoTitle: "Alter Südfriedhof in München – Geschichte in Stille"
 ---

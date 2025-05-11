@@ -3,7 +3,7 @@ id: 2
 title: "Viktualienmarkt – die kulinarische Seele Münchens"
 seoTitle: "Viktualienmarkt in München – Das kulinarische Herz der Stadt"
 seoDescription: "Erkunden Sie den Viktualienmarkt in München, ein wahres Paradies für Feinschmecker. Entdecken Sie frische lokale Produkte, bayerische Spezialitäten und das einzigartige Flair dieses historischen Marktes."
-image: "/images/viktualienmarkt_s.webp"
+image: "/images/viktualienmarkt_muenchen.webp"
 imageAlt: "Viktualienmarkt – die kulinarische Seele Münchens"
 shortTitle: "Viktualienmarkt"
 ---
