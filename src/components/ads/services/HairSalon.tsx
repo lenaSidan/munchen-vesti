@@ -1,7 +1,6 @@
-import React from "react";
-import Image from "next/image";
 import styles from "@/components/ads/services/hairSalon.module.css";
 import useTranslation from "@/hooks/useTranslation";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function HairSalonAd() {
@@ -29,8 +28,8 @@ export default function HairSalonAd() {
                 src="/images/hairSalon.webp"
                 alt={t("hair_salon.title")}
                 className={styles.adsImage}
-                width={400}
-                height={200}
+                width={500}
+                height={350}
                 sizes="(max-width: 768px) 100vw, 400px"
               />
             </div>
@@ -48,27 +47,31 @@ export default function HairSalonAd() {
               </div>
               <div className={styles.linkBox}>
                 {t("hair_salon.web_text")}{" "}
-                <Link
-                  className={styles.linkBoxHref}
-                  href={t("hair_salon.web_link")}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  hairteammuenchen.de
-                </Link>
-                <Link
-                  className={styles.linkBoxHref}
-                  href={t("hair_salon.link")}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t("hair_salon.contactInst")}
-                </Link>
-                <div className={styles.linkBox}>
-                  {t("hair_salon.contact_text")}{" "}
-                  <Link className={styles.linkBoxHref2} href="tel:089774719">
-                    089/77 47 19
+                <div className={styles.linkBoxContent}>
+                  <Link
+                    className={styles.linkBoxHref}
+                    href={t("hair_salon.web_link")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    hairteammuenchen.de
                   </Link>
+                  <Link
+                    className={styles.linkBoxHref}
+                    href={t("hair_salon.link")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t("hair_salon.contactInst")}
+                  </Link>
+                </div>
+                <div className={styles.linkBoxContent}>
+                 
+                    {t("hair_salon.contact_text")}{" "}
+                    <Link className={styles.linkBoxHref2} href="tel:089774719">
+                      089/77 47 19
+                    </Link>
+                  
                 </div>
               </div>
             </div>

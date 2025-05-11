@@ -52,7 +52,7 @@
 .title {
   font-size: 1.2rem;
   font-weight: 500;
-  font-family:  var(--font-body);
+  font-family: var(--font-body);
   color: var(--heading-color);
   text-align: center;
   text-align: center;
@@ -70,7 +70,7 @@
   margin: 10px 0;
 }
 .description1 {
-  font-family:  var(--font-body);
+  font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 500;
   text-align: center;
@@ -87,12 +87,12 @@
   hyphens: auto;
   margin: 0;
   padding-top: 10px;
-  font-family:  var(--font-body);
+  font-family: var(--font-body);
 }
 
 .description3 {
   font-size: 1.1rem;
-  font-family:  var(--font-body);
+  font-family: var(--font-body);
   margin: 0;
 }
 .highlight {
@@ -116,9 +116,11 @@
   color: var(--heading-color);
   line-height: 1.2;
   font-weight: 500;
-  
+
   font-size: 1.2rem;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+  transition:
+    color 0.3s ease,
+    text-decoration 0.3s ease;
 }
 
 .linkBox {
@@ -131,7 +133,11 @@
   text-align: center;
 }
 
-
+.linkBoxContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .decorativeLine {
   position: relative;
   width: 100%;
@@ -182,15 +188,22 @@
   font-size: 1.2rem;
   font-weight: bold;
   color: var(--border-color);
-  transition: font-size 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
+  transition:
+    font-size 0.3s ease,
+    color 0.3s ease,
+    text-decoration 0.3s ease;
   margin: 0;
- display: flex;
- flex-direction: column;
- align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
 }
 .linkBoxHref:hover {
   text-decoration: underline;
   color: var(--heading-color);
+}
+.linkBoxHref2 {
+  margin-left: 10px;
 }
 @media (max-width: 768px) {
   .adsBox {
@@ -219,15 +232,20 @@
   }
   .contact {
     margin-top: 10px;
-    font-size:0.95rem;
+    font-size: 0.95rem;
     font-style: italic;
   }
   .linkBox {
-    font-size:0.9rem;
+    font-size: 0.9rem;
     display: flex;
     flex-direction: column;
   }
   .linkBoxHref {
     font-size: 1rem;
+    margin: 0;
+  }
+
+  .linkBoxContent {
+    flex-direction: column;
   }
 }
