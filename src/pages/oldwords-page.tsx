@@ -1,3 +1,5 @@
+import Seo from "@/components/Seo";
+import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/OldWordsPage.module.css";
 import fs from "fs/promises";
 import matter from "gray-matter";
@@ -22,32 +24,37 @@ interface Props {
 
 export default function OldWordsPage({ words }: Props) {
   const { locale } = useRouter();
+  const t = useTranslation();
 
   return (
-    <div className={styles.wrapper}>
-      <h1 className={styles.heading}>
-        {locale === "de" ? "Vergessene Wörter" : "Забытые немецкие слова"}
-      </h1>
-      <div className={styles.grid}>
-        {words.map((word, idx) => (
-          <div key={idx} className={styles.card}>
-            <div className={styles.wordRow}>
-              <span className={styles.word}>{word.word}</span>
-              <span className={styles.gender}>
-                ({word.type}, {word.gender})
-              </span>
-            </div>
-            <p className={styles.translation}>{word.translation}</p>
+    <>
+      <Seo title={t("meta.oldWords_title")} description={t("meta.oldWords_description")} />
+      <h1 className={styles.visuallyHidden}>{t("meta.oldWordsAll_title")}</h1>
+      <div className={styles.wrapper}>
+        <h1 className={styles.heading}>
+          {locale === "de" ? "Vergessene Wörter" : "Забытые немецкие слова"}
+        </h1>
+        <div className={styles.grid}>
+          {words.map((word, idx) => (
+            <div key={idx} className={styles.card}>
+              <div className={styles.wordRow}>
+                <span className={styles.word}>{word.word}</span>
+                <span className={styles.gender}>
+                  ({word.type}, {word.gender})
+                </span>
+              </div>
+              <p className={styles.translation}>{word.translation}</p>
 
-            <p className={styles.explanation}>
-              {locale === "de" ? word.explanation_de : word.explanation_ru}
-            </p>
-            <p className={styles.origin}>{locale === "de" ? word.origin_de : word.origin_ru}</p>
-            <blockquote className={styles.quote}>{word.quote}</blockquote>
-          </div>
-        ))}
+              <p className={styles.explanation}>
+                {locale === "de" ? word.explanation_de : word.explanation_ru}
+              </p>
+              <p className={styles.origin}>{locale === "de" ? word.origin_de : word.origin_ru}</p>
+              <blockquote className={styles.quote}>{word.quote}</blockquote>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
