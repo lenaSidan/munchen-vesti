@@ -6,11 +6,12 @@
     "view_all_articles": "Alle Events anzeigen",
     "edition_date": "Ausgabe vom {{month}} {{year}}",
     "published_fixed": "Eine Informationszeitung, die das Leben der russischsprachigen Gemeinschaft in München widerspiegelt.",
-    "page_title": "München – Veranstaltungen, Konzerte, Ausstellungen, Märkte, Festivals, Events für Kinder und Erwachsene, russischsprachiger Veranstaltungskalender, nützliche Anzeigen und interessante Orte in Deutschland München"
+    "page_title": "München – Veranstaltungskalender auf Russisch: Konzerte, Ausstellungen, Märkte, Festivals und Events für Kinder und Erwachsene"
+
   },
   "seo": {
-    "index_title": "München: Veranstaltungen, Ausstellungen, Konzerte und Anzeigen auf Russisch",
-    "index_description": "Aktuelle Events und Anzeigen in München: Ausstellungen, Märkte, Konzerte, kulturelle Veranstaltungen und hilfreiche Infos auf Russisch – heute und am Wochenende."
+    "index_title": "Veranstaltungskalender München – Konzerte, Ausstellungen, Events auf Russisch",
+    "index_description": "Veranstaltungskalender für München auf Russisch: aktuelle Events, Konzerte, Märkte, Ausstellungen und Tipps für die russischsprachige Community – heute und am Wochenende."
   },
   "weather": {
     "title": "Wetter in München",

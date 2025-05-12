@@ -46,6 +46,7 @@ export default function Event({ event, locale, archived }: EventProps) {
     description: event.seoDescription || "",
     date: event.date || "",
     endDate: event.endDate,
+    time: event.time || "",
     image: event.image || "/default-og-image.png",
     ort: event.ort || "München",
   });
