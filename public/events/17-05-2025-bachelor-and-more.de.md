@@ -1,7 +1,6 @@
 ---
 title: "Bachelor AND MORE 2025 in München: Wie man das passende Bachelor-Studium findet"
 date: "2025-05-17"
-endDate: "2025-05-17"
 time: "17. Mai 2025, von 9:30 bis 16:00 Uhr"
 ort: "MTC world of fashion, Haus 1, Taunusstraße 45, 80807 München"
 link: "[Offizielle Website](https://www.bachelormessen.de/)"
