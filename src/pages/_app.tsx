@@ -61,7 +61,7 @@ export default function App({ Component, pageProps }: AppProps) {
         .then((data) => {
           const myIP = "82.135.81.11";
           const isInternal = data.ip === myIP;
-  
+
           if (isInternal) {
             // Задаём traffic_type как user_property
             window.gtag?.("set", {
@@ -70,7 +70,7 @@ export default function App({ Component, pageProps }: AppProps) {
               },
             });
           }
-  
+
           // Конфигурация страницы
           window.gtag?.("config", "G-BRM8FPV3SS", {
             page_path: url,
@@ -83,13 +83,13 @@ export default function App({ Component, pageProps }: AppProps) {
           });
         });
     };
-  
+
     router.events.on("routeChangeComplete", handleRouteChange);
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
-  
+
   return (
     <div className={merriweather.className}>
       <Head>
@@ -128,6 +128,24 @@ export default function App({ Component, pageProps }: AppProps) {
             });
           });
       })();
+    `,
+        }}
+      />
+      <Script
+        id="send-traffic-type"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+      fetch('https://api.ipify.org?format=json')
+        .then(res => res.json())
+        .then(data => {
+          const myIP = '82.135.81.11';
+          const isInternal = data.ip === myIP;
+          window.gtag('event', 'page_view', {
+            page_path: window.location.pathname,
+            traffic_type: isInternal ? 'internal' : 'external'
+          });
+        });
     `,
         }}
       />
