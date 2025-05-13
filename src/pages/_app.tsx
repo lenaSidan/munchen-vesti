@@ -23,20 +23,20 @@ export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const checkForUpdate = async () => {
       try {
-        const res = await fetch('/version.txt', { cache: 'no-store' });
+        const res = await fetch("/version.txt", { cache: "no-store" });
         const latest = await res.text();
-        const current = localStorage.getItem('siteVersion');
+        const current = localStorage.getItem("siteVersion");
         if (current && latest !== current) {
           console.log(
-            '%c 💡 Обнаружена новая версия сайта. Выполняется автообновление...',
-            'color: green; font-weight: bold;'
+            "%c 💡 Обнаружена новая версия сайта. Выполняется автообновление...",
+            "color: green; font-weight: bold;"
           );
           window.location.reload();
         }
-        localStorage.setItem('siteVersion', latest);
+        localStorage.setItem("siteVersion", latest);
         setHasVersionCheckRun(true);
       } catch (e) {
-        console.error('Ошибка проверки версии сайта', e);
+        console.error("Ошибка проверки версии сайта", e);
       }
     };
 
@@ -56,9 +56,21 @@ export default function App({ Component, pageProps }: AppProps) {
   // Google Analytics page_view
   useEffect(() => {
     const handleRouteChange = (url: string) => {
-      window.gtag?.("config", "G-BRM8FPV3SS", {
-        page_path: url,
-      });
+      fetch("https://api.ipify.org?format=json")
+        .then((res) => res.json())
+        .then((data) => {
+          const myIP = "82.135.81.11";
+          const isInternal = data.ip === myIP;
+          window.gtag?.("config", "G-BRM8FPV3SS", {
+            page_path: url,
+            ...(isInternal && { traffic_type: "internal" }),
+          });
+        })
+        .catch(() => {
+          window.gtag?.("config", "G-BRM8FPV3SS", {
+            page_path: url,
+          });
+        });
     };
     router.events.on("routeChangeComplete", handleRouteChange);
     return () => {
@@ -82,13 +94,29 @@ export default function App({ Component, pageProps }: AppProps) {
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-BRM8FPV3SS', {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      (function() {
+        fetch('https://api.ipify.org?format=json')
+          .then(res => res.json())
+          .then(data => {
+            const myIP = '82.135.81.11';
+            const isInternal = data.ip === myIP;
+            window.gtag('config', 'G-BRM8FPV3SS', {
+              page_path: window.location.pathname,
+              ...(isInternal ? { traffic_type: 'internal' } : {})
+            });
+          })
+          .catch(err => {
+            console.error('IP check failed:', err);
+            window.gtag('config', 'G-BRM8FPV3SS', {
               page_path: window.location.pathname,
             });
-          `,
+          });
+      })();
+    `,
         }}
       />
 
