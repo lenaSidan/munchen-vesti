@@ -61,23 +61,35 @@ export default function App({ Component, pageProps }: AppProps) {
         .then((data) => {
           const myIP = "82.135.81.11";
           const isInternal = data.ip === myIP;
+  
+          if (isInternal) {
+            // Задаём traffic_type как user_property
+            window.gtag?.("set", {
+              user_properties: {
+                traffic_type: "internal",
+              },
+            });
+          }
+  
+          // Конфигурация страницы
           window.gtag?.("config", "G-BRM8FPV3SS", {
             page_path: url,
-            ...(isInternal && { traffic_type: "internal" }),
           });
         })
         .catch(() => {
+          // На всякий случай — fallback
           window.gtag?.("config", "G-BRM8FPV3SS", {
             page_path: url,
           });
         });
     };
+  
     router.events.on("routeChangeComplete", handleRouteChange);
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
-
+  
   return (
     <div className={merriweather.className}>
       <Head>
