@@ -10,7 +10,35 @@
   },
   "seo": {
     "index_title": "Veranstaltungskalender München – Konzerte, Ausstellungen, Events auf Russisch",
-    "index_description": "Veranstaltungskalender für München auf Russisch: aktuelle Events, Konzerte, Märkte, Ausstellungen und Tipps für die russischsprachige Community – heute und am Wochenende."
+    "index_description": "Veranstaltungskalender für München auf Russisch: aktuelle Events, Konzerte, Märkte, Ausstellungen und Tipps für die russischsprachige Community – heute und am Wochenende.",
+    "veranstaltungen_muenchen_title": "Veranstaltungen in München 2025 – Eventkalender auf Russisch",
+    "veranstaltungen_muenchen_description": "Was ist los in München? Konzerte, Märkte, Feste und Events für die russischsprachige Community. Unser Veranstaltungskalender zeigt aktuelle Tipps für Mai und Juni 2025.",
+    "article_muenchen_title": "München entdecken – Sehenswürdigkeiten und versteckte Orte",
+    "article_muenchen_description": "Entdecken Sie Münchens besondere Plätze: Parks, Straßenzüge, kulturelle Highlights und unbekannte Ecken. Ein inspirierender Stadtführer für Besucher und Einheimische.",
+    "nachrichten_muenchen_title": "Nachrichten aus München – aktuelle Meldungen & Infos",
+    "nachrichten_muenchen_description": "Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten aus München: Stadtleben, Änderungen, Veranstaltungen und Hinweise für die russischsprachige Community."
+  },
+  "newsSEO": {
+    "h1": "Nachrichten aus München – aktuelle Ereignisse und Stadtleben",
+    "meta": "München, 2025",
+    "paragraph1": "Erfahren Sie, was in München aktuell passiert. Wir berichten über lokale Nachrichten, Hinweise und interessante Ereignisse.",
+    "paragraph2": "Im Nachrichtenbereich finden Sie Informationen über Verkehr, Bildung, neue Gesetze, Kulturveranstaltungen und mehr.",
+    "paragraph3": "Unsere Beiträge sind kompakt, verständlich und speziell für die russischsprachige Community verfasst.",
+    "link_text": "Zu den Nachrichten"
+  },
+  "articleSEO": {
+    "h1": "Sehenswürdigkeiten und besondere Orte in München",
+    "paragraph1": "In diesem Bereich stellen wir schöne, überraschende und stimmungsvolle Orte in München vor. Nicht nur klassische Sehenswürdigkeiten, sondern auch Ecken, die vor allem Einheimische schätzen.",
+    "paragraph2": "Wir berichten über historische Straßen, grüne Parks, charmante Plätze und architektonische Details, die München einzigartig machen.",
+    "paragraph3": "Lassen Sie sich inspirieren, entdecken Sie Neues und teilen Sie die Artikel mit anderen. München steckt voller Orte, die man gesehen haben muss.",
+    "link_text": "Zu den Artikeln über München"
+  },
+  "eventSEO": {
+    "h1": "Veranstaltungen in München 2025 – Der russischsprachige Eventkalender",
+    "paragraph1": "Was ist los in München? In unserem Veranstaltungskalender finden Sie aktuelle Events, Konzerte, Märkte, Festivals und Familienfeste – alles auf Russisch. Besonders gefragt: Veranstaltungen im Mai und Juni 2025.",
+    "paragraph2": "Unsere Übersicht wird regelmäßig aktualisiert. Von Stadtteilfesten in Schwabing über Theatervorstellungen für Kinder bis zu klassischen Konzerten im Gasteig – wir sammeln alle interessanten Events.",
+    "paragraph3": "Der Kalender ist kostenlos und unabhängig. Sie können gerne Ihre eigenen Veranstaltungen vorschlagen oder weiterempfehlen.",
+    "link_text": "Zu den aktuellen Veranstaltungen"
   },
   "weather": {
     "title": "Wetter in München",
