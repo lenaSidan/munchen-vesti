@@ -65,7 +65,7 @@
   font-size: 1.1rem;
   margin-top: 5px;
   color: var(--heading-color);
-  font-size: 1ю1rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 @media (max-width: 768px) {
@@ -75,7 +75,9 @@
   }
 
   .grid {
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
   }
 
   .card {
