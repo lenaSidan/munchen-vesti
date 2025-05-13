@@ -1,6 +1,4 @@
-
 const fs = require("fs");
-
 const path = require("path");
 
 const baseUrl = "https://munchen-vesti.de";
@@ -8,7 +6,11 @@ const pagesDir = path.join(process.cwd(), "src/pages");
 
 const excludeFiles = ["_app.tsx", "_document.tsx", "_error.tsx", "404.tsx", "500.tsx"];
 const excludeDirs = ["api", "components"];
-
+const excludeCustomPaths = [
+  "article-muenchen",
+  "nachrichten-muenchen",
+  "veranstaltungen-muenchen",
+];
 
 // Рекурсивный обход всех файлов в папке pages
 function walkDir(dir, fileList = []) {
@@ -24,9 +26,9 @@ function walkDir(dir, fileList = []) {
     } else if (
       file.endsWith(".tsx") &&
       !excludeFiles.includes(file) &&
-      !file.startsWith("[") // не добавляем динамические маршруты
+      !file.startsWith("[")
     ) {
-      const relativePath = path.relative(pagesDir, filePath).replace(/\\/g, "/");
+      const relativePath = path.relative(pagesDir, filePath).replace(/\\/g, "/").trim();
       fileList.push(relativePath);
     }
   }
@@ -37,7 +39,13 @@ function walkDir(dir, fileList = []) {
 function getStaticPages() {
   const allFiles = walkDir(pagesDir);
 
-  return allFiles.map((relativePath) => {
+  const filteredFiles = allFiles.filter((relativePath) => {
+    return !excludeCustomPaths.some((excluded) =>
+      relativePath.replace(".tsx", "").endsWith(excluded)
+    );
+  });
+
+  return filteredFiles.map((relativePath) => {
     const pagePath = relativePath.replace(".tsx", "").replace(/\/index$/, "");
     const urlPath = pagePath === "index" ? "" : pagePath;
     return `<url><loc>${baseUrl}/${urlPath}</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>`;
@@ -49,9 +57,10 @@ function getMarkdownUrls(folder, prefix, checkEventDates = false, priority = "0.
   const dirPath = path.join(process.cwd(), "public", folder);
   if (!fs.existsSync(dirPath)) return [];
 
-  const files = fs.readdirSync(dirPath, { withFileTypes: true })
-  .filter((entry) => entry.isFile() && entry.name.endsWith(".md"))
-  .map((entry) => entry.name);
+  const files = fs
+    .readdirSync(dirPath, { withFileTypes: true })
+    .filter((entry) => entry.isFile() && entry.name.endsWith(".md"))
+    .map((entry) => entry.name);
 
   return files
     .map((file) => {
@@ -78,7 +87,13 @@ function getMarkdownUrls(folder, prefix, checkEventDates = false, priority = "0.
 // Генерация sitemap.xml
 function generateSitemap() {
   const staticUrls = [
-    `<url><loc>${baseUrl}</loc><changefreq>daily</changefreq><priority>1.0</priority></url>`
+    `<url><loc>${baseUrl}</loc><changefreq>daily</changefreq><priority>1.0</priority></url>`,
+    `<url><loc>${baseUrl}/ru/article-muenchen</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>`,
+    `<url><loc>${baseUrl}/de/article-muenchen</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>`,
+    `<url><loc>${baseUrl}/ru/nachrichten-muenchen</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`,
+    `<url><loc>${baseUrl}/de/nachrichten-muenchen</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`,
+    `<url><loc>${baseUrl}/ru/veranstaltungen-muenchen</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>`,
+    `<url><loc>${baseUrl}/de/veranstaltungen-muenchen</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>`,
   ];
 
   const dynamicPages = getStaticPages();
@@ -96,3 +111,4 @@ ${[...staticUrls, ...dynamicPages, ...newsUrls, ...eventsUrls, ...articlesUrls].
 }
 
 generateSitemap();
+

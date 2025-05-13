@@ -1,4 +1,6 @@
+/public/images/hair_salon.webp
 /public/images/paper-texture.jpg
+/public/images/pure_beauty_salon.webp
 /public/images/put-home.webp
 /public/images/scroll-up-dark.png
 /public/images/scroll-up-light.png
