@@ -7,6 +7,7 @@ const postcards = [
   "/postcards/thumb/hofbrauhaus.webp?v=5",
   "/postcards/thumb/ostpolitik_brandt.webp?v=5",
   "/postcards/thumb/munich_secession.webp?v=4",
+  "/postcards/thumb/russian_colony_munich.webp?v=1",
 ];
 
 function getRandomPostcards(count: number) {
