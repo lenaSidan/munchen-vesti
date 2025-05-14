@@ -1,6 +1,6 @@
 ---
 title: "Russische Kolonie im München des 19. Jahrhunderts: Von Kriegspinseln bis zu philosophischen Debatten"
-image: "/images/russian_colony_munich.webp"
+image: "/postcards/full/russian_colony_munich.webp"
 imageAlt: "Russische Kolonie im München des 19. Jahrhunderts"
 seoTitle: "Russische Kolonie im München des 19. Jahrhunderts — Künstler, Philosophen und Gedankenfreiheit"
 seoDescription: "Die Geschichte der russischen intellektuellen Szene im München des 19. Jahrhunderts: Vereschtschagin, Tolstois Ideen und Solowjows Philosophie im kulturellen Leben Bayerns."

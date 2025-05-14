@@ -1,12 +1,12 @@
-import Link from "next/link";
+import Seo from "@/components/Seo";
+import useTranslation from "@/hooks/useTranslation";
+import styles from "@/styles/PostcardsPage.module.css";
+import fs from "fs";
+import matter from "gray-matter";
 import { GetStaticProps } from "next";
 import Image from "next/image";
-import fs from "fs";
+import Link from "next/link";
 import path from "path";
-import matter from "gray-matter";
-import useTranslation from "@/hooks/useTranslation";
-import Seo from "@/components/Seo";
-import styles from "@/styles/PostcardsPage.module.css";
 
 interface Postcard {
   slug: string;
@@ -18,15 +18,14 @@ interface PostcardsPageProps {
   postcards: Postcard[];
 }
 
-
 function getImageWithVersion(imagePath: string) {
-  const fullPath = path.join(process.cwd(), "public", imagePath);
+  const fullPath = path.join(process.cwd(), "public", imagePath.replace(/^\/+/, ""));
   if (fs.existsSync(fullPath)) {
     const stats = fs.statSync(fullPath);
     const timestamp = stats.mtime.getTime();
     return `${imagePath}?v=${timestamp}`;
   }
-  return imagePath; 
+  return imagePath;
 }
 
 export default function PostcardsPage({ postcards }: PostcardsPageProps) {
@@ -44,11 +43,11 @@ export default function PostcardsPage({ postcards }: PostcardsPageProps) {
               <Image
                 src={postcard.image}
                 alt={postcard.title}
-                width={300}
-                height={200}
+                width={550}
+                height={334}
                 className={styles.image}
               />
-             <div className={styles.cardTitle}>{postcard.title}</div> 
+              <div className={styles.cardTitle}>{postcard.title}</div>
             </Link>
           ))}
         </div>
@@ -68,7 +67,7 @@ export const getStaticProps: GetStaticProps<PostcardsPageProps> = async ({ local
     const { data } = matter(fileContent);
 
     // Генерация пути к картинке с автоматической версией
-    const imagePath = `/postcards/full/${slug}.webp`;
+    const imagePath = data.image || `/postcards/full/${slug}.webp`;
     const versionedImage = getImageWithVersion(imagePath);
 
     return {

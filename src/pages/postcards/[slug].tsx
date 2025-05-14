@@ -30,7 +30,7 @@ interface PostcardProps {
 
 // Функция генерации версии для картинки
 function getImageWithVersion(imagePath: string) {
-  const fullPath = path.join(process.cwd(), "public", imagePath);
+  const fullPath = path.join(process.cwd(), "public", imagePath.replace(/^\/+/, ""));
   if (fs.existsSync(fullPath)) {
     const stats = fs.statSync(fullPath);
     const timestamp = stats.mtime.getTime();
@@ -125,7 +125,7 @@ export const getStaticProps: GetStaticProps<PostcardProps> = async ({ params, lo
     .process(content);
 
   // Генерация версии для картинки
-  const imagePath = `/postcards/full/${params.slug}.webp`;
+  const imagePath = data.image || `/postcards/full/${params.slug}.webp`;
   const versionedImage = getImageWithVersion(imagePath);
 
   return {
