@@ -1,6 +1,6 @@
 ---
 title: "Die Münchner Secession: Der Aufstand der Künstler gegen den Akademismus"
-image: "/images/munich_secession.webp"
+image: "/postcards/full/munich_secession.webp"
 imageAlt: "Münchner Secession, Ausstellung im 19. Jahrhundert"
 seoTitle: "Münchner Secession: Wie Künstler die deutsche Kunst veränderten"
 seoDescription: "Die Geschichte der Münchner Secession: Abkehr von der akademischen Kunst, Freiheit des Ausdrucks und Einfluss auf die europäische Kultur."
