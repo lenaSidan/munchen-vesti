@@ -45,7 +45,6 @@
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 2rem;
 }
-
 .card {
   display: flex;
   flex-direction: column;
