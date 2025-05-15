@@ -95,7 +95,9 @@
   },
   "postcards": {
     "title": "Postkarten aus der Vergangenheit",
-    "indexTitle": "Chronik Münchener"
+    "indexTitle": "Chronik Münchener",
+    "subtitle": "München – eine Stadt, in der die Vergangenheit lebendig wird.",
+    "description": "In ihren Straßen hallen die Schritte der Geschichte wider, in den Gassen flüstern die Mauern, und auf den Plätzen klingen die Stimmen vergangener Zeiten nach. Jeder Stein kennt Namen, die in keinem Reiseführer stehen, und jeder Schatten könnte seine eigene Geschichte erzählen. Diese Postkarten stammen nicht aus einem Souvenirladen, sondern aus der Vorstellung, aus den Archiven der Erinnerung, aus der Luft dieser Stadt. Sie wurden von mir erdacht und gezeichnet, um euch das nahezubringen, was einst in München geschah: seltsame Begegnungen, vergessene Feste, abendliche Gespräche und Schicksale, eingewebt in das Gewebe der Zeit."
   },
   "newsTitle": "Aktuelles",
   "info": "Wir empfehlen",
