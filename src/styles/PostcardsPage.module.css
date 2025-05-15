@@ -20,16 +20,31 @@
 
 .title {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   color: var(--heading-color2);
 }
-
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+}
+.descriptionText {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  text-align: center;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 2rem;
 }
-
 
 .card {
   display: flex;
@@ -91,5 +106,15 @@
     font-size: 1.2rem;
     margin-bottom: 10px;
   }
-
+  .intro {
+    padding: 0 10px;
+  }
+  .subtitle {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+  .descriptionText {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
 }

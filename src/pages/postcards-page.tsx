@@ -37,6 +37,11 @@ export default function PostcardsPage({ postcards }: PostcardsPageProps) {
       <h1 className={styles.visuallyHidden}>{t("meta.postcardsAll_title")}</h1>
       <div className={styles.container}>
         <h2 className={styles.title}>{t("postcards.title")}</h2>
+        <div className={styles.intro}>
+          <p className={styles.subtitle}>{t("postcards.subtitle")}</p>
+          <p className={styles.descriptionText}>{t("postcards.description")}</p>
+        </div>
+
         <div className={styles.grid}>
           {postcards.map((postcard) => (
             <Link key={postcard.slug} href={`/postcards/${postcard.slug}`} className={styles.card}>
