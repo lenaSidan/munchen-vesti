@@ -6,13 +6,18 @@ import styles from "@/styles/Header.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Header() {
   const t = useTranslation();
   const router = useRouter();
-  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+
+  const [isAdsSubmenuOpen, setIsAdsSubmenuOpen] = useState(false);
+  const [isWordsSubmenuOpen, setIsWordsSubmenuOpen] = useState(false);
+
+  const adsRef = useRef<HTMLDivElement>(null);
+  const wordsRef = useRef<HTMLDivElement>(null);
 
   const [foundCount, setFoundCount] = useState(0);
   const [allFound, setAllFound] = useState(false);
@@ -47,15 +52,55 @@ export default function Header() {
     return () => window.removeEventListener("easteregg-found", checkEggs);
   }, []);
 
-  const toggleSubmenu = () => setIsSubmenuOpen((prev) => !prev);
-  const closeSubmenu = () => setIsSubmenuOpen(false);
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as Node;
+
+      if (
+        adsRef.current &&
+        !adsRef.current.contains(target) &&
+        !document.getElementById("adsButton")?.contains(target)
+      ) {
+        setIsAdsSubmenuOpen(false);
+      }
+
+      if (
+        wordsRef.current &&
+        !wordsRef.current.contains(target) &&
+        !document.getElementById("wordsButton")?.contains(target)
+      ) {
+        setIsWordsSubmenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const toggleAdsSubmenu = () => {
+    setIsAdsSubmenuOpen((prev) => !prev);
+    setIsWordsSubmenuOpen(false);
+  };
+
+  const toggleWordsSubmenu = () => {
+    setIsWordsSubmenuOpen((prev) => !prev);
+    setIsAdsSubmenuOpen(false);
+  };
 
   useEffect(() => {
-    closeSubmenu();
+    setIsAdsSubmenuOpen(false);
+    setIsWordsSubmenuOpen(false);
   }, [router.pathname]);
 
   const adsRoutes = ["/services-page", "/gastronomy-page", "/education-page", "/other-page"];
+  const wordsRoutes = ["/oldwords-page", "/bavarian-words"];
+
   const isAdsActive = adsRoutes.includes(router.pathname);
+  const isWordsActive = wordsRoutes.includes(router.pathname);
+  const isAnySubmenuOpen = isAdsSubmenuOpen || isWordsSubmenuOpen;
+
+  const isAdsHighlighted = isAdsSubmenuOpen || (!isAnySubmenuOpen && isAdsActive);
+  const isWordsHighlighted = isWordsSubmenuOpen || (!isAnySubmenuOpen && isWordsActive);
 
   const monthName = new Date()
     .toLocaleString(router.locale || "ru", { month: "long" })
@@ -102,67 +147,95 @@ export default function Header() {
         <nav className={styles.nav}>
           <Link
             href="/articles-page"
-            className={`${styles.navLink} ${router.pathname === "/articles-page" ? styles.active : ""}`}
-            onClick={closeSubmenu}
+            className={`${styles.navLink} ${
+              !isAdsSubmenuOpen && !isWordsSubmenuOpen && router.pathname === "/articles-page"
+                ? styles.active
+                : ""
+            }`}
           >
             {t("menu.articles")}
           </Link>
 
           <Link
             href="/events-page"
-            className={`${styles.navLink} ${router.pathname === "/events-page" ? styles.active : ""}`}
-            onClick={closeSubmenu}
+            className={`${styles.navLink} ${
+              !isAdsSubmenuOpen && !isWordsSubmenuOpen && router.pathname === "/events-page"
+                ? styles.active
+                : ""
+            }`}
           >
             {t("menu.announcements")}
           </Link>
 
           <Link
             href="/news-page"
-            className={`${styles.navLink} ${router.pathname === "/news-page" ? styles.active : ""}`}
-            onClick={closeSubmenu}
+            className={`${styles.navLink} ${
+              !isAdsSubmenuOpen && !isWordsSubmenuOpen && router.pathname === "/news-page"
+                ? styles.active
+                : ""
+            }`}
           >
             {t("menu.news")}
           </Link>
 
           <div className={styles.dropdownWrapper}>
             <button
+              id="adsButton"
               type="button"
-              onClick={toggleSubmenu}
-              className={`${styles.navLink} ${isAdsActive ? styles.active : ""}`}
+              onClick={toggleAdsSubmenu}
+              className={`${styles.navLink} ${isAdsHighlighted ? styles.active : ""}`}
             >
               {t("menu.ads").toUpperCase()}
             </button>
 
-            {isSubmenuOpen && (
-              <div className={styles.submenu}>
-                <Link href="/services-page" className={styles.submenuLink} onClick={closeSubmenu}>
+            {isAdsSubmenuOpen && (
+              <div className={styles.submenu} ref={adsRef}>
+                <Link href="/services-page" className={styles.submenuLink}>
                   {t("menu.ads_services")}
                 </Link>
-                <Link href="/gastronomy-page" className={styles.submenuLink} onClick={closeSubmenu}>
+                <Link href="/gastronomy-page" className={styles.submenuLink}>
                   {t("menu.ads_food")}
                 </Link>
-                <Link href="/education-page" className={styles.submenuLink} onClick={closeSubmenu}>
+                <Link href="/education-page" className={styles.submenuLink}>
                   {t("menu.ads_studios")}
                 </Link>
-                <Link href="/other-page" className={styles.submenuLink} onClick={closeSubmenu}>
+                <Link href="/other-page" className={styles.submenuLink}>
                   {t("menu.ads_other")}
                 </Link>
               </div>
             )}
           </div>
-          <Link
-            href="/oldwords-page"
-            title={t("menu.words_full")}
-            className={`${styles.navLink} ${router.pathname === "/oldwords-page" ? styles.active : ""}`}
-            onClick={closeSubmenu}
-          >
-            {t("menu.words").toUpperCase()}
-          </Link>
+
+          <div className={styles.dropdownWrapper}>
+            <button
+              id="wordsButton"
+              type="button"
+              onClick={toggleWordsSubmenu}
+              className={`${styles.navLink} ${isWordsHighlighted ? styles.active : ""}`}
+            >
+              {t("menu.words").toUpperCase()}
+            </button>
+
+            {isWordsSubmenuOpen && (
+              <div className={styles.submenuWords} ref={wordsRef}>
+                <Link href="/oldwords-page" className={styles.submenuLink}>
+                  {t("menu.old_words")}
+                </Link>
+                <Link href="/bavarian-words" className={styles.submenuLink}>
+                  {t("menu.bavarian_words")}
+                </Link>
+              </div>
+            )}
+          </div>
+
           <Link
             href="/postcards-page"
             title={t("menu.chronicles_full")}
-            className={`${styles.navLink} ${router.pathname === "/postcards-page" ? styles.active : ""}`}
-            onClick={closeSubmenu}
+            className={`${styles.navLink} ${
+              !isAdsSubmenuOpen && !isWordsSubmenuOpen && router.pathname === "/postcards-page"
+                ? styles.active
+                : ""
+            }`}
           >
             {t("menu.chronicles").toUpperCase()}
           </Link>
@@ -170,7 +243,11 @@ export default function Header() {
           {foundCount > 0 && !allFound && (
             <Link
               href="/collection"
-              className={`${styles.navLink} ${router.pathname === "/collection" ? styles.active : ""} ${styles.highlighted}`}
+              className={`${styles.navLink} ${
+                !isAdsSubmenuOpen && !isWordsSubmenuOpen && router.pathname === "/collection"
+                  ? styles.active
+                  : ""
+              } ${styles.highlighted}`}
             >
               {t("footer.collection")}
             </Link>

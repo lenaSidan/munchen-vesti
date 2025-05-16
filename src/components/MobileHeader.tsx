@@ -8,39 +8,73 @@ import { useEffect, useRef, useState } from "react";
 
 export default function MobileHeader() {
   const t = useTranslation();
-  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
-  const submenuRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
-  const handleSubmenuClick = () => {
-    if (isSubmenuOpen) {
-      closeSubmenu();
-    } else {
-      setIsSubmenuOpen(true);
-    }
+  const [isAdsSubmenuOpen, setIsAdsSubmenuOpen] = useState(false);
+  const [isWordsSubmenuOpen, setIsWordsSubmenuOpen] = useState(false);
+  const [foundCount, setFoundCount] = useState(0);
+  const [allFound, setAllFound] = useState(false);
+  const CURRENT_EGG_VERSION = "v3";
+
+  const adsSubmenuRef = useRef<HTMLDivElement>(null);
+  const wordsSubmenuRef = useRef<HTMLDivElement>(null);
+
+  const adsRoutes = ["/services-page", "/gastronomy-page", "/education-page", "/other-page"];
+  const isAdsActive = adsRoutes.includes(router.pathname);
+  const isWordsActive = ["/oldwords-page", "/bavarian-words"].includes(router.pathname);
+  const isAnySubmenuOpen = isAdsSubmenuOpen || isWordsSubmenuOpen;
+
+  const closeAllSubmenus = () => {
+    setIsAdsSubmenuOpen(false);
+    setIsWordsSubmenuOpen(false);
   };
 
-  const closeSubmenu = () => {
-    setIsSubmenuOpen(false);
+  const handleAdsClick = () => {
+    setIsAdsSubmenuOpen((prev) => !prev);
+    setIsWordsSubmenuOpen(false);
   };
-  const adsRoutes = ["/services-page", "/gastronomy-page", "/education-page", "/other-page"];
-  const isAdsActive = adsRoutes.some((route) => router.asPath.startsWith(route));
+
+  const handleWordsClick = () => {
+    setIsWordsSubmenuOpen((prev) => !prev);
+    setIsAdsSubmenuOpen(false);
+  };
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       const target = e.target as Node;
+
       if (
-        submenuRef.current &&
-        !submenuRef.current.contains(target) &&
-        !document.getElementById("adsMenuButton")?.contains(target)
+        !adsSubmenuRef.current?.contains(target) &&
+        !wordsSubmenuRef.current?.contains(target) &&
+        !document.getElementById("adsMenuButton")?.contains(target) &&
+        !document.getElementById("wordsMenuButton")?.contains(target)
       ) {
-        closeSubmenu();
+        closeAllSubmenus();
       }
     };
+
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    const checkEggs = () => {
+      if (typeof window === "undefined") return;
+
+      const keys = Object.keys(localStorage).filter(
+        (key) => key.startsWith("easteregg-") && !key.includes("reward") && !key.includes("-rare")
+      );
+      const count = keys.filter((key) => localStorage.getItem(key) === "true").length;
+      const rewardClaimed =
+        localStorage.getItem(`easteregg-reward-claimed-${CURRENT_EGG_VERSION}`) === "true";
+
+      setFoundCount(count);
+      setAllFound(rewardClaimed);
     };
+
+    checkEggs();
+    window.addEventListener("easteregg-found", checkEggs);
+    return () => window.removeEventListener("easteregg-found", checkEggs);
   }, []);
 
   return (
@@ -70,77 +104,100 @@ export default function MobileHeader() {
           <div className={styles.fadeRight} />
           <div className={styles.menuWrapper}>
             <div className={styles.menuMain}>
-              
               <Link
                 href="/articles-page"
-                className={`${styles.navLink} ${router.pathname === "/articles-page" ? styles.active : ""}`}
-                onClick={closeSubmenu}
+                className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/articles-page" ? styles.active : ""}`}
+                onClick={closeAllSubmenus}
               >
                 {t("menu.articles").toUpperCase()}
               </Link>
 
               <Link
                 href="/events-page"
-                className={`${styles.navLink} ${router.pathname === "/events-page" ? styles.active : ""}`}
-                onClick={closeSubmenu}
+                className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/events-page" ? styles.active : ""}`}
+                onClick={closeAllSubmenus}
               >
                 {t("menu.announcements").toUpperCase()}
               </Link>
+
               <Link
                 href="/news-page"
-                className={`${styles.navLink} ${router.pathname === "/news-page" ? styles.active : ""}`}
-                onClick={closeSubmenu}
+                className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/news-page" ? styles.active : ""}`}
+                onClick={closeAllSubmenus}
               >
                 {t("menu.news").toUpperCase()}
               </Link>
+
               <button
                 id="adsMenuButton"
                 type="button"
-                onClick={handleSubmenuClick}
-                className={`${styles.navLink} ${isAdsActive || isSubmenuOpen ? styles.active : ""}`}
+                onClick={handleAdsClick}
+                className={`${styles.navLink} ${isAdsSubmenuOpen || (!isAnySubmenuOpen && isAdsActive) ? styles.active : ""}`}
               >
                 {t("menu.ads").toUpperCase()}
               </button>
-              <Link
-                href="/oldwords-page"
-                title={t("menu.words_full")}
-                className={`${styles.navLink} ${router.pathname === "/oldwords-page" ? styles.active : ""}`}
-                onClick={closeSubmenu}
+
+              <button
+                id="wordsMenuButton"
+                type="button"
+                onClick={handleWordsClick}
+                className={`${styles.navLink} ${isWordsSubmenuOpen || (!isAnySubmenuOpen && isWordsActive) ? styles.active : ""}`}
               >
                 {t("menu.words").toUpperCase()}
-              </Link>
+              </button>
+
               <Link
                 href="/postcards-page"
                 title={t("menu.chronicles_full")}
-                className={`${styles.navLink} ${router.pathname === "/postcards-page" ? styles.active : ""}`}
-                onClick={closeSubmenu}
+                className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/postcards-page" ? styles.active : ""}`}
+                onClick={closeAllSubmenus}
               >
                 {t("menu.chronicles").toUpperCase()}
               </Link>
+
+              {foundCount > 0 && !allFound && (
+                <Link
+                  href="/collection"
+                  className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/collection" ? styles.active : ""} ${styles.highlighted}`}
+                  onClick={closeAllSubmenus}
+                >
+                  {t("footer.collection").toUpperCase()}
+                </Link>
+              )}
             </div>
           </div>
-          {isSubmenuOpen && (
-            <div className={styles.submenu} ref={submenuRef}>
-              <Link href="/services-page" className={styles.submenuLink} onClick={closeSubmenu}>
+
+          {isAdsSubmenuOpen && (
+            <div className={styles.submenu} ref={adsSubmenuRef}>
+              <Link href="/services-page" className={styles.submenuLink} onClick={closeAllSubmenus}>
                 {t("menu.ads_services")}
               </Link>
-              <Link href="/gastronomy-page" className={styles.submenuLink} onClick={closeSubmenu}>
+              <Link href="/gastronomy-page" className={styles.submenuLink} onClick={closeAllSubmenus}>
                 {t("menu.ads_food")}
               </Link>
-              <Link href="/education-page" className={styles.submenuLink} onClick={closeSubmenu}>
+              <Link href="/education-page" className={styles.submenuLink} onClick={closeAllSubmenus}>
                 {t("menu.ads_studios")}
               </Link>
-              <Link href="/other-page" className={styles.submenuLink} onClick={closeSubmenu}>
+              <Link href="/other-page" className={styles.submenuLink} onClick={closeAllSubmenus}>
                 {t("menu.ads_other")}
+              </Link>
+            </div>
+          )}
+
+          {isWordsSubmenuOpen && (
+            <div className={styles.submenu} ref={wordsSubmenuRef}>
+              <Link href="/oldwords-page" className={styles.submenuLink} onClick={closeAllSubmenus}>
+                {t("menu.old_words")}
+              </Link>
+              <Link href="/bavarian-words" className={styles.submenuLink} onClick={closeAllSubmenus}>
+                {t("menu.bavarian_words")}
               </Link>
             </div>
           )}
         </nav>
       </div>
-      <div className={styles.decorativeLine}>
-        {/* <span className={styles.left}>❧</span>
-        <span className={styles.right}>❧</span> */}
-      </div>
+
+      <div className={styles.decorativeLine} />
     </header>
   );
 }

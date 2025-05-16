@@ -136,7 +136,10 @@
     "postcardsAll_title": "Alle historischen Postkarten",
     "oldWords_title": "Vergessene deutsche Wörter – schöne und seltene Ausdrücke",
     "oldWords_description": "Entdecken Sie alte und seltene deutsche Wörter mit Übersetzungen und Beispielen. Erweitern Sie Ihren Wortschatz und lernen Sie die Sprache tiefer kennen.",
-    "oldWordsAll_title": "Alte vergessene deutsche Wörter"
+    "oldWordsAll_title": "Alte vergessene deutsche Wörter",
+    "bavarianWords_title": "Bairische Wörter – Münchener Zeitung",
+    "bavarianWords_description": "Bairische Ausdrücke mit russischer Übersetzung und Erklärung. Einblicke in den Dialekt Süddeutschlands.",
+    "bavarianWordsAll_title": "Wörterbuch der bairischen Begriffe"
   },
   "menu": {
     "articles": "Artikel",
@@ -144,6 +147,8 @@
     "news": "Aktuelles",
     "ads": "Anzeigen",
     "words": "Wörter",
+    "old_words": "Vergessene deutsche Wörter",
+    "bavarian_words": "Bairische Wörter",
     "chronicles": "Chronik",
     "words_full": "Vergessene deutsche Wörter",
     "chronicles_full": "Münchener Chronik",

@@ -3,7 +3,9 @@
   max-width: 1200px;
   margin: 0 auto;
   background-color: var(--alt-background);
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
 }
 .visuallyHidden {
   position: absolute;
@@ -25,18 +27,25 @@
   border-bottom: 2px solid var(--border-color);
   padding-bottom: 0.5rem;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
 .card {
-  background-color: var(--background);
-  border: 1px solid var(--border-color);
-  padding: 1rem;
+  background-color: var(--alt-background2);
+  border: 1px solid #ccc8b3;
+  padding: 1.2rem;
+  border-radius: 6px;
   font-family: var(--font-body);
-  line-height: 1.6;
-  border-radius: 4px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+  line-height: 1.7;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease;
 }
 .card:hover {
-  transform: translateY(-2px);
+  transform: scale(1.01);
 }
 
 .wordRow {
@@ -44,71 +53,70 @@
   align-items: baseline;
   gap: 0.4rem;
   flex-wrap: wrap;
-  margin-bottom: 0.25rem;
-  background-color: var(--alt-background-light);
+  margin-bottom: 0.5rem;
 }
 
 .word {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: bold;
-
-  font-family: var(--font-headings);
   color: var(--heading-color2);
-  text-decoration: underline;
-  margin-right: 10px;
+  font-family: var(--font-headings);
+  border-bottom: 1px dotted #8c6c3f;
 }
 
 .gender {
   font-size: 0.9rem;
   font-style: italic;
-  font-family: var(--font-body);
-  color: var(--heading-color2);
+  color: #5a4632;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
 .translation {
   font-style: italic;
-  color: var(--text-color);
-  margin-bottom: 20px;
+  color: var(--button-bg);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-
 .explanation {
-  color: var(--text-color);
+  
   font-size: 0.95rem;
-  font-family: monospace;
+  font-family: Georgia, serif;
+  margin-bottom: 0.5rem;
 }
 
 .origin {
   font-style: italic;
-  margin-top: 1rem;
-  font-size: 0.95rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: var(--text-color);
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+ 
 }
 
 .quote {
   margin-top: 0.75rem;
   padding-left: 1rem;
-  border-left: 2px solid var(--border-color);
-  color: var(--link-color);
-  font-size: 0.95rem;
+  border-left: 3px solid #b19771;
+  color: var(--button-bg);
   font-style: italic;
+  font-size: 0.95rem;
+}
+.quoteTranslation {
+  font-style: normal;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
 }
 
-@media (max-width: 768px) {
-  .wrapper {
-    padding: 1rem 1rem;
-  }
 
+@media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
   }
+
   .heading {
     font-size: 1.2rem;
+  }
+
+  .wrapper {
+    padding: 1rem;
   }
 }
