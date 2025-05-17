@@ -69,5 +69,3 @@ Ja, einige Hochschulen präsentieren internationale Programme in englischer Spra
 Am besten 2–3 Stunden einplanen, um sich beraten zu lassen, Vorträge zu hören und mit Hochschulen zu sprechen.
 
 _**Bachelor AND MORE 2025** bietet eine einmalige Gelegenheit, sich umfassend über Bachelor-Studiengänge zu informieren, persönliche Fragen zu klären und den eigenen Bildungsweg gezielt zu planen._
-
-**Mehr Informationen und Programm:** [www.bachelormessen.de](https://www.bachelormessen.de/)
