@@ -3,7 +3,7 @@ title: "Bachelor AND MORE 2025 в Мюнхене: как выбрать подх
 date: "2025-05-17"
 time: "17 мая 2025, с 9:30 до 16:00"
 ort: "MTC world of fashion, Haus 1, Taunusstraße 45, 80807 München"
-link: "[Offizielle Website](https://www.bachelormessen.de/)"
+link: "[Официальный сайт](https://www.bachelormessen.de/)"
 image: "/images/bachelor_and_more.webp"
 imageAlt: "Выставка Bachelor AND MORE 2025 в Мюнхене"
 seoTitle: "Bachelor AND MORE 2025 в Мюнхене — выставка программ бакалавриата"
@@ -70,5 +70,3 @@ seoDescription: "17 мая 2025 года в Мюнхене пройдёт выс
 Рекомендуется выделить 2–3 часа, чтобы пройти консультации, послушать лекции и пообщаться с представителями вузов.
 
 _**Bachelor AND MORE 2025** — это отличная возможность для будущих студентов сделать осознанный выбор, пообщаться с вузами и получить всю нужную информацию на одном мероприятии._
-
-**Подробности и программа:** [www.bachelormessen.de](https://www.bachelormessen.de/)
