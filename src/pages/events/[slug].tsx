@@ -1,3 +1,4 @@
+import LikeButton from "@/components/LikeButton";
 import PageHead from "@/components/PageHead";
 import SocialLinks from "@/components/SocialLinks";
 import useTranslation from "@/hooks/useTranslation";
@@ -61,7 +62,6 @@ export default function Event({ event, locale, archived }: EventProps) {
         jsonLd={jsonLd}
       />
       {archived && <meta name="robots" content="noindex, nofollow" />}
-
       <div className={styles.articleContainer}>
         <h2 className={styles.title}>{event.title}</h2>
         <p className={styles.meta}>
@@ -69,11 +69,7 @@ export default function Event({ event, locale, archived }: EventProps) {
           {event.endDate && ` – ${event.endDate}`}
           {event.ort && ` | ${event.ort}`}
         </p>
-        {archived && (
-          <div className={styles.archivedNotice}>
-          ⚠️ {t("events.archived_notice")}
-        </div>
-        )}
+        {archived && <div className={styles.archivedNotice}>⚠️ {t("events.archived_notice")}</div>}
         {event.image && (
           <div className={styles.imageWrapper}>
             <Image
@@ -87,6 +83,9 @@ export default function Event({ event, locale, archived }: EventProps) {
           </div>
         )}
         <div className={styles.content} dangerouslySetInnerHTML={{ __html: event.content }} />
+        <div className={styles.likeContainer}>
+          <LikeButton slug={event.slug} />
+        </div>
         <div className={styles.readMoreContainer}>
           <div className={styles.decorativeLine}>
             <span className={styles.left}>⊱❧</span>
@@ -100,7 +99,9 @@ export default function Event({ event, locale, archived }: EventProps) {
             <span className={styles.left}>⊱❧</span>
           </div>
         </div>
-         <SocialLinks />
+      </div>
+      <div  className={styles.socialLinks}>
+        <SocialLinks />
       </div>
     </>
   );

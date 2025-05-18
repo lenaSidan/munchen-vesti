@@ -1,20 +1,21 @@
-import { GetStaticPaths, GetStaticProps } from "next";
+import LikeButton from "@/components/LikeButton";
+import PageHead from "@/components/PageHead";
+import SocialLinks from "@/components/SocialLinks";
+import useTranslation from "@/hooks/useTranslation";
+import { getNewsJsonLd } from "@/lib/jsonld/getNewsJsonLd";
+import styles from "@/styles/NewsPage.module.css";
 import fs from "fs";
-import path from "path";
 import matter from "gray-matter";
+import { GetStaticPaths, GetStaticProps } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import path from "path";
+import rehypeExternalLinks from "rehype-external-links";
+import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
-import rehypeStringify from "rehype-stringify";
-import Image from "next/image";
-import Link from "next/link";
-import styles from "@/styles/NewsPage.module.css";
-import useTranslation from "@/hooks/useTranslation";
-import { useRouter } from "next/router";
-import rehypeExternalLinks from "rehype-external-links";
-import { getNewsJsonLd } from "@/lib/jsonld/getNewsJsonLd";
-import PageHead from "@/components/PageHead";
-import SocialLinks from "@/components/SocialLinks";
 
 interface NewsItem {
   slug: string;
@@ -84,6 +85,9 @@ export default function NewsPage({ news }: NewsProps) {
           )}
           <div className={styles.content} dangerouslySetInnerHTML={{ __html: news.content }} />
         </div>
+        <div className={styles.likeContainer}>
+          <LikeButton slug={news.slug} />
+        </div>
         <div className={styles.readMoreContainer}>
           <div className={styles.decorativeLine}>
             <span className={styles.left}>⊱❧</span>
@@ -97,6 +101,8 @@ export default function NewsPage({ news }: NewsProps) {
             <span className={styles.left}>⊱❧</span>
           </div>
         </div>
+      </div>
+      <div className={styles.socialLinks}>
         <SocialLinks />
       </div>
     </>

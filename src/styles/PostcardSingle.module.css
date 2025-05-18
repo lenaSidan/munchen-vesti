@@ -1,6 +1,6 @@
 .container {
   max-width: 1200px;
-  margin: 40px auto;
+  margin: 0 auto;
   padding: 20px;
   color: var(--text-color);
   background-color: var(--alt-background);
@@ -23,7 +23,7 @@
   height: auto;
   display: block;
   margin-bottom: 20px;
-  break-inside: avoid; /* чтобы не ломать колонку */
+  break-inside: avoid;
 }
 
 .text {
@@ -44,7 +44,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 40px auto;
+  margin: 20px auto;
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -104,6 +104,18 @@
   transform: scaleY(-1);
   margin-top: 15px;
 }
+.likeContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.socialLinks {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
 @media (max-width: 1024px) {
   .columnsWithImage {
     column-count: 2;
@@ -151,6 +163,15 @@
   }
 
   .readMoreContainer {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin: 5px auto;
+  }
+
+  .decorativeLine {
+    margin-bottom: 10px;
+  }
+
+  .decorativeLine span {
+    font-size: 1.2rem;
   }
 }

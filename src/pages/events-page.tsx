@@ -10,7 +10,6 @@ import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 // import EasterEggById from "@/components/EasterEggById";
-import SocialLinks from "@/components/SocialLinks";
 import rehypeExternalLinks from "rehype-external-links";
 
 interface EventsProps {
@@ -135,8 +134,6 @@ export default function EventsPage({ events }: EventsProps) {
                 {expandedSlug === event.slug ? t("menu.less") : t("menu.more")}
               </button>
             </div>
-
-            <SocialLinks />
           </div>
         ))}
       </div>

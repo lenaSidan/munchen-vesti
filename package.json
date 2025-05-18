@@ -16,6 +16,7 @@
   "dependencies": {
     "@next/bundle-analyzer": "^15.3.0",
     "cross-env": "^7.0.3",
+    "firebase": "^11.7.3",
     "gray-matter": "^4.0.3",
     "js-cookie": "^3.0.5",
     "next": "^15.3.0",
