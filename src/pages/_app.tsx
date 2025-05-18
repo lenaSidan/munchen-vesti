@@ -1,10 +1,11 @@
+import "@/styles/globals.css";
+import type { AppProps } from "next/app";
+
 import CookieConsent from "@/components/CookieConsent";
 import EasterEggSidebarHint from "@/components/EasterEggSidebarHint";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
-import "@/styles/globals.css";
-import type { AppProps } from "next/app";
 
 import { Merriweather, Old_Standard_TT } from "next/font/google";
 import Head from "next/head";
@@ -53,34 +54,12 @@ export default function App({ Component, pageProps }: AppProps) {
     });
   }, []);
 
-  // Google Analytics page_view
+  // 📊 Google Analytics: логика переходов
   useEffect(() => {
     const handleRouteChange = (url: string) => {
-      const myIP = "82.135.81.11";
-
-      fetch("https://api.ipify.org?format=json")
-        .then((res) => res.json())
-        .then((data) => {
-          const isInternal = data.ip === myIP;
-
-          if (isInternal) {
-            window.gtag?.("set", {
-              user_properties: {
-                traffic_type: "internal",
-              },
-            });
-          }
-
-          window.gtag?.("config", "G-BRM8FPV3SS", {
-            page_path: url,
-            ...(isInternal ? { traffic_type: "internal" } : {}),
-          });
-        })
-        .catch(() => {
-          window.gtag?.("config", "G-BRM8FPV3SS", {
-            page_path: url,
-          });
-        });
+      window.gtag?.("config", "G-BRM8FPV3SS", {
+        page_path: url,
+      });
     };
 
     router.events.on("routeChangeComplete", handleRouteChange);
@@ -96,6 +75,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="robots" content="index, follow" />
       </Head>
 
+      {/* GA4 скрипты */}
       <Script
         strategy="afterInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=G-BRM8FPV3SS"
@@ -105,27 +85,13 @@ export default function App({ Component, pageProps }: AppProps) {
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      fetch('https://api.ipify.org?format=json')
-        .then(res => res.json())
-        .then(data => {
-          const myIP = '82.135.81.11';
-          const isInternal = data.ip === myIP;
-
-          gtag('config', 'G-BRM8FPV3SS', {
-            page_path: window.location.pathname,
-            ...(isInternal ? { traffic_type: 'internal' } : {})
-          });
-        })
-        .catch(() => {
-          gtag('config', 'G-BRM8FPV3SS', {
-            page_path: window.location.pathname
-          });
-        });
-    `,
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BRM8FPV3SS', {
+              page_path: window.location.pathname
+            });
+          `,
         }}
       />
 
