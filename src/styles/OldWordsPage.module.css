@@ -140,6 +140,9 @@
     border-bottom: none;
     margin-bottom: 0;
   }
+   .grid {
+    grid-template-columns: 1fr;
+  }
   .subtitle {
     font-size: 1.1rem;
   }
