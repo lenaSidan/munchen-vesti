@@ -119,7 +119,7 @@ export default function MobileHeader() {
               >
                 {t("menu.announcements").toUpperCase()}
               </Link>
-
+             
               <Link
                 href="/news-page"
                 className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/news-page" ? styles.active : ""}`}
@@ -154,6 +154,13 @@ export default function MobileHeader() {
               >
                 {t("menu.chronicles").toUpperCase()}
               </Link>
+               <Link
+                href="/events"
+                className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/events" ? styles.active : ""}`}
+                onClick={closeAllSubmenus}
+              >
+                {t("menu.events").toUpperCase()}
+              </Link>
 
               {foundCount > 0 && !allFound && (
                 <Link
@@ -172,10 +179,18 @@ export default function MobileHeader() {
               <Link href="/services-page" className={styles.submenuLink} onClick={closeAllSubmenus}>
                 {t("menu.ads_services")}
               </Link>
-              <Link href="/gastronomy-page" className={styles.submenuLink} onClick={closeAllSubmenus}>
+              <Link
+                href="/gastronomy-page"
+                className={styles.submenuLink}
+                onClick={closeAllSubmenus}
+              >
                 {t("menu.ads_food")}
               </Link>
-              <Link href="/education-page" className={styles.submenuLink} onClick={closeAllSubmenus}>
+              <Link
+                href="/education-page"
+                className={styles.submenuLink}
+                onClick={closeAllSubmenus}
+              >
                 {t("menu.ads_studios")}
               </Link>
               <Link href="/other-page" className={styles.submenuLink} onClick={closeAllSubmenus}>
@@ -189,7 +204,11 @@ export default function MobileHeader() {
               <Link href="/oldwords-page" className={styles.submenuLink} onClick={closeAllSubmenus}>
                 {t("menu.old_words")}
               </Link>
-              <Link href="/bavarian-words" className={styles.submenuLink} onClick={closeAllSubmenus}>
+              <Link
+                href="/bavarian-words"
+                className={styles.submenuLink}
+                onClick={closeAllSubmenus}
+              >
                 {t("menu.bavarian_words")}
               </Link>
             </div>
