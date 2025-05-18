@@ -239,7 +239,16 @@ export default function Header() {
           >
             {t("menu.chronicles").toUpperCase()}
           </Link>
-
+          <Link
+            href="/events"
+            className={`${styles.navLink} ${
+              !isAdsSubmenuOpen && !isWordsSubmenuOpen && router.pathname === "/events"
+                ? styles.active
+                : ""
+            }`}
+          >
+            {t("menu.events")}
+          </Link>
           {foundCount > 0 && !allFound && (
             <Link
               href="/collection"
