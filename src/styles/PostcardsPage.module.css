@@ -1,7 +1,7 @@
 .container {
   max-width: 1200px;
   margin: 40px auto;
-  padding: 20px;
+  padding: 0 20px;
   /* font-family: "Merriweather", serif; */
   color: var(--text-color);
 }
@@ -40,6 +40,7 @@
   line-height: 1.8rem;
   text-align: center;
 }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
