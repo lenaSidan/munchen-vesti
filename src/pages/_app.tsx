@@ -105,10 +105,27 @@ export default function App({ Component, pageProps }: AppProps) {
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-          `,
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      fetch('https://api.ipify.org?format=json')
+        .then(res => res.json())
+        .then(data => {
+          const myIP = '82.135.81.11';
+          const isInternal = data.ip === myIP;
+
+          gtag('config', 'G-BRM8FPV3SS', {
+            page_path: window.location.pathname,
+            ...(isInternal ? { traffic_type: 'internal' } : {})
+          });
+        })
+        .catch(() => {
+          gtag('config', 'G-BRM8FPV3SS', {
+            page_path: window.location.pathname
+          });
+        });
+    `,
         }}
       />
 
