@@ -1,5 +1,6 @@
 import styles from "@/styles/LikeButton.module.css";
 import { doc, getDoc, increment, setDoc, updateDoc } from "firebase/firestore";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { db } from "../firebase";
 
@@ -50,7 +51,13 @@ export default function LikeButton({ slug }: LikeButtonProps) {
       disabled={clicked}
       className={`${styles.likeButton} ${clicked ? styles.clicked : ""}`}
     >
-      <span className={styles.heart}>{clicked ? "♥" : "♡"}</span>
+      <Image
+        src={clicked ? "/icons/heart-filled.png" : "/icons/heart_empty.png"}
+        alt="Like"
+        width={20}
+        height={20}
+        className={styles.heartImage}
+      />
       <span className={styles.count}>{likes ?? "…"}</span>
     </button>
   );
