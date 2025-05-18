@@ -13,6 +13,7 @@ import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import PageHead from "../../components/PageHead";
+import LikeButton from "@/components/LikeButton";
 
 interface ArticlesArticle {
   id: number;
@@ -80,7 +81,9 @@ export default function ArticlesArticlePage({ article, locale }: ArticleProps) {
 
           <div className={styles.content} dangerouslySetInnerHTML={{ __html: article.content }} />
         </div>
-
+        <div className={styles.likeContainer}>
+          <LikeButton slug={article.slug} />
+        </div>
         <div className={styles.readMoreContainer}>
           <div className={styles.decorativeLine}>
             <span className={styles.left}>⊱❧</span>
@@ -95,8 +98,10 @@ export default function ArticlesArticlePage({ article, locale }: ArticleProps) {
             <span className={styles.right}>⊱❧</span>
             <span className={styles.left}>⊱❧</span>
           </div>
-          <SocialLinks />
         </div>
+      </div>
+      <div className={styles.socialLinks}>
+        <SocialLinks />
       </div>
     </>
   );

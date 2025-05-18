@@ -109,7 +109,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 40px auto;
+  margin: 20px auto;
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -185,6 +185,17 @@
 [data-theme="dark"] .readMore:hover {
   color: #d4c8b0;
 }
+.likeContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.socialLinks {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
 
 @media (max-width: 768px) {
   .articleContainer {
@@ -252,7 +263,7 @@
   }
   .readMoreContainer {
     font-size: 1rem;
-    margin: 25px auto;
+    margin: 5px auto;
   }
 
   .decorativeLine {
@@ -260,25 +271,6 @@
   }
 
   .decorativeLine span {
-    font-size: 1.2rem; /* 🔹 Чуть меньше значки */
-  }
-  [data-theme="dark"] .title {
-    color: #e0a96d;
-  }
-
-  [data-theme="dark"] .meta {
-    color: #d4c8b0;
-  }
-
-  [data-theme="dark"] .decorativeLine span {
-    color: #e0a96d;
-  }
-
-  [data-theme="dark"] .readMore {
-    color: #e0a96d;
-  }
-
-  [data-theme="dark"] .readMore:hover {
-    color: #d4c8b0;
+    font-size: 1.2rem;
   }
 }

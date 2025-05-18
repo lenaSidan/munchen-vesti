@@ -56,14 +56,14 @@ export default function App({ Component, pageProps }: AppProps) {
   // Google Analytics page_view
   useEffect(() => {
     const handleRouteChange = (url: string) => {
+      const myIP = "82.135.81.11";
+
       fetch("https://api.ipify.org?format=json")
         .then((res) => res.json())
         .then((data) => {
-          const myIP = "82.135.81.11";
           const isInternal = data.ip === myIP;
 
           if (isInternal) {
-            // Задаём traffic_type как user_property
             window.gtag?.("set", {
               user_properties: {
                 traffic_type: "internal",
@@ -71,13 +71,12 @@ export default function App({ Component, pageProps }: AppProps) {
             });
           }
 
-          // Конфигурация страницы
           window.gtag?.("config", "G-BRM8FPV3SS", {
             page_path: url,
+            ...(isInternal ? { traffic_type: "internal" } : {}),
           });
         })
         .catch(() => {
-          // На всякий случай — fallback
           window.gtag?.("config", "G-BRM8FPV3SS", {
             page_path: url,
           });
@@ -106,47 +105,10 @@ export default function App({ Component, pageProps }: AppProps) {
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      (function() {
-        fetch('https://api.ipify.org?format=json')
-          .then(res => res.json())
-          .then(data => {
-            const myIP = '82.135.81.11';
-            const isInternal = data.ip === myIP;
-            window.gtag('config', 'G-BRM8FPV3SS', {
-              page_path: window.location.pathname,
-              ...(isInternal ? { traffic_type: 'internal' } : {})
-            });
-          })
-          .catch(err => {
-            console.error('IP check failed:', err);
-            window.gtag('config', 'G-BRM8FPV3SS', {
-              page_path: window.location.pathname,
-            });
-          });
-      })();
-    `,
-        }}
-      />
-      <Script
-        id="send-traffic-type"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-      fetch('https://api.ipify.org?format=json')
-        .then(res => res.json())
-        .then(data => {
-          const myIP = '82.135.81.11';
-          const isInternal = data.ip === myIP;
-          window.gtag('event', 'page_view', {
-            page_path: window.location.pathname,
-            traffic_type: isInternal ? 'internal' : 'external'
-          });
-        });
-    `,
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          `,
         }}
       />
 

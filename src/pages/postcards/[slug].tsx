@@ -13,6 +13,8 @@ import Link from "next/link";
 import PageHead from "@/components/PageHead";
 import { getPostcardJsonLd } from "@/lib/jsonld/getPostcardJsonLd";
 import styles from "@/styles/PostcardSingle.module.css";
+import LikeButton from "@/components/LikeButton";
+import SocialLinks from "@/components/SocialLinks";
 
 interface PostcardItem {
   slug: string;
@@ -72,6 +74,9 @@ export default function Postcard({ postcard, locale }: PostcardProps) {
           />
           <div className={styles.text} dangerouslySetInnerHTML={{ __html: postcard.content }} />
         </div>
+         <div className={styles.likeContainer}>
+          <LikeButton slug={postcard.slug} />
+        </div>
         <div className={styles.readMoreContainer}>
           <div className={styles.decorativeLine}>
             <span className={styles.left}>⊱❧</span>
@@ -85,6 +90,9 @@ export default function Postcard({ postcard, locale }: PostcardProps) {
             <span className={styles.left}>⊱❧</span>
           </div>
         </div>
+      </div>
+      <div className={styles.socialLinks}>
+        <SocialLinks />
       </div>
     </>
   );
