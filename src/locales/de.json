@@ -85,7 +85,6 @@
     "secretName": "Rolle des Hüters",
     "backToHome": "Startseite"
   },
-
   "title": {
     "read_more": "Weiterlesen"
   },
@@ -99,10 +98,19 @@
     "subtitle": "München – eine Stadt, in der die Vergangenheit lebendig wird.",
     "description": "In ihren Straßen hallen die Schritte der Geschichte wider, in den Gassen flüstern die Mauern, und auf den Plätzen klingen die Stimmen vergangener Zeiten nach. Jeder Stein kennt Namen, die in keinem Reiseführer stehen, und jeder Schatten könnte seine eigene Geschichte erzählen. Diese Postkarten stammen nicht aus einem Souvenirladen, sondern aus der Vorstellung, aus den Archiven der Erinnerung, aus der Luft dieser Stadt. Sie wurden von mir erdacht und gezeichnet, um euch das nahezubringen, was einst in München geschah: seltsame Begegnungen, vergessene Feste, abendliche Gespräche und Schicksale, eingewebt in das Gewebe der Zeit."
   },
+  "oldword": {
+    "subtitle": "Wörter, die der Zeit entglitten sind.",
+    "description": "Einige von ihnen klangen einst auf den Straßen, am Familientisch, in alten Briefen und Romanen. Heute verstauben sie in Wörterbüchern oder sind ganz aus dem Gebrauch verschwunden. Diese Sammlung ist wie eine alte Schatulle mit sprachlichen Kostbarkeiten: Jedes Wort trägt den Abdruck einer Epoche, von Charakteren, Bräuchen und Denkweisen.",
+    "description2": "Es sind nicht einfach nur Wörter. Es sind kulturelle Spuren, durch die man hören kann, wie Menschen in einer anderen Zeit gesprochen haben – mit Ironie, Zärtlichkeit und Präzision."
+  },
+  "bavarianWords": {
+    "subtitle": "Bayern spricht seine eigene Sprache.",
+    "description": "Und das ist nicht einfach ein Dialekt – es ist eine besondere Sprache der Stimmung, des Charakters und der Herzlichkeit. Bayerische Wörter und Ausdrücke klingen anders als Hochdeutsch, doch genau in ihnen lebt die Sprache der Straßen, der Wirtshäuser, der Dörfer und Städte.",
+    "description2": "Dieser Abschnitt ist ein kleines Wörterbuch voller Begriffe, die nicht jeder Deutsche versteht, aber jeder schätzt, der einmal in München oder Bayern war. Sie sind derb und witzig, gutmütig und treffend – wie die bayerische Seele selbst."
+  },
   "newsTitle": "Aktuelles",
   "info": "Wir empfehlen",
   "read_more": "Weiterlesen",
-
   "meta": {
     "default_title": "Münchener Anzeigen",
     "default_description": "Münchener Anzeigen – Veranstaltungskalender, nützliche Artikel, Kleinanzeigen und aktuelle Nachrichten für die russischsprachige Community in München.",

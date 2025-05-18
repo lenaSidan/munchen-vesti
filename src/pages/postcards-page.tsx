@@ -40,6 +40,7 @@ export default function PostcardsPage({ postcards }: PostcardsPageProps) {
         <div className={styles.intro}>
           <p className={styles.subtitle}>{t("postcards.subtitle")}</p>
           <p className={styles.descriptionText}>{t("postcards.description")}</p>
+          
         </div>
 
         <div className={styles.grid}>

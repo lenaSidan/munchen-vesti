@@ -37,44 +37,53 @@ export default function BavarianWordsPage({ words }: Props) {
         description={t("meta.bavarianWords_description")}
       />
       <h1 className={styles.visuallyHidden}>{t("meta.bavarianWordsAll_title")}</h1>
-      <div className={styles.wrapper}>
-        <h1 className={styles.heading}>
-          {locale === "de" ? "Bairische Wörter" : "Баварские слова"}
-        </h1>
-        <div className={styles.grid}>
-          {words.map((word, idx) => (
-            <div key={idx} className={styles.card}>
-              <div className={styles.wordRow}>
-                <span className={styles.word}>{word.word}</span>
-                <span className={styles.gender}>
-                  ({locale === "de" ? word.type_de : word.type_ru}
-                  {word.gender_de || word.gender_ru
-                    ? `, ${locale === "de" ? word.gender_de : word.gender_ru}`
-                    : ""}
-                  )
-                </span>
+      <div className={styles.mainBox}>
+        <div className={styles.introBox}>
+          <h2 className={styles.heading}>
+            {locale === "de" ? "Bairische Wörter" : "Баварские слова"}
+          </h2>
+          <div className={styles.intro}>
+            <p className={styles.subtitle}>{t("bavarianWords.subtitle")}</p>
+            <p className={styles.descriptionText}>{t("bavarianWords.description")}</p>
+            <p className={styles.descriptionText2}>{t("bavarianWords.description2")}</p>
+          </div>
+        </div>
+        <div className={styles.wrapper}>
+          <div className={styles.grid}>
+            {words.map((word, idx) => (
+              <div key={idx} className={styles.card}>
+                <div className={styles.wordRow}>
+                  <span className={styles.word}>{word.word}</span>
+                  <span className={styles.gender}>
+                    ({locale === "de" ? word.type_de : word.type_ru}
+                    {word.gender_de || word.gender_ru
+                      ? `, ${locale === "de" ? word.gender_de : word.gender_ru}`
+                      : ""}
+                    )
+                  </span>
+                </div>
+                <p className={styles.translation}>
+                  {locale === "de" ? word.translation_de : word.translation_ru}
+                </p>
+                <p className={styles.explanation}>
+                  {locale === "de" ? word.explanation_de : word.explanation_ru}
+                </p>
+                <p className={styles.origin}>{locale === "de" ? word.origin_de : word.origin_ru}</p>
+                {(word.quote_de || word.quote_ru) && (
+                  <blockquote className={styles.quote}>
+                    {locale === "de" ? (
+                      word.quote_de
+                    ) : (
+                      <>
+                        <div>{word.quote_de}</div>
+                        <div className={styles.quoteTranslation}>{word.quote_ru}</div>
+                      </>
+                    )}
+                  </blockquote>
+                )}
               </div>
-              <p className={styles.translation}>
-                {locale === "de" ? word.translation_de : word.translation_ru}
-              </p>
-              <p className={styles.explanation}>
-                {locale === "de" ? word.explanation_de : word.explanation_ru}
-              </p>
-              <p className={styles.origin}>{locale === "de" ? word.origin_de : word.origin_ru}</p>
-              {(word.quote_de || word.quote_ru) && (
-                <blockquote className={styles.quote}>
-                  {locale === "de" ? (
-                    word.quote_de
-                  ) : (
-                    <>
-                      <div>{word.quote_de}</div>
-                      <div className={styles.quoteTranslation}>{word.quote_ru}</div>
-                    </>
-                  )}
-                </blockquote>
-              )}
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </>
