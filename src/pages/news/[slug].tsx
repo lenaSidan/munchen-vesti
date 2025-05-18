@@ -14,6 +14,7 @@ import { useRouter } from "next/router";
 import rehypeExternalLinks from "rehype-external-links";
 import { getNewsJsonLd } from "@/lib/jsonld/getNewsJsonLd";
 import PageHead from "@/components/PageHead";
+import SocialLinks from "@/components/SocialLinks";
 
 interface NewsItem {
   slug: string;
@@ -96,6 +97,7 @@ export default function NewsPage({ news }: NewsProps) {
             <span className={styles.left}>⊱❧</span>
           </div>
         </div>
+        <SocialLinks />
       </div>
     </>
   );

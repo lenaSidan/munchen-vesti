@@ -1,16 +1,17 @@
-import { GetStaticProps, GetStaticPaths } from "next";
+import SocialLinks from "@/components/SocialLinks";
+import useTranslation from "@/hooks/useTranslation";
+import { getArticleJsonLd } from "@/lib/jsonld/articleJsonLd";
+import styles from "@/styles/NewsArticle.module.css";
 import fs from "fs";
-import path from "path";
 import matter from "gray-matter";
+import { GetStaticPaths, GetStaticProps } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import path from "path";
+import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
-import rehypeStringify from "rehype-stringify";
-import Image from "next/image";
-import useTranslation from "@/hooks/useTranslation";
-import styles from "@/styles/NewsArticle.module.css";
-import Link from "next/link";
-import { getArticleJsonLd } from "@/lib/jsonld/articleJsonLd";
 import PageHead from "../../components/PageHead";
 
 interface ArticlesArticle {
@@ -94,6 +95,7 @@ export default function ArticlesArticlePage({ article, locale }: ArticleProps) {
             <span className={styles.right}>⊱❧</span>
             <span className={styles.left}>⊱❧</span>
           </div>
+          <SocialLinks />
         </div>
       </div>
     </>
@@ -129,7 +131,11 @@ export const getStaticProps: GetStaticProps<ArticleProps> = async ({ params, loc
   const fileContents = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(fileContents);
 
-  const processedContent = await remark().use(remarkGfm).use(remarkRehype).use(rehypeStringify).process(content);
+  const processedContent = await remark()
+    .use(remarkGfm)
+    .use(remarkRehype)
+    .use(rehypeStringify)
+    .process(content);
 
   return {
     props: {

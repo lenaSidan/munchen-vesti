@@ -2,7 +2,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background: var(--background);
+  background: var(--alt-background1);
   color: var(--text-color);
   transition:
     background 0.3s ease-in-out,

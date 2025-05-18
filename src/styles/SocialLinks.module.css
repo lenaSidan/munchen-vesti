@@ -1,0 +1,111 @@
+.socialLinksBlock {
+  width: 100%;
+  margin-top: 2rem;
+  border-top: 1px dashed var(--heading-color);
+  border-bottom: 1px dashed var(--heading-color);
+  align-items: center;
+  font-family: var(--font-headings);
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.socialLinksList {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.text {
+  font-size: 0.8rem;
+  font-family: monospace;
+  color: var(--border-color);
+  font-weight: bold;
+  display: inline-block;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.shortText {
+  display: none;
+}
+
+.socialLinksList li a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--border-color);
+  font-weight: bold;
+  font-family: monospace;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+  font-size: 0.8rem;
+}
+
+.socialLinksList li a:hover {
+  transform: scale(1.05);
+}
+
+.socialLinksList li a:hover .icon {
+  transform: scale(1.2);
+}
+
+.icon {
+  width: 20px;
+  height: 17px;
+}
+
+@media (max-width: 768px) {
+  .socialLinksBlock {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 5px 0;
+  }
+  .row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  .socialLinksList {
+    margin: 0;
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+  .text {
+    margin: 0;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .fullText {
+    display: none;
+  }
+
+  .shortText {
+    display: inline;
+  }
+  .socialLinksList li a {
+    font-size: 0;
+    gap: 0;
+  }
+
+  .socialLinksList li a::after {
+    content: "";
+  }
+
+  .icon {
+    width: 18px;
+    height: 16px;
+  }
+}
