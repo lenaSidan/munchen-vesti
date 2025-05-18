@@ -1,15 +1,16 @@
-import { useState, useEffect } from "react";
+import Seo from "@/components/Seo";
+import useTranslation from "@/hooks/useTranslation";
+import { Event, getEventsByLocale } from "@/lib/getEvents";
+import styles from "@/styles/EventsPage.module.css";
 import { GetStaticProps } from "next";
 import Image from "next/image";
-import { getEventsByLocale, Event } from "@/lib/getEvents";
-import styles from "@/styles/EventsPage.module.css";
-import useTranslation from "@/hooks/useTranslation";
+import { useEffect, useState } from "react";
+import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
-import rehypeStringify from "rehype-stringify";
-import Seo from "@/components/Seo";
 // import EasterEggById from "@/components/EasterEggById";
+import SocialLinks from "@/components/SocialLinks";
 import rehypeExternalLinks from "rehype-external-links";
 
 interface EventsProps {
@@ -87,7 +88,12 @@ export default function EventsPage({ events }: EventsProps) {
                           const [, text, href] = match;
                           return (
                             <span key={index}>
-                              <a href={href} className={styles.valueLink} target="_blank" rel="noopener noreferrer">
+                              <a
+                                href={href}
+                                className={styles.valueLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
                                 {text}
                               </a>
                               {index < links.length - 1 && " | "}
@@ -113,7 +119,10 @@ export default function EventsPage({ events }: EventsProps) {
             <div className={styles.eventContent}>
               <div
                 dangerouslySetInnerHTML={{
-                  __html: isClient && expandedSlug === event.slug ? event.content : getExcerpt(event.content),
+                  __html:
+                    isClient && expandedSlug === event.slug
+                      ? event.content
+                      : getExcerpt(event.content),
                 }}
               />
 
@@ -126,6 +135,8 @@ export default function EventsPage({ events }: EventsProps) {
                 {expandedSlug === event.slug ? t("menu.less") : t("menu.more")}
               </button>
             </div>
+
+            <SocialLinks />
           </div>
         ))}
       </div>

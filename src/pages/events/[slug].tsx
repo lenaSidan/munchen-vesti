@@ -1,4 +1,5 @@
 import PageHead from "@/components/PageHead";
+import SocialLinks from "@/components/SocialLinks";
 import useTranslation from "@/hooks/useTranslation";
 import { getEventsByLocale } from "@/lib/getEvents";
 import { getEventJsonLd } from "@/lib/jsonld/eventJsonLd";
@@ -99,6 +100,7 @@ export default function Event({ event, locale, archived }: EventProps) {
             <span className={styles.left}>⊱❧</span>
           </div>
         </div>
+         <SocialLinks />
       </div>
     </>
   );
