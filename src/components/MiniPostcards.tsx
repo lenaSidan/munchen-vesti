@@ -10,6 +10,7 @@ const postcards = [
   "/postcards/thumb/russian_colony_munich.webp?v=1",
   "/postcards/thumb/russischer_muenchen_exil.webp?v=1",
   "/postcards/thumb/kandinsky_munich.webp?v=1",
+  "/postcards/thumb/schaefflertanz_munich.webp?v=1",
 ];
 
 function getRandomPostcards(count: number) {
