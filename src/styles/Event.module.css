@@ -209,10 +209,14 @@
   }
 
   .articleContainer p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.4;
     margin-top: 5px;
     margin-bottom: 15px;
+    text-align: justify;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    transition: color 0.3s ease-in-out;
   }
   .meta {
     font-size: 0.85rem;

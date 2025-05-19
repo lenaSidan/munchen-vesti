@@ -178,8 +178,12 @@
   }
   .introText,
   .introText4 {
+    font-size: 1.2rem;
     line-height: 1.3;
     padding: 0 10px;
+     -webkit-hyphens: auto;
+    hyphens: auto;
+    transition: color 0.3s ease-in-out;
   }
 
   .introText4 {
@@ -198,6 +202,7 @@
 
   .eventCard {
     padding: 10px;
+ 
   }
 
   .eventTitle {

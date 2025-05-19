@@ -249,7 +249,7 @@ export default function Header() {
           >
             {t("menu.events")}
           </Link>
-          {foundCount > 0 && !allFound && (
+          {/* {foundCount > 0 && !allFound && (
             <Link
               href="/collection"
               className={`${styles.navLink} ${
@@ -260,7 +260,7 @@ export default function Header() {
             >
               {t("footer.collection")}
             </Link>
-          )}
+          )} */}
         </nav>
       </div>
 

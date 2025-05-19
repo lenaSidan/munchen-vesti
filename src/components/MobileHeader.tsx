@@ -162,7 +162,7 @@ export default function MobileHeader() {
                 {t("menu.events").toUpperCase()}
               </Link>
 
-              {foundCount > 0 && !allFound && (
+              {/* {foundCount > 0 && !allFound && (
                 <Link
                   href="/collection"
                   className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/collection" ? styles.active : ""} ${styles.highlighted}`}
@@ -170,7 +170,7 @@ export default function MobileHeader() {
                 >
                   {t("footer.collection").toUpperCase()}
                 </Link>
-              )}
+              )} */}
             </div>
           </div>
 
