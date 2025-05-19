@@ -167,8 +167,8 @@
   text-align: justify;
 }
 .eventContent li {
-  font-size: 1.1rem;
-  line-height: 1.3;
+  font-size: 0.9rem;
+  line-height: 1.4;
   margin-bottom: 5px;
 }
 
@@ -222,6 +222,9 @@
   .eventCard p {
     font-size: 1.2rem;
     line-height: 1.3;
+  }
+  .eventCard li {
+    line-height: 1.4;
   }
   .eventTitle {
     text-align: center;
