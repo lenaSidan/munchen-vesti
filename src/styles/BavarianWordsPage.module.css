@@ -30,7 +30,7 @@
   margin: 0 auto;
 }
 .heading {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   margin-top: 1rem;
   text-align: center;
   border-bottom: 2px solid var(--border-color);
@@ -43,10 +43,11 @@
   margin-bottom: 30px;
 }
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   font-style: italic;
   text-align: center;
+  font-family: monospace;
 }
 .descriptionText {
   font-size: 1.2rem;
@@ -78,7 +79,7 @@
 }
 
 .wordRow {
- display: flex;
+  display: flex;
   align-items: baseline;
   gap: 0.4rem;
   flex-wrap: wrap;
@@ -92,6 +93,7 @@
   color: var(--heading-color2);
   font-family: var(--font-headings);
   border-bottom: 1px dotted #8c6c3f;
+  font-family: monospace;
 }
 
 .gender {
@@ -117,6 +119,7 @@
   font-style: italic;
   margin-top: 0.5rem;
   font-size: 0.9rem;
+  font-family: monospace;
 }
 
 .quote {

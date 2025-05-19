@@ -52,7 +52,11 @@
 .content a:hover {
   color: var(--heading-color);
 }
-
+.content li {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
 .backButtonBox {
   margin-top: 30px;
   display: flex;

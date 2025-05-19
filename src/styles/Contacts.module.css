@@ -21,7 +21,7 @@
 }
 .title {
   font-family: var(--font-body);
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   text-align: center;
   color: var(--heading-color2);
   margin-bottom: 25px;
@@ -80,12 +80,11 @@
   align-items: center;
   text-align: center;
   margin: 20px auto;
-  font-size: 1.2rem;
-  font-weight: 600;
 }
 .readMore {
-  color: var(--border-color);
-  font-size: 1.4rem;
+  color: var(--heading-color);
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 .readMore:hover {
   color: var(--heading-color);

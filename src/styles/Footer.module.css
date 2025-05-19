@@ -30,17 +30,16 @@
 .nav {
   display: flex;
   gap: 30px;
-  font-size: 0.9rem;
-  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  font-family: monospace;
   justify-content: center;
   margin-bottom: 10px;
   color: var(--text-color);
 }
-.navLink  {
+.navLink {
   text-decoration: none;
   color: var(--text-color);
   transition: color 0.2s;
- 
 }
 
 .nav a:hover {
@@ -151,7 +150,6 @@
   .socialIcon {
     width: 30px;
     height: auto;
-    
   }
 
   .container {
@@ -185,21 +183,20 @@
   [data-theme="dark"] .footer {
     border-color: #e0a96d;
   }
-  
+
   [data-theme="dark"] .brand a {
     color: #e0a96d;
   }
-  
+
   [data-theme="dark"] .nav a {
     color: #d4c8b0;
   }
-  
+
   [data-theme="dark"] .nav a:hover {
     color: #e0a96d;
   }
-  
+
   [data-theme="dark"] .copyright {
     color: #d4c8b0;
   }
 }
-

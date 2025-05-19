@@ -30,7 +30,7 @@
   margin: 0 auto;
 }
 .heading {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   margin-top: 1rem;
   text-align: center;
   border-bottom: 2px solid var(--border-color);
@@ -43,10 +43,11 @@
   margin-bottom: 30px;
 }
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   font-style: italic;
   text-align: center;
+   font-family: monospace;
 }
 .descriptionText {
   font-size: 1.2rem;
@@ -87,6 +88,7 @@
   color: var(--heading-color2);
   text-decoration: underline;
   margin-right: 10px;
+  font-family: monospace;
 }
 
 .gender {
@@ -140,7 +142,7 @@
     border-bottom: none;
     margin-bottom: 0;
   }
-   .grid {
+  .grid {
     grid-template-columns: 1fr;
   }
   .subtitle {

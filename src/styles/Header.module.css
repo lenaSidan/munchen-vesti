@@ -1,5 +1,5 @@
 .header {
-   background: none;
+  background: none;
   padding: 0 0 20px 0;
   text-align: center;
   margin-bottom: 20px;
@@ -10,18 +10,10 @@
   width: 100%;
   text-align: center;
   margin-bottom: 15px;
-  background: repeating-linear-gradient(
-  90deg,
-  rgba(0, 0, 0, 0.1),
-  transparent 5px
-);
+  background: repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.1), transparent 5px);
 }
 [data-theme="dark"] .containerBackground {
-    background: repeating-linear-gradient(
-    90deg,
-    rgba(224, 169, 109, 0.3),
-    transparent 5px
-  );
+  background: repeating-linear-gradient(90deg, rgba(224, 169, 109, 0.3), transparent 5px);
 }
 .decorativeLine {
   position: relative;
@@ -122,10 +114,11 @@
   width: 80px;
   height: 80px;
   object-fit: contain;
-  filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.4))
-  drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.3))
-  drop-shadow(-1px -1px 0px rgba(255, 255, 255, 0.3));
-  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.4)) drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.3))
+    drop-shadow(-1px -1px 0px rgba(255, 255, 255, 0.3));
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
 }
 .logoIcon:hover {
   transform: scale(1.05);
@@ -140,7 +133,7 @@
 .logoText {
   display: flex;
   align-items: center;
-  font-family: var(--font-headings); 
+  font-family: var(--font-headings);
   font-size: 5rem;
   line-height: 6rem;
   font-weight: bolder;
@@ -168,21 +161,25 @@
   justify-content: center;
 }
 
-.navLink  {
+.navLink {
   text-decoration: none;
   color: var(--text-color);
   transition: color 0.2s;
   font-weight: 600;
+  padding-top: 11px;
+  font-size: 1rem;
+  margin: 0;
+  font-family: monospace;
 }
 
 .nav :hover {
   color: var(--heading-color);
- 
 }
 .active {
-  font-weight: bold;
+  font-weight: 600;
   color: var(--heading-color);
   text-decoration: underline;
+  font-size: 1rem;
 }
 
 .tools {
@@ -210,19 +207,18 @@
   flex-direction: column;
   min-width: 280px;
   padding: 10px 0;
-  text-align:  center;
+  text-align: center;
   margin-top: 10px;
 }
 .submenuWords {
-   min-width: 300px;
+  min-width: 300px;
 }
-
 
 .submenuLink {
   text-transform: none;
   font-size: 1.2rem;
   font-weight: 500;
-  font-family:var(--font-headings);
+  font-family: var(--font-headings);
   padding: 0 20px;
   text-decoration: none;
   color: var(--text-color);
@@ -301,11 +297,8 @@
     font-size: 2.3rem;
     padding-right: 8px;
   }
-
-  
 }
 @media (max-width: 1024px) {
-
   .logoDataBox,
   .logoDate {
     display: none;
@@ -321,6 +314,3 @@
     line-height: 4rem;
   }
 }
-
-
-

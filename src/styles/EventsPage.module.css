@@ -85,8 +85,9 @@
 }
 .label {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--heading-color2);
+  font-family: monospace;
 }
 
 .value {
@@ -175,6 +176,7 @@
   display: inline-block;
   font-size: 1rem;
   font-weight: bold;
+  font-family: monospace;
   color: var(--heading-color2);
   text-decoration: underline;
   cursor: pointer;
@@ -257,7 +259,8 @@
     margin: 0;
   }
   .value {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    margin: 0;
   }
   .valueLink {
     font-size: 0.9rem;
