@@ -146,8 +146,6 @@
 
 .eventContent {
   width: 100%;
-  font-size: 1.2rem;
-  line-height: 1.4;
   text-align: justify;
   -webkit-hyphens: auto;
   hyphens: auto;
@@ -165,6 +163,8 @@
 }
 .eventContent p {
   text-align: justify;
+  font-size: 1.2rem;
+  line-height: 1.4;
 }
 .eventContent li {
   font-size: 0.9rem;
