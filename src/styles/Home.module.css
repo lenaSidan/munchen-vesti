@@ -39,7 +39,9 @@
   margin-bottom: 10px;
   text-align: justify;
   width: 100%;
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition:
+    background 0.3s ease-in-out,
+    color 0.3s ease-in-out;
 }
 .decorativeLine {
   position: relative;
@@ -122,7 +124,8 @@
   column-count: 3;
   column-gap: 30px;
 }
-.leftColumn, .rightColumn {
+.leftColumn,
+.rightColumn {
   all: unset;
 }
 .secondImage {
@@ -165,10 +168,23 @@
   margin-bottom: 20px;
   background: var(--alt-background);
   border-bottom: 3px solid var(--heading-color2);
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition:
+    background 0.3s ease-in-out,
+    color 0.3s ease-in-out;
 }
 .secondArticle h2 {
   color: var(--heading-color2);
+}
+.secondArticle h4 {
+  font-size: 0.9rem;
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--heading-color);
+  transition: color 0.3s;
+  letter-spacing: 1px;
+  font-weight: 600;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+
 }
 .secondArticle h5 {
   margin-top: 0;
@@ -195,6 +211,7 @@
 .mainArticle li,
 .secondArticle li {
   text-align: left;
+  font-size: 0.9rem;
 }
 .newsBlock {
   width: 100%;
@@ -248,7 +265,6 @@
   gap: 10px;
 }
 .articleLink {
- 
   text-align: left;
   border-bottom: 1px dashed var(--border-color);
   padding-bottom: 5px;
@@ -256,7 +272,7 @@
 }
 
 .articleLink a {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--text-color);
   text-decoration: none;
@@ -273,7 +289,6 @@
   display: inline-block;
   transition: color 0.3s ease-in-out;
   margin: 0;
-  
 }
 .viewAllLink {
   display: inline-block;
@@ -303,7 +318,7 @@
   }
   .mainArticle h3,
   .secondArticle h3 {
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 0.9rem;
   }
   .articlesSection {
@@ -327,7 +342,7 @@
     max-width: 100%;
     height: auto;
     aspect-ratio: 7 / 4;
-    
+
     margin-bottom: 20px;
     border-radius: 4px;
     border: 1px solid var(--heading-color2);
@@ -367,12 +382,12 @@
   }
   .mainArticle h2,
   .secondArticle h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: left;
   }
   .mainArticle h3,
   .secondArticle h3 {
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 1rem;
   }
   .mainArticle h4,
@@ -404,7 +419,6 @@
   .articleLink a {
     font-size: 1rem;
     font-weight: 600;
-   
   }
   .announcementItem {
     font-size: 1rem;
