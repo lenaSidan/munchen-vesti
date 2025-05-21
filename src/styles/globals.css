@@ -66,7 +66,6 @@ blockquote {
 h1,
 h2,
 h3,
-h4,
 h5 {
   font-family: var(--font-headings);
   color: var(--heading-color);
@@ -77,7 +76,7 @@ h5 {
 }
 
 h1 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
@@ -89,7 +88,6 @@ h2 {
   text-align: left;
   font-weight: bold;
   margin-bottom: 0;
-  /* border-bottom: 2px solid var(--border-color); */
   padding-bottom: 0;
   transition: border-color 0.3s ease-in-out;
 }
@@ -106,17 +104,15 @@ h3 {
   transition: border-color 0.3s ease-in-out;
 }
 h4 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   margin-top: 15px;
-  /* border-bottom: 2px solid var(--border-color); */
   padding-bottom: 5px;
   line-height: 1.6;
   transition: border-color 0.3s ease-in-out;
 }
 h5 {
   text-align: left;
-  font-size: 1.2rem;
   font-weight: 600;
   margin-top: 20px;
   margin-bottom: 12px;
@@ -139,7 +135,7 @@ a:hover {
 
 li {
   text-align: left;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 ul {
   margin-bottom: 10px;

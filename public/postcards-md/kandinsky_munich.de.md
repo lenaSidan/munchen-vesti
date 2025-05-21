@@ -34,6 +34,17 @@ Mit Beginn des Ersten Weltkriegs musste Kandinsky Deutschland verlassen und kehr
 
 Bis zur Schließung des Bauhauses 1933 war Kandinsky dort tätig. Danach emigrierte er nach Frankreich, wo er bis zu seinem Tod weiter arbeitete.
 
-_München spielte eine entscheidende Rolle in der Entwicklung Kandinskys als Künstler und Theoretiker. Hier wandelte er sich vom realistischen Maler zum **Pionier der Abstraktion**, entwickelte seine philosophischen Konzepte und wurde zu einer Schlüsselfigur der Avantgarde._
+### V. Bilder, Liebe und Erinnerung: Die Geschichte von Gabriele Münter
 
-_Kandinsky kam als russischer Jurist nach München — und ging als einer der **Begründer der abstrakten Kunst**, dessen Einfluss die Kunst des 20. Jahrhunderts maßgeblich prägte._
+Als im **Jahr 1914** der Erste Weltkrieg ausbrach, musste Kandinsky als russischer Staatsbürger Deutschland verlassen. Seine langjährige und komplexe Beziehung mit **Gabriele Münter** zerbrach – zunächst vorübergehend, dann endgültig. **1916** heiratete er in Russland **Nina Andrejewskaja**, was Münter später erfuhr.
+
+Doch in dem gemeinsamen Haus in **Murnau**, wo sie zusammen gelebt und gearbeitet hatten, blieben Dutzende seiner Werke zurück. Gabriele Münter bewahrte sie – zunächst vor der Zeit, dann vor dem nationalsozialistischen Regime, das Kandinsky als „entarteten Künstler“ verbot und seine Werke zur Zerstörung freigab.
+
+Später versuchte Kandinsky, die Werke zurückzufordern – doch Münter gab sie ihm nicht. Und rückblickend war das ein Glück für die Welt:  
+**1957**, zu ihrem **80. Geburtstag**, schenkte sie der Stadt München mehr als **90 Ölgemälde**, **etwa 330 Aquarelle, Zeichnungen und Druckgrafiken** sowie Kandinskys Archiv. Diese Sammlung ging an das **Lenbachhaus**, das damit zur weltweit bedeutendsten Sammlung des **„Blauen Reiters“** und Kandinskys wurde.
+
+_Jeder von ihr gerettete Pinselstrich wurde Teil des kulturellen Gedächtnisses Europas._
+
+München spielte eine entscheidende Rolle in der Entwicklung Kandinskys als Künstler und Theoretiker. Hier wandelte er sich vom realistischen Maler zum **Pionier der Abstraktion**, entwickelte seine philosophischen Konzepte und wurde zu einer Schlüsselfigur der Avantgarde.
+
+Kandinsky kam als russischer Jurist nach München — und ging als einer der **Begründer der abstrakten Kunst**, dessen Einfluss die Kunst des 20. Jahrhunderts maßgeblich prägte.
