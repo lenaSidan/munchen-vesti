@@ -2,7 +2,7 @@
 title: "Для влюблённых: романтический квест по Мюнхену для двоих"
 date: "2025-05-22"
 endDate: "2025-05-28"
-time: "с 10:00 до 17:00"
+time: "С 22 по 28 мая, с 10:00 до 17:00"
 ort: "Königsplatz, München"
 link: "[Официальный сайт](https://feverup.com/m/337708)"
 image: "/images/romanticquest_munich.webp"

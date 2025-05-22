@@ -2,7 +2,7 @@
 title: "Paarzeit in München: eine romantische Schatzsuche für zwei"
 date: "2025-05-22"
 endDate: "2025-05-28"
-time: "von 10:00 bis 17:00 Uhr"
+time: "vom 22. bis 28. Mai, von 10:00 bis 17:00 Uhr"
 ort: "Königsplatz, München"
 link: "[Offizielle Website](https://feverup.com/m/337708)"
 image: "/images/romanticquest_munich.webp"
