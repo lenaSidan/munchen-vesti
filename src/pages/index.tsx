@@ -1,3 +1,4 @@
+import ImportantNewsBlock from "@/components/ImportantNewsBlock";
 import OldWordOfTheWeek from "@/components/OldWordOfTheWeek";
 import Seo from "@/components/Seo";
 import WeatherInlineBlock from "@/components/WeatherInlineBlock";
@@ -87,7 +88,6 @@ export default function Home({
       <Seo title={t("seo.index_title")} description={t("seo.index_description")} />
       <h1 className={styles.visuallyHidden}>{t("home.page_title")}</h1>
       <div className={styles.container}>
-        {/* <ImportantNewsBlock /> */}
         <div className={styles.layout}>
           <div className={styles.articlesSection}>
             {mainEvent && (
@@ -123,7 +123,7 @@ export default function Home({
             <OldWordOfTheWeek words={oldWords} />
           </div>
         </div>
-
+        <ImportantNewsBlock />
         <MiniPostcards />
 
         {secondEvent && (
@@ -163,7 +163,7 @@ export default function Home({
             <ul className={styles.otherArticlesList}>
               {otherEvents.map((event) => (
                 <li key={event.slug} className={styles.articleLink}>
-                  <Link  href={`/events/${event.slug}`}>
+                  <Link href={`/events/${event.slug}`}>
                     {event.title} <span className={styles.articleDate}> | {event.time}</span>
                   </Link>
                 </li>

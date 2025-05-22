@@ -570,16 +570,11 @@
     "back_home": "Zurück zur Startseite"
   },
   "important_news": {
-    "title": "Wichtige Neuigkeiten",
-    "subTitle": "Live-Stream „Der Weg nach Hause“ – Antworten auf Fragen zur Rückkehr nach Russland",
-    "subTitle2": "Heute findet auf TikTok ein Live-Stream des Projekts „Der Weg nach Hause“ statt!",
-    "text1": "Wenn Sie über eine Rückkehr oder einen Umzug nach Russland nachdenken und Fragen zu Dokumenten, Wohnraum, Arbeit oder Integration haben – Anatolij und sein Team helfen Ihnen live weiter.",
-    "ul": "Im Live-Stream erfahren Sie:",
-    "li1": "Wie man aus dem Ausland nach Russland zurückkehrt",
-    "li2": "Welche rechtlichen und praktischen Möglichkeiten es gibt",
-    "li3": "Was man in ungewöhnlichen Situationen tun kann",
-    "li4": "Und wie man den Weg einfacher gestaltet",
-    "data": "5. Mai, 19:00 MSK",
-    "visit_tiktok": "Live-Stream auf TikTok ansehen"
+    "indexTitle": "Wichtige Nachricht",
+    "title": "Ohne Umstieg nach Italien",
+    "subtitle": "München – Rom in 8,5 Stunden",
+    "text": "Ab Dezember 2026 wird ein Hochgeschwindigkeitszug Frecciarossa zwischen München und Rom verkehren. Ohne Umstieg, direkt über Österreich und Norditalien.",
+    "text2": "München – Innsbruck – Bozen – Trient – Verona – Mailand – Rom",
+    "link_text": "Mehr erfahren →"
   }
 }
