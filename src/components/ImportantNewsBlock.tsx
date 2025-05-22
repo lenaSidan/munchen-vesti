@@ -1,68 +1,40 @@
-import importantNews from "@/data/importantNews.json";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/ImportantNews.module.css";
 import Image from "next/image";
 import Link from "next/link";
-
-interface NewsItem {
-  id: string;
-  titleKey: string;
-  textKey: string;
-  image?: string;
-  link?: string;
-}
 
 export default function ImportantNewsBlock() {
   const t = useTranslation();
 
   return (
     <section className={styles.importantNewsSection}>
-      <ul className={styles.newsList}>
-        {importantNews.map((item: NewsItem) => {
-          return (
-            <li key={item.id} className={styles.newsItem}>
-              <div className={styles.textWrapper}>
-                <h3 className={styles.newsTitle}>{t("important_news.subTitle")}</h3>
-                <div className={styles.block}>
-                  <div className={styles.blockLeft}>
-                    {item.image && (
-                      <div className={styles.imageWrapper}>
-                        <Image
-                          src={item.image}
-                          alt="News image"
-                          width={150}
-                          height={150}
-                          loading="lazy"
-                        />
-                      </div>
-                    )}
-                  </div>
-                  <div className={styles.blockRight}>
-                    <p className={styles.newSubtitle}>{t("important_news.subTitle2")}</p>
-                    <p className={styles.newsText}>{t("important_news.text1")}</p>
-                  </div>
-                </div>
-
-                <p className={styles.newsUlText}>{t("important_news.ul")}</p>
-                <ul className={styles.newsUl}>
-                  <li className={styles.newsLi}>{t("important_news.li1")}</li>
-                  <li className={styles.newsLi}>{t("important_news.li2")}</li>
-                  <li className={styles.newsLi}>{t("important_news.li3")}</li>
-                  <li className={styles.newsLi}>{t("important_news.li4")}</li>
-                </ul>
-                <p className={styles.newsData}>{t("important_news.data")}</p>
-                {item.link && (
-                  <p className={styles.linkWrapper}>
-                    <Link href={item.link} target="_blank" rel="noopener noreferrer">
-                      {t("important_news.visit_tiktok")}
-                    </Link>
-                  </p>
-                )}
+      <h3 className={styles.indexTitle}>{t("important_news.indexTitle")}</h3>
+      <div className={styles.newsItem}>
+        <div className={styles.textWrapper}>
+          <div className={styles.block}>
+            <div className={styles.blockLeft}>
+              <div className={styles.imageWrapper}>
+                <Image
+                  src="/images/train-munich-rome.webp"
+                  alt="Frecciarossa"
+                  width={500}
+                  height={300}
+                  loading="lazy"
+                />
               </div>
-            </li>
-          );
-        })}
-      </ul>
+            </div>
+            <div className={styles.blockRight}>
+              <h4 className={styles.newsTitle}>{t("important_news.title")}</h4>
+              <p className={styles.newSubtitle}>{t("important_news.subtitle")}</p>
+              <p className={styles.newsText}>{t("important_news.text")}</p>
+              <p className={styles.newsText2}>{t("important_news.text2")}</p>
+              <div className={styles.linkWrapper}>
+                <Link href="/news/munich-rome-train">{t("important_news.link_text")}</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
