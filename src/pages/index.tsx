@@ -108,7 +108,7 @@ export default function Home({
                   />
                 )}
                 <h2 className={styles.articleTitle}>{mainEvent.title}</h2>
-                {mainEvent.time && <p className={styles.articleDate}>{mainEvent.time}</p>}
+                {mainEvent.time && <div className={styles.articleDate}>{mainEvent.time}</div>}
 
                 <div className={styles.decorativeLine}></div>
                 <div
@@ -130,7 +130,7 @@ export default function Home({
           <article className={styles.secondArticle}>
             <div className={styles.secondArticleHeader}>
               <h2 className={styles.secondArticleTitle}>{secondEvent.title}</h2>
-              {secondEvent.time && <p className={styles.articleDate}>{secondEvent.time}</p>}
+              {secondEvent.time && <div className={styles.articleDate}>{secondEvent.time}</div>}
               <div className={styles.decorativeLine}></div>
             </div>
             <div className={styles.secondArticleGrid}>
