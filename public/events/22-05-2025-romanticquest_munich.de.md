@@ -1,6 +1,6 @@
 ---
 title: "Paarzeit in München: eine romantische Schatzsuche für zwei"
-date: "2025-05-22"
+date: "2025-05-25"
 endDate: "2025-05-28"
 time: "vom 22. bis 28. Mai, von 10:00 bis 17:00 Uhr"
 ort: "Königsplatz, München"
