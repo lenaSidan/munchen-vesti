@@ -1,5 +1,6 @@
 ---
 title: Münchens Frauen-Nacht-Taxi-Programm aufgrund hoher Nachfrage vorübergehend eingestellt
+date: "2025-03-15"
 image: "/images/frauen-nacht-taxi.webp"
 imageAlt: Münchens Frauen-Nacht-Taxi-Programm aufgrund hoher Nachfrage vorübergehend eingestellt
 seoTitle: Frauen-Nacht-Taxi in München pausiert wegen Budgetüberschreitung

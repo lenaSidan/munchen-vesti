@@ -39,11 +39,14 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.3s ease;
   line-height: 1.4;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  transition: color 0.3s ease-in-out;
 }
 
 .card h3 {
   font-size: 0.9rem;
-  
+  margin-top: 0;
 }
 .card:hover {
   box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
@@ -78,14 +81,20 @@
   text-decoration: none;
   margin-top: auto;
 }
-
+.date {
+  font-size: 0.8rem;
+  font-family: monospace;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--border-color);
+}
 .readMore {
   padding: 6px 12px;
   background: none;
   border: 1px solid var(--heading-color);
   color: var(--heading-color);
   background-color: var(--background);
-   font-family: monospace;
+  font-family: monospace;
   text-transform: uppercase;
   font-size: 0.9rem;
   cursor: pointer;
@@ -106,7 +115,7 @@
 
 @media (max-width: 768px) {
   .card h3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .card {
     font-size: 1.1rem;

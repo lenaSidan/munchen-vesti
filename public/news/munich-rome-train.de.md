@@ -1,5 +1,6 @@
 ---
 title: "Ohne Umstieg nach Italien: Ab Dezember 2026 verbindet eine neue Hochgeschwindigkeitsstrecke München und Rom"
+date: "2025-05-20"
 image: "/images/train-munich-rome.webp"
 imageAlt: "Hochgeschwindigkeitszug Frecciarossa"
 seoTitle: "Ab 2026: Direktverbindung München–Rom ohne Umstieg"

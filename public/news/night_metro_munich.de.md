@@ -1,5 +1,6 @@
 ---
 title: "Die Nacht-U-Bahn in München: Eine neue Ära des Stadtverkehrs"
+date: "2025-05-10"
 image: "/images/night_metro_munich.webp"
 imageAlt: "Nacht-U-Bahn in München"
 seoTitle: "Nacht-U-Bahn in München: Fahrplan, Linien und Änderungen im Verkehr"

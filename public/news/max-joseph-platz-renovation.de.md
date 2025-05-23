@@ -1,5 +1,6 @@
 ---
 title: "Umbau des Max-Joseph-Platzes: München bringt grüne Zukunft in sein historisches Zentrum"
+date: "2025-04-01"
 image: "/images/max-joseph-platz-renovation.webp"
 imageAlt: "Umbau des Max-Joseph-Platzes vor dem Nationaltheater"
 seoTitle: "Max-Joseph-Platz in München wird bis Ende 2025 grün"

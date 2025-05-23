@@ -1,5 +1,6 @@
 ---
 title: "Munich Arena — будущий символ современной концертной индустрии Германии"
+date: "2025-05-21"
 image: "/images/munich-arena-2029.webp"
 imageAlt: "Проект концертной арены Munich Arena"
 seoTitle: "Munich Arena — крупнейшая концертная арена Германии откроется в 2029 году"

@@ -1,5 +1,6 @@
 ---
 title: "Neue Regeln zur Mülltrennung in Deutschland ab Mai 2025"
+date: "2025-03-11"
 image: "/images/biomuell_trennung.webp"
 imageAlt: "Abfalltrennungsbehälter in Deutschland"
 seoTitle: "Ab 1. Mai 2025 – neue Strafen und Regeln zur Trennung von Bioabfällen in Deutschland"

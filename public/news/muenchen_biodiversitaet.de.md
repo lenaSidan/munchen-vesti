@@ -1,5 +1,6 @@
 ---
 title: "Eine nachhaltige Zukunft: Wie München die Biodiversität in der Stadt schützt"
+date: "2025-04-10"
 image: "/images/muenchen_biodiversitaet.webp"
 imageAlt: "Ein Münchner Stadtpark im Frühling"
 seoTitle: "Münchens Engagement für Biodiversität: Naturschutz, Blühwiesen und Insektenvielfalt"

@@ -1,5 +1,6 @@
 ---
 title: "Реконструкция Max-Joseph-Platz: Мюнхен возвращает историческому центру зелёный облик"
+date: "2025-04-01"
 image: "/images/max-joseph-platz-renovation.webp"
 imageAlt: "Реконструкция Max-Joseph-Platz перед Национальным театром"
 seoTitle: "Max-Joseph-Platz в Мюнхене станет зелёной к концу 2025 года"
