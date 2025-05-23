@@ -1,5 +1,6 @@
 ---
 title: "Saisonale Allergien in München: Frühling, Pollen und der Anstieg der Heuschnupfenfälle"
+date: "2025-04-15"
 image: "/images/allergie-muenchen.webp"
 imageAlt: "Pollenflug im Frühling in München"
 seoTitle: "Frühjahrsallergie in München: So schützen Sie sich vor Pollen"

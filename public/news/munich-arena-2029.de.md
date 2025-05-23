@@ -1,5 +1,6 @@
 ---
 title: "Munich Arena – das zukünftige Symbol der modernen Konzertindustrie Deutschlands"
+date: "2025-05-21"
 image: "/images/munich-arena-2029.webp"
 imageAlt: "Entwurf der Munich Arena"
 seoTitle: "Munich Arena – Deutschlands größte Konzerthalle eröffnet 2029"

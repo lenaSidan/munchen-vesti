@@ -1,6 +1,7 @@
 ---
 title: "Будущее трамвайной сети Мюнхена: ключевые проекты и перспективы"
 image: "/images/tram-muenchen-2025.webp"
+date: "2025-05-15"
 imageAlt: "Трамвай в Мюнхене"
 seoTitle: "Трамваи Мюнхена: новые маршруты и экологичный транспорт"
 seoDescription: "В Мюнхене планируются новые трамвайные линии: Westtangente, Johanneskirchen, Ramersdorf – Perlach и другие. Читайте подробности проектов."

@@ -1,5 +1,6 @@
 ---
 title: "Münchens Infrastruktur 2025: Neue Trinkbrunnen und moderne öffentliche Toiletten"
+date: "2025-05-14"
 image: "/images/muenchen-infrastruktur-2025.webp"
 imageAlt: "Trinkbrunnen in München"
 seoTitle: "München 2025: Mehr Brunnen und kostenlose Toiletten"

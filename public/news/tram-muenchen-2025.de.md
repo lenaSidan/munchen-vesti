@@ -1,5 +1,6 @@
 ---
 title: "Zukunft des Münchner Straßenbahnnetzes: Schlüsselprojekte und Perspektiven"
+date: "2025-05-15"
 image: "/images/tram-muenchen-2025.webp"
 imageAlt: "Straßenbahn in München"
 seoTitle: "Straßenbahnen in München: Neue Linien und umweltfreundlicher Verkehr"

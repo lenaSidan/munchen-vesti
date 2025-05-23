@@ -1,5 +1,6 @@
 ---
 title: München als fußgängerfreundlichste Stadt ausgezeichnet
+date: "2025-04-21"
 image: "/images/munich_2025.webp"
 imageAlt: München als fußgängerfreundlichste Stadt ausgezeichnet
 seoTitle: München weltweit führend in Fußgängerfreundlichkeit
