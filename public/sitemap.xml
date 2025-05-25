@@ -49,6 +49,8 @@
 <url><loc>https://munchen-vesti.de/news/tram-muenchen-2025</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://munchen-vesti.de/de/news/uber-women-feature</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://munchen-vesti.de/news/uber-women-feature</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://munchen-vesti.de/de/events/theaterwoche</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://munchen-vesti.de/events/theaterwoche</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/stadtgeburtstag</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/stadtgeburtstag</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/koerperwelten</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
@@ -61,8 +63,6 @@
 <url><loc>https://munchen-vesti.de/events/romanticquest_munich</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/corso-leopold</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/corso-leopold</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/de/events/untergiesing-strassenfest</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/events/untergiesing-strassenfest</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/vysotsky_concert</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/vysotsky_concert</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/midnightbazar</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
