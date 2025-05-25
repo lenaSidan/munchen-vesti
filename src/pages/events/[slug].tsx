@@ -64,11 +64,10 @@ export default function Event({ event, locale, archived }: EventProps) {
       {archived && <meta name="robots" content="noindex, nofollow" />}
       <div className={styles.articleContainer}>
         <h2 className={styles.title}>{event.title}</h2>
-        <p className={styles.meta}>
-          {event.date}
-          {event.endDate && ` – ${event.endDate}`}
+        <div className={styles.meta}>
+          {event.time}
           {event.ort && ` | ${event.ort}`}
-        </p>
+        </div>
         {archived && <div className={styles.archivedNotice}>⚠️ {t("events.archived_notice")}</div>}
         {event.image && (
           <div className={styles.imageWrapper}>
