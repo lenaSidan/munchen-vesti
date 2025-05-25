@@ -1,8 +1,8 @@
 ---
 title: "Midnightbazar: Ночной рынок в Мюнхене с новым домом в Alte Paketposthalle"
 date: "2025-05-30"
-endDate: "2025-05-30"
-time: "с 10:00 до 00:00"
+endDate: "2025-05-31"
+time: "30 и 31 мая, с 10:00 до 00:00"
 ort: "Alte Paketposthalle, Arnulfstraße 195, 80634 München"
 link: "[Официальный сайт](https://midnightbazar.de)"
 image: "/images/midnightbazar2025.webp"

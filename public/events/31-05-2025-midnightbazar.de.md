@@ -1,8 +1,8 @@
 ---
 title: "Midnightbazar: Nachtflohmarkt in München mit neuem Zuhause in der Alten Paketposthalle"
 date: "2025-05-30"
-endDate: "2025-05-30"
-time: "von 10:00 bis 00:00"
+endDate: "2025-05-31"
+time: "30. Mai – 31. Mai 2025, von 10:00 bis 00:00"
 ort: "Alte Paketposthalle, Arnulfstraße 195, 80634 München"
 link: "[Offizielle Website](https://midnightbazar.de)"
 image: "/images/midnightbazar2025.webp"
