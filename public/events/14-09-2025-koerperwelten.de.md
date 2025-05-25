@@ -36,10 +36,10 @@ Viele Besucher erwarten eine makabre Atmosphäre, doch stattdessen erleben sie e
 Diese Ausstellung ist nichts für schwache Nerven – aber eine einzigartige Chance, sich selbst besser kennenzulernen. Sie verbindet **Medizin, Wissenschaft und Kunst** und bringt dich zum Staunen, vielleicht auch ein bisschen zum Nachdenken (zum Beispiel über die letzte Tüte Chips, die du inhaliert hast). Egal ob Schüler, Sportler oder Hobby-Mediziner – hier gibt es für jeden Aha-Momente.
 
 ### **Für wen ist die Ausstellung geeignet?**
-- ● **Neugierige Köpfe:** Die sich schon immer gefragt haben, was unter der Haut wirklich passiert.
-- ● **Medizin- und Biologieinteressierte:** Die einen hautnahen (im wahrsten Sinne des Wortes) Blick auf den menschlichen Körper werfen möchten.
-- ● **Sportler:** Die verstehen wollen, welche Muskeln sie eigentlich trainieren.
-- ● **Alle, die sich bewusster mit ihrem Körper auseinandersetzen wollen.**
+- • **Neugierige Köpfe:** Die sich schon immer gefragt haben, was unter der Haut wirklich passiert.
+- • **Medizin- und Biologieinteressierte:** Die einen hautnahen (im wahrsten Sinne des Wortes) Blick auf den menschlichen Körper werfen möchten.
+- • **Sportler:** Die verstehen wollen, welche Muskeln sie eigentlich trainieren.
+- • **Alle, die sich bewusster mit ihrem Körper auseinandersetzen wollen.**
 
 ### **Praktische Infos für deinen Besuch**
 **Ort:** München, genaue Adresse auf der [Website](https://koerperwelten.de/stadt/muenchen/)  
