@@ -15,7 +15,7 @@ Am **31. Mai 2025** findet in Pforzheim eines der meist erwarteten Events dieses
 Es ist nicht einfach ein Markt, sondern ein echtes **Fest der Weiblichkeit, Mode und Inspiration**, das in der geräumigen **Bergdorfhalle Pforzheim (Stadtteil Büchenbronn)** stattfindet:  
 **Siedlungsstraße 42, 75180 Pforzheim**
 
-🕐 **Uhrzeit:** 13:00 bis 16:30
+**Uhrzeit:** 13:00 bis 16:30
 
 ### Was macht diesen Flohmarkt so besonders?
 
@@ -45,17 +45,17 @@ Die Veranstalter betonen, dass **Männer willkommen sind**, aber der Fokus des E
 
 ### Warum solltest du dabei sein?
 
-✔ Es ist der **erste Beauty Jungle Flohmarkt in Pforzheim** – sei von Anfang an Teil einer neuen Tradition  
-✔ Eine **einmalige Gelegenheit**, exklusive Stücke zu kleinen Preisen zu finden  
-✔ Ein Ort für **neue Kontakte, Austausch und Inspiration**  
-✔ **Alles ist überdacht** – kein Grund zur Sorge bei schlechtem Wetter
+- ✔ Es ist der **erste Beauty Jungle Flohmarkt in Pforzheim** – sei von Anfang an Teil einer neuen Tradition  
+- ✔ Eine **einmalige Gelegenheit**, exklusive Stücke zu kleinen Preisen zu finden  
+- ✔ Ein Ort für **neue Kontakte, Austausch und Inspiration**  
+- ✔ **Alles ist überdacht** – kein Grund zur Sorge bei schlechtem Wetter
 
 Ob mit Freundinnen, deiner Tochter oder allein – du wirst dich hier ganz sicher **als Teil einer großen, stilvollen Community** fühlen.
 
 **Beauty Jungle** ist **mehr als nur Shopping**.  
 Es ist **Atmosphäre**. Es bist **du**.
 
-✔ **Adresse:** Bergdorfhalle Pforzheim, Siedlungsstraße 42  
-✔ **Datum:** Samstag, 31. Mai 2025  
-✔ **Uhrzeit:** 13:00 bis 16:30  
-✔ **Mehr Infos und Anmeldung:** [beauty-jungle.de](https://www.beauty-jungle.de/)
+- ✔ **Adresse:** Bergdorfhalle Pforzheim, Siedlungsstraße 42  
+- ✔ **Datum:** Samstag, 31. Mai 2025  
+- ✔ **Uhrzeit:** 13:00 bis 16:30  
+- ✔ **Mehr Infos und Anmeldung:** [beauty-jungle.de](https://www.beauty-jungle.de/)
