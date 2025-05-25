@@ -1,7 +1,7 @@
 ---
 title: "Mädchenflohmarkt in Pforzheim: Ein Mode-Event im Stil von Beauty Jungle"
 date: "2025-05-31"
-endDate: ""
+endDate: "2025-05-31"
 time: "31. Mai 2025, 13:00-16:30"
 ort: "Bergdorfhalle Pforzheim, Siedlungsstraße 42, 75180 Pforzheim"
 link: "[Offizielle Website](https://www.beauty-jungle.de/)"
