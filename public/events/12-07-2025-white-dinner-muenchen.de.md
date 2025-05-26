@@ -14,9 +14,9 @@ seoDescription: "Am 12. Juli 2025 findet im Englischen Garten in München das st
 Jeden Sommer findet in München eines der stimmungsvollsten und elegantesten Events statt — das **White Dinner**.  
 Ein informelles Picknick im Stil der feinen Gesellschaft, bei dem sich die Teilnehmer*innen ganz in Weiß versammeln, um gemeinsam **den Sommer, die Ästhetik und die Freude am Miteinander unter freiem Himmel zu feiern**.
 
-**Datum:** Samstag, 12. Juli 2025  
-**Uhrzeit:** ab 13:00 Uhr  
-**Ort:** Englischer Garten, München
+- • **Datum:** Samstag, 12. Juli 2025  
+- • **Uhrzeit:** ab 13:00 Uhr  
+- • **Ort:** Englischer Garten, München
 
 Tausende Menschen breiten Tischdecken aus, stellen Porzellangeschirr auf, schmücken ihre Tische mit Blumen und Kerzen — und alles in Weiß.  
 Das Ergebnis: **ein magisches Bild**, wie aus einem verträumten europäischen Film.

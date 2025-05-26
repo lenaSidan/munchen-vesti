@@ -1,5 +1,4 @@
 ---
-slug: "fingerspitzengefuehl"
 word: "Fingerspitzengefühl"
 translation: "интуиция, чутьё"
 gender: "ср. род"
