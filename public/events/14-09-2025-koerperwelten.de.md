@@ -1,7 +1,7 @@
 ---
 title: "KÖRPERWELTEN in München: Eine Ausstellung, die unter die Haut geht"
 date: "2025-06-11"
-time: "ab 11. April 2025 10–18 Uhr"
+time: "ab 11. April 2025, 10–18 Uhr"
 ort: "Kleine Olympiahalle Spiridon-Louis-Ring 21"
 image: "/images/koerperwelten_muenchen.webp"
 imageAlt: "Illustration von anatomischen Figuren aus der Ausstellung KÖRPERWELTEN in München mit Muskel- und Körpersystemen"
