@@ -30,6 +30,36 @@
     "quote_ru": "Это хвост белки, а не ерунда!"
   },
   {
+    "word": "Wenn’s Oascherl brummt, is’ das Herzerl gsund",
+    "type_de": "Sprichwort",
+    "type_ru": "Поговорка",
+    "gender_de": "-",
+    "gender_ru": "-",
+    "translation_de": "Wenn der Hintern knattert, ist das Herz gesund",
+    "translation_ru": "Если попка шумит, значит сердечко здорово",
+    "explanation_de": "Bayerisches Sprichwort: Wenn der Körper funktioniert, ist man gesund – auch wenn es peinlich ist.",
+    "explanation_ru": "Баварская поговорка: если организм работает, значит человек здоров — даже если это звучит неловко.",
+    "origin_de": "Humorvoll aus dem Bayerischen Dialekt.",
+    "origin_ru": "Шутливое выражение из баварского диалекта.",
+    "quote_de": "Wenn’s Oascherl brummt, is’ das Herzerl gsund.",
+    "quote_ru": "Если попка шумит — значит, сердечко здорово."
+  },
+  {
+    "word": "Scheiß da nix, dann feid da nix",
+    "type_de": "Sprichwort",
+    "type_ru": "Поговорка",
+    "gender_de": "-",
+    "gender_ru": "-",
+    "translation_de": "Hab keine Angst, dann geht nichts schief",
+    "translation_ru": "Не бойся — тогда всё получится",
+    "explanation_de": "Mutiger Spruch aus dem Bairischen: Nur wer sich etwas traut, kann etwas erreichen.",
+    "explanation_ru": "Баварская поговорка: только тот, кто не боится, может чего-то добиться.",
+    "origin_de": "Bayerischer Dialekt – humorvoll gemeint.",
+    "origin_ru": "Баварский диалект, шуточное выражение.",
+    "quote_de": "Scheiß da nix, dann feid da nix!",
+    "quote_ru": "Не бойся — тогда всё получится!"
+  },
+  {
     "word": "Servus",
     "type_de": "Redewendung",
     "type_ru": "Фраза",
