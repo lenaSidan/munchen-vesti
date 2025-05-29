@@ -36,13 +36,13 @@ interface EventProps {
   event: Event;
   locale: string;
   archived: boolean;
+  similarEvents: Event[];
 }
 
-export default function Event({ event, locale, archived }: EventProps) {
+export default function Event({ event, locale, archived, similarEvents }: EventProps) {
   const t = useTranslation();
 
   const canonicalUrl = `https://munchen-vesti.de/${locale === "de" ? "de/" : "ru/"}events/${event.slug}`;
-
   const jsonLd = getEventJsonLd({
     title: event.title,
     description: event.seoDescription || "",
@@ -99,7 +99,21 @@ export default function Event({ event, locale, archived }: EventProps) {
             <span className={styles.left}>⊱❧</span>
           </div>
         </div>
+
+        {archived && similarEvents.length > 0 && (
+          <div className={styles.similarEvents}>
+            <h3 className={styles.similarTitle}>{t("events.similar_events")}</h3>
+            <ul className={styles.similarList}>
+              {similarEvents.map((e) => (
+                <li key={e.slug}>
+                  <Link href={`/events/${e.slug}`}>{e.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
+
       <div className={styles.socialLinks}>
         <SocialLinks />
       </div>
@@ -155,7 +169,11 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
     })
     .use(rehypeStringify)
     .process(content);
+
   const contentHtml = processedContent.toString();
+
+  const allCurrentEvents = getEventsByLocale(locale);
+const similarEvents = allCurrentEvents.filter((e) => e.slug !== params.slug).slice(0, 3);
 
   return {
     props: {
@@ -175,6 +193,7 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
       },
       locale,
       archived: isArchived,
+      similarEvents,
     },
     revalidate: 600,
   };

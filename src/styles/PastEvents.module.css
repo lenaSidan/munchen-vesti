@@ -88,7 +88,7 @@
   }
 
   .title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 20px;
   }
 
@@ -107,13 +107,12 @@
   }
 
   .eventDetails {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-align: left;
   }
 
   .smallImage {
-    width: 100px;
-    height: auto;
+   display: none;
   }
 
   .imageTitleWrapper {
