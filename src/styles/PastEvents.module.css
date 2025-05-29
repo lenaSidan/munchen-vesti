@@ -23,11 +23,11 @@
 
 .title {
   font-family: var(--font-body);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: center;
   color: var(--heading-color2);
-  margin-bottom: 30px;
-  
+  margin-bottom: 25px;
+  border-bottom: 0;
 }
 
 .eventCardBox {
@@ -42,7 +42,9 @@
   background-color: var(--alt-background1);
   border-radius: 8px;
   border: 1px solid var(--border-color);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
   text-decoration: none;
   color: inherit;
 }
@@ -57,7 +59,6 @@
   display: flex;
   gap: 10px;
   align-items: center;
-
 }
 
 .smallImage {
@@ -71,7 +72,7 @@
   color: var(--heading-color);
   margin: 0 0 6px 0;
   text-decoration: none;
-  text-transform: none; 
+  text-transform: none;
 }
 
 .eventDetails {
@@ -80,7 +81,6 @@
   color: var(--border-color);
   margin: 0;
 }
-
 
 @media (max-width: 768px) {
   .articleContainer {
@@ -112,7 +112,7 @@
   }
 
   .smallImage {
-   display: none;
+    display: none;
   }
 
   .imageTitleWrapper {
