@@ -1,0 +1,16 @@
+/public/images/bauma_2025.webp
+/public/images/victory_day_2025.webp
+/public/images/lange_nacht_musik_munich.webp
+/public/images/mcbw2025.webp
+/public/images/sport_events_munich.webp
+/public/images/bachelor_and_more.webp
+/public/images/israeltag2025.webp
+/public/images/romanticquest_munich.webp
+/public/images/corso_leopold.webp
+/public/images/hofflohmarkt2025.webp
+/public/images/fruehlingsfest_munich.webp
+/public/images/auer_dult_.webp
+/public/images/flohmarkt_theresienwiese.webp
+/public/images/happy_life_conference.webp
+/public/images/munich_cocktail_week.webp
+/public/images/reiki_retreat_costa_blanca.webp

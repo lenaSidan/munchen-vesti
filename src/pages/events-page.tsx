@@ -10,6 +10,7 @@ import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 // import EasterEggById from "@/components/EasterEggById";
+import Link from "next/link";
 import rehypeExternalLinks from "rehype-external-links";
 
 interface EventsProps {
@@ -136,7 +137,13 @@ export default function EventsPage({ events }: EventsProps) {
             </div>
           </div>
         ))}
+        {/* <div className={styles.archiveLinkBox}>
+          <Link href="/past-events-page" className={styles.archiveLink}>
+            {t("buttons.past_events")}
+          </Link>
+        </div> */}
       </div>
+
       {/* <EasterEggById id="easteregg-events" chance={0.5} /> */}
     </>
   );

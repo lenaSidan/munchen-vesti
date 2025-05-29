@@ -1,10 +1,10 @@
-import { getEventsByLocale, Event } from "@/lib/getEvents";
-import { useState } from "react";
-import Link from "next/link";
-import { GetStaticProps } from "next";
-import useTranslation from "@/hooks/useTranslation";
 import Seo from "@/components/Seo";
+import useTranslation from "@/hooks/useTranslation";
+import { Event, getEventsByLocale } from "@/lib/getEvents";
 import styles from "@/styles/Events.module.css";
+import { GetStaticProps } from "next";
+import Link from "next/link";
+import { useState } from "react";
 // import EasterEggById from "@/components/EasterEggById";
 
 interface EventsProps {
@@ -62,7 +62,12 @@ export default function Events({ events }: EventsProps) {
         </div>
         <div className={styles.monthSelectContainer}>
           <label htmlFor="monthSelect">{t("months.filter_by_month")}</label>
-          <select id="monthSelect" value={selectedMonth} onChange={handleMonthChange} className={styles.monthSelect}>
+          <select
+            id="monthSelect"
+            value={selectedMonth}
+            onChange={handleMonthChange}
+            className={styles.monthSelect}
+          >
             <option value="">{t("months.all_months")}</option>
             {months.map((month) => (
               <option key={month} value={month}>
@@ -88,7 +93,13 @@ export default function Events({ events }: EventsProps) {
             </Link>
           ))}
         </div>
+        <div className={styles.archiveLinkBox}>
+          <Link href="/past-events-page" className={styles.archiveLink}>
+            {t("buttons.past_events")}
+          </Link>
+        </div>
       </div>
+
       {/* <EasterEggById id="easteregg-events" chance={0.5} /> */}
     </>
   );
@@ -119,7 +130,6 @@ export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) =>
   };
 };
 
-
 // export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) => {
 //   const allEvents = getEventsByLocale(locale || "ru");
 
@@ -148,4 +158,3 @@ export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) =>
 //     },
 //   };
 // };
-

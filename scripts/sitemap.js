@@ -6,13 +6,8 @@ const pagesDir = path.join(process.cwd(), "src/pages");
 
 const excludeFiles = ["_app.tsx", "_document.tsx", "_error.tsx", "404.tsx", "500.tsx"];
 const excludeDirs = ["api", "components"];
-const excludeCustomPaths = [
-  "article-muenchen",
-  "nachrichten-muenchen",
-  "veranstaltungen-muenchen",
-];
+const excludeCustomPaths = ["article-muenchen", "nachrichten-muenchen", "veranstaltungen-muenchen"];
 
-// Рекурсивный обход всех файлов в папке pages
 function walkDir(dir, fileList = []) {
   const files = fs.readdirSync(dir);
   for (const file of files) {
@@ -23,11 +18,7 @@ function walkDir(dir, fileList = []) {
       if (!excludeDirs.includes(file)) {
         walkDir(filePath, fileList);
       }
-    } else if (
-      file.endsWith(".tsx") &&
-      !excludeFiles.includes(file) &&
-      !file.startsWith("[")
-    ) {
+    } else if (file.endsWith(".tsx") && !excludeFiles.includes(file) && !file.startsWith("[")) {
       const relativePath = path.relative(pagesDir, filePath).replace(/\\/g, "/").trim();
       fileList.push(relativePath);
     }
@@ -35,7 +26,6 @@ function walkDir(dir, fileList = []) {
   return fileList;
 }
 
-// Генерация URL из всех .tsx-файлов
 function getStaticPages() {
   const allFiles = walkDir(pagesDir);
 
@@ -52,7 +42,6 @@ function getStaticPages() {
   });
 }
 
-// Обработка markdown-файлов
 function getMarkdownUrls(folder, prefix, checkEventDates = false, priority = "0.6") {
   const dirPath = path.join(process.cwd(), "public", folder);
   if (!fs.existsSync(dirPath)) return [];
@@ -84,26 +73,33 @@ function getMarkdownUrls(folder, prefix, checkEventDates = false, priority = "0.
     .filter(Boolean);
 }
 
-// Генерация sitemap.xml
+// 🔹 Новая функция для прошедших событий
+function getArchivedEventUrls() {
+  return getMarkdownUrls("events/arhiv", "events", false, "0.3");
+}
+
 function generateSitemap() {
   const staticUrls = [
     `<url><loc>${baseUrl}</loc><changefreq>daily</changefreq><priority>1.0</priority></url>`,
-    `<url><loc>${baseUrl}/ru/article-muenchen</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>`,
-    `<url><loc>${baseUrl}/de/article-muenchen</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>`,
-    `<url><loc>${baseUrl}/ru/nachrichten-muenchen</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`,
-    `<url><loc>${baseUrl}/de/nachrichten-muenchen</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`,
-    `<url><loc>${baseUrl}/ru/veranstaltungen-muenchen</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>`,
-    `<url><loc>${baseUrl}/de/veranstaltungen-muenchen</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>`,
+    `<url><loc>${baseUrl}/past-events-page</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>`,
   ];
 
   const dynamicPages = getStaticPages();
   const newsUrls = getMarkdownUrls("news", "news", false, "0.6");
   const articlesUrls = getMarkdownUrls("articles", "articles", false, "0.7");
   const eventsUrls = getMarkdownUrls("events", "events", true, "0.9");
+  const archivedEvents = getArchivedEventUrls();
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${[...staticUrls, ...dynamicPages, ...newsUrls, ...eventsUrls, ...articlesUrls].join("\n")}
+${[
+  ...staticUrls,
+  ...dynamicPages,
+  ...newsUrls,
+  ...eventsUrls,
+  ...archivedEvents,
+  ...articlesUrls,
+].join("\n")}
 </urlset>`;
 
   fs.writeFileSync(path.join(process.cwd(), "public", "sitemap.xml"), sitemap);
@@ -111,4 +107,3 @@ ${[...staticUrls, ...dynamicPages, ...newsUrls, ...eventsUrls, ...articlesUrls].
 }
 
 generateSitemap();
-
