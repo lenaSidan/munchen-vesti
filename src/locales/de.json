@@ -40,6 +40,9 @@
     "paragraph3": "Der Kalender ist kostenlos und unabhängig. Sie können gerne Ihre eigenen Veranstaltungen vorschlagen oder weiterempfehlen.",
     "link_text": "Zu den aktuellen Veranstaltungen"
   },
+  "buttons": {
+    "past_events": "Archiv der Veranstaltungen"
+  },
   "weather": {
     "title": "Wetter in München",
     "precip": "Niederschlag",
@@ -147,8 +150,11 @@
     "oldWordsAll_title": "Alte vergessene deutsche Wörter",
     "bavarianWords_title": "Bairische Wörter – Münchener Zeitung",
     "bavarianWords_description": "Bairische Ausdrücke mit russischer Übersetzung und Erklärung. Einblicke in den Dialekt Süddeutschlands.",
-    "bavarianWordsAll_title": "Wörterbuch der bairischen Begriffe"
+    "bavarianWordsAll_title": "Wörterbuch der bairischen Begriffe",
+    "past_events_title": "Vergangene Veranstaltungen in München",
+    "past_events_description": "Archiv kultureller und städtischer Veranstaltungen, die bereits in München stattgefunden haben. Entdecken Sie, was los war."
   },
+  "past_events_heading": "Veranstaltungsarchiv",
   "menu": {
     "articles": "Artikel",
     "announcements": "Events",

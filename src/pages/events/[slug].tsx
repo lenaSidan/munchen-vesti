@@ -61,7 +61,8 @@ export default function Event({ event, locale, archived }: EventProps) {
         url={canonicalUrl}
         jsonLd={jsonLd}
       />
-      {archived && <meta name="robots" content="noindex, nofollow" />}
+      {archived && <meta name="robots" content="noindex, follow" />}
+
       <div className={styles.articleContainer}>
         <h2 className={styles.title}>{event.title}</h2>
         <div className={styles.meta}>
@@ -90,7 +91,7 @@ export default function Event({ event, locale, archived }: EventProps) {
             <span className={styles.left}>⊱❧</span>
             <span className={styles.right}>⊱❧</span>
           </div>
-          <Link href="/events" className={styles.readMore}>
+          <Link href={archived ? "/past-events-page" : "/events"} className={styles.readMore}>
             {t("articles.back")}
           </Link>
           <div className={`${styles.decorativeLine} ${styles.bottom}`}>
@@ -99,7 +100,7 @@ export default function Event({ event, locale, archived }: EventProps) {
           </div>
         </div>
       </div>
-      <div  className={styles.socialLinks}>
+      <div className={styles.socialLinks}>
         <SocialLinks />
       </div>
     </>

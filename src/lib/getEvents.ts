@@ -1,10 +1,8 @@
-export default getEventsByLocale;
-
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-// Интерфейс для статьи
+// Интерфейс события
 export interface Event {
   slug: string;
   title: string;
@@ -20,9 +18,8 @@ export interface Event {
   imageAlt?: string;
 }
 
-// Функция загрузки статей по языку
-export function getEventsByLocale(locale: string): Event[] {
-  const eventsDir = path.join(process.cwd(), "public/events");
+// 🔧 Общая функция для загрузки событий из указанной директории
+function getEventsFromDirectory(eventsDir: string, locale: string): Event[] {
   const files = fs.readdirSync(eventsDir).filter((file) => file.endsWith(`.${locale}.md`));
 
   const events = files.map((file) => {
@@ -46,8 +43,31 @@ export function getEventsByLocale(locale: string): Event[] {
     };
   });
 
-  // Фильтруем статьи с валидной датой и сортируем от ближайших событий до самых поздних
-  return events
-    .filter((event) => event.date && !isNaN(new Date(event.date).getTime())) // Исключаем события без валидной даты
-    .sort((a, b) => new Date(a.date!).getTime() - new Date(b.date!).getTime()); // Сортируем по возрастанию (сначала ближайшие)
+  return events.filter((event) => event.date && !isNaN(new Date(event.date).getTime()));
+}
+
+// 🎯 Будущие события
+export function getEventsByLocale(locale: string): Event[] {
+  const eventsDir = path.join(process.cwd(), "public/events");
+  const allEvents = getEventsFromDirectory(eventsDir, locale);
+
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
+
+  return allEvents
+    .filter((event) => new Date(event.date!).getTime() >= now.getTime())
+    .sort((a, b) => new Date(a.date!).getTime() - new Date(b.date!).getTime());
+}
+
+// 📅 Прошедшие события
+export function getPastEventsByLocale(locale: string): Event[] {
+  const archiveDir = path.join(process.cwd(), "public/events/arhiv");
+  const pastEvents = getEventsFromDirectory(archiveDir, locale);
+
+  return pastEvents
+    .filter((event) => {
+      const end = event.endDate || event.date;
+      return end && new Date(end).getTime() < Date.now();
+    })
+    .sort((a, b) => new Date(b.date!).getTime() - new Date(a.date!).getTime()); // новые выше
 }

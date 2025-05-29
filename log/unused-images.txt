@@ -1,3 +1,2 @@
-/public/images/paper-texture.jpg
-/public/images/scroll-up-dark.png
-/public/images/scroll-up-light.png
+/public/images/disco_vulkan.webp
+/public/images/flohmarkt.webp
