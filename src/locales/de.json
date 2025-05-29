@@ -296,7 +296,8 @@
   },
   "events": {
     "read_more": "Weiterlesen",
-    "archived_notice": "Diese Veranstaltung ist bereits vorbei."
+    "archived_notice": "Diese Veranstaltung ist bereits vorbei.",
+    "similar_events": "Aktuelle Veranstaltungen"
   },
   "event": {
     "time": "Datum",

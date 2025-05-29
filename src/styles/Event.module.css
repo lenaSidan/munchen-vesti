@@ -24,10 +24,10 @@
 .archivedNotice {
   margin: 2rem 0;
   padding: 1rem 1.5rem;
-  border-left: 5px solid #c00;
-  background-color: #fff0f0;
+  border-left: 5px solid var(--heading-color);
+  background-color: var(--alt-background);
   font-weight: 500;
-  color: #800;
+  color: var(--heading-color);
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -196,7 +196,29 @@
   margin: 0 auto;
   padding-bottom: 20px;
 }
+.similarEvents {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--text-color);
+}
 
+.similarTitle {
+  margin-bottom: 0.5rem;
+}
+
+.similarList {
+  padding: 0;
+}
+
+.similarList li {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+.similarList a {
+  color: var(--heading-color2);
+  font-weight: 500;
+  font-family: var(--font-body);
+}
 @media (max-width: 768px) {
   .articleContainer {
     padding: 15px;
@@ -276,5 +298,27 @@
 
   .decorativeLine span {
     font-size: 1.2rem;
+  }
+  .similarEvents {
+    margin-top: 1.6rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--text-color);
+  }
+
+  .similarTitle {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .similarList {
+    list-style: none;
+    padding: 0;
+    font-size: 0.9rem;
+  }
+
+  .similarList li {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
   }
 }

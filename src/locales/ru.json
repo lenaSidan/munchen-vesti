@@ -296,7 +296,8 @@
   },
   "events": {
     "read_more": "Читать далѣе",
-    "archived_notice": "Это событие уже завершилось."
+    "archived_notice": "Это событие уже завершилось.",
+    "similar_events": "Актуальные события"
   },
   "event": {
     "time": "дата",
