@@ -7,8 +7,7 @@ seoTitle: "Hofreiter BeerenCafé bei München – Beeren und Kuchen für die gan
 seoDescription: "Das Hofreiter BeerenCafé bei München: frische Beeren, hausgemachte Kuchen, Spielplatz und Natur. Der perfekte Ort für einen Familienausflug."
 ---
 
-Ein Familienausflug in die Natur kann nicht nur gesund, sondern auch richtig lecker sein.  
-Wenn Sie denken, ein Bauernhof sei nur etwas für Gummistiefel, Matsch und Traktoren, wird Sie das **Hofreiter BeerenCafé** eines Besseren belehren. Hier duften die Beeren nach Sommer, die Kuchen nach Omas Liebe, und Kinder rennen über die Wiese, als gäbe es keine Smartphones. 
+Ein Familienausflug in die Natur kann nicht nur gesund, sondern auch richtig lecker sein. Wenn Sie denken, ein Bauernhof sei nur etwas für Gummistiefel, Matsch und Traktoren, wird Sie das **Hofreiter BeerenCafé** eines Besseren belehren. Hier duften die Beeren nach Sommer, die Kuchen nach Omas Liebe, und Kinder rennen über die Wiese, als gäbe es keine Smartphones. 
 
 Das ist kein gewöhnliches Café – das ist ein echtes Familienabenteuer unter freiem Himmel, inklusive frischer Erdbeeren und Apfelstrudel.
 
