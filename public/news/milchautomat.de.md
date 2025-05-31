@@ -48,7 +48,6 @@ Unterrohrbach 4a, 84513 Erharting
 ### Tipps für Einsteiger
 
 - • Eigene Flasche mitnehmen – Plastikflaschen gibt’s oft vor Ort, aber Glas ist stilechter  
-- • Rohmilch vor dem Trinken **immer abkochen** – besonders wichtig für Schwangere und Kinder  
 - • Keine Sorge: Diese Automaten sind legal, hygienisch und von lokalen Behörden genehmigt  
 
 ### Warum das wichtig ist
