@@ -1,7 +1,7 @@
 ---
 title: "Street Food Panda Festival 2025: Kulinarisches Fest an der Olympia-Regattastrecke"
-date: "2025-05-30"
-endDate: "2025-06-01"
+date: "2025-06-01"
+endDate: ""
 time: "30. Mai – 1. Juni 2025"
 ort: "Olympia-Regattastrecke, Oberschleißheim"
 link: "[Offizielle Website](https://streetfoodpanda.de)"
