@@ -1,4 +1,5 @@
 import Seo from "@/components/Seo";
+import SubscribeBox from "@/components/SubscribeBox";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/BavarianWordsPage.module.css";
 import fs from "fs/promises";
@@ -85,6 +86,7 @@ export default function BavarianWordsPage({ words }: Props) {
             ))}
           </div>
         </div>
+           <SubscribeBox />
       </div>
     </>
   );

@@ -43,6 +43,10 @@
   "buttons": {
     "past_events": "Archiv der Veranstaltungen"
   },
+  "subscribe": {
+    "text": "Keine Veranstaltungen mehr verpassen?",
+    "button": "Jetzt auf Telegram abonnieren"
+  },
   "weather": {
     "title": "Wetter in München",
     "precip": "Niederschlag",

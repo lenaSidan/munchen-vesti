@@ -1,6 +1,7 @@
 import ImportantNewsBlock from "@/components/ImportantNewsBlock";
 import OldWordOfTheWeek from "@/components/OldWordOfTheWeek";
 import Seo from "@/components/Seo";
+import SubscribeBox from "@/components/SubscribeBox";
 import WeatherInlineBlock from "@/components/WeatherInlineBlock";
 import announcementsData from "@/data/announcements.json";
 import useTranslation from "@/hooks/useTranslation";
@@ -123,6 +124,7 @@ export default function Home({
             <OldWordOfTheWeek words={oldWords} />
           </div>
         </div>
+        <SubscribeBox />
         <ImportantNewsBlock />
         <MiniPostcards />
 

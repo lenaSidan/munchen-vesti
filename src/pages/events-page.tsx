@@ -10,7 +10,7 @@ import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 // import EasterEggById from "@/components/EasterEggById";
-import Link from "next/link";
+import SubscribeBox from "@/components/SubscribeBox";
 import rehypeExternalLinks from "rehype-external-links";
 
 interface EventsProps {
@@ -143,7 +143,7 @@ export default function EventsPage({ events }: EventsProps) {
           </Link>
         </div> */}
       </div>
-
+      <SubscribeBox />
       {/* <EasterEggById id="easteregg-events" chance={0.5} /> */}
     </>
   );

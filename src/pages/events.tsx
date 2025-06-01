@@ -1,4 +1,5 @@
 import Seo from "@/components/Seo";
+import SubscribeBox from "@/components/SubscribeBox";
 import useTranslation from "@/hooks/useTranslation";
 import { Event, getEventsByLocale } from "@/lib/getEvents";
 import styles from "@/styles/Events.module.css";
@@ -57,6 +58,7 @@ export default function Events({ events }: EventsProps) {
               <span>{t("months.link_text")}</span>
             </Link>
             {t("months.introWithLink_part2")}
+            
           </p>
           <p className={styles.introText4}>{t("months.introPart4")}</p>
         </div>
@@ -75,6 +77,7 @@ export default function Events({ events }: EventsProps) {
               </option>
             ))}
           </select>
+          
         </div>
         <div className={styles.eventCardBox}>
           {filteredEvents.map((event, index) => (
@@ -99,7 +102,7 @@ export default function Events({ events }: EventsProps) {
           </Link>
         </div>
       </div>
-
+      <SubscribeBox />
       {/* <EasterEggById id="easteregg-events" chance={0.5} /> */}
     </>
   );
