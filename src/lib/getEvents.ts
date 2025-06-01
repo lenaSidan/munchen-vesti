@@ -46,7 +46,7 @@ function getEventsFromDirectory(eventsDir: string, locale: string): Event[] {
   return events.filter((event) => event.date && !isNaN(new Date(event.date).getTime()));
 }
 
-// 🎯 Будущие события
+// 🎯 Будущие и текущие события
 export function getEventsByLocale(locale: string): Event[] {
   const eventsDir = path.join(process.cwd(), "public/events");
   const allEvents = getEventsFromDirectory(eventsDir, locale);
@@ -55,7 +55,11 @@ export function getEventsByLocale(locale: string): Event[] {
   now.setHours(0, 0, 0, 0);
 
   return allEvents
-    .filter((event) => new Date(event.date!).getTime() >= now.getTime())
+    .filter((event) => {
+      const start = new Date(event.date!);
+      const end = event.endDate ? new Date(event.endDate) : start;
+      return end.getTime() >= now.getTime(); // Событие ещё не завершилось
+    })
     .sort((a, b) => new Date(a.date!).getTime() - new Date(b.date!).getTime());
 }
 
@@ -67,7 +71,7 @@ export function getPastEventsByLocale(locale: string): Event[] {
   return pastEvents
     .filter((event) => {
       const end = event.endDate || event.date;
-      return end && new Date(end).getTime() < Date.now();
+      return end && new Date(end).getTime() < Date.now(); // завершилось
     })
     .sort((a, b) => new Date(b.date!).getTime() - new Date(a.date!).getTime()); // новые выше
 }

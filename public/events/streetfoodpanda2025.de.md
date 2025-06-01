@@ -1,7 +1,7 @@
 ---
 title: "Street Food Panda Festival 2025: Kulinarisches Fest an der Olympia-Regattastrecke"
-date: "2025-06-01"
-endDate: ""
+date: "2025-05-30"
+endDate: "2025-06-01"
 time: "30. Mai – 1. Juni 2025"
 ort: "Olympia-Regattastrecke, Oberschleißheim"
 link: "[Offizielle Website](https://streetfoodpanda.de)"
@@ -17,10 +17,10 @@ Vom **30. Mai bis 1. Juni 2025** verwandelt sich die Olympia-Regattastrecke in O
 
 Mehr als **60 Foodtrucks und mobile Küchen** bieten Spezialitäten aus aller Welt:
 
-- • Burger, thailändische Suppen, mexikanische Tacos  
-- • Authentische indische und japanische Gerichte  
-- • Glutenfreie, vegane und regionale Angebote  
-- • Asiatisches Eis, belgische Waffeln und philippinische Desserts  
+- • Burger, thailändische Suppen, mexikanische Tacos
+- • Authentische indische und japanische Gerichte
+- • Glutenfreie, vegane und regionale Angebote
+- • Asiatisches Eis, belgische Waffeln und philippinische Desserts
 
 Zahlreiche Anbieter sind Gewinner oder Finalisten von Street-Food-Wettbewerben. Hier findet jeder seinen Geschmack.
 
@@ -28,39 +28,39 @@ Zahlreiche Anbieter sind Gewinner oder Finalisten von Street-Food-Wettbewerben. 
 
 Das Festival richtet sich an die ganze Familie. Auf dem Gelände gibt es:
 
-- • Kinderbereich mit Hüpfburgen und Mitmachaktionen  
-- • Wasserattraktionen und Schaumpartys  
-- • Kinderschminken und Kreativangebote  
-- • Straßenkünstler, Live-Musik und Seifenblasenshows  
-- • Vintage-Flohmarkt und Kunsthandwerk  
+- • Kinderbereich mit Hüpfburgen und Mitmachaktionen
+- • Wasserattraktionen und Schaumpartys
+- • Kinderschminken und Kreativangebote
+- • Straßenkünstler, Live-Musik und Seifenblasenshows
+- • Vintage-Flohmarkt und Kunsthandwerk
 
 Ein besonderes Highlight: die riesige aufblasbare Panda-Figur – das Wahrzeichen des Festivals.
 
 ### Ort und Zeiten
 
 **Olympia-Regattastrecke**  
-Dachauer Straße 35, 85764 Oberschleißheim – nur 20 Minuten vom Münchner Zentrum entfernt.  
+Dachauer Straße 35, 85764 Oberschleißheim – nur 20 Minuten vom Münchner Zentrum entfernt.
 
 Öffnungszeiten:
 
-- • Freitag, 30. Mai: 14:00 – 22:00 Uhr  
-- • Samstag, 31. Mai: 12:00 – 22:00 Uhr  
-- • Sonntag, 1. Juni: 12:00 – 22:00 Uhr  
+- • Freitag, 30. Mai: 14:00 – 22:00 Uhr
+- • Samstag, 31. Mai: 12:00 – 22:00 Uhr
+- • Sonntag, 1. Juni: 12:00 – 22:00 Uhr
 
 Anreise mit der S1 (Bahnhof Oberschleißheim), dem Fahrrad oder PKW (Parkplätze vorhanden).
 
 ### Eintritt
 
-- • Tagesticket ab 3,50 €  
-- • Kinder bis 12 Jahre: freier Eintritt  
-- • Tickets erhältlich auf [streetfoodpanda.de](https://streetfoodpanda.de) oder direkt vor Ort  
+- • Tagesticket ab 3,50 €
+- • Kinder bis 12 Jahre: freier Eintritt
+- • Tickets erhältlich auf [streetfoodpanda.de](https://streetfoodpanda.de) oder direkt vor Ort
 
 ### Warum lohnt sich der Besuch?
 
-- • Kulinarische Weltreise mit über 60 Anbietern  
-- • Entspannter Tag inmitten der Natur  
-- • Abwechslungsreiches Programm für Groß und Klein  
-- • Neue Geschmäcker entdecken, gemeinsam genießen  
+- • Kulinarische Weltreise mit über 60 Anbietern
+- • Entspannter Tag inmitten der Natur
+- • Abwechslungsreiches Programm für Groß und Klein
+- • Neue Geschmäcker entdecken, gemeinsam genießen
 - • Sommer, Musik und Lebensfreude am Wasser
 
 **Merken Sie sich das Datum vor: 30. Mai bis 1. Juni 2025.**  

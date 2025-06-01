@@ -1,9 +1,9 @@
 ---
 title: "Street Food Panda Festival 2025: гастрономический праздник под Мюнхеном"
-date: "2025-06-01"
-endDate: ""
+date: "2025-05-30"
+endDate: "2025-06-01"
 time: "30 мая – 1 июня 2025 года"
-ort: "Олимпийская регатная трасса, Обершлайсхайм"
+ort: "Olympia-Regattastrecke, Oberschleißheim"
 link: "[Официальный сайт](https://streetfoodpanda.de)"
 image: "/images/streetfoodpanda.webp"
 imageAlt: "Праздничная толпа на фестивале Street Food Panda"
