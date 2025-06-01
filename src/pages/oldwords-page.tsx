@@ -1,4 +1,5 @@
 import Seo from "@/components/Seo";
+import SubscribeBox from "@/components/SubscribeBox";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/OldWordsPage.module.css";
 import fs from "fs/promises";
@@ -41,6 +42,7 @@ export default function OldWordsPage({ words }: Props) {
             <p className={styles.descriptionText2}>{t("oldword.description2")}</p>
           </div>
         </div>
+
         <div className={styles.wrapper}>
           <div className={styles.grid}>
             {words.map((word, idx) => (
@@ -62,6 +64,7 @@ export default function OldWordsPage({ words }: Props) {
             ))}
           </div>
         </div>
+        <SubscribeBox />
       </div>
     </>
   );

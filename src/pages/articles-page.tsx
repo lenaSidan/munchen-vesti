@@ -11,6 +11,7 @@ import rehypeStringify from "rehype-stringify";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/ArticlesPage.module.css";
 import Seo from "@/components/Seo";
+import SubscribeBox from "@/components/SubscribeBox";
 // import EasterEggById from "@/components/EasterEggById";
 
 interface ArticlesArticle {
@@ -73,6 +74,7 @@ export default function ArticlesPage({ articles }: ArticlesProps) {
           </article>
         ))}
         {/* <EasterEggById id="easteregg-articles" chance={0.5} /> */}
+           <SubscribeBox />
       </div>
     </>
   );

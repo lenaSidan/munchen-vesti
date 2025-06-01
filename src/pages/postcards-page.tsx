@@ -1,6 +1,7 @@
 import LikeButton from "@/components/LikeButton";
 import Seo from "@/components/Seo";
 import SocialLinks from "@/components/SocialLinks";
+import SubscribeBox from "@/components/SubscribeBox";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/PostcardsPage.module.css";
 import fs from "fs";
@@ -61,6 +62,7 @@ export default function PostcardsPage({ postcards }: PostcardsPageProps) {
             </Link>
           ))}
         </div>
+           <SubscribeBox />
       </div>
     </>
   );

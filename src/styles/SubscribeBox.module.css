@@ -1,0 +1,93 @@
+.subscribeBox {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1.5rem 1rem;
+  border-top: 1px dotted var(--heading-color2);
+  font-family: var(--font-headings);
+  background-color: var(--background);
+  max-width: 1200px;
+}
+
+.subscribeText {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--heading-color);
+  width: 0;
+  animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--heading-color);
+  }
+}
+
+.subscribeButton {
+  padding: 10px 18px;
+  background: none;
+  border: 1px solid var(--heading-color);
+  color: var(--background);
+  background-color: var(--heading-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: monospace;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  animation: pulse 1.8s infinite;
+}
+
+.subscribeButton:hover {
+  background-color: var(--background);
+  color: var(--heading-color);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(96, 0, 0, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 12px rgba(96, 0, 0, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(96, 0, 0, 0);
+  }
+}
+@media (max-width: 768px) {
+  .subscribeBox {
+    padding: 1rem;
+    margin: 1.5rem auto;
+  }
+
+  .subscribeText {
+    font-size: 1rem;
+    white-space: normal;
+    width: auto;
+    border-right: none;
+    animation: none;
+  }
+
+  .subscribeButton {
+    padding: 10px 16px;
+    font-size: 0.95rem;
+    /* animation: none; */
+  }
+}
