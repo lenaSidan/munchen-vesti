@@ -145,17 +145,16 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
   const archivedFiles = fs.existsSync(archiveDir) ? fs.readdirSync(archiveDir) : [];
   const allFiles = [...files, ...archivedFiles];
 
-  const matchingFile = allFiles.find((file) => file.endsWith(`-${params.slug}.${locale}.md`));
+  const fileMatch = allFiles.find((filename) =>
+    filename.includes(params.slug as string) && filename.includes(`${locale}.md`)
+  );
 
-  if (!matchingFile) {
+  if (!fileMatch) {
     return { notFound: true };
   }
 
-  const filePath = files.includes(matchingFile)
-    ? path.join(eventsDir, matchingFile)
-    : path.join(archiveDir, matchingFile);
-
-  const isArchived = !files.includes(matchingFile);
+  const isArchived = archivedFiles.includes(fileMatch);
+  const filePath = isArchived ? path.join(archiveDir, fileMatch) : path.join(eventsDir, fileMatch);
 
   const fileContents = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(fileContents);
@@ -173,7 +172,7 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
   const contentHtml = processedContent.toString();
 
   const allCurrentEvents = getEventsByLocale(locale);
-const similarEvents = allCurrentEvents.filter((e) => e.slug !== params.slug).slice(0, 3);
+  const similarEvents = allCurrentEvents.filter((e) => e.slug !== params.slug).slice(0, 3);
 
   return {
     props: {
@@ -182,8 +181,8 @@ const similarEvents = allCurrentEvents.filter((e) => e.slug !== params.slug).sli
         title: data.title || "",
         seoTitle: data.seoTitle || "",
         seoDescription: data.seoDescription || "",
-        date: data.date ? String(data.date) : "",
-        endDate: data.endDate ? String(data.endDate) : "",
+        date: data.date || "",
+        endDate: data.endDate || "",
         time: data.time || "",
         ort: data.ort || "",
         link: data.link || "",
