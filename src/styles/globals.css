@@ -148,3 +148,38 @@ a[href^="http"] {
 html {
   scroll-behavior: smooth;
 }
+.introText {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--button-bg);
+  font-weight: 600;
+  margin: 1rem 0;
+  text-align: left;
+}
+.terms {
+  margin-top: 3rem;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--heading-color2);
+  background-color: var(--alt-background);
+}
+.tips {
+  background-color: var(--alt-background-light);
+  margin-top: 1em;
+  padding: 10px;
+  border-left: 4px solid var(--button-bg);
+}
+
+@media (max-width: 768px) {
+  .introText {
+    font-size: 1rem;
+    margin-top: 0;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .terms {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+}
