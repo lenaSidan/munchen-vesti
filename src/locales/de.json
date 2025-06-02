@@ -156,7 +156,9 @@
     "bavarianWords_description": "Bairische Ausdrücke mit russischer Übersetzung und Erklärung. Einblicke in den Dialekt Süddeutschlands.",
     "bavarianWordsAll_title": "Wörterbuch der bairischen Begriffe",
     "past_events_title": "Vergangene Veranstaltungen in München",
-    "past_events_description": "Archiv kultureller und städtischer Veranstaltungen, die bereits in München stattgefunden haben. Entdecken Sie, was los war."
+    "past_events_description": "Archiv kultureller und städtischer Veranstaltungen, die bereits in München stattgefunden haben. Entdecken Sie, was los war.",
+    "geocaching_title": "Geocaching in München – Verstecke, Abenteuer & GPS-Quests",
+    "geocaching_description": "Was ist Geocaching? Entdecke spannende Routen in München: Nachtmissionen, kreative Dosen und Familienspaß."
   },
   "past_events_heading": "Veranstaltungsarchiv",
   "menu": {
@@ -175,6 +177,7 @@
     "ads_food": "Gastronomie",
     "ads_studios": "Bildung",
     "ads_other": "Verschiedenes",
+    "geocaching": "Geocaching",
     "more": "mehr",
     "less": "weniger"
   },
@@ -587,5 +590,38 @@
     "text": "Ab Dezember 2026 wird ein Hochgeschwindigkeitszug Frecciarossa zwischen München und Rom verkehren. Ohne Umstieg, direkt über Österreich und Norditalien.",
     "text2": "München – Innsbruck – Bozen – Trient – Verona – Mailand – Rom",
     "link_text": "Mehr erfahren →"
+  },
+
+  "geocaching": {
+    "title": "Geocaching in München",
+    "intro1": "Hast du schon einmal von Geocaching gehört? Ich nicht.",
+    "intro2": "Bis ich eines Tages mit dem Fahrrad unterwegs war und ein seltsames Vogelhäuschen sah. Es hing direkt am Zaun, fast auf Augenhöhe. Ich fand es verdächtig. Ich fuhr ein Stück weiter – kehrte aber zurück. Ich öffnete es. Drinnen war ein kleiner Zettel in einem Behälter. So erfuhr ich zum ersten Mal, dass es in München echte, versteckte Caches gibt – überall. Gesucht werden sie von Menschen, die man vielleicht gar nicht bemerkt – mit dem Handy in der Hand und geheimnisvollem Blick. Das ist Geocaching.",
+    "intro3": "Geocaching ist ein weltweites Spiel, bei dem man mit GPS nach „Schätzen“ sucht. In München gibt es Hunderte solcher Caches: bei Sehenswürdigkeiten, auf Bänken, im Wald oder an ungewöhnlichen Orten. Einige sind leicht zu finden, andere werden zu richtigen Abenteuern mit Rätseln und Routen. Unten findest du eine Auswahl der spannendsten Touren – von nächtlichen Quests über Familienausflüge bis hin zu seltsamen Dosen an den ungewöhnlichsten Orten.",
+    "items": {
+      "sightseeing-caches": {
+        "title": "Caches bei Sehenswürdigkeiten",
+        "description": "Erkunde München neu: Statt klassischer Touristenrouten führen dich diese Caches zu berühmten Orten."
+      },
+      "night-adventures": {
+        "title": "Nächtliche Abenteuer (N8@MUC)",
+        "description": "Schnapp dir eine Taschenlampe – diese atmosphärischen Rätsel beginnen, wenn andere schon schlafen."
+      },
+      "hiking-caches": {
+        "title": "Wandern & Spazieren",
+        "description": "Perfekt fürs Wochenende: Caching-Routen außerhalb der Stadt – durch Wälder, entlang von Feldern und Flüssen."
+      },
+      "creative-hides": {
+        "title": "Die kreativsten Verstecke",
+        "description": "Für alle, die das Besondere suchen: originelle Verstecke, knifflige Rätsel, überraschende Orte."
+      },
+      "family-caching": {
+        "title": "Für Kinder und Familien",
+        "description": "Erste Abenteuer für kleine Entdecker: einfach, liebevoll gemacht und mit lustigen Aufgaben."
+      },
+      "paranoia-at-night": {
+        "title": "Paranoia@Night",
+        "description": "Dieser Solo-Cache ist legendär: düstere Atmosphäre, ungewöhnliche Route und ein echtes Abenteuer."
+      }
+    }
   }
 }
