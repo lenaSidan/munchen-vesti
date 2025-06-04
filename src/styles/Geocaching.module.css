@@ -12,18 +12,11 @@
   color: var(--heading-color2);
 }
 
-.image {
-  display: block;
-  margin: 0 auto 2rem auto;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  max-width: 200px;
-  height: auto;
-}
-
 .content {
   padding: 20px;
-  background-color: var(--alt-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--alt-background-light);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.3s ease;
   text-align: left;
@@ -35,7 +28,6 @@
   margin-bottom: 50px;
 }
 .content.geocaching {
-  background-color: #f9fbe7;
   border-left: 5px solid var(--button-bg);
   padding: 1.5rem;
 }
@@ -70,8 +62,8 @@
 }
 
 .likeContainer {
-  margin-top: 2rem;
-  text-align: center;
+  display: flex;
+  justify-content: flex-end;
 }
 .backContainer {
   width: 100%;
@@ -154,6 +146,63 @@
   transform: scaleY(-1);
   margin-top: 15px;
 }
+.titleOther {
+  font-family: var(--font-headings);
+  color: var(--heading-color);
+  margin-top: 20px;
+  border-bottom: 2px dotted var(--border-color);
+  transition: color 0.3s;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+}
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: var(--alt-background-light);
+  transition: transform 0.2s ease;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.cardImage {
+  margin-bottom: 0.8rem;
+  max-width: 70px;
+  height: auto;
+  object-fit: contain;
+
+  background-color: #edead7;
+  border-radius: 8px;
+}
+
+.cardTitle {
+  font-family: var(--font-headings);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+.cardDescription {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: italic;
+}
 
 @media (max-width: 768px) {
   .container {
@@ -217,5 +266,27 @@
   .decorativeLine span {
     font-size: 1.1rem;
   }
+  .card {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 10px;
+  }
 
+  .cardImage {
+    margin-bottom: 0; /* убрать отступ снизу */
+    margin-right: 1rem; /* добавить отступ справа от картинки */
+    max-width: 60px; /* немного меньше на мобилках */
+    height: auto;
+  }
+
+  .cardTitle,
+  .cardDescription {
+    /* чтобы тексты не прилипали к краю */
+    margin: 0;
+  }
+  .cardText {
+    display: flex;
+    flex-direction: column;
+  }
 }

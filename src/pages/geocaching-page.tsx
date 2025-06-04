@@ -1,4 +1,3 @@
-
 import Seo from "@/components/Seo";
 import SubscribeBox from "@/components/SubscribeBox";
 import useTranslation from "@/hooks/useTranslation";
@@ -22,37 +21,37 @@ export default function Geocaching() {
       slug: "sightseeing-caches",
       title: t("geocaching.items.sightseeing-caches.title"),
       description: t("geocaching.items.sightseeing-caches.description"),
-      image: "/geocaching/sightseeing.png",
+      image: "/geocaching_images/sightseeing.png",
     },
     {
       slug: "night-adventures",
       title: t("geocaching.items.night-adventures.title"),
       description: t("geocaching.items.night-adventures.description"),
-      image: "/geocaching/night.png",
+      image: "/geocaching_images/night_.png",
     },
     {
       slug: "hiking-caches",
       title: t("geocaching.items.hiking-caches.title"),
       description: t("geocaching.items.hiking-caches.description"),
-      image: "/geocaching/hiking.png",
+      image: "/geocaching_images/hiking_.png",
     },
     {
       slug: "creative-hides",
       title: t("geocaching.items.creative-hides.title"),
       description: t("geocaching.items.creative-hides.description"),
-      image: "/geocaching/highlights.png",
+      image: "/geocaching_images/highlights_.png",
     },
     {
       slug: "family-caching",
       title: t("geocaching.items.family-caching.title"),
       description: t("geocaching.items.family-caching.description"),
-      image: "/geocaching/family.png",
+      image: "/geocaching_images/family_.png",
     },
     {
       slug: "paranoia-at-night",
       title: t("geocaching.items.paranoia-at-night.title"),
       description: t("geocaching.items.paranoia-at-night.description"),
-      image: "/geocaching/paranoia.png",
+      image: "/geocaching_images/paranoia.png",
     },
   ];
 
@@ -65,7 +64,10 @@ export default function Geocaching() {
         <div className={styles.introBox}>
           <p className={styles.intro1}>{t("geocaching.intro1")}</p>
           <p className={styles.intro2}>{t("geocaching.intro2")}</p>
+          <p className={styles.intro2}>{t("geocaching.p2")}</p>
           <p className={styles.intro3}>{t("geocaching.intro3")}</p>
+          <p className={styles.intro4}>{t("geocaching.p3")}</p>
+          <p className={styles.intro4}>{t("geocaching.p4")}</p>
         </div>
         <div className={styles.grid}>
           {geocacheItems.map((item) => (

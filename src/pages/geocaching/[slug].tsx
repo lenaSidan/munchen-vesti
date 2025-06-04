@@ -1,3 +1,4 @@
+import LikeButton from "@/components/LikeButton";
 import PageHead from "@/components/PageHead";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/Geocaching.module.css";
@@ -15,6 +16,12 @@ import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 
+interface PageMeta {
+  slug: string;
+  title: string;
+  description: string;
+  image?: string;
+}
 
 interface GeocachingPageProps {
   slug: string;
@@ -22,6 +29,7 @@ interface GeocachingPageProps {
   image?: string;
   imageAlt?: string;
   content: string;
+  otherPages: PageMeta[];
 }
 
 export default function GeocachingPage({
@@ -30,6 +38,7 @@ export default function GeocachingPage({
   image,
   imageAlt,
   content,
+  otherPages,
 }: GeocachingPageProps) {
   const t = useTranslation();
   const { locale } = useRouter();
@@ -61,15 +70,16 @@ export default function GeocachingPage({
           />
         )}
 
-        {/* <div className={styles.likeContainer}>
+        <div className={styles.likeContainer}>
           <LikeButton slug={slug} />
-        </div> */}
+        </div>
+
         <div className={styles.backContainer}>
           <div className={styles.decorativeLine}>
             <span className={styles.left}>⊱❧</span>
             <span className={styles.right}>⊱❧</span>
           </div>
-          <Link href={"/geocaching-page"} className={styles.back}>
+          <Link href="/geocaching-page" className={styles.back}>
             {t("articles.back")}
           </Link>
           <div className={`${styles.decorativeLine} ${styles.bottom}`}>
@@ -77,6 +87,31 @@ export default function GeocachingPage({
             <span className={styles.left}>⊱❧</span>
           </div>
         </div>
+
+        {otherPages.length > 0 && (
+          <>
+            <div className={styles.titleOther}>{t("geocaching.more_geocaching")}</div>
+            <div className={styles.cardGrid}>
+              {otherPages.map((page) => (
+                <Link key={page.slug} href={`/geocaching/${page.slug}`} className={styles.card}>
+                  {page.image && (
+                    <Image
+                      src={page.image}
+                      alt={page.title}
+                      width={70}
+                      height={70}
+                      className={styles.cardImage}
+                    />
+                  )}
+                  <div className={styles.cardText}>
+                    <div className={styles.cardTitle}>{page.title}</div>
+                    <div className={styles.cardDescription}>{page.description}</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </>
   );
@@ -91,25 +126,28 @@ export const getStaticPaths: GetStaticPaths = async () => {
     return { params: { slug }, locale };
   });
 
-  return {
-    paths,
-    fallback: false,
-  };
+  return { paths, fallback: false };
 };
 
 export const getStaticProps: GetStaticProps<GeocachingPageProps> = async ({ params, locale }) => {
   if (!params?.slug || !locale) return { notFound: true };
 
-  const filePath = path.join(process.cwd(), "public/geocaching", `${params.slug}.${locale}.md`);
-  if (!fs.existsSync(filePath)) return { notFound: true };
+  const currentSlug = params.slug as string;
+  const currentFilePath = path.join(
+    process.cwd(),
+    "public/geocaching",
+    `${currentSlug}.${locale}.md`
+  );
 
-  const fileContent = fs.readFileSync(filePath, "utf8");
+  if (!fs.existsSync(currentFilePath)) return { notFound: true };
+
+  const fileContent = fs.readFileSync(currentFilePath, "utf8");
   const { data, content } = matter(fileContent);
 
   const processedContent = await remark()
     .use(remarkGfm)
-    .use(remarkRehype, { allowDangerousHtml: true }) // обязательно
-    .use(rehypeRaw) // вот эта строка нужна!
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
     .use(rehypeExternalLinks, {
       target: "_blank",
       rel: ["noopener", "noreferrer"],
@@ -117,13 +155,72 @@ export const getStaticProps: GetStaticProps<GeocachingPageProps> = async ({ para
     .use(rehypeStringify)
     .process(content);
 
+  // список всех карточек
+  const allPages: PageMeta[] = [
+    {
+      slug: "sightseeing-caches",
+      title:
+        locale === "de" ? "Tarnungen bei Sehenswürdigkeiten" : "Тайники у достопримечательностей",
+      description: locale === "de" ? "Erforschen Sie München neu." : "Исследуйте Мюнхен по-новому.",
+      image: "/geocaching_images/sightseeing.png",
+    },
+    {
+      slug: "night-adventures",
+      title: locale === "de" ? "Nächtliche Abenteuer (N8@MUC)" : "Ночные приключения (N8@MUC)",
+      description:
+        locale === "de"
+          ? "Wenn die Stadt schläft, erwachen unsere Caches zum Leben."
+          : "Фонарик, темнота, и вы — как в квесте. ",
+      image: "/geocaching_images/night_.png",
+    },
+    {
+      slug: "hiking-caches",
+      title: locale === "de" ? "Wander-Caches" : "Прогулки и походы",
+      description:
+        locale === "de"
+          ? "Geocaching entlang von Waldwegen und Flüssen."
+          : "Тайники на выходных: леса, тропы, поля, реки.",
+      image: "/geocaching_images/hiking_.png",
+    },
+    {
+      slug: "creative-hides",
+      title: locale === "de" ? "Kreative Verstecke" : "Самые необычные тайники",
+      description:
+        locale === "de"
+          ? "Verblüffende Orte und Rätsel – für erfahrene Geocacher."
+          : "Тайники, которые удивят даже профи.",
+      image: "/geocaching_images/highlights_.png",
+    },
+    {
+      slug: "family-caching",
+      title: locale === "de" ? "Familiencaching" : "Для детей и всей семьи",
+      description:
+        locale === "de"
+          ? "Einfache Caches für den ersten Einstieg mit Kindern."
+          : "Добрые, весёлые задания и первая карта.",
+      image: "/geocaching_images/family_.png",
+    },
+    {
+      slug: "paranoia-at-night",
+      title: "Paranoia@Night",
+      description:
+        locale === "de"
+          ? "Legendärer Einzelspieler-Cache mit düsterer Atmosphäre."
+          : "Мрачная легенда для тех, кто не боится одиночества.",
+      image: "/geocaching_images/paranoia.png",
+    },
+  ];
+
+  const otherPages = allPages.filter((page) => page.slug !== currentSlug);
+
   return {
     props: {
-      slug: params.slug as string,
+      slug: currentSlug,
       title: data.title || "",
       image: data.image || "",
       imageAlt: data.imageAlt || "",
       content: processedContent.toString(),
+      otherPages,
     },
   };
 };

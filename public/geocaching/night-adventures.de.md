@@ -8,6 +8,10 @@ seoDescription: "Erleben Sie München bei Nacht mit der Geocaching-Serie N8@MUC.
 Wenn die Schaufenster in München erlöschen, die Straßen leerer werden und nächtliche Stille die Stadt umhüllt, beginnt für manche die Zeit zum Schlafen – und für andere die Zeit für Abenteuer. Willkommen in der Welt der Nacht-Geocaches, wo alles geheimnisvoller, dunkler und spannender wird.
 </div>
 
+<div class="imageWrapper">
+  <img src="/geocaching_images/Geocaching_night.webp" alt="Geocaching nach Sonnenuntergang" class="responsiveImage" />
+</div>
+
 ### **Was ist N8@MUC?**
 
 **N8@MUC** ist eine thematische Serie von Nacht-Caches, die in München und Umgebung versteckt sind. Der Name steht für _Nacht @ München_ und kennzeichnet eine besondere Kategorie von Geocaches, die ausschließlich bei Dunkelheit gesucht werden sollen.

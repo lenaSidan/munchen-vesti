@@ -239,7 +239,7 @@ export default function Header() {
           >
             {t("menu.chronicles").toUpperCase()}
           </Link>
-          {/* <Link
+          <Link
             href="/geocaching-page"
             className={`${styles.navLink} ${
               !isAdsSubmenuOpen && !isWordsSubmenuOpen && router.pathname === "/geocaching-page"
@@ -248,7 +248,7 @@ export default function Header() {
             }`}
           >
             {t("menu.geocaching")}
-          </Link> */}
+          </Link>
           <Link
             href="/events"
             className={`${styles.navLink} ${
