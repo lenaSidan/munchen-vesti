@@ -119,7 +119,7 @@ export default function MobileHeader() {
               >
                 {t("menu.announcements").toUpperCase()}
               </Link>
-             
+
               <Link
                 href="/news-page"
                 className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/news-page" ? styles.active : ""}`}
@@ -154,7 +154,15 @@ export default function MobileHeader() {
               >
                 {t("menu.chronicles").toUpperCase()}
               </Link>
-               <Link
+              <Link
+                href="/geocaching-page"
+                title={t("menu.chronicles_full")}
+                className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/geocaching-page" ? styles.active : ""}`}
+                onClick={closeAllSubmenus}
+              >
+                {t("menu.geocaching").toUpperCase()}
+              </Link>
+              <Link
                 href="/events"
                 className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/events" ? styles.active : ""}`}
                 onClick={closeAllSubmenus}

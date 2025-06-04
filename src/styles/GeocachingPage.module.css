@@ -54,8 +54,14 @@
 .intro3 {
   font-style: italic;
   font-size: 1.1rem;
+  color: var(--button-bg);
+  font-weight: 600;
+  font-family: monospace;
 }
-
+.intro4 {
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -92,6 +98,8 @@
   flex-shrink: 0;
   border: 1px solid var(--border-color);
   border-radius: 6px;
+  background-color: #edead7;
+  border-radius: 8px;
 }
 
 .card h3 {
@@ -123,6 +131,10 @@
     line-height: 1.2;
   }
 
+  .intro4 {
+    font-size: 0.9rem;
+   
+  }
   .card {
     flex-direction: column;
     align-items: center;

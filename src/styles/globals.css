@@ -169,6 +169,19 @@ html {
   padding: 10px;
   border-left: 4px solid var(--button-bg);
 }
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.responsiveImage {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+}
+
 
 @media (max-width: 768px) {
   .introText {
@@ -181,5 +194,9 @@ html {
     margin-top: 3rem;
     font-size: 0.9rem;
     line-height: 1.3;
+  }
+   .responsiveImage {
+    max-width: 100%;
+    border-radius: 6px;
   }
 }

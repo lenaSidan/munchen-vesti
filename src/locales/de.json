@@ -594,9 +594,12 @@
 
   "geocaching": {
     "title": "Geocaching in München",
-    "intro1": "Hast du schon einmal von Geocaching gehört? Ich nicht.",
-    "intro2": "Bis ich eines Tages mit dem Fahrrad unterwegs war und ein seltsames Vogelhäuschen sah. Es hing direkt am Zaun, fast auf Augenhöhe. Ich fand es verdächtig. Ich fuhr ein Stück weiter – kehrte aber zurück. Ich öffnete es. Drinnen war ein kleiner Zettel in einem Behälter. So erfuhr ich zum ersten Mal, dass es in München echte, versteckte Caches gibt – überall. Gesucht werden sie von Menschen, die man vielleicht gar nicht bemerkt – mit dem Handy in der Hand und geheimnisvollem Blick. Das ist Geocaching.",
-    "intro3": "Geocaching ist ein weltweites Spiel, bei dem man mit GPS nach „Schätzen“ sucht. In München gibt es Hunderte solcher Caches: bei Sehenswürdigkeiten, auf Bänken, im Wald oder an ungewöhnlichen Orten. Einige sind leicht zu finden, andere werden zu richtigen Abenteuern mit Rätseln und Routen. Unten findest du eine Auswahl der spannendsten Touren – von nächtlichen Quests über Familienausflüge bis hin zu seltsamen Dosen an den ungewöhnlichsten Orten.",
+    "intro1": "Haben Sie schon einmal von Geocaching gehört? Ich – ehrlich gesagt – nicht.",
+    "intro2": "Zumindest bis zu einem dieser völlig unspektakulären Tage, an denen ich gemütlich mit dem Fahrrad unterwegs war und plötzlich etwas Seltsames sah. Ein Vogelhäuschen. Nur ohne Vögel. Und es hing nicht etwa an einem Baum, sondern demonstrativ am Zaun, genau auf Augenhöhe. Irgendetwas daran war... verdächtig.",
+    "p2": "Natürlich fuhr ich zuerst weiter – wie es sich für einen rationalen Menschen gehört. Aber ein paar Meter später war die Vernunft machtlos gegen die Neugier. Ich drehte um. Ging hin. Öffnete es. Und – Überraschung! Drinnen war ein winziger Behälter mit einem Zettel. Keine Vögel, aber ein echter Geheimversteck. So erfuhr ich, dass in München kleine Schätze versteckt sind. Echte. Nur eben nicht aus Gold.",
+    "intro3": "Geocaching ist ein internationales Spiel für Erwachsene, die heimlich wieder Kinder sein wollen. Statt Piratenkarten benutzt man GPS, statt Schatztruhen findet man kleine Dosen mit Logbüchern. Und ja – in München gibt es Hunderte solcher „Schätze“. Sie verstecken sich bei Sehenswürdigkeiten, in Parks, auf Bänken, im Wald... und manchmal an völlig absurden Orten. Manchmal reicht ein scharfer Blick. Und manchmal wird daraus ein waschechtes Abenteuer mit Rätseln, Routen und gelegentlichen Zweifeln am eigenen Verstand.",
+    "p3": "Übrigens erkennt man Geocacher nicht sofort. Vielleicht daran, dass sie mit dem Handy in der Hand herumstehen, den Blick geheimnisvoll in die Ferne richten und sich ein bisschen verhalten wie Undercover-Agenten. Das sind sie – die modernen Schatzsucher der Stadt.",
+    "p4": "Falls es Sie schon in den Fingern juckt, selbst auf die Suche zu gehen – unten finden Sie eine Auswahl der ungewöhnlichsten Routen: von nächtlichen Missionen über Familienabenteuer bis hin zu mysteriösen Döschen an Orten, die Sie garantiert nie verdächtigt hätten.",
     "items": {
       "sightseeing-caches": {
         "title": "Caches bei Sehenswürdigkeiten",
@@ -622,6 +625,7 @@
         "title": "Paranoia@Night",
         "description": "Dieser Solo-Cache ist legendär: düstere Atmosphäre, ungewöhnliche Route und ein echtes Abenteuer."
       }
-    }
+    },
+    "more_geocaching": "Weitere Routen"
   }
 }

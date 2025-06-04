@@ -15,6 +15,10 @@ seoDescription: "Erleben Sie München interaktiv mit Sightseeing-Geocaching: GPS
 
 Seit dem Jahr 2000 hat sich Geocaching zu einem weltweiten Hobby entwickelt – allein in München gibt es über 2.000 registrierte Verstecke in unterschiedlichen Schwierigkeitsgraden.
 
+<div class="imageWrapper">
+  <img src="/geocaching_images/Sightseeing_Geocaching.webp" alt="Sightseeing Geocaching" class="responsiveImage" />
+</div>
+
 
 ### **Beispiele für Routen**
 

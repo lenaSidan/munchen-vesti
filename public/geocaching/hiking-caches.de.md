@@ -8,6 +8,10 @@ seoDescription: "Die Serie Lang und gut lädt zu langen Touren mit Caches in Wä
 Wenn die Stadt laut wird und die Füße nach Freiheit rufen, ist es Zeit, München zu verlassen – ganz wörtlich. Die Geocaching-Serie „Lang und gut in und um München“ bietet Abenteuer im Wald, am Isarufer, an Seen und sogar in den Bergen. Lang? Ja. Aber gut? Und wie!
 </div>
 
+<div class="imageWrapper">
+  <img src="/geocaching_images/Lang_und_gut.webp" alt="Geocaching Lang und Gut" class="responsiveImage" />
+</div>
+
 ### **Was ist Lang und gut?**
 
 **Lang und gut** ist eine Serie von Wandercaches, die sich an alle richten, die längere Spaziergänge oder Tageswanderungen im Grünen suchen. Alle Routen verbindet eins: Natur, Fantasie und Bewegung. Viele führen entlang malerischer Wege an Flüssen, Seen, durch Wälder und Hügel – mit liebevoll versteckten Caches am Wegesrand.
