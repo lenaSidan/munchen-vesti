@@ -112,6 +112,12 @@
   color: var(--text-color);
 }
 @media (max-width: 768px) {
+  .container{
+    padding: 10px;
+  }
+  .introBox {
+    margin-bottom: 30px;
+  }
   .grid {
     grid-template-columns: 1fr;
   }
@@ -120,6 +126,7 @@
   }
   .intro1 {
     font-size: 1.2rem;
+    line-height: 1.4;
   }
   .intro2 {
     font-size: 1.1rem;
@@ -133,21 +140,23 @@
 
   .intro4 {
     font-size: 0.9rem;
-   
+    line-height: 1.4;
   }
   .card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    padding: 10px;
+     min-height: 100%;
   }
   .card h3 {
-    font-size: 1rem;
-    text-align: center;
+    font-size: 0.8rem;
   }
-
+  .card p {
+    font-size: 0.85rem;
+    line-height: 1.2;
+   font-style: italic;
+  }
   .image {
-    width: 100%;
+    width: 30%;
     height: auto;
-    margin-bottom: 10px;
+    margin: 0;
   }
 }

@@ -21,37 +21,37 @@ export default function Geocaching() {
       slug: "sightseeing-caches",
       title: t("geocaching.items.sightseeing-caches.title"),
       description: t("geocaching.items.sightseeing-caches.description"),
-      image: "/geocaching_images/sightseeing.png",
+      image: "/geocaching_images/sightseeing.webp",
     },
     {
       slug: "night-adventures",
       title: t("geocaching.items.night-adventures.title"),
       description: t("geocaching.items.night-adventures.description"),
-      image: "/geocaching_images/night_.png",
+      image: "/geocaching_images/night.webp",
     },
     {
       slug: "hiking-caches",
       title: t("geocaching.items.hiking-caches.title"),
       description: t("geocaching.items.hiking-caches.description"),
-      image: "/geocaching_images/hiking_.png",
+      image: "/geocaching_images/hiking.webp",
     },
     {
       slug: "creative-hides",
       title: t("geocaching.items.creative-hides.title"),
       description: t("geocaching.items.creative-hides.description"),
-      image: "/geocaching_images/highlights_.png",
+      image: "/geocaching_images/highlights.webp",
     },
     {
       slug: "family-caching",
       title: t("geocaching.items.family-caching.title"),
       description: t("geocaching.items.family-caching.description"),
-      image: "/geocaching_images/family_.png",
+      image: "/geocaching_images/family.webp",
     },
     {
       slug: "paranoia-at-night",
       title: t("geocaching.items.paranoia-at-night.title"),
       description: t("geocaching.items.paranoia-at-night.description"),
-      image: "/geocaching_images/paranoia.png",
+      image: "/geocaching_images/paranoia.webp",
     },
   ];
 

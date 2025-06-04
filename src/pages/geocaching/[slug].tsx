@@ -162,7 +162,7 @@ export const getStaticProps: GetStaticProps<GeocachingPageProps> = async ({ para
       title:
         locale === "de" ? "Tarnungen bei Sehenswürdigkeiten" : "Тайники у достопримечательностей",
       description: locale === "de" ? "Erforschen Sie München neu." : "Исследуйте Мюнхен по-новому.",
-      image: "/geocaching_images/sightseeing.png",
+      image: "/geocaching_images/sightseeing.webp",
     },
     {
       slug: "night-adventures",
@@ -171,7 +171,7 @@ export const getStaticProps: GetStaticProps<GeocachingPageProps> = async ({ para
         locale === "de"
           ? "Wenn die Stadt schläft, erwachen unsere Caches zum Leben."
           : "Фонарик, темнота, и вы — как в квесте. ",
-      image: "/geocaching_images/night_.png",
+      image: "/geocaching_images/night.webp",
     },
     {
       slug: "hiking-caches",
@@ -180,7 +180,7 @@ export const getStaticProps: GetStaticProps<GeocachingPageProps> = async ({ para
         locale === "de"
           ? "Geocaching entlang von Waldwegen und Flüssen."
           : "Тайники на выходных: леса, тропы, поля, реки.",
-      image: "/geocaching_images/hiking_.png",
+      image: "/geocaching_images/hiking.webp",
     },
     {
       slug: "creative-hides",
@@ -189,7 +189,7 @@ export const getStaticProps: GetStaticProps<GeocachingPageProps> = async ({ para
         locale === "de"
           ? "Verblüffende Orte und Rätsel – für erfahrene Geocacher."
           : "Тайники, которые удивят даже профи.",
-      image: "/geocaching_images/highlights_.png",
+      image: "/geocaching_images/highlights.webp",
     },
     {
       slug: "family-caching",
@@ -198,7 +198,7 @@ export const getStaticProps: GetStaticProps<GeocachingPageProps> = async ({ para
         locale === "de"
           ? "Einfache Caches für den ersten Einstieg mit Kindern."
           : "Добрые, весёлые задания и первая карта.",
-      image: "/geocaching_images/family_.png",
+      image: "/geocaching_images/family.webp",
     },
     {
       slug: "paranoia-at-night",
