@@ -54,6 +54,14 @@ export default function App({ Component, pageProps }: AppProps) {
     });
   }, []);
 
+  // Установка <html lang> по языку браузера
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const browserLang = navigator.language || navigator.languages[0];
+      document.documentElement.lang = browserLang.split("-")[0];
+    }
+  }, []);
+
   // 📊 Google Analytics: логика переходов
   useEffect(() => {
     const handleRouteChange = (url: string) => {

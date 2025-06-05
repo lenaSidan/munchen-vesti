@@ -8,7 +8,12 @@ const translations: Record<string, TranslationObject> = { ru, de };
 
 export default function useTranslation() {
   const router = useRouter();
-  const locale = router?.locale ?? "ru";
+
+  const locale = useMemo(() => {
+    if (router?.locale) return router.locale;
+    if (typeof window !== "undefined") return navigator.language.slice(0, 2);
+    return "ru"; // fallback
+  }, [router.locale]);
 
   const currentTranslations = useMemo(
     () => translations[locale] || translations["ru"],
@@ -29,7 +34,6 @@ export default function useTranslation() {
     }
 
     if (typeof result === "string") {
-      // Интерполяция {{var}}
       if (variables) {
         return result.replace(/\{\{(.*?)\}\}/g, (_, varName) =>
           variables[varName.trim()] ?? ""
