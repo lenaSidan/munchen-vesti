@@ -45,7 +45,8 @@
   },
   "subscribe": {
     "text": "Не хотите пропустить интересные события?",
-    "button": "Подписаться в Telegram"
+    "buttonRU": "Подписаться в Telegram_RU",
+    "buttonDE": "Подписаться в Telegram_DE"
   },
   "weather": {
     "title": "Прогноз погоды по Мюнхену",

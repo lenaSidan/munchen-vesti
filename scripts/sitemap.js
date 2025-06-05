@@ -88,6 +88,15 @@ function generateSitemap() {
   const newsUrls = getMarkdownUrls("news", "news", false, "0.6");
   const articlesUrls = getMarkdownUrls("articles", "articles", false, "0.7");
   const eventsUrls = getMarkdownUrls("events", "events", true, "0.9");
+  const geocachingUrls = getMarkdownUrls("geocaching", "geocaching", false, "0.6");
+  const articleSummariesUrls = getMarkdownUrls(
+    "articles_summaries",
+    "articles_summaries",
+    false,
+    "0.5"
+  );
+  const postcardUrls = getMarkdownUrls("postcards", "postcards", false, "0.5");
+
   const archivedEvents = getArchivedEventUrls();
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -99,6 +108,9 @@ ${[
   ...eventsUrls,
   ...archivedEvents,
   ...articlesUrls,
+  ...geocachingUrls,
+  ...articleSummariesUrls,
+  ...postcardUrls,
 ].join("\n")}
 </urlset>`;
 
