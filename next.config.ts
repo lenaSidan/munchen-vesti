@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
   i18n: {
     locales: ["ru", "de"],
     defaultLocale: "ru",
-    localeDetection: false,
+    
   },
   images: {
     formats: ['image/webp', 'image/avif'],
