@@ -207,7 +207,7 @@ export const getStaticProps: GetStaticProps<GeocachingPageProps> = async ({ para
         locale === "de"
           ? "Legendärer Einzelspieler-Cache mit düsterer Atmosphäre."
           : "Мрачная легенда для тех, кто не боится одиночества.",
-      image: "/geocaching_images/paranoia.png",
+      image: "/geocaching_images/paranoia.webp",
     },
   ];
 
