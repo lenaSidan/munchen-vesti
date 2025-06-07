@@ -44,7 +44,7 @@
   display: flex;
   gap: 1.5rem;
   align-items: flex-start;
-  
+
   -webkit-hyphens: auto;
   hyphens: auto;
   transition: color 0.3s ease-in-out;
@@ -100,6 +100,9 @@
 }
 
 @media (max-width: 768px) {
+  .importantNewsSection {
+    margin: 2.4rem auto;
+  }
   .indexTitle {
     text-align: center;
   }
@@ -139,7 +142,7 @@
     font-size: 1.1rem;
     line-height: 1.5rem;
   }
- .newsText2 {
+  .newsText2 {
     font-size: 1rem;
   }
   .linkWrapper a {
