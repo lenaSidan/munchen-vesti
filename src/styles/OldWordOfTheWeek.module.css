@@ -14,7 +14,7 @@
 .heading {
   font-size: 1rem;
   color: var(--heading-color2);
-   font-family: var(--font-body);
+  font-family: var(--font-body);
 }
 
 .info {
@@ -100,7 +100,7 @@
   font-style: italic;
   color: var(--text-color);
   font-size: 1rem;
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
 
 .details {
@@ -148,4 +148,10 @@
 
 .allWordsLink:hover {
   color: var(--heading-color);
+}
+@media (max-width: 768px) {
+  .wrapper {
+    margin-top: 2.2rem;
+  
+  }
 }
