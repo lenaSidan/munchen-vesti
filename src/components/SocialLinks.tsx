@@ -33,7 +33,7 @@ export default function SocialLinks() {
       </li>
       <li>
         <a
-          href="https://www.instagram.com/ваш_аккаунт?utm_source=article&utm_medium=referral"
+          href="https://www.instagram.com/munchen_vesti?igsh=N294YnI5aTZ6angz"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -49,7 +49,7 @@ export default function SocialLinks() {
       </li>
       <li>
         <a
-          href="https://www.facebook.com/ваш_аккаунт?utm_source=article&utm_medium=referral"
+          href="https://www.facebook.com/munchen.vesti/"
           target="_blank"
           rel="noopener noreferrer"
         >

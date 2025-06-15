@@ -45,8 +45,8 @@
   },
   "subscribe": {
     "text": "Keine Veranstaltungen mehr verpassen?",
-    "buttonRU": "Jetzt auf Telegram_RU abonnieren",
-    "buttonDE": "Jetzt auf Telegram_DE abonnieren"
+    "buttonRU": "Telegram_RU folgen",
+    "buttonDE": "Telegram_DE folgen"
   },
   "weather": {
     "title": "Wetter in München",
