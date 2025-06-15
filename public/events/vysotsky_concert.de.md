@@ -30,7 +30,7 @@ Das Konzert ist inspiriert von Wyssozkis Aufnahmen mit dem Ensemble „Melodija�
 
 ### Nächste Termine:
 
-**24.10.2025, 19:00 Uhr** – Kulturzentrum Trudering, **München**  
+**30.10.2025, 19:00 Uhr** – Kulturzentrum Trudering, **München**  
 **2.11.2025, 19:00 Uhr** – Jahrhunderthalle Club, **FRANKFURT AM MAIN**
 
 ### Tickets jetzt erhältlich 🎫:
