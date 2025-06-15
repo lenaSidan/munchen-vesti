@@ -14,6 +14,7 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import PageHead from "../../components/PageHead";
 import LikeButton from "@/components/LikeButton";
+import rehypeExternalLinks from "rehype-external-links";
 
 interface ArticlesArticle {
   id: number;
@@ -137,10 +138,14 @@ export const getStaticProps: GetStaticProps<ArticleProps> = async ({ params, loc
   const { data, content } = matter(fileContents);
 
   const processedContent = await remark()
-    .use(remarkGfm)
-    .use(remarkRehype)
-    .use(rehypeStringify)
-    .process(content);
+  .use(remarkGfm)
+  .use(remarkRehype)
+  .use(rehypeExternalLinks, {
+    target: "_blank",
+    rel: ["noopener", "noreferrer"],
+  })
+  .use(rehypeStringify)
+  .process(content);
 
   return {
     props: {

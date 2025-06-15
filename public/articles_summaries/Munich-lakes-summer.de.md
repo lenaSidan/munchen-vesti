@@ -1,4 +1,5 @@
 ---
+title: "Der Sommer ruft: 5 Seen rund um München, wo man den Kopf abkühlen und die Stimmung aufheizen kann"
 seoTitle: "Seen bei München: Wo man im Sommer 2025 baden kann"
 seoDescription: "Fünf der besten Seen rund um München – ideal für Picknicks, Ruhe, Sport oder sogar Surfen. Getestete Orte mit Atmosphäre und Tipps."
 image: "/images/munich-lakes-summer.webp"
