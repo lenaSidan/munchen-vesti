@@ -1,5 +1,4 @@
 ---
-id: 2
 title: "Viktualienmarkt – Münchens kulinarisches Herz"
 seoTitle: "Viktualienmarkt in München – Ein kulinarisches Erlebnis"
 seoDescription: "Erkunden Sie den Viktualienmarkt in München, das kulinarische Herz der Stadt. Entdecken Sie frische Produkte, lokale Spezialitäten und einzigartige gastronomische Erlebnisse."

@@ -1,5 +1,4 @@
 ---
-id: 1
 title: "Spannende Fakten über München, die Sie überraschen werden"
 seoTitle: "Überraschende und faszinierende Fakten über München"
 seoDescription: "Entdecken Sie spannende und wenig bekannte Fakten über München. Erfahren Sie mehr über die Geschichte, Kultur und besonderen Aspekte dieser faszinierenden Stadt."
