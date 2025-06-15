@@ -14,7 +14,7 @@ Wenn du von Ruhe, Wasser und völliger Menschenleere träumst – das ist der Or
 
 Es gibt einen kleinen Kiosk mit Getränken und Aussicht. Das Wasser ist kühl, die Ufer grün und das Internet schlecht. Also perfekt.
 
-- ✔ [Waldschwaigsee auf der Karte](https://www.google.com/maps/place/Waldschwaigsee/@48.1909576,11.4086556,15z)
+- 🔗 [Waldschwaigsee auf der Karte](https://www.google.com/maps/place/Waldschwaigsee/@48.1909576,11.4086556,15z)
 
 ### 2. Karlsfelder See – Sport, Style und Picknick
 
@@ -22,7 +22,7 @@ Hier darf man laut und sportlich sein: Volleyball, Tischtennis, Skatepark, riesi
 
 Die Cafés vor Ort haben bayerisch-instagrammable Vibes: Bier, Weißwürste, hübsche Holzbänke. Aber Achtung: Du bist nicht allein – besonders an heißen Tagen wird es richtig voll.
 
-- ✔ [Karlsfelder See auf der Karte](https://www.google.com/maps/place/Karlsfelder+See/@48.2164517,11.4648273,15z)
+- 🔗 [Karlsfelder See auf der Karte](https://www.google.com/maps/place/Karlsfelder+See/@48.2164517,11.4648273,15z)
 
 ### 3. Riemer See – urbane Alpenversion
 
@@ -30,7 +30,7 @@ Dieser See wurde für die BUGA (Blumenausstellung) angelegt – und ist ziemlich
 
 Pluspunkt: Ein künstlicher Hügel mit Alpenblick – wenn man die Augen zusammenkneift und das Wetter mitspielt. Ideal für Familien, Träumer und alle aus dem Ostpark.
 
-- ✔ [Riemer See auf der Karte](https://www.google.com/maps/place/Riemer+See/@48.1300173,11.7118926,15z)
+- 🔗 [Riemer See auf der Karte](https://www.google.com/maps/place/Riemer+See/@48.1300173,11.7118926,15z)
 
 ### 4. Chiemsee und Schliersee – Größe und Tiefe
 
@@ -40,8 +40,8 @@ Der Chiemsee ist wie ein Meer, nur ohne Salz. Bootstouren, Inselbesuch mit Schlo
 
 Der Schliersee ist kleiner, gemütlicher, mit Alpenpanorama wie auf einer Postkarte. Aber: Früh losfahren – die Bayern lieben ihre Natur. Alle gleichzeitig.
 
-- ✔ [Chiemsee auf der Karte](https://www.google.com/maps/place/Chiemsee/@47.8802046,12.4238653,11z)  
-- ✔ [Schliersee auf der Karte](https://www.google.com/maps/place/Schliersee/@47.7310143,11.8726165,14z)
+- 🔗 [Chiemsee auf der Karte](https://www.google.com/maps/place/Chiemsee/@47.8802046,12.4238653,11z)  
+- 🔗 [Schliersee auf der Karte](https://www.google.com/maps/place/Schliersee/@47.7310143,11.8726165,14z)
 
 ### 5. Eisbach – Surfen mitten in der Stadt (vorübergehend geschlossen)
 
@@ -49,20 +49,20 @@ Okay, kein See. Aber wo sonst sieht man Menschen im Anzug mit Surfbrett in eine 
 
 Die legendäre Eisbachwelle ist ein Spektakel. Nach einem tragischen Vorfall im März 2025 wurde sie jedoch vorübergehend geschlossen. Baden und Surfen sind derzeit verboten. Der Ort bleibt aber ein beliebtes Ziel für Spaziergänge und Abkühlung – jetzt halt in Turnschuhen statt im Neoprenanzug.
 
-- ✔ [Eisbach auf der Karte](https://www.google.com/maps/place/Eisbachwelle/@48.1412881,11.5844836,18z)
+- 🔗 [Eisbach auf der Karte](https://www.google.com/maps/place/Eisbachwelle/@48.1412881,11.5844836,18z)
 
 ### Tipps vom Profi:
 
-– Nimm die S-Bahn. Auto, Parkplatz und See sind keine gute Kombination.  
-– Früh los – nach 11:00 Uhr ist alles voll.  
-– Sonnencreme nicht vergessen und Geduld mitbringen: Im Sommer sind selbst die Enten in Bayern leicht gereizt.
+- • Nimm die S-Bahn. Auto, Parkplatz und See sind keine gute Kombination.  
+- • Früh los – nach 11:00 Uhr ist alles voll.  
+- • Sonnencreme nicht vergessen und Geduld mitbringen: Im Sommer sind selbst die Enten in Bayern leicht gereizt.
 
 ### Fazit:
 
-Lust auf Picknick mit Trubel – **Karlsfelder See**.  
-Natur und Ruhe gesucht – **Waldschwaigsee**.  
-Stil und Stadtgefühl – **Riemer See**.  
-Lust auf ein Abenteuer – **Chiemsee** oder **Schliersee**.  
-Für echten Nervenkitzel – aktuell nur zu Fuß entlang des **Eisbach**.
+- ✔ Lust auf Picknick mit Trubel – **Karlsfelder See**.  
+- ✔ Natur und Ruhe gesucht – **Waldschwaigsee**.  
+- ✔ Stil und Stadtgefühl – **Riemer See**.  
+- ✔ Lust auf ein Abenteuer – **Chiemsee** oder **Schliersee**.  
+- ✔ Für echten Nervenkitzel – aktuell nur zu Fuß entlang des **Eisbach**.
 
 **Sommer in München ist keine Temperatur. Es ist der Weg zum Wasser.**
