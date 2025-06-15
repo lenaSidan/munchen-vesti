@@ -1,10 +1,10 @@
 ---
 title: "Musikalischer Abend zum Gedenken an Wladimir Wyssozki"
 date: "2025-10-24"
-time: "24. Oktober 2025"
+time: "30. Oktober 2025"
 ort: "München"
 link: "[Zur Ticketbuchung](https://www.kontramarka.de/de/tour/koncert-pamyati-vladimira-vysockogo/?fbclid=IwY2xjawJ_AcNleHRuA2FlbQIxMAABHsk1iW9UeoGfUu2oX_o4jDtlL4OEs4RLytGo_o6_8N5gtC7LZqwxMXq8rA3k_aem_lqBaoFvmIuGU0ygblr4KOA)"
-image: "/images/vysotsky.webp"
+image: "/images/vysotsky_abend.webp"
 imageAlt: "Konzert zum Gedenken an Wladimir Wyssozki"
 seoTitle: "Wyssozki-Gedenkabend in München – Konzert im Herbst 2025"
 seoDescription: "Ein akustisches Konzert zu Ehren von Wladimir Wyssozki in München: Gitarrenklänge und Streichensemble live."
