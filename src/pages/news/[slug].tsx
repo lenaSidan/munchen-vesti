@@ -85,9 +85,9 @@ export default function NewsPage({ news }: NewsProps) {
           )}
           <div className={styles.content} dangerouslySetInnerHTML={{ __html: news.content }} />
         </div>
-        <div className={styles.likeContainer}>
+        {/* <div className={styles.likeContainer}>
           <LikeButton slug={news.slug} />
-        </div>
+        </div> */}
         <div className={styles.readMoreContainer}>
           <div className={styles.decorativeLine}>
             <span className={styles.left}>⊱❧</span>

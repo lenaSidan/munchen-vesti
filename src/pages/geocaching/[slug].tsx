@@ -70,9 +70,9 @@ export default function GeocachingPage({
           />
         )}
 
-        <div className={styles.likeContainer}>
+        {/* <div className={styles.likeContainer}>
           <LikeButton slug={slug} />
-        </div>
+        </div> */}
 
         <div className={styles.backContainer}>
           <div className={styles.decorativeLine}>

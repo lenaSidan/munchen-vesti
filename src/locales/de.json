@@ -159,7 +159,9 @@
     "past_events_title": "Vergangene Veranstaltungen in München",
     "past_events_description": "Archiv kultureller und städtischer Veranstaltungen, die bereits in München stattgefunden haben. Entdecken Sie, was los war.",
     "geocaching_title": "Geocaching in München – Verstecke, Abenteuer & GPS-Quests",
-    "geocaching_description": "Was ist Geocaching? Entdecke spannende Routen in München: Nachtmissionen, kreative Dosen und Familienspaß."
+    "geocaching_description": "Was ist Geocaching? Entdecke spannende Routen in München: Nachtmissionen, kreative Dosen und Familienspaß.",
+    "leisure_title": "Wohin gehen in München",
+    "leisure_description": "Sehenswerte Orte, Stadtrouten, Erlebnisse und Kulinarik in München – entdecken Sie die Stadt jenseits des Kalenders."
   },
   "past_events_heading": "Veranstaltungsarchiv",
   "menu": {
@@ -179,6 +181,7 @@
     "ads_studios": "Bildung",
     "ads_other": "Verschiedenes",
     "geocaching": "Geocaching",
+    "places": "Wohin gehen",
     "more": "mehr",
     "less": "weniger"
   },
@@ -628,5 +631,41 @@
       }
     },
     "more_geocaching": "Weitere Routen"
+  },
+  "leisure": {
+    "title": "Spaziergänge ohne Anlass",
+    "intro1": "Die unvergesslichsten Stadterlebnisse entstehen oft nicht nach Plan — nicht in dem Moment, wenn alles durchgetaktet ist, sondern dann, wenn man sich erlaubt, einfach loszugehen ...",
+    "intro2": "Hier sammeln wir Wege und Ideen, für die man keinen Anlass, keinen Plan und keine bestimmte Stimmung braucht. Es ist Inspiration für jeden Tag – damit selbst ein ganz gewöhnlicher Morgen in einem Spaziergang, einer Entdeckung oder zumindest in einer schönen Abbiegung enden kann.",
+    "p2": "Wohin gehen, wenn man einfach nur spazieren möchte? Wo kann man gut essen und dabei neue Seiten der Stadt entdecken? Welche Ecke Münchens überrascht selbst jene, die schon lange hier leben? Wir zeigen Richtungen – den Weg bestimmst du.",
+    "intro3": "Wir erweitern diesen Bereich nach und nach – mit Wegen, Orten, Höfen und kleinen Details, an denen man leicht vorbeigeht, die aber im Kopf bleiben. Alles, was uns selbst inspiriert – das bleibt hier.",
+    "p3": "Das ist kein Veranstaltungskalender und keine Liste von Sehenswürdigkeiten. Es ist dein persönlicher, lebendiger Stadtführer durch München – so, wie du es vielleicht noch nie erlebt hast.",
+    "p4": "Wähle ein Thema, geh in deinem eigenen Tempo – und lass jeden Spaziergang zu einer kleinen Entdeckung werden, die bei dir bleibt.",
+    "contact_link": "Wenn du deine eigene Entdeckung mit uns teilen möchtest – schreib uns",
+    "items": {
+      "essen-gehen": {
+        "title": "Essen gehen",
+        "description": "Die besten Restaurants, gemütliche Cafés und außergewöhnliche Essensformate in München – von Streetfood bis kulinarischen Entdeckungen."
+      },
+      "mit-kindern": {
+        "title": "Mit Kindern",
+        "description": "Orte und Aktivitäten für Familien – Parks, Museen, Spielplätze und Veranstaltungen für kleine und große Kinder."
+      },
+      "entdeckungen": {
+        "title": "Entdeckungen in München",
+        "description": "Versteckte Ecken der Stadt, besondere Spaziergänge, idyllische Parks und ruhige Ufer – Inspiration für Herz und Seele."
+      },
+      "freizeit-erlebnisse": {
+        "title": "Freizeit-Erlebnisse",
+        "description": "Escape Rooms, interaktive Museen, spannende Aktivitäten und originelle Erfahrungen für alle, die nach Abwechslung suchen."
+      },
+      "sehenswerte-orte": {
+        "title": "Sehenswerte Orte",
+        "description": "Architektonische Highlights, Kunstmuseen, besondere Gebäude und kulturelle Räume, die man gesehen haben sollte."
+      },
+      "stadt-routen": {
+        "title": "Stadtrouten",
+        "description": "Themenrouten für Spaziergänge durch München: interessante Viertel, bedeutende Straßen, historische Wege und persönliche Entdeckungen."
+      }
+    }
   }
 }
