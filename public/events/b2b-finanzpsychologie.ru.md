@@ -1,7 +1,7 @@
 ---
 title: "Психология денег в Мюнхене — вечер B2B с Тамарой Кондратенко"
 date: "2025-06-24"
-time: "Вторник, 24 июня 2025 года, в 18:00"
+time: "Вторник, 24 июня 2025 года, в 19:00"
 ort: "Мюнхен (точное место будет сообщено по WhatsApp)"
 link: "[Ссылка на регистрацию](https://forms.gle/ep5X8GpmPuoFvu1G9)"
 image: "/images/b2b-finanzpsychologie-2025.webp"
@@ -21,6 +21,9 @@ seoDescription: "Приглашение на живую встречу с пси
 **Госпожа Тамара Кондратенко**,  
 психолог с многолетним стажем, мастер рилив-терапии,  
 партнёр и резидент уважаемого сообщества B2B Community.
+- ✔ [WhatsApp](https://chat.whatsapp.com/K3pTSMUiSuYG9UBXSSJ34C)
+- ✔ [Instagram](https://www.instagram.com/tamara.psyterra/)
+- ✔ [www.psyterra.online](https://psyterra.online/)
 
 
 ### В программе вечера предусмотрено следующее:

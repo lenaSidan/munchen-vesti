@@ -1,7 +1,7 @@
 ---
 title: "Psychologie des Geldes in München – B2B-Abend mit Tamara Kondratenko"
 date: "2025-06-24"
-time: "Dienstag, 24. Juni 2025, um 18:00 Uhr"
+time: "Dienstag, 24. Juni 2025, um 19:00 Uhr"
 ort: "München (genauer Ort wird per WhatsApp mitgeteilt)"
 link: "[Zur Anmeldung](https://forms.gle/ep5X8GpmPuoFvu1G9)"
 image: "/images/b2b-finanzpsychologie-2025.webp"
@@ -21,6 +21,9 @@ Ein **eleganter Vortrag und lebendiger Gedankenaustausch** erwarten Sie mit:
 **Frau Tamara Kondratenko**,  
 Psychologin mit langjähriger Erfahrung, Meisterin der Releasetherapie,  
 Partnerin und Mitglied der angesehenen B2B Community.
+- ✔ [WhatsApp](https://chat.whatsapp.com/K3pTSMUiSuYG9UBXSSJ34C)
+- ✔ [Instagram](https://www.instagram.com/tamara.psyterra/)
+- ✔ [www.psyterra.online](https://psyterra.online/)
 
 ### Im Programm des Abends vorgesehen:
 
