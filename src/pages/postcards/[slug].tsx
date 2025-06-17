@@ -74,9 +74,9 @@ export default function Postcard({ postcard, locale }: PostcardProps) {
           />
           <div className={styles.text} dangerouslySetInnerHTML={{ __html: postcard.content }} />
         </div>
-         <div className={styles.likeContainer}>
+         {/* <div className={styles.likeContainer}>
           <LikeButton slug={postcard.slug} />
-        </div>
+        </div> */}
         <div className={styles.readMoreContainer}>
           <div className={styles.decorativeLine}>
             <span className={styles.left}>⊱❧</span>

@@ -250,6 +250,16 @@ export default function Header() {
             {t("menu.geocaching")}
           </Link>
           <Link
+            href="/places-page"
+            className={`${styles.navLink} ${
+              !isAdsSubmenuOpen && !isWordsSubmenuOpen && router.pathname === "/places-page"
+                ? styles.active
+                : ""
+            }`}
+          >
+            {t("menu.places")}
+          </Link>
+          <Link
             href="/events"
             className={`${styles.navLink} ${
               !isAdsSubmenuOpen && !isWordsSubmenuOpen && router.pathname === "/events"

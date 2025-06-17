@@ -83,9 +83,9 @@ export default function Event({ event, locale, archived, similarEvents }: EventP
           </div>
         )}
         <div className={styles.content} dangerouslySetInnerHTML={{ __html: event.content }} />
-        <div className={styles.likeContainer}>
+        {/* <div className={styles.likeContainer}>
           <LikeButton slug={event.slug} />
-        </div>
+        </div> */}
         <div className={styles.readMoreContainer}>
           <div className={styles.decorativeLine}>
             <span className={styles.left}>⊱❧</span>
