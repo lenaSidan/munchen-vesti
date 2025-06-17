@@ -13,14 +13,14 @@ Perfekt geeignet für ein **romantisches Date**, ein **originelles Geschenk** od
 
 Sie werden nicht sehen, wie das Gericht aussieht – aber Sie werden sich genau an seinen Geschmack erinnern.
 
-### Wo und wann?
+### ❖ Wo und wann?
 
 - ✔ **Ort:** Schlosswirtschaft Schwaige, Schloss Nymphenburg 30, 80638 München  
 - ✔ **Veranstaltungstage:** jeden Freitag, Samstag und Sonntag  
 - ✔ **Beginn:** 18:30 Uhr  
 - ✔ **Dauer:** ca. 3 Stunden
 
-### Was erwartet Sie?
+### ❖ Was erwartet Sie?
 
 - • Ein viergängiges Überraschungsmenü, kreiert vom Küchenchef  
       (vegetarische und vegane Optionen sind möglich – bitte im Voraus angeben)  
@@ -28,7 +28,7 @@ Sie werden nicht sehen, wie das Gericht aussieht – aber Sie werden sich genau 
 - • Schauspieler und Moderation, die Sie zwischen den Gängen unterhalten  
 - • Eine spannende Darbietung – jedes Gericht entfaltet sich durch Berührung, Duft und Geschmack  
 
-### Was kostet es?
+### ❖ Was kostet es?
 
 - ✔ **79 € pro Person**  
 - ✔ **9,50 € für Getränke nach Wahl** (Aperitif, zwei Gläser Wein, Wasser und Espresso)  
@@ -36,13 +36,13 @@ Sie werden nicht sehen, wie das Gericht aussieht – aber Sie werden sich genau 
 
 [Offizielle Website und Buchung](https://www.schlosswirtschaft-schwaige.de/veranstaltungen/dinner-in-the-dark/)
 
-### Ein paar Tipps
+### ❖ Ein paar Tipps
 
 - • Versuchen Sie nicht, die Gerichte im Voraus zu erraten – lassen Sie sich einfach überraschen  
 - • Tragen Sie bequeme Kleidung: niemand sieht es, aber Sie werden es spüren  
 - • Kommen Sie pünktlich – in der Dunkelheit wird niemand mehr hereingelassen, und die Türen schließen genau zur angegebenen Zeit  
 
-### Warum lohnt es sich?
+### ❖ Warum lohnt es sich?
 
 - • Es ist außergewöhnlich: Sie essen nicht nur, Sie erforschen Ihre Sinne  
 - • Es ist emotional: Sie erleben Staunen, Spaß und vielleicht sogar ein wenig Nervenkitzel  

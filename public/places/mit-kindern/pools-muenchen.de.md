@@ -9,7 +9,7 @@ seoDescription: "Die besten Schwimmbäder in München: Freibäder und Hallenbäd
 
 **München ist nicht nur die Isar und grüne Parks.** Es ist eine Stadt, in der Wasser ein unverzichtbarer Teil der Stadtkultur ist – von sonnigen Freibädern bis zu gemütlichen Hallenbädern. Machen wir eine kleine Wasserreise – mit einem Lächeln und guter Laune.
 
-### Offene Freibäder: Sonne und Wellenrauschen
+### ❖ Offene Freibäder: Sonne und Wellenrauschen
 
 **Schyrenbad**  
 Dies ist nicht einfach ein Schwimmbad – es ist eine lebendige historische Landschaft, die bereits 1847 eröffnet wurde. Anfangs nur für Männer zugänglich, wurde es später zum Familienbad. Drei Schwimmbahnen, Kinderbecken, Wasserrutsche, Tischtennisplatten und Schachbretter auf der Wiese. Nach der Renovierung 2006 – eine Mischung aus Moderne und Natur, gemütliche Ecken und ein Bierkiosk. Ein idealer Ort, um nicht nur zu schwimmen, sondern auch über den Sinn des Lebens bei einem Bierglas nachzudenken.  
@@ -23,7 +23,7 @@ Diese Naturbäder funktionieren ganz ohne Chlor: nur Quellwasser und ökologisch
 Maria Einsiedel – ein echtes Juwel mit Bio-Reinigung, grünen Ufern und Kanal.  
 Georgenschwaige – kompakter, mit Pflanzenfilterung, geplante Wiedereröffnung am 2. Juni 2025.
 
-### Geschlossene Hallenbäder: Gemütlichkeit bei jedem Wetter
+### ❖ Geschlossene Hallenbäder: Gemütlichkeit bei jedem Wetter
 
 **Müller’sches Volksbad**  
 Wenn man in die architektonische Vergangenheit eintauchen will – ist dies der richtige Ort. Erbaut 1901 im Jugendstil, vereint das Bad bemalte Gewölbe, römisch-irisches Bad, klassische Saunen und ein Café im Stil des frühen 20. Jahrhunderts.  
@@ -39,7 +39,7 @@ Wellen im Hallenbad wie am Meer – hier ist das Realität. Mehrmals am Tag wird
 **Weitere Hallenbäder: Nordbad, Südbad, Westbad, Michaelibad, Bad Giesing–Harlaching**  
 Fast das ganze Jahr über geöffnet, von 7:30 bis 23:00 Uhr. Alle verfügen über Schwimmbahnen, Familienzonen, Saunen, einige auch über Außenbecken und Terrassen. Besonders gut für Training und Alltagsbesuche.
 
-### Preise und Ausstattung
+### ❖ Preise und Ausstattung
 
 - • **Eintritt in Hallenbäder:** Erwachsene – ca. €6,90, ermäßigt – ca. €4,60.  
 - • **Westbad** – eines der teuersten: ca. €9,30.  
@@ -49,7 +49,7 @@ Fast das ganze Jahr über geöffnet, von 7:30 bis 23:00 Uhr. Alle verfügen übe
 - • **Duschzeug und Badekappe** manchmal erforderlich.  
 - • **Online-Tickets** sparen Zeit und Warteschlangen.
 
-### Wie wählen?
+### ❖ Wie wählen?
 
 - ✔ Du willst **Sommer unter Bäumen und Bier auf der Wiese**? – Schyrenbad.  
 - ✔ Du träumst von **warmem Wasser im Freien im Winter**? – Dantebad.  
