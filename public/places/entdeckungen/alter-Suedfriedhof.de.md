@@ -9,14 +9,14 @@ seoDescription: "Entdecken Sie den Alter Südfriedhof in München: ein historisc
 
 In einer Stadt, in der das Oktoberfest tobt und morgens der Duft von frisch gebackenen Brezn in der Luft liegt, gibt es einen Ort, an dem alles zur Ruhe kommt. Der **Alter Südfriedhof** – Münchens ältester Friedhof – ist nicht nur eine Oase der Stille, sondern ein Kapitel Stadtgeschichte, erzählt in Stein, Bäumen und Moos. Wer denkt, Friedhöfe seien langweilig oder düster, war noch nie hier.
 
-### Historischer Kontext: Von der Pest bis zur Aufklärung
+### ❖ Historischer Kontext: Von der Pest bis zur Aufklärung
 Der Friedhof wurde **1563 auf Anordnung von Herzog Albrecht V.** während einer Pestepidemie gegründet. Bis dahin fanden Bestattungen ausschließlich an Kirchen statt, doch die hohe Sterblichkeit machte einen separaten Friedhof außerhalb der Stadtmauern notwendig.
 
 Zunächst nur in Krisenzeiten genutzt, wurde er im 18. Jahrhundert zur Hauptbegräbnisstätte Münchens. **Von 1788 bis 1867** war der Alter Südfriedhof der einzige offizielle Friedhof der Stadt – hier wurden alle beerdigt, von Professoren bis Handwerkern, von Soldaten bis Künstlern.
 
 Im Oktober 1943 wurde der Friedhof bei Bombenangriffen teilweise beschädigt, aber viele Denkmäler blieben erhalten. Heute steht er unter Denkmalschutz und gilt als historisch-kulturelles Erbe.
 
-### Wer hier ruht
+### ❖ Wer hier ruht
 Die Liste bedeutender Münchner, die hier begraben sind, liest sich wie ein Schulbuch der bayerischen Geschichte:
 
 - • **Leo von Klenze** – Hofarchitekt Ludwigs I., Erbauer der Glyptothek und des Königsplatzes
@@ -27,7 +27,7 @@ Die Liste bedeutender Münchner, die hier begraben sind, liest sich wie ein Schu
 
 Viele Grabsteine sind mit Reliefs, Säulen oder Barockelementen verziert – geschaffen von den besten Bildhauern ihrer Zeit.
 
-### Architektur und Atmosphäre
+### ❖ Architektur und Atmosphäre
 Der Alter Südfriedhof unterscheidet sich stark von anderen Friedhöfen. Er ist grün, offen und belebt – teils sogar mit Fahrradwegen. Statt monumentaler Grabstätten trifft man hier auf:
 
 - • gotische Grabkapellen
@@ -37,14 +37,14 @@ Der Alter Südfriedhof unterscheidet sich stark von anderen Friedhöfen. Er ist 
 
 Besonders im Herbst entfaltet sich ein malerisches Bild: Blätter bedecken die jahrhundertealten Gräber, Vogelrufe hallen durch die Äste, und nur Schritte durchbrechen die Stille.
 
-### Wenig bekannte Fakten
+### ❖ Wenig bekannte Fakten
 - • Der Friedhof inspirierte Autoren wie **Wolfgang Herndt**, der ihm ein ganzes Buch widmete.
 - • In den 1980er Jahren drohte die Schließung, doch Bürgerproteste verhinderten dies.
 - • Einige Gräber sind verloren gegangen, an ihrer Stelle erinnern Gedenktafeln – nicht immer an der exakten Stelle.
 - • Seit **Dezember 1943** finden keine Beerdigungen mehr statt – der Ort dient heute dem Gedenken und der Stadtgeschichte.
 - • Auf einem der ältesten Grabsteine steht „**Gestorben an der Pest**“ – eine Erinnerung an den Ursprung des Friedhofs.
 
-### Praktische Informationen
+### ❖ Praktische Informationen
 **Adresse:** Thalkirchner Straße 17, 80337 München  
 **U-Bahn:** Sendlinger Tor (Linien U1, U2, U3, U6, U7, U8)  
 **Öffnungszeiten:**  

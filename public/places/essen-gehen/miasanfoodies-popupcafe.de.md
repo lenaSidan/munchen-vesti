@@ -9,11 +9,11 @@ seoDescription: "Ein Pop-up-Dachcafé im Werksviertel von Mia San Foodies: Speci
 
 Wenn du irgendwo das Schild **Genusstipp** oder **Geheimtipp** mit dem Hinweis *„Pop‑Up Café über den Dächern Münchens“* siehst, bist du auf dem richtigen Weg zu sommerlicher Inspiration.
 
-### Was ist dieses Café?
+### ❖ Was ist dieses Café?
 
 Es handelt sich um ein temporäres Café auf dem Dach eines Gebäudes im **Werksviertel** (Gebäude **Hoch 5**), wo man unter freiem Himmel **Kaffee trinken und Kuchen essen** kann — mit direktem Blick über die Stadt, umgeben von Pflanzkübeln, mit **Hühnern und kleinen Bäumen**, wie im Video von **Mia San Foodies** zu sehen. Der Ort ist **klein und gemütlich**, *„nicht für Instagram-Drinks“*, sondern für Menschen, die **Ruhe und Atmosphäre** schätzen.
 
-### Warum lohnt sich ein Besuch?
+### ❖ Warum lohnt sich ein Besuch?
 
 **Aussicht und Atmosphäre**: Neben dem Blick über die Stadt gibt es echte **Hühner und Obstbäume auf dem Dach** – ein besonderes Merkmal dieses Ortes.
 
@@ -21,7 +21,7 @@ Es handelt sich um ein temporäres Café auf dem Dach eines Gebäudes im **Werks
 
 **Temporäres Konzept**: Pop-up ist hier nicht nur ein Wort – wer **das Einmalige** schätzt, findet hier den besonderen Reiz von *„nur jetzt, nur hier“*.
 
-### Wann und wie?
+### ❖ Wann und wie?
 
 Es ist ein **periodisch geöffnetes Pop‑Up Café** – Öffnungszeiten und Termine werden über **Social Media** bekannt gegeben. Man sollte dem Account [**@miasanfoodies**](https://www.instagram.com/miasanfoodies/) oder dem TikTok-Profil folgen.
 
@@ -29,9 +29,6 @@ Am besten kommt man **am frühen Nachmittag oder frühen Abend**, besonders im S
 
 Oft finden auf dem Dach **alkoholfreie Sommerabende** statt: kein Spritz-Bar, sondern **ruhiger Kaffee**, **Gespräche** und **entspanntes Flair**.
 
----
-
-### Fazit
 
 Wenn du  
 ein **verstecktes Café mit Gartengefühl** auf dem Dach suchst,  

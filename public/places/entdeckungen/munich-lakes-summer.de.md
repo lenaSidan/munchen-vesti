@@ -52,13 +52,13 @@ Die legendäre Eisbachwelle ist ein Spektakel. Nach einem tragischen Vorfall im 
 
 - 🔗 [Eisbach auf der Karte](https://www.google.com/maps/place/Eisbachwelle/@48.1412881,11.5844836,18z)
 
-### Tipps vom Profi:
+### ❖ Tipps vom Profi:
 
 - • Nimm die S-Bahn. Auto, Parkplatz und See sind keine gute Kombination.  
 - • Früh los – nach 11:00 Uhr ist alles voll.  
 - • Sonnencreme nicht vergessen und Geduld mitbringen: Im Sommer sind selbst die Enten in Bayern leicht gereizt.
 
-### Fazit:
+### ❖ Fazit:
 
 - ✔ Lust auf Picknick mit Trubel – **Karlsfelder See**.  
 - ✔ Natur und Ruhe gesucht – **Waldschwaigsee**.  

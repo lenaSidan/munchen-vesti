@@ -11,7 +11,7 @@ Ein Familienausflug in die Natur kann nicht nur gesund, sondern auch richtig lec
 
 Das ist kein gewöhnliches Café – das ist ein echtes Familienabenteuer unter freiem Himmel, inklusive frischer Erdbeeren und Apfelstrudel.
 
-### Hofreiter BeerenCafé – was ist das und warum lohnt sich ein Besuch?
+### ❖ Hofreiter BeerenCafé – was ist das und warum lohnt sich ein Besuch?
 
 **1. Frische Beeren direkt vom Feld**  
 Erdbeeren, Himbeeren, Heidelbeeren – je nach Saison können Sie Ihre Beeren selbst pflücken. Doppelte Freude: ein Erlebnis für Kinder und ein schönes Foto für Instagram. Und Vitamine gibt es reichlich obendrauf.
@@ -25,7 +25,7 @@ Mit Rutschen, Wasserspielen, Sandkasten und einem sicheren Bereich für die Klei
 **4. Irrgärten wie im Film**  
 Im Herbst entstehen an manchen Standorten Labyrinthe aus Mais oder Stroh. Keine Sorge: Man wird Sie finden – oder Sie folgen einfach dem Duft von Erdbeermarmelade.
 
-### Wo genau liegt dieses Beerenparadies?
+### ❖ Wo genau liegt dieses Beerenparadies?
 
 Das **Hofreiter BeerenCafé** ist kein einzelner Ort, sondern ein ganzes Netzwerk rund um München:
 
@@ -37,20 +37,20 @@ Das **Hofreiter BeerenCafé** ist kein einzelner Ort, sondern ein ganzes Netzwer
 Manche Standorte sind klassische Cafés, andere funktionieren als richtige Beerenfelder mit Selbstpflücke.  
 Aktuelle Infos finden Sie auf der offiziellen Website – zuverlässig und typisch deutsch.
 
-### Öffnungszeiten
+### ❖ Öffnungszeiten
 
 Täglich geöffnet von **10:00 bis 19:00 Uhr**.  
 Aber: Bei schlechtem Wetter oder Regen können die Felder geschlossen sein.  
 Schauen Sie also vor Ihrem Besuch auf die Website und prüfen Sie Wetter und Hinweise – bevor Sie die Picknicktasche packen und sich auf Beerensuche begeben.
 
-### Nützliche Tipps von erfahrenen Beerenfans
+### ❖ Nützliche Tipps von erfahrenen Beerenfans
 
 - • Praktische Kleidung ist Gold wert. Schönes Kleid – gut. Bequeme Schuhe – besser. Besonders, wenn Sie Beeren auf den hinteren Reihen pflücken wollen.  
 - • Eigene Behälter mitbringen. Das schont die Umwelt – und Ihre Beeren bleiben heil.  
 - • Sonne ist schön, Sonnencreme und Hut sind besser. Vor allem im Juni. Und ganz besonders mit Kindern.  
 - • Früh kommen lohnt sich. Die süßesten Beeren warten nicht bis zum Mittag.
 
-### Warum lohnt sich dieser Ausflug?
+### ❖ Warum lohnt sich dieser Ausflug?
 
 Weil frische Luft, warme Sonne, Beeren direkt vom Strauch und hausgemachter Kuchen das Beste sind, was der Münchner Sommer zu bieten hat.  
 Und weil das **Hofreiter BeerenCafé** ein kleines Abenteuer mit Erdbeer-Nachgeschmack ist.  
