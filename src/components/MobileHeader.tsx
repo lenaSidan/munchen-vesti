@@ -156,11 +156,17 @@ export default function MobileHeader() {
               </Link>
               <Link
                 href="/geocaching-page"
-                title={t("menu.chronicles_full")}
                 className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/geocaching-page" ? styles.active : ""}`}
                 onClick={closeAllSubmenus}
               >
                 {t("menu.geocaching").toUpperCase()}
+              </Link>
+              <Link
+                href="/places-page"
+                className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/places-page" ? styles.active : ""}`}
+                onClick={closeAllSubmenus}
+              >
+                {t("menu.places").toUpperCase()}
               </Link>
               <Link
                 href="/events"
