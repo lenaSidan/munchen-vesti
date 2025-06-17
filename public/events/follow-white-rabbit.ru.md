@@ -1,7 +1,7 @@
 ---
 title: "Следуй за Белым Кроликом…"
 date: "2025-06-29"
-time: "29 июня 2025 года, 12:00"
+time: "6 июля 2025 года, 12:00"
 ort: "Место — для подписчиков @mode.rnbite"
 link: "[Instagram @mode.rnbite](https://www.instagram.com/mode.rnbite?igsh=NWtwbWpleHhjZDJq)"
 image: "/images/follow-white-rabbit.webp"
