@@ -2,34 +2,28 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 30px 20px;
-  background: var(--background);
+  background-color: var(--alt-background2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
   color: var(--text-color);
   transition:
     background 0.3s ease-in-out,
     color 0.3s ease-in-out;
+    margin-bottom: 40px;
 }
 
 .headerBox {
   text-align: center;
-  background-color: var(--alt-background-light);
-  border: 1px solid var(--border-color);
-  padding: 25px;
-  margin-bottom: 30px;
-  border-radius: 16px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 40px;
 }
 
 .headerImage {
   display: block;
   margin: 0 auto;
   border-radius: 8px;
-  border: 1px solid var(--heading-color2);;
+  border: 1px solid var(--heading-color2);
   max-width: 100%;
   height: auto;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
 }
 
 .title {
@@ -73,7 +67,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 20px auto;
+  margin: 60px auto 20px auto;
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -146,6 +140,7 @@
 
   .headerBox {
     padding: 15px;
+    margin-bottom: 10px;
   }
 
   .title {
