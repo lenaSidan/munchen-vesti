@@ -1,7 +1,7 @@
 ---
 title: "Ужин в полной темноте: Когда зрение отдыхает, просыпаются чувства"
 description: "Уникальный гастрономический опыт в полной темноте. Гостям предлагается ужин, который раскрывает вкус иначе."
-image: "/images/dinner-in-the-dark.webp"
+image: "/images/dinner-in-the-dark_.webp"
 imageAlt: "Dinner in the Dark в Schlosswirtschaft Schwaige"
 seoTitle: "Ужин в полной темноте в Мюнхене – Dinner in the Dark"
 seoDescription: "Гастрономическое приключение в Schloss Nymphenburg – полный ужин в темноте с сюрприз-меню, эмоциями и отключённым зрением. Только в Мюнхене."

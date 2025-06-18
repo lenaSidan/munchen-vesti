@@ -1,7 +1,7 @@
 ---
 title: "Dinner im Dunkeln: Wenn das Sehen ruht, erwachen die Sinne"
 description: "Ein einzigartiges gastronomisches Erlebnis in völliger Dunkelheit. Die Gäste entdecken den Geschmack auf eine neue Weise."
-image: "/images/dinner-in-the-dark.webp"
+image: "/images/dinner-in-the-dark_.webp"
 imageAlt: "Dinner in the Dark в Schlosswirtschaft Schwaige"
 seoTitle: "Dinner im Dunkeln in München – Ein unvergessliches Erlebnis"
 seoDescription: "Ein gastronomisches Abenteuer in Schloss Nymphenburg – Abendessen in völliger Dunkelheit mit Überraschungsmenü, Emotionen und Sinneserfahrung. Nur in München."
