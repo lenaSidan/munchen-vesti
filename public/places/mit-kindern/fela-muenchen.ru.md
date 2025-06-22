@@ -32,10 +32,10 @@ seoDescription: "FÉLA в Мюнхене — это кафе, где можно 
 
 Можно прийти одному, с ребёнком или в компании — комфортно будет всем.
 
-- ✔ **Адрес:** Nordendstraße 52, 80801 München  
-- ✔ **Время работы:** вторник–воскресенье, 11:00–19:00  
-- ✔ **Ближайшие остановки:** Giselastraße, Barer Straße
-- ✔ [Instagram](https://www.instagram.com/felacafe.munich/?hl=en)
+- ⌖ **Адрес:** Nordendstraße 52, 80801 München  
+- ⌖ **Время работы:** вторник–воскресенье, 11:00–19:00  
+- ⌖ **Ближайшие остановки:** Giselastraße, Barer Straße
+- ⌖ [Instagram](https://www.instagram.com/felacafe.munich/?hl=en)
  
 ###
 

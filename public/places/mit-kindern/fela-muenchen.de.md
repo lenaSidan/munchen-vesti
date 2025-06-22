@@ -32,10 +32,10 @@ Bis ins Detail durchdacht: ein liebevoller Innenraum, höfliches Personal und ei
 
 Ob allein, mit Kind oder in Gesellschaft — hier fühlt sich jeder wohl.
 
-- ✔ **Adresse:** Nordendstraße 52, 80801 München 
-- ✔ **Öffnungszeiten:** Dienstag–Sonntag, 11:00–19:00  
-- ✔ **Nächste Haltestellen:** Giselastraße, Barer Straße  
-- ✔ [Instagram](https://www.instagram.com/felacafe.munich/?hl=en)
+- ⌖ **Adresse:** Nordendstraße 52, 80801 München 
+- ⌖ **Öffnungszeiten:** Dienstag–Sonntag, 11:00–19:00  
+- ⌖ **Nächste Haltestellen:** Giselastraße, Barer Straße  
+- ⌖ [Instagram](https://www.instagram.com/felacafe.munich/?hl=en)
 
 ###
 
