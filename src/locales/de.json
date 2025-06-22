@@ -313,7 +313,9 @@
   "event": {
     "time": "Datum",
     "ort": "Ort",
-    "link": "Link"
+    "link": "Link",
+    "copy_link": "Link kopieren",
+    "link_copied": "Link wurde kopiert!"
   },
   "articles": {
     "articles": "Articles",
