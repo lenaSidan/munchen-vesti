@@ -1,6 +1,6 @@
 ---
 title: "Gedenktag des Krieges — 22. Juni"
-date: "2025-06-22"
+date: "2025-06-21"
 time: "21. Juni 2025, Beginn um 11:00 Uhr"
 ort: "KZ-Gedenkstätte Dachau"
 link: "[Telegram](https://t.me/+34RsUQNY1-EzMmYy)"

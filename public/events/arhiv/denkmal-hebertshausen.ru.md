@@ -1,6 +1,6 @@
 ---
 title: "День памяти и скорби — 22 июня"
-date: "2025-06-22"
+date: "2025-06-21"
 time: "21 июня 2025 года, начало в 11:00"
 ort: "KZ-Gedenkstätte Dachau"
 link: "[Telegram](https://t.me/+34RsUQNY1-EzMmYy)"
