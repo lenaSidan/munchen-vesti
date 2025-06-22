@@ -11,6 +11,7 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 // import EasterEggById from "@/components/EasterEggById";
 import SubscribeBox from "@/components/SubscribeBox";
+import { useRouter } from "next/router";
 import rehypeExternalLinks from "rehype-external-links";
 
 interface EventsProps {
@@ -19,14 +20,31 @@ interface EventsProps {
 
 export default function EventsPage({ events }: EventsProps) {
   const t = useTranslation();
+  const router = useRouter();
 
   // ❗ Изначально null, после загрузки страницы явно ставим null
   const [expandedSlug, setExpandedSlug] = useState<string | null>(null);
   const [isClient, setIsClient] = useState(false); // Флаг, что код выполняется на клиенте
 
+  // useEffect(() => {
+  //   setIsClient(true); // После рендера отмечаем, что клиент загружен
+  //   setExpandedSlug(null); // Закрываем все события
+  // }, []);
   useEffect(() => {
-    setIsClient(true); // После рендера отмечаем, что клиент загружен
-    setExpandedSlug(null); // Закрываем все события
+    setIsClient(true);
+
+    const hash = window.location.hash.replace("#", "");
+    if (hash) {
+      setExpandedSlug(hash);
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100); // Ждём немного, чтобы DOM прогрузился
+    } else {
+      setExpandedSlug(null);
+    }
   }, []);
 
   // Функция переключения раскрытого события
@@ -42,6 +60,8 @@ export default function EventsPage({ events }: EventsProps) {
     return div.querySelector("p")?.outerHTML || htmlContent;
   };
 
+  const [copiedSlug, setCopiedSlug] = useState<string | null>(null);
+
   return (
     <>
       <Seo title={t("meta.events_title")} description={t("meta.events_description")} />
@@ -50,7 +70,7 @@ export default function EventsPage({ events }: EventsProps) {
         {/* <h2 className={styles.pageTitle}>{t("menu.announcements")}</h2> */}
 
         {events.map((event) => (
-          <div key={event.slug} className={styles.eventCard}>
+          <div key={event.slug} id={event.slug} className={styles.eventCard}>
             <div className={styles.titleBox}>
               <h2 className={styles.eventTitle}>{event.title}</h2>
             </div>
@@ -125,15 +145,29 @@ export default function EventsPage({ events }: EventsProps) {
                       : getExcerpt(event.content),
                 }}
               />
+              <div className={styles.buttonsContainer}>
+                <button
+                  type="button"
+                  className={styles.toggleButton}
+                  data-testid={`toggle-${event.slug}`}
+                  onClick={() => toggleExpand(event.slug)}
+                >
+                  {expandedSlug === event.slug ? t("menu.less") : t("menu.more")}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+const url = `${window.location.origin}/${router.locale}/events-page#${event.slug}`;
+                    navigator.clipboard.writeText(url);
+                    setCopiedSlug(event.slug);
 
-              <button
-                type="button"
-                className={styles.toggleButton}
-                data-testid={`toggle-${event.slug}`}
-                onClick={() => toggleExpand(event.slug)}
-              >
-                {expandedSlug === event.slug ? t("menu.less") : t("menu.more")}
-              </button>
+                    setTimeout(() => setCopiedSlug(null), 3000);
+                  }}
+                  className={styles.copyLinkButton}
+                >
+                  {t("event.copy_link")}
+                </button>
+              </div>
             </div>
           </div>
         ))}
@@ -143,6 +177,7 @@ export default function EventsPage({ events }: EventsProps) {
           </Link>
         </div> */}
       </div>
+      {copiedSlug && <div className={styles.copyToast}> ❖ {t("event.link_copied")}</div>}
       <SubscribeBox />
       {/* <EasterEggById id="easteregg-events" chance={0.5} /> */}
     </>

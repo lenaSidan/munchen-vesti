@@ -171,7 +171,11 @@
   line-height: 1.4;
   margin-bottom: 5px;
 }
-
+.buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .toggleButton {
   display: inline-block;
   font-size: 1rem;
@@ -213,6 +217,54 @@
 .archiveButton:hover {
   background-color: var(--button-bg-hover, #444);
 }
+.copyLinkButton {
+  background: none;
+  border: none;
+  color: var(--link-color);
+  cursor: pointer;
+  margin-top: 0.5rem;
+  padding: 0;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.copyLinkButton:hover {
+  text-decoration: none;
+}
+.copyToast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--border-color);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-size: 0.95rem;
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+}
+
 
 @media (max-width: 768px) {
   .container {
