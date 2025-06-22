@@ -175,6 +175,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-end;
 }
 .toggleButton {
   display: inline-block;
@@ -264,7 +265,6 @@
     transform: translateX(-50%) translateY(20px);
   }
 }
-
 
 @media (max-width: 768px) {
   .container {

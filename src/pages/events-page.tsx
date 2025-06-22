@@ -157,7 +157,7 @@ export default function EventsPage({ events }: EventsProps) {
                 <button
                   type="button"
                   onClick={() => {
-const url = `${window.location.origin}/${router.locale}/events-page#${event.slug}`;
+                    const url = `${window.location.origin}/${router.locale}/events-page#${event.slug}`;
                     navigator.clipboard.writeText(url);
                     setCopiedSlug(event.slug);
 
