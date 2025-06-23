@@ -1,6 +1,6 @@
 ---
 title: "Animal Crossing в SEA LIFE München: когда Том Нук встречает акул"
-date: "2025-06-23"
+date: "2025-06-25"
 endDate: "2025-06-29"
 time: "12 мая – 29 июня 2025 года, ежедневно с 09:00 до 18:00 (последний вход в 17:00)"
 ort: "SEA LIFE München, Willi‑Daume‑Platz 1, Olympiapark, München"
