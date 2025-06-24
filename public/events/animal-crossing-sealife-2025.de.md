@@ -1,6 +1,6 @@
 ---
 title: "Animal Crossing im SEA LIFE München: Wenn Tom Nook auf Haie trifft"
-date: "2025-06-25"
+date: "2025-06-28"
 endDate: "2025-06-29"
 time: "12. Mai – 29. Juni 2025, täglich von 09:00 bis 18:00 Uhr (letzter Einlass um 17:00 Uhr)"
 ort: "SEA LIFE München, Willi‑Daume‑Platz 1, Olympiapark, München"
