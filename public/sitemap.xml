@@ -60,8 +60,8 @@
 <url><loc>https://munchen-vesti.de/news/uber-women-feature</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/animal-crossing-sealife-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/animal-crossing-sealife-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/de/events/b2b-finanzpsychologie</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/events/b2b-finanzpsychologie</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://munchen-vesti.de/de/events/anime-dreamlight-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://munchen-vesti.de/events/anime-dreamlight-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/follow-white-rabbit</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/follow-white-rabbit</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/hofgartenturnier</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
@@ -100,6 +100,8 @@
 <url><loc>https://munchen-vesti.de/events/afrika-fest</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/auer-dult</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/events/auer-dult</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
+<url><loc>https://munchen-vesti.de/de/events/b2b-finanzpsychologie</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
+<url><loc>https://munchen-vesti.de/events/b2b-finanzpsychologie</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/bachelor-and-more</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/events/bachelor-and-more</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/bauma</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
