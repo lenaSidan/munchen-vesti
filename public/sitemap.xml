@@ -58,12 +58,8 @@
 <url><loc>https://munchen-vesti.de/news/tram-muenchen-2025</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://munchen-vesti.de/de/news/uber-women-feature</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://munchen-vesti.de/news/uber-women-feature</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
-<url><loc>https://munchen-vesti.de/de/events/animal-crossing-sealife-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/events/animal-crossing-sealife-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/anime-dreamlight-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/anime-dreamlight-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/de/events/follow-white-rabbit</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/events/follow-white-rabbit</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/hofgartenturnier</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/hofgartenturnier</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/jakobidult-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
@@ -76,16 +72,14 @@
 <url><loc>https://munchen-vesti.de/events/kocherlball-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/koerperwelten</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/koerperwelten</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/de/events/lila-neuronight-tirol</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/events/lila-neuronight-tirol</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/lmu-sommerfest</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/lmu-sommerfest</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://munchen-vesti.de/de/events/munich-startup-festival</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://munchen-vesti.de/events/munich-startup-festival</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/sommernachtstraum2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/sommernachtstraum2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/sommertheater-englischer-garten</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/sommertheater-englischer-garten</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/de/events/theater-auf-gras</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/events/theater-auf-gras</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/tollwood-sommerfestival</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/tollwood-sommerfestival</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/vysotsky_concert</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
@@ -98,6 +92,8 @@
 <url><loc>https://munchen-vesti.de/events/9mai</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/afrika-fest</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/events/afrika-fest</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
+<url><loc>https://munchen-vesti.de/de/events/animal-crossing-sealife-2025</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
+<url><loc>https://munchen-vesti.de/events/animal-crossing-sealife-2025</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/auer-dult</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/events/auer-dult</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/b2b-finanzpsychologie</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
@@ -120,6 +116,8 @@
 <url><loc>https://munchen-vesti.de/events/fast-furious-party-2025</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/flohmarkt-theresienwiese</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/events/flohmarkt-theresienwiese</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
+<url><loc>https://munchen-vesti.de/de/events/follow-white-rabbit</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
+<url><loc>https://munchen-vesti.de/events/follow-white-rabbit</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/fruehlingsfest</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/events/fruehlingsfest</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/happy-life-conference</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
@@ -132,6 +130,8 @@
 <url><loc>https://munchen-vesti.de/events/lange_nacht_musik</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/lila-neuronichnik</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/events/lila-neuronichnik</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
+<url><loc>https://munchen-vesti.de/de/events/lila-neuronight-tirol</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
+<url><loc>https://munchen-vesti.de/events/lila-neuronight-tirol</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/love-at-first-slide</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/events/love-at-first-slide</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/maedchenflohmarkt</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
@@ -154,6 +154,8 @@
 <url><loc>https://munchen-vesti.de/events/streetfood-festival-hausler-2025</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/streetfoodpanda2025</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/events/streetfoodpanda2025</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
+<url><loc>https://munchen-vesti.de/de/events/theater-auf-gras</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
+<url><loc>https://munchen-vesti.de/events/theater-auf-gras</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/theaterwoche</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/events/theaterwoche</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/untergiesing-strassenfest</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
