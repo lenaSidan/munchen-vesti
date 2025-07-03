@@ -31,9 +31,7 @@ _Jede:r Teilnehmende erhält individuelle Einsichten — und sogar das bloße Be
 
 ### Veranstalterin
 
-Das Spiel wird geleitet von **Elena Mukhina** —  
-Leela-Praktikerin, Begleiterin transformativer Prozesse, Körpertherapeutin und Achtsamkeitstrainerin.
-
+Das Spiel wird geleitet von **Elena Mukhina** —  Absolvent der 3. Stufe der internationalen Schule Omkara. Ein feinfühliger Empath und ein achtsamer Begleiter.
 **Mehr über Elena und ihren Ansatz: [@elena_mukhina_leela](https://instagram.com/elena_mukhina_leela)**
 
 ### Teilnahmebedingungen
