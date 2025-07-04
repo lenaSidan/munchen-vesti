@@ -1,6 +1,6 @@
 ---
 title: "Sommertheater im Englischen Garten"
-date: "2025-07-03"
+date: "2025-07-16"
 endDate: "2025-07-26"
 ort: "Englischer Garten, Amphitheater"
 time: "ab dem 3. Juli 2025"

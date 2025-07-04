@@ -1,6 +1,6 @@
 ---
 title: "Летний театр под открытым небом"
-date: "2025-07-03"
+date: "2025-07-16"
 endDate: "2025-07-26"
 ort: "Englischer Garten, Amphitheater"
 time: "c 3 июля 2025 года"
