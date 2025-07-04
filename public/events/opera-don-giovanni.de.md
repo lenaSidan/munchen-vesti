@@ -2,7 +2,7 @@
 title: "„Oper für alle“ am Marstallplatz: Don Giovanni unter freiem Himmel"
 date: "2025-07-06"
 endDate: "2025-07-06"
-time: "Einlass ab 18:30 Uhr, Übertragung um 19:00 Uhr"
+time: "ab 18:30 Uhr, Übertragung um 19:00 Uhr"
 ort: "Marstallplatz, neben der Residenz und dem Nationaltheater"
 link: "[Offizielle Informationen](https://www.staatsoper.de/oper-fuer-alle)"
 image: "/images/opera-don-giovanni.webp"

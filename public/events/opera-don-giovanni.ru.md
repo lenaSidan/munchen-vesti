@@ -2,7 +2,7 @@
 title: "«Опера для всех» на Марштальплац: Дон Джованни под открытым небом"
 date: "2025-07-06"
 endDate: "2025-07-06"
-time: "Сбор с 18:30, трансляция в 19:00"
+time: "с 18:30, трансляция в 19:00"
 ort: "Marstallplatz, рядом с Residenz и Национальным театром"
 link: "[Официальная информация](https://www.staatsoper.de/oper-fuer-alle)"
 image: "/images/opera-don-giovanni.webp"
