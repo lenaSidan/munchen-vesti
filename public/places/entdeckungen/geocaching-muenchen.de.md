@@ -1,7 +1,7 @@
 ---
 title: "Geocaching in München: Schatzsuche mitten in der Stadt"
 description: "Eine spannende Art, München zu entdecken – Geocaching. In diesem Artikel erfährst du, wie du anfängst, welche Apps du brauchst, wo du versteckte Dosen findest und warum das Abenteuer für die ganze Familie geeignet ist."
-image: "/images/geocaching-muenchen.webp"
+image: "/images/geocaching_muenchen.webp"
 imageAlt: "Geocaching in München"
 seoTitle: "Geocaching in München – Spiel, Schatzsuche und Abenteuer"
 seoDescription: "Geocaching in München: Wo man suchen kann, wie man beginnt, welche Tools man braucht und warum das Spaß macht. Ein Guide für Einsteiger und Geocaching-Fans."

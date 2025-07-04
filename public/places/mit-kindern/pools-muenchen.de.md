@@ -1,5 +1,5 @@
 ---
-title: "Münchens Schwimmbäder: Wo das Eintauchen Freude macht — im Sommer und im Winter"
+title: "Münchens Schwimmbäder: Wo das Eintauchen Freude macht – im Sommer und im Winter"
 description: "Ob Sonne oder Schnee – Münchens Schwimmbäder bieten das ganze Jahr über Badespaß. Wir zeigen die schönsten Freibäder und Hallenbäder, geben Tipps zu Preisen, Ausstattung und Atmosphäre."
 image: "/images/pools-muenchen.webp"
 imageAlt: "Freibad in München unter freiem Himmel"

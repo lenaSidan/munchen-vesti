@@ -1,7 +1,7 @@
 ---
 title: "Alter Südfriedhof: Ein Friedhof, der Münchens Geschichte flüstert"
 description: "Der älteste Friedhof Münchens ist ein Ort der Erinnerung, Architektur und Kultur. Hier ruhen große Persönlichkeiten, und die Stille erzählt Stadtgeschichte."
-image: "/images/alter_suedfriedhof_munich.webp"
+image: "/images/alter-suedfriedhof.webp"
 imageAlt: "Alter Südfriedhof in München im Herbst"
 seoTitle: "Alter Südfriedhof in München – Geschichte in Stille"
 seoDescription: "Entdecken Sie den Alter Südfriedhof in München: ein historischer Ort voller Architektur, Biografien und grüner Ruhe mitten in der Stadt."
