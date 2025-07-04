@@ -1,5 +1,5 @@
 ---
-title: "Katzentempel München — в гостях у усатых хозяев"
+title: "Katzentempel München – в гостях у усатых хозяев"
 description: "Первое котокафе Германии с веганским меню, уютной атмосферой и бывшими приютскими котами. Идеальное место для любителей кошек в Мюнхене."
 image: "/images/katzentempel-muenchen.webp"
 imageAlt: "Коты на окне в кафе Katzentempel München"

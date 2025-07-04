@@ -1,5 +1,5 @@
 ---
-title: "FÉLA — Matcha, Stille und ein Hauch Keramik-Zauber"
+title: "FÉLA – Matcha, Stille und ein Hauch Keramik-Zauber"
 description: "FÉLA ist ein gemütliches Café in München, das Matcha, Keramik und Ruhe vereint. Hier kann man Figuren bemalen, Desserts genießen und in besonderer Atmosphäre entspannen."
 ort: "Nordendstraße 52, 80801 München"
 image: "/images/felacafe-muenchen.webp"
