@@ -114,37 +114,48 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
-  const { category, slug } = params || {};
-  if (!category || !slug || !locale) return { notFound: true };
+  try {
+    const { category, slug } = params || {};
+    if (
+      typeof category !== "string" ||
+      typeof slug !== "string" ||
+      typeof locale !== "string"
+    ) {
+      return { notFound: true };
+    }
 
-  const filePath = path.join(
-    process.cwd(),
-    "public/places",
-    category as string,
-    `${slug}.${locale}.md`
-  );
-
-  if (!fs.existsSync(filePath)) return { notFound: true };
-
-  const raw = fs.readFileSync(filePath, "utf8");
-  const { data, content } = matter(raw);
-
-  const processedContent = await remark()
-    .use(remarkGfm)
-    .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeRaw)
-    .use(rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] })
-    .use(rehypeStringify)
-    .process(content);
-
-  return {
-    props: {
+    const filePath = path.join(
+      process.cwd(),
+      "public/places",
       category,
-      slug,
-      title: data.title || slug,
-      image: data.image || null,
-      imageAlt: data.imageAlt || null,
-      content: processedContent.toString(),
-    },
-  };
+      `${slug}.${locale}.md`
+    );
+
+    if (!fs.existsSync(filePath)) return { notFound: true };
+
+    const raw = fs.readFileSync(filePath, "utf8");
+    const { data, content } = matter(raw);
+
+    const processedContent = await remark()
+      .use(remarkGfm)
+      .use(remarkRehype, { allowDangerousHtml: true })
+      .use(rehypeRaw)
+      .use(rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] })
+      .use(rehypeStringify)
+      .process(content);
+
+    return {
+      props: {
+        category,
+        slug,
+        title: data.title || slug,
+        image: data.image || null,
+        imageAlt: data.imageAlt || null,
+        content: processedContent.toString(),
+      },
+    };
+  } catch (error) {
+    console.error("❌ Error in getStaticProps:", error);
+    return { notFound: true }; // вместо 500 отдаём 404
+  }
 };

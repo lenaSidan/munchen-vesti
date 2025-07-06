@@ -13,7 +13,6 @@ function walkDir(dir, fileList = []) {
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-
     if (stat.isDirectory()) {
       if (!excludeDirs.includes(file)) {
         walkDir(filePath, fileList);
@@ -28,18 +27,14 @@ function walkDir(dir, fileList = []) {
 
 function getStaticPages() {
   const allFiles = walkDir(pagesDir);
-
-  const filteredFiles = allFiles.filter((relativePath) => {
-    return !excludeCustomPaths.some((excluded) =>
-      relativePath.replace(".tsx", "").endsWith(excluded)
-    );
-  });
-
-  return filteredFiles.map((relativePath) => {
-    const pagePath = relativePath.replace(".tsx", "").replace(/\/index$/, "");
-    const urlPath = pagePath === "index" ? "" : pagePath;
-    return `<url><loc>${baseUrl}/${urlPath}</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>`;
-  });
+  return allFiles
+    .filter((relativePath) => !excludeCustomPaths.some((excluded) =>
+      relativePath.replace(".tsx", "").endsWith(excluded)))
+    .map((relativePath) => {
+      const pagePath = relativePath.replace(".tsx", "").replace(/\/index$/, "");
+      const urlPath = pagePath === "index" ? "" : pagePath;
+      return `<url><loc>${baseUrl}/${urlPath}</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>`;
+    });
 }
 
 function getMarkdownUrls(folder, prefix, checkEventDates = false, priority = "0.6") {
@@ -73,9 +68,36 @@ function getMarkdownUrls(folder, prefix, checkEventDates = false, priority = "0.
     .filter(Boolean);
 }
 
-// 🔹 Новая функция для прошедших событий
 function getArchivedEventUrls() {
   return getMarkdownUrls("events/arhiv", "events", false, "0.3");
+}
+
+function getPlacesUrls() {
+  const placesDir = path.join(process.cwd(), "public", "places");
+  if (!fs.existsSync(placesDir)) return [];
+
+  const urls = [];
+
+  const categories = fs.readdirSync(placesDir, { withFileTypes: true }).filter((dirent) =>
+    dirent.isDirectory()
+  );
+
+  for (const category of categories) {
+    const categoryName = category.name;
+    const categoryPath = path.join(placesDir, categoryName);
+    const files = fs.readdirSync(categoryPath).filter((file) => file.endsWith(".md"));
+
+    for (const file of files) {
+      const [filename, locale] = file.replace(".md", "").split(".");
+      const slug = filename.replace(/^\d{2}-\d{2}-\d{4}-/, "");
+      const localePrefix = locale === "de" ? "/de" : "";
+      urls.push(
+        `<url><loc>${baseUrl}${localePrefix}/places/${categoryName}/${slug}</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>`
+      );
+    }
+  }
+
+  return urls;
 }
 
 function generateSitemap() {
@@ -89,28 +111,23 @@ function generateSitemap() {
   const articlesUrls = getMarkdownUrls("articles", "articles", false, "0.7");
   const eventsUrls = getMarkdownUrls("events", "events", true, "0.9");
   const geocachingUrls = getMarkdownUrls("geocaching", "geocaching", false, "0.6");
-  // const articleSummariesUrls = getMarkdownUrls(
-  //   "articles_summaries",
-  //   "articles_summaries",
-  //   false,
-  //   "0.5"
-  // );
   const postcardUrls = getMarkdownUrls("postcards", "postcards", false, "0.5");
-
-  //const archivedEvents = getArchivedEventUrls();
+  const placesUrls = getPlacesUrls();
+  // const archivedEvents = getArchivedEventUrls();
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${[
-  ...staticUrls,
-  ...dynamicPages,
-  ...newsUrls,
-  ...eventsUrls,
-  //...archivedEvents,
-  ...articlesUrls,
-  ...geocachingUrls,
-  ...postcardUrls,
-].join("\n")}
+    ...staticUrls,
+    ...dynamicPages,
+    ...newsUrls,
+    ...eventsUrls,
+    ...articlesUrls,
+    ...geocachingUrls,
+    ...postcardUrls,
+    ...placesUrls,
+    // ...archivedEvents,
+  ].join("\n")}
 </urlset>`;
 
   fs.writeFileSync(path.join(process.cwd(), "public", "sitemap.xml"), sitemap);
