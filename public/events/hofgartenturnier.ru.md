@@ -1,6 +1,6 @@
 ---
 title: "41-й Münchner Hofgartenturnier: металл, гравий и лето в самом центре Мюнхена"
-date: "2025-07-11"
+date: "2025-07-13"
 time: "11–13 июля 2025 года"
 ort: "Hofgarten, Odeonsplatz, Мюнхен"
 link: "[Регистрация с 23 мая](https://mkwu.de/hofgartenturnier/41-muenchner-hofgartenturnier-2025/)"
