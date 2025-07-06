@@ -3,6 +3,7 @@ import useTranslation from "@/hooks/useTranslation";
 import { Event, getPastEventsByLocale } from "@/lib/getEvents";
 import styles from "@/styles/PastEvents.module.css";
 import { GetStaticProps } from "next";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,6 +16,9 @@ export default function PastEvents({ events }: EventsProps) {
 
   return (
     <>
+      <Head>
+        <meta name="robots" content="noindex, follow" />
+      </Head>
       <Seo title={t("meta.past_events_title")} description={t("meta.past_events_description")} />
       <h1 className={styles.visuallyHidden}>{t("meta.past_events_title")}</h1>
       <div className={styles.articleContainer}>

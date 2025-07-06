@@ -1,4 +1,3 @@
-import LikeButton from "@/components/LikeButton";
 import PageHead from "@/components/PageHead";
 import SocialLinks from "@/components/SocialLinks";
 import useTranslation from "@/hooks/useTranslation";
@@ -8,6 +7,7 @@ import styles from "@/styles/Event.module.css";
 import fs from "fs";
 import matter from "gray-matter";
 import { GetStaticPaths, GetStaticProps } from "next";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import path from "path";
@@ -61,7 +61,11 @@ export default function Event({ event, locale, archived, similarEvents }: EventP
         url={canonicalUrl}
         jsonLd={jsonLd}
       />
-      {archived && <meta name="robots" content="noindex, follow" />}
+      {archived && (
+        <Head>
+          <meta name="robots" content="noindex, follow" />
+        </Head>
+      )}
 
       <div className={styles.articleContainer}>
         <h2 className={styles.title}>{event.title}</h2>
@@ -145,8 +149,8 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
   const archivedFiles = fs.existsSync(archiveDir) ? fs.readdirSync(archiveDir) : [];
   const allFiles = [...files, ...archivedFiles];
 
-  const fileMatch = allFiles.find((filename) =>
-    filename.includes(params.slug as string) && filename.includes(`${locale}.md`)
+  const fileMatch = allFiles.find(
+    (filename) => filename.includes(params.slug as string) && filename.includes(`${locale}.md`)
   );
 
   if (!fileMatch) {

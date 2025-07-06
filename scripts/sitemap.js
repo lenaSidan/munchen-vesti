@@ -97,7 +97,7 @@ function generateSitemap() {
   // );
   const postcardUrls = getMarkdownUrls("postcards", "postcards", false, "0.5");
 
-  const archivedEvents = getArchivedEventUrls();
+  //const archivedEvents = getArchivedEventUrls();
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -106,7 +106,7 @@ ${[
   ...dynamicPages,
   ...newsUrls,
   ...eventsUrls,
-  ...archivedEvents,
+  //...archivedEvents,
   ...articlesUrls,
   ...geocachingUrls,
   ...postcardUrls,
