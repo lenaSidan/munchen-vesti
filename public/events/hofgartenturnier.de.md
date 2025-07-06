@@ -1,6 +1,6 @@
 ---
 title: "41. Münchner Hofgartenturnier: Metall, Kies und Sommer im Herzen von München"
-date: "2025-07-11"
+date: "2025-07-13"
 time: "11.–13. Juli 2025"
 ort: "Hofgarten, Odeonsplatz, München"
 link: "[Anmeldung ab 23. Mai](https://mkwu.de/hofgartenturnier/41-muenchner-hofgartenturnier-2025/)"
