@@ -1,6 +1,6 @@
 ---
 title: "LaserZone München – eine Feier, die du nie vergisst"
-description: "Deutschlands erstes Katzencafé mit veganer Speisekarte, gemütlicher Atmosphäre und ehemaligen Tierheimkatzen. Ein perfekter Ort für Katzenliebhaber in München."
+description: "Möchtest du deinen Geburtstag feiern, ein unvergessliches Firmenevent organisieren, eine Feier ausrichten oder sogar eine Hochzeit auf unkonventionelle Weise feiern? Willkommen in der LaserZone München.."
 image: "/images/laserzone.webp"
 imageAlt: "LaserTag-Arena mit bunter Beleuchtung und Spielern"
 seoTitle: "LaserZone München — unvergessliche Feier mit Lasertag"

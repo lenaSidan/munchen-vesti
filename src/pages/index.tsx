@@ -251,7 +251,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   try {
     const files = await fs.readdir(oldwordDir);
     const shuffled = files.sort(() => 0.5 - Math.random());
-    const selectedFiles = shuffled.slice(0, 3);
+    const selectedFiles = shuffled.slice(0, 4);
 
     oldWords = await Promise.all(
       selectedFiles.map(async (file) => {
