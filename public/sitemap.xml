@@ -52,6 +52,8 @@
 <url><loc>https://munchen-vesti.de/news/munich-rome-train</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://munchen-vesti.de/de/news/munich_best_walkable_city</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://munchen-vesti.de/news/munich_best_walkable_city</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://munchen-vesti.de/de/news/nespresso-marienplatz</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://munchen-vesti.de/news/nespresso-marienplatz</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://munchen-vesti.de/de/news/night_metro_munich</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://munchen-vesti.de/news/night_metro_munich</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://munchen-vesti.de/de/news/nukleus-hauptbahnhof-muenchen</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
@@ -92,8 +94,6 @@
 <url><loc>https://munchen-vesti.de/events/letas-jubilaeum</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/munich-startup-festival</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/munich-startup-festival</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/de/events/opera-don-giovanni</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/events/opera-don-giovanni</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/picknick-muenchen-natur</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/picknick-muenchen-natur</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/saturday-night-fever</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
@@ -150,6 +150,8 @@
 <url><loc>https://munchen-vesti.de/places/entdeckungen/laserzone</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/places/entdeckungen/munich-lakes-summer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/places/entdeckungen/munich-lakes-summer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://munchen-vesti.de/de/places/entdeckungen/virtual-escape-room</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://munchen-vesti.de/places/entdeckungen/virtual-escape-room</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/places/essen-gehen/dinner-in-the-dark</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/places/essen-gehen/dinner-in-the-dark</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/places/essen-gehen/escobar-muenchen</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -160,6 +162,8 @@
 <url><loc>https://munchen-vesti.de/places/essen-gehen/katzentempel-muenchen</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/places/essen-gehen/miasanfoodies-popupcafe</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/places/essen-gehen/miasanfoodies-popupcafe</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://munchen-vesti.de/de/places/essen-gehen/nespresso-marienplatz</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://munchen-vesti.de/places/essen-gehen/nespresso-marienplatz</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/places/mit-kindern/fela-muenchen</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/places/mit-kindern/fela-muenchen</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/places/mit-kindern/hofreiter-beerencafe</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
