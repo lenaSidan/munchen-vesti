@@ -93,7 +93,7 @@ export default function Header() {
   }, [router.pathname]);
 
   const adsRoutes = ["/services-page", "/gastronomy-page", "/education-page", "/other-page"];
-  const wordsRoutes = ["/oldwords-page", "/bavarian-words"];
+  const wordsRoutes = ["/oldwords-page", "/bavarian-words", "/proverbs-words"];
 
   const isAdsActive = adsRoutes.includes(router.pathname);
   const isWordsActive = wordsRoutes.includes(router.pathname);
@@ -223,6 +223,9 @@ export default function Header() {
                 </Link>
                 <Link href="/bavarian-words" className={styles.submenuLink}>
                   {t("menu.bavarian_words")}
+                </Link>
+                 <Link href="/proverbs-page" className={styles.submenuLink}>
+                  {t("menu.proverbs_words")}
                 </Link>
               </div>
             )}

@@ -116,6 +116,11 @@
     "description": "Und das ist nicht einfach ein Dialekt – es ist eine besondere Sprache der Stimmung, des Charakters und der Herzlichkeit. Bayerische Wörter und Ausdrücke klingen anders als Hochdeutsch, doch genau in ihnen lebt die Sprache der Straßen, der Wirtshäuser, der Dörfer und Städte.",
     "description2": "Dieser Abschnitt ist ein kleines Wörterbuch voller Begriffe, die nicht jeder Deutsche versteht, aber jeder schätzt, der einmal in München oder Bayern war. Sie sind derb und witzig, gutmütig und treffend – wie die bayerische Seele selbst."
   },
+  "proverbs": {
+    "subtitle": "Sprichwörter spiegeln die Volksweisheit wider – und das gilt für jede Kultur.",
+    "description": "Sprichwörter und Redewendungen sind komprimierte Ausdrücke von Lebenserfahrung, die von Generation zu Generation weitergegeben werden. Sie helfen dabei, besser zu verstehen, wie Menschen in einem bestimmten Land denken, was ihnen wichtig ist und wie sie Arbeit, Glück, Ehrlichkeit, Liebe und den Alltag wahrnehmen.",
+    "description2": "Wir haben eine Auswahl beliebter deutscher Sprichwörter und Redewendungen mit Übersetzung und russischen Entsprechungen zusammengestellt. Es handelt sich nicht nur um eine wörtliche Übersetzung – wir haben versucht, den Sinn, die Stimmung und die kulturellen Besonderheiten jedes Ausdrucks zu vermitteln. Manche werden Ihnen bekannt vorkommen, andere werden Sie überraschen oder vielleicht sogar zum Schmunzeln bringen."
+  },
   "newsTitle": "Aktuelles",
   "info": "Wir empfehlen",
   "read_more": "Weiterlesen",
@@ -156,6 +161,9 @@
     "bavarianWords_title": "Bairische Wörter – Münchener Zeitung",
     "bavarianWords_description": "Bairische Ausdrücke mit russischer Übersetzung und Erklärung. Einblicke in den Dialekt Süddeutschlands.",
     "bavarianWordsAll_title": "Wörterbuch der bairischen Begriffe",
+    "proverbs_title": "Sprichwörter und Redewendungen auf Deutsch",
+    "proverbs_description": "Deutsche Sprichwörter und Redewendungen mit Übersetzung und russischer Entsprechung",
+    "proverbsAll_title": "Deutsche Sprichwörter und Redewendungen",
     "past_events_title": "Vergangene Veranstaltungen in München",
     "past_events_description": "Archiv kultureller und städtischer Veranstaltungen, die bereits in München stattgefunden haben. Entdecken Sie, was los war.",
     "geocaching_title": "Geocaching in München – Verstecke, Abenteuer & GPS-Quests",
@@ -173,6 +181,7 @@
     "words": "Wörter",
     "old_words": "Vergessene deutsche Wörter",
     "bavarian_words": "Bairische Wörter",
+    "proverbs_words": "Sprichwörter and Sprüche",
     "chronicles": "Chronik",
     "words_full": "Vergessene deutsche Wörter",
     "chronicles_full": "Münchener Chronik",
