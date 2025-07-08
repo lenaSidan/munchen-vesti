@@ -1,0 +1,146 @@
+[
+  {
+    "word": "In der Kürze liegt die Würze",
+    "type_de": "(Sprichwort)",
+    "type_ru": "(пословица)",
+    "translation_ru": "В краткости — суть.",
+    "analog": "Краткость — сестра таланта."
+  },
+  {
+    "word": "Auch ein blindes Huhn findet mal ein Korn",
+    "type_de": "(Sprichwort)",
+    "type_ru": "(пословица)",
+    "translation_ru": "Даже слепая курица может найти зерно.",
+    "analog": "Раз в год и палка стреляет"
+  },
+  {
+    "word": "Ois hod sei End – bloß da Wuarscht zwoa.",
+    "type_de": "(Sprichwort – boarisch)",
+    "type_ru": "(пословица-баварский)",
+    "translation_de": "Alles hat ein Ende – nur die Wurst hat zwei.",
+    "translation_ru": "У всего есть конец — у колбасы целых два.",
+    "analog": "У всего есть конец"
+  },
+  {
+    "word": "Wer im Glashaus sitzt, soll nicht mit Steinen werfen.",
+    "type_de": "(Sprichwort)",
+    "type_ru": "(пословица)",
+    "translation_ru": "Кто сидит в стеклянном доме, не должен кидаться камнями.",
+    "analog": "Чья бы корова мычала"
+  },
+  {
+    "word": "Morgenstund hat Gold im Mund.",
+    "type_de": "(Sprichwort)",
+    "type_ru": "(пословица)",
+    "translation_ru": "Утренний час — золота вес.",
+    "analog": "Кто рано встаёт, тому Бог подаёт"
+  },
+  {
+    "word": "Viele Köche verderben den Brei.",
+    "type_de": "(Sprichwort)",
+    "type_ru": "(пословица)",
+    "translation_ru": "Много поваров портят кашу.",
+    "analog": "У семи нянек дитя без глазу"
+  },
+  {
+    "word": "Nix g’macht is aa g’macht.",
+    "type_de": "(Sprichwort – boarisch)",
+    "type_ru": "(пословица-баварский)",
+    "translation_de": "Nichts gemacht ist auch gemacht.",
+    "translation_ru": "Ничего не делать — тоже дело.",
+    "analog": "И бездействие — поступок"
+  },
+  {
+    "word": "Stille Wasser sind tief.",
+    "type_de": "(Sprichwort)",
+    "type_ru": "(пословица)",
+    "translation_ru": "Тихие воды глубоки.",
+    "analog": "В тихом омуте черти водятся"
+  },
+  {
+    "word": "Do legst di nieda!",
+    "type_de": "(Ausruf – boarisch)",
+    "type_ru": "(восклицание-баварский)",
+    "translation_de": "Da legst du dich nieder!",
+    "translation_ru": "Вот это да! / Ух ты!",
+    "analog": "Вот это номер!"
+  },
+  {
+    "word": "Was du heute kannst besorgen, das verschiebe nicht auf morgen.",
+    "type_de": "(Sprichwort)",
+    "type_ru": "(пословица)",
+    "translation_ru": "Не откладывай на завтра то, что можешь сделать сегодня.",
+    "analog": "Куй железо, пока горячо"
+  },
+   {
+    "word": "Da liegt der Hund begraben.",
+    "type_de": "(Redewendung)",
+    "type_ru": "(поговорка)",
+    "translation_ru": "Вот где собака зарыта.",
+    "analog": "Вот где собака зарыта"
+  },
+  {
+    "word": "Ins Fettnäpfchen treten.",
+    "type_de": "(Redewendung)",
+    "type_ru": "(поговорка)",
+    "translation_ru": "Наступить в жирную лужу (осрамиться, попасть впросак).",
+    "analog": "Попасть впросак"
+  },
+  {
+    "word": "Den Nagel auf den Kopf treffen.",
+    "type_de": "(Redewendung)",
+    "type_ru": "(поговорка)",
+    "translation_ru": "Попасть гвоздю по шляпке (сразу в точку).",
+    "analog": "Попасть в точку"
+  },
+  {
+    "word": "Jemandem einen Bären aufbinden.",
+    "type_de": "(Redewendung)",
+    "type_ru": "(поговорка)",
+    "translation_ru": "Навешать кому-то медведя (обмануть, вешать лапшу).",
+    "analog": "Вешать лапшу на уши"
+  },
+  {
+    "word": "Tomaten auf den Augen haben.",
+    "type_de": "(Redewendung)",
+    "type_ru": "(поговорка)",
+    "translation_ru": "Иметь помидоры на глазах (не видеть очевидного).",
+    "analog": "Не видеть под носом"
+  },
+  {
+    "word": "Wer anderen eine Grube gräbt, fällt selbst hinein.",
+    "type_de": "(Sprichwort)",
+    "type_ru": "(пословица)",
+    "translation_ru": "Кто другому яму роет, сам в неё попадёт.",
+    "analog": "Не рой другому яму — сам в неё попадёшь"
+  },
+  {
+    "word": "Stille Wasser sind tief.",
+    "type_de": "(Sprichwort)",
+    "type_ru": "(пословица)",
+    "translation_ru": "Тихая вода глубока.",
+    "analog": "В тихом омуте черти водятся"
+  },
+  {
+    "word": "Aller Anfang ist schwer.",
+    "type_de": "(Sprichwort)",
+    "type_ru": "(пословица)",
+    "translation_ru": "Всякое начало трудно.",
+    "analog": "Лиха беда начало"
+  },
+  {
+    "word": "Ned g’schimpft is globt gnua.",
+    "type_de": "(Sprichwort – boarisch)",
+    "type_ru": "(пословица-баварский)",
+    "translation_de": "Nicht geschimpft ist genug gelobt.",
+    "translation_ru": "Если не ругают — уже похвала.",
+    "analog": "Не поругал — уже похвалил"
+  },
+  {
+    "word": "Reden ist Silber, Schweigen ist Gold.",
+    "type_de": "(Sprichwort)",
+    "type_ru": "(пословица)",
+    "translation_ru": "Речь — серебро, молчание — золото.",
+    "analog": "Слово — серебро, молчание — золото"
+  }
+]
