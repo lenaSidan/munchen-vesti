@@ -91,6 +91,36 @@
     "quote_ru": "Больше всего я люблю быть дома."
   },
   {
+    "word": "Wolkenbruch",
+    "type_de": "Subst.",
+    "type_ru": "Сущ.",
+    "gender_de": "m.",
+    "gender_ru": "м.р.",
+    "translation_de": "Wolkenbruch (heftiger Platzregen)",
+    "translation_ru": "ливень, проливной дождь",
+    "explanation_de": "Bezeichnet einen sehr starken, plötzlichen Regenschauer, typisch für bayerisches Wetter.",
+    "explanation_ru": "Обозначает сильный, внезапный ливень — типичное явление для баварской погоды.",
+    "origin_de": "Althochdeutsch 'wolchan' (Wolke) + 'brechen'.",
+    "origin_ru": "Происходит от древненемецких слов 'wolkan' (облако) и 'brechen' (ломать).",
+    "quote_de": "Jetzt kimmt glei a Wolkenbruch, hol dei Schirm!",
+    "quote_ru": "Сейчас ливанёт, бери зонт!"
+  },
+  {
+    "word": "Schneggnwedda",
+    "type_de": "Subst.",
+    "type_ru": "Сущ.",
+    "gender_de": "n.",
+    "gender_ru": "ср.р.",
+    "translation_de": "Schneckenwetter",
+    "translation_ru": "улиточная погода / слякоть",
+    "explanation_de": "Bezeichnet feuchtes, kaltes und graues Wetter – genau das, was Schnecken lieben.",
+    "explanation_ru": "Так называют промозглую, сырую и серую погоду — такую, в которую любят выползать улитки.",
+    "origin_de": "Bairisch ‚Schneggn‘ (Schnecken) + ‚Wedda‘ (Wetter).",
+    "origin_ru": "Из баварского: ‚Schneggn‘ — улитки, ‚Wedda‘ — погода.",
+    "quote_de": "Heid is wieda a richtigs Schneggnwedda – i bleib dahoam!",
+    "quote_ru": "Сегодня опять настоящая улиточная погода — я остаюсь дома!"
+  },
+  {
     "word": "Stenz",
     "type_de": "Subst.",
     "type_ru": "Сущ.",
