@@ -1,6 +1,6 @@
 ---
 title: "Folge dem Weißen Kaninchen…"
-date: "2025-07-13"
+date: "2025-07-06"
 time: "13. Juli 2025, 12:00 Uhr"
 ort: "Ort – nur für Abonnenten @mode.rnbite"
 link: "[Instagram @mode.rnbite](https://www.instagram.com/mode.rnbite?igsh=NWtwbWpleHhjZDJq)"
