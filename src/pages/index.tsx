@@ -1,9 +1,10 @@
+import BavarianWordOfTheWeek from "@/components/BavarianWordOfTheWeek";
 import ImportantNewsBlock from "@/components/ImportantNewsBlock";
-import OldWordOfTheWeek from "@/components/OldWordOfTheWeek";
 import Seo from "@/components/Seo";
 import SubscribeBox from "@/components/SubscribeBox";
 import WeatherInlineBlock from "@/components/WeatherInlineBlock";
 import announcementsData from "@/data/announcements.json";
+import fullWords from "@/data/bavarian-words.json";
 import useTranslation from "@/hooks/useTranslation";
 import { Event, getEventsByLocale } from "@/lib/getEvents";
 import { DailyWeather, getWeatherForecast } from "@/lib/getWeather";
@@ -51,6 +52,8 @@ const LazyShortNewsBlock = dynamic(() => import("@/components/ShortNewsBlock"), 
 //   ssr: false,
 // });
 const MiniPostcards = dynamic(() => import("@/components/MiniPostcards"), { ssr: false });
+// Покажем только первые 3 слова
+const sampleWords = fullWords.slice(0, 4);
 
 export default function Home({
   mainEvent,
@@ -121,7 +124,8 @@ export default function Home({
           </div>
           <div className={styles.adsBlock}>
             {weather && <WeatherInlineBlock forecast={weather} />}
-            <OldWordOfTheWeek words={oldWords} />
+            {/* <OldWordOfTheWeek words={oldWords} /> */}
+            <BavarianWordOfTheWeek words={sampleWords} />
           </div>
         </div>
         <SubscribeBox />
@@ -245,6 +249,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   }));
 
   const weather = await getWeatherForecast();
+
   const oldwordDir = path.join(process.cwd(), "public", "oldwords", locale === "de" ? "de" : "ru");
   let oldWords: WordData[] = [];
 
