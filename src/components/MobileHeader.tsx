@@ -21,7 +21,9 @@ export default function MobileHeader() {
 
   const adsRoutes = ["/services-page", "/gastronomy-page", "/education-page", "/other-page"];
   const isAdsActive = adsRoutes.includes(router.pathname);
-  const isWordsActive = ["/oldwords-page", "/bavarian-words"].includes(router.pathname);
+  const isWordsActive = ["/oldwords-page", "/bavarian-words", "/proverbs-words"].includes(
+    router.pathname
+  );
   const isAnySubmenuOpen = isAdsSubmenuOpen || isWordsSubmenuOpen;
 
   const closeAllSubmenus = () => {
@@ -224,6 +226,9 @@ export default function MobileHeader() {
                 onClick={closeAllSubmenus}
               >
                 {t("menu.bavarian_words")}
+              </Link>
+              <Link href="/proverbs-page" className={styles.submenuLink} onClick={closeAllSubmenus}>
+                {t("menu.proverbs_words")}
               </Link>
             </div>
           )}

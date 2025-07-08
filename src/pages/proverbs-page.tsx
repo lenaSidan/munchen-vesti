@@ -70,7 +70,7 @@ export default function ProverbsPage({ words }: Props) {
                   {word.analog && (
                     <p>
                       <span className={styles.analogRU}>
-                        {locale === "de" ? "Äquivalent auf Russisch" : "Русский аналог"}:
+                        {locale === "de" ? "Äquivalent" : "аналог"}:
                       </span>{" "}
                       <span className={styles.analog}>{word.analog}</span>
                     </p>
