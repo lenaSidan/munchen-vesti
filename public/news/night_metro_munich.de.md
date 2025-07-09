@@ -14,8 +14,8 @@ Die Nacht-U-Bahn fährt in den Nächten **von Freitag auf Samstag**, **von Samst
 Die Züge verkehren im **30-Minuten-Takt**. Im Stadtzentrum ermöglicht die koordinierte Abfahrt der Züge auf verschiedenen Linien einen **15-Minuten-Takt**.
 
 #### Linien und Umsteigepunkte:
-- ● **U2, U3 und U5:** kreuzen sich an den Stationen Hauptbahnhof, Odeonsplatz, Sendlinger Tor, Scheidplatz und Innsbrucker Ring.
-- ● **U1, U4 und U6:** fahren ebenfalls alle 30 Minuten, jedoch mit einer Verschiebung von 15 Minuten gegenüber den anderen Linien, was eine gleichmäßige Zugverteilung im Zentrum ermöglicht.
+- • **U2, U3 und U5:** kreuzen sich an den Stationen Hauptbahnhof, Odeonsplatz, Sendlinger Tor, Scheidplatz und Innsbrucker Ring.
+- • **U1, U4 und U6:** fahren ebenfalls alle 30 Minuten, jedoch mit einer Verschiebung von 15 Minuten gegenüber den anderen Linien, was eine gleichmäßige Zugverteilung im Zentrum ermöglicht.
 
 Das erlaubt den Fahrgästen auch nachts eine **bequeme Planung von Routen und Umstiegen**.
 
