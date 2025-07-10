@@ -1,4 +1,5 @@
 import Seo from "@/components/Seo";
+import SocialLinks from "@/components/SocialLinks";
 import SubscribeBox from "@/components/SubscribeBox";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/BavarianWordsPage.module.css";
@@ -48,6 +49,9 @@ export default function BavarianWordsPage({ words }: Props) {
             <p className={styles.descriptionText}>{t("bavarianWords.description")}</p>
             <p className={styles.descriptionText2}>{t("bavarianWords.description2")}</p>
           </div>
+          <div className={styles.socialLinks}>
+            <SocialLinks />
+          </div>
         </div>
         <div className={styles.wrapper}>
           <div className={styles.grid}>
@@ -86,7 +90,7 @@ export default function BavarianWordsPage({ words }: Props) {
             ))}
           </div>
         </div>
-           <SubscribeBox />
+        <SubscribeBox />
       </div>
     </>
   );

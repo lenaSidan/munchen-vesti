@@ -1,4 +1,3 @@
-import LikeButton from "@/components/LikeButton";
 import Seo from "@/components/Seo";
 import SocialLinks from "@/components/SocialLinks";
 import SubscribeBox from "@/components/SubscribeBox";
@@ -43,11 +42,10 @@ export default function PostcardsPage({ postcards }: PostcardsPageProps) {
         <div className={styles.intro}>
           <p className={styles.subtitle}>{t("postcards.subtitle")}</p>
           <p className={styles.descriptionText}>{t("postcards.description")}</p>
-   
         </div>
-<div  className={styles.socialLinks}>
-        <SocialLinks />
-      </div>
+        <div className={styles.socialLinks}>
+          <SocialLinks />
+        </div>
         <div className={styles.grid}>
           {postcards.map((postcard) => (
             <Link key={postcard.slug} href={`/postcards/${postcard.slug}`} className={styles.card}>
@@ -62,7 +60,7 @@ export default function PostcardsPage({ postcards }: PostcardsPageProps) {
             </Link>
           ))}
         </div>
-           <SubscribeBox />
+        <SubscribeBox />
       </div>
     </>
   );

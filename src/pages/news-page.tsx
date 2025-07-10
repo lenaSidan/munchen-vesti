@@ -1,4 +1,5 @@
 import Seo from "@/components/Seo";
+import SocialLinks from "@/components/SocialLinks";
 import SubscribeBox from "@/components/SubscribeBox";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/News.module.css";
@@ -36,7 +37,9 @@ export default function News({ newsList }: NewsListProps) {
       <h1 className={styles.visuallyHidden}>{t("meta.newsAll_title")}</h1>
       <div className={styles.container}>
         <h2 className={styles.title}>{t("news.title")}</h2>
-       
+        <div className={styles.socialLinks}>
+          <SocialLinks />
+        </div>
         <div className={styles.newsGrid}>
           {newsList.map((news) => (
             <div key={news.slug} className={styles.card}>
@@ -51,12 +54,11 @@ export default function News({ newsList }: NewsListProps) {
               )}
               <div className={styles.cardInner}>
                 <div className={styles.content}>
-                 
                   {news.date && (
                     <div className={styles.date}>
                       {new Date(news.date).toLocaleDateString(locale || "ru")}
                     </div>
-                  )} 
+                  )}
                   <h3>{news.title}</h3>
                   <div dangerouslySetInnerHTML={{ __html: news.excerpt }} />
                 </div>
@@ -69,7 +71,7 @@ export default function News({ newsList }: NewsListProps) {
             </div>
           ))}
         </div>
-         <SubscribeBox />
+        <SubscribeBox />
       </div>
     </>
   );

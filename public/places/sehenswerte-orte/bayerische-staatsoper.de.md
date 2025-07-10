@@ -50,6 +50,6 @@ Hier wird der komplette „Ring des Nibelungen“ aufgeführt – ohne Kompromis
 - ⌖ Max-Joseph-Platz 2, 80539 München  
 - ⌖ [www.staatsoper.de](https://www.staatsoper.de)
 
----
+###
 
 _**Die Oper in München ist nicht nur für Kenner.** Sie ist für alle, die hören wollen, wie eine Stadt singt – im Orchestergraben, im Saal, auf dem Platz. Oder mitten im Herzen._

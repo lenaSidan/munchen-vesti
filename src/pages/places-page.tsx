@@ -1,4 +1,5 @@
 import Seo from "@/components/Seo";
+import SocialLinks from "@/components/SocialLinks";
 import SubscribeBox from "@/components/SubscribeBox";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/PlacesPage.module.css";
@@ -79,6 +80,9 @@ export default function Places() {
             </Link>
             .
           </p>
+        </div>
+         <div className={styles.socialLinks}>
+          <SocialLinks />
         </div>
         <div className={styles.grid}>
           {placesItems.map((item) => (

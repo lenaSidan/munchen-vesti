@@ -1,4 +1,5 @@
 import Seo from "@/components/Seo";
+import SocialLinks from "@/components/SocialLinks";
 import SubscribeBox from "@/components/SubscribeBox";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/OldWordsPage.module.css";
@@ -40,6 +41,9 @@ export default function OldWordsPage({ words }: Props) {
             <p className={styles.subtitle}>{t("oldword.subtitle")}</p>
             <p className={styles.descriptionText}>{t("oldword.description")}</p>
             <p className={styles.descriptionText2}>{t("oldword.description2")}</p>
+          </div>
+          <div className={styles.socialLinks}>
+            <SocialLinks />
           </div>
         </div>
 
