@@ -131,7 +131,9 @@ export default function Home({
         </div>
         <SubscribeBox />
         <ImportantNewsBlock />
-        <MiniPostcards />
+        <div className={styles.miniPostcardsBlock}>
+          <MiniPostcards />
+        </div>
 
         {secondEvent && (
           <article className={styles.secondArticle}>
