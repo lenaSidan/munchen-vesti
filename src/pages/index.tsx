@@ -52,8 +52,9 @@ const LazyShortNewsBlock = dynamic(() => import("@/components/ShortNewsBlock"), 
 //   ssr: false,
 // });
 const MiniPostcards = dynamic(() => import("@/components/MiniPostcards"), { ssr: false });
-// Покажем только первые 3 слова
-const sampleWords = fullWords.slice(0, 4);
+
+// Указать колличество баварских слов
+const sampleWords = fullWords.slice(0, 3);
 
 export default function Home({
   mainEvent,
@@ -256,7 +257,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   try {
     const files = await fs.readdir(oldwordDir);
     const shuffled = files.sort(() => 0.5 - Math.random());
-    const selectedFiles = shuffled.slice(0, 4);
+    const selectedFiles = shuffled.slice(0, 3);
 
     oldWords = await Promise.all(
       selectedFiles.map(async (file) => {

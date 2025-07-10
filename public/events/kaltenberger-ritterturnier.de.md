@@ -1,6 +1,6 @@
 ---
 title: "Kaltenberger Ritterturnier 2025 — Mittelalter-Legende bei München"
-date: "2025-07-11"
+date: "2025-07-18"
 endDate: "2025-07-27"
 time: "Jeden Freitag, Samstag und Sonntag vom 11. bis 27. Juli"
 ort: "Schloss Kaltenberg (55 km von München)"
