@@ -140,9 +140,16 @@
   font-family: var(--font-headings);
   color: var(--heading-color2);
 }
-
+.socialLinks {
+  display: flex;
+  align-items: center;
+  margin-top: -40px;
+  padding-bottom: 20px;
+}
 @media (max-width: 768px) {
-
+  .socialLinks {
+    margin-top: -2px;
+  }
   .grid {
     grid-template-columns: 1fr;
   }

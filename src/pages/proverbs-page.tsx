@@ -1,4 +1,5 @@
 import Seo from "@/components/Seo";
+import SocialLinks from "@/components/SocialLinks";
 import SubscribeBox from "@/components/SubscribeBox";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/ProverbsPage.module.css";
@@ -37,6 +38,9 @@ export default function ProverbsPage({ words }: Props) {
             <p className={styles.subtitle}>{t("proverbs.subtitle")}</p>
             <p className={styles.descriptionText}>{t("proverbs.description")}</p>
             <p className={styles.descriptionText2}>{t("proverbs.description2")}</p>
+          </div>
+          <div className={styles.socialLinks}>
+            <SocialLinks />
           </div>
         </div>
         <div className={styles.wrapper}>

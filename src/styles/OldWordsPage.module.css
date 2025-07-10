@@ -41,14 +41,13 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
-  
 }
 .subtitle {
   font-size: 1.1rem;
   font-weight: 600;
   font-style: italic;
   text-align: center;
-   font-family: monospace;
+  font-family: monospace;
 }
 .descriptionText {
   font-size: 1.2rem;
@@ -58,8 +57,8 @@
 .descriptionText2 {
   font-style: italic;
   text-align: center;
-   font-size: 1rem;
-   line-height: 1.6rem;
+  font-size: 1rem;
+  line-height: 1.6rem;
 }
 .card {
   background-color: var(--background);
@@ -69,9 +68,9 @@
   line-height: 1.6;
   border-radius: 4px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
-    -webkit-hyphens: auto;
-    hyphens: auto;
-    transition: color 0.3s ease-in-out;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  transition: color 0.3s ease-in-out;
 }
 .card:hover {
   transform: scale(1.01);
@@ -93,9 +92,9 @@
   text-decoration: underline;
   margin-right: 10px;
   font-family: monospace;
-     -webkit-hyphens: auto;
-    hyphens: auto;
-    transition: color 0.3s ease-in-out;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  transition: color 0.3s ease-in-out;
 }
 
 .gender {
@@ -138,15 +137,24 @@
   font-size: 0.95rem;
   font-style: italic;
 }
-
+.socialLinks {
+  display: flex;
+  
+  align-items: center;
+  margin-top: -40px;
+  padding-bottom: 20px;
+}
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
   }
+  .socialLinks {
+    margin-top: -2px;
+  }
   .intro {
     padding: 0 10px;
     margin: 0;
-      -webkit-hyphens: auto;
+    -webkit-hyphens: auto;
     hyphens: auto;
     transition: color 0.3s ease-in-out;
   }

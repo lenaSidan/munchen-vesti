@@ -147,6 +147,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 @media (max-width: 1024px) {
   .columnsWithImage {
@@ -158,9 +159,7 @@
 }
 
 @media (max-width: 768px) {
-  .container {
-    margin-top: 20px;
-  }
+
   .columnsWithImage {
     column-count: 1;
   }

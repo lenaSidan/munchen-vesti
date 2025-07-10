@@ -1,4 +1,5 @@
 import Seo from "@/components/Seo";
+import SocialLinks from "@/components/SocialLinks";
 import SubscribeBox from "@/components/SubscribeBox";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/GeocachingPage.module.css";
@@ -68,6 +69,9 @@ export default function Geocaching() {
           <p className={styles.intro3}>{t("geocaching.intro3")}</p>
           <p className={styles.intro4}>{t("geocaching.p3")}</p>
           <p className={styles.intro4}>{t("geocaching.p4")}</p>
+        </div>
+        <div className={styles.socialLinks}>
+          <SocialLinks />
         </div>
         <div className={styles.grid}>
           {geocacheItems.map((item) => (
