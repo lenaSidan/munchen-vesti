@@ -66,13 +66,20 @@
     "analog": "Вот это номер!"
   },
   {
+    "word": "Übung macht den Meister.",
+    "type_de": "(Sprichwort)",
+    "type_ru": "(пословица)",
+    "translation_ru": "Повторение — мать учения.",
+    "analog": "Без труда не вытащишь и рыбку из пруда"
+  },
+  {
     "word": "Was du heute kannst besorgen, das verschiebe nicht auf morgen.",
     "type_de": "(Sprichwort)",
     "type_ru": "(пословица)",
     "translation_ru": "Не откладывай на завтра то, что можешь сделать сегодня.",
     "analog": "Куй железо, пока горячо"
   },
-   {
+  {
     "word": "Da liegt der Hund begraben.",
     "type_de": "(Redewendung)",
     "type_ru": "(поговорка)",
@@ -113,13 +120,6 @@
     "type_ru": "(пословица)",
     "translation_ru": "Кто другому яму роет, сам в неё попадёт.",
     "analog": "Не рой другому яму — сам в неё попадёшь"
-  },
-  {
-    "word": "Stille Wasser sind tief.",
-    "type_de": "(Sprichwort)",
-    "type_ru": "(пословица)",
-    "translation_ru": "Тихая вода глубока.",
-    "analog": "В тихом омуте черти водятся"
   },
   {
     "word": "Aller Anfang ist schwer.",

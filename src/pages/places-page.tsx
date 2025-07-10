@@ -36,24 +36,24 @@ export default function Places() {
       description: t("leisure.items.entdeckungen.description"),
       image: "/leisure_images/discover.png",
     },
-    // {
-    //   slug: "freizeit-erlebnisse",
-    //   title: t("leisure.items.freizeit-erlebnisse.title"),
-    //   description: t("leisure.items.freizeit-erlebnisse.description"),
-    //   image: "/leisure_images/fun_logo.png",
-    // },
+    {
+      slug: "freizeit-erlebnisse",
+      title: t("leisure.items.freizeit-erlebnisse.title"),
+      description: t("leisure.items.freizeit-erlebnisse.description"),
+      image: "/leisure_images/fun_logo.png",
+    },
     {
       slug: "sehenswerte-orte",
       title: t("leisure.items.sehenswerte-orte.title"),
       description: t("leisure.items.sehenswerte-orte.description"),
       image: "/leisure_images/places.png",
     },
-    // {
-    //   slug: "stadt-routen",
-    //   title: t("leisure.items.stadt-routen.title"),
-    //   description: t("leisure.items.stadt-routen.description"),
-    //   image: "/leisure_images/routes.png",
-    // },
+    {
+      slug: "stadt-routen",
+      title: t("leisure.items.stadt-routen.title"),
+      description: t("leisure.items.stadt-routen.description"),
+      image: "/leisure_images/routes.png",
+    },
   ];
 
   return (
@@ -81,7 +81,7 @@ export default function Places() {
             .
           </p>
         </div>
-         <div className={styles.socialLinks}>
+        <div className={styles.socialLinks}>
           <SocialLinks />
         </div>
         <div className={styles.grid}>
