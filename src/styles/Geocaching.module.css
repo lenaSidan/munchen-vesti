@@ -22,6 +22,7 @@
   text-align: left;
   column-count: unset;
   column-gap: 30px;
+ text-align: justify;
   -webkit-hyphens: auto;
   hyphens: auto;
   transition: color 0.3s ease-in-out;
