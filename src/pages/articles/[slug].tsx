@@ -1,26 +1,26 @@
-import SocialLinks from "@/components/SocialLinks";
-import useTranslation from "@/hooks/useTranslation";
-import { getArticleJsonLd } from "@/lib/jsonld/articleJsonLd";
-import styles from "@/styles/NewsArticle.module.css";
 import fs from "fs";
 import matter from "gray-matter";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import path from "path";
+import rehypeExternalLinks from "rehype-external-links";
 import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
-import PageHead from "../../components/PageHead";
-import LikeButton from "@/components/LikeButton";
-import rehypeExternalLinks from "rehype-external-links";
+
+import PageHead from "@/components/PageHead";
+import useTranslation from "@/hooks/useTranslation";
+import { getArticleJsonLd } from "@/lib/jsonld/articleJsonLd";
+
+import styles from "@/styles/NewsArticle.module.css";
 
 interface ArticlesArticle {
   id: number;
   slug: string;
   title: string;
-  shortTitle?: string;
+  shortTitle?: string | null;
   seoTitle?: string;
   seoDescription?: string;
   author?: string;
@@ -42,16 +42,16 @@ export default function ArticlesArticlePage({ article, locale }: ArticleProps) {
 
   const jsonLd = getArticleJsonLd({
     title: article.title,
-    description: article.seoDescription,
+    description: article.seoDescription || "",
     url: fullUrl,
     image: article.image,
-    author: article.author,
+    author: article.author || "",
   });
 
   return (
     <>
       <PageHead
-        title={(article.seoTitle || article.title) + " – " + t("meta.default_title")}
+        title={`${article.seoTitle || article.title} – ${t("meta.default_title")}`}
         description={article.seoDescription || t("meta.default_description")}
         url={canonicalUrl}
         jsonLd={jsonLd}
@@ -67,11 +67,11 @@ export default function ArticlesArticlePage({ article, locale }: ArticleProps) {
             </p>
           )}
 
-          {article.image && (
+          {article.image && article.image.length > 5 && (
             <div className={styles.imageWrapper}>
               <Image
                 src={article.image}
-                alt={article.imageAlt || article.title}
+                alt={article.imageAlt || article.title || "Image"}
                 width={800}
                 height={300}
                 className={styles.image}
@@ -80,11 +80,13 @@ export default function ArticlesArticlePage({ article, locale }: ArticleProps) {
             </div>
           )}
 
-          <div className={styles.content} dangerouslySetInnerHTML={{ __html: article.content }} />
+          {article.content ? (
+            <div className={styles.content} dangerouslySetInnerHTML={{ __html: article.content }} />
+          ) : (
+            <p>{t("articles.no_content") || "Контент недоступен."}</p>
+          )}
         </div>
-        {/* <div className={styles.likeContainer}>
-          <LikeButton slug={article.slug} />
-        </div> */}
+
         <div className={styles.readMoreContainer}>
           <div className={styles.decorativeLine}>
             <span className={styles.left}>⊱❧</span>
@@ -101,13 +103,15 @@ export default function ArticlesArticlePage({ article, locale }: ArticleProps) {
           </div>
         </div>
       </div>
-      <div className={styles.socialLinks}>
+
+      {/* <div className={styles.socialLinks}>
         <SocialLinks />
-      </div>
+      </div> */}
     </>
   );
 }
 
+// Генерация путей
 export const getStaticPaths: GetStaticPaths = async () => {
   const articlesDirectory = path.join(process.cwd(), "public/articles");
   const files = fs.readdirSync(articlesDirectory);
@@ -123,14 +127,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: "blocking" };
 };
 
+// Загрузка статьи
 export const getStaticProps: GetStaticProps<ArticleProps> = async ({ params, locale }) => {
-  if (!params?.slug || !locale) {
-    return { notFound: true };
-  }
+  if (!params?.slug || !locale) return { notFound: true };
 
-  const filePath = path.join(process.cwd(), "public/articles", `${params.slug}.${locale}.md`);
+  const slug = params.slug as string;
+  const filePath = path.join(process.cwd(), "public/articles", `${slug}.${locale}.md`);
 
   if (!fs.existsSync(filePath)) {
+    console.warn("Файл статьи не найден:", filePath);
     return { notFound: true };
   }
 
@@ -138,26 +143,26 @@ export const getStaticProps: GetStaticProps<ArticleProps> = async ({ params, loc
   const { data, content } = matter(fileContents);
 
   const processedContent = await remark()
-  .use(remarkGfm)
-  .use(remarkRehype)
-  .use(rehypeExternalLinks, {
-    target: "_blank",
-    rel: ["noopener", "noreferrer"],
-  })
-  .use(rehypeStringify)
-  .process(content);
+    .use(remarkGfm)
+    .use(remarkRehype)
+    .use(rehypeExternalLinks, {
+      target: "_blank",
+      rel: ["noopener", "noreferrer"],
+    })
+    .use(rehypeStringify)
+    .process(content);
 
   return {
     props: {
       article: {
-        id: data.id || 0,
-        slug: params.slug as string,
-        title: data.title || "",
+        id: typeof data.id === "number" ? data.id : 0,
+        slug,
+        title: typeof data.title === "string" ? data.title : "Без названия",
         shortTitle: data.shortTitle || null,
         seoTitle: data.seoTitle || "",
         seoDescription: data.seoDescription || "",
         author: data.author || "",
-        image: data.image || "",
+        image: typeof data.image === "string" ? data.image : "",
         imageAlt: data.imageAlt || "",
         content: processedContent.toString(),
       },
