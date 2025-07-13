@@ -7,11 +7,11 @@ seoTitle: "Märchenwald im Isartal – ein Ausflug für kleine Entdecker bei Mü
 seoDescription: "Der Märchenwald im Isartal bietet lebendige Märchenszenen, kindgerechte Fahrgeschäfte und viel Natur. Ideal für Familien mit Kindern ab 2 Jahren – ohne Lärm und Hektik."
 ---
 
-Wenn Ihr Kind schon genau weiß, wer den Brei von Masha gegessen hat, wo Rotkäppchen wohnt und wie das Märchen vom Kolobok endet (selbst in der deutschen Version), dann ist es Zeit für einen Ort, an dem Märchen aus den Büchern heraustreten und Teil eines Spaziergangs werden. **Der Märchenwald im Isartal** ist kein Freizeitpark à la Disneyland, sondern **ein liebevoll gestalteter Familienort im bayerischen Wald**, an dem die Helden der Lieblingsgeschichten im wahrsten Sinne des Wortes lebendig werden.
+Wenn Ihr Kind schon genau weiß, wer den Brei von Masha gegessen hat, wo Rotkäppchen wohnt und wie das Märchen vom Kolobok endet, dann ist es Zeit für einen Ort, an dem Märchen aus den Büchern heraustreten und Teil eines Spaziergangs werden. **Der Märchenwald im Isartal** ist kein Freizeitpark à la Disneyland, sondern **ein liebevoll gestalteter Familienort im bayerischen Wald**, an dem die Helden der Lieblingsgeschichten im wahrsten Sinne des Wortes lebendig werden.
 
 ### ❖ Was ist das?
 
-Es handelt sich um **einen kleinen Themenpark für Kinder von etwa 2 bis 8 Jahren**, der ganz auf die Bedürfnisse der Kleinsten ausgerichtet ist: **sicher, übersichtlich, charmant – ohne Reizüberflutung** für empfindliche Kinderohren. Auf einem Waldweg wandert man von einer Märchenszene zur nächsten: das Häuschen der sieben Zwerge, das Lebkuchenhaus der Hexe, Aschenputtel, das offenbar noch immer auf ihre Kutsche wartet. Die Puppenszenen starten per Knopfdruck und erzählen das Märchen (auf Deutsch, aber mit klar verständlichen Emotionen).
+Es handelt sich um **einen kleinen Themenpark für Kinder von etwa 2 bis 8 Jahren**, der ganz auf die Bedürfnisse der Kleinsten ausgerichtet ist: **sicher, übersichtlich, charmant – ohne Reizüberflutung** für empfindliche Kinderohren. Auf einem Waldweg wandert man von einer Märchenszene zur nächsten: das Häuschen der sieben Zwerge, das Lebkuchenhaus der Hexe, Aschenputtel, das offenbar noch immer auf ihre Kutsche wartet. Die Puppenszenen starten per Knopfdruck und erzählen das Märchen.
 
 Die Atmosphäre ist wie in **einem lebendig gewordenen Bilderbuch der Brüder Grimm** – nur ohne Angst oder Grusel. Selbst der klassische graue Wolf weckt hier eher Neugier als Panik.
 
