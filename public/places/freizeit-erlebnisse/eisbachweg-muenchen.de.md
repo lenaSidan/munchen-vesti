@@ -19,7 +19,7 @@ Der Weg entlang des **Eisbachs** ist kein gewöhnlicher Spaziergang durch den Pa
 
 ### ❖ Baden, Seile und nasse Fahrgäste
 
-Besonders lebendig wird es durch diejenigen, die sich ins Wasser stürzen und eine kleine Wildwasserfahrt im **Eisbach** wagen. Jugendliche springen in den Bach, lassen sich von der Strömung treiben und schwimmen unter mehreren Brücken hindurch. Erst später halten sie sich an einem Seil unter einer der Brücken fest, um nicht mit den Surfern zu kollidieren, und lassen sich dann kreischend oder lachend von der eisigen Strömung treiben. Sie tauchen an der nächsten Brücke wieder auf, schütteln sich das Wasser ab – und steigen oft direkt im Badeanzug in die **Tram**, um gleich nochmal zu springen. _Nur im Sommer_ ist es erlaubt, in Badekleidung wie Bikini oder Badehose in der Tram zu fahren. Das gilt hier als völlig **normale städtische Praxis**. **Freiheit** ist hier nicht nur ein Wort.
+Besonders lebendig wird es durch diejenigen, die sich ins Wasser stürzen und eine kleine Wildwasserfahrt im **Eisbach** wagen. Jugendliche springen in den Bach, lassen sich von der Strömung treiben und schwimmen unter mehreren Brücken hindurch. Erst später halten sie sich an einem Seil fest, um nicht mit den Surfern zu kollidieren, und lassen sich dann kreischend oder lachend von der eisigen Strömung mitreißen. Schließlich treiben sie weiter mit dem Wasser, greifen nach einer Leiter am Ufer und klettern heraus– und steigen oft direkt im Badeanzug in die **Tram**, um gleich nochmal zu springen. _Nur im Sommer_ ist es erlaubt, in Badekleidung wie Bikini oder Badehose in der Tram zu fahren. Das gilt hier als völlig **normale städtische Praxis**. **Freiheit** ist hier nicht nur ein Wort.
 
 ### ❖ Ein Weg für alle
 
