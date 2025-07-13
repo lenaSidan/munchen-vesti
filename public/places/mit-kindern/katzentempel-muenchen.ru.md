@@ -1,7 +1,7 @@
 ---
 title: "Katzentempel München – в гостях у усатых хозяев"
 description: "Первое котокафе Германии с веганским меню, уютной атмосферой и бывшими приютскими котами. Идеальное место для любителей кошек в Мюнхене."
-image: "/images/katzentempel_.webp"
+image: "/images/katzentempel_munich.webp"
 imageAlt: "Коты на окне в кафе Katzentempel München"
 seoTitle: "Katzentempel München — первое котокафе Германии на Türkenstraße"
 seoDescription: "Katzentempel München — уютное котокафе с веганским меню, бывшими приютскими котами и спокойной атмосферой в Maxvorstadt. Адрес, часы работы и меню."
