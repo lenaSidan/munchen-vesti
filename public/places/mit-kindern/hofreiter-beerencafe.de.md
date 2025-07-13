@@ -1,7 +1,7 @@
 ---
 title: "Hofreiter BeerenCafé: Beeren, Kuchen und barfüßiges Glück vor den Toren Münchens"
 description: "Ein Hofcafé bei München mit frischen Beeren, Kuchen und Spielplatz – ein perfektes Ausflugsziel für Familien in der Natur."
-image: "/images/beerencafe.webp"
+image: "/images/beerencafe_munich.webp"
 imageAlt: "Familie pflückt Beeren im Hofreiter BeerenCafé"
 seoTitle: "Hofreiter BeerenCafé bei München – Beeren und Kuchen für die ganze Familie"
 seoDescription: "Das Hofreiter BeerenCafé bei München: frische Beeren, hausgemachte Kuchen, Spielplatz und Natur. Der perfekte Ort für einen Familienausflug."

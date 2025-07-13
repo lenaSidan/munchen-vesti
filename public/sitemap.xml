@@ -127,6 +127,8 @@
 <url><loc>https://munchen-vesti.de/articles/Cmb-Sign</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/articles/Facts-about-Munich</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/articles/Facts-about-Munich</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://munchen-vesti.de/de/articles/Marienplatz-glockenspiel</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://munchen-vesti.de/articles/Marienplatz-glockenspiel</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/articles/Munich-lakes-summer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/articles/Munich-lakes-summer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/articles/Oktoberfest-history</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -183,8 +185,12 @@
 <url><loc>https://munchen-vesti.de/places/mit-kindern/katzentempel-muenchen</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/places/mit-kindern/laserzone-kinder</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/places/mit-kindern/laserzone-kinder</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://munchen-vesti.de/de/places/mit-kindern/maerchenwald-isartal</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://munchen-vesti.de/places/mit-kindern/maerchenwald-isartal</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/places/mit-kindern/pools-muenchen</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/places/mit-kindern/pools-muenchen</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://munchen-vesti.de/de/places/mit-kindern/tierpark-hellabrunn</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://munchen-vesti.de/places/mit-kindern/tierpark-hellabrunn</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/places/mit-kindern/titanic-ausstellung</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/places/mit-kindern/titanic-ausstellung</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/places/mit-kindern/winkelgasse-cafe</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
