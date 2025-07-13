@@ -1,7 +1,7 @@
 ---
 title: "Münchner Jakobsweg: Pilgerweg von München bis zum Bodensee"
 description: "Der Jakobsweg ist nicht nur der Weg nach Santiago de Compostela, sondern auch eine faszinierende Route durch Süddeutschland. Erfahre, wie du direkt aus dem Zentrum Münchens deine Pilgerreise starten kannst."
-image: "/images/jakobsweg.webp"
+image: "/images/jakobsweg_.webp"
 imageAlt: "Jakobsweg-Wegweiser mit Muschel vor bayerischer Landschaft"
 seoTitle: "Jakobsweg ab München: den bayerischen Pilgerweg erleben"
 seoDescription: "Der Münchner Jakobsweg ist ein Teil des großen Jakobs-Pilgernetzwerks. Beginne deine Reise in München und entdecke Geschichte, Natur und spirituelle Kraft entlang der Route."

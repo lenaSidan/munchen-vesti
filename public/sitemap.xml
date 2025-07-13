@@ -153,6 +153,8 @@
 <url><loc>https://munchen-vesti.de/places/entdeckungen/jakobsweg-muenchen</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/places/entdeckungen/munich-lakes-summer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/places/entdeckungen/munich-lakes-summer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://munchen-vesti.de/de/places/entdeckungen/neuschwanstein</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://munchen-vesti.de/places/entdeckungen/neuschwanstein</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/places/essen-gehen/dinner-in-the-dark</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/places/essen-gehen/dinner-in-the-dark</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/places/essen-gehen/escobar-muenchen</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -199,10 +201,14 @@
 <url><loc>https://munchen-vesti.de/places/sehenswerte-orte/bayerische-staatsoper</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/places/sehenswerte-orte/deutsches-theater</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/places/sehenswerte-orte/deutsches-theater</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://munchen-vesti.de/de/places/sehenswerte-orte/haus-der-kunst</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://munchen-vesti.de/places/sehenswerte-orte/haus-der-kunst</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/places/sehenswerte-orte/pinakotheken</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/places/sehenswerte-orte/pinakotheken</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/places/sehenswerte-orte/residenztheater-muenchen</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/places/sehenswerte-orte/residenztheater-muenchen</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://munchen-vesti.de/de/places/sehenswerte-orte/toy-museum-munich</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://munchen-vesti.de/places/sehenswerte-orte/toy-museum-munich</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/places/stadt-routen/alter-botanischer-garten</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/places/stadt-routen/alter-botanischer-garten</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/places/stadt-routen/alter-Suedfriedhof</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
