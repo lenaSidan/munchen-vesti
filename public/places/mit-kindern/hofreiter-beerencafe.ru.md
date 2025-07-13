@@ -1,7 +1,7 @@
 ---
 title: "Hofreiter BeerenCafé: ягоды, пироги и босоногое счастье под Мюнхеном"
 description: "Фермерское кафе недалеко от Мюнхена с ягодами, пирогами и площадкой для детей. Идеальное место для семейного отдыха на природе."
-image: "/images/beerencafe.webp"
+image: "/images/beerencafe_munich.webp"
 imageAlt: "Семья собирает ягоды на Hofreiter BeerenCafé"
 seoTitle: "Hofreiter BeerenCafé под Мюнхеном – ягоды и пироги для всей семьи"
 seoDescription: "Кафе на ферме Hofreiter под Мюнхеном: свежие ягоды, пироги, детская площадка и уют на природе. Отличный выбор для семейного выходного."
