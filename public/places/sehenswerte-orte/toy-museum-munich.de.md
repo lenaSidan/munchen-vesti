@@ -59,7 +59,7 @@ Die Sammlung zeigt: **Spielzeuge sind mehr als Spiel – sie erzählen Gesellsch
 - ⌖ **Anfahrt:** U-Bahn & S-Bahn Marienplatz, Ausgang Altes Rathaus  
 - ⌖ **Öffnungszeiten:** täglich von 10:00 bis 17:30 Uhr (an Feiertagen ggf. abweichend)  
 - ⌖ **Eintritt:** Erwachsene ca. 6 €, Kinder 2 €, Familienkarte erhältlich  
-- ⌖ **Webseite:** [www.spielzeugmuseum-muenchen.de](https://www.spielzeugmuseum-muenchen.de)  
+- ⌖ **Webseite:** [www.spielzeugmuseummuenchen.de](https://spielzeugmuseummuenchen.de/)  
 
 ###
 

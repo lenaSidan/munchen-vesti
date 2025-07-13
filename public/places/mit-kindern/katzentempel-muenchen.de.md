@@ -1,7 +1,7 @@
 ---
 title: "Katzentempel München – zu Besuch bei schnurrenden Gastgebern"
 description: "Deutschlands erstes Katzencafé mit veganer Speisekarte, gemütlicher Atmosphäre und ehemaligen Tierheimkatzen. Ein perfekter Ort für Katzenliebhaber in München."
-image: "/images/katzentempel.webp"
+image: "/images/katzentempel_.webp"
 imageAlt: "Katzen am Fenster im Katzencafé Katzentempel München"
 seoTitle: "Katzentempel München — Deutschlands erstes Katzencafé in der Türkenstraße"
 seoDescription: "Katzentempel München — gemütliches Katzencafé mit veganer Speisekarte, ehemaligen Tierheimkatzen und ruhiger Atmosphäre im Maxvorstadt. Adresse, Öffnungszeiten und Menü."
