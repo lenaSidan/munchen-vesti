@@ -77,8 +77,6 @@
 <url><loc>https://munchen-vesti.de/events/droneartshow</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/gartnerplatz-openair</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/gartnerplatz-openair</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/de/events/hofgartenturnier</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/events/hofgartenturnier</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/holidayonice</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/holidayonice</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/jakobidult-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
@@ -101,8 +99,6 @@
 <url><loc>https://munchen-vesti.de/events/munich-startup-festival</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/nochiki-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/nochiki-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/de/events/picknick-muenchen-natur</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/events/picknick-muenchen-natur</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/saturday-night-fever</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/saturday-night-fever</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/sommernachtstraum2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
@@ -137,6 +133,8 @@
 <url><loc>https://munchen-vesti.de/articles/Olympiapark-Munich</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/articles/Viktualienmarkt-Munich</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/articles/Viktualienmarkt-Munich</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://munchen-vesti.de/de/articles/Viscardigasse</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://munchen-vesti.de/articles/Viscardigasse</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/geocaching/creative-hides</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://munchen-vesti.de/geocaching/creative-hides</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://munchen-vesti.de/de/geocaching/family-caching</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
