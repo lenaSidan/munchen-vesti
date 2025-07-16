@@ -56,5 +56,5 @@ Der Markt ist **montags bis samstags geöffnet**. Wer das beste Einkaufserlebnis
 
 Der Viktualienmarkt ist **mehr als nur ein Markt – er ist ein lebendiges Stück Münchener Geschichte und Kultur**. Selbst wer nichts kaufen möchte, sollte ihn für die Atmosphäre, die Eindrücke und die kulinarischen Entdeckungen besuchen.  
 
-**Adresse:** Viktualienmarkt, 80331 München, Deutschland  
-**Öffnungszeiten:** Montag – Samstag, 8:00 – 20:00 Uhr (Sonntag geschlossen)  
+- ⌖ **Adresse:** Viktualienmarkt, 80331 München, Deutschland  
+- ⌖ **Öffnungszeiten:** Montag – Samstag, 8:00 – 20:00 Uhr (Sonntag geschlossen)  
