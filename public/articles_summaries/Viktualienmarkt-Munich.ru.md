@@ -2,7 +2,7 @@
 title: "Viktualienmarkt — гастрономическая душа Мюнхена"
 seoTitle: "Viktualienmarkt в Мюнхене — гастрономическая жемчужина города"
 seoDescription: "Откройте для себя Viktualienmarkt — одну из самых популярных гастрономических достопримечательностей Мюнхена. Узнайте о местных продуктах, традиционных блюдах и атмосфере этого уникального рынка."
-image: "/images/viktualienmarkt_muenchen.webp"
+image: "/images/viktualienmarkt_munich.webp"
 imageAlt: "Viktualienmarkt — гастрономическая душа Мюнхена"
 shortTitle: "Viktualienmarkt"
 ---

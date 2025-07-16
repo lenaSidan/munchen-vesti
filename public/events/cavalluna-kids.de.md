@@ -45,13 +45,13 @@ Die Show kombiniert **Theater, Zirkus, Reitkunst und Musik** zu einem unvergessl
 
 ### Veranstaltungsdetails
 
-- **Titel**: CAVALLUNA Kids – Sommercamp total verrückt!  
-- **Zeitraum**: 2. August – 14. September 2025  
-- **Ort**: Erlebniswelt CAVALLUNA Park, Hans-Jensen-Weg 3, 80939 München  
-- **Dauer**: ca. 70 Minuten  
-- **Sprache**: Deutsch  
-- **Empfohlenes Alter**: ab 5 Jahren  
-- **Barrierefreiheit**: Überdachte Halle, kinderwagentauglich, rollstuhlgerecht  
+- ⌖ **Titel**: CAVALLUNA Kids – Sommercamp total verrückt!  
+- ⌖ **Zeitraum**: 2. August – 14. September 2025  
+- ⌖ **Ort**: Erlebniswelt CAVALLUNA Park, Hans-Jensen-Weg 3, 80939 München  
+- ⌖ **Dauer**: ca. 70 Minuten  
+- ⌖ **Sprache**: Deutsch  
+- ⌖ **Empfohlenes Alter**: ab 5 Jahren  
+- ⌖ **Barrierefreiheit**: Überdachte Halle, kinderwagentauglich, rollstuhlgerecht  
 
 ### Anfahrt
 

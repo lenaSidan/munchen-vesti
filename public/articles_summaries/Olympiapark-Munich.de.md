@@ -2,7 +2,7 @@
 title: "Olympiapark München – Ein Erbe der Olympischen Spiele 1972"
 seoTitle: "Olympiapark München – Historisches Erbe der Olympischen Spiele 1972"
 seoDescription: "Erkunden Sie den Olympiapark in München, ein bedeutendes Erbe der Olympischen Spiele 1972. Entdecken Sie die Architektur, Sehenswürdigkeiten und die Geschichte dieses ikonischen Ortes."
-image: "/images/olympiapark_muenchen.webp"
+image: "/images/olympiapark_munich.webp"
 imageAlt: "Olympiapark München mit Blick auf den Olympiaturm"
 shortTitle: "Olympiapark München"
 ---

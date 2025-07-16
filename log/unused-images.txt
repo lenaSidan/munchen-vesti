@@ -1,1 +1,7 @@
+/public/images/alter_suedfriedhof_muenchen.webp
+/public/images/c+m+b.webp
 /public/images/disco_vulkan.webp
+/public/images/muenchen.webp
+/public/images/munich-lakes-summer.webp
+/public/images/olympiapark_muenchen.webp
+/public/images/viktualienmarkt_muenchen.webp

@@ -1,6 +1,6 @@
 ---
 title: "Das Geheimnis über der Tür: Was bedeutet die Inschrift 20*C+M+B+02?"
-image: "/images/c+m+b.webp"
+image: "/images/cmb-sign.webp"
 imageAlt: "Inschrift 20*C+M+B+02 über einer Haustür"
 seoTitle: "Was bedeutet 20*C+M+B+02 über der Haustür in Deutschland?"
 seoDescription: "Entdecke die Bedeutung der geheimnisvollen Inschrift 20*C+M+B+02 über Haustüren in München und anderswo – eine alte Tradition, ein Segen und eine Botschaft des Guten."
