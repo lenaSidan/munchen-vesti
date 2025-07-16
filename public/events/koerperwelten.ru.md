@@ -1,6 +1,6 @@
 ---
 title: "КÖRPERWELTEN в Мюнхене: Выставка, которая проникает под кожу"
-date: "2025-07-17"
+date: "2025-08-17"
 endDate: "2025-09-14"
 time: "с 11 апреля 2025, с 10:00 до 18:00"
 ort: "Kleine Olympiahalle Spiridon-Louis-Ring 21"
