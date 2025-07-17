@@ -193,10 +193,24 @@
   justify-content: space-between;
   align-items: flex-end;
 }
-.toggleButton,
-.toggleButton2 {
+.toggleButton {
   display: inline-block;
   font-size: 1rem;
+  font-weight: bold;
+  font-family: monospace;
+  color: var(--heading-color2);
+  text-decoration: underline;
+  cursor: pointer;
+  border: none;
+  background: none;
+  margin-top: 30px;
+  padding: 0;
+  transition: color 0.3s ease-in-out;
+}
+.toggleButton_ics,
+.toggleButton_google {
+  display: inline-block;
+  font-size: 0.9rem;
   font-weight: bold;
   font-family: monospace;
   color: var(--heading-color2);
@@ -358,8 +372,9 @@
     font-size: 0.9rem;
     margin-top: 15px;
   }
-  .toggleButton2 {
-    font-size: 0.9rem;
+  .toggleButton_ics,
+  .toggleButton_google {
+    font-size: 0.7rem;
     margin-top: 0;
   }
   .buttonsDownload {
@@ -367,5 +382,8 @@
     flex-direction: column;
     gap: 5px;
     align-items: flex-start;
+  }
+  .buttonsContainer {
+    margin-top: 30px;
   }
 }

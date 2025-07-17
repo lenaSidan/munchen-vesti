@@ -194,7 +194,7 @@ export default function EventsPage({ events }: EventsProps) {
                   <button
                     type="button"
                     onClick={() => handleDownloadICS(event)}
-                    className={styles.toggleButton2}
+                    className={styles.toggleButton_ics}
                   >
                     {t("event.add_to_calendar_ics")}
                   </button>
@@ -204,7 +204,7 @@ export default function EventsPage({ events }: EventsProps) {
                       href={`https://calendar.google.com/calendar/u/0/r/eventedit?text=${encodeURIComponent(event.title)}&dates=${formatDateForGoogle(event.date, event.endDate)}&location=${encodeURIComponent(event.ort || "")}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={styles.toggleButton2}
+                      className={styles.toggleButton_google}
                     >
                       {t("event.add_to_google_calendar")}
                     </a>
