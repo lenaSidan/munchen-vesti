@@ -10,11 +10,6 @@ seoTitle: "Gärtnerplatz Open Air 2025 – Opernkonzert unter freiem Himmel in M
 seoDescription: "Am 20. Juli 2025 findet auf dem Gärtnerplatz in München ein kostenloses Open-Air-Opernkonzert vom Staatstheater am Gärtnerplatz statt. Musik, Atmosphäre und Sommer mitten in der Stadt!"
 ---
 
-### Gärtnerplatz Open Air 2025: Symphonie unter dem Münchner Himmel
-
-**20. Juli 2025**  
-**Gärtnerplatz, 80469 München**
-
 Einmal im Jahr verwandelt sich der belebte **Gärtnerplatz** in einen improvisierten Konzertsaal unter freiem Himmel. Keine Absperrungen, keine Etikette — nur Sommerluft, die Architektur Alt-Münchens und Musik im Herzen der Stadt.
 
 **Gärtnerplatz Open Air** ist ein **kostenloses Open-Air-Opernkonzert**, das jährlich vom **Staatstheater am Gärtnerplatz** organisiert wird. Seit seiner Gründung im Jahr 2014 ist es fester Bestandteil des Münchner Kultursommers und versammelt Tausende von Zuhörern zu einem unvergesslichen Abend.

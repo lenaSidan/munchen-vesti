@@ -62,6 +62,22 @@ export default function EventsPage({ events }: EventsProps) {
 
   const [copiedSlug, setCopiedSlug] = useState<string | null>(null);
 
+  function formatDateForGoogle(startDate: string, endDate?: string) {
+    const format = (d: string) =>
+      new Date(d).toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+
+    const start = format(startDate);
+    const end = format(endDate || startDate);
+    return `${start}/${end}`;
+  }
+
+  function stripHtml(html: string): string {
+    if (typeof window === "undefined") return html;
+    const div = document.createElement("div");
+    div.innerHTML = html;
+    return div.textContent || div.innerText || "";
+  }
+
   return (
     <>
       <Seo title={t("meta.events_title")} description={t("meta.events_description")} />
@@ -123,6 +139,24 @@ export default function EventsPage({ events }: EventsProps) {
                       </p>
                     );
                   })()}
+                <button
+                  type="button"
+                  onClick={() => {
+                    const url = `${window.location.origin}/${router.locale}/events-page#${event.slug}`;
+                    navigator.clipboard.writeText(url);
+                    setCopiedSlug(event.slug);
+
+                    setTimeout(() => setCopiedSlug(null), 3000);
+                  }}
+                  className={styles.copyLinkButton}
+                >
+                  {/* <img
+                    src="/images/share-icon.png"
+                    alt="share link"
+                    className="mr-1 inline h-6 w-6"
+                  /> */}
+                  {t("event.copy_link2")}
+                </button>
               </div>
               {event.image && (
                 <Image
@@ -154,19 +188,16 @@ export default function EventsPage({ events }: EventsProps) {
                 >
                   {expandedSlug === event.slug ? t("menu.less") : t("menu.more")}
                 </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                    const url = `${window.location.origin}/${router.locale}/events-page#${event.slug}`;
-                    navigator.clipboard.writeText(url);
-                    setCopiedSlug(event.slug);
-
-                    setTimeout(() => setCopiedSlug(null), 3000);
-                  }}
-                  className={styles.copyLinkButton}
-                >
-                  {t("event.copy_link")}
-                </button>
+                {event.date && (
+                  <a
+                    href={`https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${formatDateForGoogle(event.date, event.endDate)}&details=${encodeURIComponent(stripHtml(event.content))}&location=${encodeURIComponent(event.ort || "")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.toggleButton}
+                  >
+                    {t("event.add_to_calendar")}
+                  </a>
+                )}
               </div>
             </div>
           </div>
