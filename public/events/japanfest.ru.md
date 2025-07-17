@@ -3,7 +3,7 @@ title: "Japanfest München 2025: когда Английский сад стан
 date: "2025-07-20"
 endDate: "2025-07-20"
 time: "20 июля 2025 года, с 11:00 до 18:00"
-ort: "Englischer Garten, возле Haus der Kunst и чайного дома Kanshoan, Мюнхен"
+ort: "Englischer Garten, Мюнхен"
 link: "[Официальный сайт фестиваля](https://www.englischer-garten-muenchen-infos.de/veranstaltungen-events/japanfest-muenchen-2025/)"
 image: "/images/japanfest-2025.webp"
 imageAlt: "Фестиваль Japanfest в Английском саду в Мюнхене"

@@ -48,6 +48,23 @@
   padding: 10px 15px;
   border-radius: 6px;
   margin-bottom: 20px;
+  
+}
+
+.copyLinkButton {
+  display: inline;
+  font-weight: bold;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--heading-color2);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 10px;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 
 .eventTitle {
@@ -218,16 +235,6 @@
 .archiveButton:hover {
   background-color: var(--button-bg-hover, #444);
 }
-.copyLinkButton {
-  background: none;
-  border: none;
-  color: var(--link-color);
-  cursor: pointer;
-  margin-top: 0.5rem;
-  padding: 0;
-  font-size: 0.9rem;
-  text-decoration: underline;
-}
 
 .copyLinkButton:hover {
   text-decoration: none;
@@ -294,10 +301,14 @@
   .eventCard li {
     line-height: 1.4;
   }
+  .copyLinkButton {
+    font-size: 0.6rem;
+      margin-top: 10px;
+  }
   .eventTitle {
     text-align: center;
     font-size: 1rem;
-    margin-bottom: 10px;
+   
   }
   .eventImage {
     width: 100%;
