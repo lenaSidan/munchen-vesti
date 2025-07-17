@@ -190,7 +190,7 @@ export default function EventsPage({ events }: EventsProps) {
                 </button>
                 {event.date && (
                   <a
-                    href={`https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${formatDateForGoogle(event.date, event.endDate)}&details=${encodeURIComponent(stripHtml(event.content))}&location=${encodeURIComponent(event.ort || "")}`}
+                    href={`https://calendar.google.com/calendar/u/0/r/eventedit?text=${encodeURIComponent(event.title)}&dates=${formatDateForGoogle(event.date, event.endDate)}&details=${encodeURIComponent(stripHtml(event.content))}&location=${encodeURIComponent(event.ort || "")}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.toggleButton}
