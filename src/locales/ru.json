@@ -326,7 +326,8 @@
     "copy_link": "Скопировать ссылку",
     "copy_link2": "Поделиться этим событием",
     "link_copied": "Ссылка скопирована!",
-    "add_to_calendar": "Добавить в календарь"
+    "add_to_google_calendar": "Добавить в календарь",
+    "add_to_calendar_ics": "Скачать .ics"
   },
   "articles": {
     "articles": "Статьи",

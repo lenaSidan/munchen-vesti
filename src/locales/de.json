@@ -326,7 +326,8 @@
     "copy_link": "Link kopieren",
     "copy_link2": "Diese Veranstaltung teilen",
     "link_copied": "Link wurde kopiert!",
-    "add_to_calendar": "Zum Kalender hinzufügen"
+    "add_to_google_calendar": "Zum Kalender hinzufügen",
+    "add_to_calendar_ics": ".ics herunterladen"
   },
   "articles": {
     "articles": "Articles",
