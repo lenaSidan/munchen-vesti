@@ -57,6 +57,6 @@ Es wird empfohlen, Spaziergänge am Morgen und in Zeiten mit hoher Pollenkonzent
 **Hilft eine Maske gegen Pollen?**  
 FFP2-Masken und medizinische Masken können die Pollenbelastung beim Aufenthalt im Freien teilweise reduzieren.
 
-*Saisonale Allergie bleibt ein ernstes Problem für die Einwohner Münchens.  
+Saisonale Allergie bleibt ein ernstes Problem für die Einwohner Münchens.  
 Der Anstieg der Anfragen und Suchbegriffe zeigt die Notwendigkeit verstärkter Aufmerksamkeit für Prävention, Diagnose und Behandlung.  
-Ein durchdachter Umgang mit Allergenen kann die Beschwerden lindern und die Lebensqualität während der Blütezeit deutlich verbessern.*
+Ein durchdachter Umgang mit Allergenen kann die Beschwerden lindern und die Lebensqualität während der Blütezeit deutlich verbessern.
