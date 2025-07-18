@@ -27,6 +27,8 @@
 <url><loc>https://munchen-vesti.de/weather-page</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://munchen-vesti.de/de/news/allergie-muenchen</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://munchen-vesti.de/news/allergie-muenchen</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://munchen-vesti.de/de/news/amazon-prime-vorteile</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://munchen-vesti.de/news/amazon-prime-vorteile</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://munchen-vesti.de/de/news/Biomuell_Regeln_2025</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://munchen-vesti.de/news/Biomuell_Regeln_2025</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://munchen-vesti.de/de/news/deutschland-gesetz-aenderungen</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
@@ -119,8 +121,6 @@
 <url><loc>https://munchen-vesti.de/events/tollwood-sommerfestival</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/vysotsky_concert</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/vysotsky_concert</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/de/events/wecallitjazz</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/events/wecallitjazz</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/white-dinner-muenchen</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/white-dinner-muenchen</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/articles/Alter-Suedfriedhof</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
