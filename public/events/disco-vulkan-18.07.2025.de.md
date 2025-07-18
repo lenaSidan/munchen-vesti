@@ -2,9 +2,9 @@
 title: "Discoabend mit Disco Vulkan in München – Tanz, Drive und beste Stimmung!"
 date: "2025-07-18"
 time: "18. Juli 2025, 20:00–02:00"
-ort: "Restaurant Ägäis, Heinrich-Wieland-Straße 102, 81735 München"
+ort: "Park Palast Event Center Siegenburger Str. 49 81373 München"
 link: "[WhatsApp](https://wa.me/4915117879188)"
-image: "/images/disco_vulkan18.07.webp"
+image: "/images/disco_vulkan18.07.25.webp"
 imageAlt: "Discoabend mit Disco Vulkan in München"
 seoTitle: "Discoabend mit Disco Vulkan in München – 6. Juni 2025"
 seoDescription: "Party mit Disco Vulkan am 6. Juni 2025 in München. Musik, Tanz, Atmosphäre und ein unvergesslicher Abend im Restaurant Ägäis."
@@ -12,7 +12,7 @@ seoDescription: "Party mit Disco Vulkan am 6. Juni 2025 in München. Musik, Tanz
 
 **Verpassen Sie nicht die letzte Party dieser Saison!**  
 _Danach ist Pause bis Oktober._  
-Am **18. Juli 2025** verwandelt sich das Restaurant **„Ägäis“** in München in das Epizentrum der Tanzenergie. Von **20:00 bis 02:00 Uhr** erwartet Sie die Party **„Discoabend mit Disco Vulkan“** – eine explosive Mischung aus Lieblingshits, starken Emotionen und Begegnungen, die in Erinnerung bleiben!
+Am **18. Juli 2025** verwandelt sich der Park Palast Event Center in München in das Epizentrum der Tanzenergie. Von **20:00 bis 02:00 Uhr** erwartet Sie die Party **„Discoabend mit Disco Vulkan“** – eine explosive Mischung aus Lieblingshits, starken Emotionen und Begegnungen, die in Erinnerung bleiben!
 
 ### Was erwartet Sie?
 
@@ -22,13 +22,15 @@ Am **18. Juli 2025** verwandelt sich das Restaurant **„Ägäis“** in Münche
 - ✔ Gemütliche Location im Restaurant **„Ägäis“**, mit gutem Sound, Bar und angenehmem Ambiente.
 
 ### Spüre den Rhythmus der Nacht mit Disco Vulkan!
+
 Das ist mehr als nur eine Party – das ist ein Ort, wo alle tanzen, wo man den Alltag vergisst und einfach man selbst sein kann.
 
 ### Veranstaltungsinfo
+
 **Adresse:**  
-Restaurant Ägäis  
-Heinrich-Wieland-Straße 102  
-81735 München  
+Park Palast Event Center
+Siegenburger Str. 49
+81373 München
 
 **Datum & Uhrzeit:**  
 18.07.2025, von 20:00 bis 02:00 Uhr
