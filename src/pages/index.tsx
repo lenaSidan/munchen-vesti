@@ -54,7 +54,7 @@ const LazyShortNewsBlock = dynamic(() => import("@/components/ShortNewsBlock"), 
 const MiniPostcards = dynamic(() => import("@/components/MiniPostcards"), { ssr: false });
 
 // Указать колличество баварских слов
-const sampleWords = fullWords.slice(0, 4);
+const sampleWords = fullWords.slice(0, 5);
 
 export default function Home({
   mainEvent,
