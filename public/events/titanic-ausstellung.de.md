@@ -1,5 +1,8 @@
 ---
 title: "Titanic – Die Legende: Immersives Erlebnis in München"
+shortTitle: "Titanic-Ausstellung"
+calendarStartDate: "2025-07-21"
+calendarEndDate: "2025-09-15"
 date: "2025-07-21"
 endDate: "2025-09-15"
 time: "ab dem 9. Mai 2025"

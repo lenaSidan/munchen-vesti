@@ -1,5 +1,8 @@
 ---
 title: "Легенда Титаника – иммерсивное погружение в Мюнхене"
+shortTitle: "Titanic-Ausstellung"
+calendarStartDate: "2025-07-21"
+calendarEndDate: "2025-09-15"
 date: "2025-07-21"
 endDate: "2025-09-15"
 time: "с 9 мая 2025 года"

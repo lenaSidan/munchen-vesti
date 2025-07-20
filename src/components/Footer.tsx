@@ -37,6 +37,9 @@ export default function Footer() {
         </p>
         <nav className={styles.nav}>
           <div className={styles.linkBox}>
+            <Link href="/calendar" className={`${styles.navLink} ${router.pathname === "/calendar" ? styles.active : ""}`}>
+              {t("footer.calendar")}
+            </Link>
             <Link href="/about" className={`${styles.navLink} ${router.pathname === "/about" ? styles.active : ""}`}>
               {t("footer.about")}
             </Link>

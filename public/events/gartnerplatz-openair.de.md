@@ -1,5 +1,6 @@
 ---
 title: "Gärtnerplatz Open Air 2025: Symphonie unter dem Münchner Himmel"
+shortTitle: "Gärtnerplatz Open Air"
 date: "2025-07-20"
 time: "20. Juli 2025, 19:30 Uhr"
 ort: "Gärtnerplatz, 80469 München"

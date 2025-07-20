@@ -10,7 +10,9 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import path from "path";
+import { useEffect, useState } from "react";
 import rehypeExternalLinks from "rehype-external-links";
 import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
@@ -20,8 +22,11 @@ import remarkRehype from "remark-rehype";
 interface Event {
   slug: string;
   title: string;
+  shortTitle?: string;
   date?: string;
   endDate?: string;
+  calendarStartDate?: string;
+  calendarEndDate?: string;
   time?: string;
   ort?: string;
   link?: string;
@@ -41,6 +46,20 @@ interface EventProps {
 
 export default function Event({ event, locale, archived, similarEvents }: EventProps) {
   const t = useTranslation();
+
+  const router = useRouter();
+
+  const [fromCalendar, setFromCalendar] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const flag = sessionStorage.getItem("fromCalendar");
+      if (flag === "true") {
+        setFromCalendar(true);
+        sessionStorage.removeItem("fromCalendar"); // чтобы не остался навсегда
+      }
+    }
+  }, []);
 
   const canonicalUrl = `https://munchen-vesti.de/${locale === "de" ? "de/" : "ru/"}events/${event.slug}`;
   const jsonLd = getEventJsonLd({
@@ -95,9 +114,13 @@ export default function Event({ event, locale, archived, similarEvents }: EventP
             <span className={styles.left}>⊱❧</span>
             <span className={styles.right}>⊱❧</span>
           </div>
-          <Link href={archived ? "/past-events-page" : "/events"} className={styles.readMore}>
+          <Link
+            href={fromCalendar ? "/calendar" : archived ? "/past-events-page" : "/events"}
+            className={styles.readMore}
+          >
             {t("articles.back")}
           </Link>
+
           <div className={`${styles.decorativeLine} ${styles.bottom}`}>
             <span className={styles.right}>⊱❧</span>
             <span className={styles.left}>⊱❧</span>
@@ -183,10 +206,13 @@ export const getStaticProps: GetStaticProps<EventProps> = async ({ params, local
       event: {
         slug: params.slug as string,
         title: data.title || "",
+        shortTitle: data.title || "",
         seoTitle: data.seoTitle || "",
         seoDescription: data.seoDescription || "",
         date: data.date || "",
         endDate: data.endDate || "",
+        calendarStartDate: data.calendarStartDate || "",
+        calendarEndDate: data.calendarEndDate || "",
         time: data.time || "",
         ort: data.ort || "",
         link: data.link || "",

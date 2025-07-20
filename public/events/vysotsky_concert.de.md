@@ -1,5 +1,8 @@
 ---
 title: "Musikalischer Abend zum Gedenken an Wladimir Wyssozki"
+shortTitle: "Wyssozki-Gedenkabend"
+calendarStartDate: "2025-10-24"
+calendarEndDate: "2025-10-24"
 date: "2025-10-24"
 time: "30. Oktober 2025"
 ort: "München"

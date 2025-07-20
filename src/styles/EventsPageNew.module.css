@@ -199,7 +199,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 30px;
+  margin-top: 0;
 }
 .toggleButton,
 .toggleButton_ics,
@@ -292,6 +292,7 @@
   .toggleButton_ics,
   .toggleButton_google {
     font-size: 0.8rem;
+    margin-top: 10px;
   }
   .buttonsDownload {
     flex-direction: column;

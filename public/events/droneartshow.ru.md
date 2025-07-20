@@ -1,5 +1,8 @@
 ---
 title: "DroneArt Show в Мюнхене: когда дроны танцуют под классику"
+shortTitle: "DroneArt Show"
+calendarStartDate: "2025-08-14"
+calendarEndDate: "2025-08-16"
 date: "2025-08-14"
 endDate: "2025-08-16"
 time: "14-16 августа 2025, начало в 21:00"

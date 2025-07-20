@@ -1,5 +1,8 @@
 ---
 title: "Sommernachtstraum в Олимпийском парке: когда ночь становится сценой"
+shortTitle: "Sommernachtstraum"
+calendarStartDate: "2025-07-19"
+calendarEndDate: "2025-07-19"
 date: "2025-07-19"
 ort: "Olympiapark München"
 time: "19 июля 2025 года, с 16:00 до поздней ночи"

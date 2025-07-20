@@ -1,5 +1,8 @@
 ---
 title: "Tollwood Sommerfestival 2025: Культура, музыка и устойчивость в Олимпийском парке"
+shortTitle: "Tollwood Sommerfestival"
+calendarStartDate: "2025-06-19"
+calendarEndDate: "2025-07-20"
 date: "2025-07-20"
 time: "19 июня – 20 июля 2025"
 ort: "Олимпийский парк, Мюнхен"

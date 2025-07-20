@@ -1,5 +1,8 @@
 ---
 title: "Neuro-Nächte in Tirol: Frauen-Retreat mit Neurographik, Tai Chi und Bergwanderungen"
+shortTitle: "Neuro-Nächte in Tirol"
+calendarStartDate: "2025-08-15"
+calendarEndDate: "2025-08-17"
 date: "2025-08-15"
 endDate: "2025-08-17"
 time: "15.–17. August, 17.–19. Oktober, 12.–14. Dezember 2025"

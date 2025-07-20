@@ -1,5 +1,8 @@
 ---
 title: "Kaltenberger Ritterturnier 2025 — легенда Средневековья рядом с Мюнхеном"
+shortTitle: "Kaltenberger Ritterturnier"
+calendarStartDate: "2025-07-20"
+calendarEndDate: "2025-07-27"
 date: "2025-07-20"
 endDate: "2025-07-27"
 time: "Каждую пятницу, субботу и воскресенье с 11 по 27 июля"

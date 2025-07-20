@@ -1,0 +1,338 @@
+.calendarPage {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: var(--font-body);
+  margin-bottom: 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.header h2 {
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--heading-color);
+  margin: 0;
+  font-family: var(--font-headings);
+}
+
+.header button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--heading-color);
+  padding: 5px 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  border: 1px solid var(--border-color);
+  background-color: var(--calendar);
+
+}
+
+.dayName {
+  background-color: var(--alt-background-light);
+  color: var(--text-color);
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border: 1px solid var(--border-color);
+}
+
+.dayCell {
+  background-color: var(--alt-background1);
+  color: var(--text-color);
+  min-height: 100px;
+  padding: 5px;
+  font-size: 0.85rem;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.dayNumber {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: var(--heading-color2);
+}
+
+/* СОБЫТИЕ: БАЗОВЫЙ СТИЛЬ */
+.eventBar {
+  padding: 6px 8px;
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+  border-left: 4px solid;
+  border-radius: 4px;
+  background-color: var(--background);
+  color: var(--text-color);
+  transition:
+    background 0.2s,
+    color 0.2s;
+  cursor: pointer;
+  position: relative;
+  pointer-events: auto;
+}
+
+.eventBar:hover {
+  background-color: var(--alt-background);
+  color: var(--background);
+}
+
+.eventTitleSmall {
+  display: block;
+  width: 100%;
+  padding: 2px 0;
+}
+
+.eventModal {
+  position: absolute;
+  z-index: 9999;
+  background-color: var(--background);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  pointer-events: auto; /* <--- позволяет удерживать курсор */
+  max-width: 250px;
+}
+
+/* НАЧАЛО СОБЫТИЯ */
+.eventStart {
+  border-left-color: var(--heading-color);
+  font-weight: bold;
+  background-color: var(--alt-background-light);
+}
+
+/* СЕРЕДИНА СОБЫТИЯ */
+.eventMiddle {
+  font-style: italic;
+  border-left-color: var(--border-color);
+  background-color: var(--calendar-background);
+}
+
+/* КОНЕЦ СОБЫТИЯ */
+.eventEnd {
+  border-left-color: var(--heading-color);
+  background-color: var(--alt-background-light);
+  font-style: italic;
+}
+.eventStart,
+.eventEnd {
+  background-color: var(--calendar2);
+}
+
+/* МОДАЛЬНОЕ ОКНО */
+.eventModal {
+  position: absolute;
+  background-color: var(--background);
+  color: var(--text-color);
+  border: 1px solid var(--link-color);
+  padding: 12px;
+  border-radius: 6px;
+  z-index: 9999;
+  pointer-events: auto;
+  width: 240px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modalBox {
+  display: flex;
+  flex-direction: column;
+}
+.modalTitle {
+  font-size: 1rem;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+.modalOrt {
+  display: inline-block;
+  margin-top: 0;
+  color: var(--text-color);
+  font-size: 0.8rem;
+}
+.modalTime {
+  display: inline-block;
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--border-color);
+  font-size: 0.7rem;
+  line-height: 1.2;
+}
+
+.modalLink {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--heading-color2);
+  text-decoration: underline;
+  font-size: 0.7rem;
+  background-color: var(--alt-background-light);
+}
+
+/* ПРОШЕДШИЕ ДНИ */
+.pastDay {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.pastDay .dayNumber {
+  color: var(var(--text-color), #999);
+}
+
+.pastDay .eventBar {
+  text-decoration: line-through;
+  color: var(--text-color, #666);
+}
+
+/* ДОПОЛНИТЕЛЬНЫЕ ЭЛЕМЕНТЫ */
+.eventTitleSmall {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.eventOrt {
+  font-size: 0.7rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.eventDot {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  margin-bottom: 6px;
+  border-left: 3px solid #888;
+  background-color: #eee;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .calendarPage {
+    padding: 0 10px 30px 10px;
+  }
+
+  .header {
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .header h2 {
+    font-size: 1.2rem;
+  }
+
+  .header button {
+    font-size: 1.2rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .dayCell {
+    min-height: 80px;
+    padding: 4px;
+  }
+
+  .dayName {
+    font-size: 0.75rem;
+    padding: 6px 0;
+  }
+
+  .dayNumber {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  .eventBar {
+    font-size: 0;
+    padding: 0;
+    height: 8px;
+    border-left: 3px solid var(--heading-color);
+    background-color: var(--alt-background1);
+    border-radius: 2px;
+    margin-bottom: 4px;
+    cursor: pointer;
+  }
+
+  .eventTitleSmall,
+  .eventOrt {
+    display: none;
+  }
+
+  .eventDot {
+    height: 6px;
+  }
+
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4); /* тёмный полупрозрачный фон */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .eventModalMobile {
+    position: relative;
+    background: var(--background, #fff8f0);
+    border: 1px solid var(--border, #ccc);
+    border-radius: 10px;
+    padding: 1rem;
+    width: 90%;
+    max-width: 400px;
+    z-index: 1001; /* выше, чем overlay */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .modalBox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .modalTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    word-break: break-word;
+  }
+
+  .modalOrt {
+    font-size: 0.9rem;
+    color: var(--text-color);
+  }
+
+  .modalTime {
+    font-size: 0.8rem;
+    color: var(--border-color);
+    font-style: italic;
+  }
+
+  .modalLink {
+    font-size: 0.8rem;
+    color: var(--heading-color2);
+    text-decoration: underline;
+    margin-top: 10px;
+  }
+}

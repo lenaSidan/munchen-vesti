@@ -1,5 +1,8 @@
 ---
 title: "Holiday on Ice in der Olympiahalle: Wintershow der Extraklasse"
+shortTitle: "Holiday on Ice"
+calendarStartDate: "2026-01-02"
+calendarEndDate: "2026-01-05"
 date: "2026-01-02"
 endDate: "2026-01-05"
 time: "2.–5. Januar 2026"

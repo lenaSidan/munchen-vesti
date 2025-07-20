@@ -1,5 +1,8 @@
 ---
 title: "Country Sunday в Мюнхене: кантри-вечер с Сашей Сальвати"
+shortTitle: "Country Sunday Kids"
+calendarStartDate: "2025-10-19"
+calendarEndDate: "2025-10-19"
 date: "2025-10-19"
 time: "19 октября 2025 года, в 17:00"
 ort: "Backstage Werk, Reitknechtstrasse 6, 80639 Мюнхен"

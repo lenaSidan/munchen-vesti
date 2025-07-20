@@ -1,5 +1,8 @@
 ---
 title: "Sternenklang – Ein Märchenkonzert für die ganze Familie in München"
+shortTitle: "Sternenklang"
+calendarStartDate: "2025-09-06"
+calendarEndDate: "2025-09-06"
 date: "2025-09-06"
 endDate: "2025-09-06"
 time: "6. September 2025, Beginn um 15:00 Uhr (Einlass ab 14:00 Uhr)"

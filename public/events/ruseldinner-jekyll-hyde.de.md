@@ -1,5 +1,8 @@
 ---
 title: "Ein düsterer Abend in München: Dinner mit Gänsehaut"
+shortTitle: "Gruseldinner in München"
+calendarStartDate: "2025-10-30"
+calendarEndDate: "2025-10-30"
 date: "2025-10-30"
 time: "Donnerstag, 30. Oktober 2025, Beginn um 19:00 Uhr"
 ort: "Zunfthaus München, Thalkirchner Straße 76, 80337 München"

@@ -8,6 +8,9 @@
 
 /* 🎨 Светлая тема (газетная бумага) */
 :root {
+  --calendar: #bcada1b4;
+  --calendar2:#d1b8a5b4;
+  --calendar-background: #af927cd2;
   --allfound-bg: #ede9d1;
   --glow-color: #e0a96d66;
   --alt-background2: #f6f2d9;
@@ -30,6 +33,9 @@
 
 /* 🌙 Тёмная тема (приглушённая, как старая бумага ночью) */
 [data-theme="dark"] {
+  --calendar: #ffd68a4d;
+  --calendar2:#eedfc34d;
+  --calendar-background: #90806f;
   --allfound-bg: #3a3a3a;
   --glow-color: #ffd68a4d;
   --alt-background2: #252525;
@@ -182,7 +188,6 @@ html {
   border-radius: 8px;
 }
 
-
 @media (max-width: 768px) {
   .introText {
     font-size: 1rem;
@@ -195,7 +200,7 @@ html {
     font-size: 0.9rem;
     line-height: 1.3;
   }
-   .responsiveImage {
+  .responsiveImage {
     max-width: 100%;
     border-radius: 6px;
   }

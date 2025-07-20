@@ -1,5 +1,6 @@
 ---
 title: "Gärtnerplatz Open Air 2025: симфония под небом Мюнхена"
+shortTitle: "Gärtnerplatz Open Air"
 date: "2025-07-20"
 time: "20 июля 2025 года, в 19:30"
 ort: "Gärtnerplatz, 80469 München"

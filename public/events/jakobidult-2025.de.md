@@ -1,5 +1,8 @@
 ---
 title: "Jakobidult 2025: Bayerischer Jahrmarkt mit Geschichte"
+shortTitle: "Jakobidult"
+calendarStartDate: "2025-07-26"
+calendarEndDate: "2025-08-03"
 date: "2025-07-26"
 endDate: "2025-08-03"
 time: "26. Juli – 3. August 2025, täglich von 10:00 bis 20:00 Uhr"

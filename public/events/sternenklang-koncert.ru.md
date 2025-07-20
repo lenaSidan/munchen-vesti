@@ -1,5 +1,8 @@
 ---
 title: "Sternenklang – концерт-сказка для всей семьи в Мюнхене"
+shortTitle: "Sternenklang"
+calendarStartDate: "2025-09-06"
+calendarEndDate: "2025-09-06"
 date: "2025-09-06"
 endDate: "2025-09-06"
 time: "6 сентября 2025 года, начало в 15:00 (вход с 14:00)"

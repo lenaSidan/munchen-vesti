@@ -1,5 +1,8 @@
 ---
 title: "Japanfest München 2025: когда Английский сад становится Японией"
+shortTitle: "Japanfest"
+calendarStartDate: "2025-07-20"
+calendarEndDate: "2025-07-20"
 date: "2025-07-20"
 endDate: "2025-07-20"
 time: "20 июля 2025 года, с 11:00 до 18:00"
