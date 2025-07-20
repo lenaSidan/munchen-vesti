@@ -1,0 +1,317 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Стили выбора месяца */
+.monthSelectContainer {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--border-color);
+}
+.monthSelectContainer label {
+  margin-right: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--border-color);
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.monthSelect {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 200px;
+  padding: 8px 10px;
+  font-size: 1rem;
+  border-radius: 2px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background);
+  color: var(--text-color);
+  transition: border-color 0.3s ease-in-out;
+}
+.monthSelect:focus {
+  border-color: var(--heading-color);
+
+  border-radius: 2px;
+}
+
+.meta {
+  display: none;
+}
+
+.eventCard {
+  border: 1px solid var(--heading-color);
+  border-radius: 8px;
+  padding: 20px;
+  background: var(--alt-background);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 30px;
+}
+.titleBox {
+  background-color: var(--alt-background-light);
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+.eventTitle {
+  font-family: var(--font-headings);
+  text-align: left;
+  font-size: 1.2rem;
+  color: var(--heading-color);
+}
+
+.copyLinkButton {
+  display: inline;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--heading-color2);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 10px;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.copyLinkButton:hover {
+  text-decoration: none;
+}
+
+.copyToast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--border-color);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-size: 0.95rem;
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out;
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+}
+
+.eventImageOrt {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.eventLocation {
+  width: 70%;
+  margin-left: 30px;
+}
+.label {
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--heading-color2);
+  font-family: monospace;
+}
+.value {
+  color: var(--link-color);
+  font-weight: 600;
+  margin-left: 5px;
+  font-size: 1.3rem;
+}
+.valueLink {
+  color: var(--link-color);
+  font-size: 1.3rem;
+  font-style: italic;
+  text-decoration: underline;
+  word-wrap: break-word;
+  white-space: normal;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.eventImage {
+  display: block;
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid var(--link-color);
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+.eventImage:hover {
+  transform: scale(1.02);
+}
+
+.eventContent {
+  width: 100%;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  transition: color 0.3s ease-in-out;
+}
+.eventContent h2 {
+  font-size: 1.1rem;
+  color: var(--heading-color2);
+  font-style: italic;
+  padding-top: 10px;
+}
+.eventContent p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+.eventContent li {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 30px;
+}
+.toggleButton,
+.toggleButton_ics,
+.toggleButton_google {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: bold;
+  font-family: monospace;
+  color: var(--heading-color2);
+  text-decoration: underline;
+  cursor: pointer;
+  border: none;
+  background: none;
+  margin-top: 20px;
+  padding: 0;
+  transition: color 0.3s ease-in-out;
+}
+.toggleButton:hover,
+.toggleButton_ics:hover,
+.toggleButton_google:hover {
+  color: var(--heading-color);
+  text-decoration: none;
+}
+.buttonsDownload {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.inlineLink {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--heading-color2);
+  text-decoration: underline;
+  transition: color 0.3s ease-in-out;
+}
+.inlineLink:hover {
+  color: var(--hover-color);
+}
+
+.archiveButton {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--button-bg, #222);
+  color: var(--button-text, #fff);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  text-align: center;
+}
+.archiveButton:hover {
+  background-color: var(--button-bg-hover, #444);
+}
+
+/* Мобильные стили */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  .eventCard {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .eventTitle {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .eventImageOrt {
+    flex-direction: column;
+    align-items: center;
+  }
+  .eventLocation {
+    width: 100%;
+    margin-left: 0;
+  }
+  .eventImage {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .label {
+    font-size: 0.8rem;
+  }
+  .value,
+  .valueLink {
+    font-size: 0.9rem;
+  }
+  .toggleButton,
+  .toggleButton_ics,
+  .toggleButton_google {
+    font-size: 0.8rem;
+  }
+  .buttonsDownload {
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+  }
+
+.monthSelectContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .monthSelectContainer label {
+    margin-bottom: 8px;
+  }
+
+  .monthSelect {
+    background-image: none;
+    padding: 8px;
+    margin: 0;
+  }
+}

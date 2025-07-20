@@ -2,11 +2,11 @@ import Seo from "@/components/Seo";
 import SubscribeBox from "@/components/SubscribeBox";
 import useTranslation from "@/hooks/useTranslation";
 import { Event, getEventsByLocale } from "@/lib/getEvents";
-import styles from "@/styles/EventsPage.module.css";
+import styles from "@/styles/EventsPageNew.module.css";
 import { GetStaticProps } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import rehypeExternalLinks from "rehype-external-links";
 import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
@@ -20,52 +20,64 @@ interface EventsProps {
 export default function EventsPage({ events }: EventsProps) {
   const t = useTranslation();
   const router = useRouter();
+
+  const [selectedMonthYear, setSelectedMonthYear] = useState<string>("");
   const [expandedSlug, setExpandedSlug] = useState<string | null>(null);
-  const [isClient, setIsClient] = useState(false);
   const [copiedSlug, setCopiedSlug] = useState<string | null>(null);
 
+  const monthYearOptions = useMemo(() => {
+    const optionsSet = new Set<string>();
+    const optionsList: { value: string; label: string }[] = [];
+
+    events.forEach((event) => {
+      if (!event.date) return;
+      const date = new Date(event.date);
+      const year = date.getFullYear();
+      const monthIndex = date.getMonth();
+      const monthName = t(`months.${date.toLocaleString("en", { month: "long" }).toLowerCase()}`);
+      const value = `${year}-${String(monthIndex + 1).padStart(2, "0")}`;
+      if (!optionsSet.has(value)) {
+        optionsSet.add(value);
+        optionsList.push({ value, label: `${monthName} ${year}` });
+      }
+    });
+
+    return optionsList;
+  }, [events, t]);
+
   useEffect(() => {
-    setIsClient(true);
-    const hash = window.location.hash.replace("#", "");
-    if (hash) {
-      setExpandedSlug(hash);
-      setTimeout(() => {
-        const element = document.getElementById(hash);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      }, 100);
-    } else {
-      setExpandedSlug(null);
+    if (!selectedMonthYear && monthYearOptions.length > 0) {
+      const now = new Date();
+      const currentMonthValue = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+      const hasCurrent = monthYearOptions.find((opt) => opt.value === currentMonthValue);
+      setSelectedMonthYear(hasCurrent?.value || monthYearOptions[0].value);
     }
-  }, []);
+  }, [monthYearOptions, selectedMonthYear]);
 
-  const toggleExpand = (slug: string) => {
-    setExpandedSlug((prevSlug) => (prevSlug === slug ? null : slug));
-  };
-
-  const getExcerpt = (htmlContent: string) => {
-    if (typeof window === "undefined") return htmlContent;
-    const div = document.createElement("div");
-    div.innerHTML = htmlContent;
-    return div.querySelector("p")?.outerHTML || htmlContent;
-  };
+  const filteredEvents = useMemo(() => {
+    if (!selectedMonthYear) return [];
+    const [year, month] = selectedMonthYear.split("-").map(Number);
+    return events.filter((event) => {
+      if (!event.date) return false;
+      const date = new Date(event.date);
+      return date.getFullYear() === year && date.getMonth() + 1 === month;
+    });
+  }, [selectedMonthYear, events]);
 
   const handleDownloadICS = useCallback(async (event: Event) => {
-    const startDate = event.date ? new Date(event.date) : new Date();
+    if (!event.date) return;
+    const start = new Date(event.date);
     const endDate = event.endDate
       ? new Date(event.endDate)
-      : new Date(startDate.getTime() + 60 * 60 * 1000); // +1 час по умолчанию
+      : new Date(start.getTime() + 60 * 60 * 1000);
 
-    const url = `/api/ics?title=${encodeURIComponent(event.title)}&description=${encodeURIComponent(event.content || "")}&location=${encodeURIComponent(event.ort || "")}&start=${encodeURIComponent(startDate.toISOString())}&end=${encodeURIComponent(endDate.toISOString())}`;
+    const url = `/api/ics?title=${encodeURIComponent(event.title)}&description=${encodeURIComponent(event.content || "")}&location=${encodeURIComponent(event.ort || "")}&start=${encodeURIComponent(start.toISOString())}&end=${encodeURIComponent(endDate.toISOString())}`;
 
     try {
       const response = await fetch(url);
-      if (!response.ok) throw new Error("ICS fetch failed");
       const blob = await response.blob();
-
       const a = document.createElement("a");
-      a.href = window.URL.createObjectURL(blob);
+      a.href = URL.createObjectURL(blob);
       a.download = `${event.slug || "event"}.ics`;
       document.body.appendChild(a);
       a.click();
@@ -74,86 +86,89 @@ export default function EventsPage({ events }: EventsProps) {
       console.error("Download failed", err);
     }
   }, []);
-  function formatDateForGoogle(startDateString: string, endDateString?: string): string {
-    const startDate = new Date(startDateString);
-    const endDate = endDateString
-      ? new Date(endDateString)
-      : new Date(startDate.getTime() + 60 * 60 * 1000);
 
-    const format = (date: Date) =>
-      date
+  const formatDateForGoogle = (start: string, end?: string) => {
+    const s = new Date(start);
+    const e = end ? new Date(end) : new Date(s.getTime() + 60 * 60 * 1000);
+    const f = (d: Date) =>
+      d
         .toISOString()
         .replace(/[-:]|\.\d{3}/g, "")
-        .slice(0, 15) + "Z"; // формат для Google Calendar: YYYYMMDDTHHmmssZ
+        .slice(0, 15) + "Z";
+    return `${f(s)}/${f(e)}`;
+  };
 
-    return `${format(startDate)}/${format(endDate)}`;
-  }
-  function stripHtml(html: string): string {
+  const getExcerpt = (html: string) => {
     if (typeof window === "undefined") return html;
     const div = document.createElement("div");
     div.innerHTML = html;
-    return div.textContent || "";
-  }
+    return div.querySelector("p")?.outerHTML || html;
+  };
 
   return (
     <>
       <Seo title={t("meta.events_title")} description={t("meta.events_description")} />
       <h1 className={styles.visuallyHidden}>{t("meta.events_title")}</h1>
+
+      <div className={styles.monthSelectContainer}>
+        <label htmlFor="monthSelect">{t("months.filter_by_month")}</label>
+        <select
+          id="monthSelect"
+          value={selectedMonthYear}
+          onChange={(e) => setSelectedMonthYear(e.target.value)}
+          className={styles.monthSelect}
+        >
+          {monthYearOptions.map(({ value, label }) => (
+            <option key={value} value={value}>
+              {label}
+            </option>
+          ))}
+        </select>
+      </div>
+
       <div className={styles.container}>
-        {events.map((event) => (
+        {filteredEvents.map((event) => (
           <div key={event.slug} id={event.slug} className={styles.eventCard}>
             <div className={styles.titleBox}>
               <h2 className={styles.eventTitle}>{event.title}</h2>
             </div>
-            <p className={styles.meta}>
-              {event.time && ` | ${event.time}`}
-              {event.ort && ` | ${event.ort}`}
-            </p>
-
             <div className={styles.eventImageOrt}>
               <div className={styles.eventLocation}>
                 {event.time && (
                   <p className={styles.box}>
-                    <span className={styles.label}>{t("event.time")}: </span>
+                    <span className={styles.label}>{t("event.time")}:</span>
                     <span className={styles.value}>{event.time}</span>
                   </p>
                 )}
-
                 {event.ort && (
                   <p className={styles.box}>
-                    <span className={styles.label}>{t("event.ort")}: </span>
+                    <span className={styles.label}>{t("event.ort")}:</span>
                     <span className={styles.value}>{event.ort}</span>
                   </p>
                 )}
-
-                {typeof event.link === "string" &&
-                  (() => {
-                    const links = event.link.split(",");
-                    return (
-                      <p className={styles.box}>
-                        <span className={styles.label}>{t("event.link")}: </span>
-                        {links.map((link, index) => {
-                          const match = link.trim().match(/\[(.*?)\]\((.*?)\)/);
-                          if (!match) return null;
-                          const [, text, href] = match;
-                          return (
-                            <span key={index}>
-                              <a
-                                href={href}
-                                className={styles.valueLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                {text}
-                              </a>
-                              {index < links.length - 1 && " | "}
-                            </span>
-                          );
-                        })}
-                      </p>
-                    );
-                  })()}
-
+                {event.link && (
+                  <p className={styles.box}>
+                    <span className={styles.label}>{t("event.link")}:</span>
+                    {event.link.split(",").map((link, index) => {
+                      const match = link.trim().match(/\[(.*?)\]\((.*?)\)/);
+                      if (!match) return null;
+                      const [, text, href] = match;
+                      return (
+                        <span key={index}>
+                          <a
+                            href={href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.valueLink}
+                          >
+                            {text}
+                          </a>
+                          {index < event.link.split(",").length - 1 && " | "}
+                        </span>
+                      );
+                    })}
+                  </p>
+                )}
                 <button
                   type="button"
                   onClick={() => {
@@ -183,10 +198,7 @@ export default function EventsPage({ events }: EventsProps) {
             <div className={styles.eventContent}>
               <div
                 dangerouslySetInnerHTML={{
-                  __html:
-                    isClient && expandedSlug === event.slug
-                      ? event.content
-                      : getExcerpt(event.content),
+                  __html: expandedSlug === event.slug ? event.content : getExcerpt(event.content),
                 }}
               />
               <div className={styles.buttonsContainer}>
@@ -198,10 +210,14 @@ export default function EventsPage({ events }: EventsProps) {
                   >
                     {t("event.add_to_calendar_ics")}
                   </button>
-
                   {event.date && (
                     <a
-                      href={`https://calendar.google.com/calendar/u/0/r/eventedit?text=${encodeURIComponent(event.title)}&dates=${formatDateForGoogle(event.date, event.endDate)}&location=${encodeURIComponent(event.ort || "")}`}
+                      href={`https://calendar.google.com/calendar/u/0/r/eventedit?text=${encodeURIComponent(
+                        event.title
+                      )}&dates=${formatDateForGoogle(
+                        event.date,
+                        event.endDate
+                      )}&location=${encodeURIComponent(event.ort || "")}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={styles.toggleButton_google}
@@ -213,7 +229,7 @@ export default function EventsPage({ events }: EventsProps) {
                 <button
                   type="button"
                   className={styles.toggleButton}
-                  onClick={() => toggleExpand(event.slug)}
+                  onClick={() => setExpandedSlug(expandedSlug === event.slug ? null : event.slug)}
                 >
                   {expandedSlug === event.slug ? t("menu.less") : t("menu.more")}
                 </button>
@@ -222,14 +238,31 @@ export default function EventsPage({ events }: EventsProps) {
           </div>
         ))}
       </div>
-      {copiedSlug && <div className={styles.copyToast}> ❖ {t("event.link_copied")}</div>}
+
+      {copiedSlug && <div className={styles.copyToast}>❖ {t("event.link_copied")}</div>}
+
+      <div className={styles.monthSelectContainer}>
+        <label htmlFor="monthSelect">{t("months.filter_by_month")}</label>
+        <select
+          id="monthSelect"
+          value={selectedMonthYear}
+          onChange={(e) => setSelectedMonthYear(e.target.value)}
+          className={styles.monthSelect}
+        >
+          {monthYearOptions.map(({ value, label }) => (
+            <option key={value} value={value}>
+              {label}
+            </option>
+          ))}
+        </select>
+      </div>
       <SubscribeBox />
     </>
   );
 }
 
 async function processMarkdown(content: string) {
-  const processedContent = await remark()
+  const result = await remark()
     .use(remarkGfm)
     .use(remarkRehype)
     .use(rehypeExternalLinks, {
@@ -238,7 +271,7 @@ async function processMarkdown(content: string) {
     })
     .use(rehypeStringify)
     .process(content);
-  return processedContent.toString();
+  return result.toString();
 }
 
 export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) => {
@@ -248,9 +281,9 @@ export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) =>
 
   const activeEvents = rawEvents.filter((event) => {
     if (!event.date) return false;
-    const startDate = new Date(event.date);
-    const endDate = event.endDate ? new Date(event.endDate) : startDate;
-    return endDate >= today;
+    const start = new Date(event.date);
+    const end = event.endDate ? new Date(event.endDate) : start;
+    return end >= today;
   });
 
   const sortedEvents = activeEvents.sort(
