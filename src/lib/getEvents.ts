@@ -1,15 +1,18 @@
 import fs from "fs";
-import path from "path";
 import matter from "gray-matter";
+import path from "path";
 
 // Интерфейс события
 export interface Event {
   slug: string;
   title: string;
+  shortTitle?: string;
   seoTitle?: string;
   seoDescription?: string;
   date?: string;
   endDate?: string;
+  calendarStartDate?: string;
+  calendarEndDate?: string;
   time?: string;
   ort?: string;
   link: string;
@@ -30,11 +33,14 @@ function getEventsFromDirectory(eventsDir: string, locale: string): Event[] {
     return {
       slug: file.replace(`.${locale}.md`, "").replace(/^\d{2}-\d{2}-\d{4}-/, ""),
       title: data.title || "Untitled",
+      shortTitle: data.shortTitle || data.title || "Untitled",
       seoTitle: data.seoTitle || "",
       seoDescription: data.seoDescription || "",
       date: data.date && !isNaN(new Date(data.date).getTime()) ? data.date : undefined,
       endDate: data.endDate || "",
       time: data.time || "",
+      calendarStartDate: data.calendarStartDate || "",
+      calendarEndDate: data.calendarEndDate || "",
       ort: data.ort || "",
       link: data.link ?? null,
       content,

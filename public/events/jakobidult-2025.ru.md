@@ -1,5 +1,8 @@
 ---
 title: "Jakobidult 2025: Баварская ярмарка с историей"
+shortTitle: "Jakobidult"
+calendarStartDate: "2025-07-26"
+calendarEndDate: "2025-08-03"
 date: "2025-07-26"
 endDate: "2025-08-03"
 time: "26 июля – 3 августа 2025 года, с 10:00 до 20:00"

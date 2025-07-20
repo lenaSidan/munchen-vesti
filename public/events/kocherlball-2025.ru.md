@@ -1,5 +1,8 @@
 ---
 title: "Kocherlball в Мюнхене 2025: бал на рассвете у Китайской башни"
+shortTitle: "Kocherlball"
+calendarStartDate: "2025-07-20"
+calendarEndDate: "2025-07-20"
 date: "2025-07-20"
 endDate: "2025-07-20"
 time: "20 июля 2025 года, с 6:00 до 10:00"

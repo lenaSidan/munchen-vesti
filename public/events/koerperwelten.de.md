@@ -1,5 +1,8 @@
 ---
 title: "KÖRPERWELTEN in München: Eine Ausstellung, die unter die Haut geht"
+shortTitle: "KÖRPERWELTEN"
+calendarStartDate: "2025-04-11"
+calendarEndDate: "2025-09-14"
 date: "2025-08-17"
 endDate: "2025-09-14"
 time: "ab 11. April 2025, 10–18 Uhr"

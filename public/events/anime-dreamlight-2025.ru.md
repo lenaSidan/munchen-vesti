@@ -1,5 +1,8 @@
 ---
 title: "Anime Dreamlight Concert в Мюнхене: сквозь музыку в мир аниме"
+shortTitle: "Anime Dreamlight Concert"
+calendarStartDate: "2025-08-01"
+calendarEndDate: "2025-08-02"
 date: "2025-08-01"
 endDate: "2025-08-02"
 time: "1–2 августа 2025 года, в 18:00 и 20:30"

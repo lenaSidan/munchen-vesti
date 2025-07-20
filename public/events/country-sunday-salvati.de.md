@@ -1,5 +1,8 @@
 ---
 title: "Country Sunday in München: Country-Abend mit Sascha Salvati"
+shortTitle: "Country Sunday Kids"
+calendarStartDate: "2025-10-19"
+calendarEndDate: "2025-10-19"
 date: "2025-10-19"
 time: "19. Oktober 2025, 17:00 Uhr"
 ort: "Backstage Werk, Reitknechtstraße 6, 80639 München"

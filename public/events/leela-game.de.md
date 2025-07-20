@@ -1,5 +1,8 @@
 ---
 title: "Eine Reise nach innen: das transformatives Spiel Leela in München"
+shortTitle: "Spiel Leela"
+calendarStartDate: "2025-08-03"
+calendarEndDate: "2025-08-03"
 date: "2025-08-03"
 endDate: "2025-08-03"
 time: "3. August 2025, ab 10:00 Uhr, ganztägig"

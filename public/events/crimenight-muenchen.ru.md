@@ -1,5 +1,8 @@
 ---
 title: "CrimeNight München: городская тайна под свечами"
+shortTitle: "CrimeNight München"
+calendarStartDate: "2025-10-24"
+calendarEndDate: "2025-10-24"
 date: "2025-10-24"
 time: "Пятница, 24 октября 2025, 20:30 (вход с 19:30)"
 ort: "Münchner Künstlerhaus, Lenbachplatz 8, 80333 München"

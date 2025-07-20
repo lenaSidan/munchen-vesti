@@ -1,5 +1,8 @@
 ---
 title: "Japanfest München 2025: Wenn der Englische Garten zu Japan wird"
+shortTitle: "Japanfest"
+calendarStartDate: "2025-07-20"
+calendarEndDate: "2025-07-20"
 date: "2025-07-20"
 endDate: "2025-07-20"
 time: "20. Juli 2025, von 11:00 bis 18:00 Uhr"

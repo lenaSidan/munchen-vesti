@@ -1,7 +1,10 @@
 ---
 title: "Kinoliebe Summer Festival 2025 am Königsplatz: Wenn Kino zum Fest unter Sternen wird"
+shortTitle: "Kinoliebe Summer Festival"
 date: "2025-07-18"
 endDate: "2025-07-20"
+calendarStartDate: "2025-07-09"
+calendarEndDate: "2025-07-20"
 time: "9.–20. Juli 2025, Tagesprogramm ab 12:00 Uhr, Abendvorführungen nach Sonnenuntergang"
 ort: "Königsplatz 1, 80333 München"
 link: "[Offizielle Festival-Website](https://kinoliebe.de)"

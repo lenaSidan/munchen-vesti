@@ -1,5 +1,8 @@
 ---
 title: "Superbloom Festival 2025 в Мюнхене: музыка, искусство и энергия большого лета"
+shortTitle: "Superbloom Festival"
+calendarStartDate: "2025-08-30"
+calendarEndDate: "2025-08-31"
 date: "2025-08-30"
 endDate: "2025-08-31"
 time: "30–31 августа 2025, весь день"

@@ -1,5 +1,8 @@
 ---
 title: "Зловещий вечер в Мюнхене: ужин, от которого бегут мурашки"
+shortTitle: "Gruseldinner в Мюнхене"
+calendarStartDate: "2025-10-30"
+calendarEndDate: "2025-10-30"
 date: "2025-10-30"
 time: "30 октября 2025 года, начало в 19:00"
 ort: "Zunfthaus München, Thalkirchner Straße 76, 80337 München"

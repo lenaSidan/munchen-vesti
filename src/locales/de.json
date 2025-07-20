@@ -285,6 +285,7 @@
     "close": "schließen"
   },
   "footer": {
+    "calendar": "Kalender",
     "impressum": "Impressum",
     "about": "Über das Projekt",
     "contacts": "Kontakt",
@@ -332,6 +333,7 @@
   "articles": {
     "articles": "Articles",
     "read_more": "Weiterlesen",
+    "more": "Mehr",
     "shortTitles": {
       "facts-about-munich": "Fakten über München",
       "olympiapark-munich": "Olympiapark",

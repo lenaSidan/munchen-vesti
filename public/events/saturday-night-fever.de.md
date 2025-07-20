@@ -1,5 +1,8 @@
 ---
 title: "SATURDAY NIGHT FEVER kehrt zurück: Das legendäre Musical in München"
+shortTitle: "SATURDAY NIGHT FEVER"
+calendarStartDate: "2025-10-14"
+calendarEndDate: "2025-10-26"
 date: "2025-10-14"
 endDate: "2025-10-26"
 time: "14 по 26 октября 2025"

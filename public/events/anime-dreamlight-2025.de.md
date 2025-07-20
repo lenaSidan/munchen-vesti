@@ -1,5 +1,8 @@
 ---
 title: "Anime Dreamlight Concert in München: Durch Musik in die Welt des Anime"
+shortTitle: "Anime Dreamlight Concert"
+calendarStartDate: "2025-08-01"
+calendarEndDate: "2025-08-02"
 date: "2025-08-01"
 endDate: "2025-08-02"
 time: "1.–2. August 2025, um 18:00 und 20:30 Uhr"

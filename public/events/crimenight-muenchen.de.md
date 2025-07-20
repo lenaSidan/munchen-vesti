@@ -1,5 +1,8 @@
 ---
 title: "CrimeNight München: ein städtisches Geheimnis bei Kerzenschein"
+shortTitle: "CrimeNight München"
+calendarStartDate: "2025-10-24"
+calendarEndDate: "2025-10-24"
 date: "2025-10-24"
 time: "Freitag, 24. Oktober 2025, 20:30 Uhr (Einlass ab 19:30)"
 ort: "Münchner Künstlerhaus, Lenbachplatz 8, 80333 München"

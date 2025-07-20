@@ -1,5 +1,8 @@
 ---
 title: "Sommernachtstraum im Olympiapark: Wenn die Nacht zur Bühne wird"
+shortTitle: "Sommernachtstraum"
+calendarStartDate: "2025-07-19"
+calendarEndDate: "2025-07-19"
 date: "2025-07-19"
 ort: "Olympiapark München"
 time: "19. Juli 2025, ab 16:00 Uhr bis spät in die Nacht"

@@ -1,5 +1,8 @@
 ---
 title: "CAVALLUNA Kids – Sommercamp total verrückt!"
+shortTitle: "CAVALLUNA Kids"
+calendarStartDate: "2025-08-02"
+calendarEndDate: "2025-09-14"
 date: "2025-08-02"
 endDate: "2025-09-14"
 time: "2. August – 14. September 2025, um 18:00 und 20:30 Uhr"

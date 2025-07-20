@@ -1,5 +1,8 @@
 ---
 title: "White Night im Englischen Garten: Mykonos White Night 2025"
+shortTitle: "White Night"
+calendarStartDate: "2025-08-02"
+calendarEndDate: "2025-08-03"
 date: "2025-08-02"
 endDate: "2025-08-03"
 time: "Samstag, 2. August 2025, 17:00 Uhr – Sonntag, 3. August, 04:00 Uhr (CEST)"

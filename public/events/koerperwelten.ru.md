@@ -1,5 +1,8 @@
 ---
 title: "КÖRPERWELTEN в Мюнхене: Выставка, которая проникает под кожу"
+shortTitle: "КÖRPERWELTEN"
+calendarStartDate: "2025-04-11"
+calendarEndDate: "2025-09-14"
 date: "2025-08-17"
 endDate: "2025-09-14"
 time: "с 11 апреля 2025, с 10:00 до 18:00"

@@ -1,5 +1,8 @@
 ---
 title: "Kocherlball 2025 in München: Tanz am frühen Morgen am Chinesischen Turm"
+shortTitle: "Kocherlball"
+calendarStartDate: "2025-07-20"
+calendarEndDate: "2025-07-20"
 date: "2025-07-20"
 endDate: "2025-07-20"
 time: "20. Juli 2025, 6:00–10:00 Uhr"

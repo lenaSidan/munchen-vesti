@@ -1,5 +1,8 @@
 ---
 title: "Летний театр под открытым небом"
+shortTitle: "Sommertheater"
+calendarStartDate: "2025-07-20"
+calendarEndDate: "2025-07-26"
 date: "2025-07-20"
 endDate: "2025-07-26"
 ort: "Englischer Garten, Amphitheater"

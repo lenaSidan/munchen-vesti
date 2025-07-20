@@ -1,5 +1,8 @@
 ---
 title: "Белая ночь в Английском саду: Mykonos White Night 2025"
+shortTitle: "Белая ночь"
+calendarStartDate: "2025-08-02"
+calendarEndDate: "2025-08-03"
 date: "2025-08-02"
 endDate: "2025-08-03"
 time: "Суббота, 2 августа 2025 года, 17:00 – воскресенье, 3 августа, 04:00 (CEST)"

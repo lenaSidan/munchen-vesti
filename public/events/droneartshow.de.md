@@ -1,5 +1,8 @@
 ---
 title: "DroneArt Show in München: Wenn Drohnen zu Klassik tanzen"
+shortTitle: "DroneArt Show"
+calendarStartDate: "2025-08-14"
+calendarEndDate: "2025-08-16"
 date: "2025-08-14"
 endDate: "2025-08-16"
 time: "14.–16. August 2025, Beginn um 21:00 Uhr"
