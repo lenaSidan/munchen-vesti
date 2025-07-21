@@ -1,3 +1,4 @@
+import Seo from "@/components/Seo";
 import useTranslation from "@/hooks/useTranslation";
 import { Event, getEventsByLocale } from "@/lib/getEvents";
 import styles from "@/styles/CalendarPage.module.css";
@@ -93,98 +94,137 @@ export default function CalendarPage({ events }: CalendarProps) {
   };
 
   return (
-    <div className={styles.calendarPage}>
-      <div className={styles.header}>
-        <button onClick={goToPreviousMonth}>←</button>
-        <h2>
-          {t(
-            `months.${new Date(currentYear, currentMonth)
-              .toLocaleString("en", { month: "long" })
-              .toLowerCase()}`
-          )}{" "}
-          {currentYear}
-        </h2>
-        <button onClick={goToNextMonth}>→</button>
-      </div>
+    <>
+      <Seo title={t("meta.events_title")} description={t("meta.calendar_description")} />
+      <h1 className={styles.visuallyHidden}>{t("meta.calendar_title")}</h1>
 
-      <div className={styles.grid}>
-        {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((d) => (
-          <div key={d} className={styles.dayName}>
-            {d}
-          </div>
-        ))}
+      <div className={styles.calendarPage}>
+        <div className={styles.header}>
+          <button type="button" onClick={goToPreviousMonth}>
+            ←
+          </button>
+          <h2>
+            {t(
+              `months.${new Date(currentYear, currentMonth)
+                .toLocaleString("en", { month: "long" })
+                .toLowerCase()}`
+            )}{" "}
+            {currentYear}
+          </h2>
+          <button type="button" onClick={goToNextMonth}>
+            →
+          </button>
+        </div>
 
-        {daysInMonth.map((date, index) => {
-          const key = date?.toISOString().split("T")[0];
-          const dayEvents = key && eventsByDate[key];
-          const isPast = !!date && date.getTime() < new Date().setHours(0, 0, 0, 0);
-
-          return (
-            <div key={index} className={`${styles.dayCell} ${isPast ? styles.pastDay : ""}`}>
-              {date && (
-                <>
-                  <div className={styles.dayNumber}>{date.getDate()}</div>
-                  {Array.isArray(dayEvents) &&
-                    dayEvents.map((event) => {
-                      const segment = event._calendarSegment;
-                      const segmentClass =
-                        segment === "start"
-                          ? styles.eventStart
-                          : segment === "end"
-                            ? styles.eventEnd
-                            : styles.eventMiddle;
-
-                      return (
-                        <div
-                          key={`${event.slug}-${key}`}
-                          className={`${styles.eventBar} ${segmentClass}`}
-                          onMouseEnter={(e) => {
-                            if (!isMobile) {
-                              hoveringModalRef.current = true;
-                              if (timeoutRef.current) clearTimeout(timeoutRef.current);
-                              const rect = e.currentTarget.getBoundingClientRect();
-                              setModalPosition({
-                                top: rect.bottom + window.scrollY + 8,
-                                left: rect.left + window.scrollX,
-                              });
-                              setSelectedEvent(event);
-                            }
-                          }}
-                          onClick={() => {
-                            if (isMobile) {
-                              setSelectedEvent(event);
-                            }
-                          }}
-                          onMouseLeave={() => {
-                            if (!isMobile) {
-                              timeoutRef.current = setTimeout(() => {
-                                if (!hoveringModalRef.current) setSelectedEvent(null);
-                              }, 300);
-                            }
-                          }}
-                        >
-                          {segment !== "middle" && (
-                            <span className={styles.eventTitleSmall}>{event.shortTitle}</span>
-                          )}
-                        </div>
-                      );
-                    })}
-                </>
-              )}
+        <div className={styles.grid}>
+          {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((d) => (
+            <div key={d} className={styles.dayName}>
+              {d}
             </div>
-          );
-        })}
-      </div>
+          ))}
 
-      {selectedEvent &&
-        (isMobile ? (
-          <div className={styles.modalOverlay} onClick={() => setSelectedEvent(null)}>
-            <div className={styles.eventModalMobile} onClick={(e) => e.stopPropagation()}>
+          {daysInMonth.map((date, index) => {
+            const key = date?.toISOString().split("T")[0];
+            const dayEvents = key && eventsByDate[key];
+            const isPast = !!date && date.getTime() < new Date().setHours(0, 0, 0, 0);
+
+            return (
+              <div key={index} className={`${styles.dayCell} ${isPast ? styles.pastDay : ""}`}>
+                {date && (
+                  <>
+                    <div className={styles.dayNumber}>{date.getDate()}</div>
+                    {Array.isArray(dayEvents) &&
+                      dayEvents.map((event) => {
+                        const segment = event._calendarSegment;
+                        const segmentClass =
+                          segment === "start"
+                            ? styles.eventStart
+                            : segment === "end"
+                              ? styles.eventEnd
+                              : styles.eventMiddle;
+
+                        return (
+                          <div
+                            key={`${event.slug}-${key}`}
+                            className={`${styles.eventBar} ${segmentClass}`}
+                            onMouseEnter={(e) => {
+                              if (!isMobile) {
+                                hoveringModalRef.current = true;
+                                if (timeoutRef.current) clearTimeout(timeoutRef.current);
+                                const rect = e.currentTarget.getBoundingClientRect();
+                                setModalPosition({
+                                  top: rect.bottom + window.scrollY + 8,
+                                  left: rect.left + window.scrollX,
+                                });
+                                setSelectedEvent(event);
+                              }
+                            }}
+                            onClick={() => {
+                              if (isMobile) {
+                                setSelectedEvent(event);
+                              }
+                            }}
+                            onMouseLeave={() => {
+                              if (!isMobile) {
+                                timeoutRef.current = setTimeout(() => {
+                                  if (!hoveringModalRef.current) setSelectedEvent(null);
+                                }, 300);
+                              }
+                            }}
+                          >
+                            {segment !== "middle" && (
+                              <span className={styles.eventTitleSmall}>{event.shortTitle}</span>
+                            )}
+                          </div>
+                        );
+                      })}
+                  </>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {selectedEvent &&
+          (isMobile ? (
+            <div className={styles.modalOverlay} onClick={() => setSelectedEvent(null)}>
+              <div className={styles.eventModalMobile} onClick={(e) => e.stopPropagation()}>
+                <div className={styles.modalBox}>
+                  <p className={styles.modalTitle}>{selectedEvent.shortTitle}</p>
+                  {selectedEvent.ort && <p className={styles.modalOrt}>{selectedEvent.ort}</p>}
+                  {selectedEvent.ort && <p className={styles.modalTime}>{selectedEvent.time}</p>}
+                  <Link
+                    href={`/events/${selectedEvent.slug}`}
+                    onClick={() => {
+                      sessionStorage.setItem("fromCalendar", "true");
+                    }}
+                  >
+                    {t("articles.more")}
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div
+              className={styles.eventModal}
+              style={{ top: modalPosition.top, left: modalPosition.left }}
+              onMouseEnter={() => {
+                hoveringModalRef.current = true;
+                if (timeoutRef.current) clearTimeout(timeoutRef.current);
+              }}
+              onMouseLeave={() => {
+                hoveringModalRef.current = false;
+                timeoutRef.current = setTimeout(() => {
+                  if (!hoveringModalRef.current) setSelectedEvent(null);
+                }, 300);
+              }}
+            >
               <div className={styles.modalBox}>
                 <p className={styles.modalTitle}>{selectedEvent.shortTitle}</p>
                 {selectedEvent.ort && <p className={styles.modalOrt}>{selectedEvent.ort}</p>}
                 {selectedEvent.ort && <p className={styles.modalTime}>{selectedEvent.time}</p>}
                 <Link
+                  className={styles.modalLink}
                   href={`/events/${selectedEvent.slug}`}
                   onClick={() => {
                     sessionStorage.setItem("fromCalendar", "true");
@@ -194,39 +234,14 @@ export default function CalendarPage({ events }: CalendarProps) {
                 </Link>
               </div>
             </div>
-          </div>
-        ) : (
-          <div
-            className={styles.eventModal}
-            style={{ top: modalPosition.top, left: modalPosition.left }}
-            onMouseEnter={() => {
-              hoveringModalRef.current = true;
-              if (timeoutRef.current) clearTimeout(timeoutRef.current);
-            }}
-            onMouseLeave={() => {
-              hoveringModalRef.current = false;
-              timeoutRef.current = setTimeout(() => {
-                if (!hoveringModalRef.current) setSelectedEvent(null);
-              }, 300);
-            }}
-          >
-            <div className={styles.modalBox}>
-              <p className={styles.modalTitle}>{selectedEvent.shortTitle}</p>
-              {selectedEvent.ort && <p className={styles.modalOrt}>{selectedEvent.ort}</p>}
-              {selectedEvent.ort && <p className={styles.modalTime}>{selectedEvent.time}</p>}
-              <Link
-                className={styles.modalLink}
-                href={`/events/${selectedEvent.slug}`}
-                onClick={() => {
-                  sessionStorage.setItem("fromCalendar", "true");
-                }}
-              >
-                {t("articles.more")}
-              </Link>
-            </div>
-          </div>
-        ))}
-    </div>
+          ))}
+           <div className={styles.backToHome}>
+        <Link href="/" className={styles.backLink}>
+          ⬅ {t("weather.back_to_home")}
+        </Link>
+      </div>
+      </div>
+    </>
   );
 }
 

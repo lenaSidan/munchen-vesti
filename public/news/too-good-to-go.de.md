@@ -7,8 +7,7 @@ seoTitle: "Too Good To Go in Deutschland – günstiges Essen, Überraschungen u
 seoDescription: "Wie funktioniert Too Good To Go in Deutschland? Essen retten, Geld sparen und neue Orte entdecken – alle Tipps, Vorteile und Nachteile in einem Überblick."
 ---
 
-**Es gibt Essen. Es gibt Rabatte. Es gibt Bewusstsein.** All das in einer App – Too Good To Go.  
-Wenn du in München, Berlin, Hamburg (oder irgendeiner anderen deutschen Stadt) lebst und noch nie von TGTG gehört hast, bist du entweder Millionär – oder... magst einfach keine Überraschungen.
+**Es gibt Essen. Es gibt Rabatte. Es gibt Bewusstsein.** All das in einer App – Too Good To Go. Wenn du in München, Berlin, Hamburg (oder irgendeiner anderen deutschen Stadt) lebst und noch nie von TGTG gehört hast, bist du entweder Millionär – oder... magst einfach keine Überraschungen.
 
 ### Was ist das überhaupt?
 

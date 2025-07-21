@@ -1,4 +1,5 @@
 /public/images/alter_suedfriedhof_muenchen.webp
+/public/images/beerencafe.webp
 /public/images/c+m+b.webp
 /public/images/disco_vulkan.webp
 /public/images/muenchen.webp
