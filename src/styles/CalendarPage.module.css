@@ -104,10 +104,14 @@
   color: var(--background);
 }
 
-.eventTitleSmall {
-  display: block;
-  width: 100%;
-  padding: 2px 0;
+.middleSegmentTitle {
+  opacity: 0.7;
+  font-style: italic;
+  font-size: 9px;
+}
+
+.mobileTitle {
+  display: none;
 }
 
 .eventModal {
@@ -141,13 +145,21 @@
 .eventEnd {
   border-left-color: var(--heading-color);
   background-color: var(--alt-background-light);
-  font-style: italic;
+  font-weight: bold;
 }
 .eventStart,
 .eventEnd {
   background-color: var(--calendar2);
 }
-
+.eventTitleSmall {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 2px;
+  max-width: 100%;
+  color: var(--text-color);
+}
 /* МОДАЛЬНОЕ ОКНО */
 .eventModal {
   position: absolute;
@@ -212,11 +224,7 @@
 }
 
 /* ДОПОЛНИТЕЛЬНЫЕ ЭЛЕМЕНТЫ */
-.eventTitleSmall {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--text-color);
-}
+
 
 .eventOrt {
   font-size: 0.7rem;
@@ -282,9 +290,9 @@
   .dayCell {
     min-height: 80px;
     padding: 4px;
-     overflow: hidden;
-  word-break: break-word;
-  word-wrap: break-word;
+    overflow: hidden;
+    word-break: break-word;
+    word-wrap: break-word;
   }
 
   .dayName {
@@ -301,33 +309,35 @@
     display: flex;
     align-items: center;
     height: 14px;
-    padding: 0 4px;
+    padding: 0;
     font-size: 0.7rem;
     overflow: hidden;
     border-left: 3px solid var(--heading-color);
     border-radius: 2px;
     margin-bottom: 4px;
-    width: 100%; /* <<< важно */
+    width: 100%;
     max-width: 100%;
     box-sizing: border-box;
     flex-shrink: 1;
-flex-grow: 0;
+    flex-grow: 0;
   }
 
   .eventTitleSmall {
     display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-  font-size: 0.5rem;
-  font-weight: 500;
-  font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    font-size: 0.5rem;
+    font-weight: 500;
+    font-style: italic;
   }
   .eventOrt {
     display: none;
   }
-
+  .middleSegmentTitle {
+    display: none;
+  }
   .eventDot {
     height: 6px;
   }

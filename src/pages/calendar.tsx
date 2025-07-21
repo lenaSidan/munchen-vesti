@@ -172,9 +172,16 @@ export default function CalendarPage({ events }: CalendarProps) {
                               }
                             }}
                           >
-                            {segment !== "middle" && (
+                            {/* {segment !== "middle" && (
                               <span className={styles.eventTitleSmall}>{event.shortTitle}</span>
-                            )}
+                            )} */}
+                            <span
+                              className={`${styles.eventTitleSmall} ${segment === "middle" ? styles.middleSegmentTitle : ""} ${
+                                isMobile ? styles.mobileTitle : ""
+                              }`}
+                            >
+                              {event.shortTitle}
+                            </span>{" "}
                           </div>
                         );
                       })}
@@ -235,11 +242,11 @@ export default function CalendarPage({ events }: CalendarProps) {
               </div>
             </div>
           ))}
-           <div className={styles.backToHome}>
-        <Link href="/" className={styles.backLink}>
-          ⬅ {t("weather.back_to_home")}
-        </Link>
-      </div>
+        <div className={styles.backToHome}>
+          <Link href="/" className={styles.backLink}>
+            ⬅ {t("weather.back_to_home")}
+          </Link>
+        </div>
       </div>
     </>
   );
