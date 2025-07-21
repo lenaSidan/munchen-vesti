@@ -1,19 +1,19 @@
+import bundleAnalyzer from "@next/bundle-analyzer";
 import type { NextConfig } from "next";
-import bundleAnalyzer from '@next/bundle-analyzer';
 
 const withBundleAnalyzer = bundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true',
+  enabled: process.env.ANALYZE === "true",
 });
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   i18n: {
     locales: ["ru", "de"],
-    defaultLocale: "ru",
-    
+    defaultLocale: "de",
+    localeDetection: false,
   },
   images: {
-    formats: ['image/webp', 'image/avif'],
+    formats: ["image/webp", "image/avif"],
     minimumCacheTTL: 86400,
     deviceSizes: [360, 768, 1024, 1200],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384, 700],
@@ -51,5 +51,3 @@ const nextConfig: NextConfig = {
 };
 
 export default withBundleAnalyzer(nextConfig);
-
-

@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useMemo } from "react";
-import ru from "../locales/ru.json";
 import de from "../locales/de.json";
+import ru from "../locales/ru.json";
 
 type TranslationObject = { [key: string]: string | TranslationObject };
 const translations: Record<string, TranslationObject> = { ru, de };
@@ -10,10 +10,15 @@ export default function useTranslation() {
   const router = useRouter();
 
   const locale = useMemo(() => {
-    if (router?.locale) return router.locale;
-    if (typeof window !== "undefined") return navigator.language.slice(0, 2);
+    if (router?.locale && translations[router.locale]) return router.locale;
+
+    if (typeof window !== "undefined") {
+      const browserLang = navigator.language.slice(0, 2);
+      if (translations[browserLang]) return browserLang;
+    }
+
     return "ru"; // fallback
-  }, [router.locale]);
+  }, [router?.locale]);
 
   const currentTranslations = useMemo(
     () => translations[locale] || translations["ru"],

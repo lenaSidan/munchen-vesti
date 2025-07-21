@@ -44,7 +44,8 @@ export default function CalendarPage({ events }: CalendarProps) {
   }, [currentMonth, currentYear]);
 
   const eventsByDate = useMemo(() => {
-    const map: { [key: string]: (Event & { _calendarSegment?: "start" | "middle" | "end" })[] } = {};
+    const map: { [key: string]: (Event & { _calendarSegment?: "start" | "middle" | "end" })[] } =
+      {};
 
     for (const event of events) {
       const start = new Date(event.calendarStartDate ?? event.date!);
@@ -63,8 +64,8 @@ export default function CalendarPage({ events }: CalendarProps) {
             current.getTime() === start.getTime()
               ? "start"
               : current.getTime() === end.getTime()
-              ? "end"
-              : "middle",
+                ? "end"
+                : "middle",
         });
         current.setDate(current.getDate() + 1);
       }
@@ -100,14 +101,17 @@ export default function CalendarPage({ events }: CalendarProps) {
             `months.${new Date(currentYear, currentMonth)
               .toLocaleString("en", { month: "long" })
               .toLowerCase()}`
-          )} {currentYear}
+          )}{" "}
+          {currentYear}
         </h2>
         <button onClick={goToNextMonth}>→</button>
       </div>
 
       <div className={styles.grid}>
         {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((d) => (
-          <div key={d} className={styles.dayName}>{d}</div>
+          <div key={d} className={styles.dayName}>
+            {d}
+          </div>
         ))}
 
         {daysInMonth.map((date, index) => {
@@ -127,8 +131,8 @@ export default function CalendarPage({ events }: CalendarProps) {
                         segment === "start"
                           ? styles.eventStart
                           : segment === "end"
-                          ? styles.eventEnd
-                          : styles.eventMiddle;
+                            ? styles.eventEnd
+                            : styles.eventMiddle;
 
                       return (
                         <div
@@ -172,17 +176,22 @@ export default function CalendarPage({ events }: CalendarProps) {
         })}
       </div>
 
-      {selectedEvent && (
-        isMobile ? (
+      {selectedEvent &&
+        (isMobile ? (
           <div className={styles.modalOverlay} onClick={() => setSelectedEvent(null)}>
             <div className={styles.eventModalMobile} onClick={(e) => e.stopPropagation()}>
               <div className={styles.modalBox}>
                 <p className={styles.modalTitle}>{selectedEvent.shortTitle}</p>
                 {selectedEvent.ort && <p className={styles.modalOrt}>{selectedEvent.ort}</p>}
                 {selectedEvent.ort && <p className={styles.modalTime}>{selectedEvent.time}</p>}
-                <Link href={`/events/${selectedEvent.slug}`} onClick={() => {
-                  sessionStorage.setItem("fromCalendar", "true");
-                }}>{t("articles.more")}</Link>
+                <Link
+                  href={`/events/${selectedEvent.slug}`}
+                  onClick={() => {
+                    sessionStorage.setItem("fromCalendar", "true");
+                  }}
+                >
+                  {t("articles.more")}
+                </Link>
               </div>
             </div>
           </div>
@@ -205,13 +214,18 @@ export default function CalendarPage({ events }: CalendarProps) {
               <p className={styles.modalTitle}>{selectedEvent.shortTitle}</p>
               {selectedEvent.ort && <p className={styles.modalOrt}>{selectedEvent.ort}</p>}
               {selectedEvent.ort && <p className={styles.modalTime}>{selectedEvent.time}</p>}
-              <Link className={styles.modalLink} href={`/events/${selectedEvent.slug}`} onClick={() => {
-                sessionStorage.setItem("fromCalendar", "true");
-              }}>{t("articles.more")}</Link>
+              <Link
+                className={styles.modalLink}
+                href={`/events/${selectedEvent.slug}`}
+                onClick={() => {
+                  sessionStorage.setItem("fromCalendar", "true");
+                }}
+              >
+                {t("articles.more")}
+              </Link>
             </div>
           </div>
-        )
-      )}
+        ))}
     </div>
   );
 }
