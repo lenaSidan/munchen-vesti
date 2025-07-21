@@ -1,5 +1,6 @@
 import BavarianWordOfTheWeek from "@/components/BavarianWordOfTheWeek";
 import ImportantNewsBlock from "@/components/ImportantNewsBlock";
+import MiniCalendarBlock from "@/components/MiniCalendarBlock";
 import Seo from "@/components/Seo";
 import SubscribeBox from "@/components/SubscribeBox";
 import WeatherInlineBlock from "@/components/WeatherInlineBlock";
@@ -54,7 +55,7 @@ const LazyShortNewsBlock = dynamic(() => import("@/components/ShortNewsBlock"), 
 const MiniPostcards = dynamic(() => import("@/components/MiniPostcards"), { ssr: false });
 
 // Указать колличество баварских слов
-const sampleWords = fullWords.slice(0, 5);
+const sampleWords = fullWords.slice(0, 3);
 
 export default function Home({
   mainEvent,
@@ -124,6 +125,7 @@ export default function Home({
             )}
           </div>
           <div className={styles.adsBlock}>
+            <MiniCalendarBlock />
             {weather && <WeatherInlineBlock forecast={weather} />}
             {/* <OldWordOfTheWeek words={oldWords} /> */}
             <BavarianWordOfTheWeek words={sampleWords} />
