@@ -247,7 +247,9 @@
   text-decoration: none;
   color: var(--heading-color2);
   border-bottom: 1px dashed var(--link-color);
-  transition: color 0.3s ease, border-color 0.3s ease;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .backLink:hover {
@@ -280,6 +282,9 @@
   .dayCell {
     min-height: 80px;
     padding: 4px;
+     overflow: hidden;
+  word-break: break-word;
+  word-wrap: break-word;
   }
 
   .dayName {
@@ -293,17 +298,32 @@
   }
 
   .eventBar {
-    font-size: 0;
-    padding: 0;
-    height: 10px;
+    display: flex;
+    align-items: center;
+    height: 14px;
+    padding: 0 4px;
+    font-size: 0.7rem;
+    overflow: hidden;
     border-left: 3px solid var(--heading-color);
-
     border-radius: 2px;
     margin-bottom: 4px;
-    cursor: pointer;
+    width: 100%; /* <<< важно */
+    max-width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 1;
+flex-grow: 0;
   }
 
-  .eventTitleSmall,
+  .eventTitleSmall {
+    display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  font-size: 0.5rem;
+  font-weight: 500;
+  font-style: italic;
+  }
   .eventOrt {
     display: none;
   }
@@ -359,11 +379,5 @@
     font-size: 0.8rem;
     color: var(--border-color);
     font-style: italic;
-  }
-  .modalLink {
-    color: #5b0f00 !important;
-    font-weight: bold !important;
-    text-decoration: underline !important;
-    font-size: 0.1rem !important;
   }
 }
