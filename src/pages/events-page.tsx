@@ -172,10 +172,22 @@ export default function EventsPage({ events }: EventsProps) {
                 <button
                   type="button"
                   onClick={() => {
-                    const url = `${window.location.origin}/${router.locale}/events-page#${event.slug}`;
-                    navigator.clipboard.writeText(url);
-                    setCopiedSlug(event.slug);
-                    setTimeout(() => setCopiedSlug(null), 3000);
+                    if (typeof window !== "undefined" && event.slug && router.locale) {
+                      const url = `${window.location.origin}/${router.locale}/events-page#${event.slug}`;
+                      if (navigator.clipboard && window.isSecureContext) {
+                        navigator.clipboard
+                          .writeText(url)
+                          .then(() => {
+                            setCopiedSlug(event.slug);
+                            setTimeout(() => setCopiedSlug(null), 3000);
+                          })
+                          .catch((err) => {
+                            console.error("Clipboard write failed:", err);
+                          });
+                      } else {
+                        console.warn("Clipboard not supported");
+                      }
+                    }
                   }}
                   className={styles.copyLinkButton}
                 >
