@@ -27,6 +27,8 @@
 <url><loc>https://munchen-vesti.de/proverbs-page</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://munchen-vesti.de/services-page</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://munchen-vesti.de/weather-page</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://munchen-vesti.de/de/news/aldi-onlineshop-schließt</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://munchen-vesti.de/news/aldi-onlineshop-schließt</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://munchen-vesti.de/de/news/allergie-muenchen</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://munchen-vesti.de/news/allergie-muenchen</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://munchen-vesti.de/de/news/amazon-prime-vorteile</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
