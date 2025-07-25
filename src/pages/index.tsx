@@ -132,7 +132,7 @@ export default function Home({
           </div>
         </div>
         <SubscribeBox />
-        <ImportantNewsBlock />
+        {/* <ImportantNewsBlock /> */}
         <div className={styles.miniPostcardsBlock}>
           <MiniPostcards />
         </div>
