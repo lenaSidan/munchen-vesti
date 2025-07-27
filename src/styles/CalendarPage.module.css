@@ -86,6 +86,7 @@
 .eventBar {
   padding: 6px 8px;
   font-size: 0.8rem;
+  line-height: 1.1;
   margin-bottom: 6px;
   border-left: 4px solid;
   border-radius: 4px;
@@ -152,10 +153,11 @@
   background-color: var(--calendar2);
 }
 .eventTitleSmall {
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  white-space: normal;
   padding-left: 2px;
   max-width: 100%;
   color: var(--text-color);
@@ -224,7 +226,6 @@
 }
 
 /* ДОПОЛНИТЕЛЬНЫЕ ЭЛЕМЕНТЫ */
-
 
 .eventOrt {
   font-size: 0.7rem;
