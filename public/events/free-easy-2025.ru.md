@@ -3,7 +3,7 @@ title: "Free & Easy Festival 2025 в Мюнхене: музыка без цен�
 shortTitle: "Free & Easy Festival"
 calendarStartDate: "2025-07-24"
 calendarEndDate: "2025-08-10"
-date: "2025-07-24"
+date: "2025-08-03"
 endDate: "2025-08-10"
 time: "24 июля – 10 августа 2025"
 ort: "Backstage München, Reitknechtstraße"
