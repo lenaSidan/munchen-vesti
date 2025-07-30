@@ -5,7 +5,7 @@
     "announcements_title": "Anzeigen",
     "view_all_articles": "Alle Events anzeigen",
     "edition_date": "Ausgabe vom {{month}} {{year}}",
-    "published_fixed": "Eine Informationszeitung, die das Leben der russischsprachigen Gemeinschaft in München widerspiegelt.",
+    "published_fixed": "Ein historisch-kulturelles Blatt über Ereignisse und das Alltagsleben in München.",
     "page_title": "München – Veranstaltungskalender auf Russisch: Konzerte, Ausstellungen, Märkte, Festivals und Events für Kinder und Erwachsene"
   },
   "seo": {
@@ -19,11 +19,11 @@
     "nachrichten_muenchen_description": "Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten aus München: Stadtleben, Änderungen, Veranstaltungen und Hinweise für die russischsprachige Community."
   },
   "newsSEO": {
-    "h1": "Nachrichten aus München – aktuelle Ereignisse und Stadtleben",
+    "h1": "Nachrichten aus München – Aktuelles Stadtleben und wichtige Ereignisse",
     "meta": "München, 2025",
-    "paragraph1": "Erfahren Sie, was in München aktuell passiert. Wir berichten über lokale Nachrichten, Hinweise und interessante Ereignisse.",
-    "paragraph2": "Im Nachrichtenbereich finden Sie Informationen über Verkehr, Bildung, neue Gesetze, Kulturveranstaltungen und mehr.",
-    "paragraph3": "Unsere Beiträge sind kompakt, verständlich und speziell für die russischsprachige Community verfasst.",
+    "paragraph1": "Verfolgen Sie, was gerade in München passiert. Wir veröffentlichen aktuelle Stadtnachrichten, Veranstaltungshinweise und hilfreiche Tipps.",
+    "paragraph2": "Im Nachrichtenbereich finden Sie Informationen über Verkehr, Schulen, neue Gesetze, kulturelle Ereignisse und vieles mehr.",
+    "paragraph3": "Unsere Meldungen sind kompakt und verständlich – für alle, die sich für das Leben in München interessieren. Verfügbar auf Russisch und Deutsch.",
     "link_text": "Zu den Nachrichten"
   },
   "articleSEO": {
@@ -222,20 +222,20 @@
   "about": {
     "title": "Über das Projekt",
     "section1": {
-      "title": "Was ist „Münchener Nachrichten“?",
-      "text": "„Münchensker Nachrichten“ ist ein soziales und völlig kostenloses Projekt für russischsprachige Einwohner Münchens. Wir schaffen einen praktischen Raum, in dem wichtige Nachrichten, bevorstehende Veranstaltungen, nützliche Tipps und aktuelle Informationen über das Leben in der Stadt gesammelt werden."
+      "title": "Was sind die Münchener Anzeigen?",
+      "text": "Die „Münchener Anzeigen“ sind ein kulturelles Online-Magazin über das Leben in München – auf Russisch und Deutsch. Wir schaffen einen Raum für alle, die sich für die Stadt interessieren, kulturelle Veranstaltungen entdecken oder sich von Münchens Geschichte und Gegenwart inspirieren lassen möchten."
     },
     "section2": {
       "title": "Warum ist das wichtig?",
-      "text": "München ist nicht nur ein Zentrum für Technologie und Kultur, sondern auch eine Stadt, in der viele russischsprachige Menschen leben. Wir verstehen, wie wichtig es ist, über aktuelle Ereignisse informiert zu sein, zu wissen, wohin man am Wochenende gehen kann, welche gesetzlichen Änderungen es gibt oder wo man die benötigten Dienstleistungen findet. Unser Projekt hilft dabei, sich in Deutschland zu integrieren, über lokale Ereignisse auf dem Laufenden zu bleiben und sich als Teil der Gemeinschaft zu fühlen."
+      "text": "München ist eine Stadt mit reichem kulturellem Erbe und lebendigem Alltag. Wir glauben, dass Informationen über Veranstaltungen, Ausstellungen, Traditionen und besondere Orte helfen, sich hier zuhause zu fühlen – unabhängig von Herkunft oder Sprache. Unser Projekt bringt Menschen zusammen, die München aus verschiedenen Blickwinkeln erleben möchten."
     },
     "section3": {
       "title": "Ein vollständig kostenloses Projekt",
-      "text": "„Münchensker Nachrichten“ ist eine gemeinnützige Initiative. Wir schalten keine bezahlte Werbung und verlangen kein Geld für den Zugang zu Informationen. Unsere Website ist für alle offen, die mehr über das Leben in München erfahren und kostenlose nützliche Ressourcen nutzen möchten."
+      "text": "Die „Münchener Anzeigen“ sind ein unabhängiges und nicht-kommerzielles Projekt. Es gibt keine Werbung und keine kostenpflichtigen Inhalte. Alle Informationen auf der Seite sind frei zugänglich – aus Überzeugung für kulturellen Austausch und offenen Zugang zu Wissen."
     },
     "section4": {
-      "title": "Werden Sie Teil der Community",
-      "text": "Wir freuen uns, Sie in unserer Community zu begrüßen! Wenn Sie Ideen, Vorschläge haben oder nützliche Informationen teilen möchten, schreiben Sie uns – gemeinsam machen wir das Projekt noch besser."
+      "title": "Werden Sie Teil der Gemeinschaft",
+      "text": "Wenn Sie Ideen, Hinweise, Fotos oder Artikel haben oder einfach etwas beitragen möchten – schreiben Sie uns! Ihr Beitrag macht dieses Projekt lebendig und hilft, es gemeinsam weiterzuentwickeln."
     }
   },
   "impressum": {
