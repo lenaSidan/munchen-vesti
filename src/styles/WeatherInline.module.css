@@ -49,7 +49,8 @@
 .weatherBox strong {
   min-width: 100px;
   display: inline-block;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 0.9rem;
   color: var(--heading-color);
 }
 
