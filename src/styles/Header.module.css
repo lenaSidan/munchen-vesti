@@ -257,7 +257,7 @@
   }
 
   .logoBox {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 10px;
     margin-top: 15px;
@@ -269,8 +269,8 @@
   }
 
   .logoText {
-    font-size: 4.6rem;
-    line-height: 4.5rem;
+    font-size: 4rem;
+    line-height: 4rem;
   }
 
   .logoSince {

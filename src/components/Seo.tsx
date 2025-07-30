@@ -1,6 +1,6 @@
+import useTranslation from "@/hooks/useTranslation";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import useTranslation from "@/hooks/useTranslation";
 
 interface SeoProps {
   title?: string;
@@ -19,7 +19,7 @@ export default function Seo({ title, description, type = "website" }: SeoProps) 
   const baseUrl = "https://munchen-vesti.de";
   const path = router.asPath;
   const url = `${baseUrl}${path}`;
-  const imageUrl = `${baseUrl}/images/default-og-image.png`; // Всегда визитка
+  const imageUrl = `${baseUrl}/images/default-og-image-${locale}.png`; // Всегда визитка
 
   const altLocale = locale === "ru" ? "de" : "ru";
   const cleanPath = path.startsWith(`/${locale}`) ? path.replace(`/${locale}`, "") : path;
@@ -49,6 +49,8 @@ export default function Seo({ title, description, type = "website" }: SeoProps) 
       <meta property="og:url" content={url} />
       <meta property="og:locale" content={ogLocale} />
       <meta property="og:locale:alternate" content={ogLocaleAlt} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
 
       {/* Twitter */}
       <meta name="twitter:title" content={fullTitle} />
