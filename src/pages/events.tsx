@@ -5,7 +5,12 @@ import { Event, getEventsByLocale } from "@/lib/getEvents";
 import styles from "@/styles/Events.module.css";
 import { GetStaticProps } from "next";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import rehypeExternalLinks from "rehype-external-links";
+import rehypeStringify from "rehype-stringify";
+import { remark } from "remark";
+import remarkGfm from "remark-gfm";
+import remarkRehype from "remark-rehype";
 // import EasterEggById from "@/components/EasterEggById";
 
 interface EventsProps {
@@ -15,34 +20,45 @@ interface EventsProps {
 export default function Events({ events }: EventsProps) {
   const t = useTranslation();
 
-  const [selectedMonth, setSelectedMonth] = useState<string>("");
+  const [selectedMonthYear, setSelectedMonthYear] = useState<string>("");
+  const monthYearOptions = useMemo(() => {
+    const optionsSet = new Set<string>();
+    const optionsList: { value: string; label: string }[] = [];
 
-  const months = [
-    t("months.january"),
-    t("months.february"),
-    t("months.march"),
-    t("months.april"),
-    t("months.may"),
-    t("months.june"),
-    t("months.july"),
-    t("months.august"),
-    t("months.september"),
-    t("months.october"),
-    t("months.november"),
-    t("months.december"),
-  ];
+    events.forEach((event) => {
+      if (!event.date) return;
+      const date = new Date(event.date);
+      const year = date.getFullYear();
+      const monthIndex = date.getMonth();
+      const monthName = t(`months.${date.toLocaleString("en", { month: "long" }).toLowerCase()}`);
+      const value = `${year}-${String(monthIndex + 1).padStart(2, "0")}`;
+      if (!optionsSet.has(value)) {
+        optionsSet.add(value);
+        optionsList.push({ value, label: `${monthName} ${year}` });
+      }
+    });
 
-  const handleMonthChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedMonth(e.target.value);
-  };
+    return optionsList;
+  }, [events, t]);
 
-  const filteredEvents = selectedMonth
-    ? events.filter((event) => {
-        const eventDate = new Date(event.date!);
-        return months[eventDate.getMonth()] === selectedMonth;
-      })
-    : events;
+  useEffect(() => {
+    if (!selectedMonthYear && monthYearOptions.length > 0) {
+      const now = new Date();
+      const currentMonthValue = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+      const hasCurrent = monthYearOptions.find((opt) => opt.value === currentMonthValue);
+      setSelectedMonthYear(hasCurrent?.value || monthYearOptions[0].value);
+    }
+  }, [monthYearOptions, selectedMonthYear]);
 
+  const filteredEvents = useMemo(() => {
+    if (!selectedMonthYear) return [];
+    const [year, month] = selectedMonthYear.split("-").map(Number);
+    return events.filter((event) => {
+      if (!event.date) return false;
+      const date = new Date(event.date);
+      return date.getFullYear() === year && date.getMonth() + 1 === month;
+    });
+  }, [selectedMonthYear, events]);
   return (
     <>
       <Seo title={t("meta.all_events_title")} description={t("meta.all_events_description")} />
@@ -58,7 +74,6 @@ export default function Events({ events }: EventsProps) {
               <span>{t("months.link_text")}</span>
             </Link>
             {t("months.introWithLink_part2")}
-            
           </p>
           <p className={styles.introText4}>{t("months.introPart4")}</p>
         </div>
@@ -66,18 +81,16 @@ export default function Events({ events }: EventsProps) {
           <label htmlFor="monthSelect">{t("months.filter_by_month")}</label>
           <select
             id="monthSelect"
-            value={selectedMonth}
-            onChange={handleMonthChange}
+            value={selectedMonthYear}
+            onChange={(e) => setSelectedMonthYear(e.target.value)}
             className={styles.monthSelect}
           >
-            <option value="">{t("months.all_months")}</option>
-            {months.map((month) => (
-              <option key={month} value={month}>
-                {month}
+            {monthYearOptions.map(({ value, label }) => (
+              <option key={value} value={value}>
+                {label}
               </option>
             ))}
           </select>
-          
         </div>
         <div className={styles.eventCardBox}>
           {filteredEvents.map((event, index) => (
@@ -107,57 +120,44 @@ export default function Events({ events }: EventsProps) {
     </>
   );
 }
+async function processMarkdown(content: string) {
+  const result = await remark()
+    .use(remarkGfm)
+    .use(remarkRehype)
+    .use(rehypeExternalLinks, {
+      target: "_blank",
+      rel: ["noopener", "noreferrer"],
+    })
+    .use(rehypeStringify)
+    .process(content);
+  return result.toString();
+}
+
 export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) => {
-  const allEvents = getEventsByLocale(locale || "ru");
+  const rawEvents = getEventsByLocale(locale || "ru");
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
 
-  const now = new Date();
-  now.setHours(0, 0, 0, 0); // обнуляем время, чтобы сравнивать только дату
-
-  const filteredEvents = allEvents.filter((event) => {
+  const activeEvents = rawEvents.filter((event) => {
     if (!event.date) return false;
-    const startDate = new Date(event.date);
-    return startDate >= now; // оставляем только будущие события
+    const start = new Date(event.date);
+    const end = event.endDate ? new Date(event.endDate) : start;
+    return end >= today;
   });
 
-  const sortedEvents = filteredEvents.sort((a, b) => {
-    const startDateA = new Date(a.date || "").getTime();
-    const startDateB = new Date(b.date || "").getTime();
-    return startDateA - startDateB; // сортируем по дате возрастания
-  });
+  const sortedEvents = activeEvents.sort(
+    (a, b) => new Date(a.date!).getTime() - new Date(b.date!).getTime()
+  );
+
+  const events = await Promise.all(
+    sortedEvents.map(async (event) => ({
+      ...event,
+      content: await processMarkdown(event.content),
+    }))
+  );
 
   return {
-    props: {
-      events: sortedEvents,
-    },
-    revalidate: 43200, // например, чтобы обновлялось раз в 12 часов
+    props: { events },
+    revalidate: 43200,
   };
 };
-
-// export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) => {
-//   const allEvents = getEventsByLocale(locale || "ru");
-
-//   const now = new Date();
-//   now.setHours(0, 0, 0, 0);
-
-//   const tenDaysLater = new Date(now);
-//   tenDaysLater.setDate(tenDaysLater.getDate() + 20);
-
-//   const filteredEvents = allEvents.filter((event) => {
-//     if (!event.date) return false;
-//     const startDate = new Date(event.date);
-//     const endDate = event.endDate ? new Date(event.endDate) : startDate;
-//     return (startDate >= now && startDate <= tenDaysLater) || (startDate <= now && endDate >= now);
-//   });
-
-//   const sortedEvents = filteredEvents.sort((a, b) => {
-//     const startDateA = new Date(a.date || "").getTime();
-//     const startDateB = new Date(b.date || "").getTime();
-//     return startDateA - startDateB;
-//   });
-
-//   return {
-//     props: {
-//       events: sortedEvents,
-//     },
-//   };
-// };
