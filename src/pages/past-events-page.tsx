@@ -48,6 +48,11 @@ export default function PastEvents({ events }: EventsProps) {
             </Link>
           ))}
         </div>
+          <div className={styles.backToHome}>
+          <Link href="/events" className={styles.backLink}>
+            ⬅ {t("articles.back")}
+          </Link>
+        </div>
       </div>
     </>
   );
