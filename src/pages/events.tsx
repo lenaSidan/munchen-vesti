@@ -4,6 +4,7 @@ import useTranslation from "@/hooks/useTranslation";
 import { Event, getEventsByLocale } from "@/lib/getEvents";
 import styles from "@/styles/Events.module.css";
 import { GetStaticProps } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import rehypeExternalLinks from "rehype-external-links";
@@ -11,6 +12,7 @@ import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
+
 // import EasterEggById from "@/components/EasterEggById";
 
 interface EventsProps {
@@ -172,12 +174,24 @@ export default function Events({ events }: EventsProps) {
               href={`/events/${event.slug}`}
               className={`${styles.eventCard} ${index % 2 === 0 ? styles.evenCard : styles.oddCard}`}
             >
-              <div>
-                <h3 className={styles.eventTitle}>{event.title}</h3>
-                <p className={styles.eventDetails}>
-                  {event.time && ` ${event.time}`}
-                  {event.ort && ` | ${event.ort}`}
-                </p>
+              <div className={styles.imageTitleBox}>
+                {event.image && (
+                  <Image
+                    src={event.image}
+                    alt={event.imageAlt || event.title}
+                    className={styles.eventImage}
+                    width={150}
+                    height={85}
+                    sizes="(max-width: 768px) 100vw, 400px"
+                  />
+                )}
+                <div>
+                  <h3 className={styles.eventTitle}>{event.title}</h3>
+                  <p className={styles.eventDetails}>
+                    {event.time && ` ${event.time}`}
+                    {event.ort && ` | ${event.ort}`}
+                  </p>
+                </div>
               </div>
             </Link>
           ))}

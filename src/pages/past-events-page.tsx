@@ -31,7 +31,7 @@ export default function PastEvents({ events }: EventsProps) {
               className={`${styles.eventCard} ${index % 2 === 0 ? styles.evenCard : styles.oddCard}`}
             >
               <div className={styles.imageTitleWrapper}>
-                {event.image && (
+                {/* {event.image && (
                   <Image
                     src={event.image}
                     alt={event.title}
@@ -39,7 +39,7 @@ export default function PastEvents({ events }: EventsProps) {
                     height={90}
                     className={styles.smallImage}
                   />
-                )}
+                )} */}
                 <div>
                   <h3 className={styles.eventTitle}>{event.title}</h3>
                   <p className={styles.eventDetails}>{event.time}</p>

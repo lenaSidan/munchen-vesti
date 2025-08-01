@@ -187,6 +187,19 @@
 .archiveButton:hover {
   color: var(--heading-color);
 }
+.imageTitleBox {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+.eventImage {
+  border-radius: 6px;
+  margin-right: 1rem;
+  width: 150px;
+  height: 85px;
+  box-sizing: border-box;
+}
 @media (max-width: 768px) {
   .articleContainer {
     padding: 15px;
@@ -226,7 +239,7 @@
     padding: 10px;
   }
   .eventTitle {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center;
   }
   .eventDetails {
@@ -236,5 +249,16 @@
 
   .inlineLink {
     font-size: 1rem;
+  }
+  .imageTitleBox {
+    display: flex;
+    flex-direction: column;
+  }
+  .eventImage {
+    border-radius: 6px;
+    margin-right: 1rem;
+    width: 150px;
+    height: 85px;
+    box-sizing: border-box;
   }
 }
