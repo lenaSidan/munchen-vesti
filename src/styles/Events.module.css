@@ -20,7 +20,7 @@
   border: 0;
 }
 .monthSelectContainer {
-   text-align: center;
+  text-align: center;
   margin-bottom: 20px;
   padding: 10px 0;
   border-bottom: 1px dashed var(--border-color);
@@ -172,21 +172,20 @@
 .monthSelect:focus {
   border-color: var(--highlight-color);
 }
-.archiveButton {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.6rem 1.2rem;
-  background-color: var(--button-bg, #222);
-  color: var(--button-text, #fff);
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background-color 0.2s ease;
-  text-align: center;
-}
 
+.archiveLinkBox {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+.archiveButton {
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: var(--text-color);
+  text-decoration: underline;
+}
 .archiveButton:hover {
-  background-color: var(--button-bg-hover, #444);
+  color: var(--heading-color);
 }
 @media (max-width: 768px) {
   .articleContainer {

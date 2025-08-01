@@ -25,24 +25,52 @@ export default function EventsPage({ events }: EventsProps) {
   const [expandedSlug, setExpandedSlug] = useState<string | null>(null);
   const [copiedSlug, setCopiedSlug] = useState<string | null>(null);
 
+
   const monthYearOptions = useMemo(() => {
+    const now = new Date();
+    now.setDate(1); // текущий месяц без учёта дней
+
     const optionsSet = new Set<string>();
     const optionsList: { value: string; label: string }[] = [];
 
     events.forEach((event) => {
       if (!event.date) return;
-      const date = new Date(event.date);
-      const year = date.getFullYear();
-      const monthIndex = date.getMonth();
-      const monthName = t(`months.${date.toLocaleString("en", { month: "long" }).toLowerCase()}`);
-      const value = `${year}-${String(monthIndex + 1).padStart(2, "0")}`;
-      if (!optionsSet.has(value)) {
-        optionsSet.add(value);
-        optionsList.push({ value, label: `${monthName} ${year}` });
+
+      const startDate = new Date(event.date);
+      const endDate = event.endDate ? new Date(event.endDate) : startDate;
+
+      const current = new Date(startDate);
+      current.setDate(1); // нормализуем до первого числа месяца
+
+      while (
+        current.getFullYear() < endDate.getFullYear() ||
+        (current.getFullYear() === endDate.getFullYear() &&
+          current.getMonth() <= endDate.getMonth())
+      ) {
+        // Проверка: если месяц уже полностью прошёл — пропускаем
+        const monthEnd = new Date(current.getFullYear(), current.getMonth() + 1, 0); // конец месяца
+        if (monthEnd < now) {
+          current.setMonth(current.getMonth() + 1);
+          continue;
+        }
+
+        const year = current.getFullYear();
+        const monthIndex = current.getMonth();
+        const monthName = t(
+          `months.${current.toLocaleString("en", { month: "long" }).toLowerCase()}`
+        );
+        const value = `${year}-${String(monthIndex + 1).padStart(2, "0")}`;
+
+        if (!optionsSet.has(value)) {
+          optionsSet.add(value);
+          optionsList.push({ value, label: `${monthName} ${year}` });
+        }
+
+        current.setMonth(current.getMonth() + 1);
       }
     });
 
-    return optionsList;
+    return optionsList.sort((a, b) => a.value.localeCompare(b.value));
   }, [events, t]);
 
   useEffect(() => {
@@ -57,10 +85,27 @@ export default function EventsPage({ events }: EventsProps) {
   const filteredEvents = useMemo(() => {
     if (!selectedMonthYear) return [];
     const [year, month] = selectedMonthYear.split("-").map(Number);
+
     return events.filter((event) => {
       if (!event.date) return false;
-      const date = new Date(event.date);
-      return date.getFullYear() === year && date.getMonth() + 1 === month;
+
+      const startDate = new Date(event.date);
+      const endDate = event.endDate ? new Date(event.endDate) : startDate;
+
+      const eventStartMonth = startDate.getMonth() + 1;
+      const eventStartYear = startDate.getFullYear();
+
+      const eventEndMonth = endDate.getMonth() + 1;
+      const eventEndYear = endDate.getFullYear();
+
+      // Событие попадает в выбранный месяц, если:
+      // - выбранный месяц/год находится внутри диапазона от start до end
+      const eventStartsBeforeOrInMonth =
+        eventStartYear < year || (eventStartYear === year && eventStartMonth <= month);
+      const eventEndsAfterOrInMonth =
+        eventEndYear > year || (eventEndYear === year && eventEndMonth >= month);
+
+      return eventStartsBeforeOrInMonth && eventEndsAfterOrInMonth;
     });
   }, [selectedMonthYear, events]);
 

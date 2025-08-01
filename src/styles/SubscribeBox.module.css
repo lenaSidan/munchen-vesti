@@ -50,6 +50,7 @@
   padding: 10px 18px;
   background: none;
   border: 1px solid var(--heading-color);
+  border-radius: 6px;
   color: var(--background);
   background-color: var(--heading-color);
   text-decoration: none;
@@ -85,7 +86,7 @@
 @media (max-width: 768px) {
   .subscribeBox {
     padding: 1rem;
-    margin: 3rem 0 1rem 0;
+    margin: 2rem 0 1rem 0;
   }
 
   .subscribeText {
