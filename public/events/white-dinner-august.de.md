@@ -16,8 +16,6 @@ seoDescription: "Am 9. August 2025 findet in München die Mykonos White Night st
 
 **Mykonos White Night** ist ein stilvoller Sommerabend in München, inspiriert von der Atmosphäre der griechischen Insel Mykonos – mit elektronischer Musik, Cocktails und mediterranem Flair. Das Event findet am **Samstag, den 9. August 2025** auf drei Ebenen von **Café Reitschule und Moro Mou** statt – von 17:00 Uhr bis 4:00 Uhr morgens am Folgetag.
 
-**Bei schlechtem Wetter wird die Veranstaltung auf den 9. August 2025 verschoben. Die Entscheidung wird 72 Stunden im Voraus bekanntgegeben.**
-
 ### Eventformat
 
 **Open-Air Dancefloor (17:00–22:00 Uhr)**  
