@@ -171,6 +171,13 @@ export default function MobileHeader() {
                 {t("menu.places").toUpperCase()}
               </Link>
               <Link
+                href="/useful-page"
+                className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/places-useful" ? styles.active : ""}`}
+                onClick={closeAllSubmenus}
+              >
+                {t("menu.useful").toUpperCase()}
+              </Link>
+              <Link
                 href="/events"
                 className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/events" ? styles.active : ""}`}
                 onClick={closeAllSubmenus}
