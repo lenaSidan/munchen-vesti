@@ -5,4 +5,5 @@
 /public/images/muenchen.webp
 /public/images/munich-lakes-summer.webp
 /public/images/olympiapark_muenchen.webp
+/public/images/piknik-polkmuenchen.webp
 /public/images/viktualienmarkt_muenchen.webp
