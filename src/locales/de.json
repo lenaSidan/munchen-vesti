@@ -171,7 +171,9 @@
     "geocaching_title": "Geocaching in München – Verstecke, Abenteuer & GPS-Quests",
     "geocaching_description": "Was ist Geocaching? Entdecke spannende Routen in München: Nachtmissionen, kreative Dosen und Familienspaß.",
     "leisure_title": "Wohin gehen in München",
-    "leisure_description": "Sehenswerte Orte, Stadtrouten, Erlebnisse und Kulinarik in München – entdecken Sie die Stadt jenseits des Kalenders."
+    "leisure_description": "Sehenswerte Orte, Stadtrouten, Erlebnisse und Kulinarik in München – entdecken Sie die Stadt jenseits des Kalenders.",
+    "useful_title": "Nützlich zu wissen in Deutschland — rechtliche Antworten",
+    "useful_description": "Kurze und verständliche Erklärungen zu Gesetzen und Regeln in Deutschland."
   },
   "past_events_heading": "Veranstaltungsarchiv",
   "menu": {
@@ -193,6 +195,8 @@
     "ads_other": "Verschiedenes",
     "geocaching": "Geocaching",
     "places": "Wohin gehen",
+    "useful": "Rechts-Tipps",
+    "useful_full": "Nützlich zu wissen in Deutschland — Rechtsrubrik",
     "more": "mehr",
     "less": "weniger"
   },
@@ -685,5 +689,17 @@
         "description": "Themenrouten für Spaziergänge durch München: interessante Viertel, bedeutende Straßen, historische Wege und persönliche Entdeckungen."
       }
     }
+  },
+  "useful": {
+    "title": "Nützlich zu wissen in Deutschland",
+    "authorBlock": {
+      "heading": "Rechtsrubrik",
+      "authorName": "Elena Samokhina",
+      "authorRole": "Juristin und geprüfte Rechtsanwaltsfachangestellte (DE)",
+      "bio": "Hallo! Mein Name ist Elena, ich bin Juristin und geprüfte Rechtsanwaltsfachangestellte in Deutschland.\nIn dieser Rubrik teile ich geprüfte Informationen über das deutsche Recht, Besonderheiten des Rechtssystems und praktische Tipps, die dabei helfen, sich im Leben in Deutschland besser zurechtzufinden und die eigenen Rechte kompetent zu wahren.",
+      "heroImage": "/images/faq/ElenaSamokhina.webp"
+    },
+    "questionsTitle": "Fragen & Antworten",
+    "read_more": "Mehr lesen"
   }
 }

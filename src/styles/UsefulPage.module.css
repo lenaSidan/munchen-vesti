@@ -1,0 +1,244 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 20px 20px;
+  color: var(--text-color);
+  margin-bottom: 30px;
+
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 60px;
+
+  grid-template-areas:
+    "image title"
+    "image info";
+}
+.title {
+  grid-area: title;
+  color: var(--heading-color2);
+  margin: 0;
+}
+.heroImageWrap {
+  grid-area: image;
+}
+.heroInfo {
+  grid-area: info;
+}
+
+.heroImage {
+  border-radius: 12px;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.authorHeading {
+  font-weight: 600;
+  opacity: 0.85;
+  font-size: 1rem;
+  margin-bottom: 50px;
+}
+.authorName {
+  margin-top: 6px;
+  font-size: 1.2rem;
+  color: var(--heading-color2);
+  font-weight: 600;
+}
+.authorBio {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-style: italic;
+  white-space: pre-line;
+}
+.socialLinks {
+  margin-top: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--alt-background);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+  line-height: 1.4;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.card:hover {
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+}
+.cardInner {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.content li {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.contentTitle {
+  text-transform: none;
+  letter-spacing: normal;
+  font-style: italic;
+  margin: 0 0 20px 0;
+  color: var(--link-color);
+}
+
+
+
+.readMoreLink {
+  text-decoration: none;
+  margin-top: auto;
+}
+.readMore {
+  padding: 6px 12px;
+  background: none;
+  border: 1px solid var(--heading-color);
+  color: var(--link-color);
+  background-color: var(--button-bg2);
+  font-family: monospace;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.readMore:hover {
+
+  color: var(--border-color);
+}
+  .subscribeContainer {
+    margin-top: 80px;
+  }
+/* Tablet */
+@media (max-width: 1024px) {
+  .container {
+    padding: 16px;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .authorBio {
+    font-size: 1.05rem;
+  }
+  .hero {
+    grid-template-columns: 240px 1fr;
+    gap: 18px;
+  }
+  .contentTitle {
+    font-size: 1.05rem;
+  }
+}
+
+/* Mobile: порядок Title → Image → Info */
+@media (max-width: 768px) {
+  .container {
+    padding: 14px;
+    margin-bottom: 20px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "image"
+      "info";
+    gap: 12px;
+    align-items: start;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+    text-align: center;
+  }
+  .heroImage {
+    max-width: 260px;
+    margin: 0 auto;
+    display: block;
+  }
+  .authorHeading {
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  .authorName {
+    font-size: 1.05rem;
+    text-align: center;
+  }
+  .authorBio {
+    font-size: 1rem;
+    line-height: 1.55;
+    text-align: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .card {
+    padding: 12px;
+    margin: 30px 0 30px 0;
+  }
+  .content {
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .contentTitle {
+    font-size: 1rem;
+  }
+  .content li {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .readMore {
+    width: fit-content;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    line-height: 1;
+    touch-action: manipulation;
+  }
+  .subscribeContainer {
+    margin-top: 100px;
+  }
+}

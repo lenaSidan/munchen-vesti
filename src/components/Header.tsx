@@ -93,7 +93,7 @@ export default function Header() {
   }, [router.pathname]);
 
   const adsRoutes = ["/services-page", "/gastronomy-page", "/education-page", "/other-page"];
-  const wordsRoutes = ["/oldwords-page", "/bavarian-words", "/proverbs-words"];
+  const wordsRoutes = ["/oldwords-page", "/bavarian-words", "/proverbs-page"];
 
   const isAdsActive = adsRoutes.includes(router.pathname);
   const isWordsActive = wordsRoutes.includes(router.pathname);
@@ -101,6 +101,8 @@ export default function Header() {
 
   const isAdsHighlighted = isAdsSubmenuOpen || (!isAnySubmenuOpen && isAdsActive);
   const isWordsHighlighted = isWordsSubmenuOpen || (!isAnySubmenuOpen && isWordsActive);
+
+
 
   const monthName = new Date()
     .toLocaleString(router.locale || "ru", { month: "long" })
@@ -261,6 +263,17 @@ export default function Header() {
             }`}
           >
             {t("menu.places")}
+          </Link>
+           <Link
+            href="/useful-page"
+            className={`${styles.navLink} ${
+              !isAdsSubmenuOpen && !isWordsSubmenuOpen && router.pathname === "/useful-page"
+                ? styles.active
+                : ""
+            }`}
+          >
+            
+            {t("menu.useful")}
           </Link>
           <Link
             href="/events"
