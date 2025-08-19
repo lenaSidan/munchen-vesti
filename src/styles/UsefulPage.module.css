@@ -72,12 +72,12 @@
   opacity: 0.85;
   font-style: italic;
   white-space: pre-line;
-  font-family:sans-serif;
+  font-family: sans-serif;
 }
 .socialLinks {
   margin-top: 10px;
 }
-.questionsTitle  {
+.questionsTitle {
   font-size: 1.6rem;
   font-weight: 600;
   color: var(--button-bg);
@@ -240,9 +240,9 @@
     margin-bottom: 14px;
   }
   .contentTitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
-    .content p {
+  .content p {
     font-size: 1.2rem;
     line-height: 1.4;
   }
@@ -261,9 +261,9 @@
   .subscribeContainer {
     margin-top: 100px;
   }
-  .questionsTitle  {
-  font-size: 1.2rem;
+  .questionsTitle {
+    font-size: 1.4rem;
 
-  margin-bottom: 0;
-}
+    margin-bottom: 0;
+  }
 }
