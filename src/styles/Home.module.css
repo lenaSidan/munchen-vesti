@@ -18,6 +18,7 @@
   display: flex;
   gap: 25px;
   align-items: stretch;
+  margin-bottom: 80px;
 }
 .articlesSection {
   flex: 2;
@@ -211,7 +212,9 @@
 .mainArticle li,
 .secondArticle li {
   text-align: left;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  opacity: 0.85;
 }
 .newsBlock {
   width: 100%;
@@ -307,6 +310,9 @@
   color: var(--button-bg);
   border-color: var(--button-bg);
 }
+.miniPostcardsBlock {
+  margin: 20px 0 40px 0;
+}
 @media (max-width: 1024px) {
   .layout {
     gap: 20px;
@@ -336,6 +342,7 @@
     flex-direction: column;
     gap: 30px;
     background: none;
+    margin-bottom: 20px;
   }
   .mainImage {
     width: 100%;
