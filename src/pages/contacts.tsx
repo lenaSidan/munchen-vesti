@@ -129,7 +129,7 @@ export default function Contacts() {
           </form>
         </div>
       </div>
-      <EasterEggById id="easteregg-events" chance={0.5} />
+      {/* <EasterEggById id="easteregg-events" chance={0.5} /> */}
     </>
   );
 }
