@@ -177,6 +177,7 @@
   -webkit-hyphens: auto;
   hyphens: auto;
   transition: color 0.3s ease-in-out;
+  margin-top: 10px;
 }
 .eventContent h2 {
   font-size: 1.1rem;
@@ -199,7 +200,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 0;
+  margin-top: 40px;
 }
 .toggleButton,
 .toggleButton_ics,
@@ -261,6 +262,9 @@
   .container {
     padding: 10px;
   }
+  .eventContent {
+    margin: 0;
+  }
   .eventCard {
     padding: 15px;
     margin-bottom: 20px;
@@ -309,5 +313,8 @@
     padding: 8px;
     margin: 0;
     font-size: 0.9rem;
+  }
+  .copyLinkButton {
+    margin-top: 20px;
   }
 }

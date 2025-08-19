@@ -1,5 +1,4 @@
 import Seo from "@/components/Seo";
-import SocialLinks from "@/components/SocialLinks";
 import SocialLinksUseful from "@/components/SocialLinksUseful";
 import SubscribeBox from "@/components/SubscribeBox";
 import useTranslation from "@/hooks/useTranslation";
@@ -47,7 +46,6 @@ export default function UsefulPage({ items }: UsefulListProps) {
       <h1 className={styles.visuallyHidden}>{t("useful.title")}</h1>
 
       <div className={styles.container}>
-       
         <section className={styles.hero}>
           <h2 className={styles.title}>{t("useful.title")}</h2>
 
@@ -56,8 +54,8 @@ export default function UsefulPage({ items }: UsefulListProps) {
               <Image
                 src={heroImage}
                 alt={heroHeading}
-                width={220}
-                height={280}
+                width={450}
+                height={600}
                 className={styles.heroImage}
                 priority
               />
@@ -75,20 +73,19 @@ export default function UsefulPage({ items }: UsefulListProps) {
             </div>
           </div>
         </section>
-
+        <div className={styles.questionsTitle}>{t("useful.questionsTitle")}</div>
         <div className={styles.grid}>
           {items.map((it) => (
             <div key={it.slug} className={styles.card}>
               <div className={styles.cardInner}>
                 <div className={styles.content}>
-          
                   <h3 className={styles.contentTitle}>{it.title}</h3>
                   <div dangerouslySetInnerHTML={{ __html: it.summaryHtml }} />
                 </div>
 
                 <Link href={`/useful/${it.slug}`} className={styles.readMoreLink}>
                   <button type="button" className={styles.readMore}>
-                    {t("useful.read_more")}
+                    {t("useful.read_more")} ➡
                   </button>
                 </Link>
               </div>
