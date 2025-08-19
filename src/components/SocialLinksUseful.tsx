@@ -10,17 +10,17 @@ export default function SocialLinks() {
         <span className={styles.text}>
           <span className={styles.fullText}>
             {locale === "de"
-              ? "Beratung vereinbaren – konkrete Schritte:"
-              : "Запишитесь на консультацию — получите конкретные шаги:"}
+              ? "Mehr Informationen und Updates:"
+              : "Больше информации и обновлений:"}
           </span>
           <span className={styles.shortText}>
-            {locale === "de" ? "Beratung vereinbaren:" : "Запишитесь на консультацию:"}
+            {locale === "de" ? "Weitere Inhalte zum Thema:" : "Ещё материалы по теме:"}
           </span>
         </span>
 
         <ul className={styles.socialLinksList}>
           <li>
-            <a href="https://t.me/munchen_vesti" target="_blank" rel="noopener noreferrer">
+            <a href="https://t.me/lenalexs_life" target="_blank" rel="noopener noreferrer">
               <Image
                 src="/icons/telegram_icon_dark.png"
                 alt="Telegram"
@@ -45,22 +45,6 @@ export default function SocialLinks() {
                 className={styles.icon}
               />
               Instagram
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.facebook.com/munchen.vesti/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/icons/facebook_icon_dark.png"
-                alt="Facebook"
-                width={20}
-                height={17}
-                className={styles.icon}
-              />
-              Facebook
             </a>
           </li>
         </ul>
