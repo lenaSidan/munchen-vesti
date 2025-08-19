@@ -139,18 +139,18 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 15px;
-    margin-top: 0;
+    padding: 10px;
+    margin: 20px 10px 30px 10px;
   }
 
   .headerBox {
-    padding: 0 15px;
+    padding: 0;
     margin-bottom: 0;
   }
 
   .title {
-    font-size: 1rem;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
+    margin: 0 0 30px 0;
   }
 
   .content {
