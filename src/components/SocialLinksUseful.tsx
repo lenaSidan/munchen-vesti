@@ -14,7 +14,7 @@ export default function SocialLinks() {
           : "Запишитесь на консультацию — получите конкретные шаги:"}
       </span>
       <span className={styles.shortText}>
-        {locale === "de" ? "Folgen Sie uns:" : "Следите за нами:"}
+        {locale === "de" ? "Beratung vereinbaren:" : "Запишитесь на консультацию:"}
       </span>
     </span>
 
