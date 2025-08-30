@@ -9,7 +9,7 @@ time: "30–31 августа 2025, весь день"
 ort: "Olympiapark München, Spiridon-Louis-Ring 21, 80809 München"
 link: "[Билеты и информация](https://superbloom.de)"
 image: "/images/superbloom2025.webp"
-imageAlt: "Толпа зрителей на фоне сцены фестиваля Superbloom"
+imageAlt: "фестиваль Superbloom"
 seoTitle: "Фестиваль Superbloom 2025 в Мюнхене — музыка, искусство и летняя энергия"
 seoDescription: "Superbloom возвращается в Olympiapark München 30–31 августа 2025! Музыка, арт-зоны, наука, детские шоу, уличная еда и более 40 артистов на сцене."
 ---

@@ -51,5 +51,5 @@ Heute ist dieser Ort eine Gedenkstätte – ein Ort der **stillen Tragik und wü
 
 Unsere Anwesenheit an der Gedenkstätte ist mehr als ein symbolischer Akt – sie ist **Verantwortung**.  
 Kommt gern dazu.  
- 
+
 _Still, ohne große Worte – nur mit Blumen, Respekt und Erinnerung._

@@ -25,7 +25,6 @@ export default function EventsPage({ events }: EventsProps) {
   const [expandedSlug, setExpandedSlug] = useState<string | null>(null);
   const [copiedSlug, setCopiedSlug] = useState<string | null>(null);
 
-
   const monthYearOptions = useMemo(() => {
     const now = new Date();
     now.setDate(1); // текущий месяц без учёта дней
@@ -47,8 +46,8 @@ export default function EventsPage({ events }: EventsProps) {
         (current.getFullYear() === endDate.getFullYear() &&
           current.getMonth() <= endDate.getMonth())
       ) {
-        // Проверка: если месяц уже полностью прошёл — пропускаем
-        const monthEnd = new Date(current.getFullYear(), current.getMonth() + 1, 0); // конец месяца
+        // Если месяц уже полностью прошёл — пропускаем
+        const monthEnd = new Date(current.getFullYear(), current.getMonth() + 1, 0);
         if (monthEnd < now) {
           current.setMonth(current.getMonth() + 1);
           continue;
@@ -73,8 +72,10 @@ export default function EventsPage({ events }: EventsProps) {
     return optionsList.sort((a, b) => a.value.localeCompare(b.value));
   }, [events, t]);
 
+  // Авто-выбор текущего месяца, НО не мешаем, если пришли с hash
   useEffect(() => {
     if (!selectedMonthYear && monthYearOptions.length > 0) {
+      if (typeof window !== "undefined" && window.location.hash) return; // пусть выберет другой эффект
       const now = new Date();
       const currentMonthValue = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
       const hasCurrent = monthYearOptions.find((opt) => opt.value === currentMonthValue);
@@ -98,8 +99,6 @@ export default function EventsPage({ events }: EventsProps) {
       const eventEndMonth = endDate.getMonth() + 1;
       const eventEndYear = endDate.getFullYear();
 
-      // Событие попадает в выбранный месяц, если:
-      // - выбранный месяц/год находится внутри диапазона от start до end
       const eventStartsBeforeOrInMonth =
         eventStartYear < year || (eventStartYear === year && eventStartMonth <= month);
       const eventEndsAfterOrInMonth =
@@ -150,6 +149,40 @@ export default function EventsPage({ events }: EventsProps) {
     return div.querySelector("p")?.outerHTML || html;
   };
 
+  /** 1) Если есть hash — выбираем месяц события по его slug */
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.location.hash || !events?.length) return;
+
+    const raw = window.location.hash.slice(1);
+    const slug = decodeURIComponent(raw);
+    const ev = events.find((e) => e.slug === slug);
+    if (!ev?.date) return;
+
+    const d = new Date(ev.date);
+    const target = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+
+    if (selectedMonthYear !== target) {
+      setSelectedMonthYear(target);
+    }
+  }, [events]); // срабатывает при первом появлении events
+
+  /** 2) После выбора нужного месяца — скроллим к карточке */
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.location.hash) return;
+
+    const raw = window.location.hash.slice(1);
+    const decoded = decodeURIComponent(raw);
+
+    const id = requestAnimationFrame(() => {
+      const el = document.getElementById(decoded) || document.getElementById(raw);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        setExpandedSlug(decoded);
+      }
+    });
+    return () => cancelAnimationFrame(id);
+  }, [selectedMonthYear, filteredEvents]);
+
   return (
     <>
       <Seo title={t("meta.events_title")} description={t("meta.events_description")} />
@@ -177,6 +210,7 @@ export default function EventsPage({ events }: EventsProps) {
             <div className={styles.titleBox}>
               <h2 className={styles.eventTitle}>{event.title}</h2>
             </div>
+
             <div className={styles.eventImageOrt}>
               <div className={styles.eventLocation}>
                 {event.time && (
@@ -217,21 +251,21 @@ export default function EventsPage({ events }: EventsProps) {
                 <button
                   type="button"
                   onClick={() => {
-                    if (typeof window !== "undefined" && event.slug && router.locale) {
-                      const url = `${window.location.origin}/${router.locale}/events-page#${event.slug}`;
-                      if (navigator.clipboard && window.isSecureContext) {
-                        navigator.clipboard
-                          .writeText(url)
-                          .then(() => {
-                            setCopiedSlug(event.slug);
-                            setTimeout(() => setCopiedSlug(null), 3000);
-                          })
-                          .catch((err) => {
-                            console.error("Clipboard write failed:", err);
-                          });
-                      } else {
-                        console.warn("Clipboard not supported");
-                      }
+                    if (typeof window === "undefined" || !event.slug) return;
+                    // Берём текущий путь (учтёт /ru или /de) и кодируем hash
+                    const base = window.location.origin + router.asPath.split("#")[0];
+                    const url = `${base}#${encodeURIComponent(event.slug)}`;
+
+                    if (navigator.clipboard && window.isSecureContext) {
+                      navigator.clipboard
+                        .writeText(url)
+                        .then(() => {
+                          setCopiedSlug(event.slug!);
+                          setTimeout(() => setCopiedSlug(null), 3000);
+                        })
+                        .catch((err) => console.error("Clipboard write failed:", err));
+                    } else {
+                      console.warn("Clipboard not supported");
                     }
                   }}
                   className={styles.copyLinkButton}
@@ -313,6 +347,7 @@ export default function EventsPage({ events }: EventsProps) {
           ))}
         </select>
       </div>
+
       <SubscribeBox />
     </>
   );
@@ -356,6 +391,6 @@ export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) =>
 
   return {
     props: { events },
-    revalidate: 43200,
+    revalidate: 43200, // 12 часов
   };
 };
