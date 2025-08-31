@@ -59,7 +59,7 @@
   background: var(--alt-background);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .titleBox {
   background-color: var(--alt-background-light);
@@ -267,7 +267,7 @@
   }
   .eventCard {
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   .eventTitle {
     text-align: center;
