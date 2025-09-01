@@ -3,7 +3,7 @@ title: "КÖRPERWELTEN в Мюнхене: Выставка, которая пр�
 shortTitle: "КÖRPERWELTEN"
 calendarStartDate: "2025-04-11"
 calendarEndDate: "2025-09-14"
-date: "2025-08-17"
+date: "2025-09-10"
 endDate: "2025-09-14"
 time: "с 11 апреля 2025, с 10:00 до 18:00"
 ort: "Kleine Olympiahalle Spiridon-Louis-Ring 21"

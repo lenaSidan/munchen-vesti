@@ -3,7 +3,7 @@ title: "Легенда Титаника – иммерсивное погруж�
 shortTitle: "Titanic-Ausstellung"
 calendarStartDate: "2025-07-21"
 calendarEndDate: "2025-09-15"
-date: "2025-08-10"
+date: "2025-09-10"
 endDate: "2025-09-15"
 time: "с 9 мая до 15 сентября 2025 года"
 ort: "Pineapple Park, Arnulfstraße 195–199, 80634 München"
