@@ -253,7 +253,7 @@ export default function EventsPage({ events }: EventsProps) {
                   onClick={() => {
                     if (typeof window === "undefined" || !event.slug) return;
                     // Берём текущий путь (учтёт /ru или /de) и кодируем hash
-                    const base = window.location.origin + router.asPath.split("#")[0];
+                    const base = `${window.location.origin}/${router.locale}/events-page`;
                     const url = `${base}#${encodeURIComponent(event.slug)}`;
 
                     if (navigator.clipboard && window.isSecureContext) {
@@ -368,14 +368,13 @@ async function processMarkdown(content: string) {
 
 export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) => {
   const rawEvents = getEventsByLocale(locale || "ru");
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+  const now = new Date(); // текущее время
 
   const activeEvents = rawEvents.filter((event) => {
     if (!event.date) return false;
     const start = new Date(event.date);
     const end = event.endDate ? new Date(event.endDate) : start;
-    return end >= today;
+    return end >= now; // убираем всё, что закончилось ДО текущего момента
   });
 
   const sortedEvents = activeEvents.sort(
@@ -391,6 +390,6 @@ export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) =>
 
   return {
     props: { events },
-    revalidate: 43200, // 12 часов
+    revalidate: 43200,
   };
 };
