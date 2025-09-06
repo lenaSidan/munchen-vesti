@@ -222,14 +222,13 @@ async function processMarkdown(content: string) {
 
 export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) => {
   const rawEvents = getEventsByLocale(locale || "ru");
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+  const now = new Date();
 
   const activeEvents = rawEvents.filter((event) => {
     if (!event.date) return false;
     const start = new Date(event.date);
     const end = event.endDate ? new Date(event.endDate) : start;
-    return end >= today;
+    return end >= now; // теперь корректно удаляет события с прошлой даты
   });
 
   const sortedEvents = activeEvents.sort(
@@ -248,3 +247,4 @@ export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) =>
     revalidate: 43200,
   };
 };
+

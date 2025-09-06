@@ -212,8 +212,7 @@ async function processMarkdown(content: string) {
 export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const events = getEventsByLocale(locale || "ru");
 
-  const now = new Date();
-  now.setHours(0, 0, 0, 0);
+  const now = new Date(); // ← без обнуления времени!
 
   const tenDaysLater = new Date(now);
   tenDaysLater.setDate(tenDaysLater.getDate() + 20);
