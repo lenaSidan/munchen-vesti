@@ -3,7 +3,7 @@ title: "20 лет Allianz Arena: юбилейная выставка и футб
 shortTitle: "20 лет Allianz Arena"
 calendarStartDate: "2025-09-01"
 calendarEndDate: "2025-09-30"
-date: "2025-09-01"
+date: "2025-09-25"
 endDate: "2025-09-30"
 time: "Сентябрь 2025"
 ort: "Allianz Arena, Мюнхен"

@@ -3,7 +3,7 @@ title: "20 Jahre Allianz Arena: Jubiläumsausstellung und Fußballhighlights im 
 shortTitle: "20 Jahre Allianz Arena"
 calendarStartDate: "2025-09-01"
 calendarEndDate: "2025-09-30"
-date: "2025-09-01"
+date: "2025-09-25"
 endDate: "2025-09-30"
 time: "September 2025"
 ort: "Allianz Arena, München"
