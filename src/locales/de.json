@@ -700,6 +700,15 @@
       "heroImage": "/images/faq/Elena_Samokhina.webp"
     },
     "questionsTitle": "Fragen & Antworten:",
-    "read_more": "Mehr lesen"
+    "read_more": "Mehr lesen",
+    "all_categories": "Alle Kategorien",
+    "filter_by_category": "Nach Thema filtern",
+    "category": {
+      "health": "Gesundheit und Medizin",
+      "family": "Familie und Kinder",
+      "work": "Arbeit und Arbeitsrecht",
+      "housing": "Wohnen und Alltag",
+      "travel": "Reisen und Verkehr"
+    }
   }
 }

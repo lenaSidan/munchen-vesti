@@ -4,6 +4,7 @@ summary: "Kindergeld ist eine monatliche Unterstützung für Familien in Deutsch
 seoTitle: "Kindergeld in Deutschland: Höhe, Voraussetzungen und Dauer der Zahlungen"
 seoDescription: "Wer hat Anspruch auf Kindergeld in Deutschland, wie hoch ist es ab 2025, wie stellt man den Antrag und wie lange wird es gezahlt. Besonderheiten bei Behinderung und Vorgehen bei Ablehnung."
 tags: ["Kindergeld", "Sozialleistungen", "Familien", "Deutschland"]
+category: ["family"]
 ---
 
 _In Deutschland ist das **Kindergeld** eine monatliche finanzielle Unterstützung für Familien mit Kindern. Es wird unabhängig vom Einkommen der Eltern gezahlt._

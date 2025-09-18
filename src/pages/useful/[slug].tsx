@@ -25,6 +25,7 @@ interface FaqItem {
   seoTitle?: string;
   seoDescription?: string;
   summary?: string;
+  category?: string[];
 }
 
 interface FaqProps {
@@ -140,7 +141,8 @@ export const getStaticProps: GetStaticProps<FaqProps> = async ({ params, locale 
         seoTitle: data.seoTitle || "",
         seoDescription: data.seoDescription || "",
         summary: data.summary || "",
-        content: processedContent.toString()
+        content: processedContent.toString(),
+        category: data.category
       },
       locale
     }

@@ -4,6 +4,7 @@ summary: "Seit dem 1. April 2024 ist der Konsum und Besitz von Cannabis in Deuts
 seoTitle: "Cannabis und Mietrecht in Deutschland: Rechte und Risiken für Mieter"
 seoDescription: "Darf man in der Mietwohnung Cannabis konsumieren? Was ist erlaubt, welche Verbote gelten und wann droht eine Kündigung durch den Vermieter?"
 tags: ["Wohnung", "Cannabis", "Gesetz", "Miete"]
+category: ["housing"]
 ---
 
 Seit dem 1. April 2024 gilt in Deutschland das Konsumcannabisgesetz. Seitdem stellen sich viele Mieter Fragen:  

@@ -11,6 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import path from "path";
+import { useState } from "react";
 import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
@@ -23,6 +24,7 @@ type FaqItem = {
   image?: string;
   imageAlt?: string;
   summaryHtml: string;
+  category?: string;
 };
 
 interface UsefulListProps {
@@ -33,7 +35,21 @@ export default function UsefulPage({ items }: UsefulListProps) {
   const t = useTranslation();
   const { locale } = useRouter();
 
-  // Шапка-автор: строки из locales
+  const [selectedCategory, setSelectedCategory] = useState<string>("");
+
+  const categories = [
+    { value: "", label: t("useful.all_categories") },
+    { value: "health", label: t("useful.category.health") },
+    { value: "family", label: t("useful.category.family") },
+    { value: "work", label: t("useful.category.work") },
+    { value: "housing", label: t("useful.category.housing") },
+    { value: "travel", label: t("useful.category.travel") },
+  ];
+
+ const filteredItems = selectedCategory
+  ? items.filter((it) => it.category?.includes(selectedCategory))
+  : items;
+
   const heroHeading = t("useful.authorBlock.heading");
   const heroName = t("useful.authorBlock.authorName");
   const heroRole = t("useful.authorBlock.authorRole");
@@ -73,16 +89,35 @@ export default function UsefulPage({ items }: UsefulListProps) {
             </div>
           </div>
         </section>
+
         <div className={styles.questionsTitle}>{t("useful.questionsTitle")}</div>
+
+        <div className={styles.filterBox}>
+          <label htmlFor="categoryFilter" className={styles.filterLabel}>
+            {t("useful.filter_by_category")}
+          </label>
+          <select
+            id="categoryFilter"
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
+            className={styles.filterSelect}
+          >
+            {categories.map((cat) => (
+              <option key={cat.value} value={cat.value}>
+                {cat.label}
+              </option>
+            ))}
+          </select>
+        </div>
+
         <div className={styles.grid}>
-          {items.map((it) => (
+          {filteredItems.map((it) => (
             <div key={it.slug} className={styles.card}>
               <div className={styles.cardInner}>
                 <div className={styles.content}>
                   <h3 className={styles.contentTitle}>{it.title}</h3>
                   <div dangerouslySetInnerHTML={{ __html: it.summaryHtml }} />
                 </div>
-
                 <Link href={`/useful/${it.slug}`} className={styles.readMoreLink}>
                   <button type="button" className={styles.readMore}>
                     {t("useful.read_more")} ➡
@@ -93,6 +128,7 @@ export default function UsefulPage({ items }: UsefulListProps) {
           ))}
         </div>
       </div>
+
       <div className={styles.subscribeContainer}>
         <SubscribeBox />
       </div>
@@ -100,7 +136,6 @@ export default function UsefulPage({ items }: UsefulListProps) {
   );
 }
 
-// Markdown → HTML (для короткого анонса/первого абзаца)
 async function convertMarkdownToHtml(markdown: string): Promise<string> {
   const processed = await remark()
     .use(remarkGfm)
@@ -145,6 +180,7 @@ export const getStaticProps: GetStaticProps<UsefulListProps> = async ({ locale }
         image: data.image || "",
         imageAlt: data.imageAlt || data.title || "",
         summaryHtml,
+        category: data.category || "",
       };
     })
   );

@@ -4,6 +4,7 @@ summary: "In Deutschland können Kinder verpflichtet sein, ihre Eltern finanziel
 seoTitle: "Elternunterhalt in Deutschland: Pflichten der Kinder und Ausnahmen"
 seoDescription: "Wann müssen Kinder für den Unterhalt ihrer Eltern in Deutschland zahlen, welche Ausnahmen gibt es und wie wird die Höhe berechnet. Rechtliche Grenzen und Einkommensgrenzen."
 tags: ["Recht", "Deutschland", "Familie", "Elternunterhalt"]
+category: ["health", "family"]
 ---
 
 In Deutschland können Kinder verpflichtet sein, ihre Eltern finanziell zu unterstützen, wenn diese pflegebedürftig sind und die Kosten nicht aus Gehalt, Rente oder Ersparnissen selbst tragen können.

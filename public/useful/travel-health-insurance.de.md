@@ -4,6 +4,7 @@ summary: "Eine Reisekrankenversicherung schützt vor hohen Kosten im Ausland. Si
 seoTitle: "Reisekrankenversicherung: warum sie wichtig ist und was sie abdeckt"
 seoDescription: "Warum ist eine Reisekrankenversicherung notwendig? Was deckt sie ab, welche Ausnahmen gibt es, wie viel kostet sie und was tun, wenn die Versicherung nicht zahlt?"
 tags: ["Versicherung", "Reisen", "Medizin"]
+category: ["health", "travel"]
 ---
 
 _**Im Ausland krank zu werden** ist nicht nur unangenehm, sondern kann auch sehr teuer werden. Besonders in Ländern, in denen das Gesundheitssystem sich stark vom deutschen unterscheidet. In dieser Situation hilft Ihnen die **Reisekrankenversicherung**._
