@@ -4,6 +4,7 @@ summary: "Wenn ein Flug in der EU weniger als 14 Tage vor Abflug annulliert wird
 seoTitle: "Flugannullierung in der EU: Entschädigung und Rückerstattung"
 seoDescription: "Passagierrechte nach EU-Verordnung Nr. 261/2004: Entschädigung bei Flugannullierung, Rückerstattung des Ticketpreises, Ersatzbeförderung und Ausnahmen."
 tags: ["Luftfahrt", "Passagierrechte", "Entschädigung"]
+category: ["travel"]
 ---
 
 _**FLUGANNULLIERUNG:** Sie können gemäß der EU-Verordnung Nr. 261/2004 über Fluggastrechte eine Entschädigung verlangen, wenn Ihr Flug in der EU weniger als 14 Tage vor Abflug annulliert wird. Je nach Strecke beträgt die Entschädigung zwischen 250 und 600 Euro._

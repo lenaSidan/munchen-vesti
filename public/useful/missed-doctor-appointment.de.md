@@ -4,6 +4,7 @@ summary: "In der Regel muss man nicht zahlen; eine Ausnahme besteht nur dann, we
 seoTitle: "Arzttermin in Deutschland verpasst: bezahlen oder nicht?"
 seoDescription: "Wann darf eine Praxis Geld für einen versäumten Termin verlangen und wann nicht? Einfache Regeln und Beispiele aus der Rechtsprechung."
 tags: ["Medizin", "Patientenrechte"]
+category: ["health"]
 ---
 
 _**Kurz gesagt:** In vielen Fällen muss man nicht zahlen, es gibt aber wichtige Ausnahmen. Das sollten Sie wissen:_

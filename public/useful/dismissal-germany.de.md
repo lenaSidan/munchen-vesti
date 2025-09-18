@@ -4,6 +4,7 @@ summary: "Eine Kündigung in Deutschland ist ein streng formalisierter Vorgang. 
 seoTitle: "Kündigung in Deutschland: Wichtige Regeln und Arbeitnehmerschutz"
 seoDescription: "Kündigungsfristen, Formvorschriften, Kündigungsgründe und besonderer Schutz: Was Arbeitnehmer in Deutschland wissen müssen und wie sie sich wehren können."
 tags: ["Arbeitsrecht", "Kündigung", "Arbeiten in Deutschland"]
+category: ["work"]
 ---
 
 In Deutschland ist eine Kündigung ein streng geregeltes Verfahren. Wird auch nur eine Vorschrift missachtet, kann die Kündigung vor Gericht angefochten werden.

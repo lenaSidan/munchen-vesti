@@ -692,7 +692,7 @@
       }
     }
   },
- "useful": {
+  "useful": {
     "title": "Полезно знать в Германии",
     "authorBlock": {
       "heading": "Юридическая рубрика",
@@ -702,6 +702,15 @@
       "heroImage": "/images/faq/Elena_Samokhina.webp"
     },
     "questionsTitle": "Вопросы и ответы:",
-    "read_more": "Подробнее"
+    "read_more": "Подробнее",
+    "all_categories": "Все категории",
+    "filter_by_category": "Фильтровать по теме",
+    "category": {
+      "health": "Здоровье и медицина",
+      "family": "Семья и дети",
+      "work": "Работа и трудовое право",
+      "housing": "Жильё и быт",
+      "travel": "Путешествия и транспорт"
+    }
   }
 }

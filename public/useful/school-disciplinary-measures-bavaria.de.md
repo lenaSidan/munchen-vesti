@@ -4,6 +4,7 @@ summary: "An deutschen Schulen gibt es erzieherische und disziplinarische Maßna
 seoTitle: "Schulische Sanktionen in Deutschland und Bayern: Maßnahmen und Elternrechte"
 seoDescription: "Welche erzieherischen und disziplinarischen Maßnahmen gelten an deutschen Schulen, was ist das Besondere in Bayern und welche Rechte haben Eltern bei Widerspruch?"
 tags: ["Schule", "Bildung", "Bayern", "Recht"]
+category: ["family"]
 ---
 
 An deutschen Schulen werden unterschiedliche **Erziehungsmaßnahmen** und **Ordnungsmaßnahmen** angewendet. Sie sind durch die Gesetze der Bundesländer geregelt.

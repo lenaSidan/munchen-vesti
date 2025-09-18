@@ -4,6 +4,7 @@ summary: "In Deutschland dürfen Fotos von Personen nur mit deren Einwilligung v
 seoTitle: "Fotos von Personen in sozialen Netzwerken in Deutschland: erlaubt oder verboten?"
 seoDescription: "Was sagt das Gesetz über die Veröffentlichung von Fotos anderer Personen in Deutschland? Wann braucht man eine Zustimmung, welche Ausnahmen gibt es und welche Folgen drohen?"
 tags: ["Soziale Medien", "Recht", "Fotos", "Persönlichkeitsrecht"]
+category: ["housing"]
 ---
 
 _**Grundregel:** In Deutschland gilt das „Recht am eigenen Bild“. Jede Person entscheidet selbst, ob ihr Gesicht in sozialen Netzwerken erscheint. Auch scheinbar harmlose Fotos von Partys oder Familienessen dürfen ohne Zustimmung nicht hochgeladen werden – selbst nicht in private Stories._
