@@ -5,7 +5,7 @@ calendarStartDate: "2025-09-21"
 calendarEndDate: "2025-09-21"
 date: "2025-09-21"
 endDate: "2025-09-21"
-time: "21. September 2025, nach der Göttlichen Liturgie"
+time: "21. September 2025, 10:00 – Liturgie, danach festliches Mahl"
 ort: "Knappertsbuschstraße 26, München"
 link: "[Google Maps](https://share.google/H6zNCPAQ0uhF0uQvi)"
 image: "/images/church-feast-2025.webp"
@@ -15,7 +15,8 @@ seoDescription: "Nach der Göttlichen Liturgie zum Fest der Geburt der Gottesmut
 ---
 
 **Liebe Brüder und Schwestern!**
-**Am Sonntag, den 21. September 2025**, nach der festlichen **Göttlichen Liturgie** zum Fest der **Geburt der Gottesmutter**, laden wir alle Gemeindemitglieder und Gäste zu einem **gemeinsamen festlichen Mahl** ein.
+**Am Sonntag, den 21. September 2025**, findet die **Göttliche Liturgie von 10:00 bis 12:00 Uhr** zum Fest der **Geburt der Gottesmutter** statt.  
+Im Anschluss laden wir alle Gemeindemitglieder und Gäste zu einem **gemeinsamen festlichen Mahl** ein.
 
 Es ist willkommen, wenn ihr eigene Speisen zum Tisch mitbringt — **Vorspeisen, Salate, Kuchen**.  
 
