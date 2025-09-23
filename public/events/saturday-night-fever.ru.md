@@ -7,7 +7,7 @@ date: "2025-10-14"
 endDate: "2025-10-26"
 time: "14 по 26 октября 2025"
 ort: "Deutsches Theater | https://maps.app.goo.gl/gXxsQR416GP6iRA77"
-link: "[Официальный сайт и билеты](https://www.deutsches-theater.de/saturday-night-fever/)"
+link: "Официальный сайт и билеты | https://www.deutsches-theater.de/saturday-night-fever/"
 image: "/images/saturday-night-fever.webp"
 imageAlt: Сцена из мюзикла Saturday Night Fever в Мюнхене
 seoTitle: "Saturday Night Fever — мюзикл в Мюнхене: Bee Gees, диско и живой звук"
