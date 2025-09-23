@@ -177,13 +177,13 @@ export default function MobileHeader() {
               >
                 {t("menu.useful").toUpperCase()}
               </Link>
-              <Link
+              {/* <Link
                 href="/events"
                 className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/events" ? styles.active : ""}`}
                 onClick={closeAllSubmenus}
               >
                 {t("menu.events").toUpperCase()}
-              </Link>
+              </Link> */}
 
               {/* {foundCount > 0 && !allFound && (
                 <Link

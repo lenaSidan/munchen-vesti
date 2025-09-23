@@ -275,7 +275,7 @@ export default function Header() {
             
             {t("menu.useful")}
           </Link>
-          <Link
+          {/* <Link
             href="/events"
             className={`${styles.navLink} ${
               !isAdsSubmenuOpen && !isWordsSubmenuOpen && router.pathname === "/events"
@@ -284,7 +284,7 @@ export default function Header() {
             }`}
           >
             {t("menu.events")}
-          </Link>
+          </Link> */}
           {/* {foundCount > 0 && !allFound && (
             <Link
               href="/collection"

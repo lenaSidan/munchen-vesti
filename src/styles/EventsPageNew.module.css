@@ -242,20 +242,60 @@
   color: var(--hover-color);
 }
 
+.archiveLinkBox {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
 .archiveButton {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.6rem 1.2rem;
-  background-color: var(--button-bg, #222);
-  color: var(--button-text, #fff);
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background-color 0.2s ease;
-  text-align: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: var(--text-color);
+  text-decoration: underline;
 }
 .archiveButton:hover {
-  background-color: var(--button-bg-hover, #444);
+  color: var(--heading-color);
+}
+.articleContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: var(--background);
+  color: var(--text-color);
+  transition:
+    background 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+.introBox {
+  padding: 20px 0 0 0;
+  margin-bottom: 60px;
+  background-color: var(--alt-background-light);
+  border-bottom: 2px solid var(--border-color);
+  border-top: 2px solid var(--border-color);
+}
+.introText,
+.introText4 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--text-color);
+  font-weight: 500;
+  line-height: 1.5;
+}
+.introText4 {
+  font-style: italic;
+  font-size: 1.3rem;
+}
+.inlineLink {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--heading-color2);
+  text-decoration: underline;
+  transition: color 0.3s ease-in-out;
+}
+
+.inlineLink:hover {
+  color: var(--hover-color);
 }
 
 /* Мобильные стили */
@@ -317,5 +357,25 @@
   }
   .copyLinkButton {
     margin-top: 20px;
+  }
+  .articleContainer {
+    padding: 15px;
+  }
+
+  .introBox {
+    padding: 10px 0 0 0;
+    margin-bottom: 10px;
+  }
+  .introText,
+  .introText4 {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    padding: 0 10px;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    transition: color 0.3s ease-in-out;
+  }
+  .introText4 {
+    font-size: 1.1rem;
   }
 }

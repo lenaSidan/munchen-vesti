@@ -5,6 +5,7 @@ import { Event, getEventsByLocale } from "@/lib/getEvents";
 import styles from "@/styles/EventsPageNew.module.css";
 import { GetStaticProps } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import rehypeExternalLinks from "rehype-external-links";
@@ -183,33 +184,32 @@ export default function EventsPage({ events }: EventsProps) {
     return () => cancelAnimationFrame(id);
   }, [selectedMonthYear, filteredEvents]);
 
-//   function renderSimpleLinks(input: string, classNameLink?: string, classNameText?: string) {
-//   if (!input) return null;
+  //   function renderSimpleLinks(input: string, classNameLink?: string, classNameText?: string) {
+  //   if (!input) return null;
 
-//   const trimmed = input.trim();
+  //   const trimmed = input.trim();
 
-//   // Проверка: есть ли | и валидная ссылка после
-//   if (trimmed.includes("|")) {
-//     const [text, href] = trimmed.split("|").map((s) => s.trim());
+  //   // Проверка: есть ли | и валидная ссылка после
+  //   if (trimmed.includes("|")) {
+  //     const [text, href] = trimmed.split("|").map((s) => s.trim());
 
-//     if (href && href.startsWith("http")) {
-//       return (
-//         <a
-//           href={href}
-//           target="_blank"
-//           rel="noopener noreferrer"
-//           className={classNameLink}
-//         >
-//           {text}
-//         </a>
-//       );
-//     }
-//   }
+  //     if (href && href.startsWith("http")) {
+  //       return (
+  //         <a
+  //           href={href}
+  //           target="_blank"
+  //           rel="noopener noreferrer"
+  //           className={classNameLink}
+  //         >
+  //           {text}
+  //         </a>
+  //       );
+  //     }
+  //   }
 
-//   // Просто текст (без ссылки)
-//   return <span className={classNameText}>{trimmed}</span>;
-// }
-
+  //   // Просто текст (без ссылки)
+  //   return <span className={classNameText}>{trimmed}</span>;
+  // }
 
   function renderMarkdownLinks(input: string, classNameLink?: string, classNameText?: string) {
     if (!input) return null;
@@ -244,156 +244,178 @@ export default function EventsPage({ events }: EventsProps) {
     return <span className={classNameText}>{input}</span>;
   }
 
+  const isCurrentMonthSelected = selectedMonthYear === monthYearOptions[0]?.value;
+
   return (
     <>
       <Seo title={t("meta.events_title")} description={t("meta.events_description")} />
       <h1 className={styles.visuallyHidden}>{t("meta.events_title")}</h1>
 
-      <div className={styles.monthSelectContainer}>
-        <label htmlFor="monthSelect">{t("months.filter_by_month")}</label>
-        <select
-          id="monthSelect"
-          value={selectedMonthYear}
-          onChange={(e) => setSelectedMonthYear(e.target.value)}
-          className={styles.monthSelect}
-        >
-          {monthYearOptions.map(({ value, label }) => (
-            <option key={value} value={value}>
-              {label}
-            </option>
-          ))}
-        </select>
-      </div>
+      <div className={styles.articleContainer}>
+        {isCurrentMonthSelected && (
+          <div className={styles.introBox}>
+            <p className={styles.introText}>{t("months.introPart1")}</p>
+            <p className={styles.introText}>{t("months.introPart2")}</p>
+            <p className={styles.introText}>
+              {t("months.introWithLink_part1")}
+              <Link href="/articles-page" className={styles.inlineLink}>
+                <span>{t("months.link_text")}</span>
+              </Link>
+              {t("months.introWithLink_part2")}
+            </p>
+            <p className={styles.introText4}>{t("months.introPart4")}</p>
+          </div>
+        )}
+        <div className={styles.monthSelectContainer}>
+          <label htmlFor="monthSelect">{t("months.filter_by_month")}</label>
+          <select
+            id="monthSelect"
+            value={selectedMonthYear}
+            onChange={(e) => setSelectedMonthYear(e.target.value)}
+            className={styles.monthSelect}
+          >
+            {monthYearOptions.map(({ value, label }) => (
+              <option key={value} value={value}>
+                {label}
+              </option>
+            ))}
+          </select>
+        </div>
 
-      <div className={styles.container}>
-        {filteredEvents.map((event) => (
-          <div key={event.slug} id={event.slug} className={styles.eventCard}>
-            <div className={styles.titleBox}>
-              <h2 className={styles.eventTitle}>{event.title}</h2>
-            </div>
-
-            <div className={styles.eventImageOrt}>
-              <div className={styles.eventLocation}>
-                {event.time && (
-                  <p className={styles.box}>
-                    <span className={styles.label}>{t("event.time")}:</span>
-                    <span className={styles.value}>{event.time}</span>
-                  </p>
-                )}
-                {event.ort && (
-                  <p className={styles.box}>
-                    <span className={styles.label}>{t("event.ort")}:</span>
-                    {renderMarkdownLinks(event.ort, styles.valueLink, styles.value)}
-                  </p>
-                )}
-
-                {event.link && (
-                  <p className={styles.box}>
-                    <span className={styles.label}>{t("event.link")}:</span>
-                    {renderMarkdownLinks(event.link, styles.valueLink, styles.value)}
-                  </p>
-                )}
-
-                <button
-                  type="button"
-                  onClick={() => {
-                    if (typeof window === "undefined" || !event.slug) return;
-                    // Берём текущий путь (учтёт /ru или /de) и кодируем hash
-                    const base = `${window.location.origin}/${router.locale}/events-page`;
-                    const url = `${base}#${encodeURIComponent(event.slug)}`;
-
-                    if (navigator.clipboard && window.isSecureContext) {
-                      navigator.clipboard
-                        .writeText(url)
-                        .then(() => {
-                          setCopiedSlug(event.slug!);
-                          setTimeout(() => setCopiedSlug(null), 3000);
-                        })
-                        .catch((err) => console.error("Clipboard write failed:", err));
-                    } else {
-                      console.warn("Clipboard not supported");
-                    }
-                  }}
-                  className={styles.copyLinkButton}
-                >
-                  {t("event.copy_link2")}
-                </button>
+        <div className={styles.container}>
+          {filteredEvents.map((event) => (
+            <div key={event.slug} id={event.slug} className={styles.eventCard}>
+              <div className={styles.titleBox}>
+                <h2 className={styles.eventTitle}>{event.title}</h2>
               </div>
 
-              {event.image && (
-                <Image
-                  src={event.image}
-                  alt={event.imageAlt || event.title}
-                  className={styles.eventImage}
-                  width={400}
-                  height={200}
-                  sizes="(max-width: 768px) 100vw, 400px"
-                />
-              )}
-            </div>
+              <div className={styles.eventImageOrt}>
+                <div className={styles.eventLocation}>
+                  {event.time && (
+                    <p className={styles.box}>
+                      <span className={styles.label}>{t("event.time")}:</span>
+                      <span className={styles.value}>{event.time}</span>
+                    </p>
+                  )}
+                  {event.ort && (
+                    <p className={styles.box}>
+                      <span className={styles.label}>{t("event.ort")}:</span>
+                      {renderMarkdownLinks(event.ort, styles.valueLink, styles.value)}
+                    </p>
+                  )}
 
-            <div className={styles.eventContent}>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: expandedSlug === event.slug ? event.content : getExcerpt(event.content),
-                }}
-              />
-              <div className={styles.buttonsContainer}>
-                <div className={styles.buttonsDownload}>
+                  {event.link && (
+                    <p className={styles.box}>
+                      <span className={styles.label}>{t("event.link")}:</span>
+                      {renderMarkdownLinks(event.link, styles.valueLink, styles.value)}
+                    </p>
+                  )}
+
                   <button
                     type="button"
-                    onClick={() => handleDownloadICS(event)}
-                    className={styles.toggleButton_ics}
+                    onClick={() => {
+                      if (typeof window === "undefined" || !event.slug) return;
+                      // Берём текущий путь (учтёт /ru или /de) и кодируем hash
+                      const base = `${window.location.origin}/${router.locale}/events-page`;
+                      const url = `${base}#${encodeURIComponent(event.slug)}`;
+
+                      if (navigator.clipboard && window.isSecureContext) {
+                        navigator.clipboard
+                          .writeText(url)
+                          .then(() => {
+                            setCopiedSlug(event.slug!);
+                            setTimeout(() => setCopiedSlug(null), 3000);
+                          })
+                          .catch((err) => console.error("Clipboard write failed:", err));
+                      } else {
+                        console.warn("Clipboard not supported");
+                      }
+                    }}
+                    className={styles.copyLinkButton}
                   >
-                    {t("event.add_to_calendar_ics")}
+                    {t("event.copy_link2")}
                   </button>
-                  {event.date && (
-                    <a
-                      href={`https://calendar.google.com/calendar/u/0/r/eventedit?text=${encodeURIComponent(
-                        event.title
-                      )}&dates=${formatDateForGoogle(
-                        event.date,
-                        event.endDate
-                      )}&location=${encodeURIComponent(event.ort || "")}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.toggleButton_google}
-                    >
-                      {t("event.add_to_google_calendar")}
-                    </a>
-                  )}
                 </div>
-                <button
-                  type="button"
-                  className={styles.toggleButton}
-                  onClick={() => setExpandedSlug(expandedSlug === event.slug ? null : event.slug)}
-                >
-                  {expandedSlug === event.slug ? t("menu.less") : t("menu.more")}
-                </button>
+
+                {event.image && (
+                  <Image
+                    src={event.image}
+                    alt={event.imageAlt || event.title}
+                    className={styles.eventImage}
+                    width={400}
+                    height={200}
+                    sizes="(max-width: 768px) 100vw, 400px"
+                  />
+                )}
+              </div>
+
+              <div className={styles.eventContent}>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: expandedSlug === event.slug ? event.content : getExcerpt(event.content),
+                  }}
+                />
+                <div className={styles.buttonsContainer}>
+                  <div className={styles.buttonsDownload}>
+                    <button
+                      type="button"
+                      onClick={() => handleDownloadICS(event)}
+                      className={styles.toggleButton_ics}
+                    >
+                      {t("event.add_to_calendar_ics")}
+                    </button>
+                    {event.date && (
+                      <a
+                        href={`https://calendar.google.com/calendar/u/0/r/eventedit?text=${encodeURIComponent(
+                          event.title
+                        )}&dates=${formatDateForGoogle(
+                          event.date,
+                          event.endDate
+                        )}&location=${encodeURIComponent(event.ort || "")}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.toggleButton_google}
+                      >
+                        {t("event.add_to_google_calendar")}
+                      </a>
+                    )}
+                  </div>
+                  <button
+                    type="button"
+                    className={styles.toggleButton}
+                    onClick={() => setExpandedSlug(expandedSlug === event.slug ? null : event.slug)}
+                  >
+                    {expandedSlug === event.slug ? t("menu.less") : t("menu.more")}
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
-
-      {copiedSlug && <div className={styles.copyToast}>❖ {t("event.link_copied")}</div>}
-
-      <div className={styles.monthSelectContainer}>
-        <label htmlFor="monthSelect">{t("months.filter_by_month")}</label>
-        <select
-          id="monthSelect"
-          value={selectedMonthYear}
-          onChange={(e) => setSelectedMonthYear(e.target.value)}
-          className={styles.monthSelect}
-        >
-          {monthYearOptions.map(({ value, label }) => (
-            <option key={value} value={value}>
-              {label}
-            </option>
           ))}
-        </select>
-      </div>
+        </div>
 
+        {copiedSlug && <div className={styles.copyToast}>❖ {t("event.link_copied")}</div>}
+
+        <div className={styles.monthSelectContainer}>
+          <label htmlFor="monthSelect">{t("months.filter_by_month")}</label>
+          <select
+            id="monthSelect"
+            value={selectedMonthYear}
+            onChange={(e) => setSelectedMonthYear(e.target.value)}
+            className={styles.monthSelect}
+          >
+            {monthYearOptions.map(({ value, label }) => (
+              <option key={value} value={value}>
+                {label}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className={styles.archiveLinkBox}>
+          <Link href="/past-events-page" className={styles.archiveButton}>
+            {t("buttons.past_events")}
+          </Link>
+        </div>
+      </div>
       <SubscribeBox />
     </>
   );
