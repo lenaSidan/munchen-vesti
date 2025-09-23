@@ -7,7 +7,7 @@ date: "2025-10-25"
 endDate: "2025-11-02"
 time: "25 октября – 2 ноября 2025"
 ort: "Nachtgalerie Event Gelände, Landsbergerstraße 185, 80687 München"
-link: "[Официальный сайт Nachtgalerie](https://www.nachtgalerie.de/), [больше информации](https://halloweenweek.de/) "
+link: "[Официальный сайт Nachtgalerie](https://www.nachtgalerie.de/)"
 image: "/images/halloween-week-2025.webp"
 imageAlt: "Halloween Week в Nachtgalerie München"
 seoTitle: "Halloween Week 2025 в Мюнхене — 6 вечеринок на любой вкус"
@@ -44,7 +44,8 @@ _Вход для совершеннолетних не предусмотрен.
 - • **Возрастные ограничения:**  
   - Family Halloween — все возрасты (до 16 лет только с взрослыми)  
   - Ü16 Halloween — с 16 лет  
-  - Остальные мероприятия ориентированы на 18+ (информация уточняется)  
+  - Остальные мероприятия ориентированы на 18+ (информация уточняется) 
+- • [больше информации](https://halloweenweek.de/)  
 
 ### Почему стоит пойти
 

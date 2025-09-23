@@ -7,7 +7,7 @@ date: "2025-10-25"
 endDate: "2025-11-02"
 time: "25. Oktober – 2. November 2025"
 ort: "Nachtgalerie Event Gelände, Landsbergerstraße 185, 80687 München"
-link: "[Offizielle Seite der Nachtgalerie](https://www.nachtgalerie.de/), [mehr Infos](https://halloweenweek.de/)"
+link: "[Offizielle Seite der Nachtgalerie](https://www.nachtgalerie.de/)" 
 image: "/images/halloween-week-2025.webp"
 imageAlt: "Halloween Week in der Nachtgalerie München"
 seoTitle: "Halloween Week 2025 in München — 6 Partys für jeden Geschmack"
@@ -45,6 +45,7 @@ _Erwachsene haben keinen Zutritt._
   - Family Halloween — für alle Altersgruppen (unter 16 nur mit Erwachsenen)  
   - Ü16 Halloween — ab 16 Jahren  
   - Alle anderen Events sind voraussichtlich ab 18 Jahren (Angaben vorbehaltlich Änderungen)  
+- • [mehr Infos](https://halloweenweek.de/)"
 
 ### Warum hingehen?
 

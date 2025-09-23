@@ -14,7 +14,7 @@ export interface Event {
   calendarStartDate?: string;
   calendarEndDate?: string;
   time?: string;
-  ort?: string;
+  ort: string;
   link: string;
   content: string;
   image?: string;

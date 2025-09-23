@@ -183,6 +183,67 @@ export default function EventsPage({ events }: EventsProps) {
     return () => cancelAnimationFrame(id);
   }, [selectedMonthYear, filteredEvents]);
 
+//   function renderSimpleLinks(input: string, classNameLink?: string, classNameText?: string) {
+//   if (!input) return null;
+
+//   const trimmed = input.trim();
+
+//   // Проверка: есть ли | и валидная ссылка после
+//   if (trimmed.includes("|")) {
+//     const [text, href] = trimmed.split("|").map((s) => s.trim());
+
+//     if (href && href.startsWith("http")) {
+//       return (
+//         <a
+//           href={href}
+//           target="_blank"
+//           rel="noopener noreferrer"
+//           className={classNameLink}
+//         >
+//           {text}
+//         </a>
+//       );
+//     }
+//   }
+
+//   // Просто текст (без ссылки)
+//   return <span className={classNameText}>{trimmed}</span>;
+// }
+
+
+  function renderMarkdownLinks(input: string, classNameLink?: string, classNameText?: string) {
+    if (!input) return null;
+
+    // Проверка Markdown-ссылки
+    const markdownLinkRegex = /^\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)$/;
+    if (markdownLinkRegex.test(input.trim())) {
+      const match = input.trim().match(markdownLinkRegex);
+      if (match) {
+        const [, text, href] = match;
+        return (
+          <a href={href} target="_blank" rel="noopener noreferrer" className={classNameLink}>
+            {text}
+          </a>
+        );
+      }
+    }
+
+    // Обработка варианта: "текст, текст | ссылка"
+    const parts = input.split("|");
+    if (parts.length === 2) {
+      const text = parts[0].trim();
+      const href = parts[1].trim();
+      return (
+        <a href={href} target="_blank" rel="noopener noreferrer" className={classNameLink}>
+          {text}
+        </a>
+      );
+    }
+
+    // Просто текст без ссылки
+    return <span className={classNameText}>{input}</span>;
+  }
+
   return (
     <>
       <Seo title={t("meta.events_title")} description={t("meta.events_description")} />
@@ -222,32 +283,17 @@ export default function EventsPage({ events }: EventsProps) {
                 {event.ort && (
                   <p className={styles.box}>
                     <span className={styles.label}>{t("event.ort")}:</span>
-                    <span className={styles.value}>{event.ort}</span>
+                    {renderMarkdownLinks(event.ort, styles.valueLink, styles.value)}
                   </p>
                 )}
+
                 {event.link && (
                   <p className={styles.box}>
                     <span className={styles.label}>{t("event.link")}:</span>
-                    {event.link.split(",").map((link, index) => {
-                      const match = link.trim().match(/\[(.*?)\]\((.*?)\)/);
-                      if (!match) return null;
-                      const [, text, href] = match;
-                      return (
-                        <span key={index}>
-                          <a
-                            href={href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={styles.valueLink}
-                          >
-                            {text}
-                          </a>
-                          {index < event.link.split(",").length - 1 && " | "}
-                        </span>
-                      );
-                    })}
+                    {renderMarkdownLinks(event.link, styles.valueLink, styles.value)}
                   </p>
                 )}
+
                 <button
                   type="button"
                   onClick={() => {

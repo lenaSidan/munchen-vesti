@@ -6,7 +6,7 @@ calendarEndDate: "2025-10-26"
 date: "2025-10-14"
 endDate: "2025-10-26"
 time: "14 по 26 октября 2025"
-ort: "Deutsches Theater, München"
+ort: "Deutsches Theater | https://maps.app.goo.gl/gXxsQR416GP6iRA77"
 link: "[Offizielle Website und Tickets](https://www.deutsches-theater.de/saturday-night-fever/)"
 image: "/images/saturday-night-fever.webp"
 imageAlt: Szene aus dem Musical Saturday Night Fever in München
