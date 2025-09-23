@@ -252,6 +252,7 @@ export default function EventsPage({ events }: EventsProps) {
       <h1 className={styles.visuallyHidden}>{t("meta.events_title")}</h1>
 
       <div className={styles.articleContainer}>
+        <h2 className={styles.title}>{t("months.events_title")}</h2>
         {isCurrentMonthSelected && (
           <div className={styles.introBox}>
             <p className={styles.introText}>{t("months.introPart1")}</p>
