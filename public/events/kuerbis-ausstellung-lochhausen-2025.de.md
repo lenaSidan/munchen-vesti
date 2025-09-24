@@ -31,11 +31,10 @@ So können Kinder und Erwachsene erleben, wie Lebensmittel wachsen – und die f
 ### Café und Erholung
 
 Nach dem Rundgang lädt das Café oder eine Picknickwiese zum Verweilen ein. Auf der Karte stehen:  
-
-- frische Salate und Snacks  
-- Kinderpizza  
-- hausgemachte Kuchen und Gebäck  
-- Limonaden und Säfte aus eigener Produktion  
+- ✔ frische Salate und Snacks  
+- ✔ Kinderpizza  
+- ✔ hausgemachte Kuchen und Gebäck  
+- ✔ Limonaden und Säfte aus eigener Produktion  
 
 Überdachte Bereiche sorgen für Komfort auch bei kühlem oder regnerischem Wetter.
 
