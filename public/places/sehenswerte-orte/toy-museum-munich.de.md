@@ -1,7 +1,7 @@
 ---
 title: "Toy Museum Munich – Spielzeuggeschichte im Herzen von München"
 description: "Ein kleines Museum im Turm des Alten Rathauses, in dem Spielzeuge europäische Geschichte erzählen – von Puppenhäusern bis zu Steiff-Teddys und den ersten Barbies."
-image: "/images/toy-museum-munich.webp"
+image: "/images/places/toy-museum-munich.webp"
 imageAlt: "Teddybär in der Vitrine des Toy Museum Munich"
 seoTitle: "Toy Museum Munich – Spielzeugmuseum im Alten Rathausturm"
 seoDescription: "Im Toy Museum Munich werden antike Spielzeuge zu Zeitzeugen: Puppen, Miniaturen, Technik und Designgeschichte in einem besonderen Museum mitten in München."

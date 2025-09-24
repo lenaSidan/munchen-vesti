@@ -1,7 +1,7 @@
 ---
 title: "Das Residenztheater in München: Eine Bühne mit Geschichte und Charakter"
 description: "Das Residenztheater ist mehr als nur ein Theater im Zentrum Münchens. Wir erzählen seine Geschichte, stellen die Bühnen vor und erklären, warum man mindestens einmal dort gewesen sein sollte."
-image: "/images/residenztheater-muenchen.webp"
+image: "/images/places/residenztheater-muenchen.webp"
 imageAlt: "Das Gebäude des Residenztheaters am Max-Joseph-Platz in München"
 seoTitle: "Residenztheater in München – Geschichte, Bühnen, Tickets und Atmosphäre"
 seoDescription: "Das Residenztheater – eine der bedeutendsten Bühnen Bayerns vom 18. Jahrhundert bis heute. Geschichte, Inszenierungen, Atmosphäre und Besuchstipps."

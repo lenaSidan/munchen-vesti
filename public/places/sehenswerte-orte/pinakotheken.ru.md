@@ -1,7 +1,7 @@
 ---
 title: "Мюнхенские Pinakotheken — путешествие сквозь века искусства"
 description: "Alte Pinakothek, Neue Pinakothek и Pinakothek der Moderne — три уникальных музея, охватывающих 700 лет европейского искусства в самом центре Мюнхена."
-image: "/images/pinakotheken.webp"
+image: "/images/places/pinakotheken.webp"
 imageAlt: "Pinakothek der Moderne — современное здание музея в Мюнхене"
 seoTitle: "Мюнхенские Pinakotheken — три музея искусства от Рубенса до Пикассо"
 seoDescription: "Три великие Pinakotheken в Мюнхене: старые мастера, импрессионизм, современное искусство и дизайн — в одном квартале Kunstareal. Советы, часы работы, билеты."

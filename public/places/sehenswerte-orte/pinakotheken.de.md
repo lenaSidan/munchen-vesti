@@ -1,7 +1,7 @@
 ---
 title: "Die Münchner Pinakotheken — eine Reise durch die Jahrhunderte der Kunst"
 description: "Alte Pinakothek, Neue Pinakothek und Pinakothek der Moderne — drei einzigartige Museen, die 700 Jahre europäischer Kunst im Herzen Münchens vereinen."
-image: "/images/pinakotheken.webp"
+image: "/images/places/pinakotheken.webp"
 imageAlt: "Pinakothek der Moderne — modernes Museumsgebäude in München"
 seoTitle: "Münchens Pinakotheken: Drei Museen von Rubens bis Picasso"
 seoDescription: "Die drei großen Pinakotheken in München: Alte Meister, Impressionismus, moderne Kunst und Design — alles im Kunstareal. Tipps, Öffnungszeiten, Eintritt."

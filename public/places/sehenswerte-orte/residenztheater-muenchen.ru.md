@@ -1,7 +1,7 @@
 ---
 title: "Residenztheater в Мюнхене: сцена с историей и характером"
 description: "Residenztheater — не просто театр в центре Мюнхена. Рассказываем об истории, сценах, репертуаре и том, почему стоит хотя бы раз побывать здесь."
-image: "/images/residenztheater-muenchen.webp"
+image: "/images/places/residenztheater-muenchen.webp"
 imageAlt: "Здание Residenztheater на Max-Joseph-Platz в Мюнхене"
 seoTitle: "Residenztheater в Мюнхене — история, сцены, билеты и атмосфера"
 seoDescription: "Residenztheater — важнейшая сцена Баварии с XVIII века до наших дней. История, спектакли, атмосфера и советы для посетителей."
