@@ -311,6 +311,10 @@
   .container {
     padding: 10px;
   }
+  .eventContent h3 {
+    font-size: 0.9rem;
+    margin-top: 1.3rem;
+  }
   .eventContent {
     margin: 0;
   }
