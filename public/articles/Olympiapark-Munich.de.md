@@ -32,10 +32,10 @@ Das ehemalige **Olympische Dorf** wurde einst als Unterkunft für die Athleten g
 
 Neben seiner historischen Bedeutung ist der Olympiapark auch ein **Zentrum für Freizeit, Kultur und Sport**:
 
-- ● **Konzerte** mit internationalen Superstars wie Coldplay und Ed Sheeran.
-- ● **Festivals**, darunter das berühmte Feuerwerksfestival *Sommernachtstraum*.
-- ● **Fahrrad- und Inlinerstrecken** für Sportbegeisterte.
-- ● **Open-Air-Kino** im Sommer mit Blockbuster-Filmen.
+- ⌖ **Konzerte** mit internationalen Superstars wie Coldplay und Ed Sheeran.
+- ⌖ **Festivals**, darunter das berühmte Feuerwerksfestival *Sommernachtstraum*.
+- ⌖ **Fahrrad- und Inlinerstrecken** für Sportbegeisterte.
+- ⌖ **Open-Air-Kino** im Sommer mit Blockbuster-Filmen.
 
 ### Beste Besuchszeit für den Olympiapark
 
@@ -45,9 +45,9 @@ Neben seiner historischen Bedeutung ist der Olympiapark auch ein **Zentrum für 
 
 ### Warum sollte man den Olympiapark besuchen?
 
-- ● **Ikonische Architektur und Geschichte der Olympischen Spiele**
-- ● **Einzigartige Aussicht von der Olympiaturm-Plattform**
-- ● **Austragungsort internationaler Konzerte und Festivals**
-- ● **Perfekt für Sport, Erholung und Kultur**
+- ⌖ **Ikonische Architektur und Geschichte der Olympischen Spiele**
+- ⌖ **Einzigartige Aussicht von der Olympiaturm-Plattform**
+- ⌖ **Austragungsort internationaler Konzerte und Festivals**
+- ⌖ **Perfekt für Sport, Erholung und Kultur**
 
 Der **Olympiapark München** ist ein Ort, an dem sich Sport, Architektur, Kultur und Natur vereinen – ein Muss für jeden Besucher der Stadt!
