@@ -1,7 +1,7 @@
 ---
 title: "Wo die Stadt singt: Bayerische Staatsoper"
 description: "Die Bayerische Staatsoper ist mehr als nur ein Opernhaus. In diesem Artikel erzählen wir von ihrer Geschichte, geben Besuchstipps, Infos zu Ticketpreisen und der besonderen Atmosphäre, die man mindestens einmal erlebt haben sollte."
-image: "/images/bayerische-staatsoper.webp"
+image: "/images/places/bayerische-staatsoper.webp"
 imageAlt: "Fassade der Bayerischen Staatsoper in München"
 seoTitle: "Oper in München — Bayerische Staatsoper: Geschichte, Tickets, Atmosphäre"
 seoDescription: "Die Bayerische Staatsoper ist das musikalische Herz Münchens. Atmosphäre, Preise, Geschichte, Tipps und Festspiele – alles, was Sie vor dem Besuch wissen sollten."

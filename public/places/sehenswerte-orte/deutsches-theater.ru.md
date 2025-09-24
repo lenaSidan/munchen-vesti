@@ -1,7 +1,7 @@
 ---
 title: "Deutsches Theater München: музыкальное сердце Мюнхена с более чем 125-летней историей"
 description: "История, архитектура и репертуар Deutsches Theater München — крупнейшего музыкального театра Баварии. От мюзиклов и шоу до социальной миссии."
-image: "/images/deutsches-theater.webp"
+image: "/images/places/deutsches-theater.webp"
 imageAlt: "Фасад Deutsches Theater в Мюнхене"
 seoTitle: "Deutsches Theater München — мюзиклы и шоу в сердце города"
 seoDescription: "Deutsches Theater München — главный музыкальный театр Баварии. История, мюзиклы, архитектура, гастроли, адрес и билеты. Лучшие шоу в Мюнхене."

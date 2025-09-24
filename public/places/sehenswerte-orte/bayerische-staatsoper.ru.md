@@ -1,7 +1,7 @@
 ---
 title: "Где поёт город: Bayerische Staatsoper"
 description: "Bayerische Staatsoper — это больше, чем просто опера. В статье рассказываем об истории театра, советах для посетителей, ценах на билеты и атмосфере, которую стоит прочувствовать хотя бы раз."
-image: "/images/bayerische-staatsoper.webp"
+image: "/images/places/bayerische-staatsoper.webp"
 imageAlt: "Фасад Баварской государственной оперы в Мюнхене"
 seoTitle: "Опера в Мюнхене — Bayerische Staatsoper: история, билеты, атмосфера"
 seoDescription: "Bayerische Staatsoper — не просто театр, а сердце музыкального Мюнхена. Атмосфера, цены, история, лайфхаки и сезонные фестивали — всё, что нужно знать перед визитом."

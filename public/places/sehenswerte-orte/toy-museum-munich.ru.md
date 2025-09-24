@@ -1,7 +1,7 @@
 ---
 title: "Toy Museum Munich — история игрушек в самом центре Мюнхена"
 description: "Камерный музей в башне Старой Ратуши, где игрушки рассказывают историю Европы: от кукольных домов до плюшевых мишек Steiff и первых Барби."
-image: "/images/toy-museum-munich.webp"
+image: "/images/places/toy-museum-munich.webp"
 imageAlt: "Игрушечный медведь в витрине Toy Museum Munich"
 seoTitle: "Toy Museum Munich — музей игрушек в башне Старой Ратуши"
 seoDescription: "Toy Museum Munich — это музей в центре Мюнхена, где антикварные игрушки становятся проводниками в прошлое: куклы, механизмы, миниатюры, история детства и дизайна."

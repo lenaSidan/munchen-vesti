@@ -1,7 +1,7 @@
 ---
 title: "Kunst ohne Grenzen: Was im Haus der Kunst in München wirklich passiert"
 description: "Das Haus der Kunst ist ein Ort für zeitgenössische Kunst ohne permanente Sammlung – aber mit großer Wirkung. Ein geschichtsträchtiges Gebäude im Herzen Münchens, das heute Ideen ausstellt, nicht nur Werke."
-image: "/images/haus-der-kunst.webp"
+image: "/images/places/haus-der-kunst.webp"
 imageAlt: "Fassade des Haus der Kunst in München, Blick von der Straße"
 seoTitle: "Haus der Kunst München – zeitgenössische Kunst trifft auf monumentale Geschichte"
 seoDescription: "Das Haus der Kunst in München zeigt internationale Ausstellungen in einem Gebäude mit ideologischem Erbe. Kunst, die Grenzen auflöst – jeder Raum eine neue Erfahrung."

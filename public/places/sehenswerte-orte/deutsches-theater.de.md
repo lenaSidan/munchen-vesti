@@ -1,7 +1,7 @@
 ---
 title: "Deutsches Theater München: das musikalische Herz Münchens mit über 125 Jahren Geschichte"
 description: "Geschichte, Architektur und Repertoire des Deutschen Theaters München – dem größten Musiktheater Bayerns. Von Musicals und Shows bis hin zum sozialen Engagement."
-image: "/images/deutsches-theater.webp"
+image: "/images/places/deutsches-theater.webp"
 imageAlt: "Fassade des Deutschen Theaters in München"
 seoTitle: "Deutsches Theater München – Musicals und Shows im Herzen der Stadt"
 seoDescription: "Deutsches Theater München – das führende Musiktheater in Bayern. Geschichte, Musicals, Architektur, Gastspiele, Adresse und Tickets. Die besten Shows in München."
