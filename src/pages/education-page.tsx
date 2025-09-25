@@ -1,10 +1,11 @@
-import { useState } from "react";
-import styles from "@/styles/AdsPage.module.css";
-import useTranslation from "@/hooks/useTranslation";
 import TheaterAcademy from "@/components/ads/education/TheaterAcademy";
 import Seo from "@/components/Seo";
+import useTranslation from "@/hooks/useTranslation";
+import styles from "@/styles/AdsPage.module.css";
+import { useState } from "react";
 // import EasterEggById from "@/components/EasterEggById";
 import EnglishLessons from "@/components/ads/education/EnglishLessons";
+import KidsClub from "@/components/ads/education/KidsClub";
 
 export default function AnnouncementsPage() {
   const t = useTranslation();
@@ -13,10 +14,15 @@ export default function AnnouncementsPage() {
     {
       id: 1,
       type: "single",
-      components: [<TheaterAcademy key="tutor" />],
+      components: [<KidsClub key="tutor" />],
     },
     {
       id: 2,
+      type: "single",
+      components: [<TheaterAcademy key="tutor" />],
+    },
+    {
+      id: 3,
       type: "single",
       components: [<EnglishLessons key="tutor" />],
     },

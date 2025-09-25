@@ -1,0 +1,339 @@
+.adsBox {
+  background: var(--alt-background);
+  border: 2px solid #8b0000;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 20px 0;
+  color: #3a3a3a;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: flex-start;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+[data-theme="dark"] .adsBox {
+  background: #2e2e2e;
+  color: #fdf3d0;
+  border-color: #e0a96d;
+}
+.title {
+  text-align: center;
+  font-size: 1.1rem;
+}
+.description {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--link-color);
+  text-decoration: underline;
+  margin-top: 20px;
+}
+.adsContainer {
+  display: flex;
+  flex-direction: column;
+}
+.textBox {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.imageWrapper {
+  text-align: center;
+  margin-bottom: 15px;
+  width: 40%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+.textContainer {
+  width: 60%;
+  padding: 0 0 0 15px;
+}
+.text1,
+.text2 {
+  font-size: 1.08rem;
+  line-height: 1.4rem;
+  margin: 0;
+}
+.text1 {
+  margin-bottom: 15px;
+}
+.textContainerLeft {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid var(--heading-color);
+  margin-top: 20px;
+}
+.textContainerLeft h4,
+.textContainer h4 {
+  color: var(--link-color);
+  margin: 0;
+
+  font-size: 1.2rem;
+  text-align: left;
+}
+.left {
+  width: 40%;
+  padding: 25px 15px 0 15px;
+}
+.right {
+  width: 60%;
+}
+.contactBox {
+  display: flex;
+  flex-direction: column;
+
+  padding: 25px 15px 0 15px;
+
+  font-size: 1rem;
+}
+
+.link {
+  gap: 15px;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  margin: 0 15px;
+  align-items: center;
+}
+
+.label {
+  font-weight: 600;
+  color: var(--link-color);
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.value,
+.valueLink {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.mainWrapper h3 {
+  font-family: var(--font-headings);
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--heading-color);
+  margin-bottom: 12px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.subtitleBox {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 10px auto 20px auto;
+  max-width: 80%;
+  text-align: center;
+  color: #444;
+}
+
+.list {
+  margin: 10px 0;
+}
+
+.list li {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 6px;
+  position: relative;
+  padding-left: 22px;
+}
+
+.list li::before {
+  content: "◆";
+  color: var(--link-color);
+  position: absolute;
+  left: 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .adsBox {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+
+  .textBox {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .image {
+    max-width: 100%;
+  }
+
+  .textContainer {
+    width: 100%;
+    padding: 0;
+  }
+
+  .text1,
+  .text2 {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .textContainerLeft {
+    flex-direction: column;
+    margin-top: 15px;
+    border-top: none;
+  }
+
+  .left {
+    width: 100%;
+    padding: 15px 0;
+    border-top: 1px solid var(--heading-color);
+  }
+
+  .right {
+    width: 100%;
+    padding: 15px 0;
+    border-top: 1px solid var(--heading-color);
+  }
+
+  .contactBox {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .link {
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    margin: 0;
+  }
+
+  .label {
+    font-size: 1rem;
+  }
+
+  .value,
+  .valueLink {
+    font-size: 0.95rem;
+  }
+
+  .list li {
+    font-size: 0.9rem;
+    padding-left: 18px;
+  }
+
+  .list li::before {
+    font-size: 0.8rem;
+  }
+}
+/* Планшеты (769px–1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .adsBox {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .textBox {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .textContainer {
+    width: 100%;
+    padding: 0;
+  }
+
+  .text1,
+  .text2 {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .textContainerLeft {
+    flex-direction: column;
+    border-top: none;
+    margin-top: 10px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    padding: 15px 0;
+    border-top: 1px solid var(--heading-color);
+  }
+
+  .contactBox {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* Ноутбуки (1025px–1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .adsBox {
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 25px;
+  }
+
+  .imageWrapper {
+    width: 35%;
+  }
+
+  .textContainer {
+    width: 65%;
+  }
+}
+
+/* Большие экраны (>1280px) */
+@media (min-width: 1281px) {
+  .adsBox {
+    max-width: 1150px;
+    margin: 30px auto;
+    gap: 40px;
+  }
+
+  .text1,
+  .text2 {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .label {
+    font-size: 1.2rem;
+  }
+
+  .value,
+  .valueLink {
+    font-size: 1.05rem;
+  }
+}
