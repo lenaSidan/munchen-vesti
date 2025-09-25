@@ -3,7 +3,7 @@ title: "„Ab ins Reich der Kürbisse“: erste Kürbisausstellung im BeerenCaf�
 shortTitle: "Ab ins Reich der Kürbisse"
 calendarStartDate: "2025-09-12"
 calendarEndDate: "2025-10-31"
-date: "2025-09-12"
+date: "2025-09-28"
 endDate: "2025-10-31"
 time: "ab 12. September 2025, täglich 8:30–19:00"
 ort: "BeerenCafé Lochhausen | https://maps.app.goo.gl/gxtSY45S8dbBbxvM8"

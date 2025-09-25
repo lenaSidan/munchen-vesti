@@ -3,7 +3,7 @@ title: "«В царство тыкв»: первая выставка в BeerenC
 shortTitle: "В царство тыкв"
 calendarStartDate: "2025-09-12"
 calendarEndDate: "2025-10-31"
-date: "2025-09-12"
+date: "2025-09-28"
 endDate: "2025-10-31"
 time: "с 12 сентября 2025, ежедневно 8:30–19:00"
 ort: "BeerenCafé Lochhausen | https://maps.app.goo.gl/gxtSY45S8dbBbxvM8"
