@@ -1,25 +1,25 @@
 ---
 title: "Laternenfestival München 2025: Nacht des Lichts und der Hoffnung auf dem Wasser"
 shortTitle: "Laternenfestival 2025"
-calendarStartDate: "2025-11-01"
-calendarEndDate: "2025-11-01"
-date: "2025-11-01"
-endDate: "2025-11-01"
-time: "1. November 2025, 17:30–21:30"
+calendarStartDate: "2025-11-021"
+calendarEndDate: "2025-11-02"
+date: "2025-11-02"
+endDate: "2025-11-02"
+time: "2. November 2025, 17:30–21:30"
 ort: "Regatta München e.V. | https://maps.app.goo.gl/pU9fnxTuK1abuTxZ6"
-link: "Offizielle Website | https://laternenfestival.com/products/munchen-1-november"
+link: "Offizielle Website | https://laternenfestival.com/products/munchen-2-november"
 image: "/images/laternenfestival-2025.webp"
 imageAlt: "Laternen auf dem Wasser beim Laternenfestival München"
-seoTitle: "Laternenfestival München 2025 — Lichterfest am 1. November"
+seoTitle: "Laternenfestival München 2025 — Lichterfest am 2. November"
 seoDescription: "Am 1. November 2025 findet in München das Laternenfestival statt: Laternen auf dem Wasser, Musik, Essen und Familienatmosphäre. Tickets 29,95 €, Kinder bis 8 Jahre frei."
 ---
 
-**Am 1. November 2025** wird München zur Bühne für eines der schönsten Herbstfeste — das **Laternenfestival**.  
+**Am 2. November 2025** wird München zur Bühne für eines der schönsten Herbstfeste — das **Laternenfestival**.  
 Der Veranstaltungsort ist der **Regattaverein München** in Oberschleißheim, wo sich mit Sonnenuntergang der See in ein lebendiges Meer aus Licht verwandelt.
 
 ### Wann und wo findet das Festival statt?
 
-- • **Datum:** Samstag, 1. November 2025  
+- • **Datum:** Sonntag, 2. November 2025  
 - • **Zeit:** 17:30 – 21:30 Uhr  
 - • **Ort:** Regatta München e.V., Dachauer Str. 35, 85764 Oberschleißheim  
 

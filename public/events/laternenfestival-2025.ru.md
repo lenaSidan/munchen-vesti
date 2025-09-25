@@ -1,26 +1,26 @@
 ---
 title: "Laternenfestival München 2025: ночь света и надежды на воде"
 shortTitle: "Laternenfestival 2025"
-calendarStartDate: "2025-11-01"
-calendarEndDate: "2025-11-01"
-date: "2025-11-01"
-endDate: "2025-11-01"
-time: "1 ноября 2025, 17:30–21:30"
+calendarStartDate: "2025-11-02"
+calendarEndDate: "2025-11-02"
+date: "2025-11-02"
+endDate: "2025-11-02"
+time: "2 ноября 2025, 17:30–21:30"
 ort: "Regatta München e.V. | https://maps.app.goo.gl/pU9fnxTuK1abuTxZ6"
-link: "Официальный сайт | https://laternenfestival.com/products/munchen-1-november"
+link: "Offizielle Website | https://laternenfestival.com/products/munchen-2-november"
 image: "/images/laternenfestival-2025.webp"
 imageAlt: "Запуск фонариков на воду во время Laternenfestival München"
-seoTitle: "Laternenfestival München 2025 — праздник фонарей 1 ноября"
-seoDescription: "1 ноября 2025 года в Мюнхене пройдёт Laternenfestival: запуск фонарей на воде, музыка, еда и семейная атмосфера. Билеты — 29,95 €, дети до 8 лет бесплатно."
+seoTitle: "Laternenfestival München 2025 — праздник фонарей 2 ноября"
+seoDescription: "2 ноября 2025 года в Мюнхене пройдёт Laternenfestival: запуск фонарей на воде, музыка, еда и семейная атмосфера. Билеты — 29,95 €, дети до 8 лет бесплатно."
 ---
 
-**1 ноября 2025 года** Мюнхен станет ареной одного из самых красивых осенних праздников — **Laternenfestival**.  
+**2 ноября 2025 года** Мюнхен станет ареной одного из самых красивых осенних праздников — **Laternenfestival**.  
 Место действия — **Regattaverein München** в Обершлайсхайме, где с заходом солнца озеро превратится в живое море света.
 
 
 ### Когда и где пройдёт фестиваль?
 
-- • **Дата:** суббота, 1 ноября 2025 года  
+- • **Дата:** 2 ноября 2025 года  
 - • **Время:** 17:30 – 21:30  
 - • **Место:** Regatta München e.V., Dachauer Str. 35, 85764 Oberschleißheim  
 
