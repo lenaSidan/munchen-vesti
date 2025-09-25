@@ -22,13 +22,13 @@
   font-family: var(--font-body);
   text-align: center;
   color: var(--heading-color2);
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 .announcementsWrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
 }
 
 .announcementGroup.single {
@@ -84,7 +84,7 @@
 .announcementBox {
   padding: 15px;
   border-radius: 5px;
-  background: var(--alt-background-light);
+  background: var(--alt-background);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   height: auto;
@@ -126,4 +126,9 @@
   .announcementGroup.triple2 .announcementBox {
     width: 100%;
   }
+  .announcementsWrapper {
+
+  gap: 20px;
+}
+
 }
