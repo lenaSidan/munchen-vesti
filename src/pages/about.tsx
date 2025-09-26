@@ -32,6 +32,10 @@ export default function About() {
           <h3 className={styles.sectionTitle}>{t("about.section4.title")}</h3>
           <p className={styles.paragraph}>{t("about.section4.text")}</p>
         </section>
+         <section className={styles.section}>
+          <h3 className={styles.sectionTitle}>{t("about.section5.title")}</h3>
+          <p className={styles.paragraph}>{t("about.section5.text")}</p>
+        </section>
       </div>
     </>
   );

@@ -240,6 +240,10 @@
     "section4": {
       "title": "Werden Sie Teil der Gemeinschaft",
       "text": "Wenn Sie Ideen, Hinweise, Fotos oder Artikel haben oder einfach etwas beitragen möchten – schreiben Sie uns! Ihr Beitrag macht dieses Projekt lebendig und hilft, es gemeinsam weiterzuentwickeln."
+    },
+    "section5": {
+      "title": "MODERNE TECHNOLOGIEN",
+      "text": "Zur Erstellung unserer Materialien verwenden wir sowohl eigene Texte und Fotografien als auch moderne Werkzeuge zur Bearbeitung und Generierung. Dies ermöglicht es uns, das Projekt für die Leser offen und kostenlos zu halten sowie das kulturelle Leben Münchens schnell und zugänglich zu vermitteln."
     }
   },
   "impressum": {
@@ -261,6 +265,10 @@
     "copyright": {
       "title": "Urheberrecht",
       "text": "Alle auf dieser Website veröffentlichten Inhalte unterliegen dem Urheberrecht. Eine Nutzung ohne schriftliche Genehmigung ist nicht gestattet."
+    },
+    "hinweis": {
+      "title": "Hinweis",
+      "text": "Bei der Erstellung von Inhalten werden neben eigenen Texten und Fotografien auch moderne Werkzeuge und Verfahren eingesetzt, einschließlich Technologien der Künstlichen Intelligenz. Angaben zu Veranstaltungen erfolgen ohne Gewähr; bitte prüfen Sie die aktuellen Daten und Details auf den offiziellen Seiten der Veranstalter."
     }
   },
   "cookieConsent": {
@@ -334,7 +342,9 @@
     "copy_link2": "Diese Veranstaltung teilen",
     "link_copied": "Link wurde kopiert!",
     "add_to_google_calendar": "Zum Kalender hinzufügen",
-    "add_to_calendar_ics": ".ics herunterladen"
+    "add_to_calendar_ics": ".ics herunterladen",
+    "disclaimer_short": "Bitte prüfen Sie die aktuellen Termine auf der offiziellen Website.",
+    "disclaimer": "Bitte beachten Sie: Termine und Uhrzeiten können von den Veranstaltern geändert werden. Wir empfehlen, aktuelle Informationen auf den offiziellen Seiten der Veranstaltungen zu prüfen."
   },
   "articles": {
     "articles": "Articles",

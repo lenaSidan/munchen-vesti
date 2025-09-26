@@ -1,6 +1,6 @@
+import Seo from "@/components/Seo";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/Impressum.module.css";
-import Seo from "@/components/Seo";
 
 export default function Impressum() {
   const t = useTranslation();
@@ -32,6 +32,11 @@ export default function Impressum() {
         <section>
           <h3 className={styles.sectionTitle}>{t("impressum.copyright.title")}</h3>
           <p className={styles.paragraph}>{t("impressum.copyright.text")}</p>
+        </section>
+
+        <section className={styles.hinweis}>
+          <span className={styles.hinweisTitle}>{t("impressum.hinweis.title")}:</span>{" "}
+          <span className={styles.hinweisText}>{t("impressum.hinweis.text")}</span>
         </section>
       </div>
     </>

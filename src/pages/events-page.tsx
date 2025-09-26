@@ -381,6 +381,7 @@ export default function EventsPage({ events }: EventsProps) {
                       </a>
                     )}
                   </div>
+
                   <button
                     type="button"
                     className={styles.toggleButton}
@@ -388,6 +389,9 @@ export default function EventsPage({ events }: EventsProps) {
                   >
                     {expandedSlug === event.slug ? t("menu.less") : t("menu.more")}
                   </button>
+                </div>
+                <div className={styles.disclaimerBoxShort}>
+                <p className={styles.disclaimerShort}>* {t("event.disclaimer_short")}</p>
                 </div>
               </div>
             </div>
@@ -411,12 +415,16 @@ export default function EventsPage({ events }: EventsProps) {
             ))}
           </select>
         </div>
+        <div className={styles.disclaimerBox}>
+          <p className={styles.disclaimer}>* {t("event.disclaimer")}</p>
+        </div>
         <div className={styles.archiveLinkBox}>
           <Link href="/past-events-page" className={styles.archiveButton}>
             {t("buttons.past_events")}
           </Link>
         </div>
       </div>
+
       <SubscribeBox />
     </>
   );

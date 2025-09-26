@@ -156,6 +156,7 @@
   white-space: normal;
   display: inline-block;
   max-width: 100%;
+  padding-left: 5px;
 }
 
 .eventImage {
@@ -306,6 +307,32 @@
   border-bottom: 0;
 }
 
+.disclaimerBoxShort {
+  margin-top: 30px;
+  border-top: 1px solid var(--border-color);
+  text-align: left;
+}
+.disclaimerBoxShort .disclaimerShort {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #777;
+  margin-top: 10px;
+}
+.disclaimerBox {
+  margin-top: 30px;
+
+  /* border-bottom: 1px solid var(--border-color); */
+  text-align: center;
+}
+.disclaimerBox .disclaimer {
+  font-size: 1.1rem !important;
+  color: #666;
+  font-style: italic;
+  font-weight: 600;
+  margin: 0 auto;
+  line-height: 1.4;
+  margin-top: 10px;
+}
 /* Мобильные стили */
 @media (max-width: 768px) {
   .container {
@@ -390,8 +417,11 @@
   .introText4 {
     font-size: 1.1rem;
   }
-    .title {
+  .title {
     font-size: 1rem;
     margin-bottom: 10px;
+  }
+  .disclaimerBox .disclaimer {
+    font-size: 1rem !important;
   }
 }
