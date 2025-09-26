@@ -50,7 +50,7 @@ Laut ersten Prognosen kostet die Maß im Jahr 2025 zwischen **14,50 und 15,50 
 
 ### Und wenn man kein Bier mag?
 
-Kein Problem: Man kann Karussell fahren, den Dirigenten mit Federhut fotografieren, Ente probieren, den bayerischen Trachtenumzug bewundern, nostalgische Fahrgeschäfte entdecken, Souvenirs suchen und einfach die Atmosphäre genießen – das **Oktoberfest** ist längst ein **Kulturerlebnis**, nicht nur ein Grund zum Trinken.
+Kein Problem: Man kann Karussell fahren, den Dirigenten mit Federhut fotografieren, Ente probieren, den bayerischen Trachtenumzug bewundern, nostalgische Fahrgeschäfte entdecken, Souvenirs suchen und einfach die Atmosphäre genießen – das **Oktoberfest** ist längst ein [**Kulturerlebnis**](https://munchen-vesti.de/ru/articles/Oktoberfest-nuances), nicht nur ein Grund zum Trinken.
 
 Besonderes Highlight: Der traditionelle Trachten- und Schützenzug am **ersten Wiesn-Sonntag, dem 21. September**, mit **über 8.000 Teilnehmern in historischen Kostümen** quer durch die Münchner Innenstadt.
 
