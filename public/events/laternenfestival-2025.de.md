@@ -11,7 +11,7 @@ link: "Offizielle Website | https://laternenfestival.com/products/munchen-2-nove
 image: "/images/laternenfestival-2025.webp"
 imageAlt: "Laternen auf dem Wasser beim Laternenfestival München"
 seoTitle: "Laternenfestival München 2025 — Lichterfest am 2. November"
-seoDescription: "Am 1. November 2025 findet in München das Laternenfestival statt: Laternen auf dem Wasser, Musik, Essen und Familienatmosphäre. Tickets 29,95 €, Kinder bis 8 Jahre frei."
+seoDescription: "Am 2. November 2025 findet in München das Laternenfestival statt: Laternen auf dem Wasser, Musik, Essen und Familienatmosphäre. Tickets 29,95 €, Kinder bis 8 Jahre frei."
 ---
 
 **Am 2. November 2025** wird München zur Bühne für eines der schönsten Herbstfeste — das **Laternenfestival**.  
