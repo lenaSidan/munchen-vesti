@@ -3,232 +3,143 @@ import SubscribeBox from "@/components/SubscribeBox";
 import useTranslation from "@/hooks/useTranslation";
 import { Event, getEventsByLocale } from "@/lib/getEvents";
 import styles from "@/styles/EventsPageNew.module.css";
-import { GetStaticProps } from "next";
+import type { GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useCallback, useEffect, useMemo, useState } from "react";
-import rehypeExternalLinks from "rehype-external-links";
-import rehypeStringify from "rehype-stringify";
-import { remark } from "remark";
-import remarkGfm from "remark-gfm";
-import remarkRehype from "remark-rehype";
+import { useEffect, useMemo, useState } from "react";
+
+// Расширяем Event лёгкой версией: без content, но с excerptHtml
+type LiteEvent = Omit<Event, "content"> & { excerptHtml?: string };
 
 interface EventsProps {
-  events: Event[];
+  events: LiteEvent[];
 }
 
 export default function EventsPage({ events }: EventsProps) {
   const t = useTranslation();
   const router = useRouter();
 
-  const [selectedMonthYear, setSelectedMonthYear] = useState<string>("");
+  const [selectedMonthYear, setSelectedMonthYear] = useState("");
   const [expandedSlug, setExpandedSlug] = useState<string | null>(null);
   const [copiedSlug, setCopiedSlug] = useState<string | null>(null);
+  const [eventContents, setEventContents] = useState<Record<string, string>>({});
+
+  async function loadContent(slug: string) {
+    if (eventContents[slug]) return;
+    try {
+      const res = await fetch(`/api/event/${encodeURIComponent(slug)}?locale=${router.locale}`);
+      if (!res.ok) throw new Error(`API error ${res.status}`);
+      const data = await res.json();
+      setEventContents((prev) => ({ ...prev, [slug]: data.content as string }));
+    } catch (e) {
+      console.error(e);
+      setEventContents((prev) => ({ ...prev, [slug]: "<p>Не удалось загрузить текст.</p>" }));
+    }
+  }
 
   const monthYearOptions = useMemo(() => {
     const now = new Date();
-    now.setDate(1); // текущий месяц без учёта дней
+    now.setDate(1);
+    const set = new Set<string>();
+    const list: { value: string; label: string }[] = [];
 
-    const optionsSet = new Set<string>();
-    const optionsList: { value: string; label: string }[] = [];
+    events.forEach((ev) => {
+      if (!ev.date) return;
+      const start = new Date(ev.date);
+      const end = ev.endDate ? new Date(ev.endDate) : start;
 
-    events.forEach((event) => {
-      if (!event.date) return;
-
-      const startDate = new Date(event.date);
-      const endDate = event.endDate ? new Date(event.endDate) : startDate;
-
-      const current = new Date(startDate);
-      current.setDate(1); // нормализуем до первого числа месяца
+      const cur = new Date(start);
+      cur.setDate(1);
 
       while (
-        current.getFullYear() < endDate.getFullYear() ||
-        (current.getFullYear() === endDate.getFullYear() &&
-          current.getMonth() <= endDate.getMonth())
+        cur.getFullYear() < end.getFullYear() ||
+        (cur.getFullYear() === end.getFullYear() && cur.getMonth() <= end.getMonth())
       ) {
-        // Если месяц уже полностью прошёл — пропускаем
-        const monthEnd = new Date(current.getFullYear(), current.getMonth() + 1, 0);
+        const monthEnd = new Date(cur.getFullYear(), cur.getMonth() + 1, 0);
         if (monthEnd < now) {
-          current.setMonth(current.getMonth() + 1);
+          cur.setMonth(cur.getMonth() + 1);
           continue;
         }
-
-        const year = current.getFullYear();
-        const monthIndex = current.getMonth();
+        const y = cur.getFullYear();
+        const mIdx = cur.getMonth();
         const monthName = t(
-          `months.${current.toLocaleString("en", { month: "long" }).toLowerCase()}`
+          `months.${cur.toLocaleString("en", { month: "long" }).toLowerCase()}`
         );
-        const value = `${year}-${String(monthIndex + 1).padStart(2, "0")}`;
-
-        if (!optionsSet.has(value)) {
-          optionsSet.add(value);
-          optionsList.push({ value, label: `${monthName} ${year}` });
+        const value = `${y}-${String(mIdx + 1).padStart(2, "0")}`;
+        if (!set.has(value)) {
+          set.add(value);
+          list.push({ value, label: `${monthName} ${y}` });
         }
-
-        current.setMonth(current.getMonth() + 1);
+        cur.setMonth(cur.getMonth() + 1);
       }
     });
 
-    return optionsList.sort((a, b) => a.value.localeCompare(b.value));
+    return list.sort((a, b) => a.value.localeCompare(b.value));
   }, [events, t]);
 
-  // Авто-выбор текущего месяца, НО не мешаем, если пришли с hash
   useEffect(() => {
     if (!selectedMonthYear && monthYearOptions.length > 0) {
-      if (typeof window !== "undefined" && window.location.hash) return; // пусть выберет другой эффект
+      if (typeof window !== "undefined" && window.location.hash) return;
       const now = new Date();
-      const currentMonthValue = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
-      const hasCurrent = monthYearOptions.find((opt) => opt.value === currentMonthValue);
-      setSelectedMonthYear(hasCurrent?.value || monthYearOptions[0].value);
+      const cur = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+      setSelectedMonthYear(monthYearOptions.find((o) => o.value === cur)?.value || monthYearOptions[0].value);
     }
   }, [monthYearOptions, selectedMonthYear]);
 
   const filteredEvents = useMemo(() => {
     if (!selectedMonthYear) return [];
-    const [year, month] = selectedMonthYear.split("-").map(Number);
-
-    return events.filter((event) => {
-      if (!event.date) return false;
-
-      const startDate = new Date(event.date);
-      const endDate = event.endDate ? new Date(event.endDate) : startDate;
-
-      const eventStartMonth = startDate.getMonth() + 1;
-      const eventStartYear = startDate.getFullYear();
-
-      const eventEndMonth = endDate.getMonth() + 1;
-      const eventEndYear = endDate.getFullYear();
-
-      const eventStartsBeforeOrInMonth =
-        eventStartYear < year || (eventStartYear === year && eventStartMonth <= month);
-      const eventEndsAfterOrInMonth =
-        eventEndYear > year || (eventEndYear === year && eventEndMonth >= month);
-
-      return eventStartsBeforeOrInMonth && eventEndsAfterOrInMonth;
+    const [y, m] = selectedMonthYear.split("-").map(Number);
+    return events.filter((ev) => {
+      if (!ev.date) return false;
+      const s = new Date(ev.date);
+      const e = ev.endDate ? new Date(ev.endDate) : s;
+      const sM = s.getMonth() + 1, sY = s.getFullYear();
+      const eM = e.getMonth() + 1, eY = e.getFullYear();
+      const startsBeforeOrIn = sY < y || (sY === y && sM <= m);
+      const endsAfterOrIn = eY > y || (eY === y && eM >= m);
+      return startsBeforeOrIn && endsAfterOrIn;
     });
   }, [selectedMonthYear, events]);
 
-  const handleDownloadICS = useCallback(async (event: Event) => {
-    if (!event.date) return;
-    const start = new Date(event.date);
-    const endDate = event.endDate
-      ? new Date(event.endDate)
-      : new Date(start.getTime() + 60 * 60 * 1000);
-
-    const url = `/api/ics?title=${encodeURIComponent(event.title)}&description=${encodeURIComponent(event.content || "")}&location=${encodeURIComponent(event.ort || "")}&start=${encodeURIComponent(start.toISOString())}&end=${encodeURIComponent(endDate.toISOString())}`;
-
-    try {
-      const response = await fetch(url);
-      const blob = await response.blob();
-      const a = document.createElement("a");
-      a.href = URL.createObjectURL(blob);
-      a.download = `${event.slug || "event"}.ics`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-    } catch (err) {
-      console.error("Download failed", err);
-    }
-  }, []);
-
-  const formatDateForGoogle = (start: string, end?: string) => {
-    const s = new Date(start);
-    const e = end ? new Date(end) : new Date(s.getTime() + 60 * 60 * 1000);
-    const f = (d: Date) =>
-      d
-        .toISOString()
-        .replace(/[-:]|\.\d{3}/g, "")
-        .slice(0, 15) + "Z";
-    return `${f(s)}/${f(e)}`;
-  };
-
-  const getExcerpt = (html: string) => {
-    if (typeof window === "undefined") return html;
-    const div = document.createElement("div");
-    div.innerHTML = html;
-    return div.querySelector("p")?.outerHTML || html;
-  };
-
-  /** 1) Если есть hash — выбираем месяц события по его slug */
+  // hash → выбрать месяц и проскроллить
   useEffect(() => {
     if (typeof window === "undefined" || !window.location.hash || !events?.length) return;
-
-    const raw = window.location.hash.slice(1);
-    const slug = decodeURIComponent(raw);
+    const slug = decodeURIComponent(window.location.hash.slice(1));
     const ev = events.find((e) => e.slug === slug);
     if (!ev?.date) return;
-
     const d = new Date(ev.date);
     const target = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+    if (selectedMonthYear !== target) setSelectedMonthYear(target);
+  }, [events]);
 
-    if (selectedMonthYear !== target) {
-      setSelectedMonthYear(target);
-    }
-  }, [events]); // срабатывает при первом появлении events
-
-  /** 2) После выбора нужного месяца — скроллим к карточке */
   useEffect(() => {
     if (typeof window === "undefined" || !window.location.hash) return;
-
     const raw = window.location.hash.slice(1);
     const decoded = decodeURIComponent(raw);
-
     const id = requestAnimationFrame(() => {
       const el = document.getElementById(decoded) || document.getElementById(raw);
       if (el) {
         el.scrollIntoView({ behavior: "smooth", block: "start" });
         setExpandedSlug(decoded);
+        loadContent(decoded);
       }
     });
     return () => cancelAnimationFrame(id);
   }, [selectedMonthYear, filteredEvents]);
 
-  //   function renderSimpleLinks(input: string, classNameLink?: string, classNameText?: string) {
-  //   if (!input) return null;
-
-  //   const trimmed = input.trim();
-
-  //   // Проверка: есть ли | и валидная ссылка после
-  //   if (trimmed.includes("|")) {
-  //     const [text, href] = trimmed.split("|").map((s) => s.trim());
-
-  //     if (href && href.startsWith("http")) {
-  //       return (
-  //         <a
-  //           href={href}
-  //           target="_blank"
-  //           rel="noopener noreferrer"
-  //           className={classNameLink}
-  //         >
-  //           {text}
-  //         </a>
-  //       );
-  //     }
-  //   }
-
-  //   // Просто текст (без ссылки)
-  //   return <span className={classNameText}>{trimmed}</span>;
-  // }
-
   function renderMarkdownLinks(input: string, classNameLink?: string, classNameText?: string) {
     if (!input) return null;
-
-    // Проверка Markdown-ссылки
-    const markdownLinkRegex = /^\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)$/;
-    if (markdownLinkRegex.test(input.trim())) {
-      const match = input.trim().match(markdownLinkRegex);
-      if (match) {
-        const [, text, href] = match;
-        return (
-          <a href={href} target="_blank" rel="noopener noreferrer" className={classNameLink}>
-            {text}
-          </a>
-        );
-      }
+    const md = /^\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)$/;
+    const trimmed = input.trim();
+    if (md.test(trimmed)) {
+      const [, text, href] = trimmed.match(md)!;
+      return (
+        <a href={href} target="_blank" rel="noopener noreferrer" className={classNameLink}>
+          {text}
+        </a>
+      );
     }
-
-    // Обработка варианта: "текст, текст | ссылка"
     const parts = input.split("|");
     if (parts.length === 2) {
       const text = parts[0].trim();
@@ -239,10 +150,15 @@ export default function EventsPage({ events }: EventsProps) {
         </a>
       );
     }
-
-    // Просто текст без ссылки
     return <span className={classNameText}>{input}</span>;
   }
+
+  const formatDateForGoogle = (start: string, end?: string) => {
+    const s = new Date(start);
+    const e = end ? new Date(end) : new Date(s.getTime() + 60 * 60 * 1000);
+    const f = (d: Date) => d.toISOString().replace(/[-:]|\.\d{3}/g, "").slice(0, 15) + "Z";
+    return `${f(s)}/${f(e)}`;
+  };
 
   const isCurrentMonthSelected = selectedMonthYear === monthYearOptions[0]?.value;
 
@@ -253,6 +169,7 @@ export default function EventsPage({ events }: EventsProps) {
 
       <div className={styles.articleContainer}>
         <h2 className={styles.title}>{t("months.events_title")}</h2>
+
         {isCurrentMonthSelected && (
           <div className={styles.introBox}>
             <p className={styles.introText}>{t("months.introPart1")}</p>
@@ -267,6 +184,7 @@ export default function EventsPage({ events }: EventsProps) {
             <p className={styles.introText4}>{t("months.introPart4")}</p>
           </div>
         )}
+
         <div className={styles.monthSelectContainer}>
           <label htmlFor="monthSelect">{t("months.filter_by_month")}</label>
           <select
@@ -284,118 +202,136 @@ export default function EventsPage({ events }: EventsProps) {
         </div>
 
         <div className={styles.container}>
-          {filteredEvents.map((event) => (
-            <div key={event.slug} id={event.slug} className={styles.eventCard}>
-              <div className={styles.titleBox}>
-                <h2 className={styles.eventTitle}>{event.title}</h2>
-              </div>
+          {filteredEvents.map((event) => {
+            const fullHtml = eventContents[event.slug];
+            const htmlToShow =
+              expandedSlug === event.slug ? (fullHtml || "<p>Loading…</p>") : (event.excerptHtml || "");
 
-              <div className={styles.eventImageOrt}>
-                <div className={styles.eventLocation}>
-                  {event.time && (
-                    <p className={styles.box}>
-                      <span className={styles.label}>{t("event.time")}*:</span>
-                      <span className={styles.value}>{event.time}</span>
-                    </p>
-                  )}
-                  {event.ort && (
-                    <p className={styles.box}>
-                      <span className={styles.label}>{t("event.ort")}:</span>
-                      {renderMarkdownLinks(event.ort, styles.valueLink, styles.value)}
-                    </p>
-                  )}
-
-                  {event.link && (
-                    <p className={styles.box}>
-                      <span className={styles.label}>{t("event.link")}:</span>
-                      {renderMarkdownLinks(event.link, styles.valueLink, styles.value)}
-                    </p>
-                  )}
-
-                  <button
-                    type="button"
-                    onClick={() => {
-                      if (typeof window === "undefined" || !event.slug) return;
-                      // Берём текущий путь (учтёт /ru или /de) и кодируем hash
-                      const base = `${window.location.origin}/${router.locale}/events-page`;
-                      const url = `${base}#${encodeURIComponent(event.slug)}`;
-
-                      if (navigator.clipboard && window.isSecureContext) {
-                        navigator.clipboard
-                          .writeText(url)
-                          .then(() => {
-                            setCopiedSlug(event.slug!);
-                            setTimeout(() => setCopiedSlug(null), 3000);
-                          })
-                          .catch((err) => console.error("Clipboard write failed:", err));
-                      } else {
-                        console.warn("Clipboard not supported");
-                      }
-                    }}
-                    className={styles.copyLinkButton}
-                  >
-                    {t("event.copy_link2")}
-                  </button>
+            return (
+              <div key={event.slug} id={event.slug} className={styles.eventCard}>
+                <div className={styles.titleBox}>
+                  <h2 className={styles.eventTitle}>{event.title}</h2>
                 </div>
 
-                {event.image && (
-                  <Image
-                    src={event.image}
-                    alt={event.imageAlt || event.title}
-                    className={styles.eventImage}
-                    width={400}
-                    height={200}
-                    sizes="(max-width: 768px) 100vw, 400px"
-                  />
-                )}
-              </div>
+                <div className={styles.eventImageOrt}>
+                  <div className={styles.eventLocation}>
+                    {event.time && (
+                      <p className={styles.box}>
+                        <span className={styles.label}>{t("event.time")}*:</span>
+                        <span className={styles.value}>{event.time}</span>
+                      </p>
+                    )}
+                    {event.ort && (
+                      <p className={styles.box}>
+                        <span className={styles.label}>{t("event.ort")}:</span>
+                        {renderMarkdownLinks(event.ort, styles.valueLink, styles.value)}
+                      </p>
+                    )}
+                    {event.link && (
+                      <p className={styles.box}>
+                        <span className={styles.label}>{t("event.link")}:</span>
+                        {renderMarkdownLinks(event.link, styles.valueLink, styles.value)}
+                      </p>
+                    )}
 
-              <div className={styles.eventContent}>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: expandedSlug === event.slug ? event.content : getExcerpt(event.content),
-                  }}
-                />
-                <div className={styles.buttonsContainer}>
-                  <div className={styles.buttonsDownload}>
                     <button
                       type="button"
-                      onClick={() => handleDownloadICS(event)}
-                      className={styles.toggleButton_ics}
+                      onClick={() => {
+                        if (typeof window === "undefined" || !event.slug) return;
+                        const base = `${window.location.origin}/${router.locale}/events-page`;
+                        const url = `${base}#${encodeURIComponent(event.slug)}`;
+                        if (navigator.clipboard && window.isSecureContext) {
+                          navigator.clipboard
+                            .writeText(url)
+                            .then(() => {
+                              setCopiedSlug(event.slug!);
+                              setTimeout(() => setCopiedSlug(null), 3000);
+                            })
+                            .catch(console.error);
+                        }
+                      }}
+                      className={styles.copyLinkButton}
                     >
-                      {t("event.add_to_calendar_ics")}
+                      {t("event.copy_link2")}
                     </button>
-                    {event.date && (
-                      <a
-                        href={`https://calendar.google.com/calendar/u/0/r/eventedit?text=${encodeURIComponent(
-                          event.title
-                        )}&dates=${formatDateForGoogle(
-                          event.date,
-                          event.endDate
-                        )}&location=${encodeURIComponent(event.ort || "")}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.toggleButton_google}
-                      >
-                        {t("event.add_to_google_calendar")}
-                      </a>
-                    )}
                   </div>
 
-                  <button
-                    type="button"
-                    className={styles.toggleButton}
-                    onClick={() => setExpandedSlug(expandedSlug === event.slug ? null : event.slug)}
-                  >
-                    {expandedSlug === event.slug ? t("menu.less") : t("menu.more")}
-                  </button>
+                  {event.image && (
+                    <Image
+                      src={event.image}
+                      alt={event.imageAlt || event.title}
+                      className={styles.eventImage}
+                      width={400}
+                      height={200}
+                      sizes="(max-width: 768px) 100vw, 400px"
+                    />
+                  )}
                 </div>
-                <div className={styles.disclaimerBoxShort}>
-                <p className={styles.disclaimerShort}>* {t("event.disclaimer_short")}</p>
+
+                <div className={styles.eventContent}>
+                  <div
+                    className={styles.eventContentHtml}
+                    dangerouslySetInnerHTML={{ __html: htmlToShow }}
+                  />
+
+                  <div className={styles.buttonsContainer}>
+                    <div className={styles.buttonsDownload}>
+                      {event.date && (
+                        <>
+                          <a
+                            href={`/api/ics?title=${encodeURIComponent(event.title)}&description=${encodeURIComponent(
+                              (fullHtml || event.excerptHtml || "").replace(/<[^>]+>/g, "")
+                            )}&location=${encodeURIComponent(event.ort || "")}&start=${encodeURIComponent(
+                              new Date(event.date).toISOString()
+                            )}&end=${encodeURIComponent(
+                              new Date(event.endDate || new Date(new Date(event.date).getTime() + 60 * 60 * 1000)).toISOString()
+                            )}`}
+                            className={styles.toggleButton_ics}
+                          >
+                            {t("event.add_to_calendar_ics")}
+                          </a>
+
+                          <a
+                            href={`https://calendar.google.com/calendar/u/0/r/eventedit?text=${encodeURIComponent(
+                              event.title
+                            )}&dates=${formatDateForGoogle(event.date, event.endDate)}&location=${encodeURIComponent(
+                              event.ort || ""
+                            )}&details=${encodeURIComponent(
+                              (fullHtml || event.excerptHtml || "").replace(/<[^>]+>/g, "")
+                            )}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.toggleButton_google}
+                          >
+                            {t("event.add_to_google_calendar")}
+                          </a>
+                        </>
+                      )}
+                    </div>
+
+                    <button
+                      type="button"
+                      className={styles.toggleButton}
+                      onClick={() => {
+                        if (expandedSlug === event.slug) {
+                          setExpandedSlug(null);
+                        } else {
+                          setExpandedSlug(event.slug);
+                          loadContent(event.slug);
+                        }
+                      }}
+                    >
+                      {expandedSlug === event.slug ? t("menu.less") : t("menu.more")}
+                    </button>
+                  </div>
+
+                  <div className={styles.disclaimerBoxShort}>
+                    <p className={styles.disclaimerShort}>* {t("event.disclaimer_short")}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {copiedSlug && <div className={styles.copyToast}>❖ {t("event.link_copied")}</div>}
@@ -415,6 +351,7 @@ export default function EventsPage({ events }: EventsProps) {
             ))}
           </select>
         </div>
+
         <div className={styles.disclaimerBox}>
           <p className={styles.disclaimer}>* {t("event.disclaimer")}</p>
         </div>
@@ -430,43 +367,58 @@ export default function EventsPage({ events }: EventsProps) {
   );
 }
 
-async function processMarkdown(content: string) {
-  const result = await remark()
-    .use(remarkGfm)
-    .use(remarkRehype)
-    .use(rehypeExternalLinks, {
-      target: "_blank",
-      rel: ["noopener", "noreferrer"],
-    })
-    .use(rehypeStringify)
-    .process(content);
-  return result.toString();
-}
+// ================== SERVER SIDE ==================
+export const getStaticProps: GetStaticProps<EventsProps> = async (context) => {
+  const locale = context.locale || "ru";
+  const raw = getEventsByLocale(locale);
+  const now = new Date();
 
-export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) => {
-  const rawEvents = getEventsByLocale(locale || "ru");
-  const now = new Date(); // текущее время
-
-  const activeEvents = rawEvents.filter((event) => {
-    if (!event.date) return false;
-    const start = new Date(event.date);
-    const end = event.endDate ? new Date(event.endDate) : start;
-    return end >= now; // убираем всё, что закончилось ДО текущего момента
+  // Только актуальные события
+  const active = raw.filter((e) => {
+    if (!e.date) return false;
+    const s = new Date(e.date);
+    const end = e.endDate ? new Date(e.endDate) : s;
+    return end >= now;
   });
 
-  const sortedEvents = activeEvents.sort(
+  const sorted = active.sort(
     (a, b) => new Date(a.date!).getTime() - new Date(b.date!).getTime()
   );
 
-  const events = await Promise.all(
-    sortedEvents.map(async (event) => ({
-      ...event,
-      content: await processMarkdown(event.content),
+  // Преобразуем markdown → HTML, берём ТОЛЬКО первый абзац как тизер
+  const { remark } = await import("remark");
+  const remarkGfm = (await import("remark-gfm")).default;
+  const remarkRehype = (await import("remark-rehype")).default;
+  const rehypeExternalLinks = (await import("rehype-external-links")).default;
+  const rehypeStringify = (await import("rehype-stringify")).default;
+
+  async function mdToFirstParagraph(md: string): Promise<string | undefined> {
+    const html = String(
+      await remark()
+        .use(remarkGfm)
+        .use(remarkRehype)
+        .use(rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] })
+        .use(rehypeStringify)
+        .process(md)
+    );
+    const m = html.match(/<p[\s\S]*?<\/p>/i);
+    return m ? m[0] : undefined;
+  }
+
+  const events: LiteEvent[] = await Promise.all(
+    sorted.map(async (e) => ({
+      slug: e.slug,
+      title: e.title,
+      date: e.date,
+      endDate: e.endDate,
+      time: e.time,
+      ort: e.ort,
+      link: e.link,
+      image: e.image,
+      imageAlt: e.imageAlt,
+      excerptHtml: await mdToFirstParagraph(e.content),
     }))
   );
 
-  return {
-    props: { events },
-    revalidate: 43200,
-  };
+  return { props: { events }, revalidate: 43200 };
 };
