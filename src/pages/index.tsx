@@ -164,9 +164,9 @@ export default function Home({
         {otherEvents.length > 0 && (
           <section className={styles.otherArticles}>
             <Link
-              href="/events"
+              href="/events-page"
               className={`${styles.otherArticlesTitle} ${styles.navLink} ${
-                router.pathname === "/events" ? styles.active : ""
+                router.pathname === "/events-page" ? styles.active : ""
               }`}
             >
               {t("home.view_all_articles")}

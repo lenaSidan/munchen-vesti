@@ -80,7 +80,7 @@ export default function Event({ event, locale, archived, similarEvents }: EventP
         url={canonicalUrl}
         jsonLd={jsonLd}
       />
-      {archived && (
+     {archived && (
         <Head>
           <meta name="robots" content="noindex, follow" />
         </Head>

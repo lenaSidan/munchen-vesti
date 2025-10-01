@@ -294,7 +294,7 @@ export default function EventsPage({ events }: EventsProps) {
                 <div className={styles.eventLocation}>
                   {event.time && (
                     <p className={styles.box}>
-                      <span className={styles.label}>{t("event.time")}:</span>
+                      <span className={styles.label}>{t("event.time")}*:</span>
                       <span className={styles.value}>{event.time}</span>
                     </p>
                   )}
