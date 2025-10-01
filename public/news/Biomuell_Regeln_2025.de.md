@@ -16,7 +16,6 @@ Die Kontrolle der Einhaltung erfolgt durch spezielle Detektionsfahrzeuge, die in
 
 ### So trennt man den Müll richtig
 In Deutschland gilt ein farbcodiertes System zur Mülltrennung:
-
 - ✔ **Braune oder grüne Tonne (Biotonne):** für organische Abfälle wie Essensreste, Obst- und Gemüseschalen, Eierschalen, Kaffeesatz, Teebeutel, Rasenschnitt, Laub und Blumen.
 - ✔ **Gelbe Tonne:** für Verpackungen aus Kunststoff, Metall und Verbundstoffen – z. B. Joghurtbecher, Konservendosen, Tetrapacks und Einwegplastikflaschen.
 - ✔ **Blaue Tonne:** für Papier und Karton – z. B. Zeitungen, Zeitschriften, Pappverpackungen.
