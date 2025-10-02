@@ -80,7 +80,7 @@ export default function Event({ event, locale, archived, similarEvents }: EventP
         url={canonicalUrl}
         jsonLd={jsonLd}
       />
-     {archived && (
+      {archived && (
         <Head>
           <meta name="robots" content="noindex, follow" />
         </Head>
@@ -115,7 +115,7 @@ export default function Event({ event, locale, archived, similarEvents }: EventP
             <span className={styles.right}>⊱❧</span>
           </div>
           <Link
-            href={fromCalendar ? "/calendar" : archived ? "/past-events-page" : "/events"}
+            href={fromCalendar ? "/calendar" : archived ? "/past-events-page" : "/events-page "}
             className={styles.readMore}
           >
             {t("articles.back")}
