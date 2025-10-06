@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import styles from "@/styles/ShortNews.module.css";
 import useTranslation from "@/hooks/useTranslation";
+import { NewsItem } from "@/lib/getNews";
+import styles from "@/styles/ShortNews.module.css";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import NewsBlock from "./NewsBlock";
-import { NewsItem } from "@/lib/getNewsByLocale";
 
 function getRandomItems<T>(items: T[], count: number): T[] {
   const shuffled = [...items].sort(() => 0.5 - Math.random());

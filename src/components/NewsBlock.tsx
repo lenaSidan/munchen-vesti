@@ -1,8 +1,8 @@
 import Link from "next/link";
 // import Image from "next/image";
-import { NewsItem } from "@/lib/getNewsByLocale";
-import styles from "@/styles/NewsBlock.module.css";
 import useTranslation from "@/hooks/useTranslation";
+import { NewsItem } from "@/lib/getNews";
+import styles from "@/styles/NewsBlock.module.css";
 
 interface Props {
   newsList: NewsItem[];
@@ -35,8 +35,6 @@ export default function NewsBlock({ newsList }: Props) {
           </div>
         </div>
       ))}
-
-   
     </div>
   );
 }

@@ -1,7 +1,7 @@
 .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 30px 20px;
+  margin: 40px auto;
+  padding: 20px;
   background-color: var(--alt-background2);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
   color: var(--text-color);
@@ -30,6 +30,8 @@
   color: var(--heading-color2);
   margin-bottom: 30px;
   text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.6;
 }
 
 .content {
@@ -142,6 +144,7 @@
 @media (max-width: 768px) {
   .container {
     padding: 15px;
+    margin: 10px;
   }
 
   .headerBox {
@@ -152,6 +155,7 @@
   .title {
     font-size: 1rem;
     margin-bottom: 10px;
+    line-height: 1.4;
   }
 
   .headerImage {

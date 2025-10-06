@@ -4,7 +4,9 @@
   padding: 20px;
   background: var(--background);
   color: var(--text-color);
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition:
+    background 0.3s ease-in-out,
+    color 0.3s ease-in-out;
 }
 .visuallyHidden {
   position: absolute;
@@ -28,17 +30,20 @@
   font-family: var(--font-headings);
   text-align: center;
   color: var(--heading-color2);
-  margin-bottom: 20px;
+  background-color: var(--alt-background);
+  padding: 10px 0;
+  margin-bottom: 40px;
 }
 
 .articleVariantA,
 .articleVariantB {
-  padding: 20px 20px 0 20px;
+  border: 1px solid var(--border-color);
+  padding: 20px 20px 10px 20px;
   /* border: 2px solid var(--border-color); */
   border-radius: 8px;
   background: var(--alt-background);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -46,7 +51,8 @@
   background: var(--alt-background1);
 }
 
-.articleVariantB {
+.articleVariantB,
+.articleTitle {
   background: rgba(0, 0, 0, 0.03);
 }
 .image_textBox {
@@ -134,7 +140,7 @@
 }
 
 .decorativeLine::before {
-  top:0;
+  top: 0;
 }
 
 .decorativeLine::after {
@@ -223,9 +229,14 @@
     margin-top: 5px;
     margin-bottom: 15px;
   }
+  .articleVariantA,
+  .articleVariantB {
+    margin-bottom: 30px;
+  }
+
   .articleVariantB .articleImage,
   .articleVariantA .articleImage {
-   margin: 0 0 10px 0;
+    margin: 0 0 10px 0;
   }
   .image_textBox {
     flex-direction: column;
