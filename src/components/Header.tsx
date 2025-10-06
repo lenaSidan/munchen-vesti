@@ -1,5 +1,6 @@
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import MobileHeader from "@/components/MobileHeader";
+import SearchBox from "@/components/SearchBox";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/Header.module.css";
@@ -141,6 +142,7 @@ export default function Header() {
           </Link>
 
           <div className={styles.tools}>
+           
             <LanguageSwitcher />
             <ThemeSwitcher />
           </div>
@@ -275,6 +277,9 @@ export default function Header() {
             
             {t("menu.useful")}
           </Link>
+          <div className={styles.searchBox}>
+             <SearchBox />
+          </div>
           {/* <Link
             href="/events"
             className={`${styles.navLink} ${

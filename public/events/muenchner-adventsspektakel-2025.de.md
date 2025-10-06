@@ -12,6 +12,14 @@ image: "/images/muenchner-adventsspektakel-2025.webp"
 imageAlt: "Mittelalterlicher Weihnachtsmarkt am Wittelsbacherplatz mit Holzhütten und Lichtern"
 seoTitle: "Münchner Adventsspektakel 2025 — Mittelalterlicher Weihnachtsmarkt am Wittelsbacherplatz"
 seoDescription: "Vom 24. November bis 23. Dezember 2025: Mittelalterlicher Weihnachtsmarkt mit Handwerk, Musik und Feuerküche auf dem Wittelsbacherplatz."
+slug:
+  - münchen
+  - adventsspektakel
+  - mittelaltermarkt
+  - weihnachtsmarkt
+  - wittelsbacherplatz
+  - weihnachten
+  - handwerk
 ---
 
 Vom Duft nach Rauch und würzigen Getränken bis zu den Klängen der Spielleute — auf dem **Wittelsbacherplatz** entfaltet sich wieder das **Münchner Adventsspektakel & Mittelalterlicher Weihnachtsmarkt**.  

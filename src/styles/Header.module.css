@@ -248,8 +248,12 @@
     transform: scale(1);
     text-shadow: none;
   }
-}
 
+}
+.searchBox {
+  display: flex;
+  align-items: center;
+}
 @media (max-width: 1280px) {
   .header {
     padding-bottom: 18px;

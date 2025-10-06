@@ -170,8 +170,8 @@ export default function Events({ events }: EventsProps) {
         <div className={styles.eventCardBox}>
           {filteredEvents.map((event, index) => (
             <Link
-              key={event.slug}
-              href={`/events/${event.slug}`}
+              key={Array.isArray(event.slug) ? event.slug.join("-") : event.slug}
+              href={`/events-page#${Array.isArray(event.fileId) ? event.fileId[0] : event.fileId}`}
               className={`${styles.eventCard} ${index % 2 === 0 ? styles.evenCard : styles.oddCard}`}
             >
               <div className={styles.imageTitleBox}>
@@ -247,4 +247,3 @@ export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) =>
     revalidate: 43200,
   };
 };
-

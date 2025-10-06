@@ -733,5 +733,8 @@
       "housing": "Wohnen und Alltag",
       "travel": "Reisen und Verkehr"
     }
+  },
+  "search": {
+    "placeholder": "Suche auf der Seite..."
   }
 }

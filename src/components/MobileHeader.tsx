@@ -1,7 +1,9 @@
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import SearchBox from "@/components/SearchBox";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/mobileHeader.module.css";
+import { Home, Search } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
@@ -15,6 +17,7 @@ export default function MobileHeader() {
   const [foundCount, setFoundCount] = useState(0);
   const [allFound, setAllFound] = useState(false);
   const CURRENT_EGG_VERSION = "v3";
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const adsSubmenuRef = useRef<HTMLDivElement>(null);
   const wordsSubmenuRef = useRef<HTMLDivElement>(null);
@@ -105,78 +108,113 @@ export default function MobileHeader() {
           <div className={styles.fadeLeft} />
           <div className={styles.fadeRight} />
           <div className={styles.menuWrapper}>
-            <div className={styles.menuMain}>
-              <Link
-                href="/articles-page"
-                className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/articles-page" ? styles.active : ""}`}
-                onClick={closeAllSubmenus}
-              >
-                {t("menu.articles").toUpperCase()}
-              </Link>
+            <div className={styles.menuMainBox}>
+              <div className={styles.searchIconBox}>
+                <button
+                  type="button"
+                  className={styles.homeIconButton}
+                  onClick={() => router.push("/")}
+                  aria-label="На главную"
+                >
+                  <Home size={20} strokeWidth={2} />
+                </button>
+                <button
+                  type="button"
+                  className={styles.searchIconButton}
+                  onClick={() => setIsSearchOpen(true)}
+                  aria-label="Поиск"
+                >
+                  <Search size={20} strokeWidth={2} />
+                </button>
 
-              <Link
-                href="/events-page"
-                className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/events-page" ? styles.active : ""}`}
-                onClick={closeAllSubmenus}
-              >
-                {t("menu.announcements").toUpperCase()}
-              </Link>
+                {isSearchOpen && (
+                  <div className={styles.searchPopup}>
+                    <button
+                      type="button"
+                      className={styles.closeSearchButton}
+                      onClick={() => setIsSearchOpen(false)}
+                    >
+                      ✕
+                    </button>
+                    <div className={styles.searchPopupInner}>
+                      <SearchBox onClose={() => setIsSearchOpen(false)} />
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div className={styles.menuMain}>
+                <Link
+                  href="/articles-page"
+                  className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/articles-page" ? styles.active : ""}`}
+                  onClick={closeAllSubmenus}
+                >
+                  {t("menu.articles").toUpperCase()}
+                </Link>
 
-              <Link
-                href="/news-page"
-                className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/news-page" ? styles.active : ""}`}
-                onClick={closeAllSubmenus}
-              >
-                {t("menu.news").toUpperCase()}
-              </Link>
+                <Link
+                  href="/events-page"
+                  className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/events-page" ? styles.active : ""}`}
+                  onClick={closeAllSubmenus}
+                >
+                  {t("menu.announcements").toUpperCase()}
+                </Link>
 
-              <button
-                id="adsMenuButton"
-                type="button"
-                onClick={handleAdsClick}
-                className={`${styles.navLink} ${isAdsSubmenuOpen || (!isAnySubmenuOpen && isAdsActive) ? styles.active : ""}`}
-              >
-                {t("menu.ads").toUpperCase()}
-              </button>
+                <Link
+                  href="/news-page"
+                  className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/news-page" ? styles.active : ""}`}
+                  onClick={closeAllSubmenus}
+                >
+                  {t("menu.news").toUpperCase()}
+                </Link>
 
-              <button
-                id="wordsMenuButton"
-                type="button"
-                onClick={handleWordsClick}
-                className={`${styles.navLink} ${isWordsSubmenuOpen || (!isAnySubmenuOpen && isWordsActive) ? styles.active : ""}`}
-              >
-                {t("menu.words").toUpperCase()}
-              </button>
+                <button
+                  id="adsMenuButton"
+                  type="button"
+                  onClick={handleAdsClick}
+                  className={`${styles.navLink} ${isAdsSubmenuOpen || (!isAnySubmenuOpen && isAdsActive) ? styles.active : ""}`}
+                >
+                  {t("menu.ads").toUpperCase()}
+                </button>
 
-              <Link
-                href="/postcards-page"
-                title={t("menu.chronicles_full")}
-                className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/postcards-page" ? styles.active : ""}`}
-                onClick={closeAllSubmenus}
-              >
-                {t("menu.chronicles").toUpperCase()}
-              </Link>
-              <Link
-                href="/geocaching-page"
-                className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/geocaching-page" ? styles.active : ""}`}
-                onClick={closeAllSubmenus}
-              >
-                {t("menu.geocaching").toUpperCase()}
-              </Link>
-              <Link
-                href="/places-page"
-                className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/places-page" ? styles.active : ""}`}
-                onClick={closeAllSubmenus}
-              >
-                {t("menu.places").toUpperCase()}
-              </Link>
-              <Link
-                href="/useful-page"
-                className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/places-useful" ? styles.active : ""}`}
-                onClick={closeAllSubmenus}
-              >
-                {t("menu.useful").toUpperCase()}
-              </Link>
+                <button
+                  id="wordsMenuButton"
+                  type="button"
+                  onClick={handleWordsClick}
+                  className={`${styles.navLink} ${isWordsSubmenuOpen || (!isAnySubmenuOpen && isWordsActive) ? styles.active : ""}`}
+                >
+                  {t("menu.words").toUpperCase()}
+                </button>
+
+                <Link
+                  href="/postcards-page"
+                  title={t("menu.chronicles_full")}
+                  className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/postcards-page" ? styles.active : ""}`}
+                  onClick={closeAllSubmenus}
+                >
+                  {t("menu.chronicles").toUpperCase()}
+                </Link>
+                <Link
+                  href="/geocaching-page"
+                  className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/geocaching-page" ? styles.active : ""}`}
+                  onClick={closeAllSubmenus}
+                >
+                  {t("menu.geocaching").toUpperCase()}
+                </Link>
+                <Link
+                  href="/places-page"
+                  className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/places-page" ? styles.active : ""}`}
+                  onClick={closeAllSubmenus}
+                >
+                  {t("menu.places").toUpperCase()}
+                </Link>
+                <Link
+                  href="/useful-page"
+                  className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/places-useful" ? styles.active : ""}`}
+                  onClick={closeAllSubmenus}
+                >
+                  {t("menu.useful").toUpperCase()}
+                </Link>
+              </div>
               {/* <Link
                 href="/events"
                 className={`${styles.navLink} ${!isAnySubmenuOpen && router.pathname === "/events" ? styles.active : ""}`}

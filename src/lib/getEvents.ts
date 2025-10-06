@@ -4,7 +4,7 @@ import path from "path";
 
 // Интерфейс события
 export interface Event {
-  slug: string;
+  slug: string | string[]; 
   title: string;
   shortTitle?: string;
   seoTitle?: string;
@@ -19,6 +19,7 @@ export interface Event {
   content: string;
   image?: string;
   imageAlt?: string;
+  fileId: string;
 }
 
 // 🔧 Общая функция для загрузки событий из указанной директории
@@ -30,8 +31,26 @@ function getEventsFromDirectory(eventsDir: string, locale: string): Event[] {
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const { data, content } = matter(fileContent);
 
+    // 💡 slug — поддержка массива и строки, с резервом из имени файла
+    let slugValue: string[];
+
+    if (Array.isArray(data.slug)) {
+      slugValue = data.slug.map((s: string) => s.toLowerCase().trim());
+    } else if (typeof data.slug === "string" && data.slug.trim() !== "") {
+      slugValue = [data.slug.toLowerCase().trim()];
+    } else {
+      slugValue = [
+        file
+          .replace(`.${locale}.md`, "")
+          .replace(/^\d{2}-\d{2}-\d{4}-/, "")
+          .toLowerCase(),
+      ];
+    }
+
+    const fileId = file.replace(`.${locale}.md`, "");
+
     return {
-      slug: file.replace(`.${locale}.md`, "").replace(/^\d{2}-\d{2}-\d{4}-/, ""),
+      slug: slugValue,
       title: data.title || "Untitled",
       shortTitle: data.shortTitle || data.title || "Untitled",
       seoTitle: data.seoTitle || "",
@@ -46,9 +65,11 @@ function getEventsFromDirectory(eventsDir: string, locale: string): Event[] {
       content,
       image: data.image ?? null,
       imageAlt: data.imageAlt ?? "",
+      fileId,
     };
   });
 
+  // Возвращаем только события с валидной датой
   return events.filter((event) => event.date && !isNaN(new Date(event.date).getTime()));
 }
 
