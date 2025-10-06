@@ -254,8 +254,10 @@ flex-direction: row;
   }
   .meta {
     font-size: 0.78rem;
-   
+   flex-direction: column;
     text-align: center;
+    gap: 0;
+    margin-bottom: 10px;
   }
 
   .imageWrapper {
