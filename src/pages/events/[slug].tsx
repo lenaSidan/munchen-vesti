@@ -3,10 +3,12 @@ import SocialLinks from "@/components/SocialLinks";
 import useTranslation from "@/hooks/useTranslation";
 import { getEventsByLocale } from "@/lib/getEvents";
 import { getEventJsonLd } from "@/lib/jsonld/eventJsonLd";
+import { renderMarkdownLinks } from "@/lib/renderMarkdownLinks";
 import styles from "@/styles/Event.module.css";
 import fs from "fs";
 import matter from "gray-matter";
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticPropsContext } from "next";
+
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -90,7 +92,11 @@ export default function Event({ event, locale, archived, similarEvents }: EventP
         <h2 className={styles.title}>{event.title}</h2>
         <div className={styles.meta}>
           {event.time}
-          {event.ort && ` | ${event.ort}`}
+          {event.ort && (
+            <span className={styles.ort}>
+              {renderMarkdownLinks(event.ort)}
+            </span>
+          )}
         </div>
         {archived && <div className={styles.archivedNotice}>⚠️ {t("events.archived_notice")}</div>}
         {event.image && (
@@ -152,15 +158,17 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const ruEvents = getEventsByLocale("ru");
   const deEvents = getEventsByLocale("de");
 
-  const paths = [
-    ...ruEvents.map((event) => ({ params: { slug: event.slug }, locale: "ru" })),
-    ...deEvents.map((event) => ({ params: { slug: event.slug }, locale: "de" })),
-  ];
+  const paths = [...ruEvents, ...deEvents]
+    .filter((event) => typeof event.slug === "string" && event.slug.trim() !== "")
+    .map((event) => ({
+      params: { slug: String(event.slug) },
+      locale: ruEvents.includes(event) ? "ru" : "de", // ✅ без event.locale
+    }));
 
   return { paths, fallback: "blocking" };
 };
 
-export const getStaticProps: GetStaticProps<EventProps> = async ({ params, locale }) => {
+export const getStaticProps = async ({ params, locale }: GetStaticPropsContext) => {
   if (!params?.slug || !locale) {
     return { notFound: true };
   }

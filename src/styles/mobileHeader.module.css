@@ -292,3 +292,88 @@
   right: 0;
   background: linear-gradient(to left, rgba(0, 0, 0, 0.05), transparent);
 }
+.searchIconBox {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.searchIconButton {
+  background: none;
+  border: none;
+  color: var(--heading-color);
+  cursor: pointer;
+  padding: 4px;
+  transition: transform 0.2s ease, color 0.2s ease;
+  margin-top: 10px;
+  width: 20px;
+  height: auto;
+ 
+}
+
+.searchIconButton:hover {
+  transform: scale(1.1);
+  color: var(--link-color);
+}
+
+/* Всплывающее поле */
+.searchPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(245, 239, 229, 0.95); /* полупрозрачный фон в стиле газеты */
+  -webkit-backdrop-filter: blur(3px); /* ✅ для Safari */
+  backdrop-filter: blur(3px);          /* ✅ для всех остальных */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px;
+  z-index: 3000;
+  animation: fadeIn 0.2s ease-in;
+}
+
+
+/* Контейнер внутри модального поиска */
+.searchPopupInner {
+  background: var(--alt-background);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  border-radius: 6px;
+  width: 90%;
+  max-width: 360px;
+}
+
+/* Кнопка закрытия */
+.closeSearchButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--heading-color);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.menuMainBox {
+  display: flex;
+  align-items: center;
+}
+.homeIconButton {
+  background: none;
+  border: none;
+  color: var(--heading-color);
+  cursor: pointer;
+  padding: 4px;
+  margin-right: 10px;
+  transition: transform 0.2s ease, color 0.2s ease;
+  width: 20px;
+  height: auto;
+}
+
+.homeIconButton:hover {
+  transform: scale(1.1);
+  color: var(--link-color);
+}

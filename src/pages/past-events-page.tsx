@@ -1,10 +1,10 @@
 import Seo from "@/components/Seo";
 import useTranslation from "@/hooks/useTranslation";
 import { Event, getPastEventsByLocale } from "@/lib/getEvents";
+import { renderMarkdownLinks } from "@/lib/renderMarkdownLinks";
 import styles from "@/styles/PastEvents.module.css";
 import { GetStaticProps } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 
 interface EventsProps {
@@ -17,38 +17,60 @@ export default function PastEvents({ events }: EventsProps) {
   return (
     <>
       <Head>
+        {/* Чтобы поисковики не индексировали архив */}
         <meta name="robots" content="noindex, follow" />
       </Head>
+
       <Seo title={t("meta.past_events_title")} description={t("meta.past_events_description")} />
+
       <h1 className={styles.visuallyHidden}>{t("meta.past_events_title")}</h1>
+
       <div className={styles.articleContainer}>
         <h2 className={styles.title}>{t("past_events_heading")}</h2>
+
         <div className={styles.eventCardBox}>
-          {events.map((event, index) => (
-            <Link
-              key={event.slug}
-              href={`/events/${event.slug}`}
-              className={`${styles.eventCard} ${index % 2 === 0 ? styles.evenCard : styles.oddCard}`}
-            >
-              <div className={styles.imageTitleWrapper}>
-                {/* {event.image && (
-                  <Image
-                    src={event.image}
-                    alt={event.title}
-                    width={158}
-                    height={90}
-                    className={styles.smallImage}
-                  />
-                )} */}
-                <div>
-                  <h3 className={styles.eventTitle}>{event.title}</h3>
-                  <p className={styles.eventDetails}>{event.time}</p>
-                </div>
-              </div>
-            </Link>
-          ))}
+          {events.length > 0 ? (
+            events.map((event, index) => {
+              const slug =
+                Array.isArray(event.slug) && event.slug.length > 0 ? event.slug[0] : event.slug;
+
+              return (
+                <Link
+                  key={Array.isArray(event.slug) ? event.slug.join("-") : event.slug}
+                  href={`/events/${Array.isArray(event.slug) ? event.slug[0] : event.slug}`}
+                  className={`${styles.eventCard} ${index % 2 === 0 ? styles.evenCard : styles.oddCard}`}
+                >
+                  <div className={styles.imageTitleWrapper}>
+                    {/* Можно вернуть изображение позже, если нужно */}
+                    {/* {event.image && (
+                      <Image
+                        src={event.image}
+                        alt={event.imageAlt || event.title}
+                        width={158}
+                        height={90}
+                        className={styles.smallImage}
+                      />
+                    )} */}
+                    <div>
+                      <h3 className={styles.eventTitle}>{event.title}</h3>
+                      {event.time && <p className={styles.eventDetails}>{event.time}</p>}
+                      {event.ort && (
+                        <p className={styles.box}>
+                          <span className={styles.label}>{t("event.ort")}:</span>
+                          {renderMarkdownLinks(event.ort, styles.valueLink, styles.value)}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </Link>
+              );
+            })
+          ) : (
+            <p className={styles.noEvents}>{t("past_events_empty")}</p>
+          )}
         </div>
-          <div className={styles.backToHome}>
+
+        <div className={styles.backToHome}>
           <Link href="/events-page" className={styles.backLink}>
             ⬅ {t("articles.back")}
           </Link>
@@ -71,6 +93,6 @@ export const getStaticProps: GetStaticProps<EventsProps> = async ({ locale }) =>
     props: {
       events: sorted,
     },
-    revalidate: 43200,
+    revalidate: 43200, // обновление каждые 12 часов
   };
 };

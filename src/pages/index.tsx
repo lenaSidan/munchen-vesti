@@ -1,5 +1,4 @@
 import BavarianWordOfTheWeek from "@/components/BavarianWordOfTheWeek";
-import ImportantNewsBlock from "@/components/ImportantNewsBlock";
 import MiniCalendarBlock from "@/components/MiniCalendarBlock";
 import Seo from "@/components/Seo";
 import SubscribeBox from "@/components/SubscribeBox";
@@ -55,7 +54,7 @@ const LazyShortNewsBlock = dynamic(() => import("@/components/ShortNewsBlock"), 
 const MiniPostcards = dynamic(() => import("@/components/MiniPostcards"), { ssr: false });
 
 // Указать колличество баварских слов
-const sampleWords = fullWords.slice(0, 4);
+const sampleWords = fullWords.slice(0, 2);
 
 export default function Home({
   mainEvent,
@@ -173,8 +172,13 @@ export default function Home({
             </Link>
             <ul className={styles.otherArticlesList}>
               {otherEvents.map((event) => (
-                <li key={event.slug} className={styles.articleLink}>
-                  <Link href={`/events/${event.slug}`}>
+                <li
+                  key={Array.isArray(event.slug) ? event.slug.join("-") : event.slug}
+                  className={styles.articleLink}
+                >
+                  <Link
+                    href={`/events-page#${Array.isArray(event.fileId) ? event.fileId[0] : event.fileId}`}
+                  >
                     {event.title} <span className={styles.articleDate}> | {event.time}</span>
                   </Link>
                 </li>

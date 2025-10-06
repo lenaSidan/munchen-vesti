@@ -9,7 +9,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useMemo, useState } from "react";
 
-// Расширенная типизация
+// Расширяем Event лёгкой версией: без content, но с excerptHtml
 type LiteEvent = Omit<Event, "content"> & { excerptHtml?: string };
 
 interface EventsProps {
@@ -21,33 +21,23 @@ export default function EventsPage({ events }: EventsProps) {
   const router = useRouter();
 
   const [selectedMonthYear, setSelectedMonthYear] = useState("");
-  const [expandedId, setExpandedId] = useState<string | null>(null);
-  const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [expandedSlug, setExpandedSlug] = useState<string | null>(null);
+  const [copiedSlug, setCopiedSlug] = useState<string | null>(null);
   const [eventContents, setEventContents] = useState<Record<string, string>>({});
 
-  // 🔹 Загрузка полного текста события (API по прежнему принимает slug-СТРОКУ)
-  async function loadContent(id: string) {
-    if (eventContents[id]) return;
-    const ev = events.find((e) => e.fileId === id || e.slug.includes(id));
-    if (!ev) return;
-
-    // Канонический параметр для API — первый slug
-    const canonicalSlug = ev.slug[0];
-
+  async function loadContent(slug: string) {
+    if (eventContents[slug]) return;
     try {
-      const res = await fetch(
-        `/api/event/${encodeURIComponent(canonicalSlug)}?locale=${router.locale}`
-      );
+      const res = await fetch(`/api/event/${encodeURIComponent(slug)}?locale=${router.locale}`);
       if (!res.ok) throw new Error(`API error ${res.status}`);
       const data = await res.json();
-      setEventContents((prev) => ({ ...prev, [id]: data.content as string }));
+      setEventContents((prev) => ({ ...prev, [slug]: data.content as string }));
     } catch (e) {
       console.error(e);
-      setEventContents((prev) => ({ ...prev, [id]: "<p>Не удалось загрузить текст.</p>" }));
+      setEventContents((prev) => ({ ...prev, [slug]: "<p>Не удалось загрузить текст.</p>" }));
     }
   }
 
-  // 🔹 Список доступных месяцев
   const monthYearOptions = useMemo(() => {
     const now = new Date();
     now.setDate(1);
@@ -73,7 +63,9 @@ export default function EventsPage({ events }: EventsProps) {
         }
         const y = cur.getFullYear();
         const mIdx = cur.getMonth();
-        const monthName = t(`months.${cur.toLocaleString("en", { month: "long" }).toLowerCase()}`);
+        const monthName = t(
+          `months.${cur.toLocaleString("en", { month: "long" }).toLowerCase()}`
+        );
         const value = `${y}-${String(mIdx + 1).padStart(2, "0")}`;
         if (!set.has(value)) {
           set.add(value);
@@ -86,19 +78,15 @@ export default function EventsPage({ events }: EventsProps) {
     return list.sort((a, b) => a.value.localeCompare(b.value));
   }, [events, t]);
 
-  // 🔹 Устанавливаем текущий месяц по умолчанию
   useEffect(() => {
     if (!selectedMonthYear && monthYearOptions.length > 0) {
       if (typeof window !== "undefined" && window.location.hash) return;
       const now = new Date();
       const cur = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
-      setSelectedMonthYear(
-        monthYearOptions.find((o) => o.value === cur)?.value || monthYearOptions[0].value
-      );
+      setSelectedMonthYear(monthYearOptions.find((o) => o.value === cur)?.value || monthYearOptions[0].value);
     }
   }, [monthYearOptions, selectedMonthYear]);
 
-  // 🔹 Фильтрация событий по месяцу
   const filteredEvents = useMemo(() => {
     if (!selectedMonthYear) return [];
     const [y, m] = selectedMonthYear.split("-").map(Number);
@@ -106,49 +94,40 @@ export default function EventsPage({ events }: EventsProps) {
       if (!ev.date) return false;
       const s = new Date(ev.date);
       const e = ev.endDate ? new Date(ev.endDate) : s;
-      const sM = s.getMonth() + 1,
-        sY = s.getFullYear();
-      const eM = e.getMonth() + 1,
-        eY = e.getFullYear();
+      const sM = s.getMonth() + 1, sY = s.getFullYear();
+      const eM = e.getMonth() + 1, eY = e.getFullYear();
       const startsBeforeOrIn = sY < y || (sY === y && sM <= m);
       const endsAfterOrIn = eY > y || (eY === y && eM >= m);
       return startsBeforeOrIn && endsAfterOrIn;
     });
   }, [selectedMonthYear, events]);
 
-  // 🔹 Обработка хэша в URL (fileId или любой из slug[])
+  // hash → выбрать месяц и проскроллить
   useEffect(() => {
     if (typeof window === "undefined" || !window.location.hash || !events?.length) return;
-    const hash = decodeURIComponent(window.location.hash.slice(1));
-    const ev = events.find((e) => e.fileId === hash || e.slug.includes(hash));
-
+    const slug = decodeURIComponent(window.location.hash.slice(1));
+    const ev = events.find((e) => e.slug === slug);
     if (!ev?.date) return;
     const d = new Date(ev.date);
     const target = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
     if (selectedMonthYear !== target) setSelectedMonthYear(target);
   }, [events]);
 
-  // 🔹 Scroll и раскрытие нужной карточки по хэшу
   useEffect(() => {
     if (typeof window === "undefined" || !window.location.hash) return;
     const raw = window.location.hash.slice(1);
     const decoded = decodeURIComponent(raw);
-
     const id = requestAnimationFrame(() => {
-      const match = events.find((e) => e.fileId === decoded || e.slug.includes(decoded));
-      if (!match) return;
-      const el = document.getElementById(match.fileId);
+      const el = document.getElementById(decoded) || document.getElementById(raw);
       if (el) {
         el.scrollIntoView({ behavior: "smooth", block: "start" });
-        setExpandedId(match.fileId);
-        loadContent(match.fileId);
+        setExpandedSlug(decoded);
+        loadContent(decoded);
       }
     });
-
     return () => cancelAnimationFrame(id);
   }, [selectedMonthYear, filteredEvents]);
 
-  // 🔹 Рендер ссылок в Markdown формате
   function renderMarkdownLinks(input: string, classNameLink?: string, classNameText?: string) {
     if (!input) return null;
     const md = /^\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)$/;
@@ -173,59 +152,16 @@ export default function EventsPage({ events }: EventsProps) {
     }
     return <span className={classNameText}>{input}</span>;
   }
-  useEffect(() => {
-    function goToFromHash() {
-      if (typeof window === "undefined") return;
-      const raw = window.location.hash?.slice(1);
-      if (!raw) return;
 
-      const key = decodeURIComponent(raw);
-      const match = events.find(
-        (e) => e.fileId === key || (Array.isArray(e.slug) ? e.slug.includes(key) : e.slug === key)
-      );
-      if (!match) return;
-
-      // выставляем месяц, если нужно
-      if (match.date) {
-        const d = new Date(match.date);
-        const target = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
-        setSelectedMonthYear((prev) => (prev === target ? prev : target));
-      }
-
-      // Надёжный скролл после рендера карточек
-      const tryScroll = (attempt = 0) => {
-        const el = document.getElementById(match.fileId);
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth", block: "start" });
-          setExpandedId(match.fileId);
-          loadContent(match.fileId);
-        } else if (attempt < 12) {
-          requestAnimationFrame(() => tryScroll(attempt + 1));
-        }
-      };
-      requestAnimationFrame(() => tryScroll());
-    }
-
-    window.addEventListener("hashchange", goToFromHash);
-    // Запускаем при первом заходе по прямой ссылке
-    goToFromHash();
-
-    return () => window.removeEventListener("hashchange", goToFromHash);
-  }, [events]);
   const formatDateForGoogle = (start: string, end?: string) => {
     const s = new Date(start);
     const e = end ? new Date(end) : new Date(s.getTime() + 60 * 60 * 1000);
-    const f = (d: Date) =>
-      d
-        .toISOString()
-        .replace(/[-:]|\.\d{3}/g, "")
-        .slice(0, 15) + "Z";
+    const f = (d: Date) => d.toISOString().replace(/[-:]|\.\d{3}/g, "").slice(0, 15) + "Z";
     return `${f(s)}/${f(e)}`;
   };
 
   const isCurrentMonthSelected = selectedMonthYear === monthYearOptions[0]?.value;
 
-  // 🔹 Основной рендер
   return (
     <>
       <Seo title={t("meta.events_title")} description={t("meta.events_description")} />
@@ -249,7 +185,6 @@ export default function EventsPage({ events }: EventsProps) {
           </div>
         )}
 
-        {/* 🔽 Фильтр по месяцам */}
         <div className={styles.monthSelectContainer}>
           <label htmlFor="monthSelect">{t("months.filter_by_month")}</label>
           <select
@@ -266,16 +201,14 @@ export default function EventsPage({ events }: EventsProps) {
           </select>
         </div>
 
-        {/* 🔽 Список событий */}
         <div className={styles.container}>
           {filteredEvents.map((event) => {
-            const fileKey = Array.isArray(event.fileId) ? event.fileId[0] : event.fileId;
-            const fullHtml = eventContents[fileKey];
+            const fullHtml = eventContents[event.slug];
             const htmlToShow =
-              expandedId === fileKey ? fullHtml || "<p>Loading…</p>" : event.excerptHtml || "";
+              expandedSlug === event.slug ? (fullHtml || "<p>Loading…</p>") : (event.excerptHtml || "");
 
             return (
-              <div key={event.fileId} id={event.fileId} className={styles.eventCard}>
+              <div key={event.slug} id={event.slug} className={styles.eventCard}>
                 <div className={styles.titleBox}>
                   <h2 className={styles.eventTitle}>{event.title}</h2>
                 </div>
@@ -300,18 +233,19 @@ export default function EventsPage({ events }: EventsProps) {
                         {renderMarkdownLinks(event.link, styles.valueLink, styles.value)}
                       </p>
                     )}
+
                     <button
                       type="button"
                       onClick={() => {
-                        if (typeof window === "undefined" || !event.fileId) return;
+                        if (typeof window === "undefined" || !event.slug) return;
                         const base = `${window.location.origin}/${router.locale}/events-page`;
-                        const url = `${base}#${encodeURIComponent(event.fileId)}`;
+                        const url = `${base}#${encodeURIComponent(event.slug)}`;
                         if (navigator.clipboard && window.isSecureContext) {
                           navigator.clipboard
                             .writeText(url)
                             .then(() => {
-                              setCopiedId(event.fileId);
-                              setTimeout(() => setCopiedId(null), 3000);
+                              setCopiedSlug(event.slug!);
+                              setTimeout(() => setCopiedSlug(null), 3000);
                             })
                             .catch(console.error);
                         }
@@ -350,10 +284,7 @@ export default function EventsPage({ events }: EventsProps) {
                             )}&location=${encodeURIComponent(event.ort || "")}&start=${encodeURIComponent(
                               new Date(event.date).toISOString()
                             )}&end=${encodeURIComponent(
-                              new Date(
-                                event.endDate ||
-                                  new Date(new Date(event.date).getTime() + 60 * 60 * 1000)
-                              ).toISOString()
+                              new Date(event.endDate || new Date(new Date(event.date).getTime() + 60 * 60 * 1000)).toISOString()
                             )}`}
                             className={styles.toggleButton_ics}
                           >
@@ -382,15 +313,15 @@ export default function EventsPage({ events }: EventsProps) {
                       type="button"
                       className={styles.toggleButton}
                       onClick={() => {
-                        if (expandedId === event.fileId) {
-                          setExpandedId(null);
+                        if (expandedSlug === event.slug) {
+                          setExpandedSlug(null);
                         } else {
-                          setExpandedId(event.fileId);
-                          loadContent(event.fileId);
+                          setExpandedSlug(event.slug);
+                          loadContent(event.slug);
                         }
                       }}
                     >
-                      {expandedId === event.fileId ? t("menu.less") : t("menu.more")}
+                      {expandedSlug === event.slug ? t("menu.less") : t("menu.more")}
                     </button>
                   </div>
 
@@ -403,7 +334,7 @@ export default function EventsPage({ events }: EventsProps) {
           })}
         </div>
 
-        {copiedId && <div className={styles.copyToast}>❖ {t("event.link_copied")}</div>}
+        {copiedSlug && <div className={styles.copyToast}>❖ {t("event.link_copied")}</div>}
 
         <div className={styles.monthSelectContainer}>
           <label htmlFor="monthSelect">{t("months.filter_by_month")}</label>
@@ -442,6 +373,7 @@ export const getStaticProps: GetStaticProps<EventsProps> = async (context) => {
   const raw = getEventsByLocale(locale);
   const now = new Date();
 
+  // Только актуальные события
   const active = raw.filter((e) => {
     if (!e.date) return false;
     const s = new Date(e.date);
@@ -449,8 +381,11 @@ export const getStaticProps: GetStaticProps<EventsProps> = async (context) => {
     return end >= now;
   });
 
-  const sorted = active.sort((a, b) => new Date(a.date!).getTime() - new Date(b.date!).getTime());
+  const sorted = active.sort(
+    (a, b) => new Date(a.date!).getTime() - new Date(b.date!).getTime()
+  );
 
+  // Преобразуем markdown → HTML, берём ТОЛЬКО первый абзац как тизер
   const { remark } = await import("remark");
   const remarkGfm = (await import("remark-gfm")).default;
   const remarkRehype = (await import("remark-rehype")).default;
@@ -472,8 +407,7 @@ export const getStaticProps: GetStaticProps<EventsProps> = async (context) => {
 
   const events: LiteEvent[] = await Promise.all(
     sorted.map(async (e) => ({
-      slug: e.slug, // ← массив slug остаётся в props
-      fileId: e.fileId,
+      slug: e.slug,
       title: e.title,
       date: e.date,
       endDate: e.endDate,

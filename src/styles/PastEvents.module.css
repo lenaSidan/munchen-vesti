@@ -74,7 +74,9 @@
   text-decoration: none;
   text-transform: none;
 }
-
+.label {
+  margin-right: 5px;
+}
 .eventDetails {
   font-size: 0.95rem;
   font-family: monospace;

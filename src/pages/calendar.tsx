@@ -1,6 +1,7 @@
 import Seo from "@/components/Seo";
 import useTranslation from "@/hooks/useTranslation";
 import { Event, getEventsByLocale } from "@/lib/getEvents";
+import { renderMarkdownLinks } from "@/lib/renderMarkdownLinks";
 import styles from "@/styles/CalendarPage.module.css";
 import { GetStaticProps } from "next";
 import Link from "next/link";
@@ -198,13 +199,19 @@ export default function CalendarPage({ events }: CalendarProps) {
               <div className={styles.eventModalMobile} onClick={(e) => e.stopPropagation()}>
                 <div className={styles.modalBox}>
                   <p className={styles.modalTitle}>{selectedEvent.shortTitle}</p>
-                  {selectedEvent.ort && <p className={styles.modalOrt}>{selectedEvent.ort}</p>}
-                  {selectedEvent.ort && <p className={styles.modalTime}>{selectedEvent.time}</p>}
+                  {selectedEvent.ort && (
+                    <p className={styles.modalOrt}>
+                      {renderMarkdownLinks(
+                        selectedEvent.ort,
+                        styles.modalOrtLink,
+                        styles.modalOrtText
+                      )}
+                    </p>
+                  )}
+                  {selectedEvent.time && <p className={styles.modalTime}>{selectedEvent.time}</p>}
                   <Link
                     href={`/events/${selectedEvent.slug}`}
-                    onClick={() => {
-                      sessionStorage.setItem("fromCalendar", "true");
-                    }}
+                    onClick={() => sessionStorage.setItem("fromCalendar", "true")}
                   >
                     {t("articles.more")}
                   </Link>
@@ -228,20 +235,27 @@ export default function CalendarPage({ events }: CalendarProps) {
             >
               <div className={styles.modalBox}>
                 <p className={styles.modalTitle}>{selectedEvent.shortTitle}</p>
-                {selectedEvent.ort && <p className={styles.modalOrt}>{selectedEvent.ort}</p>}
-                {selectedEvent.ort && <p className={styles.modalTime}>{selectedEvent.time}</p>}
+                {selectedEvent.ort && (
+                  <p className={styles.modalOrt}>
+                    {renderMarkdownLinks(
+                      selectedEvent.ort,
+                      styles.modalOrtLink,
+                      styles.modalOrtText
+                    )}
+                  </p>
+                )}
+                {selectedEvent.time && <p className={styles.modalTime}>{selectedEvent.time}</p>}
                 <Link
                   className={styles.modalLink}
                   href={`/events/${selectedEvent.slug}`}
-                  onClick={() => {
-                    sessionStorage.setItem("fromCalendar", "true");
-                  }}
+                  onClick={() => sessionStorage.setItem("fromCalendar", "true")}
                 >
                   {t("articles.more")}
                 </Link>
               </div>
             </div>
           ))}
+
         <div className={styles.backToHome}>
           <Link href="/" className={styles.backLink}>
             ⬅ {t("weather.back_to_home")}
