@@ -1,56 +1,37 @@
-import LikeButton from "@/components/LikeButton";
-import PageHead from "@/components/PageHead";
-import useTranslation from "@/hooks/useTranslation";
-import styles from "@/styles/Places.module.css";
-import fs from "fs";
-import matter from "gray-matter";
 import { GetStaticPaths, GetStaticProps } from "next";
+import fs from "fs";
+import path from "path";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import path from "path";
-import rehypeExternalLinks from "rehype-external-links";
-import rehypeRaw from "rehype-raw";
-import rehypeStringify from "rehype-stringify";
-import { remark } from "remark";
-import remarkGfm from "remark-gfm";
-import remarkRehype from "remark-rehype";
+import useTranslation from "@/hooks/useTranslation";
+import PageHead from "@/components/PageHead";
+import styles from "@/styles/Places.module.css";
+import { getPlaceBySlug, PlaceArticle } from "@/lib/getPlaceBySlug";
 
-interface PageProps {
-  category: string;
-  slug: string;
-  title: string;
-  content: string;
-  image?: string;
-  imageAlt?: string;
+interface PlacePageProps {
+  article: PlaceArticle;
+  locale: string;
 }
 
-export default function PlaceArticle({
-  category,
-  slug,
-  title,
-  content,
-  image,
-  imageAlt,
-}: PageProps) {
+export default function PlaceArticlePage({ article, locale }: PlacePageProps) {
   const t = useTranslation();
-  const { locale } = useRouter();
 
   return (
     <>
       <PageHead
-        title={`${title} – ${t("meta.default_title")}`}
+        title={`${article.title} – ${t("meta.default_title")}`}
         description={t("meta.default_description")}
-        url={`https://munchen-vesti.de/${locale}/places/${category}/${slug}`}
+        url={`https://munchen-vesti.de/${locale}/places/${article.category}/${article.slug}`}
       />
 
       <div className={styles.container}>
-        <h2 className={styles.title}>{title}</h2>
-        {image && (
+        <h2 className={styles.title}>{article.title}</h2>
+
+        {article.image && (
           <div className={styles.headerBox}>
             <Image
-              src={image}
-              alt={imageAlt || title}
+              src={article.image}
+              alt={article.imageAlt || article.title}
               width={600}
               height={342}
               className={styles.headerImage}
@@ -60,18 +41,15 @@ export default function PlaceArticle({
 
         <div
           className={`${styles.content} ${styles.places}`}
-          dangerouslySetInnerHTML={{ __html: content }}
+          dangerouslySetInnerHTML={{ __html: article.content }}
         />
 
-        {/* <div className={styles.likeContainer}>
-          <LikeButton slug={`${category}--${slug}`} />
-        </div> */}
         <div className={styles.readMoreContainer}>
           <div className={styles.decorativeLine}>
             <span className={styles.left}>⊱❧</span>
             <span className={styles.right}>⊱❧</span>
           </div>
-          <Link href={`/places/${category}`} className={styles.back}>
+          <Link href={`/places/${article.category}`} className={styles.back}>
             {t("articles.back")}
           </Link>
           <div className={`${styles.decorativeLine} ${styles.bottom}`}>
@@ -87,7 +65,7 @@ export default function PlaceArticle({
 export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
   const baseDir = path.join(process.cwd(), "public/places");
   const categories = fs.readdirSync(baseDir);
-  const paths = [];
+  const paths: { params: { category: string; slug: string }; locale: string }[] = [];
 
   for (const category of categories) {
     const dir = path.join(baseDir, category);
@@ -97,65 +75,24 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
     for (const file of files) {
       if (!file.endsWith(".md")) continue;
 
-      const nameParts = file.replace(".md", "").split(".");
-      const fileLocale = nameParts.pop();
-      const slug = nameParts.join(".");
-
-      if (fileLocale && locales?.includes(fileLocale)) {
-        paths.push({
-          params: { category, slug },
-          locale: fileLocale,
-        });
+      const [name, locale] = file.replace(".md", "").split(".");
+      if (locales?.includes(locale)) {
+        paths.push({ params: { category, slug: name }, locale });
       }
     }
   }
 
-  return { paths, fallback: false };
+  return { paths, fallback: "blocking" };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
-  try {
-    const { category, slug } = params || {};
-    if (
-      typeof category !== "string" ||
-      typeof slug !== "string" ||
-      typeof locale !== "string"
-    ) {
-      return { notFound: true };
-    }
+export const getStaticProps: GetStaticProps<PlacePageProps> = async ({ params, locale }) => {
+  if (!params?.category || !params?.slug || !locale) return { notFound: true };
 
-    const filePath = path.join(
-      process.cwd(),
-      "public/places",
-      category,
-      `${slug}.${locale}.md`
-    );
+  const article = await getPlaceBySlug(params.category as string, params.slug as string, locale);
+  if (!article) return { notFound: true };
 
-    if (!fs.existsSync(filePath)) return { notFound: true };
-
-    const raw = fs.readFileSync(filePath, "utf8");
-    const { data, content } = matter(raw);
-
-    const processedContent = await remark()
-      .use(remarkGfm)
-      .use(remarkRehype, { allowDangerousHtml: true })
-      .use(rehypeRaw)
-      .use(rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] })
-      .use(rehypeStringify)
-      .process(content);
-
-    return {
-      props: {
-        category,
-        slug,
-        title: data.title || slug,
-        image: data.image || null,
-        imageAlt: data.imageAlt || null,
-        content: processedContent.toString(),
-      },
-    };
-  } catch (error) {
-    console.error("❌ Error in getStaticProps:", error);
-    return { notFound: true }; // вместо 500 отдаём 404
-  }
+  return {
+    props: { article, locale },
+    revalidate: 600,
+  };
 };

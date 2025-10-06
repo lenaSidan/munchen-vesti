@@ -1,44 +1,18 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
-import { remark } from "remark";
-import remarkGfm from "remark-gfm";
-import remarkRehype from "remark-rehype";
-import rehypeStringify from "rehype-stringify";
-import rehypeExternalLinks from "rehype-external-links";
 import useTranslation from "@/hooks/useTranslation";
 import Image from "next/image";
 import Link from "next/link";
 import PageHead from "@/components/PageHead";
 import { getPostcardJsonLd } from "@/lib/jsonld/getPostcardJsonLd";
 import styles from "@/styles/PostcardSingle.module.css";
-import LikeButton from "@/components/LikeButton";
 import SocialLinks from "@/components/SocialLinks";
-
-interface PostcardItem {
-  slug: string;
-  title: string;
-  content: string;
-  seoTitle?: string;
-  seoDescription?: string;
-  image: string;
-}
+import { getPostcardBySlug, FullPostcard } from "@/lib/getPostcardBySlug";
 
 interface PostcardProps {
-  postcard: PostcardItem;
+  postcard: FullPostcard;
   locale: string;
-}
-
-// Функция генерации версии для картинки
-function getImageWithVersion(imagePath: string) {
-  const fullPath = path.join(process.cwd(), "public", imagePath.replace(/^\/+/, ""));
-  if (fs.existsSync(fullPath)) {
-    const stats = fs.statSync(fullPath);
-    const timestamp = stats.mtime.getTime();
-    return `${imagePath}?v=${timestamp}`;
-  }
-  return imagePath;
 }
 
 export default function Postcard({ postcard, locale }: PostcardProps) {
@@ -72,11 +46,12 @@ export default function Postcard({ postcard, locale }: PostcardProps) {
             height={375}
             className={styles.image}
           />
-          <div className={styles.text} dangerouslySetInnerHTML={{ __html: postcard.content }} />
+          <div
+            className={styles.text}
+            dangerouslySetInnerHTML={{ __html: postcard.content }}
+          />
         </div>
-         {/* <div className={styles.likeContainer}>
-          <LikeButton slug={postcard.slug} />
-        </div> */}
+
         <div className={styles.readMoreContainer}>
           <div className={styles.decorativeLine}>
             <span className={styles.left}>⊱❧</span>
@@ -91,6 +66,7 @@ export default function Postcard({ postcard, locale }: PostcardProps) {
           </div>
         </div>
       </div>
+
       <div className={styles.socialLinks}>
         <SocialLinks />
       </div>
@@ -102,51 +78,24 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const dir = path.join(process.cwd(), "public/postcards-md");
   const files = fs.readdirSync(dir);
 
-  const paths = files.map((file) => {
-    const [slug, locale] = file.replace(".md", "").split(".");
-    return { params: { slug }, locale };
-  });
+  const paths = files
+    .filter((f) => f.endsWith(".md"))
+    .map((file) => {
+      const [slug, locale] = file.replace(".md", "").split(".");
+      return { params: { slug }, locale };
+    });
 
-  return {
-    paths,
-    fallback: false,
-  };
+  return { paths, fallback: "blocking" };
 };
 
 export const getStaticProps: GetStaticProps<PostcardProps> = async ({ params, locale }) => {
   if (!params?.slug || !locale) return { notFound: true };
 
-  const filePath = path.join(process.cwd(), "public/postcards-md", `${params.slug}.${locale}.md`);
-  if (!fs.existsSync(filePath)) return { notFound: true };
-
-  const fileContent = fs.readFileSync(filePath, "utf-8");
-  const { data, content } = matter(fileContent);
-
-  const processedContent = await remark()
-    .use(remarkGfm)
-    .use(remarkRehype)
-    .use(rehypeExternalLinks, {
-      target: "_blank",
-      rel: ["noopener", "noreferrer"],
-    })
-    .use(rehypeStringify)
-    .process(content);
-
-  // Генерация версии для картинки
-  const imagePath = data.image || `/postcards/full/${params.slug}.webp`;
-  const versionedImage = getImageWithVersion(imagePath);
+  const postcard = await getPostcardBySlug(params.slug as string, locale);
+  if (!postcard) return { notFound: true };
 
   return {
-    props: {
-      postcard: {
-        slug: params.slug as string,
-        title: data.title || params.slug,
-        seoTitle: data.seoTitle || "",
-        seoDescription: data.seoDescription || "",
-        content: processedContent.toString(),
-        image: versionedImage,
-      },
-      locale,
-    },
+    props: { postcard, locale },
+    revalidate: 600,
   };
 };

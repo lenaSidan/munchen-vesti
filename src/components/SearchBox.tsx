@@ -45,7 +45,8 @@ export default function SearchBox({ onClose }: SearchBoxProps) {
       const slugMatch = Array.isArray(item.slug)
         ? item.slug.some((s) => s.toLowerCase().includes(q))
         : item.slug.toLowerCase().includes(q);
-      const fileMatch = item.fileId.toLowerCase().includes(q);
+      const fileMatch = item.fileId ? item.fileId.toLowerCase().includes(q) : false;
+
       return titleMatch || slugMatch || fileMatch;
     });
 
@@ -53,22 +54,23 @@ export default function SearchBox({ onClose }: SearchBoxProps) {
   }, [query, allItems]);
 
   // 🔹 Переход по клику
-function handleResultClick(e: React.MouseEvent, item: SearchItem) {
-  e.preventDefault();
+  function handleResultClick(e: React.MouseEvent, item: SearchItem) {
+    e.preventDefault();
 
-  const locale = router.locale || "ru";
-  const fullUrl = `/${locale}/events-page#${encodeURIComponent(item.fileId)}`;
+    const locale = router.locale || "ru";
 
-  // hash меняется → сработает наш listener на странице событий
-  router.push(fullUrl, undefined, { shallow: true });
+    // Если есть fileId → это мероприятие (events)
+    const fullUrl = item.fileId
+      ? `/${locale}/events-page#${encodeURIComponent(item.fileId)}`
+      : item.url; // у других категорий уже есть правильная ссылка
 
-  // UX: чистим и закрываем
-  setQuery("");
-  setResults([]);
-  onClose?.();
-}
+    router.push(fullUrl, undefined, { shallow: true });
 
-
+    // UX — очистить и закрыть поиск
+    setQuery("");
+    setResults([]);
+    onClose?.();
+  }
 
   return (
     <div className={styles.searchBox}>

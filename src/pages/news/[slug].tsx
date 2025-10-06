@@ -1,49 +1,28 @@
-import LikeButton from "@/components/LikeButton";
 import PageHead from "@/components/PageHead";
 import SocialLinks from "@/components/SocialLinks";
 import useTranslation from "@/hooks/useTranslation";
 import { getNewsJsonLd } from "@/lib/jsonld/getNewsJsonLd";
-import styles from "@/styles/NewsPage.module.css";
-import fs from "fs";
-import matter from "gray-matter";
+import { getNewsBySlug, FullNewsItem } from "@/lib/getNewsBySlug";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import path from "path";
-import rehypeExternalLinks from "rehype-external-links";
-import rehypeStringify from "rehype-stringify";
-import { remark } from "remark";
-import remarkGfm from "remark-gfm";
-import remarkRehype from "remark-rehype";
-
-interface NewsItem {
-  slug: string;
-  title: string;
-  date?: string;
-  image?: string;
-  imageAlt?: string;
-  content: string;
-  seoTitle?: string;
-  seoDescription?: string;
-  excerpt?: string;
-}
+import fs from "fs";
+import styles from "@/styles/NewsPage.module.css";
 
 interface NewsProps {
-  news: NewsItem;
+  news: FullNewsItem;
   locale: string;
 }
 
-export default function NewsPage({ news }: NewsProps) {
+export default function NewsPage({ news, locale }: NewsProps) {
   const t = useTranslation();
-  const { locale } = useRouter();
-  const fullUrl = `https://munchen-vesti.de/${locale}/news/${news.slug}`;
-  const canonicalUrl = `https://munchen-vesti.de/${locale === "de" ? "de/" : "ru/"}news/${news.slug}`;
 
+  const canonicalUrl = `https://munchen-vesti.de/${locale === "de" ? "de/" : "ru/"}news/${news.slug}`;
   const jsonLd = getNewsJsonLd({
     title: news.title,
     description: news.seoDescription,
-    url: fullUrl,
+    url: canonicalUrl,
     image: news.image,
     datePublished: news.date,
   });
@@ -83,11 +62,12 @@ export default function NewsPage({ news }: NewsProps) {
               sizes="(max-width: 768px) 100vw, 600px"
             />
           )}
-          <div className={styles.content} dangerouslySetInnerHTML={{ __html: news.content }} />
+          <div
+            className={styles.content}
+            dangerouslySetInnerHTML={{ __html: news.content }}
+          />
         </div>
-        {/* <div className={styles.likeContainer}>
-          <LikeButton slug={news.slug} />
-        </div> */}
+
         <div className={styles.readMoreContainer}>
           <div className={styles.decorativeLine}>
             <span className={styles.left}>⊱❧</span>
@@ -102,6 +82,7 @@ export default function NewsPage({ news }: NewsProps) {
           </div>
         </div>
       </div>
+
       <div className={styles.socialLinks}>
         <SocialLinks />
       </div>
@@ -113,46 +94,25 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const newsDir = path.join(process.cwd(), "public/news");
   const files = fs.readdirSync(newsDir);
 
-  const paths = files.map((file) => {
-    const [slug, locale] = file.replace(".md", "").split(".");
-    return { params: { slug }, locale };
-  });
+  const paths = files
+    .map((f) => f.replace(/\.(ru|de)\.md$/, ""))
+    .filter((slug, i, self) => self.indexOf(slug) === i)
+    .flatMap((slug) => [
+      { params: { slug }, locale: "ru" },
+      { params: { slug }, locale: "de" },
+    ]);
 
-  return { paths, fallback: false };
+  return { paths, fallback: "blocking" };
 };
 
 export const getStaticProps: GetStaticProps<NewsProps> = async ({ params, locale }) => {
   if (!params?.slug || !locale) return { notFound: true };
 
-  const filePath = path.join(process.cwd(), "public/news", `${params.slug}.${locale}.md`);
-  if (!fs.existsSync(filePath)) return { notFound: true };
-
-  const fileContent = fs.readFileSync(filePath, "utf-8");
-  const { data, content } = matter(fileContent);
-
-  const processedContent = await remark()
-    .use(remarkGfm)
-    .use(remarkRehype)
-    .use(rehypeExternalLinks, {
-      target: "_blank",
-      rel: ["noopener", "noreferrer"],
-    })
-    .use(rehypeStringify)
-    .process(content);
+  const news = await getNewsBySlug(params.slug as string, locale);
+  if (!news) return { notFound: true };
 
   return {
-    props: {
-      news: {
-        slug: params.slug as string,
-        title: data.title || "",
-        date: data.date ? String(data.date) : "",
-        image: data.image || "",
-        imageAlt: data.imageAlt || "",
-        seoTitle: data.seoTitle || "",
-        seoDescription: data.seoDescription || "",
-        content: processedContent.toString(),
-      },
-      locale,
-    },
+    props: { news, locale },
+    revalidate: 600,
   };
 };

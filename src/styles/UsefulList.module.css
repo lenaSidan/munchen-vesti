@@ -2,7 +2,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 30px 20px;
-background-color: var(--alt-background-light);
+background-color: var(--alt-background);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
   color: var(--text-color);
   transition:
@@ -19,7 +19,7 @@ background-color: var(--alt-background-light);
 
 .title {
   color: var(--link-color);
-  background-color: var(--button-bg2);
+  background-color: var(--alt-background2);
   text-align: center;
   font-size: 1.3rem;
   padding: 10px 0;

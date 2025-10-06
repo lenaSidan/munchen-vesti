@@ -3,38 +3,20 @@ import SocialLinksUseful from "@/components/SocialLinksUseful";
 import SubscribeBox from "@/components/SubscribeBox";
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/UsefulPage.module.css";
-
-import fs from "fs";
-import matter from "gray-matter";
-import { GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import path from "path";
 import { useState } from "react";
-import rehypeStringify from "rehype-stringify";
-import { remark } from "remark";
-import remarkGfm from "remark-gfm";
-import remarkRehype from "remark-rehype";
-
-type FaqItem = {
-  slug: string;
-  title: string;
-  date?: string;
-  image?: string;
-  imageAlt?: string;
-  summaryHtml: string;
-  category?: string;
-};
+import { GetStaticProps } from "next";
+import { getUsefulByLocale, UsefulItem } from "@/lib/getUseful";
 
 interface UsefulListProps {
-  items: FaqItem[];
+  items: UsefulItem[];
 }
 
 export default function UsefulPage({ items }: UsefulListProps) {
   const t = useTranslation();
   const { locale } = useRouter();
-
   const [selectedCategory, setSelectedCategory] = useState<string>("");
 
   const categories = [
@@ -46,9 +28,9 @@ export default function UsefulPage({ items }: UsefulListProps) {
     { value: "travel", label: t("useful.category.travel") },
   ];
 
- const filteredItems = selectedCategory
-  ? items.filter((it) => it.category?.includes(selectedCategory))
-  : items;
+  const filteredItems = selectedCategory
+    ? items.filter((it) => it.category?.includes(selectedCategory))
+    : items;
 
   const heroHeading = t("useful.authorBlock.heading");
   const heroName = t("useful.authorBlock.authorName");
@@ -136,54 +118,12 @@ export default function UsefulPage({ items }: UsefulListProps) {
   );
 }
 
-async function convertMarkdownToHtml(markdown: string): Promise<string> {
-  const processed = await remark()
-    .use(remarkGfm)
-    .use(remarkRehype)
-    .use(rehypeStringify)
-    .process(markdown);
-  return processed.toString();
-}
-
 export const getStaticProps: GetStaticProps<UsefulListProps> = async ({ locale }) => {
-  const currentLocale = locale || "ru";
-  const dir = path.join(process.cwd(), "public", "useful");
+  const items = await getUsefulByLocale(locale || "ru");
 
-  if (!fs.existsSync(dir)) {
-    return { props: { items: [] } };
-  }
-
-  const files = fs.readdirSync(dir).filter((f) => f.endsWith(`.${currentLocale}.md`));
-
-  const items: FaqItem[] = await Promise.all(
-    files.map(async (filename) => {
-      const filePath = path.join(dir, filename);
-      const raw = fs.readFileSync(filePath, "utf-8");
-      const { data, content } = matter(raw);
-
-      const slug = filename.replace(`.${currentLocale}.md`, "");
-      const summarySrc = (data.summary || data.description || "").toString().trim();
-
-      let summaryHtml = "";
-      if (summarySrc) {
-        summaryHtml = await convertMarkdownToHtml(summarySrc);
-      } else {
-        const firstParagraph =
-          (content.split("\n").find((line) => line.trim()) || "").slice(0, 200) + "...";
-        summaryHtml = await convertMarkdownToHtml(firstParagraph);
-      }
-
-      return {
-        slug,
-        title: data.title || "Untitled",
-        date: data.date || "",
-        image: data.image || "",
-        imageAlt: data.imageAlt || data.title || "",
-        summaryHtml,
-        category: data.category || "",
-      };
-    })
-  );
-
-  return { props: { items } };
+  return {
+    props: { items },
+    revalidate: 600,
+  };
 };
+           

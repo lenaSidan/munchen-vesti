@@ -1,78 +1,46 @@
-import LikeButton from "@/components/LikeButton";
-import PageHead from "@/components/PageHead";
-import useTranslation from "@/hooks/useTranslation";
-import styles from "@/styles/Geocaching.module.css";
-import fs from "fs";
-import matter from "gray-matter";
 import { GetStaticPaths, GetStaticProps } from "next";
+import fs from "fs";
+import path from "path";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import path from "path";
-import rehypeExternalLinks from "rehype-external-links";
-import rehypeRaw from "rehype-raw";
-import rehypeStringify from "rehype-stringify";
-import { remark } from "remark";
-import remarkGfm from "remark-gfm";
-import remarkRehype from "remark-rehype";
-
-interface PageMeta {
-  slug: string;
-  title: string;
-  description: string;
-  image?: string;
-}
+import useTranslation from "@/hooks/useTranslation";
+import PageHead from "@/components/PageHead";
+import styles from "@/styles/Geocaching.module.css";
+import { getGeocacheBySlug, GeocachePage } from "@/lib/getGeocacheBySlug";
 
 interface GeocachingPageProps {
-  slug: string;
-  title: string;
-  image?: string;
-  imageAlt?: string;
-  content: string;
-  otherPages: PageMeta[];
+  page: GeocachePage;
+  locale: string;
 }
 
-export default function GeocachingPage({
-  slug,
-  title,
-  image,
-  imageAlt,
-  content,
-  otherPages,
-}: GeocachingPageProps) {
+export default function GeocachingPage({ page, locale }: GeocachingPageProps) {
   const t = useTranslation();
-  const { locale } = useRouter();
 
   return (
     <>
       <PageHead
-        title={`${title} – ${t("meta.default_title")}`}
+        title={`${page.title} – ${t("meta.default_title")}`}
         description={t("meta.default_description")}
-        url={`https://munchen-vesti.de/${locale}/geocaching/${slug}`}
+        url={`https://munchen-vesti.de/${locale}/geocaching/${page.slug}`}
       />
 
       <div className={styles.container}>
-        <h2 className={styles.title}>{title}</h2>
+        <h2 className={styles.title}>{page.title}</h2>
 
         <div
           className={`${styles.content} ${styles.geocaching}`}
-          dangerouslySetInnerHTML={{ __html: content }}
+          dangerouslySetInnerHTML={{ __html: page.content }}
         />
 
-        {image && (
+        {page.image && (
           <Image
-            src={image}
-            alt={imageAlt || title}
+            src={page.image}
+            alt={page.imageAlt || page.title}
             className={styles.image}
             width={200}
             height={200}
-            sizes="(max-width: 768px) 100vw, 600px"
           />
         )}
-
-        {/* <div className={styles.likeContainer}>
-          <LikeButton slug={slug} />
-        </div> */}
 
         <div className={styles.backContainer}>
           <div className={styles.decorativeLine}>
@@ -88,24 +56,18 @@ export default function GeocachingPage({
           </div>
         </div>
 
-        {otherPages.length > 0 && (
+        {page.otherPages.length > 0 && (
           <>
             <div className={styles.titleOther}>{t("geocaching.more_geocaching")}</div>
             <div className={styles.cardGrid}>
-              {otherPages.map((page) => (
-                <Link key={page.slug} href={`/geocaching/${page.slug}`} className={styles.card}>
-                  {page.image && (
-                    <Image
-                      src={page.image}
-                      alt={page.title}
-                      width={70}
-                      height={70}
-                      className={styles.cardImage}
-                    />
+              {page.otherPages.map((p) => (
+                <Link key={p.slug} href={`/geocaching/${p.slug}`} className={styles.card}>
+                  {p.image && (
+                    <Image src={p.image} alt={p.title} width={70} height={70} className={styles.cardImage} />
                   )}
                   <div className={styles.cardText}>
-                    <div className={styles.cardTitle}>{page.title}</div>
-                    <div className={styles.cardDescription}>{page.description}</div>
+                    <div className={styles.cardTitle}>{p.title}</div>
+                    <div className={styles.cardDescription}>{p.description}</div>
                   </div>
                 </Link>
               ))}
@@ -121,106 +83,24 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const dir = path.join(process.cwd(), "public/geocaching");
   const files = fs.readdirSync(dir);
 
-  const paths = files.map((file) => {
-    const [slug, locale] = file.replace(".md", "").split(".");
-    return { params: { slug }, locale };
-  });
+  const paths = files
+    .filter((f) => f.endsWith(".md"))
+    .map((file) => {
+      const [slug, locale] = file.replace(".md", "").split(".");
+      return { params: { slug }, locale };
+    });
 
-  return { paths, fallback: false };
+  return { paths, fallback: "blocking" };
 };
 
 export const getStaticProps: GetStaticProps<GeocachingPageProps> = async ({ params, locale }) => {
   if (!params?.slug || !locale) return { notFound: true };
 
-  const currentSlug = params.slug as string;
-  const currentFilePath = path.join(
-    process.cwd(),
-    "public/geocaching",
-    `${currentSlug}.${locale}.md`
-  );
-
-  if (!fs.existsSync(currentFilePath)) return { notFound: true };
-
-  const fileContent = fs.readFileSync(currentFilePath, "utf8");
-  const { data, content } = matter(fileContent);
-
-  const processedContent = await remark()
-    .use(remarkGfm)
-    .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeRaw)
-    .use(rehypeExternalLinks, {
-      target: "_blank",
-      rel: ["noopener", "noreferrer"],
-    })
-    .use(rehypeStringify)
-    .process(content);
-
-  // список всех карточек
-  const allPages: PageMeta[] = [
-    {
-      slug: "sightseeing-caches",
-      title:
-        locale === "de" ? "Tarnungen bei Sehenswürdigkeiten" : "Тайники у достопримечательностей",
-      description: locale === "de" ? "Erforschen Sie München neu." : "Исследуйте Мюнхен по-новому.",
-      image: "/geocaching_images/sightseeing.webp",
-    },
-    {
-      slug: "night-adventures",
-      title: locale === "de" ? "Nächtliche Abenteuer (N8@MUC)" : "Ночные приключения (N8@MUC)",
-      description:
-        locale === "de"
-          ? "Wenn die Stadt schläft, erwachen unsere Caches zum Leben."
-          : "Фонарик, темнота, и вы — как в квесте. ",
-      image: "/geocaching_images/night.webp",
-    },
-    {
-      slug: "hiking-caches",
-      title: locale === "de" ? "Wander-Caches" : "Прогулки и походы",
-      description:
-        locale === "de"
-          ? "Geocaching entlang von Waldwegen und Flüssen."
-          : "Тайники на выходных: леса, тропы, поля, реки.",
-      image: "/geocaching_images/hiking.webp",
-    },
-    {
-      slug: "creative-hides",
-      title: locale === "de" ? "Kreative Verstecke" : "Самые необычные тайники",
-      description:
-        locale === "de"
-          ? "Verblüffende Orte und Rätsel – für erfahrene Geocacher."
-          : "Тайники, которые удивят даже профи.",
-      image: "/geocaching_images/highlights.webp",
-    },
-    {
-      slug: "family-caching",
-      title: locale === "de" ? "Familiencaching" : "Для детей и всей семьи",
-      description:
-        locale === "de"
-          ? "Einfache Caches für den ersten Einstieg mit Kindern."
-          : "Добрые, весёлые задания и первая карта.",
-      image: "/geocaching_images/family.webp",
-    },
-    {
-      slug: "paranoia-at-night",
-      title: "Paranoia@Night",
-      description:
-        locale === "de"
-          ? "Legendärer Einzelspieler-Cache mit düsterer Atmosphäre."
-          : "Мрачная легенда для тех, кто не боится одиночества.",
-      image: "/geocaching_images/paranoia.webp",
-    },
-  ];
-
-  const otherPages = allPages.filter((page) => page.slug !== currentSlug);
+  const page = await getGeocacheBySlug(params.slug as string, locale);
+  if (!page) return { notFound: true };
 
   return {
-    props: {
-      slug: currentSlug,
-      title: data.title || "",
-      image: data.image || "",
-      imageAlt: data.imageAlt || "",
-      content: processedContent.toString(),
-      otherPages,
-    },
+    props: { page, locale },
+    revalidate: 600,
   };
 };

@@ -1,5 +1,6 @@
 import PageHead from "@/components/PageHead";
 import useTranslation from "@/hooks/useTranslation";
+import { getPlacesByCategory } from "@/lib/getPlacesByCategory";
 import styles from "@/styles/List.module.css";
 import fs from "fs";
 import matter from "gray-matter";
@@ -101,21 +102,7 @@ export const getStaticProps: GetStaticProps<CategoryPageProps> = async ({ params
   const dir = path.join(process.cwd(), "public/places", category);
   if (!fs.existsSync(dir)) return { notFound: true };
 
-  const files = fs.readdirSync(dir).filter((file) => file.endsWith(`.${locale}.md`));
-
-  const articles: ArticleMeta[] = files.map((file) => {
-    const fullPath = path.join(dir, file);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const { data } = matter(fileContents);
-    const slug = file.replace(`.${locale}.md`, "");
-
-    return {
-      slug,
-      title: data.title || slug,
-      description: data.description || "",
-      image: data.image || "",
-    };
-  });
+const articles = getPlacesByCategory(category, locale);
 
   return {
     props: {

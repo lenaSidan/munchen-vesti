@@ -1,35 +1,16 @@
 import PageHead from "@/components/PageHead";
-
 import useTranslation from "@/hooks/useTranslation";
 import styles from "@/styles/UsefulList.module.css";
-import fs from "fs";
-import matter from "gray-matter";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import path from "path";
-import rehypeExternalLinks from "rehype-external-links";
-import rehypeStringify from "rehype-stringify";
-import { remark } from "remark";
-import remarkGfm from "remark-gfm";
-import remarkRehype from "remark-rehype";
-
-interface FaqItem {
-  slug: string;
-  title: string;
-  date?: string;
-  image?: string;
-  imageAlt?: string;
-  content: string;
-  seoTitle?: string;
-  seoDescription?: string;
-  summary?: string;
-  category?: string[];
-}
+import fs from "fs";
+import { getUsefulBySlug, FullUsefulItem } from "@/lib/getUsefulBySlug";
 
 interface FaqProps {
-  faq: FaqItem;
+  faq: FullUsefulItem;
   locale: string;
 }
 
@@ -72,12 +53,23 @@ export default function UsefulArticle({ faq }: FaqProps) {
       <div className={styles.container}>
         <div className={styles.headerBox}>
           <h2 className={styles.title}>{faq.title}</h2>
-         
         </div>
 
         <div className={styles.columnsWithImage}>
-     
-          <div className={styles.content} dangerouslySetInnerHTML={{ __html: faq.content }} />
+          {faq.image && (
+            <Image
+              src={faq.image}
+              alt={faq.imageAlt || faq.title}
+              width={600}
+              height={400}
+              className={styles.image}
+              sizes="(max-width: 768px) 100vw, 600px"
+            />
+          )}
+          <div
+            className={styles.content}
+            dangerouslySetInnerHTML={{ __html: faq.content }}
+          />
         </div>
 
         <div className={styles.readMoreContainer}>
@@ -94,8 +86,6 @@ export default function UsefulArticle({ faq }: FaqProps) {
           </div>
         </div>
       </div>
-
-  
     </>
   );
 }
@@ -111,40 +101,17 @@ export const getStaticPaths: GetStaticPaths = async () => {
       return { params: { slug }, locale };
     });
 
-  return { paths, fallback: false };
+  return { paths, fallback: "blocking" };
 };
 
 export const getStaticProps: GetStaticProps<FaqProps> = async ({ params, locale }) => {
   if (!params?.slug || !locale) return { notFound: true };
 
-  const filePath = path.join(process.cwd(), "public/useful", `${params.slug}.${locale}.md`);
-  if (!fs.existsSync(filePath)) return { notFound: true };
-
-  const fileContent = fs.readFileSync(filePath, "utf-8");
-  const { data, content } = matter(fileContent);
-
-  const processedContent = await remark()
-    .use(remarkGfm)
-    .use(remarkRehype)
-    .use(rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] })
-    .use(rehypeStringify)
-    .process(content);
+  const faq = await getUsefulBySlug(params.slug as string, locale);
+  if (!faq) return { notFound: true };
 
   return {
-    props: {
-      faq: {
-        slug: params.slug as string,
-        title: data.title || "",
-        date: data.date ? String(data.date) : "",
-        image: data.image || "",
-        imageAlt: data.imageAlt || "",
-        seoTitle: data.seoTitle || "",
-        seoDescription: data.seoDescription || "",
-        summary: data.summary || "",
-        content: processedContent.toString(),
-        category: data.category
-      },
-      locale
-    }
+    props: { faq, locale },
+    revalidate: 600,
   };
 };
