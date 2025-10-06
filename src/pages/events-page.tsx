@@ -225,7 +225,15 @@ export default function EventsPage({ events }: EventsProps) {
 
   const isCurrentMonthSelected = selectedMonthYear === monthYearOptions[0]?.value;
 
-  // 🔹 Основной рендер
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   return (
     <>
       <Seo title={t("meta.events_title")} description={t("meta.events_description")} />
@@ -236,16 +244,25 @@ export default function EventsPage({ events }: EventsProps) {
 
         {isCurrentMonthSelected && (
           <div className={styles.introBox}>
-            <p className={styles.introText}>{t("months.introPart1")}</p>
-            <p className={styles.introText}>{t("months.introPart2")}</p>
-            <p className={styles.introText}>
-              {t("months.introWithLink_part1")}
-              <Link href="/articles-page" className={styles.inlineLink}>
-                <span>{t("months.link_text")}</span>
-              </Link>
-              {t("months.introWithLink_part2")}
-            </p>
-            <p className={styles.introText4}>{t("months.introPart4")}</p>
+            {isMobile ? (
+              <>
+                <p className={styles.introText}>{t("months.introMobile1")}</p>
+                <p className={styles.introText}>{t("months.introMobile2")}</p>
+              </>
+            ) : (
+              <>
+                <p className={styles.introText}>{t("months.introPart1")}</p>
+                <p className={styles.introText}>{t("months.introPart2")}</p>
+                <p className={styles.introText}>
+                  {t("months.introWithLink_part1")}
+                  <Link href="/articles-page" className={styles.inlineLink}>
+                    <span>{t("months.link_text")}</span>
+                  </Link>
+                  {t("months.introWithLink_part2")}
+                </p>
+                <p className={styles.introText4}>{t("months.introPart4")}</p>
+              </>
+            )}
           </div>
         )}
 
