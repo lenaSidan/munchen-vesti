@@ -1,0 +1,201 @@
+.mobileContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 12px 15px 40px 15px;
+  background-color: var(--background-color);
+}
+.mobileSectionTitleTop {
+  
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  margin-top: 0;
+  border-bottom: 1px solid var(--heading-color2);
+  padding-bottom: 4px;
+}
+/* --- Главный анонс --- */
+.mobileHero {
+  border-bottom: 2px solid var(--border-color);
+  padding: 10px 15px;
+  background-color: var(--alt-background);
+  border-radius: 10px;
+}
+
+.mobileHeroImage {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  margin: 10px 0;
+  display: block;
+}
+
+.mobileHeroTitle {
+  font-size: 0.9rem;
+  margin: 0.4rem 0;
+  color: var(--heading-color2);
+  font-weight: 700;
+  line-height: 1.3;
+}
+.decorativeLine {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 35px;
+}
+.decorativeLine::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--heading-color2);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.decorativeLine span {
+  font-size: 1.6rem;
+  line-height: 1;
+  font-weight: bold;
+  color: var(--border-color);
+  display: inline-block;
+  position: relative;
+  background: var(--background);
+  padding: 0 10px;
+  z-index: 1;
+}
+.decorativeLine .left {
+  margin-right: 5px;
+  transform: scaleX(-1);
+  background: var(--alt-background-light);
+}
+.decorativeLine .right {
+  margin-left: 5px;
+  background: var(--alt-background-light);
+}
+.mobileHeroDate {
+  font-style: italic;
+  color: var(--heading-color);
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.mobileHeroText {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: var(--text-color);
+  margin-bottom: 1.6rem;
+}
+
+.mobileHeroLink {
+  display: inline-block;
+  margin-top: 0.3rem;
+  color: var(--heading-color2);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* 🔹 Секция мероприятий */
+.mobileEvents {
+  background: var(--alt-background);
+    padding: 10px 15px;
+  border-radius: 6px;
+}
+
+/* Список событий */
+.mobileEventsList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Каждый элемент */
+.mobileEventItem {
+  border-bottom: 1px dashed var(--border-color);
+  padding: 10px 0;
+}
+
+/* Ссылка на событие */
+.mobileEventLink {
+  display: block;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: var(--background);
+  transition: background 0.25s ease, color 0.25s ease;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+.mobileEventLink:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--alt-background);
+}
+
+/* Название — одной строкой */
+.mobileEventTitle {
+   display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 4px;
+  color: var(--heading-color2);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  text-overflow: initial;
+}
+
+
+.mobileEventTime {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--heading-color);
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* Ссылка "Смотреть все" */
+.mobileMoreLink {
+  display: inline-block;
+  margin-top: 30px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: var(--heading-color2);
+}
+
+
+/* --- Календарь и погода --- */
+.mobileCalendarWeather {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  gap: 3rem;
+}
+
+/* --- Баварское слово --- */
+.mobileWord {
+  padding-top: 4px;
+}
+
+/* --- Новости --- */
+.mobileNews {
+  background: var(--alt-background);
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+/* --- Мини-открытки --- */
+.mobilePostcards {
+  margin-top: 0;
+}
+.mobileSubscribeBox {
+  margin-top: -20px;
+}

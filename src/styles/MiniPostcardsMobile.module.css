@@ -1,0 +1,83 @@
+.announcements {
+  background: var(--alt-background1);
+  padding: 10px;
+  margin: 0;
+  border-radius: 4px;
+}
+
+/* Заголовок */
+.announcementHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.announcementTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: var(--font-headings);
+  color: var(--heading-color2);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Карточка */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.card {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  overflow: hidden;
+  background-color: var(--background);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Декоративная линия */
+.decorativeLine {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  margin: 12px 0;
+  text-align: center;
+}
+
+.decorativeLine::before,
+.decorativeLine::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--heading-color2);
+  position: absolute;
+  left: 0;
+}
+
+.decorativeLine::before {
+  top: 0;
+}
+
+.decorativeLine::after {
+  bottom: 0;
+}

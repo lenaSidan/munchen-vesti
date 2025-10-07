@@ -97,7 +97,7 @@
 
   .card {
     width: 100% !important;
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
   .card p{
     font-size: 0.9rem;

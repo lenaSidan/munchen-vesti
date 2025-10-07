@@ -3,7 +3,9 @@
     "title": "Münchener Nachrichten",
     "read_more": "Weiterlesen",
     "announcements_title": "Anzeigen",
-    "view_all_articles": "Alle Events anzeigen",
+    "featured_event": "Aktuelles Ereignis",
+    "view_all_articles": "Bald in München",
+    "view_articles": "Alle Veranstaltungen",
     "edition_date": "Ausgabe vom {{month}} {{year}}",
     "published_fixed": "Ein historisch-kulturelles Blatt über Ereignisse und das Alltagsleben in München.",
     "page_title": "München – Veranstaltungskalender: Konzerte, Ausstellungen, Märkte, Festivals und Events für Kinder und Erwachsene"
