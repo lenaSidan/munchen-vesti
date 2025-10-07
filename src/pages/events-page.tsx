@@ -23,6 +23,7 @@ export default function EventsPage({ events }: EventsProps) {
   const [selectedMonthYear, setSelectedMonthYear] = useState("");
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [imageLoaded, setImageLoaded] = useState(false);
   const [eventContents, setEventContents] = useState<Record<string, string>>({});
 
   // 🔹 Загрузка полного текста события (API по прежнему принимает slug-СТРОКУ)
@@ -343,7 +344,8 @@ export default function EventsPage({ events }: EventsProps) {
                     <Image
                       src={event.image}
                       alt={event.imageAlt || event.title}
-                      className={styles.eventImage}
+                      className={`${styles.eventImage} ${imageLoaded ? styles.loaded : ""}`}
+                      onLoadingComplete={() => setImageLoaded(true)}
                       width={400}
                       height={200}
                       sizes="(max-width: 768px) 100vw, 400px"
