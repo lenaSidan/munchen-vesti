@@ -440,8 +440,13 @@
 
   .eventCard {
     padding: 15px;
-    margin-bottom: 30px;
+    margin: 30px 0;
   }
+  .eventCard:hover {
+  transform: translateY(-3px) scale(1);
+
+}
+
   .eventTitle {
     text-align: center;
     font-size: 1rem;
