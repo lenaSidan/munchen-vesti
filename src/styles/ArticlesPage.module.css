@@ -44,9 +44,17 @@
   background: var(--alt-background);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 50px;
-  transition: all 0.3s ease-in-out;
+   transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.3s ease;
 }
-
+.articleVariantA:hover,
+.articleVariantB:hover {
+   transform: translateY(-3px) scale(1.015);
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--border-color);
+}
 .articleVariantA {
   background: var(--alt-background1);
 }

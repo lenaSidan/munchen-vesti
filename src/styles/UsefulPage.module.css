@@ -102,10 +102,15 @@
   line-height: 1.4;
   -webkit-hyphens: auto;
   hyphens: auto;
+    transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.3s ease;
 }
 .card:hover {
-  box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
-}
+  transform: translateY(-3px) scale(1.015);
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--border-color);}
 .cardInner {
   display: flex;
   flex-direction: column;
