@@ -10,17 +10,17 @@
   },
   "seo": {
     "index_title": "Veranstaltungskalender München – Konzerte, Ausstellungen, Events",
-    "index_description": "Veranstaltungskalender für München: aktuelle Events, Konzerte, Märkte, Ausstellungen und Tipps für die russischsprachige Community – heute und am Wochenende.",
-    "veranstaltungen_muenchen_title": "Veranstaltungen in München 2025 – Eventkalender",
-    "veranstaltungen_muenchen_description": "Was ist los in München? Konzerte, Märkte, Feste und Events für die russischsprachige Community. Unser Veranstaltungskalender zeigt aktuelle Tipps für Mai und Juni 2025.",
+    "index_description": "Veranstaltungskalender für München: aktuelle Events, Konzerte, Märkte, Ausstellungen und Tipps – heute und am Wochenende.",
+    "veranstaltungen_muenchen_title": "Veranstaltungen in München – Konzerte, Festivals und Ausstellungen",
+    "veranstaltungen_muenchen_description": "Aktueller Veranstaltungskalender für München: Konzerte, Ausstellungen, Festivals, Theater und Stadtfeste. Entdecken Sie das kulturelle Leben Münchens mit den „Münchener Nachrichten“.",
     "article_muenchen_title": "München entdecken – Sehenswürdigkeiten und versteckte Orte",
     "article_muenchen_description": "Entdecken Sie Münchens besondere Plätze: Parks, Straßenzüge, kulturelle Highlights und unbekannte Ecken. Ein inspirierender Stadtführer für Besucher und Einheimische.",
     "nachrichten_muenchen_title": "Nachrichten aus München – aktuelle Meldungen & Infos",
-    "nachrichten_muenchen_description": "Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten aus München: Stadtleben, Änderungen, Veranstaltungen und Hinweise für die russischsprachige Community."
+    "nachrichten_muenchen_description": "Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten aus München: Stadtleben, Änderungen, Veranstaltungen und Hinweise."
   },
   "newsSEO": {
     "h1": "Nachrichten aus München – Aktuelles Stadtleben und wichtige Ereignisse",
-    "meta": "München, 2025",
+    "meta": "München",
     "paragraph1": "Verfolgen Sie, was gerade in München passiert. Wir veröffentlichen aktuelle Stadtnachrichten, Veranstaltungshinweise und hilfreiche Tipps.",
     "paragraph2": "Im Nachrichtenbereich finden Sie Informationen über Verkehr, Schulen, neue Gesetze, kulturelle Ereignisse und vieles mehr.",
     "paragraph3": "Unsere Meldungen sind kompakt und verständlich – für alle, die sich für das Leben in München interessieren. Verfügbar auf Russisch und Deutsch.",
@@ -34,10 +34,10 @@
     "link_text": "Zu den Artikeln über München"
   },
   "eventSEO": {
-    "h1": "Veranstaltungen in München 2025 – Der russischsprachige Eventkalender",
-    "paragraph1": "Was ist los in München? In unserem Veranstaltungskalender finden Sie aktuelle Events, Konzerte, Märkte, Festivals und Familienfeste – alles auf Russisch. Besonders gefragt: Veranstaltungen im Mai und Juni 2025.",
-    "paragraph2": "Unsere Übersicht wird regelmäßig aktualisiert. Von Stadtteilfesten in Schwabing über Theatervorstellungen für Kinder bis zu klassischen Konzerten im Gasteig – wir sammeln alle interessanten Events.",
-    "paragraph3": "Der Kalender ist kostenlos und unabhängig. Sie können gerne Ihre eigenen Veranstaltungen vorschlagen oder weiterempfehlen.",
+    "h1": "Veranstaltungen in München – Konzerte, Festivals und Ausstellungen",
+    "paragraph1": "Was ist los in München? Auf dieser Seite finden Sie den Veranstaltungskalender mit Konzerten, Festivals, Ausstellungen, Theateraufführungen, Stadtfesten und Märkten. Hier entdecken Sie die spannendsten kulturellen Ereignisse der Stadt – von kleinen Kammerkonzerten bis zu großen Open-Air-Festivals.",
+    "paragraph2": "Der Veranstaltungskalender wird regelmäßig aktualisiert, damit Sie keine neuen Ereignisse verpassen. Jede Veranstaltung enthält eine Beschreibung, Zeit- und Ortsangaben sowie einen Link zu weiteren Informationen oder zum Ticketkauf.",
+    "paragraph3": "„Münchener Nachrichten“ hilft Ihnen, sich im kulturellen Leben der Stadt zurechtzufinden und neue Entdeckungen zu machen. Sie können Ihre eigene Veranstaltung vorschlagen oder die Seite mit Freunden teilen.",
     "link_text": "Zu den aktuellen Veranstaltungen"
   },
   "buttons": {
@@ -126,7 +126,7 @@
   "read_more": "Weiterlesen",
   "meta": {
     "default_title": "Münchener Anzeigen",
-    "default_description": "Münchener Anzeigen – Veranstaltungskalender, nützliche Artikel, Kleinanzeigen und aktuelle Nachrichten für die russischsprachige Community in München.",
+    "default_description": "Münchener Anzeigen – Veranstaltungskalender, nützliche Artikel, Kleinanzeigen und aktuelle Nachrichten in München.",
     "articles_title": "Artikel über das Leben in München",
     "articles_description": "Nützliche Informationen, Tipps und Einblicke in das Leben, die Kultur und die Ereignisse in München.",
     "about_title": "Über das Projekt",
@@ -136,7 +136,7 @@
     "ads_other_title": "Kleinanzeigen: Sonstiges",
     "ads_other_description": "Verschiedene Angebote, Vermietung, Verkäufe und mehr – Münchener Anzeigen.",
     "ads_services_title": "Kleinanzeigen: Dienstleistungen",
-    "ads_services_description": "Psychologen, Kosmetiker, Friseure und weitere russischsprachige Fachkräfte – Dienstleistungen in München.",
+    "ads_services_description": "Psychologen, Kosmetiker, Friseure und weitere Fachkräfte – Dienstleistungen in München.",
     "ads_studios_title": "Kleinanzeigen: Studios und Kurse",
     "ads_studios_description": "Lernstudios, Theatergruppen, Kurse für Kinder und Erwachsene in München – aktuelle Anzeigen mit Kontakten.",
     "contacts_title": "Kontakt zur Redaktion",
@@ -145,8 +145,8 @@
     "impressum_description": "Rechtliche Informationen zur Redaktion der Münchener Anzeigen: Adresse, Kontakte, Urheberrechte und Haftungsausschluss.",
     "privacy_title": "Datenschutzerklärung",
     "privacy_description": "Erfahren Sie, wie die Münchener Anzeigen Ihre Daten erfassen, nutzen und schützen – inklusive Cookie-Hinweise.",
-    "events_title": "Veranstaltungen in München 2025 – Eventkalender & Tipps",
-    "events_description": "Aktuelle Veranstaltungen in München auf Russisch: Konzerte, Märkte, Festivals und Events für Kinder & Erwachsene. Jetzt entdecken, was in München los ist!",
+    "events_title": "Veranstaltungen in München – Eventkalender & Tipps",
+    "events_description": "Aktuelle Veranstaltungen in München: Konzerte, Märkte, Festivals und Events für Kinder & Erwachsene. Jetzt entdecken, was in München los ist!",
     "all_events_title": "Alle Veranstaltungen",
     "all_events_description": "Komplette Übersicht aller vergangenen und bevorstehenden Veranstaltungen in München.",
     "calendar_title": "Veranstaltungskalender für München – Konzerte, Festivals, Märkte, Ausstellungen und Events für die ganze Familie",
