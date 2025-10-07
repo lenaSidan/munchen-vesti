@@ -6,25 +6,36 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import NewsBlock from "./NewsBlock";
 
+// 🔹 Интерфейс пропсов
+interface ShortNewsBlockProps {
+  limit?: number; // по умолчанию будет 2
+}
+
+// 🔹 Функция для случайного выбора новостей
 function getRandomItems<T>(items: T[], count: number): T[] {
   const shuffled = [...items].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, count);
 }
 
-export default function ShortNewsBlock() {
+export default function ShortNewsBlock({ limit = 2 }: ShortNewsBlockProps) {
   const t = useTranslation();
   const { locale } = useRouter();
   const [randomNews, setRandomNews] = useState<NewsItem[]>([]);
 
   useEffect(() => {
     const fetchNews = async () => {
-      const res = await fetch(`/api/news-short?locale=${locale}`);
-      const data: NewsItem[] = await res.json();
-      const selected = getRandomItems(data, 2); // выбираем 2 случайные новости
-      setRandomNews(selected);
+      try {
+        const res = await fetch(`/api/news-short?locale=${locale}`);
+        const data: NewsItem[] = await res.json();
+        const selected = getRandomItems(data, limit); // 🟢 теперь используем limit из пропсов
+        setRandomNews(selected);
+      } catch (err) {
+        console.error("Ошибка загрузки коротких новостей:", err);
+      }
     };
+
     fetchNews();
-  }, [locale]);
+  }, [locale, limit]);
 
   return (
     <aside className={styles.announcements}>
@@ -38,7 +49,10 @@ export default function ShortNewsBlock() {
           className={`${styles.announcementIcon} ${styles.info}`}
         />
       </div>
+
       <div className={styles.decorativeLine}></div>
+
+      {/* 🔹 Передаём список выбранных новостей */}
       <NewsBlock newsList={randomNews} />
     </aside>
   );

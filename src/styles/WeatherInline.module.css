@@ -69,13 +69,16 @@
 
 @media (max-width: 768px) {
   .weatherBox {
-    padding: 10px 12px;
+    margin: 0;
+
+    padding: 10px 0;
     font-size: 0.95rem;
   }
 
   .weatherBox h4 {
     font-size: 0.95rem;
     text-align: center;
+    padding-bottom: 10px;
   }
 
   .weatherBox li {

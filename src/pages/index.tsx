@@ -25,6 +25,20 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import type { WordData } from "types/WordData";
 
+// 📱 Лениво загружаем мобильную версию
+const HomeMobile = dynamic(() => import("@/components/HomeMobile"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
+
+// 🔹 Новости и открытки — также ленивые
+const LazyShortNewsBlock = dynamic(() => import("@/components/ShortNewsBlock"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
+const MiniPostcards = dynamic(() => import("@/components/MiniPostcards"), { ssr: false });
+
+// 📜 Типы данных
 interface Announcement {
   id: number;
   textKey: string;
@@ -44,16 +58,7 @@ interface HomeProps {
   weather: DailyWeather | null;
   oldWords: WordData[];
 }
-const LazyShortNewsBlock = dynamic(() => import("@/components/ShortNewsBlock"), {
-  ssr: false,
-  loading: () => <p>Loading...</p>,
-});
-// const LazyEasterEgg = dynamic(() => import("@/components/EasterEggById"), {
-//   ssr: false,
-// });
-const MiniPostcards = dynamic(() => import("@/components/MiniPostcards"), { ssr: false });
 
-// Указать колличество баварских слов
 const sampleWords = fullWords.slice(0, 2);
 
 export default function Home({
@@ -66,34 +71,54 @@ export default function Home({
   const t = useTranslation();
   const router = useRouter();
 
+  const [isMobile, setIsMobile] = useState(false);
   const [showNewsBlock, setShowNewsBlock] = useState(false);
   const newsRef = useRef<HTMLDivElement | null>(null);
 
+  // ✅ Проверка ширины экрана (всегда наверху)
+  useEffect(() => {
+    const checkWidth = () => setIsMobile(window.innerWidth < 768);
+    checkWidth();
+    window.addEventListener("resize", checkWidth);
+    return () => window.removeEventListener("resize", checkWidth);
+  }, []);
+
+  // ✅ Следим за блоком новостей (IntersectionObserver)
   useEffect(() => {
     if (!newsRef.current) return;
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setShowNewsBlock(true);
-          observer.disconnect(); // отписка, чтобы не наблюдать больше
+          observer.disconnect();
         }
       },
-      {
-        rootMargin: "100px", // загружать чуть раньше
-      }
+      { rootMargin: "100px" }
     );
-
     observer.observe(newsRef.current);
-
     return () => observer.disconnect();
   }, []);
+
+  // ✅ Если мобильное устройство — показываем HomeMobile
+  if (isMobile) {
+    return (
+      <HomeMobile
+        mainEvent={mainEvent}
+        weather={weather}
+        oldWords={oldWords}
+        otherEvents={otherEvents}
+      />
+    );
+  }
+
+  // 💻 Десктопная версия
   return (
     <>
       <Seo title={t("seo.index_title")} description={t("seo.index_description")} />
       <h1 className={styles.visuallyHidden}>{t("home.page_title")}</h1>
       <div className={styles.container}>
         <div className={styles.layout}>
+          {/* Главная статья / событие */}
           <div className={styles.articlesSection}>
             {mainEvent && (
               <article className={styles.mainArticle}>
@@ -114,7 +139,6 @@ export default function Home({
                 )}
                 <h2 className={styles.articleTitle}>{mainEvent.title}</h2>
                 {mainEvent.time && <div className={styles.articleDate}>{mainEvent.time}</div>}
-
                 <div className={styles.decorativeLine}></div>
                 <div
                   className={styles.articleContent}
@@ -123,19 +147,22 @@ export default function Home({
               </article>
             )}
           </div>
+
+          {/* Боковая колонка */}
           <div className={styles.adsBlock}>
             <MiniCalendarBlock />
             {weather && <WeatherInlineBlock forecast={weather} />}
-            {/* <OldWordOfTheWeek words={oldWords} /> */}
             <BavarianWordOfTheWeek words={sampleWords} />
           </div>
         </div>
+
+        {/* Подписка и мини-открытки */}
         <SubscribeBox />
-        {/* <ImportantNewsBlock /> */}
         <div className={styles.miniPostcardsBlock}>
           <MiniPostcards />
         </div>
 
+        {/* Второе событие */}
         {secondEvent && (
           <article className={styles.secondArticle}>
             <div className={styles.secondArticleHeader}>
@@ -160,6 +187,7 @@ export default function Home({
           </article>
         )}
 
+        {/* Остальные события */}
         {otherEvents.length > 0 && (
           <section className={styles.otherArticles}>
             <Link
@@ -177,7 +205,9 @@ export default function Home({
                   className={styles.articleLink}
                 >
                   <Link
-                    href={`/events-page#${Array.isArray(event.fileId) ? event.fileId[0] : event.fileId}`}
+                    href={`/events-page#${
+                      Array.isArray(event.fileId) ? event.fileId[0] : event.fileId
+                    }`}
                   >
                     {event.title} <span className={styles.articleDate}> | {event.time}</span>
                   </Link>
@@ -186,6 +216,8 @@ export default function Home({
             </ul>
           </section>
         )}
+
+        {/* Новости */}
         <div className={styles.newsBlock} ref={newsRef}>
           {showNewsBlock && (
             <div className={styles.newsFadeIn}>
@@ -196,13 +228,12 @@ export default function Home({
             </div>
           )}
         </div>
-
-        {/* {showNewsBlock && <LazyEasterEgg id="easteregg-home" chance={0.5} />} */}
       </div>
     </>
   );
 }
 
+// ================== MARKDOWN PROCESSOR ==================
 async function processMarkdown(content: string) {
   const processedContent = await remark()
     .use(remarkGfm)
@@ -213,11 +244,10 @@ async function processMarkdown(content: string) {
   return processedContent.toString();
 }
 
+// ================== STATIC PROPS ==================
 export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
   const events = getEventsByLocale(locale || "ru");
-
-  const now = new Date(); // ← без обнуления времени!
-
+  const now = new Date();
   const tenDaysLater = new Date(now);
   tenDaysLater.setDate(tenDaysLater.getDate() + 20);
 
@@ -228,11 +258,9 @@ export const getStaticProps: GetStaticProps<HomeProps> = async ({ locale }) => {
     return (startDate >= now && startDate <= tenDaysLater) || (startDate <= now && endDate >= now);
   });
 
-  const sortedEvents = filteredEvents.sort((a, b) => {
-    const startDateA = new Date(a.date || "").getTime();
-    const startDateB = new Date(b.date || "").getTime();
-    return startDateA - startDateB;
-  });
+  const sortedEvents = filteredEvents.sort(
+    (a, b) => new Date(a.date || "").getTime() - new Date(b.date || "").getTime()
+  );
 
   const translations = await import(`@/locales/${locale || "ru"}.json`);
 
