@@ -12,6 +12,14 @@ image: "/images/halloween-fabrik-rave-2025.webp"
 imageAlt: "Световое шоу и диджей-сцена на Halloween Fabrik Rave в Мюнхене"
 seoTitle: "Halloween Fabrik Rave 2025 в Мюнхене — техно-ночь 31 октября"
 seoDescription: "31 октября 2025 года Theaterfabrik München проведёт Halloween Fabrik Rave: 12 часов музыки, 360° сцена, лазерное шоу, костюмированный конкурс и индустриальная атмосфера."
+slug:
+  - мюнхен
+  - хэллоуин
+  - рейв
+  - техно
+  - вечеринка
+  - theaterfabrik
+  - ночь
 ---
 
 **31 октября 2025 года** Мюнхен превратится в центр электронной тьмы:  

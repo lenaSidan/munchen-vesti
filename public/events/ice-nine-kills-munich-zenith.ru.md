@@ -12,6 +12,14 @@ image: "/images/ice-nine-kills-munich-zenith.webp"
 imageAlt: "Группа Ice Nine Kills на сцене с хоррор-декорациями в Zenith München"
 seoTitle: "Ice Nine Kills в Мюнхене — 24 ноября 2025, Zenith"
 seoDescription: "Ice Nine Kills выступят 24 ноября 2025 в мюнхенском Zenith. Поддержка: The Devil Wears Prada и Creeper. Билеты от 65,65 €."
+slug:
+  - ice-nine-kills
+  - мюнхен
+  - концерт
+  - зенит
+  - метал
+  - хоррор
+  - музыка
 ---
 
 24 ноября 2025 года мюнхенская концертная площадка **Zenith, die Kulturhalle** превратится в настоящий хоррор-театр. Американская металкор-группа **Ice Nine Kills** приедет в столицу Баварии в рамках европейского тура **“A Work of Art Tour 2025”**, обещая шоу, которое скорее напоминает фильм ужасов вживую, чем привычный рок-концерт.

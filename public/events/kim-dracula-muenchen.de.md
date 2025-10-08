@@ -12,6 +12,14 @@ image: "/images/kim-dracula-muenchen.webp"
 imageAlt: "Kim Dracula Konzert auf der Bühne im Club Technikum in München"
 seoTitle: "Kim Dracula München 2026 — Konzert, Tickets, Ort"
 seoDescription: "Am 30. Januar 2026: Kim Dracula live im Technikum, München — Metal, Trap und Jazz in einer Show."
+slug:
+  - kim-dracula
+  - münchen
+  - konzert
+  - technikum
+  - metal
+  - trap
+  - jazz
 ---
 
 Anfang 2026 wird **München** Zeuge eines der ungewöhnlichsten und am meisten erwarteten Konzerte in der Welt der alternativen Musik. Am **30. Januar** tritt im Club **Technikum** **Kim Dracula** auf — ein Künstler, der sich kaum in Genregrenzen einordnen lässt. Der Ticketverkauf startet bereits am **2. Oktober 2025**, und Fans sollten sich beeilen: Die Show verspricht ein Ereignis zu werden, über das noch lange gesprochen wird.  

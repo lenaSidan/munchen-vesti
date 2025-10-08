@@ -12,6 +12,14 @@ image: "/images/ice-nine-kills-munich-zenith.webp"
 imageAlt: "Ice Nine Kills auf der Bühne mit Horror-Dekorationen im Zenith München"
 seoTitle: "Ice Nine Kills in München — 24. November 2025, Zenith"
 seoDescription: "Ice Nine Kills live am 24. November 2025 im Zenith München. Support: The Devil Wears Prada & Creeper. Tickets ab 65,65 €."
+slug:
+  - ice-nine-kills
+  - münchen
+  - konzert
+  - zenith
+  - metal
+  - horror
+  - musik
 ---
 
 Am **24. November 2025** verwandelt sich die Münchner Konzerthalle **Zenith, die Kulturhalle** in ein wahres Horror-Theater. Die amerikanische Metalcore-Band **Ice Nine Kills** kommt im Rahmen ihrer Europa-Tour **“A Work of Art Tour 2025”** in die bayerische Landeshauptstadt und verspricht eine Show, die eher einem Live-Horrorfilm als einem klassischen Rockkonzert gleicht.  

@@ -12,6 +12,14 @@ image: "/images/halloween-week-2025.webp"
 imageAlt: "Halloween Week in der Nachtgalerie München"
 seoTitle: "Halloween Week 2025 in München — 6 Partys für jeden Geschmack"
 seoDescription: "Vom 25. Oktober bis 2. November 2025 veranstaltet die Nachtgalerie München die Halloween Week: sechs Partys von Familienfest bis Metal-Nacht. Tickets 8–20 €."
+slug:
+  - münchen
+  - halloween
+  - party
+  - nachtgalerie
+  - events
+  - nacht
+  - 2025
 ---
 
 **Von Ende Oktober bis Anfang November 2025** verwandelt sich München in die Hauptstadt von Halloween.  

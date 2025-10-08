@@ -12,6 +12,14 @@ image: "/images/halloween-week-2025.webp"
 imageAlt: "Halloween Week в Nachtgalerie München"
 seoTitle: "Halloween Week 2025 в Мюнхене — 6 вечеринок на любой вкус"
 seoDescription: "С 25 октября по 2 ноября 2025 года Nachtgalerie München проведёт Halloween Week: шесть вечеринок от семейного праздника до металлической ночи. Билеты 8–20 евро."
+slug:
+  - мюнхен
+  - хэллоуин
+  - вечеринки
+  - nachtgalerie
+  - события
+  - ночь
+  - 2025
 ---
 
 **С конца октября до начала ноября 2025 года** Мюнхен превращается в столицу Хэллоуина.  

@@ -12,6 +12,14 @@ image: "/images/halloween-fabrik-rave-2025.webp"
 imageAlt: "Lichtshow und DJ-Bühne beim Halloween Fabrik Rave in München"
 seoTitle: "Halloween Fabrik Rave 2025 in München — Techno-Nacht am 31. Oktober"
 seoDescription: "Am 31. Oktober 2025 veranstaltet die Theaterfabrik München den Halloween Fabrik Rave: 12 Stunden Musik, 360°-Stage, Lasershow, Kostümwettbewerb und industrielle Atmosphäre."
+slug:
+  - münchen
+  - halloween
+  - rave
+  - techno
+  - party
+  - theaterfabrik
+  - nacht
 ---
 
 **Am 31. Oktober 2025** verwandelt sich München in das Zentrum der elektronischen Dunkelheit:  
