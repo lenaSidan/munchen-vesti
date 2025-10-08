@@ -19,7 +19,6 @@ slug:
   - nachtgalerie
   - events
   - nacht
-  - 2025
 ---
 
 **Von Ende Oktober bis Anfang November 2025** verwandelt sich München in die Hauptstadt von Halloween.  
