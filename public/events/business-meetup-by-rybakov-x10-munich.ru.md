@@ -13,13 +13,14 @@ imageAlt: "Бизнес-встреча X10 с участниками и сцен
 seoTitle: "Business MeetUp by Rybakov (X10) в Мюнхене — бизнес-интенсив 2025"
 seoDescription: "31 октября и 1 ноября 2025 года — Business MeetUp by Rybakov (X10) в Holiday Inn München Süd. Два дня практик, игры и выступлений лидеров X10."
 slug:
+  - business-meetup-by-rybakov-x10-munich
   - мюнхен
   - бизнес
   - rybakov
-  - x10
   - meetup
   - предприниматели
   - бизнес-ивент
+fileId: "business-meetup-by-rybakov-x10-munich"
 ---
 
 **Business MeetUp by Rybakov (X10)** — двухдневный интенсив X10-Движения для предпринимателей и лидеров, который пройдёт в Мюнхене **31 октября и 1 ноября 2025 года**.  

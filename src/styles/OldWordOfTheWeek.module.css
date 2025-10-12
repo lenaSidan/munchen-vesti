@@ -152,6 +152,22 @@
 @media (max-width: 768px) {
   .wrapper {
     margin-top: 0;
-  
+    border-radius: 8px;
+  }
+  .footerLink {
+    display: inline-block;
+  }
+  .allWordsLink {
+    margin-top: 0.3rem;
+    color: var(--heading-color2);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.3s ease;
+    text-align: left;
+    font-size: 0.8rem;
+  }
+  .card {
+    border-radius: 8px;
   }
 }

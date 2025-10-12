@@ -740,5 +740,15 @@
   },
   "search": {
     "placeholder": "Suche auf der Seite..."
-  }
+  },
+  "mobileHighlight": {
+    "sectionTitle": "Redaktionsempfehlung",
+    "title": "Business MeetUp by Rybakov (X10) in München",
+    "text": "Business MeetUp by Rybakov (X10) ist ein zweitägiges Intensivprogramm der X10-Bewegung für Unternehmer und Führungskräfte, das am 31. Oktober und 1. November 2025 in München stattfindet.",
+    "read_more": "Weiterlesen"
+  },
+  "soonEvents": {
+  "sectionTitle": "Demnächst in München"
+}
+
 }

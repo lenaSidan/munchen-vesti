@@ -13,13 +13,14 @@ imageAlt: "Business-Event X10 mit Teilnehmern und Bühne im Holiday Inn München
 seoTitle: "Business MeetUp by Rybakov (X10) in München – Business-Intensiv 2025"
 seoDescription: "Am 31. Oktober und 1. November 2025: Business MeetUp by Rybakov (X10) im Holiday Inn München Süd. Zwei Tage voller Praxis, Spiel und Leadership."
 slug:
+  - business-meetup-by-rybakov-x10-munich
   - münchen
   - business
   - rybakov
-  - x10
   - meetup
   - unternehmer
   - business-event
+fileId: "business-meetup-by-rybakov-x10-munich"
 ---
 
 **Business MeetUp by Rybakov (X10)** ist ein zweitägiges Intensivprogramm der **X10-Bewegung** für Unternehmer und Führungskräfte, das am **31. Oktober und 1. November 2025** in München stattfindet.  

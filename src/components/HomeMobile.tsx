@@ -1,6 +1,8 @@
 import BavarianWordOfTheWeek from "@/components/BavarianWordOfTheWeek";
 import MiniCalendarBlock from "@/components/MiniCalendarBlock";
 import MiniPostcardsMobile from "@/components/MiniPostcardsMobile";
+import MobileHighlight from "@/components/MobileHighlight";
+
 import SubscribeBox from "@/components/SubscribeBox";
 import WeatherInlineBlock from "@/components/WeatherInlineBlock";
 import useTranslation from "@/hooks/useTranslation";
@@ -30,7 +32,7 @@ interface HomeMobileProps {
 export default function HomeMobile({ mainEvent, weather, oldWords, otherEvents }: HomeMobileProps) {
   const t = useTranslation();
 
-  // 🪶 Утилита для короткого текста (fallback)
+  // Утилита для короткого текста (fallback)
   function getExcerpt(text: string, limit = 180) {
     if (!text) return "";
     const plain = text
@@ -111,7 +113,9 @@ export default function HomeMobile({ mainEvent, weather, oldWords, otherEvents }
           </Link>
         </section>
       )}
-
+      <section className={styles.mobileHighlightSection}>
+        <MobileHighlight />
+      </section>
       {/* 🔹 Одна короткая новость */}
       <section className={styles.mobileNews}>
         <LazyShortNewsBlock limit={1} />
@@ -134,8 +138,8 @@ export default function HomeMobile({ mainEvent, weather, oldWords, otherEvents }
       <section className={styles.mobilePostcards}>
         <MiniPostcardsMobile />
       </section>
-       <section className={styles.mobileSubscribeBox}>
-      <SubscribeBox />
+      <section className={styles.mobileSubscribeBox}>
+        <SubscribeBox />
       </section>
     </div>
   );
