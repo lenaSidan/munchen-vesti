@@ -6,7 +6,6 @@
   background-color: var(--background-color);
 }
 .mobileSectionTitleTop {
-  
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--heading-color);
@@ -22,6 +21,7 @@
   padding: 10px 15px;
   background-color: var(--alt-background);
   border-radius: 10px;
+  border: 1px solid var(--border-color);
 }
 
 .mobileHeroImage {
@@ -104,8 +104,9 @@
 /* 🔹 Секция мероприятий */
 .mobileEvents {
   background: var(--alt-background);
-    padding: 10px 15px;
+  padding: 10px 15px;
   border-radius: 6px;
+  border: 1px dashed var(--border-color);
 }
 
 /* Список событий */
@@ -127,7 +128,9 @@
   text-decoration: none;
   color: var(--text-color);
   background-color: var(--background);
-  transition: background 0.25s ease, color 0.25s ease;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
   padding: 6px 8px;
   border-radius: 4px;
 }
@@ -139,7 +142,7 @@
 
 /* Название — одной строкой */
 .mobileEventTitle {
-   display: block;
+  display: block;
   font-weight: 600;
   font-size: 0.9rem;
   line-height: 1.4;
@@ -150,7 +153,6 @@
   white-space: normal;
   text-overflow: initial;
 }
-
 
 .mobileEventTime {
   display: block;
@@ -169,7 +171,6 @@
   text-decoration: underline;
   color: var(--heading-color2);
 }
-
 
 /* --- Календарь и погода --- */
 .mobileCalendarWeather {
