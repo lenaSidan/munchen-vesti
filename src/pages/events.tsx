@@ -309,7 +309,7 @@ export default function EventsOld({ events }: EventsProps) {
 
                   {/* 🔹 Переход на отдельную страницу */}
                   <Link
-                    href={`/events/${encodeURIComponent(slug)}`}
+                    href={`/events/${encodeURIComponent(event.fileId)}`}
                     className={styles.toggleButton}
                   >
                     {t("menu.more")}

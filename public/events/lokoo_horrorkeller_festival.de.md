@@ -12,6 +12,15 @@ image: "/images/lokoo_horrorkeller_festival.webp"
 imageAlt: "Frau im «Catrina»-Kostüm zum mexikanischen Día de los Muertos"
 seoTitle: "LOKOO Horrorkeller Festival am 31. Oktober in München"
 seoDescription: "Die gruseligste Nacht des Jahres — LOKOO Horrorkeller Festival am 31. Oktober im Löwenbräukeller München. Musik, Magie, Shows und Horror-Atmosphäre."
+slug:
+  - münchen
+  - lokoo
+  - horrorkeller
+  - halloween
+  - löwenbräukeller
+  - festival
+  - party
+fileId: "lokoo_horrorkeller_festival"
 ---
 
 München rüstet sich für die schaurigste Nacht des Jahres. **Am 31. Oktober** verwandelt sich der legendäre **Löwenbräukeller** in das **LOKOO Horrorkeller Festival** — die größte und exklusivste Halloween-Party in Bayern. Von **18:00 Uhr** bis **03:00 Uhr** erwartet die Gäste ein wahres Fest der Dunkelheit: Musik, Akrobatik, Feuershows und Mystik in jeder Ecke.  

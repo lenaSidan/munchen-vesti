@@ -12,6 +12,15 @@ image: "/images/musik-rathausbalkon.webp"
 imageAlt: "Musiker treten vom Balkon des Neuen Rathauses am Marienplatz auf"
 seoTitle: "Musik vom Rathausbalkon: Adventskonzerte auf dem Marienplatz"
 seoDescription: "Vom 25. November bis 24. Dezember 2025 finden auf dem Marienplatz Adventskonzerte vom Rathausbalkon statt: Chöre, Ensembles und bayerische Stubnmusi."
+slug:
+  - münchen
+  - musik
+  - rathausbalkon
+  - marienplatz
+  - advent
+  - christkindlmarkt
+  - weihnachten
+fileId: "musik-rathausbalkon"
 ---
 
 Jeden Adventsabend gibt es auf dem Münchner Marienplatz einen besonderen Moment: Um 17:30 Uhr erklingt vom Balkon des Neuen Rathauses festliche Musik.  

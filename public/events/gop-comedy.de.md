@@ -12,6 +12,15 @@ image: "/images/gop-variete.webp"
 imageAlt: "Bühne des Comedy Clubs mit Mikrofon und Licht"
 seoTitle: "GOP Comedy Club in München – nur am 27. Oktober 2025"
 seoDescription: "Ein Abend voller Humor, Magie und Live-Musik im GOP Comedy Club München. Infos zu Künstlern, Tickets und Dinner vor der Show."
+slug:
+  - münchen
+  - gop
+  - comedy
+  - varieté
+  - theater
+  - show
+  - humor
+fileId: "gop-variete"
 ---
 
 **Nur am 27. Oktober 2025 – ein einziger Abend!** Wenn Sie schon lange mal dem Alltag entfliehen wollten, aber nicht wussten, wohin – gehen Sie dorthin, wo Sie an einem Abend lachen, staunen und ein bisschen absurden Charme erleben können. Im **GOP Varieté-Theater München** öffnet wieder der **GOP Comedy Club**, und der 27. Oktober verspricht ein ganz besonderer Abend zu werden.

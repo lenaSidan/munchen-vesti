@@ -11,6 +11,15 @@ image: "/images/crimenight-muenchen.webp"
 imageAlt: "Kerzen auf den Tischen und ein Projektor beim CrimeNight-Abend in München"
 seoTitle: "CrimeNight München – echtes Verbrechen als Live-Erlebnis"
 seoDescription: "Atmosphärisches True-Crime-Event in München: echte Fälle, Kerzenlicht, Dokumente und Publikumsbeteiligung. Nur am 24. Oktober 2025."
+slug:
+  - münchen
+  - crimenight
+  - true-crime
+  - veranstaltung
+  - künstlerhaus
+  - lenbachplatz
+  - event
+fileId: "crimenight-muenchen"
 ---
 
 Wenn Sie München als eine **glänzende und perfekt geordnete Stadt** kennen — mit **aufgeräumten Straßen, Straßenmusikern und eleganten Schaufenstern** — dann bereiten Sie sich darauf vor, die Stadt von **einer anderen Seite** zu erleben.

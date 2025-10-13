@@ -20,6 +20,7 @@ slug:
   - party
   - theaterfabrik
   - nacht
+fileId: "halloween-fabrik-rave-2025"
 ---
 
 **Am 31. Oktober 2025** verwandelt sich München in das Zentrum der elektronischen Dunkelheit:  

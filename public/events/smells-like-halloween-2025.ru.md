@@ -12,6 +12,15 @@ image: "/images/smells-like-halloween-2025.webp"
 imageAlt: "Толпа в костюмах на Smells Like Halloween в Backstage München"
 seoTitle: "Smells Like… Halloween 2025 в Мюнхене — вечеринка 31 октября"
 seoDescription: "31 октября 2025 года Backstage München проведёт Smells Like… Halloween: 4 сцены, десятки диджеев, музыка от Metalcore до Indie, спецнапитки и костюмированная ночь ужаса."
+slug:
+  - мюнхен
+  - хэллоуин
+  - smells-like
+  - backstage
+  - вечеринка
+  - музыка
+  - событие
+fileId: "smells-like-halloween-2025"
 ---
 
 **В пятницу, 31 октября 2025 года** Мюнхен снова превратится в столицу ужаса, музыки и вечеринок.  

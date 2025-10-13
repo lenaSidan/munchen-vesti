@@ -12,6 +12,15 @@ image: "/images/tollwood-winterfestival.webp"
 imageAlt: "Ярмарочные шатры и огни Tollwood на Theresienwiese зимой"
 seoTitle: "Tollwood Winterfestival 2025 в Мюнхене"
 seoDescription: "С 25 ноября по 23 декабря 2025 года Tollwood Winterfestival на Theresienwiese: ярмарка идей, уличные шоу, био-еда и новогодняя вечеринка."
+slug:
+  - мюнхен
+  - tollwood
+  - зимний-фестиваль
+  - терезинвизе
+  - рождество
+  - ярмарка
+  - культура
+fileId: "tollwood-winterfestival"
 ---
 
 Когда в центре Мюнхена уже кружатся снежинки глинтвейна и рождественские мелодии, на **Theresienwiese** зажигается свой свет — яркий, немножко авантюрный. **Зимний Tollwood** — это место, где рядом с пряниками живёт новый цирк, где перформансы встречаются с разговором о будущем, а сувениры — с идеями и заботой о планете.

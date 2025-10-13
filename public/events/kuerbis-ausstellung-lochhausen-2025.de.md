@@ -3,7 +3,7 @@ title: "„Ab ins Reich der Kürbisse“: erste Kürbisausstellung im BeerenCaf�
 shortTitle: "Ab ins Reich der Kürbisse"
 calendarStartDate: "2025-09-12"
 calendarEndDate: "2025-10-31"
-date: "2025-09-28"
+date: "2025-10-18"
 endDate: "2025-10-31"
 time: "ab 12. September 2025, täglich 8:30–19:00"
 ort: "BeerenCafé Lochhausen | https://maps.app.goo.gl/gxtSY45S8dbBbxvM8"
@@ -12,6 +12,15 @@ image: "/images/kuerbis-ausstellung-lochhausen-2025.webp"
 imageAlt: "Herbstliche Kürbisdekorationen im BeerenCafé Lochhausen"
 seoTitle: "„Ab ins Reich der Kürbisse“ im BeerenCafé Lochhausen — Ausstellung und Familienprogramm 2025"
 seoDescription: "Seit dem 12. September 2025 lädt das BeerenCafé Lochhausen zur Ausstellung „Ab ins Reich der Kürbisse“ ein: Kürbisdekorationen, Café, Selbsternte und Spielbereiche für Kinder."
+slug:
+  - münchen
+  - kürbis
+  - ausstellung
+  - beeren-cafe
+  - lochhausen
+  - herbst
+  - familie
+fileId: "kuerbis-ausstellung-lochhausen-2025"
 ---
 
 **Seit dem 12. September 2025** hat das **BeerenCafé Lochhausen** seine erste große Kürbisausstellung eröffnet: **„Ab ins Reich der Kürbisse“**.  

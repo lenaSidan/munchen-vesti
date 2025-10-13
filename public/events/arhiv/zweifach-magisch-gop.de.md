@@ -12,6 +12,15 @@ image: "/images/gop-variete.webp"
 imageAlt: "Die magische Show Zweifach Magisch mit Künstlern auf der Bühne"
 seoTitle: "Zweifach Magisch in München – Sommer und Herbst 2025 im GOP Varieté"
 seoDescription: "Die neue Show Zweifach Magisch im GOP Varieté München: Illusionen, Akrobatik, Humor und Gastronomie. Infos zu Programm, Bedingungen und Tickets."
+slug:
+  - münchen
+  - gop
+  - varieté
+  - zweifach-magisch
+  - show
+  - magie
+  - theater
+fileId: "gop-variete"
 ---
 
 **Vom 18. Juli bis 12. Oktober 2025 in München** Zweifach Magisch – eine wahrhaft zauberhafte Show für die ganze Familie. Wer echte Magie erleben will, sollte sich das neue Programm **Zweifach Magisch** im Münchner GOP Varieté-Theater nicht entgehen lassen. Hier liegt Magie in jedem Detail – und jede Nummer sorgt für Staunen und Begeisterung.

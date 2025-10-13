@@ -12,6 +12,15 @@ image: "/images/street-food-panda-halloween.webp"
 imageAlt: Уличная еда на фестивале Street Food Panda в Мюнхене
 seoTitle: "Street Food Panda в Мюнхене — фестиваль уличной еды на Хэллоуин 2025"
 seoDescription: "С 31 октября по 2 ноября в Werksviertel-Mitte пройдёт Street Food Panda Halloween Festival — с десятками стендов, хэллоуинской атмосферой и пандой в 8 метров."
+slug:
+  - münchen
+  - linkin-park
+  - tribute
+  - somewhere-i-belong
+  - backstage
+  - party
+  - musik
+fileId: "somewhere-i-belong-party"
 ---
 
 С 31 октября по 2 ноября 2025 года в мюнхенском районе *Werksviertel-Mitte* вновь пройдёт один из самых ожидаемых гастрономических праздников осени — *Street Food Panda Halloween Festival*. Это событие обещает стать не просто кулинарным фестивалем, а настоящим тематическим приключением, сочетающим атмосферу **Хэллоуина** с многообразием **вкусов со всего мира**.

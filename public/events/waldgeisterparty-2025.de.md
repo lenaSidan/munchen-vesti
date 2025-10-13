@@ -12,6 +12,15 @@ image: "/images/waldgeisterparty-2025.webp"
 imageAlt: "Beleuchteter Waldweg während der Waldgeisterparty"
 seoTitle: "Waldgeisterparty 2025 im Allgäu — Horrorwald und Theatershow"
 seoDescription: "Am 24.–25. Oktober 2025 findet im Allgäu die Waldgeisterparty statt: Nachtwald, Schauspieler, Lichteffekte, Horror und kulinarische Specials. Mindestalter 12 Jahre."
+slug:
+  - allgäu
+  - waldgeisterparty
+  - halloween
+  - wald
+  - horror
+  - show
+  - event
+fileId: "waldgeisterparty-2025"
 ---
 
 **Am 24. und 25. Oktober 2025** erwacht im **Allgäu** eines der ungewöhnlichsten und zugleich faszinierendsten Herbstfeste zum Leben — die **Waldgeisterparty**.  

@@ -3,7 +3,7 @@ title: "SATURDAY NIGHT FEVER kehrt zurück: Das legendäre Musical in München"
 shortTitle: "SATURDAY NIGHT FEVER"
 calendarStartDate: "2025-10-14"
 calendarEndDate: "2025-10-26"
-date: "2025-10-14"
+date: "2025-10-16"
 endDate: "2025-10-26"
 time: "14 по 26 октября 2025"
 ort: "Deutsches Theater | https://maps.app.goo.gl/gXxsQR416GP6iRA77"
@@ -12,6 +12,15 @@ image: "/images/saturday-night-fever.webp"
 imageAlt: Szene aus dem Musical Saturday Night Fever in München
 seoTitle: "Saturday Night Fever — Musical in München: Bee Gees, Disco und Live-Musik"
 seoDescription: "Vom 14. bis 26. Oktober 2025 im Deutschen Theater München: Das legendäre Musical Saturday Night Fever mit den größten Bee Gees-Hits live auf der Bühne."
+slug:
+  - münchen
+  - saturday-night-fever
+  - musical
+  - deutsches-theater
+  - bee-gees
+  - disco
+  - show
+fileId: "saturday-night-fever"
 ---
 
 New York, Brooklyn. Ende der 1970er Jahre. Die Tanzfläche glitzert, Discokugeln drehen sich, der Saal pulsiert im Rhythmus der **Bee Gees**. Genau dann entsteht das Disco-Zeitalter – und der Film *Saturday Night Fever* wird zu seinem Symbol. **John Travolta** im weißen Anzug wird zur Ikone, und der Soundtrack erobert die Spitzen der internationalen Charts.

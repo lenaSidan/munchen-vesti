@@ -20,6 +20,7 @@ slug:
   - wittelsbacherplatz
   - weihnachten
   - handwerk
+fileId: "muenchner-adventsspektakel-2025"
 ---
 
 Vom Duft nach Rauch und würzigen Getränken bis zu den Klängen der Spielleute — auf dem **Wittelsbacherplatz** entfaltet sich wieder das **Münchner Adventsspektakel & Mittelalterlicher Weihnachtsmarkt**.  

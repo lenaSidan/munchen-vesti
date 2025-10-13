@@ -12,6 +12,15 @@ image: "/images/faun-world-hex-tour-2025.webp"
 imageAlt: "Группа FAUN тур World Hex Tour"
 seoTitle: "FAUN в Мюнхене — World Hex Tour 2025 в Circus Krone"
 seoDescription: "25 октября 2025 года группа FAUN выступит в Мюнхене с концертом в Circus Krone в рамках тура World Hex Tour 2025. Pagan Folk, старинные инструменты и современная сцена."
+slug:
+  - мюнхен
+  - faun
+  - world-hex-tour
+  - концерт
+  - circus-krone
+  - паган-фолк
+  - музыка
+fileId: "faun-world-hex-tour-2025"
 ---
 
 **25 октября 2025 года** в Мюнхене выступит группа **FAUN** — один из самых известных коллективов Германии в жанре **Pagan Folk**.  

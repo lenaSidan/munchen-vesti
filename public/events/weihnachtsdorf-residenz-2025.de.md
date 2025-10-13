@@ -12,7 +12,15 @@ image: "/images/weihnachtsdorf-residenz-2025.webp"
 imageAlt: "Weihnachtsmarkt Weihnachtsdorf im Hof der Münchner Residenz"
 seoTitle: "Weihnachtsdorf in der Residenz 2025 – Termine, Programm, Tipps"
 seoDescription: "Vom 17. November bis 22. Dezember 2025 findet im Kaiserhof der Münchner Residenz das Weihnachtsdorf statt: Handwerk, Musik, Märchenwald und kulinarische Genüsse."
-slug: "Weihnachten"
+slug:
+  - münchen
+  - weihnachtsdorf
+  - residenz
+  - weihnachten
+  - kaiserhof
+  - weihnachtsmarkt
+  - tradition
+fileId: "weihnachtsdorf-residenz-2025"
 ---
 
 Wer das Portal der **Residenz** am **Odeonsplatz** durchschreitet, erlebt einen Stimmungswechsel: Schritte hallen auf dem Stein des **Kaiserhofs**, die Luft ist erfüllt von würzigem Glühweinduft, in der Ferne stimmen Bläser erste Töne an, und Kinder recken sich, um die verschneiten Miniaturen im **Märchenwald** zu erspähen. Nur hier, im Hof des ehemaligen Königsschlosses, entsteht jedes Jahr das **Weihnachtsdorf** – kleiner, gemütlicher und persönlicher als die großen Märkte. Es läuft vom **17. November bis 22. Dezember 2025**, täglich von **11:00 bis 21:00 Uhr** (am letzten Tag bis **20:00 Uhr**). Am **23. November** (Totensonntag) bleibt der Markt geschlossen.  

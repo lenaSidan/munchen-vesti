@@ -12,6 +12,15 @@ image: "/images/smells-like-halloween-2025.webp"
 imageAlt: "Menschen in Kostümen bei Smells Like Halloween im Backstage München"
 seoTitle: "Smells Like… Halloween 2025 in München — Party am 31. Oktober"
 seoDescription: "Am 31. Oktober 2025 veranstaltet das Backstage München Smells Like… Halloween: 4 Floors, zahlreiche DJs, Musik von Metalcore bis Indie, Special Drinks und eine Kostümparty der Extraklasse."
+slug:
+  - münchen
+  - halloween
+  - smells-like
+  - backstage
+  - party
+  - musik
+  - event
+fileId: "smells-like-halloween-2025"
 ---
 
 **Am Freitag, den 31. Oktober 2025** verwandelt sich München erneut in die Hauptstadt des Schreckens, der Musik und der Partys.  

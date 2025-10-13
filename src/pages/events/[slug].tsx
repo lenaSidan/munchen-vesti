@@ -8,11 +8,9 @@ import styles from "@/styles/Event.module.css";
 import fs from "fs";
 import matter from "gray-matter";
 import { GetStaticPaths, GetStaticPropsContext } from "next";
-
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import path from "path";
 import { useEffect, useState } from "react";
 import rehypeExternalLinks from "rehype-external-links";
@@ -22,9 +20,11 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 
 interface Event {
-  slug: string;
+  fileId: string;
   title: string;
   shortTitle?: string;
+  seoTitle?: string;
+  seoDescription?: string;
   date?: string;
   endDate?: string;
   calendarStartDate?: string;
@@ -32,11 +32,9 @@ interface Event {
   time?: string;
   ort?: string;
   link?: string;
-  content: string;
   image?: string;
   imageAlt?: string;
-  seoTitle?: string;
-  seoDescription?: string;
+  content: string;
 }
 
 interface EventProps {
@@ -48,9 +46,6 @@ interface EventProps {
 
 export default function Event({ event, locale, archived, similarEvents }: EventProps) {
   const t = useTranslation();
-
-  const router = useRouter();
-
   const [fromCalendar, setFromCalendar] = useState(false);
 
   useEffect(() => {
@@ -58,12 +53,12 @@ export default function Event({ event, locale, archived, similarEvents }: EventP
       const flag = sessionStorage.getItem("fromCalendar");
       if (flag === "true") {
         setFromCalendar(true);
-        sessionStorage.removeItem("fromCalendar"); // чтобы не остался навсегда
+        sessionStorage.removeItem("fromCalendar");
       }
     }
   }, []);
 
-  const canonicalUrl = `https://munchen-vesti.de/${locale === "de" ? "de/" : "ru/"}events/${event.slug}`;
+  const canonicalUrl = `https://munchen-vesti.de/${locale === "de" ? "de/" : "ru/"}events/${event.fileId}`;
   const jsonLd = getEventJsonLd({
     title: event.title,
     description: event.seoDescription || "",
@@ -92,13 +87,11 @@ export default function Event({ event, locale, archived, similarEvents }: EventP
         <h2 className={styles.title}>{event.title}</h2>
         <div className={styles.meta}>
           {event.time}
-          {event.ort && (
-            <span className={styles.ort}>
-              {renderMarkdownLinks(event.ort)}
-            </span>
-          )}
+          {event.ort && <span className={styles.ort}>{renderMarkdownLinks(event.ort)}</span>}
         </div>
+
         {archived && <div className={styles.archivedNotice}>⚠️ {t("events.archived_notice")}</div>}
+
         {event.image && (
           <div className={styles.imageWrapper}>
             <Image
@@ -111,17 +104,17 @@ export default function Event({ event, locale, archived, similarEvents }: EventP
             />
           </div>
         )}
+
         <div className={styles.content} dangerouslySetInnerHTML={{ __html: event.content }} />
-        {/* <div className={styles.likeContainer}>
-          <LikeButton slug={event.slug} />
-        </div> */}
+
         <div className={styles.readMoreContainer}>
           <div className={styles.decorativeLine}>
             <span className={styles.left}>⊱❧</span>
             <span className={styles.right}>⊱❧</span>
           </div>
+
           <Link
-            href={fromCalendar ? "/calendar" : archived ? "/past-events-page" : "/events-page "}
+            href={fromCalendar ? "/calendar" : archived ? "/past-events-page" : "/events-page"}
             className={styles.readMore}
           >
             {t("articles.back")}
@@ -138,8 +131,8 @@ export default function Event({ event, locale, archived, similarEvents }: EventP
             <h3 className={styles.similarTitle}>{t("events.similar_events")}</h3>
             <ul className={styles.similarList}>
               {similarEvents.map((e) => (
-                <li key={e.slug}>
-                  <Link href={`/events/${e.slug}`}>{e.title}</Link>
+                <li key={e.fileId}>
+                  <Link href={`/events/${e.fileId}`}>{e.title}</Link>
                 </li>
               ))}
             </ul>
@@ -154,24 +147,26 @@ export default function Event({ event, locale, archived, similarEvents }: EventP
   );
 }
 
+/* ---------------------- STATIC GENERATION ---------------------- */
+
 export const getStaticPaths: GetStaticPaths = async () => {
   const ruEvents = getEventsByLocale("ru");
   const deEvents = getEventsByLocale("de");
 
-  const paths = [...ruEvents, ...deEvents]
-    .filter((event) => typeof event.slug === "string" && event.slug.trim() !== "")
-    .map((event) => ({
-      params: { slug: String(event.slug) },
-      locale: ruEvents.includes(event) ? "ru" : "de", // ✅ без event.locale
+  const makePaths = (events: Event[], locale: string) =>
+    events.map((event) => ({
+      params: { slug: event.fileId },
+      locale,
     }));
 
+  const paths = [...makePaths(ruEvents, "ru"), ...makePaths(deEvents, "de")];
   return { paths, fallback: "blocking" };
 };
 
 export const getStaticProps = async ({ params, locale }: GetStaticPropsContext) => {
-  if (!params?.slug || !locale) {
-    return { notFound: true };
-  }
+  if (!params?.slug || !locale) return { notFound: true };
+
+  const slugParam = String(params.slug).toLowerCase();
 
   const eventsDir = path.join(process.cwd(), "public/events");
   const archiveDir = path.join(eventsDir, "arhiv");
@@ -180,39 +175,34 @@ export const getStaticProps = async ({ params, locale }: GetStaticPropsContext) 
   const archivedFiles = fs.existsSync(archiveDir) ? fs.readdirSync(archiveDir) : [];
   const allFiles = [...files, ...archivedFiles];
 
-  const fileMatch = allFiles.find(
-    (filename) => filename.includes(params.slug as string) && filename.includes(`${locale}.md`)
-  );
+  const fileMatch = allFiles.find((filename) => {
+    const base = filename.replace(`.${locale}.md`, "").toLowerCase();
+    return base === slugParam;
+  });
 
-  if (!fileMatch) {
-    return { notFound: true };
-  }
+  if (!fileMatch) return { notFound: true };
 
   const isArchived = archivedFiles.includes(fileMatch);
   const filePath = isArchived ? path.join(archiveDir, fileMatch) : path.join(eventsDir, fileMatch);
-
   const fileContents = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(fileContents);
 
   const processedContent = await remark()
     .use(remarkGfm)
     .use(remarkRehype)
-    .use(rehypeExternalLinks, {
-      target: "_blank",
-      rel: ["noopener", "noreferrer"],
-    })
+    .use(rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] })
     .use(rehypeStringify)
     .process(content);
 
   const contentHtml = processedContent.toString();
 
   const allCurrentEvents = getEventsByLocale(locale);
-  const similarEvents = allCurrentEvents.filter((e) => e.slug !== params.slug).slice(0, 3);
+  const similarEvents = allCurrentEvents.filter((e) => e.fileId !== slugParam).slice(0, 3);
 
   return {
     props: {
       event: {
-        slug: params.slug as string,
+        fileId: slugParam,
         title: data.title || "",
         shortTitle: data.title || "",
         seoTitle: data.seoTitle || "",

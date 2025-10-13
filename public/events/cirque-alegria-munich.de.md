@@ -12,6 +12,15 @@ image: "/images/cirque-alegria-munich.webp"
 imageAlt: "Grand Chapiteau Zirkuszelt von Cirque du Soleil auf der Theresienwiese in München"
 seoTitle: "Cirque du Soleil Alegría in München 2026 — Tickets, Termine und Programm"
 seoDescription: "Vom 5. Februar bis 8. März 2026 zeigt Cirque du Soleil die Show «Alegría» im Grand Chapiteau auf der Theresienwiese in München."
+slug:
+  - münchen
+  - cirque-du-soleil
+  - alegria
+  - show
+  - zirkus
+  - theresienwiese
+  - events
+fileId: "cirque-alegria-munich"
 ---
 
 Vom 5. Februar bis 8. März 2026 verwandelt sich München in ein Fest der Fantasie: der weltberühmte **Cirque du Soleil** präsentiert seine legendäre Inszenierung «Alegría» in einer neuen Interpretation. Die Vorstellungen finden im bekannten Zirkuszelt **Grand Chapiteau** auf der Theresienwiese statt – dort, wo sonst das Oktoberfest gefeiert wird.

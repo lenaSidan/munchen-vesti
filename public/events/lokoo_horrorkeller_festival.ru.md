@@ -12,6 +12,15 @@ image: "/images/lokoo_horrorkeller_festival.webp"
 imageAlt: "Женщина в образе «Катрин» на мексиканский День мёртвых"
 seoTitle: "LOKOO Horrorkeller Festival 31 октября в Мюнхене"
 seoDescription: "Самая жуткая ночь года — LOKOO Horrorkeller Festival 31 октября в Löwenbräukeller Мюнхен. Музыка, мистика, шоу, хоррор-атмосфера."
+slug:
+  - мюнхен
+  - lokoo
+  - horrorkeller
+  - хэллоуин
+  - löwenbräukeller
+  - фестиваль
+  - вечеринка
+fileId: "lokoo_horrorkeller_festival"
 ---
 
 Мюнхен готовится к самой грандиозной ночи ужаса. **31 октября** в легендарном **Löwenbräukeller** состоится **LOKOO Horrorkeller Festival** — крупнейшая и самая эксклюзивная вечеринка Хэллоуина в Баварии. С **18:00** и до **3:00 утра** гостей ждёт настоящий праздник тьмы: музыка, акробатика, огненные шоу и мистика в каждом углу.  

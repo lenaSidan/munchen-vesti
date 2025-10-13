@@ -12,6 +12,15 @@ image: "/images/filmstadt-spooky-tour-2025.webp"
 imageAlt: "Посетители в павильоне хоррор-шоу Filmstadt Spooky Tour в Мюнхене"
 seoTitle: "Filmstadt Spooky Tour 2025 в Мюнхене — хоррор-шоу и аттракционы"
 seoDescription: "С 16 октября по 1 ноября 2025 года Bavaria Filmstadt превращается в арену ужаса: Filmstadt Spooky Tour, 5 зон страха, VR, интерактивные сцены и хоррор-шоу с актёрами."
+slug:
+  - мюнхен
+  - filmstadt
+  - spooky-tour
+  - хэллоуин
+  - bavaria-filmstadt
+  - хоррор
+  - шоу
+fileId: "filmstadt-spooky-tour-2025"
 ---
 
 **С 16 октября по 1 ноября 2025 года** киностудия **Bavaria Filmstadt** в Мюнхене перестанет быть просто декорацией для кино и превратится в арену кошмаров.  

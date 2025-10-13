@@ -12,6 +12,15 @@ image: "/images/kleine-prinz-event.webp"
 imageAlt: "Szene aus dem Animationsfilm Der kleine Prinz mit Erzähler im Hintergrund"
 seoTitle: "Der kleine Prinz in München – Film, Erzähler und Live-Musik"
 seoDescription: "Ein einzigartiges Erlebnis in der Astor Film Lounge im Arri – mit 3D-Animation, Erzähler auf der Bühne und Live-Klaviermusik. Nur vom 16. bis 23. November 2025."
+slug:
+  - münchen
+  - der-kleine-prinz
+  - film
+  - kino
+  - musik
+  - arri
+  - erzählung
+fileId: "kleine-prinz-event"
 ---
 
 Vom **16. bis 23. November 2025** wird die **Astor Film Lounge im Arri** in München zur Bühne für ein einzigartiges kulturelles Erlebnis — eine Reise in die Welt des *kleinen Prinzen*, inszeniert an der Schnittstelle von Kino, Theater und Livemusik.  

@@ -12,6 +12,15 @@ image: "/images/laternenfestival-2025.webp"
 imageAlt: "Запуск фонариков на воду во время Laternenfestival München"
 seoTitle: "Laternenfestival München 2025 — праздник фонарей 2 ноября"
 seoDescription: "2 ноября 2025 года в Мюнхене пройдёт Laternenfestival: запуск фонарей на воде, музыка, еда и семейная атмосфера. Билеты — 29,95 €, дети до 8 лет бесплатно."
+slug:
+  - мюнхен
+  - фестиваль-фонариков
+  - праздник-света
+  - регатта
+  - вода
+  - семья
+  - событие
+fileId: "laternenfestival-2025"
 ---
 
 **2 ноября 2025 года** Мюнхен станет ареной одного из самых красивых осенних праздников — **Laternenfestival**.  
