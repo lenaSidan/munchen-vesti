@@ -12,6 +12,15 @@ image: "/images/somewhere-i-belong-party.webp"
 imageAlt: "Menschenmenge auf einem Konzert in der Backstage Halle in München"
 seoTitle: "Somewhere I Belong — Linkin Park Tribute-Party in München"
 seoDescription: "Am 19. Dezember 2025 findet in der Backstage Halle in München die Linkin Park Tribute-Party «Somewhere I Belong» mit DJ Benni Al Massiva und Doppelprogramm statt."
+slug:
+  - münchen
+  - linkin-park
+  - tribute
+  - somewhere-i-belong
+  - backstage
+  - party
+  - musik
+fileId: "somewhere-i-belong-party"
 ---
 
 Wenn die letzten Akkorde der Konzerte verklingen, gehen in München neue Lichter an — und am **19. Dezember 2025** wird eines dieser Ereignisse die Party **“Somewhere I Belong”** zu Ehren der legendären Band **Linkin Park** sein.  

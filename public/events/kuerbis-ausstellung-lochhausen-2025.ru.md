@@ -3,7 +3,7 @@ title: "«В царство тыкв»: первая выставка в BeerenC
 shortTitle: "В царство тыкв"
 calendarStartDate: "2025-09-12"
 calendarEndDate: "2025-10-31"
-date: "2025-09-28"
+date: "2025-10-18"
 endDate: "2025-10-31"
 time: "с 12 сентября 2025, ежедневно 8:30–19:00"
 ort: "BeerenCafé Lochhausen | https://maps.app.goo.gl/gxtSY45S8dbBbxvM8"
@@ -12,6 +12,15 @@ image: "/images/kuerbis-ausstellung-lochhausen-2025.webp"
 imageAlt: "Осенние композиции из тыкв на выставке в BeerenCafé Lochhausen"
 seoTitle: "«В царство тыкв» в BeerenCafé Lochhausen — выставка и развлечения 2025"
 seoDescription: "С 12 сентября 2025 года BeerenCafé Lochhausen приглашает на выставку «Ab ins Reich der Kürbisse»: композиции из тыкв, кафе, сбор урожая и развлечения для детей и взрослых."
+slug:
+  - мюнхен
+  - тыквенная-выставка
+  - beeren-cafe
+  - лоххаузен
+  - осень
+  - семья
+  - праздник
+fileId: "kuerbis-ausstellung-lochhausen-2025"
 ---
 
 **С 12 сентября 2025 года** в **BeerenCafé Lochhausen** открылась первая большая тыквенная выставка — **«Ab ins Reich der Kürbisse»**.  

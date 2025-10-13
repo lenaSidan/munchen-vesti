@@ -11,6 +11,15 @@ image: "/images/vysotsky_abend.webp"
 imageAlt: "Konzert zum Gedenken an Wladimir Wyssozki"
 seoTitle: "Wyssozki-Gedenkabend in München – Konzert im Herbst 2025"
 seoDescription: "Ein akustisches Konzert zu Ehren von Wladimir Wyssozki in München: Gitarrenklänge und Streichensemble live."
+slug:
+  - münchen
+  - wyssozki
+  - gedenkabend
+  - konzert
+  - trudering
+  - musik
+  - kultur
+fileId: "vysotsky_abend"
 ---
 
 ## "Ich komme natürlich zurück..."

@@ -20,6 +20,7 @@ slug:
   - schrannenhalle
   - punsch
   - tradition
+fileId: "feuerzangenbowle-muenchen-2025"
 ---
 
 ### Was ist überhaupt die „Feuerzangenbowle“

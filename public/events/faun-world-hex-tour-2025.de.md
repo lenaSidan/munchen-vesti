@@ -12,6 +12,15 @@ image: "/images/faun-world-hex-tour-2025.webp"
 imageAlt: "Die Band FAUN während der World Hex Tour"
 seoTitle: "FAUN in München — World Hex Tour 2025 im Circus Krone"
 seoDescription: "Am 25. Oktober 2025 treten FAUN im Circus Krone in München auf — im Rahmen der World Hex Tour 2025. Pagan Folk, historische Instrumente und moderne Sounds."
+slug:
+  - münchen
+  - faun
+  - world-hex-tour
+  - concert
+  - circus-krone
+  - pagan-folk
+  - musik
+fileId: "faun-world-hex-tour-2025"
 ---
 
 **Am 25. Oktober 2025** tritt die Gruppe **FAUN** in München auf — eine der bekanntesten Pagan-Folk-Bands Deutschlands.  

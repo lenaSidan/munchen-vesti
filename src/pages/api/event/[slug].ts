@@ -18,6 +18,7 @@ async function processMarkdown(content: string) {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { slug, locale = "ru" } = req.query;
+
   if (!slug || typeof slug !== "string") {
     return res.status(400).json({ error: "Slug required" });
   }
@@ -26,12 +27,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const events = getEventsByLocale(locale as string);
     const slugLower = slug.toLowerCase();
 
-    // ✅ Ищем совпадение по строке или массиву slug
-    const event = events.find((e) =>
-      Array.isArray(e.slug)
+    // ✅ Универсальный поиск — поддерживает и slug, и fileId
+    const event = events.find((e) => {
+      const fileIdMatch = e.fileId.toLowerCase() === slugLower;
+      const slugMatch = Array.isArray(e.slug)
         ? e.slug.some((s) => s.toLowerCase() === slugLower)
-        : e.slug.toLowerCase() === slugLower
-    );
+        : e.slug.toLowerCase() === slugLower;
+      return fileIdMatch || slugMatch;
+    });
 
     if (!event) {
       return res.status(404).json({ error: "Event not found" });

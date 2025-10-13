@@ -3,7 +3,7 @@ title: "Show ALIVE in München: Spielplatz für Erwachsene — mit Akrobatik, Hu
 shortTitle: "ALIVE in München"
 calendarStartDate: "2025-10-16"
 calendarEndDate: "2026-01-11"
-date: "2025-10-16"
+date: "2025-10-17"
 endDate: "2026-01-11"
 time: "16. Oktober 2025 – 11. Januar 2026"
 ort: "GOP Varieté-Theater München | https://maps.app.goo.gl/ZxRWcDMwAbaqQPsm8"
@@ -12,6 +12,16 @@ image: "/images/gop-variete.webp"
 imageAlt: "Szene der Show ALIVE in München mit Akrobat auf der Bühne"
 seoTitle: "Show ALIVE in München — Oktober 2025 bis Januar 2026"
 seoDescription: "Die Show ALIVE im GOP Varieté-Theater München: Akrobatik, Musik und Humor auf Weltklasseniveau. Termine, Künstler, Menü Leander und Tickets."
+slug:
+  - münchen
+  - alive
+  - varieté
+  - gop
+  - show
+  - akrobatik
+  - theater
+  - unterhaltung
+fileId: "gop-variete"
 ---
 
 Vom **16. Oktober 2025 bis 11. Januar 2026** wird es im **GOP Varieté-Theater München** laut, lustig, aufregend – und überraschend berührend. Die neue Show **ALIVE** verwandelt die Bühne in einen großen Spielplatz – nur dass hier statt Sandkasten **Tricks**, statt Schaukel **Trapez** und statt Kinderspäßen **echte akrobatische Meisterleistungen** gezeigt werden.

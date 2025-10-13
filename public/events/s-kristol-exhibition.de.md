@@ -12,6 +12,15 @@ image: "/images/s-kristol-exhibition.webp"
 imageAlt: "Ein Gemälde von S.Kristol auf der Ausstellung in München"
 seoTitle: "Ausstellung von S.Kristol in München — 24.–26. Oktober 2025"
 seoDescription: "Der französische Künstler S.Kristol präsentiert in München eine visuelle Poesie aus Graffiti, Pop-Art und urbaner Energie. Eintritt frei."
+slug:
+  - münchen
+  - s-kristol
+  - ausstellung
+  - kunst
+  - pop-art
+  - graffiti
+  - marriott
+fileId: "s-kristol-exhibition"
 ---
 
 Vom **24. bis 26. Oktober 2025** findet in München eine Ausstellung statt, die eines der farbenfrohsten und freiesten Kulturevents des Herbstes verspricht. Der französische Künstler **S.Kristol**, bekannt für seine visuell kraftvollen und emotional aufgeladenen Werke, präsentiert seine Kunst im **Munich Marriott Hotel City West**. Der Titel ist schlicht — *Ausstellung S.Kristol* — doch dahinter verbirgt sich ein wahres visuelles Feuerwerk.

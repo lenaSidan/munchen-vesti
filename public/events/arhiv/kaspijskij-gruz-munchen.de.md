@@ -20,6 +20,7 @@ slug:
   - backstage-halle
   - musik
   - tour
+fileId: "kaspijskij-gruz-munchen"
 ---
 
 **Am 12. Oktober 2025** tritt das legendäre russische Duo **„Kaspijskij Gruz“** in München auf – ein Projekt, das seit über zehn Jahren seinen eigenen Ton im russischen Rap setzt. Ihre Texte sind mehr als nur Reime: kurze Novellen mit Philosophie und feiner Ironie, in denen statt Aggression kluge Reflexion und statt Angeberei ruhige Selbstsicherheit klingen.  

@@ -12,6 +12,15 @@ image: "/images/somewhere-i-belong-party.webp"
 imageAlt: "Толпа на концерте в клубе Backstage Halle в Мюнхене"
 seoTitle: "Somewhere I Belong — трибьют-вечеринка Linkin Park в Мюнхене"
 seoDescription: "19 декабря 2025 года в Backstage Halle в Мюнхене пройдёт трибьют-вечеринка Linkin Park «Somewhere I Belong» с DJ Benni Al Massiva и двойной программой."
+slug:
+  - мюнхен
+  - linkin-park
+  - трибьют
+  - somewhere-i-belong
+  - backstage
+  - вечеринка
+  - музыка
+fileId: "somewhere-i-belong-party"
 ---
 
 Когда последние аккорды концертов затихают, в Мюнхене зажигаются новые огни — и **19 декабря 2025 года** одним из таких событий станет вечеринка “Somewhere I Belong” в честь легендарной группы **Linkin Park**. Место действия — **Backstage Halle**, время — **с 23:00 до утра**.

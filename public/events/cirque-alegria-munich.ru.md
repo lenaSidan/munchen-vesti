@@ -12,6 +12,15 @@ image: "/images/cirque-alegria-munich.webp"
 imageAlt: "Цирковой шатёр Grand Chapiteau Cirque du Soleil на Theresienwiese в Мюнхене"
 seoTitle: "Cirque du Soleil Alegría в Мюнхене 2026 — билеты, даты и программа"
 seoDescription: "С 5 февраля по 8 марта 2026 года Cirque du Soleil покажет шоу «Alegría» в шатре Grand Chapiteau на Theresienwiese в Мюнхене."
+slug:
+  - мюнхен
+  - цирк-дю-солей
+  - alegria
+  - шоу
+  - цирк
+  - терезинвизе
+  - события
+fileId: "cirque-alegria-munich"
 ---
 
 С 5 февраля по 8 марта 2026 года в Мюнхене развернётся настоящий праздник воображения: всемирно известный **Cirque du Soleil** представит свою легендарную постановку «Alegría» в новой интерпретации. Представления пройдут в знаменитом цирковом шатре **Grand Chapiteau** на Терензиенвизе — месте, где обычно проходит Октоберфест.

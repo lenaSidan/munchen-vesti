@@ -12,11 +12,18 @@ image: "/images/gop-variete.webp"
 imageAlt: "Akrobaten auf der Bühne der Show HOT SPOT im GOP Theater"
 seoTitle: "HOT SPOT in München – Januar bis April 2026 im GOP Varieté"
 seoDescription: "Die neue Show HOT SPOT im GOP Varieté München – Akrobatik, Musik, Humor und Kulinarik. Alle Infos zu Terminen, Tickets und Dinner vor der Vorstellung."
+slug:
+  - münchen
+  - gop
+  - hot-spot
+  - varieté
+  - theater
+  - show
+  - akrobatik
+fileId: "gop-variete"
 ---
 
-**15. Januar – 12. April 2026, München**
-
-Manchmal reicht ein einziger Abend, um für immer in Erinnerung zu bleiben. Ein einziger Wow-Moment, den man nicht vergessen möchte – aufregend, lebendig, echt. Genau solche Erlebnisse schenkt das neue Programm **„HOT SPOT“** im **GOP Varieté-Theater München**.
+**15. Januar – 12. April 2026, München**. Manchmal reicht ein einziger Abend, um für immer in Erinnerung zu bleiben. Ein einziger Wow-Moment, den man nicht vergessen möchte – aufregend, lebendig, echt. Genau solche Erlebnisse schenkt das neue Programm **„HOT SPOT“** im **GOP Varieté-Theater München**.
 
 Auf der Bühne: **internationale Spitzenartisten und preisgekrönte Festivalgäste**, vereint in einer dynamischen und charismatischen Show. Hier verschwinden die **Grenzen des Möglichen** – zugunsten von **fesselnder Akrobatik**, **feinem Humor**, **Rhythmus** und **ästhetischer Bewegung**. Ein Ort der Anziehung – ein Zentrum für zeitgenössische Zirkuskunst und lebendiges Bühnengeschehen.
 

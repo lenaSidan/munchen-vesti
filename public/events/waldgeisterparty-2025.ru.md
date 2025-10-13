@@ -12,6 +12,15 @@ image: "/images/waldgeisterparty-2025.webp"
 imageAlt: "Освещённая лесная тропа во время Waldgeisterparty"
 seoTitle: "Waldgeisterparty 2025 в Allgäu — лесной ужастик и театрализованное шоу"
 seoDescription: "24–25 октября 2025 года в Allgäu пройдёт Waldgeisterparty: ночной лес, актёры, световые эффекты, ужасы и угощения. Минимальный возраст — 12 лет."
+slug:
+  - альгой
+  - waldgeisterparty
+  - хэллоуин
+  - лес
+  - хоррор
+  - шоу
+  - событие
+fileId: "waldgeisterparty-2025"
 ---
 
 **24 и 25 октября 2025 года** в **Allgäu** оживёт один из самых необычных и пугающе-привлекательных праздников осени — **Waldgeisterparty**.  

@@ -109,8 +109,6 @@
 <url><loc>https://munchen-vesti.de/events/hotspot-gop</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/ice-nine-kills-munich-zenith</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/ice-nine-kills-munich-zenith</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/de/events/kaspijskij-gruz-munchen</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/events/kaspijskij-gruz-munchen</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/kim-dracula-muenchen</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/kim-dracula-muenchen</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/kleine-prinz-event</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
@@ -131,6 +129,7 @@
 <url><loc>https://munchen-vesti.de/events/muenchner-adventsspektakel-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/musik-rathausbalkon</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/musik-rathausbalkon</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://munchen-vesti.de/events/neyronchnik-tirol-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/ruseldinner-jekyll-hyde</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/ruseldinner-jekyll-hyde</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/s-kristol-exhibition</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
@@ -143,18 +142,16 @@
 <url><loc>https://munchen-vesti.de/events/somewhere-i-belong-party</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/street-food-panda-halloween</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/street-food-panda-halloween</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://munchen-vesti.de/de/events/the-haunted-pool-munchen</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://munchen-vesti.de/events/the-haunted-pool-munchen</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/tollwood-winterfestival-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/tollwood-winterfestival-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/de/events/vintage-kilo-sale-munich</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/events/vintage-kilo-sale-munich</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/vysotsky_concert</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/vysotsky_concert</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/waldgeisterparty-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/waldgeisterparty-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/events/weihnachtsdorf-residenz-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/events/weihnachtsdorf-residenz-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/de/events/zweifach-magisch-gop</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://munchen-vesti.de/events/zweifach-magisch-gop</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://munchen-vesti.de/de/articles/Alter-Suedfriedhof</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/articles/Alter-Suedfriedhof</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://munchen-vesti.de/de/articles/Christmas-Munich</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>

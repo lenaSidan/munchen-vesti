@@ -12,6 +12,15 @@ image: "/images/filmstadt-spooky-tour-2025.webp"
 imageAlt: "Besucher in einem Horror-Pavillon der Filmstadt Spooky Tour in München"
 seoTitle: "Filmstadt Spooky Tour 2025 in München — Horror-Show und Attraktionen"
 seoDescription: "Vom 16. Oktober bis 1. November 2025 verwandelt sich die Bavaria Filmstadt in eine Arena des Schreckens: Filmstadt Spooky Tour, 5 Zonen des Grauens, VR, interaktive Szenen und Horror-Show mit Schauspielern."
+slug:
+  - münchen
+  - filmstadt
+  - spooky-tour
+  - halloween
+  - bavaria-filmstadt
+  - horror
+  - show
+fileId: "filmstadt-spooky-tour-2025"
 ---
 
 **Vom 16. Oktober bis 1. November 2025** verwandelt sich die **Bavaria Filmstadt** in München von einer normalen Filmkulisse in eine Arena des Grauens.  

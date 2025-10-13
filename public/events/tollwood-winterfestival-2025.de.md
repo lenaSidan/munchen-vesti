@@ -12,6 +12,15 @@ image: "/images/tollwood-winterfestival.webp"
 imageAlt: "Festzelte und Lichter des Tollwood Winterfestivals auf der Theresienwiese"
 seoTitle: "Tollwood Winterfestival 2025 in München"
 seoDescription: "Vom 25. November bis 23. Dezember 2025: Tollwood Winterfestival auf der Theresienwiese – Markt der Ideen, Straßenshows, Bio-Gastronomie und Silvesterparty."
+slug:
+  - münchen
+  - tollwood
+  - winterfestival
+  - theresienwiese
+  - weihnachten
+  - markt
+  - kultur
+fileId: "tollwood-winterfestival"
 ---
 
 Wenn in der Münchner Innenstadt schon Schneeflocken aus Glühwein und Weihnachtsmelodien kreisen, erstrahlt auf der **Theresienwiese** ein eigenes, ein wenig abenteuerliches Licht. Das **Winter-Tollwood** ist ein Ort, an dem Lebkuchen neben neuem Zirkus stehen, Performances auf Zukunftsgespräche treffen und Souvenirs Ideen mit Verantwortung für den Planeten verbinden.

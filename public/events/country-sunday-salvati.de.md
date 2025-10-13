@@ -11,6 +11,15 @@ image: "/images/country-sunday-salvati.webp"
 imageAlt: Sascha Salvati auf der Bühne mit Akustikgitarre
 seoTitle: "Country Sunday in München: Konzert von Sascha Salvati am 19. Oktober 2025"
 seoDescription: "Country-Abend in München mit Sascha Salvati: Balladen, Südstaaten-Feeling und Akustikklang. Konzert am 19. Oktober 2025."
+slug:
+  - münchen
+  - country
+  - sascha-salvati
+  - konzert
+  - backstage
+  - musik
+  - live
+fileId: "country-sunday-salvati"
 ---
 
 Lieben Sie die Atmosphäre des **amerikanischen Südens**, das **weiche Gitarrenspiel** und **gefühlvolle Balladen** über das Leben, die Straße und die Liebe? Dann wird der **COUNTRY SUNDAY** am **19. Oktober 2025 in München** für Sie zu einem unvergesslichen musikalischen Erlebnis.

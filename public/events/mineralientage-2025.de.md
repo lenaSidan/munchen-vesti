@@ -12,6 +12,15 @@ image: "/images/mineralientage-2025.webp"
 imageAlt: "Mineralien- und Kristallausstellung auf den Mineralientagen München"
 seoTitle: "Mineralientage München 2025 — Europas größte Messe für Mineralien und Edelsteine"
 seoDescription: "Vom 23.–26. Oktober 2025 finden die Mineralientage München statt: Europas größte Messe für Mineralien, Fossilien, Schmuck und Meteoriten. Über 1.000 Aussteller und 45.000 Besucher jährlich."
+slug:
+  - münchen
+  - mineralientage
+  - messe
+  - mineralien
+  - edelsteine
+  - fossilien
+  - ausstellung
+fileId: "mineralientage-2025"
 ---
 
 **Vom 23. bis 26. Oktober 2025** wird München wieder zum Pilgerort für alle, die sich schon einmal gefragt haben: Wie sieht Schönheit aus, die nicht von Menschenhand, sondern von der Natur selbst geschaffen wurde?  

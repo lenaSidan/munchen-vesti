@@ -12,6 +12,15 @@ image: "/images/gop-variete.webp"
 imageAlt: "Bühne des GOP-Theaters mit weihnachtlicher Dekoration"
 seoTitle: "GOP Comedy Club – Advents-Special in München — 15. Dezember 2025"
 seoDescription: "Das weihnachtliche Special des GOP Comedy Club in München: Comedians, Live-Auftritte, Dinner und gute Laune. Tickets rechtzeitig sichern!"
+slug:
+  - münchen
+  - gop
+  - comedy
+  - advent
+  - varieté
+  - theater
+  - show
+fileId: "gop-variete"
 ---
 
 **Vor Weihnachten**, wenn der Dezemberrhythmus von Eile und festlichem Trubel bestimmt ist, lädt das **GOP Varieté-Theater München** zu einer Pause ein – zum herzlichen Lachen. Bereits zum fünften Mal findet auf der Bühne des Theaters das besondere **Advents-Special** des beliebten GOP Comedy Clubs statt. Nur ein Abend, nur eine Gelegenheit: **am 15. Dezember 2025 um 20:00 Uhr**.

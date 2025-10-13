@@ -12,6 +12,15 @@ image: "/images/carnival-of-lights-munich.webp"
 imageAlt: "Lichtinstallationen im CAVALLUNA Park in München"
 seoTitle: "Carnival of Lights 2025/26 in München — Termine, Ort, Tickets"
 seoDescription: "Vom 15. November 2025 bis 25. Januar 2026 im CAVALLUNA Park: Carnival of Lights mit Lichtinstallationen, Interaktivität und Wintermagie."
+slug:
+  - münchen
+  - carnival-of-lights
+  - magie-des-lichts
+  - cavalluna-park
+  - lichtshow
+  - winter
+  - event
+fileId: "carnival-of-lights-munich"
 ---
 
 Wenn die Novemberdämmerung über München hereinbricht, erstrahlt im Norden der Stadt etwas ganz Besonderes — der **Carnival of Lights**, ein magischer Lichtparcours im **CAVALLUNA Park**, erschaffen vom Team **LUMAGICA**. Es ist nicht nur ein Spaziergang zwischen Lampen — es ist eine wahre Geschichte aus Lichtern, in der Fantasie und Technik zu einer fesselnden Show verschmelzen.

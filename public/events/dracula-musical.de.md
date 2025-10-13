@@ -12,6 +12,15 @@ image: "/images/dracula-musical.webp"
 imageAlt: "Szene aus dem Musical Dracula mit einem Schauspieler im Graf-Kostüm"
 seoTitle: "DRACULA – Das Musical in München — 7.–19. April 2026"
 seoDescription: "Das berühmte Musical über Graf Dracula mit Jan Ammann in der Hauptrolle: Live-Musik, gotische Atmosphäre, Rock und eine tragische Liebesgeschichte. Tickets jetzt im Vorverkauf!"
+slug:
+  - münchen
+  - dracula
+  - musical
+  - deutsches-theater
+  - show
+  - kultur
+  - events
+fileId: "dracula-musical"
 ---
 
 Vor sieben Jahrhunderten fürchtete man ihn, später schrieb man Romane über ihn. Heute betritt Graf Dracula die Bühne – begleitet von Gitarrenriffs, Live-Orchester und leidenschaftlichen Balladen. Vom 7. bis 19. April 2026 erwacht im **Deutschen Theater München** eine klassische Geschichte über Liebe, Unsterblichkeit und Dunkelheit in einer Musicalproduktion der Extraklasse zum Leben.

@@ -3,7 +3,7 @@ title: "SATURDAY NIGHT FEVER возвращается: легендарный м
 shortTitle: "SATURDAY NIGHT FEVER"
 calendarStartDate: "2025-10-14"
 calendarEndDate: "2025-10-26"
-date: "2025-10-14"
+date: "2025-10-16"
 endDate: "2025-10-26"
 time: "14 по 26 октября 2025"
 ort: "Deutsches Theater | https://maps.app.goo.gl/gXxsQR416GP6iRA77"
@@ -12,6 +12,15 @@ image: "/images/saturday-night-fever.webp"
 imageAlt: Сцена из мюзикла Saturday Night Fever в Мюнхене
 seoTitle: "Saturday Night Fever — мюзикл в Мюнхене: Bee Gees, диско и живой звук"
 seoDescription: "С 14 по 26 октября в Deutsches Theater München пройдет мюзикл Saturday Night Fever. Легендарные хиты Bee Gees и атмосфера 1970-х ждут зрителей."
+slug:
+  - мюнхен
+  - saturday-night-fever
+  - мюзикл
+  - deutsches-theater
+  - bee-gees
+  - диско
+  - шоу
+fileId: "saturday-night-fever"
 ---
 
 Нью-Йорк, Бруклин. Конец 1970-х. Танцпол сверкает, зеркальные шары вращаются, а зал пульсирует в ритме **Bee Gees**. Именно тогда рождается эпоха диско — и фильм *Saturday Night Fever* становится её символом. **Джон Траволта** в белоснежном костюме превращается в икону, а **саундтрек занимает вершины мировых чартов**.

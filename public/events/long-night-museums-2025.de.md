@@ -12,6 +12,15 @@ image: "/images/long-night-museums-2025.webp"
 imageAlt: "Besucher bei der Langen Nacht der Museen in München"
 seoTitle: "Lange Nacht der Museen München 2025 — Programm, Teilnehmer, Tickets"
 seoDescription: "Am 18. Oktober 2025 findet in München die Lange Nacht der Museen statt: über 100 Museen und Galerien, Sonderführungen, Performances, Kinderprogramm und MVG-Shuttles. Ticket 20 Euro."
+slug:
+  - münchen
+  - lange-nacht-der-museen
+  - museen
+  - kunst
+  - kultur
+  - nacht
+  - event
+fileId: "long-night-museums-2025"
 ---
 
 Der Herbst in München ist nicht nur die Zeit von Nebel und Glühwein, sondern auch der Moment, in dem die Museen der Stadt länger wach bleiben als gewöhnlich. **Am 18. Oktober 2025**, von sechs Uhr abends bis ein Uhr nachts, lädt München wieder zur **„Langen Nacht der Museen“** ein – ein Ereignis, das seit über einem Vierteljahrhundert die Stadt in eine einzige Kulturbühne verwandelt.

@@ -20,6 +20,7 @@ slug:
   - metal
   - trap
   - jazz
+fileId: "kim-dracula-muenchen"
 ---
 
 Anfang 2026 wird **München** Zeuge eines der ungewöhnlichsten und am meisten erwarteten Konzerte in der Welt der alternativen Musik. Am **30. Januar** tritt im Club **Technikum** **Kim Dracula** auf — ein Künstler, der sich kaum in Genregrenzen einordnen lässt. Der Ticketverkauf startet bereits am **2. Oktober 2025**, und Fans sollten sich beeilen: Die Show verspricht ein Ereignis zu werden, über das noch lange gesprochen wird.  

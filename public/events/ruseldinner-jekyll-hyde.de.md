@@ -11,6 +11,15 @@ image: "/images/gruseldinner-jekyll-hyde.webp"
 imageAlt: Theater-Dinner in München mit Dr. Jekyll und Mr. Hyde
 seoTitle: "Gruseldinner in München – Jekyll & Hyde im Zunfthaus am 30. Oktober 2025"
 seoDescription: "Gruseldinner in München: Die düstere Geschichte von Jekyll & Hyde, ein 4-Gänge-Menü und stimmungsvolles Theater im historischen Zunfthaus. Nur am 30. Oktober 2025."
+slug:
+  - münchen
+  - gruseldinner
+  - jekyll-hyde
+  - zunfthaus
+  - halloween
+  - theater
+  - dinner
+fileId: "gruseldinner-jekyll-hyde"
 ---
 
 **Herbst** – die Zeit, in der sich über München nicht nur Nebel legen, sondern auch Geheimnisse. In den historischen Sälen des **Zunfthaus**, wo einst Handwerker bei Bier über das Leben sprachen, entfalten sich heute ganz andere Szenen. Zwischen dunklem Holz, Kerzenschein und dem Flüstern der Kellner finden hier die **Gruseldinner** statt – Theaterabende mit Gänsehautgarantie.

@@ -12,6 +12,15 @@ image: "/images/krampuslauf-munich-2025.webp"
 imageAlt: "Krampuslauf: Teilnehmer in Masken und Kostümen ziehen durch die Münchner Innenstadt"
 seoTitle: "Krampuslauf München 2025 — Datum, Route und Tipps für Besucher"
 seoDescription: "Der Krampuslauf in München findet am 14. Dezember 2025 von 15 bis 17 Uhr statt. Route, Atmosphäre und Tipps für ein unvergessliches Erlebnis."
+slug:
+  - münchen
+  - krampuslauf
+  - weihnachten
+  - marienplatz
+  - tradition
+  - umzug
+  - event
+fileId: "krampuslauf-munich-2025"
 ---
 
 In München bedeutet **Weihnachten** nicht nur Glühwein, gebrannte Mandeln und Musik vom **Rathausbalkon**. Einmal im Jahr füllt sich die Innenstadt mit **Hörnern, Schellen und Fell** – der **Krampuslauf** zieht durch die Straßen. Das Spektakel stammt aus der Alpenmythologie, wo die Krampusse den heiligen Nikolaus begleiteten und allzu ausgelassene Menschen züchtigen sollten. 2025 findet dieser „Ball der Dämonen“ wieder im Herzen Münchens statt – höchste Zeit, ihn zu erleben.  

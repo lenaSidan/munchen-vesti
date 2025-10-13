@@ -9,9 +9,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useMemo, useState } from "react";
 
-// Расширенная типизация
 type LiteEvent = Omit<Event, "content"> & { excerptHtml?: string };
-
 interface EventsProps {
   events: LiteEvent[];
 }
@@ -26,18 +24,15 @@ export default function EventsPage({ events }: EventsProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [eventContents, setEventContents] = useState<Record<string, string>>({});
 
-  // 🔹 Загрузка полного текста события (API по прежнему принимает slug-СТРОКУ)
+  // 🔹 Загрузка полного текста по fileId
   async function loadContent(id: string) {
     if (eventContents[id]) return;
-    const ev = events.find((e) => e.fileId === id || e.slug.includes(id));
+    const ev = events.find((e) => e.fileId === id);
     if (!ev) return;
-
-    // Канонический параметр для API — первый slug
-    const canonicalSlug = ev.slug[0];
 
     try {
       const res = await fetch(
-        `/api/event/${encodeURIComponent(canonicalSlug)}?locale=${router.locale}`
+        `/api/event/${encodeURIComponent(ev.fileId)}?locale=${router.locale}`
       );
       if (!res.ok) throw new Error(`API error ${res.status}`);
       const data = await res.json();
@@ -117,26 +112,23 @@ export default function EventsPage({ events }: EventsProps) {
     });
   }, [selectedMonthYear, events]);
 
-  // 🔹 Обработка хэша в URL (fileId или любой из slug[])
+  // 🔹 Обработка перехода по хэшу
   useEffect(() => {
     if (typeof window === "undefined" || !window.location.hash || !events?.length) return;
     const hash = decodeURIComponent(window.location.hash.slice(1));
-    const ev = events.find((e) => e.fileId === hash || e.slug.includes(hash));
-
+    const ev = events.find((e) => e.fileId === hash);
     if (!ev?.date) return;
     const d = new Date(ev.date);
     const target = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
     if (selectedMonthYear !== target) setSelectedMonthYear(target);
   }, [events]);
 
-  // 🔹 Scroll и раскрытие нужной карточки по хэшу
+  // 🔹 Scroll и раскрытие по хэшу
   useEffect(() => {
     if (typeof window === "undefined" || !window.location.hash) return;
-    const raw = window.location.hash.slice(1);
-    const decoded = decodeURIComponent(raw);
-
+    const decoded = decodeURIComponent(window.location.hash.slice(1));
     const id = requestAnimationFrame(() => {
-      const match = events.find((e) => e.fileId === decoded || e.slug.includes(decoded));
+      const match = events.find((e) => e.fileId === decoded);
       if (!match) return;
       const el = document.getElementById(match.fileId);
       if (el) {
@@ -145,11 +137,65 @@ export default function EventsPage({ events }: EventsProps) {
         loadContent(match.fileId);
       }
     });
-
     return () => cancelAnimationFrame(id);
   }, [selectedMonthYear, filteredEvents]);
 
-  // 🔹 Рендер ссылок в Markdown формате
+  // 🔹 Переход при смене хэша
+  useEffect(() => {
+    function goToFromHash() {
+      if (typeof window === "undefined") return;
+      const raw = window.location.hash?.slice(1);
+      if (!raw) return;
+      const key = decodeURIComponent(raw);
+      const match = events.find((e) => e.fileId === key);
+      if (!match) return;
+
+      if (match.date) {
+        const d = new Date(match.date);
+        const target = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+        setSelectedMonthYear((prev) => (prev === target ? prev : target));
+      }
+
+      const tryScroll = (attempt = 0) => {
+        const el = document.getElementById(match.fileId);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+          setExpandedId(match.fileId);
+          loadContent(match.fileId);
+        } else if (attempt < 12) {
+          requestAnimationFrame(() => tryScroll(attempt + 1));
+        }
+      };
+      requestAnimationFrame(() => tryScroll());
+    }
+
+    window.addEventListener("hashchange", goToFromHash);
+    goToFromHash();
+    return () => window.removeEventListener("hashchange", goToFromHash);
+  }, [events]);
+
+  const formatDateForGoogle = (start: string, end?: string) => {
+    const s = new Date(start);
+    const e = end ? new Date(end) : new Date(s.getTime() + 60 * 60 * 1000);
+    const f = (d: Date) =>
+      d
+        .toISOString()
+        .replace(/[-:]|\.\d{3}/g, "")
+        .slice(0, 15) + "Z";
+    return `${f(s)}/${f(e)}`;
+  };
+
+  const isCurrentMonthSelected = selectedMonthYear === monthYearOptions[0]?.value;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  // 🔹 Рендер Markdown-ссылок
   function renderMarkdownLinks(input: string, classNameLink?: string, classNameText?: string) {
     if (!input) return null;
     const md = /^\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)$/;
@@ -174,66 +220,6 @@ export default function EventsPage({ events }: EventsProps) {
     }
     return <span className={classNameText}>{input}</span>;
   }
-  useEffect(() => {
-    function goToFromHash() {
-      if (typeof window === "undefined") return;
-      const raw = window.location.hash?.slice(1);
-      if (!raw) return;
-
-      const key = decodeURIComponent(raw);
-      const match = events.find(
-        (e) => e.fileId === key || (Array.isArray(e.slug) ? e.slug.includes(key) : e.slug === key)
-      );
-      if (!match) return;
-
-      // выставляем месяц, если нужно
-      if (match.date) {
-        const d = new Date(match.date);
-        const target = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
-        setSelectedMonthYear((prev) => (prev === target ? prev : target));
-      }
-
-      // Надёжный скролл после рендера карточек
-      const tryScroll = (attempt = 0) => {
-        const el = document.getElementById(match.fileId);
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth", block: "start" });
-          setExpandedId(match.fileId);
-          loadContent(match.fileId);
-        } else if (attempt < 12) {
-          requestAnimationFrame(() => tryScroll(attempt + 1));
-        }
-      };
-      requestAnimationFrame(() => tryScroll());
-    }
-
-    window.addEventListener("hashchange", goToFromHash);
-    // Запускаем при первом заходе по прямой ссылке
-    goToFromHash();
-
-    return () => window.removeEventListener("hashchange", goToFromHash);
-  }, [events]);
-  const formatDateForGoogle = (start: string, end?: string) => {
-    const s = new Date(start);
-    const e = end ? new Date(end) : new Date(s.getTime() + 60 * 60 * 1000);
-    const f = (d: Date) =>
-      d
-        .toISOString()
-        .replace(/[-:]|\.\d{3}/g, "")
-        .slice(0, 15) + "Z";
-    return `${f(s)}/${f(e)}`;
-  };
-
-  const isCurrentMonthSelected = selectedMonthYear === monthYearOptions[0]?.value;
-
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
 
   return (
     <>
@@ -243,6 +229,7 @@ export default function EventsPage({ events }: EventsProps) {
       <div className={styles.articleContainer}>
         <h2 className={styles.title}>{t("months.events_title")}</h2>
 
+        {/* Intro блок */}
         {isCurrentMonthSelected && (
           <div className={styles.introBox}>
             {isMobile ? (
@@ -287,7 +274,7 @@ export default function EventsPage({ events }: EventsProps) {
         {/* 🔽 Список событий */}
         <div className={styles.container}>
           {filteredEvents.map((event) => {
-            const fileKey = Array.isArray(event.fileId) ? event.fileId[0] : event.fileId;
+            const fileKey = event.fileId;
             const fullHtml = eventContents[fileKey];
             const htmlToShow =
               expandedId === fileKey ? fullHtml || "<p>Loading…</p>" : event.excerptHtml || "";
@@ -364,9 +351,13 @@ export default function EventsPage({ events }: EventsProps) {
                       {event.date && (
                         <>
                           <a
-                            href={`/api/ics?title=${encodeURIComponent(event.title)}&description=${encodeURIComponent(
+                            href={`/api/ics?title=${encodeURIComponent(
+                              event.title
+                            )}&description=${encodeURIComponent(
                               (fullHtml || event.excerptHtml || "").replace(/<[^>]+>/g, "")
-                            )}&location=${encodeURIComponent(event.ort || "")}&start=${encodeURIComponent(
+                            )}&location=${encodeURIComponent(
+                              event.ort || ""
+                            )}&start=${encodeURIComponent(
                               new Date(event.date).toISOString()
                             )}&end=${encodeURIComponent(
                               new Date(
@@ -382,7 +373,10 @@ export default function EventsPage({ events }: EventsProps) {
                           <a
                             href={`https://calendar.google.com/calendar/u/0/r/eventedit?text=${encodeURIComponent(
                               event.title
-                            )}&dates=${formatDateForGoogle(event.date, event.endDate)}&location=${encodeURIComponent(
+                            )}&dates=${formatDateForGoogle(
+                              event.date,
+                              event.endDate
+                            )}&location=${encodeURIComponent(
                               event.ort || ""
                             )}&details=${encodeURIComponent(
                               (fullHtml || event.excerptHtml || "").replace(/<[^>]+>/g, "")
@@ -406,6 +400,14 @@ export default function EventsPage({ events }: EventsProps) {
                         } else {
                           setExpandedId(event.fileId);
                           loadContent(event.fileId);
+
+                          // 🔹 Добавляем плавный скролл к карточке при раскрытии
+                          const el = document.getElementById(event.fileId);
+                          if (el) {
+                            setTimeout(() => {
+                              el.scrollIntoView({ behavior: "smooth", block: "start" });
+                            }, 200);
+                          }
                         }
                       }}
                     >
@@ -424,25 +426,10 @@ export default function EventsPage({ events }: EventsProps) {
 
         {copiedId && <div className={styles.copyToast}>❖ {t("event.link_copied")}</div>}
 
-        <div className={styles.monthSelectContainer}>
-          <label htmlFor="monthSelect">{t("months.filter_by_month")}</label>
-          <select
-            id="monthSelect"
-            value={selectedMonthYear}
-            onChange={(e) => setSelectedMonthYear(e.target.value)}
-            className={styles.monthSelect}
-          >
-            {monthYearOptions.map(({ value, label }) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </select>
-        </div>
-
         <div className={styles.disclaimerBox}>
           <p className={styles.disclaimer}>* {t("event.disclaimer")}</p>
         </div>
+
         <div className={styles.archiveLinkBox}>
           <Link href="/past-events-page" className={styles.archiveButton}>
             {t("buttons.past_events")}
@@ -491,7 +478,7 @@ export const getStaticProps: GetStaticProps<EventsProps> = async (context) => {
 
   const events: LiteEvent[] = await Promise.all(
     sorted.map(async (e) => ({
-      slug: e.slug, // ← массив slug остаётся в props
+      slug: e.slug,
       fileId: e.fileId,
       title: e.title,
       date: e.date,

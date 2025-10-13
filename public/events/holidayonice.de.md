@@ -12,6 +12,15 @@ image: "/images/holidayonice.webp"
 imageAlt: "Eiskunstläufer bei Holiday on Ice"
 seoTitle: "Holiday on Ice in München – Januar 2026, Olympiahalle"
 seoDescription: "Holiday on Ice kehrt im Januar 2026 mit dem neuen Programm 'Cinema of Dreams' nach München zurück. Alle Termine, Preise, Rabatte und Ticketinfos hier."
+slug:
+  - münchen
+  - holiday-on-ice
+  - olympiahalle
+  - eiskunstlauf
+  - show
+  - winter
+  - events
+fileId: "holidayonice"
 ---
 
 **Holiday on Ice** ist eine legendäre Eisshow, die **Eiskunstlauf**, **Akrobatik**, **Theater** und **Musik** vereint. Seit der Gründung im Jahr 1943 begeisterte sie weltweit über **330 Millionen Zuschauer** und hält **fünf Guinness-Weltrekorde**.
