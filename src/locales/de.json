@@ -11,14 +11,17 @@
     "page_title": "München – Veranstaltungskalender: Konzerte, Ausstellungen, Märkte, Festivals und Events für Kinder und Erwachsene"
   },
   "seo": {
-    "index_title": "Veranstaltungskalender München – Konzerte, Ausstellungen, Events",
-    "index_description": "Veranstaltungskalender für München: aktuelle Events, Konzerte, Märkte, Ausstellungen und Tipps – heute und am Wochenende.",
-    "veranstaltungen_muenchen_title": "Veranstaltungen in München – Konzerte, Festivals und Ausstellungen",
-    "veranstaltungen_muenchen_description": "Aktueller Veranstaltungskalender für München: Konzerte, Ausstellungen, Festivals, Theater und Stadtfeste. Entdecken Sie das kulturelle Leben Münchens mit den „Münchener Nachrichten“.",
-    "article_muenchen_title": "München entdecken – Sehenswürdigkeiten und versteckte Orte",
-    "article_muenchen_description": "Entdecken Sie Münchens besondere Plätze: Parks, Straßenzüge, kulturelle Highlights und unbekannte Ecken. Ein inspirierender Stadtführer für Besucher und Einheimische.",
-    "nachrichten_muenchen_title": "Nachrichten aus München – aktuelle Meldungen & Infos",
-    "nachrichten_muenchen_description": "Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten aus München: Stadtleben, Änderungen, Veranstaltungen und Hinweise."
+    "index_title": "München: Events, Ausstellungen & Konzerte",
+    "index_description": "Aktuelle Veranstaltungen und Infos in München: Ausstellungen, Märkte, Konzerte, kulturelle Highlights und nützliche Hinweise – heute und am Wochenende.",
+
+    "veranstaltungen_muenchen_title": "Veranstaltungen in München: Konzerte & Ausstellungen",
+    "veranstaltungen_muenchen_description": "Der aktuelle Veranstaltungskalender für München: Konzerte, Ausstellungen, Festivals, Theater, Familien- und Stadtfeste. Erleben Sie Münchens Kultur mit Münchener Nachrichten.",
+
+    "article_muenchen_title": "München entdecken: Orte & Sehenswürdigkeiten",
+    "article_muenchen_description": "Entdecken Sie München neu: Parks, Straßen, besondere Viertel, Kulturdenkmäler und versteckte Orte. Ein Stadtführer für Einheimische und Gäste.",
+
+    "nachrichten_muenchen_title": "Nachrichten aus München: Aktuelles & Hinweise",
+    "nachrichten_muenchen_description": "Lesen Sie aktuelle Nachrichten aus München: städtische Ereignisse, wichtige Änderungen, Tipps und Bekanntmachungen."
   },
   "newsSEO": {
     "h1": "Nachrichten aus München – Aktuelles Stadtleben und wichtige Ereignisse",
@@ -748,7 +751,6 @@
     "read_more": "Weiterlesen"
   },
   "soonEvents": {
-  "sectionTitle": "Demnächst in München"
-}
-
+    "sectionTitle": "Demnächst in München"
+  }
 }
