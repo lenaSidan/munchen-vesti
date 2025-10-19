@@ -1,4 +1,5 @@
 import BavarianWordOfTheWeek from "@/components/BavarianWordOfTheWeek";
+import ImportantNewsBlock from "@/components/ImportantNewsBlock";
 import MiniCalendarBlock from "@/components/MiniCalendarBlock";
 import Seo from "@/components/Seo";
 import SubscribeBox from "@/components/SubscribeBox";
@@ -25,20 +26,20 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import type { WordData } from "types/WordData";
 
-// 📱 Лениво загружаем мобильную версию
+// Лениво загружаем мобильную версию
 const HomeMobile = dynamic(() => import("@/components/HomeMobile"), {
   ssr: false,
   loading: () => <p>Loading...</p>,
 });
 
-// 🔹 Новости и открытки — также ленивые
+// Новости и открытки — также ленивые
 const LazyShortNewsBlock = dynamic(() => import("@/components/ShortNewsBlock"), {
   ssr: false,
   loading: () => <p>Loading...</p>,
 });
 const MiniPostcards = dynamic(() => import("@/components/MiniPostcards"), { ssr: false });
 
-// 📜 Типы данных
+// Типы данных
 interface Announcement {
   id: number;
   textKey: string;
@@ -75,7 +76,7 @@ export default function Home({
   const [showNewsBlock, setShowNewsBlock] = useState(false);
   const newsRef = useRef<HTMLDivElement | null>(null);
 
-  // ✅ Проверка ширины экрана (всегда наверху)
+  // Проверка ширины экрана (всегда наверху)
   useEffect(() => {
     const checkWidth = () => setIsMobile(window.innerWidth < 768);
     checkWidth();
@@ -83,7 +84,7 @@ export default function Home({
     return () => window.removeEventListener("resize", checkWidth);
   }, []);
 
-  // ✅ Следим за блоком новостей (IntersectionObserver)
+  // Следим за блоком новостей (IntersectionObserver)
   useEffect(() => {
     if (!newsRef.current) return;
     const observer = new IntersectionObserver(
@@ -99,7 +100,7 @@ export default function Home({
     return () => observer.disconnect();
   }, []);
 
-  // ✅ Если мобильное устройство — показываем HomeMobile
+  // Если мобильное устройство — показываем HomeMobile
   if (isMobile) {
     return (
       <HomeMobile
@@ -111,7 +112,7 @@ export default function Home({
     );
   }
 
-  // 💻 Десктопная версия
+  // Десктопная версия
   return (
     <>
       <Seo title={t("seo.index_title")} description={t("seo.index_description")} />
@@ -228,6 +229,11 @@ export default function Home({
             </div>
           )}
         </div>
+        {
+          <div>
+            <ImportantNewsBlock />
+          </div>
+        }
       </div>
     </>
   );

@@ -165,7 +165,7 @@
     text-underline-offset: 3px;
     transition: color 0.3s ease;
     text-align: left;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .card {
     border-radius: 8px;

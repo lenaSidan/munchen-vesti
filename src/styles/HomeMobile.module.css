@@ -99,6 +99,7 @@
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 3px;
+  font-size: 1rem;
 }
 
 /* 🔹 Секция мероприятий */
@@ -170,6 +171,7 @@
   font-weight: 600;
   text-decoration: underline;
   color: var(--heading-color2);
+  font-size: 1rem;
 }
 
 /* --- Календарь и погода --- */
