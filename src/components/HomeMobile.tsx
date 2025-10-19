@@ -2,6 +2,7 @@ import BavarianWordOfTheWeek from "@/components/BavarianWordOfTheWeek";
 import MiniCalendarBlock from "@/components/MiniCalendarBlock";
 import MiniPostcardsMobile from "@/components/MiniPostcardsMobile";
 import MobileHighlight from "@/components/MobileHighlight";
+import MobileImportantNews from "@/components/MobileImportantNews";
 
 import SubscribeBox from "@/components/SubscribeBox";
 import WeatherInlineBlock from "@/components/WeatherInlineBlock";
@@ -133,7 +134,9 @@ export default function HomeMobile({ mainEvent, weather, oldWords, otherEvents }
       <section className={styles.mobileWord}>
         <BavarianWordOfTheWeek words={oldWords.slice(0, 1)} />
       </section>
-
+      <div>
+        <MobileImportantNews />
+      </div>
       {/* 🔹 Мини-открытки */}
       <section className={styles.mobilePostcards}>
         <MiniPostcardsMobile />

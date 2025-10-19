@@ -1,9 +1,9 @@
 import useTranslation from "@/hooks/useTranslation";
-import styles from "@/styles/ImportantNews.module.css";
+import styles from "@/styles/ActualNews.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ImportantNewsBlock() {
+export default function ActualNewsBlock() {
   const t = useTranslation();
 
   return (
@@ -23,7 +23,7 @@ export default function ImportantNewsBlock() {
                 />
               </div>
             </div>
-       <div className={styles.blockRight}>
+            <div className={styles.blockRight}>
               <h4 className={styles.newsTitle}>{t("actual_news.title")}</h4>
               <p className={styles.newSubtitle}>{t("actual_news.subtitle")}</p>
               <p className={styles.newsText}>{t("actual_news.text")}</p>
