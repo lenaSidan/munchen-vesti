@@ -1,3 +1,4 @@
+import MonthFilter from "@/components/MonthFilter";
 import Seo from "@/components/Seo";
 import SubscribeBox from "@/components/SubscribeBox";
 import useTranslation from "@/hooks/useTranslation";
@@ -253,8 +254,13 @@ export default function EventsPage({ events }: EventsProps) {
             )}
           </div>
         )}
-
-        {/* 🔽 Фильтр по месяцам */}
+        <MonthFilter
+          label={t("months.filter_by_month")}
+          selectedMonthYear={selectedMonthYear}
+          monthYearOptions={monthYearOptions}
+          onChange={setSelectedMonthYear}
+        />
+        {/* 🔽 Фильтр по месяцам
         <div className={styles.monthSelectContainer}>
           <label htmlFor="monthSelect">{t("months.filter_by_month")}</label>
           <select
@@ -269,7 +275,7 @@ export default function EventsPage({ events }: EventsProps) {
               </option>
             ))}
           </select>
-        </div>
+        </div> */}
 
         {/* 🔽 Список событий */}
         <div className={styles.container}>
@@ -425,7 +431,12 @@ export default function EventsPage({ events }: EventsProps) {
         </div>
 
         {copiedId && <div className={styles.copyToast}>❖ {t("event.link_copied")}</div>}
-
+        <MonthFilter
+          label={t("months.filter_by_month")}
+          selectedMonthYear={selectedMonthYear}
+          monthYearOptions={monthYearOptions}
+          onChange={setSelectedMonthYear}
+        />
         <div className={styles.disclaimerBox}>
           <p className={styles.disclaimer}>* {t("event.disclaimer")}</p>
         </div>

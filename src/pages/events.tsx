@@ -1,3 +1,4 @@
+import MonthFilter from "@/components/MonthFilter";
 import Seo from "@/components/Seo";
 import SubscribeBox from "@/components/SubscribeBox";
 import useTranslation from "@/hooks/useTranslation";
@@ -171,22 +172,12 @@ export default function EventsOld({ events }: EventsProps) {
           </div>
         )}
 
-        {/* 🔽 Фильтр по месяцам */}
-        <div className={styles.monthSelectContainer}>
-          <label htmlFor="monthSelect">{t("months.filter_by_month")}</label>
-          <select
-            id="monthSelect"
-            value={selectedMonthYear}
-            onChange={(e) => setSelectedMonthYear(e.target.value)}
-            className={styles.monthSelect}
-          >
-            {monthYearOptions.map(({ value, label }) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </select>
-        </div>
+        <MonthFilter
+          label={t("months.filter_by_month")}
+          selectedMonthYear={selectedMonthYear}
+          monthYearOptions={monthYearOptions}
+          onChange={setSelectedMonthYear}
+        />
 
         {/* 🔽 Список событий */}
         <div className={styles.container}>
@@ -325,7 +316,12 @@ export default function EventsOld({ events }: EventsProps) {
         </div>
 
         {copiedId && <div className={styles.copyToast}>❖ {t("event.link_copied")}</div>}
-
+        <MonthFilter
+          label={t("months.filter_by_month")}
+          selectedMonthYear={selectedMonthYear}
+          monthYearOptions={monthYearOptions}
+          onChange={setSelectedMonthYear}
+        />
         <div className={styles.disclaimerBox}>
           <p className={styles.disclaimer}>* {t("event.disclaimer")}</p>
         </div>
