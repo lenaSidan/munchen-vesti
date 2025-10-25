@@ -82,7 +82,54 @@
   border-color: var(--heading-color);
   border-radius: 2px;
 }
+.monthSelectWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  gap: 0.3rem;
+}
 
+.monthLabel {
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+  text-align: center;
+}
+
+.monthControls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.monthSelect {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.95rem;
+  border: 1px solid var(--border-color, #aaa);
+  border-radius: 6px;
+  background: var(--alt-background-light);
+  font-family: inherit;
+}
+
+.arrowButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.arrowButton:hover:not(:disabled) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.arrowButton:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
 /* ====== Карточка события ====== */
 .eventCard {
   border: 1px solid var(--heading-color);
@@ -501,6 +548,14 @@
     margin-bottom: 8px;
     font-size: 0.9rem;
   }
+  .monthSelectWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 0 0;
+  gap: 0.3rem;
+}
   .monthSelect {
     background-image: none;
     padding: 8px;
