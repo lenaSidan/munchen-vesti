@@ -38,6 +38,8 @@ Für junge Besucher gibt es interaktive Programme wie **„Ein Tag im Marionette
 
 ⓘ  **Tipp:** Kommen Sie frühzeitig – Karten sind besonders für Abendvorstellungen oft schnell ausverkauft.
 
+_Den aktuellen Spielplan finden Sie im Bereich [„Ankündigungen“](https://munchen-vesti.de/ru/events-page) und auf der offiziellen Website des Theaters im Abschnitt [„Programm“](https://www.muema-theater.de/programm/)._
+
 ### Praktische Informationen
 
 - ✔ **Offizielle Website:** [Münchner Marionettentheater](https://www.muema-theater.de/)  

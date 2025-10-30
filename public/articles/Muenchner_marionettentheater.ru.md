@@ -39,6 +39,7 @@ seoDescription: "Münchner Marionettentheater — старейший театр 
 
 ⓘ  Совет: приходите заранее — иногда билеты заканчиваются, особенно на вечерние спектакли.
 
+_Актуальное расписание спектаклей ищите в разделе [«Анонсы»](https://munchen-vesti.de/ru/events-page) и на официальном сайте театра, в разделе [«Programm»](https://www.muema-theater.de/programm/)._
 
 ### Практическая информация
 
