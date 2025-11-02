@@ -2,136 +2,155 @@ const fs = require("fs");
 const path = require("path");
 
 const baseUrl = "https://munchen-vesti.de";
-const pagesDir = path.join(process.cwd(), "src/pages");
+const publicDir = path.join(process.cwd(), "public");
 
-const excludeFiles = ["_app.tsx", "_document.tsx", "_error.tsx", "404.tsx", "500.tsx"];
-const excludeDirs = ["api", "components"];
-const excludeCustomPaths = ["article-muenchen", "nachrichten-muenchen", "veranstaltungen-muenchen"];
-
-function walkDir(dir, fileList = []) {
-  const files = fs.readdirSync(dir);
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    if (stat.isDirectory()) {
-      if (!excludeDirs.includes(file)) {
-        walkDir(filePath, fileList);
-      }
-    } else if (file.endsWith(".tsx") && !excludeFiles.includes(file) && !file.startsWith("[")) {
-      const relativePath = path.relative(pagesDir, filePath).replace(/\\/g, "/").trim();
-      fileList.push(relativePath);
-    }
+// 🧹 Очистка старых sitemap-файлов
+function cleanupOldSitemaps() {
+  const files = fs.readdirSync(publicDir);
+  const sitemapFiles = files.filter((f) => f.endsWith("sitemap.xml") || f.endsWith("-sitemap.xml"));
+  for (const file of sitemapFiles) {
+    fs.unlinkSync(path.join(publicDir, file));
   }
-  return fileList;
+  console.log(`🧹 Удалено старых sitemap-файлов: ${sitemapFiles.length}`);
 }
 
-function getStaticPages() {
-  const allFiles = walkDir(pagesDir);
-  return allFiles
-    .filter((relativePath) => !excludeCustomPaths.some((excluded) =>
-      relativePath.replace(".tsx", "").endsWith(excluded)))
-    .map((relativePath) => {
-      const pagePath = relativePath.replace(".tsx", "").replace(/\/index$/, "");
-      const urlPath = pagePath === "index" ? "" : pagePath;
-      return `<url><loc>${baseUrl}/${urlPath}</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>`;
-    });
-}
-
-function getMarkdownUrls(folder, prefix, checkEventDates = false, priority = "0.6") {
-  const dirPath = path.join(process.cwd(), "public", folder);
+// 📄 Генерация URL из Markdown (с поддержкой вложенных папок)
+function getMarkdownUrls(
+  folder,
+  prefix,
+  checkEventDates = false,
+  priority = "0.6",
+  changefreq = "weekly"
+) {
+  const dirPath = path.join(publicDir, folder);
   if (!fs.existsSync(dirPath)) return [];
-
-  const files = fs
-    .readdirSync(dirPath, { withFileTypes: true })
-    .filter((entry) => entry.isFile() && entry.name.endsWith(".md"))
-    .map((entry) => entry.name);
-
-  return files
-    .map((file) => {
-      const [filename, locale] = file.replace(".md", "").split(".");
-      const slug = filename.replace(/^\d{2}-\d{2}-\d{4}-/, "");
-      const content = fs.readFileSync(path.join(dirPath, file), "utf-8");
-
-      if (checkEventDates) {
-        const dateMatch = content.match(/date:\s*(.+)/);
-        const endDateMatch = content.match(/endDate:\s*(.+)/);
-        const startDate = dateMatch ? new Date(dateMatch[1]) : null;
-        const endDate = endDateMatch ? new Date(endDateMatch[1]) : startDate;
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-        if (!startDate || endDate < today) return null;
-      }
-
-      const localePrefix = locale === "de" ? "/de" : "";
-      return `<url><loc>${baseUrl}${localePrefix}/${prefix}/${slug}</loc><changefreq>weekly</changefreq><priority>${priority}</priority></url>`;
-    })
-    .filter(Boolean);
-}
-
-function getArchivedEventUrls() {
-  return getMarkdownUrls("events/arhiv", "events", false, "0.3");
-}
-
-function getPlacesUrls() {
-  const placesDir = path.join(process.cwd(), "public", "places");
-  if (!fs.existsSync(placesDir)) return [];
 
   const urls = [];
 
-  const categories = fs.readdirSync(placesDir, { withFileTypes: true }).filter((dirent) =>
-    dirent.isDirectory()
-  );
+  function walkDir(currentPath) {
+    const entries = fs.readdirSync(currentPath, { withFileTypes: true });
+    for (const entry of entries) {
+      const fullPath = path.join(currentPath, entry.name);
+
+      if (entry.isDirectory()) {
+        walkDir(fullPath);
+      } else if (entry.isFile() && entry.name.endsWith(".md")) {
+        const stats = fs.statSync(fullPath);
+        const lastmod = stats.mtime.toISOString().split("T")[0];
+        const [filename, locale] = entry.name.replace(".md", "").split(".");
+        const slug = filename.replace(/^\d{2}-\d{2}-\d{4}-/, "");
+        const localePrefix = locale === "de" ? "/de" : "";
+        const relativeDir = path.relative(dirPath, currentPath).replace(/\\/g, "/");
+        const subPath = relativeDir ? `/${relativeDir}` : "";
+
+        const content = fs.readFileSync(fullPath, "utf-8");
+        if (checkEventDates) {
+          const dateMatch = content.match(/date:\s*(.+)/);
+          const endDateMatch = content.match(/endDate:\s*(.+)/);
+          const startDate = dateMatch ? new Date(dateMatch[1]) : null;
+          const endDate = endDateMatch ? new Date(endDateMatch[1]) : startDate;
+          const today = new Date();
+          today.setHours(0, 0, 0, 0);
+          if (!startDate || endDate < today) continue;
+        }
+
+        urls.push(`<url>
+  <loc>${baseUrl}${localePrefix}/${prefix}${subPath}/${slug}</loc>
+  <lastmod>${lastmod}</lastmod>
+  <changefreq>${changefreq}</changefreq>
+  <priority>${priority}</priority>
+</url>`);
+      }
+    }
+  }
+
+  walkDir(dirPath);
+  return urls;
+}
+
+
+// 🧾 Запись отдельных sitemap
+function writeSitemap(filename, urls) {
+  if (!urls.length) {
+    console.log(`⚪ Пропущен ${filename} (нет URL)`);
+    return;
+  }
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.join("\n")}
+</urlset>`;
+
+  fs.writeFileSync(path.join(publicDir, filename), xml);
+  console.log(`✅ ${filename} создан (${urls.length} URL)`);
+}
+// 🗺 Генерация ссылок для раздела Places (вложенные категории)
+function getPlacesUrls() {
+  const placesDir = path.join(publicDir, "places");
+  if (!fs.existsSync(placesDir)) return [];
+
+  const urls = [];
+  const categories = fs.readdirSync(placesDir, { withFileTypes: true }).filter((d) => d.isDirectory());
 
   for (const category of categories) {
-    const categoryName = category.name;
-    const categoryPath = path.join(placesDir, categoryName);
-    const files = fs.readdirSync(categoryPath).filter((file) => file.endsWith(".md"));
+    const categoryPath = path.join(placesDir, category.name);
+    const files = fs.readdirSync(categoryPath).filter((f) => f.endsWith(".md"));
 
     for (const file of files) {
+      const filePath = path.join(categoryPath, file);
+      const stats = fs.statSync(filePath);
+      const lastmod = stats.mtime.toISOString().split("T")[0];
       const [filename, locale] = file.replace(".md", "").split(".");
       const slug = filename.replace(/^\d{2}-\d{2}-\d{4}-/, "");
       const localePrefix = locale === "de" ? "/de" : "";
-      urls.push(
-        `<url><loc>${baseUrl}${localePrefix}/places/${categoryName}/${slug}</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>`
-      );
+      urls.push(`<url>
+  <loc>${baseUrl}${localePrefix}/places/${category.name}/${slug}</loc>
+  <lastmod>${lastmod}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>`);
     }
   }
 
   return urls;
 }
 
-function generateSitemap() {
-  const staticUrls = [
-    `<url><loc>${baseUrl}</loc><changefreq>daily</changefreq><priority>1.0</priority></url>`,
-    `<url><loc>${baseUrl}/past-events-page</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>`,
-  ];
+// 🧩 Генерация всех карт сайта
+function generateAll() {
+  cleanupOldSitemaps();
 
-  const dynamicPages = getStaticPages();
-  const newsUrls = getMarkdownUrls("news", "news", false, "0.6");
-  const articlesUrls = getMarkdownUrls("articles", "articles", false, "0.7");
-  const eventsUrls = getMarkdownUrls("events", "events", true, "0.9");
-  const geocachingUrls = getMarkdownUrls("geocaching", "geocaching", false, "0.6");
-  const postcardUrls = getMarkdownUrls("postcards", "postcards", false, "0.5");
-  const placesUrls = getPlacesUrls();
-  // const archivedEvents = getArchivedEventUrls();
+  const articles = getMarkdownUrls("articles", "articles", false, "0.7");
+  const news = getMarkdownUrls("news", "news", false, "0.6");
+  const events = getMarkdownUrls("events", "events", true, "0.9");
+  const pastEvents = getMarkdownUrls("events/arhiv", "past-events", false, "0.3", "monthly");
+  const places = getPlacesUrls();
+  const postcards = getMarkdownUrls("postcards-md", "postcards", false, "0.6");
+  const useful = getMarkdownUrls("useful", "useful", false, "0.6");
 
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${[
-    ...staticUrls,
-    ...dynamicPages,
-    ...newsUrls,
-    ...eventsUrls,
-    ...articlesUrls,
-    ...geocachingUrls,
-    ...postcardUrls,
-    ...placesUrls,
-    // ...archivedEvents,
-  ].join("\n")}
-</urlset>`;
+  writeSitemap("articles-sitemap.xml", articles);
+  writeSitemap("news-sitemap.xml", news);
+  writeSitemap("events-sitemap.xml", events);
+  writeSitemap("past-events-sitemap.xml", pastEvents);
+  writeSitemap("places-sitemap.xml", places);
+  writeSitemap("postcards-sitemap.xml", postcards);
+  writeSitemap("useful-sitemap.xml", useful);
 
-  fs.writeFileSync(path.join(process.cwd(), "public", "sitemap.xml"), sitemap);
-  console.log("✅ Sitemap обновлён!");
+  const today = new Date().toISOString().split("T")[0];
+  const index = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap><loc>${baseUrl}/articles-sitemap.xml</loc><lastmod>${today}</lastmod></sitemap>
+  <sitemap><loc>${baseUrl}/news-sitemap.xml</loc><lastmod>${today}</lastmod></sitemap>
+  <sitemap><loc>${baseUrl}/events-sitemap.xml</loc><lastmod>${today}</lastmod></sitemap>
+  <sitemap><loc>${baseUrl}/past-events-sitemap.xml</loc><lastmod>${today}</lastmod></sitemap>
+  <sitemap><loc>${baseUrl}/places-sitemap.xml</loc><lastmod>${today}</lastmod></sitemap>
+  <sitemap><loc>${baseUrl}/postcards-sitemap.xml</loc><lastmod>${today}</lastmod></sitemap>
+  <sitemap><loc>${baseUrl}/useful-sitemap.xml</loc><lastmod>${today}</lastmod></sitemap>
+</sitemapindex>`;
+
+  fs.writeFileSync(path.join(publicDir, "sitemap-index.xml"), index);
+  console.log("📘 sitemap-index.xml обновлён!");
 }
 
-generateSitemap();
+
+// 🚀 Запуск
+generateAll();
