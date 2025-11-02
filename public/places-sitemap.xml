@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-  <loc>https://munchen-vesti.de/de/places/entdeckungen/jakobsweg-muenchen</loc>
-  <lastmod>2025-07-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.7</priority>
-</url>
-<url>
   <loc>https://munchen-vesti.de/places/entdeckungen/jakobsweg-muenchen</loc>
   <lastmod>2025-07-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/entdeckungen/munich-lakes-summer</loc>
-  <lastmod>2025-06-17</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/entdeckungen/jakobsweg-muenchen</loc>
+  <lastmod>2025-07-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -25,8 +19,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/entdeckungen/neuschwanstein</loc>
-  <lastmod>2025-07-13</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/entdeckungen/munich-lakes-summer</loc>
+  <lastmod>2025-06-17</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -37,8 +31,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/essen-gehen/cronlein</loc>
-  <lastmod>2025-07-18</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/entdeckungen/neuschwanstein</loc>
+  <lastmod>2025-07-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -49,8 +43,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/essen-gehen/dinner-in-the-dark</loc>
-  <lastmod>2025-06-18</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/essen-gehen/cronlein</loc>
+  <lastmod>2025-07-18</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -61,8 +55,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/essen-gehen/escobar-muenchen</loc>
-  <lastmod>2025-07-06</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/essen-gehen/dinner-in-the-dark</loc>
+  <lastmod>2025-06-18</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -73,8 +67,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/essen-gehen/fela-muenchen</loc>
-  <lastmod>2025-07-04</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/essen-gehen/escobar-muenchen</loc>
+  <lastmod>2025-07-06</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -85,8 +79,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/essen-gehen/katzentempel-muenchen</loc>
-  <lastmod>2025-07-18</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/essen-gehen/fela-muenchen</loc>
+  <lastmod>2025-07-04</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -97,8 +91,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/essen-gehen/miasanfoodies-popupcafe</loc>
-  <lastmod>2025-06-17</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/essen-gehen/katzentempel-muenchen</loc>
+  <lastmod>2025-07-18</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -109,8 +103,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/essen-gehen/nespresso-marienplatz</loc>
-  <lastmod>2025-07-07</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/essen-gehen/miasanfoodies-popupcafe</loc>
+  <lastmod>2025-06-17</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -121,8 +115,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/freizeit-erlebnisse/drink-and-paint</loc>
-  <lastmod>2025-07-06</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/essen-gehen/nespresso-marienplatz</loc>
+  <lastmod>2025-07-07</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -133,8 +127,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/freizeit-erlebnisse/eisbachweg-muenchen</loc>
-  <lastmod>2025-07-13</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/freizeit-erlebnisse/drink-and-paint</loc>
+  <lastmod>2025-07-06</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -145,8 +139,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/freizeit-erlebnisse/gameon-muenchen</loc>
-  <lastmod>2025-07-06</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/freizeit-erlebnisse/eisbachweg-muenchen</loc>
+  <lastmod>2025-07-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -157,8 +151,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/freizeit-erlebnisse/geocaching-muenchen</loc>
-  <lastmod>2025-07-04</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/freizeit-erlebnisse/gameon-muenchen</loc>
+  <lastmod>2025-07-06</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -169,8 +163,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/freizeit-erlebnisse/gop-variete</loc>
-  <lastmod>2025-07-31</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/freizeit-erlebnisse/geocaching-muenchen</loc>
+  <lastmod>2025-07-04</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -181,20 +175,20 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/freizeit-erlebnisse/laserzone</loc>
-  <lastmod>2025-07-07</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/freizeit-erlebnisse/gop-variete</loc>
+  <lastmod>2025-07-31</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://munchen-vesti.de/places/freizeit-erlebnisse/laserzone</loc>
-  <lastmod>2025-07-04</lastmod>
+  <lastmod>2025-07-07</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/freizeit-erlebnisse/virtual-escape-room</loc>
-  <lastmod>2025-07-07</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/freizeit-erlebnisse/laserzone</loc>
+  <lastmod>2025-07-04</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -205,8 +199,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/mit-kindern/fela-muenchen</loc>
-  <lastmod>2025-07-04</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/freizeit-erlebnisse/virtual-escape-room</loc>
+  <lastmod>2025-07-07</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -217,8 +211,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/mit-kindern/hofreiter-beerencafe</loc>
-  <lastmod>2025-07-13</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/mit-kindern/fela-muenchen</loc>
+  <lastmod>2025-07-04</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -229,8 +223,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/mit-kindern/katzentempel-muenchen</loc>
-  <lastmod>2025-07-31</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/mit-kindern/hofreiter-beerencafe</loc>
+  <lastmod>2025-07-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -241,32 +235,32 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/mit-kindern/laserzone-kinder</loc>
-  <lastmod>2025-07-04</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/mit-kindern/katzentempel-muenchen</loc>
+  <lastmod>2025-07-31</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://munchen-vesti.de/places/mit-kindern/laserzone-kinder</loc>
-  <lastmod>2025-07-13</lastmod>
+  <lastmod>2025-07-04</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/mit-kindern/maerchenwald-isartal</loc>
+  <loc>https://munchen-vesti.de/ru/places/mit-kindern/laserzone-kinder</loc>
   <lastmod>2025-07-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://munchen-vesti.de/places/mit-kindern/maerchenwald-isartal</loc>
-  <lastmod>2025-07-14</lastmod>
+  <lastmod>2025-07-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/mit-kindern/pools-muenchen</loc>
-  <lastmod>2025-07-04</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/mit-kindern/maerchenwald-isartal</loc>
+  <lastmod>2025-07-14</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -277,8 +271,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/mit-kindern/tierpark-hellabrunn</loc>
-  <lastmod>2025-07-13</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/mit-kindern/pools-muenchen</loc>
+  <lastmod>2025-07-04</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -289,8 +283,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/mit-kindern/titanic-ausstellung</loc>
-  <lastmod>2025-07-04</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/mit-kindern/tierpark-hellabrunn</loc>
+  <lastmod>2025-07-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -301,8 +295,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/mit-kindern/umweltgarten</loc>
-  <lastmod>2025-07-29</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/mit-kindern/titanic-ausstellung</loc>
+  <lastmod>2025-07-04</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -313,8 +307,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/mit-kindern/winkelgasse-cafe</loc>
-  <lastmod>2025-07-09</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/mit-kindern/umweltgarten</loc>
+  <lastmod>2025-07-29</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -325,8 +319,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/sehenswerte-orte/bayerische-staatsoper</loc>
-  <lastmod>2025-09-24</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/mit-kindern/winkelgasse-cafe</loc>
+  <lastmod>2025-07-09</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -337,7 +331,7 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/sehenswerte-orte/circus-krone-munchen</loc>
+  <loc>https://munchen-vesti.de/ru/places/sehenswerte-orte/bayerische-staatsoper</loc>
   <lastmod>2025-09-24</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
@@ -349,7 +343,7 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/sehenswerte-orte/deutsches-theater</loc>
+  <loc>https://munchen-vesti.de/ru/places/sehenswerte-orte/circus-krone-munchen</loc>
   <lastmod>2025-09-24</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
@@ -361,7 +355,7 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/sehenswerte-orte/haus-der-kunst</loc>
+  <loc>https://munchen-vesti.de/ru/places/sehenswerte-orte/deutsches-theater</loc>
   <lastmod>2025-09-24</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
@@ -373,7 +367,7 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/sehenswerte-orte/pinakotheken</loc>
+  <loc>https://munchen-vesti.de/ru/places/sehenswerte-orte/haus-der-kunst</loc>
   <lastmod>2025-09-24</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
@@ -385,7 +379,7 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/sehenswerte-orte/residenztheater-muenchen</loc>
+  <loc>https://munchen-vesti.de/ru/places/sehenswerte-orte/pinakotheken</loc>
   <lastmod>2025-09-24</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
@@ -397,7 +391,7 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/sehenswerte-orte/toy-museum-munich</loc>
+  <loc>https://munchen-vesti.de/ru/places/sehenswerte-orte/residenztheater-muenchen</loc>
   <lastmod>2025-09-24</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
@@ -409,8 +403,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/stadt-routen/alter-botanischer-garten</loc>
-  <lastmod>2025-07-11</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/sehenswerte-orte/toy-museum-munich</loc>
+  <lastmod>2025-09-24</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -421,8 +415,8 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/stadt-routen/alter-Suedfriedhof</loc>
-  <lastmod>2025-07-04</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/stadt-routen/alter-botanischer-garten</loc>
+  <lastmod>2025-07-11</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
@@ -433,13 +427,19 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/places/stadt-routen/botanischer-garten</loc>
-  <lastmod>2025-07-11</lastmod>
+  <loc>https://munchen-vesti.de/ru/places/stadt-routen/alter-Suedfriedhof</loc>
+  <lastmod>2025-07-04</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://munchen-vesti.de/places/stadt-routen/botanischer-garten</loc>
+  <lastmod>2025-07-11</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://munchen-vesti.de/ru/places/stadt-routen/botanischer-garten</loc>
   <lastmod>2025-07-11</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>

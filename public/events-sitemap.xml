@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-  <loc>https://munchen-vesti.de/de/events/alive-gop</loc>
-  <lastmod>2025-10-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
   <loc>https://munchen-vesti.de/events/alive-gop</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/arhiv/auer-dult</loc>
-  <lastmod>2025-06-01</lastmod>
+  <loc>https://munchen-vesti.de/ru/events/alive-gop</loc>
+  <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
@@ -25,8 +19,8 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/carnival-of-lights-munich</loc>
-  <lastmod>2025-10-13</lastmod>
+  <loc>https://munchen-vesti.de/ru/events/arhiv/auer-dult</loc>
+  <lastmod>2025-06-01</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
@@ -37,7 +31,7 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/cirque-alegria-munich</loc>
+  <loc>https://munchen-vesti.de/ru/events/carnival-of-lights-munich</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
@@ -49,7 +43,7 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/dracula-musical</loc>
+  <loc>https://munchen-vesti.de/ru/events/cirque-alegria-munich</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
@@ -61,8 +55,8 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/espresso-monaco</loc>
-  <lastmod>2025-10-18</lastmod>
+  <loc>https://munchen-vesti.de/ru/events/dracula-musical</loc>
+  <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
@@ -73,8 +67,8 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/feuerzangenbowle-munich</loc>
-  <lastmod>2025-10-13</lastmod>
+  <loc>https://munchen-vesti.de/ru/events/espresso-monaco</loc>
+  <lastmod>2025-10-18</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
@@ -85,7 +79,7 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/gop-advents-special</loc>
+  <loc>https://munchen-vesti.de/ru/events/feuerzangenbowle-munich</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
@@ -97,7 +91,7 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/halloween-week-2025</loc>
+  <loc>https://munchen-vesti.de/ru/events/gop-advents-special</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
@@ -109,7 +103,7 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/holidayonice</loc>
+  <loc>https://munchen-vesti.de/ru/events/halloween-week-2025</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
@@ -121,7 +115,7 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/hotspot-gop</loc>
+  <loc>https://munchen-vesti.de/ru/events/holidayonice</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
@@ -133,7 +127,7 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/ice-nine-kills-munich-zenith</loc>
+  <loc>https://munchen-vesti.de/ru/events/hotspot-gop</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
@@ -145,7 +139,7 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/kim-dracula-muenchen</loc>
+  <loc>https://munchen-vesti.de/ru/events/ice-nine-kills-munich-zenith</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
@@ -157,7 +151,7 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/kleine-prinz-event</loc>
+  <loc>https://munchen-vesti.de/ru/events/kim-dracula-muenchen</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
@@ -169,7 +163,7 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/krampuslauf_munich2025</loc>
+  <loc>https://munchen-vesti.de/ru/events/kleine-prinz-event</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
@@ -181,7 +175,7 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/laternenfestival-2025</loc>
+  <loc>https://munchen-vesti.de/ru/events/krampuslauf_munich2025</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
@@ -193,7 +187,7 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/muenchner-adventsspektakel-2025</loc>
+  <loc>https://munchen-vesti.de/ru/events/laternenfestival-2025</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
@@ -205,8 +199,8 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/munchner-marionettentheater-november</loc>
-  <lastmod>2025-10-30</lastmod>
+  <loc>https://munchen-vesti.de/ru/events/muenchner-adventsspektakel-2025</loc>
+  <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
@@ -217,8 +211,8 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/musik-rathausbalkon</loc>
-  <lastmod>2025-10-13</lastmod>
+  <loc>https://munchen-vesti.de/ru/events/munchner-marionettentheater-november</loc>
+  <lastmod>2025-10-30</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
@@ -229,7 +223,7 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/neyronchnik-tirol-2025</loc>
+  <loc>https://munchen-vesti.de/ru/events/musik-rathausbalkon</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
@@ -241,8 +235,8 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/silvestermeile-munchen2025</loc>
-  <lastmod>2025-10-25</lastmod>
+  <loc>https://munchen-vesti.de/ru/events/neyronchnik-tirol-2025</loc>
+  <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
@@ -253,8 +247,8 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/somewhere-i-belong-party</loc>
-  <lastmod>2025-10-13</lastmod>
+  <loc>https://munchen-vesti.de/ru/events/silvestermeile-munchen2025</loc>
+  <lastmod>2025-10-25</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
@@ -265,7 +259,7 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/street-food-panda-halloween</loc>
+  <loc>https://munchen-vesti.de/ru/events/somewhere-i-belong-party</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
@@ -277,8 +271,8 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/tollwood-winterfestival-2025</loc>
-  <lastmod>2025-10-25</lastmod>
+  <loc>https://munchen-vesti.de/ru/events/street-food-panda-halloween</loc>
+  <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
@@ -289,13 +283,19 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/de/events/weihnachtsdorf-residenz-2025</loc>
-  <lastmod>2025-10-13</lastmod>
+  <loc>https://munchen-vesti.de/ru/events/tollwood-winterfestival-2025</loc>
+  <lastmod>2025-10-25</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://munchen-vesti.de/events/weihnachtsdorf-residenz-2025</loc>
+  <lastmod>2025-10-13</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://munchen-vesti.de/ru/events/weihnachtsdorf-residenz-2025</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>

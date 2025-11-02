@@ -14,14 +14,8 @@ function cleanupOldSitemaps() {
   console.log(`🧹 Удалено старых sitemap-файлов: ${sitemapFiles.length}`);
 }
 
-// 📄 Генерация URL из Markdown (с поддержкой вложенных папок)
-function getMarkdownUrls(
-  folder,
-  prefix,
-  checkEventDates = false,
-  priority = "0.6",
-  changefreq = "weekly"
-) {
+// 📄 Генерация URL из Markdown (поддержка двух языков)
+function getMarkdownUrls(folder, prefix, checkEventDates = false, priority = "0.6", changefreq = "weekly") {
   const dirPath = path.join(publicDir, folder);
   if (!fs.existsSync(dirPath)) return [];
 
@@ -29,6 +23,7 @@ function getMarkdownUrls(
 
   function walkDir(currentPath) {
     const entries = fs.readdirSync(currentPath, { withFileTypes: true });
+
     for (const entry of entries) {
       const fullPath = path.join(currentPath, entry.name);
 
@@ -37,14 +32,18 @@ function getMarkdownUrls(
       } else if (entry.isFile() && entry.name.endsWith(".md")) {
         const stats = fs.statSync(fullPath);
         const lastmod = stats.mtime.toISOString().split("T")[0];
+
+        // пример: 01-10-2025-event.de.md → filename=01-10-2025-event, locale=de
         const [filename, locale] = entry.name.replace(".md", "").split(".");
         const slug = filename.replace(/^\d{2}-\d{2}-\d{4}-/, "");
-        const localePrefix = locale === "de" ? "/de" : "";
+
+        // путь до подпапки (если есть)
         const relativeDir = path.relative(dirPath, currentPath).replace(/\\/g, "/");
         const subPath = relativeDir ? `/${relativeDir}` : "";
 
-        const content = fs.readFileSync(fullPath, "utf-8");
+        // Проверка дат для событий
         if (checkEventDates) {
+          const content = fs.readFileSync(fullPath, "utf-8");
           const dateMatch = content.match(/date:\s*(.+)/);
           const endDateMatch = content.match(/endDate:\s*(.+)/);
           const startDate = dateMatch ? new Date(dateMatch[1]) : null;
@@ -54,8 +53,15 @@ function getMarkdownUrls(
           if (!startDate || endDate < today) continue;
         }
 
+        // 🔹 Немецкие страницы — без /de/
+        // 🔹 Русские — с /ru/
+        const loc =
+          locale === "ru"
+            ? `${baseUrl}/ru/${prefix}${subPath}/${slug}`
+            : `${baseUrl}/${prefix}${subPath}/${slug}`;
+
         urls.push(`<url>
-  <loc>${baseUrl}${localePrefix}/${prefix}${subPath}/${slug}</loc>
+  <loc>${loc}</loc>
   <lastmod>${lastmod}</lastmod>
   <changefreq>${changefreq}</changefreq>
   <priority>${priority}</priority>
@@ -67,7 +73,6 @@ function getMarkdownUrls(
   walkDir(dirPath);
   return urls;
 }
-
 
 // 🧾 Запись отдельных sitemap
 function writeSitemap(filename, urls) {
@@ -84,7 +89,8 @@ ${urls.join("\n")}
   fs.writeFileSync(path.join(publicDir, filename), xml);
   console.log(`✅ ${filename} создан (${urls.length} URL)`);
 }
-// 🗺 Генерация ссылок для раздела Places (вложенные категории)
+
+// 🗺 Генерация ссылок для раздела Places
 function getPlacesUrls() {
   const placesDir = path.join(publicDir, "places");
   if (!fs.existsSync(placesDir)) return [];
@@ -102,9 +108,13 @@ function getPlacesUrls() {
       const lastmod = stats.mtime.toISOString().split("T")[0];
       const [filename, locale] = file.replace(".md", "").split(".");
       const slug = filename.replace(/^\d{2}-\d{2}-\d{4}-/, "");
-      const localePrefix = locale === "de" ? "/de" : "";
+      const loc =
+        locale === "ru"
+          ? `${baseUrl}/ru/places/${category.name}/${slug}`
+          : `${baseUrl}/places/${category.name}/${slug}`;
+
       urls.push(`<url>
-  <loc>${baseUrl}${localePrefix}/places/${category.name}/${slug}</loc>
+  <loc>${loc}</loc>
   <lastmod>${lastmod}</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
@@ -150,7 +160,6 @@ function generateAll() {
   fs.writeFileSync(path.join(publicDir, "sitemap-index.xml"), index);
   console.log("📘 sitemap-index.xml обновлён!");
 }
-
 
 // 🚀 Запуск
 generateAll();
