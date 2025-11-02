@@ -54,8 +54,8 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/events/:slug*",
-        destination: "/past-events/:slug*",
-        permanent: true, // 301 редирект (для SEO)
+        destination: "/events-info/:slug*",
+        permanent: true, // 301 redirect для SEO
       },
     ];
   },
