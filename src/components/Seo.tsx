@@ -17,13 +17,17 @@ export default function Seo({ title, description, type = "website" }: SeoProps) 
 
   const locale = router.locale || "ru";
   const baseUrl = "https://munchen-vesti.de";
-  const path = router.asPath;
-  const url = `${baseUrl}${path}`;
-  const imageUrl = `${baseUrl}/default-og-image-${locale}.png`; // Всегда визитка
+  const path = router.asPath.split(/[?#]/)[0]; // чистим query/hash
 
   const altLocale = locale === "ru" ? "de" : "ru";
   const cleanPath = path.startsWith(`/${locale}`) ? path.replace(`/${locale}`, "") : path;
-  const altHref = `${baseUrl}/${altLocale}${cleanPath}`;
+
+  // 🔹 DE всегда каноническая версия
+  const canonicalUrl = `${baseUrl}/de${cleanPath}`;
+  const currentUrl = `${baseUrl}/${locale}${cleanPath}`;
+  const altUrl = `${baseUrl}/${altLocale}${cleanPath}`;
+
+  const imageUrl = `${baseUrl}/default-og-image-${locale}.png`;
 
   const ogLocale = locale === "ru" ? "ru_RU" : "de_DE";
   const ogLocaleAlt = altLocale === "ru" ? "ru_RU" : "de_DE";
@@ -35,10 +39,10 @@ export default function Seo({ title, description, type = "website" }: SeoProps) 
       <meta name="robots" content="index, follow" />
 
       {/* Canonical и hreflang */}
-      <link rel="canonical" href={url} />
-      <link rel="alternate" hrefLang={locale} href={url} />
-      <link rel="alternate" hrefLang={altLocale} href={altHref} />
-      <link rel="alternate" hrefLang="x-default" href={baseUrl} />
+      <link rel="canonical" href={canonicalUrl} />
+      <link rel="alternate" hrefLang="de" href={`${baseUrl}/de${cleanPath}`} />
+      <link rel="alternate" hrefLang="ru" href={`${baseUrl}/ru${cleanPath}`} />
+      <link rel="alternate" hrefLang="x-default" href={`${baseUrl}/de${cleanPath}`} />
 
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
@@ -46,7 +50,7 @@ export default function Seo({ title, description, type = "website" }: SeoProps) 
       <meta property="og:image" content={imageUrl} />
       <meta property="og:image:alt" content={fullTitle} />
       <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
+      <meta property="og:url" content={currentUrl} />
       <meta property="og:locale" content={ogLocale} />
       <meta property="og:locale:alternate" content={ogLocaleAlt} />
       <meta property="og:image:width" content="1200" />
