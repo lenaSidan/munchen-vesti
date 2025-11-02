@@ -49,16 +49,16 @@ const nextConfig: NextConfig = {
     ]);
   },
 
-  // ✅ Добавляем редирект для старых событий
-  async redirects() {
-    return [
-      {
-        source: "/events/:slug*",
-        destination: "/events-info/:slug*",
-        permanent: true, // 301 redirect для SEO
-      },
-    ];
-  },
+  // // ✅ Добавляем редирект для старых событий
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: "/events/:slug*",
+  //       destination: "/events-info/:slug*",
+  //       permanent: true, // 301 redirect для SEO
+  //     },
+  //   ];
+  // },
 };
 
 export default withBundleAnalyzer(nextConfig);
