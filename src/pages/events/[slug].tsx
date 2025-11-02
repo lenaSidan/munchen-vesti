@@ -221,6 +221,6 @@ export const getStaticProps = async ({ params, locale }: GetStaticPropsContext) 
       archived: isArchived,
       similarEvents,
     },
-    revalidate: 600,
+    revalidate: isArchived ? 86400 : 600, // ✅ архив обновляется раз в сутки, остальные — каждые 10 мин
   };
 };
