@@ -23,7 +23,9 @@ export default function Seo({ title, description, type = "website" }: SeoProps) 
   const cleanPath = path.startsWith(`/${locale}`) ? path.replace(`/${locale}`, "") : path;
 
   // 🔹 DE всегда каноническая версия
-  const canonicalUrl = `${baseUrl}/de${cleanPath}`;
+  const canonicalUrl =
+    locale === "de" ? `${baseUrl}${cleanPath}` : `${baseUrl}/${locale}${cleanPath}`;
+
   const currentUrl = `${baseUrl}/${locale}${cleanPath}`;
   const altUrl = `${baseUrl}/${altLocale}${cleanPath}`;
 
@@ -40,9 +42,9 @@ export default function Seo({ title, description, type = "website" }: SeoProps) 
 
       {/* Canonical и hreflang */}
       <link rel="canonical" href={canonicalUrl} />
-      <link rel="alternate" hrefLang="de" href={`${baseUrl}/de${cleanPath}`} />
+      <link rel="alternate" hrefLang="de" href={`${baseUrl}${cleanPath}`} />
       <link rel="alternate" hrefLang="ru" href={`${baseUrl}/ru${cleanPath}`} />
-      <link rel="alternate" hrefLang="x-default" href={`${baseUrl}/de${cleanPath}`} />
+      <link rel="alternate" hrefLang="x-default" href={`${baseUrl}${cleanPath}`} />
 
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
