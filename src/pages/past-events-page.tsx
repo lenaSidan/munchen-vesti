@@ -6,13 +6,22 @@ import styles from "@/styles/PastEvents.module.css";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
-
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 interface EventsProps {
   events: Event[];
 }
 
 export default function PastEvents({ events }: EventsProps) {
   const t = useTranslation();
+  const { locale } = useRouter();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <>
@@ -36,21 +45,12 @@ export default function PastEvents({ events }: EventsProps) {
 
               return (
                 <Link
-                  key={Array.isArray(event.slug) ? event.slug.join("-") : event.slug}
-                  href={`/events/${Array.isArray(event.slug) ? event.slug[0] : event.slug}`}
+                  key={event.fileId}
+                  href={`/past-events/${event.fileId || (Array.isArray(event.slug) ? event.slug[0] : event.slug)}`}
                   className={`${styles.eventCard} ${index % 2 === 0 ? styles.evenCard : styles.oddCard}`}
                 >
                   <div className={styles.imageTitleWrapper}>
                     {/* Можно вернуть изображение позже, если нужно */}
-                    {/* {event.image && (
-                      <Image
-                        src={event.image}
-                        alt={event.imageAlt || event.title}
-                        width={158}
-                        height={90}
-                        className={styles.smallImage}
-                      />
-                    )} */}
                     <div>
                       <h3 className={styles.eventTitle}>{event.title}</h3>
                       {event.time && <p className={styles.eventDetails}>{event.time}</p>}
