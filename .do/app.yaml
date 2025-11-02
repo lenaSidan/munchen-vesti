@@ -1,0 +1,16 @@
+name: munchen-vesti
+region: fra1
+static_sites:
+  - name: munchen-vesti
+    github:
+      repo: munchen-vesti
+      branch: main
+    routes:
+      - path: /
+    headers:
+      - path: /sitemap*.xml
+        name: Content-Type
+        value: application/xml
+      - path: /robots.txt
+        name: Content-Type
+        value: text/plain
