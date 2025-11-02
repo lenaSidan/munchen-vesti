@@ -60,7 +60,7 @@ interface HomeProps {
   oldWords: WordData[];
 }
 
-const sampleWords = fullWords.slice(0, 2);
+const sampleWords = fullWords.slice(0, 3);
 
 export default function Home({
   mainEvent,

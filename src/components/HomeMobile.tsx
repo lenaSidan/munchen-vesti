@@ -114,9 +114,9 @@ export default function HomeMobile({ mainEvent, weather, oldWords, otherEvents }
           </Link>
         </section>
       )}
-      <section className={styles.mobileHighlightSection}>
+      {/* <section className={styles.mobileHighlightSection}>
         <MobileHighlight />
-      </section>
+      </section> */}
       {/* 🔹 Одна короткая новость */}
       <section className={styles.mobileNews}>
         <LazyShortNewsBlock limit={1} />

@@ -22,36 +22,44 @@ export default function App({ Component, pageProps }: AppProps) {
 
   // 🔁 Автообновление сайта при новой версии
   useEffect(() => {
-    const checkForUpdate = async () => {
+    // 🔹 В режиме разработки автообновление отключено
+    if (process.env.NODE_ENV === "development") {
+      console.log("%c⏸ Автообновление отключено (режим разработки)", "color: gray;");
+      return;
+    }
+
+    let interval: NodeJS.Timeout;
+
+    async function checkForUpdate() {
       try {
         const res = await fetch("/version.txt", { cache: "no-store" });
-        const latest = await res.text();
+        if (!res.ok) return; // если файла нет — просто выходим
+
+        const latest = (await res.text()).trim();
+        if (!latest) return;
+
         const current = localStorage.getItem("siteVersion");
+
+        // 🔁 если версия изменилась — обновляем страницу
         if (current && latest !== current) {
           console.log(
-            "%c 💡 Обнаружена новая версия сайта. Выполняется автообновление...",
+            "%c💡 Найдена новая версия сайта. Выполняется автообновление...",
             "color: green; font-weight: bold;"
           );
           window.location.reload();
         }
+
         localStorage.setItem("siteVersion", latest);
         setHasVersionCheckRun(true);
-      } catch (e) {
-        console.error("Ошибка проверки версии сайта", e);
+      } catch {
+        // Тихо игнорируем ошибки (например, при локальной разработке)
       }
-    };
+    }
 
     checkForUpdate();
-    const interval = setInterval(checkForUpdate, 60000); // каждые 60 секунд
-    return () => clearInterval(interval);
-  }, []);
+    interval = setInterval(checkForUpdate, 60_000); // проверка каждые 60 сек.
 
-  // Открытие внешних ссылок в новой вкладке
-  useEffect(() => {
-    document.querySelectorAll('a[href^="http"]').forEach((link) => {
-      link.setAttribute("target", "_blank");
-      link.setAttribute("rel", "noopener noreferrer");
-    });
+    return () => clearInterval(interval);
   }, []);
 
   // Установка <html lang> по языку браузера

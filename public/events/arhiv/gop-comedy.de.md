@@ -13,7 +13,8 @@ imageAlt: "Bühne des Comedy Clubs mit Mikrofon und Licht"
 seoTitle: "GOP Comedy Club in München – nur am 27. Oktober 2025"
 seoDescription: "Ein Abend voller Humor, Magie und Live-Musik im GOP Comedy Club München. Infos zu Künstlern, Tickets und Dinner vor der Show."
 slug:
-  - münchen
+  - gop-variete
+  - muenchen
   - gop
   - comedy
   - varieté

@@ -48,6 +48,17 @@ const nextConfig: NextConfig = {
       },
     ]);
   },
+
+  // ✅ Добавляем редирект для старых событий
+  async redirects() {
+    return [
+      {
+        source: "/events/:slug*",
+        destination: "/past-events/:slug*",
+        permanent: true, // 301 редирект (для SEO)
+      },
+    ];
+  },
 };
 
 export default withBundleAnalyzer(nextConfig);

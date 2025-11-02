@@ -4,7 +4,7 @@ import path from "path";
 
 // Интерфейс события
 export interface Event {
-  slug: string | string[]; 
+  slug: string | string[];
   title: string;
   shortTitle?: string;
   seoTitle?: string;
@@ -31,7 +31,7 @@ function getEventsFromDirectory(eventsDir: string, locale: string): Event[] {
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const { data, content } = matter(fileContent);
 
-    // 💡 slug — поддержка массива и строки, с резервом из имени файла
+    // 💡 Генерация slug — поддержка массива, строки и fallback к имени файла
     let slugValue: string[];
 
     if (Array.isArray(data.slug)) {
@@ -39,12 +39,12 @@ function getEventsFromDirectory(eventsDir: string, locale: string): Event[] {
     } else if (typeof data.slug === "string" && data.slug.trim() !== "") {
       slugValue = [data.slug.toLowerCase().trim()];
     } else {
-      slugValue = [
-        file
-          .replace(`.${locale}.md`, "")
-          .replace(/^\d{2}-\d{2}-\d{4}-/, "")
-          .toLowerCase(),
-      ];
+      // 🧩 Если slug не указан — берём имя файла без даты и без расширения
+      const fallbackSlug = file
+        .replace(`.${locale}.md`, "")
+        .replace(/^\d{2}-\d{2}-\d{4}-/, "")
+        .toLowerCase();
+      slugValue = [fallbackSlug];
     }
 
     const fileId = file.replace(`.${locale}.md`, "");
@@ -69,7 +69,7 @@ function getEventsFromDirectory(eventsDir: string, locale: string): Event[] {
     };
   });
 
-  // Возвращаем только события с валидной датой
+  // ⚙️ Возвращаем только события с валидной датой
   return events.filter((event) => event.date && !isNaN(new Date(event.date).getTime()));
 }
 
