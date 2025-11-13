@@ -247,7 +247,8 @@ export default function CalendarPage({ events }: CalendarProps) {
                 {selectedEvent.time && <p className={styles.modalTime}>{selectedEvent.time}</p>}
                 <Link
                   className={styles.modalLink}
-                  href={`/events/${selectedEvent.slug}`}
+                  href={`/events/${selectedEvent.fileId}`}
+                 
                   onClick={() => sessionStorage.setItem("fromCalendar", "true")}
                 >
                   {t("articles.more")}
