@@ -3,7 +3,7 @@ title: "Show ALIVE in München: Spielplatz für Erwachsene — mit Akrobatik, Hu
 shortTitle: "ALIVE in München"
 calendarStartDate: "2025-10-16"
 calendarEndDate: "2026-01-11"
-date: "2025-10-17"
+date: "2025-12-17"
 endDate: "2026-01-11"
 time: "16. Oktober 2025 – 11. Januar 2026"
 ort: "GOP Varieté-Theater München | https://maps.app.goo.gl/ZxRWcDMwAbaqQPsm8"
