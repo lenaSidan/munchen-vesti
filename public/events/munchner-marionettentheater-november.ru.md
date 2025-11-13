@@ -3,7 +3,7 @@ title: "Ноябрь в Münchner Marionettentheater: что посмотрет�
 shortTitle: "Ноябрь в МюМа"
 calendarStartDate: "2025-11-01"
 calendarEndDate: "2025-11-30"
-date: "2025-11-06"
+date: "2025-11-17"
 endDate: "2025-11-30"
 time: "С 1 по 30 ноября 2025 года"
 ort: "Blumenstraße 32, 80331 München | https://maps.app.goo.gl/f3nkNtiBDCDzArUk8"

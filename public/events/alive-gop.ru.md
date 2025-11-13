@@ -3,7 +3,7 @@ title: "Спектакль ALIVE в Мюнхене: детская площад�
 shortTitle: "ALIVE в Мюнхене"
 calendarStartDate: "2025-10-16"
 calendarEndDate: "2026-01-11"
-date: "2025-10-17"
+date: "2025-12-17"
 endDate: "2026-01-11"
 time: "16 октября 2025 – 11 января 2026"
 ort: "GOP Varieté-Theater München | https://maps.app.goo.gl/ZxRWcDMwAbaqQPsm8"

@@ -2,7 +2,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 30px 20px;
-background-color: var(--alt-background);
+  background-color: var(--alt-background);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
   color: var(--text-color);
   transition:
@@ -136,6 +136,39 @@ background-color: var(--alt-background);
   transform: scaleY(-1);
   margin-top: 15px;
 }
+/* Висячие цифры, идеально для многострочного текста */
+.content ol {
+  counter-reset: vestCounter;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.content ol > li {
+  counter-increment: vestCounter;
+  list-style: none;
+  margin-bottom: 10px; /* больше воздуха — как в газете */
+  padding-left: 2.4rem; /* отступ под висячую цифру */
+  position: relative;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.content ol > li::before {
+  content: counter(vestCounter) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: var(--heading-color2);
+  font-family: "Old Standard TT", serif;
+}
+
+/* Удаляем лишние отступы у параграфов внутри li */
+.content ol > li p {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
 
 @media (max-width: 768px) {
   .container {
@@ -174,5 +207,19 @@ background-color: var(--alt-background);
 
   .decorativeLine span {
     font-size: 1.3rem;
+  }
+  .content ol > li {
+    font-size: 1rem;
+    line-height: 1.45;
+    padding-left: 1.8rem; /* меньше отступ — меньше экран */
+    margin-bottom: 16px;
+  }
+
+  .content ol > li::before {
+    font-size: 1rem;
+    top: 0.05rem; /* лёгкая корректировка вертикали */
+  }
+  .content ol > li p {
+    font-size: 0.9rem;
   }
 }

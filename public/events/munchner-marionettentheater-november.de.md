@@ -3,7 +3,7 @@ title: "November im Münchner Marionettentheater: Was man diesen Monat sehen sol
 shortTitle: "November im MuMa"
 calendarStartDate: "2025-11-01"
 calendarEndDate: "2025-11-30"
-date: "2025-11-06"
+date: "2025-11-17"
 endDate: "2025-11-30"
 time: "Vom 1. bis 30. November 2025"
 ort: "Blumenstraße 32, 80331 München | https://maps.app.goo.gl/f3nkNtiBDCDzArUk8"
