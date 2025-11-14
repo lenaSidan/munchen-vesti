@@ -15,6 +15,36 @@
     "quote_ru": "В трудные времена надо держаться вместе."
   },
   {
+    "word": "Schmarrn zamredn",
+    "type_de": "Redewendung",
+    "type_ru": "Фраза",
+    "gender_de": "",
+    "gender_ru": "",
+    "translation_de": "dummes Zeug erzählen",
+    "translation_ru": "нести чепуху, говорить ерунду",
+    "explanation_de": "Bairische Wendung für 'Unsinn reden' – oft scherzhaft verwendet.",
+    "explanation_ru": "Баварское выражение, означающее болтать чепуху — часто используется с иронией.",
+    "origin_de": "Von 'Schmarrn' (Unsinn) und 'zusammenreden'.",
+    "origin_ru": "Происходит от 'Schmarrn' — чепуха, и 'zusammenreden' — наболтать.",
+    "quote_de": "Hör auf, an Schmarrn zamz'redn!",
+    "quote_ru": "Хватит нести чепуху!"
+  },
+  {
+    "word": "Bled samma a net",
+    "type_de": "Redewendung",
+    "type_ru": "Фраза",
+    "gender_de": "",
+    "gender_ru": "",
+    "translation_de": "Ganz so dumm sind wir auch nicht",
+    "translation_ru": "Мы ведь тоже не дураки",
+    "explanation_de": "Selbstbewusste bairische Redensart, um Ironie oder Scharfsinn auszudrücken.",
+    "explanation_ru": "Ироничное баварское выражение, подчеркивающее смекалку говорящего.",
+    "origin_de": "Typisch bairisch, oft mit Stolz oder Augenzwinkern gesagt.",
+    "origin_ru": "Типичное баварское выражение, часто произносится с юмором или гордостью.",
+    "quote_de": "Bled samma a net, gell?",
+    "quote_ru": "Мы ведь тоже не дураки, да?"
+  },
+  {
     "word": "Oans, zwoa, g’suffa!",
     "type_de": "Spruch",
     "type_ru": "Фраза",
