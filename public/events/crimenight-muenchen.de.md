@@ -1,16 +1,16 @@
 ---
 title: "CrimeNight München: ein städtisches Geheimnis bei Kerzenschein"
 shortTitle: "CrimeNight München"
-calendarStartDate: "2025-10-24"
-calendarEndDate: "2025-10-24"
-date: "2025-10-24"
-time: "Freitag, 24. Oktober 2025, 20:30 Uhr (Einlass ab 19:30)"
-ort: "Münchner Künstlerhaus, Lenbachplatz 8, 80333 München | https://maps.app.goo.gl/Ex1RMw76d1uPn7kK8"
-link: "Tickets und Informationen | https://www.dreamlight-labs.com/de/concert/685d64f4bc4984a9e331b433"
+calendarStartDate: "2026-01-16"
+calendarEndDate: "2026-01-16"
+date: "2026-01-16"
+time: "Freitag, 16. Januar 2026, 20:00 & 20:45 Uhr"
+ort: "Carl Orff Saal in München | https://maps.app.goo.gl/NiDPqEBbsmUQXno7A"
+link: "Tickets und Informationen | https://www.dreamlight-labs.com/de/concert/68ef4e13b526d192d8bbd030?utm_term=crimenight&trc_mcmp_id=120228995719770303&trc_mag_id=120235963748850303&trc_mad_id=120235963748860303&fbclid=IwdGRzaAOGk_tleHRuA2FlbQEwAGFkaWQBqyn443Egr3NydGMGYXBwX2lkDDM1MDY4NTUzMTcyOAhjYWxsc2l0ZQIyNQABHnD2X2RP6RRADQnFswNBMKLeHJCWNf_LJ9M6oofQQbwP2aaMg8RJ8v89HzYe_aem_q-YnVMJq3OEiXQa5kfXMPg&utm_medium=paid&utm_source=fb&utm_id=120228995719770303&utm_content=120235963748860303&utm_campaign=120228995719770303&sfnsn=scwspmo"
 image: "/images/crimenight-muenchen.webp"
 imageAlt: "Kerzen auf den Tischen und ein Projektor beim CrimeNight-Abend in München"
 seoTitle: "CrimeNight München – echtes Verbrechen als Live-Erlebnis"
-seoDescription: "Atmosphärisches True-Crime-Event in München: echte Fälle, Kerzenlicht, Dokumente und Publikumsbeteiligung. Nur am 24. Oktober 2025."
+seoDescription: "Atmosphärisches True-Crime-Event in München: echte Fälle, Kerzenlicht, Dokumente und Publikumsbeteiligung. Nur am 16. Januar 2026."
 slug:
   - münchen
   - crimenight
@@ -23,7 +23,6 @@ fileId: "crimenight-muenchen"
 ---
 
 Wenn Sie München als eine **glänzende und perfekt geordnete Stadt** kennen — mit **aufgeräumten Straßen, Straßenmusikern und eleganten Schaufenstern** — dann bereiten Sie sich darauf vor, die Stadt von **einer anderen Seite** zu erleben.
-
 Willkommen bei **CrimeNight München** — einer atmosphärischen **True-Crime-Show**, die **echte Kriminalfälle** beleuchtet, die genau hier, **in Ihrer Nähe**, geschehen sind. Dies ist keine Erzählung — es ist ein **live erlebter Einblick** in die dunklen Ecken der Stadtgeschichte.
 
 ### Was ist das für eine Veranstaltung?
@@ -56,15 +55,15 @@ Das ist **kein Theater**. Es sind **echte Geschichten über wahre Verbrechen**, 
 
 ### Wann, wo und für wen
 
-- ✔ **Datum:** Freitag, 24. Oktober 2025  
-- ✔ **Beginn:** 20:30 Uhr (Einlass ab 19:30)  
-- ✔ **Ort:** Münchner Künstlerhaus, Lenbachplatz 8, 80333 München  
+- ✔ **Datum:** Freitag, 16. januar 2026  
+- ✔ **Beginn:** um 18:00 & 20:45 Uhr  
+- ✔ **Ort:** Carl Orff Saal, Rosenheimer Str. 5, 81667 München  
 - ✔ **Sprache:** Deutsch  
 - ✔ **Alter:** ab 16 Jahren  
 - ✔ **Dauer:** ca. 60 Minuten, kein Einlass nach Beginn  
-- ✔ **Parken:** Oberpollinger Tiefgarage  
-- ✔ **ÖPNV:** U-Bahn bis Lenbachplatz, Tram bis Münchner Künstlerhaus  
-- ✔ **Barrierefreiheit:** Plätze für Rollstuhlfahrer vorhanden – bitte schreiben Sie an contact.de@dreamlight-labs.com  
+- ✔ **Parken:**  Freie Platzwahl innerhalb der gebuchten Zone  
+- ✔ **ÖPNV:** S1 bis S8 und Straßenbahnlinie 25 – Haltestelle „Rosenheimer Platz“  
+- ✔ **Barrierefreiheit:** Plätze für Rollstuhlfahrer vorhanden – bitte schreiben Sie an contact.de@dreamlight-labs.com
 
 ### Fazit
 
