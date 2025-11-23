@@ -72,7 +72,7 @@ export default function UsefulPage({ items }: UsefulListProps) {
           </div>
         </section>
 
-        <div className={styles.questionsTitle}>{t("useful.questionsTitle")}</div>
+        {/* <div className={styles.questionsTitle}>{t("useful.questionsTitle")}</div> */}
 
         <div className={styles.filterBox}>
           <label htmlFor="categoryFilter" className={styles.filterLabel}>
