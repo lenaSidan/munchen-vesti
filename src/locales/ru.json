@@ -107,6 +107,10 @@
     "go_to_newsPage": "Все новости",
     "title": "Мюнхенская хроника"
   },
+  "legal": {
+    "legal_advice_title": "Юридический совет",
+    "go_to_legalAdvice": "Все юридические советы"
+  },
   "postcards": {
     "title": "Открытки из прошлого",
     "indexTitle": "Хронiка Мюнхенскiя",

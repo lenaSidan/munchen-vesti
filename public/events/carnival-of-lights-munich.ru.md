@@ -3,7 +3,7 @@ title: "Волшебство света в Мюнхене: Carnival of Lights в
 shortTitle: "Carnival of Lights"
 calendarStartDate: "2025-11-15"
 calendarEndDate: "2026-01-25"
-date: "2025-11-15"
+date: "2026-01-03"
 endDate: "2026-01-25"
 time: "С 15 ноября 2025 по 25 января 2026 года Carnival of Lights"
 ort: "CAVALLUNA PARK, Hans-Jensen-Weg 3, 80939 München | https://maps.app.goo.gl/ProsAm8ZRxJTvXgX7"

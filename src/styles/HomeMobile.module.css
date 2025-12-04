@@ -188,7 +188,8 @@
 }
 
 /* --- Новости --- */
-.mobileNews {
+.mobileNews,
+.mobileLegalAdvice {
   background: var(--alt-background);
   padding: 10px;
   border-radius: 6px;
