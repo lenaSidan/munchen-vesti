@@ -1,0 +1,60 @@
+.legalBlock {
+}
+.legalBlockContainer {
+  border: 1px solid var(--heading-color2);
+  background: var(--alt-background2);
+  color: var(--text-color);
+  padding: 15px 15px 5px 15px;
+  border-radius: 8px;
+}
+.legalTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: var(--font-headings);
+  color: var(--heading-color2);
+  margin: 0 0 10px;
+}
+
+/* сама карточка совета */
+.legalItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legalItemTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 10px;
+  border-bottom: 1px solid var(--heading-color2);
+}
+
+.legalSummary p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-family: merriweather;
+}
+
+/* ссылка "Weiterlesen…" по аналогии с новостями */
+.readMore {
+  align-self: flex-end; /* прижимаем вправо внизу блока */
+  margin-top: 4px;
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 500;
+  font-family: var(--font-headings);
+  color: var(--heading-color2);
+  background: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.readMore::after {
+  content: "...";
+}
+
+.readMore:hover {
+  color: var(--heading-color);
+}

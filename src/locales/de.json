@@ -106,6 +106,10 @@
     "go_to_newsPage": "Alle aktuellen Meldungen",
     "title": "Aktuelles"
   },
+  "legal": {
+     "legal_advice_title": "Rechtstipp des Tages",
+  "go_to_legalAdvice": "Alle Rechtstipps"
+  },
   "postcards": {
     "title": "Postkarten aus der Vergangenheit",
     "indexTitle": "Chronik Münchener",

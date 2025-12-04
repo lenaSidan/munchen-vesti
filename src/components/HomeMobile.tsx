@@ -18,7 +18,13 @@ const LazyShortNewsBlock = dynamic(() => import("@/components/ShortNewsBlock"), 
   ssr: false,
   loading: () => <p>Loading...</p>,
 });
-
+const LazyLegalAdviceBlock = dynamic(
+  () => import("@/components/LegalAdviceBlock"),
+  {
+    ssr: false,
+    loading: () => <p>Loading...</p>,
+  }
+);
 interface LiteEvent extends Event {
   excerptHtml?: string;
 }
@@ -122,6 +128,13 @@ export default function HomeMobile({ mainEvent, weather, oldWords, otherEvents }
         <LazyShortNewsBlock limit={1} />
         <Link href="/news-page" className={styles.mobileMoreLink}>
           {t("news.go_to_newsPage")} →
+        </Link>
+      </section>
+      {/* 🔹 Юридические советы (рандомно) */}
+      <section className={styles.mobileLegalAdvice}>
+        <LazyLegalAdviceBlock limit={1} />
+        <Link href="/useful" className={styles.mobileMoreLink}>
+          {t("legal.go_to_legalAdvice")} →
         </Link>
       </section>
       {/* 🔹 Календарь и погода */}
