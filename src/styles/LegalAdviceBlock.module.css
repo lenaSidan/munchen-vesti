@@ -27,12 +27,16 @@
   font-weight: 600;
   margin: 0 0 10px;
   border-bottom: 1px solid var(--heading-color2);
+   -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 .legalSummary p {
   font-size: 0.9rem;
   line-height: 1.6;
   font-family: merriweather;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 /* ссылка "Weiterlesen…" по аналогии с новостями */

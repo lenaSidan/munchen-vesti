@@ -133,7 +133,7 @@ export default function HomeMobile({ mainEvent, weather, oldWords, otherEvents }
       {/* 🔹 Юридические советы (рандомно) */}
       <section className={styles.mobileLegalAdvice}>
         <LazyLegalAdviceBlock limit={1} />
-        <Link href="/useful" className={styles.mobileMoreLink}>
+        <Link href="/useful-page" className={styles.mobileMoreLink}>
           {t("legal.go_to_legalAdvice")} →
         </Link>
       </section>
