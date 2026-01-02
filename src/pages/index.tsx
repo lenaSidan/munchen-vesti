@@ -229,11 +229,11 @@ export default function Home({
             </div>
           )}
         </div>
-        {
+        {/* {
           <div>
             <ImportantNewsBlock />
           </div>
-        }
+        } */}
       </div>
     </>
   );
