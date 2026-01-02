@@ -25,26 +25,14 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/events/bavarian-christmas-markets</loc>
-  <lastmod>2025-11-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/ru/events/bavarian-christmas-markets</loc>
-  <lastmod>2025-11-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
   <loc>https://munchen-vesti.de/events/carnival-of-lights-munich</loc>
-  <lastmod>2025-10-13</lastmod>
+  <lastmod>2025-12-04</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://munchen-vesti.de/ru/events/carnival-of-lights-munich</loc>
-  <lastmod>2025-10-13</lastmod>
+  <lastmod>2025-12-04</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
@@ -85,18 +73,6 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/events/espresso-monaco</loc>
-  <lastmod>2025-10-18</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/ru/events/espresso-monaco</loc>
-  <lastmod>2025-10-18</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
   <loc>https://munchen-vesti.de/events/feuerzangenbowle-munich</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
@@ -104,18 +80,6 @@
 </url>
 <url>
   <loc>https://munchen-vesti.de/ru/events/feuerzangenbowle-munich</loc>
-  <lastmod>2025-10-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/events/gop-advents-special</loc>
-  <lastmod>2025-10-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/ru/events/gop-advents-special</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
@@ -145,18 +109,6 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/events/ice-nine-kills-munich-zenith</loc>
-  <lastmod>2025-10-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/ru/events/ice-nine-kills-munich-zenith</loc>
-  <lastmod>2025-10-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
   <loc>https://munchen-vesti.de/events/kim-dracula-muenchen</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
@@ -169,140 +121,26 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/events/kleine-prinz-event</loc>
-  <lastmod>2025-10-13</lastmod>
+  <loc>https://munchen-vesti.de/events/monaco-nights-bayerischer-hof</loc>
+  <lastmod>2026-01-02</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/ru/events/kleine-prinz-event</loc>
-  <lastmod>2025-10-13</lastmod>
+  <loc>https://munchen-vesti.de/ru/events/monaco-nights-bayerischer-hof</loc>
+  <lastmod>2026-01-02</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/events/krampuslauf_munich2025</loc>
-  <lastmod>2025-10-13</lastmod>
+  <loc>https://munchen-vesti.de/events/winter-festival-nockherberg</loc>
+  <lastmod>2026-01-02</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/ru/events/krampuslauf_munich2025</loc>
-  <lastmod>2025-10-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/events/muenchner-adventsspektakel-2025</loc>
-  <lastmod>2025-10-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/ru/events/muenchner-adventsspektakel-2025</loc>
-  <lastmod>2025-10-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/events/munchner-marionettentheater-november</loc>
-  <lastmod>2025-11-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/ru/events/munchner-marionettentheater-november</loc>
-  <lastmod>2025-11-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/events/musik-rathausbalkon</loc>
-  <lastmod>2025-10-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/ru/events/musik-rathausbalkon</loc>
-  <lastmod>2025-10-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/events/neyronchnik-tirol-2025</loc>
-  <lastmod>2025-10-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/ru/events/neyronchnik-tirol-2025</loc>
-  <lastmod>2025-10-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/events/silvestermeile-munchen2025</loc>
-  <lastmod>2025-10-25</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/ru/events/silvestermeile-munchen2025</loc>
-  <lastmod>2025-10-25</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/events/somewhere-i-belong-party</loc>
-  <lastmod>2025-10-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/ru/events/somewhere-i-belong-party</loc>
-  <lastmod>2025-10-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/events/street-food-panda-halloween</loc>
-  <lastmod>2025-10-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/events/tag-des-unbekannten-soldaten-dachau</loc>
-  <lastmod>2025-11-07</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/ru/events/tag-des-unbekannten-soldaten-dachau</loc>
-  <lastmod>2025-11-07</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/events/tollwood-winterfestival-2025</loc>
-  <lastmod>2025-10-25</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/ru/events/tollwood-winterfestival-2025</loc>
-  <lastmod>2025-10-25</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/events/weihnachtsdorf-residenz-2025</loc>
-  <lastmod>2025-10-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/ru/events/weihnachtsdorf-residenz-2025</loc>
-  <lastmod>2025-10-13</lastmod>
+  <loc>https://munchen-vesti.de/ru/events/winter-festival-nockherberg</loc>
+  <lastmod>2026-01-02</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>

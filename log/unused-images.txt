@@ -1,7 +1,9 @@
+/public/images/aldi-onlineshop-schließt.webp
 /public/images/alter_suedfriedhof_muenchen.webp
 /public/images/beerencafe.webp
 /public/images/c+m+b.webp
 /public/images/disco_vulkan.webp
+/public/images/lidl-preise.webp
 /public/images/muenchen.webp
 /public/images/munich-lakes-summer.webp
 /public/images/olympiapark_muenchen.webp

@@ -147,9 +147,9 @@ export default function HomeMobile({ mainEvent, weather, oldWords, otherEvents }
       <section className={styles.mobileWord}>
         <BavarianWordOfTheWeek words={oldWords.slice(0, 1)} />
       </section>
-      <div>
+      {/* <div>
         <MobileImportantNews />
-      </div>
+      </div> */}
       {/* 🔹 Мини-открытки */}
       <section className={styles.mobilePostcards}>
         <MiniPostcardsMobile />
