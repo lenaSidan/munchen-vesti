@@ -73,6 +73,18 @@
   <priority>0.6</priority>
 </url>
 <url>
+  <loc>https://munchen-vesti.de/news/konigstour-deutschland</loc>
+  <lastmod>2026-01-22</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://munchen-vesti.de/ru/news/konigstour-deutschland</loc>
+  <lastmod>2026-01-22</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
   <loc>https://munchen-vesti.de/news/lidl-hackerbruecke-sunday</loc>
   <lastmod>2025-09-30</lastmod>
   <changefreq>weekly</changefreq>
