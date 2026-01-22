@@ -49,6 +49,18 @@
   <priority>0.7</priority>
 </url>
 <url>
+  <loc>https://munchen-vesti.de/articles/Konigstour-deutschland</loc>
+  <lastmod>2026-01-22</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://munchen-vesti.de/ru/articles/Konigstour-deutschland</loc>
+  <lastmod>2026-01-22</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
   <loc>https://munchen-vesti.de/articles/Marienplatz-glockenspiel</loc>
   <lastmod>2025-07-13</lastmod>
   <changefreq>weekly</changefreq>
