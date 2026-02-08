@@ -13,18 +13,6 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://munchen-vesti.de/events/carnival-of-lights-munich</loc>
-  <lastmod>2025-12-04</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/ru/events/carnival-of-lights-munich</loc>
-  <lastmod>2025-12-04</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
   <loc>https://munchen-vesti.de/events/cirque-alegria-munich</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
@@ -49,6 +37,18 @@
   <priority>0.9</priority>
 </url>
 <url>
+  <loc>https://munchen-vesti.de/events/handwerk-design-2026</loc>
+  <lastmod>2026-02-08</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://munchen-vesti.de/ru/events/handwerk-design-2026</loc>
+  <lastmod>2026-02-08</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
   <loc>https://munchen-vesti.de/events/hotspot-gop</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>weekly</changefreq>
@@ -69,30 +69,6 @@
 <url>
   <loc>https://munchen-vesti.de/ru/events/japan-saga-nation</loc>
   <lastmod>2026-01-18</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/events/kim-dracula-muenchen</loc>
-  <lastmod>2025-10-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/ru/events/kim-dracula-muenchen</loc>
-  <lastmod>2025-10-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/events/monaco-nights-bayerischer-hof</loc>
-  <lastmod>2026-01-02</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/ru/events/monaco-nights-bayerischer-hof</loc>
-  <lastmod>2026-01-02</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
 </url>

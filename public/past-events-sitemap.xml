@@ -26,13 +26,13 @@
 </url>
 <url>
   <loc>https://munchen-vesti.de/past-events/alive-gop</loc>
-  <lastmod>2025-11-13</lastmod>
+  <lastmod>2026-01-22</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
 </url>
 <url>
   <loc>https://munchen-vesti.de/ru/past-events/alive-gop</loc>
-  <lastmod>2025-11-13</lastmod>
+  <lastmod>2026-01-22</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
 </url>
@@ -145,6 +145,18 @@
   <priority>0.3</priority>
 </url>
 <url>
+  <loc>https://munchen-vesti.de/past-events/carnival-of-lights-munich</loc>
+  <lastmod>2025-12-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>https://munchen-vesti.de/ru/past-events/carnival-of-lights-munich</loc>
+  <lastmod>2025-12-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url>
   <loc>https://munchen-vesti.de/past-events/cavalluna-kids</loc>
   <lastmod>2025-09-17</lastmod>
   <changefreq>monthly</changefreq>
@@ -230,13 +242,13 @@
 </url>
 <url>
   <loc>https://munchen-vesti.de/past-events/crimenight-muenchen</loc>
-  <lastmod>2025-11-16</lastmod>
+  <lastmod>2026-01-22</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
 </url>
 <url>
   <loc>https://munchen-vesti.de/ru/past-events/crimenight-muenchen</loc>
-  <lastmod>2025-11-16</lastmod>
+  <lastmod>2026-01-22</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
 </url>
@@ -338,13 +350,13 @@
 </url>
 <url>
   <loc>https://munchen-vesti.de/past-events/feuerzangenbowle-munich</loc>
-  <lastmod>2025-10-13</lastmod>
+  <lastmod>2026-01-22</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
 </url>
 <url>
   <loc>https://munchen-vesti.de/ru/past-events/feuerzangenbowle-munich</loc>
-  <lastmod>2025-10-13</lastmod>
+  <lastmod>2026-01-22</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
 </url>
@@ -518,13 +530,13 @@
 </url>
 <url>
   <loc>https://munchen-vesti.de/past-events/holidayonice</loc>
-  <lastmod>2025-10-13</lastmod>
+  <lastmod>2026-01-22</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
 </url>
 <url>
   <loc>https://munchen-vesti.de/ru/past-events/holidayonice</loc>
-  <lastmod>2025-10-13</lastmod>
+  <lastmod>2026-01-22</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
 </url>
@@ -632,6 +644,18 @@
 </url>
 <url>
   <loc>https://munchen-vesti.de/ru/past-events/kaspijskij-gruz-munchen</loc>
+  <lastmod>2025-10-13</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>https://munchen-vesti.de/past-events/kim-dracula-muenchen</loc>
+  <lastmod>2025-10-13</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>https://munchen-vesti.de/ru/past-events/kim-dracula-muenchen</loc>
   <lastmod>2025-10-13</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
@@ -873,6 +897,18 @@
 <url>
   <loc>https://munchen-vesti.de/ru/past-events/mineralientage-2025</loc>
   <lastmod>2025-10-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>https://munchen-vesti.de/past-events/monaco-nights-bayerischer-hof</loc>
+  <lastmod>2026-01-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>https://munchen-vesti.de/ru/past-events/monaco-nights-bayerischer-hof</loc>
+  <lastmod>2026-01-02</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
 </url>
