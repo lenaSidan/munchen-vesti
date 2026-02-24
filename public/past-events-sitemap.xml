@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-  <loc>https://munchen-vesti.de/past-events/9mai</loc>
-  <lastmod>2025-06-01</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.3</priority>
-</url>
-<url>
-  <loc>https://munchen-vesti.de/ru/past-events/9mai</loc>
-  <lastmod>2025-06-01</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.3</priority>
-</url>
-<url>
   <loc>https://munchen-vesti.de/past-events/afrika-fest</loc>
   <lastmod>2025-06-23</lastmod>
   <changefreq>monthly</changefreq>
@@ -146,13 +134,13 @@
 </url>
 <url>
   <loc>https://munchen-vesti.de/past-events/carnival-of-lights-munich</loc>
-  <lastmod>2025-12-04</lastmod>
+  <lastmod>2026-02-08</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
 </url>
 <url>
   <loc>https://munchen-vesti.de/ru/past-events/carnival-of-lights-munich</loc>
-  <lastmod>2025-12-04</lastmod>
+  <lastmod>2026-02-08</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
 </url>
@@ -650,13 +638,13 @@
 </url>
 <url>
   <loc>https://munchen-vesti.de/past-events/kim-dracula-muenchen</loc>
-  <lastmod>2025-10-13</lastmod>
+  <lastmod>2026-02-08</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
 </url>
 <url>
   <loc>https://munchen-vesti.de/ru/past-events/kim-dracula-muenchen</loc>
-  <lastmod>2025-10-13</lastmod>
+  <lastmod>2026-02-08</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
 </url>
@@ -902,13 +890,13 @@
 </url>
 <url>
   <loc>https://munchen-vesti.de/past-events/monaco-nights-bayerischer-hof</loc>
-  <lastmod>2026-01-02</lastmod>
+  <lastmod>2026-02-08</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
 </url>
 <url>
   <loc>https://munchen-vesti.de/ru/past-events/monaco-nights-bayerischer-hof</loc>
-  <lastmod>2026-01-02</lastmod>
+  <lastmod>2026-02-08</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
 </url>
@@ -1485,6 +1473,18 @@
 <url>
   <loc>https://munchen-vesti.de/ru/past-events/white-dinner-muenchen</loc>
   <lastmod>2025-06-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>https://munchen-vesti.de/past-events/winter-festival-nockherberg</loc>
+  <lastmod>2026-01-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>https://munchen-vesti.de/ru/past-events/winter-festival-nockherberg</loc>
+  <lastmod>2026-01-02</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
 </url>
